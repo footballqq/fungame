@@ -1,0 +1,199 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ff6b6b;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+main {
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* 可视化区域 */
+.visualization-area {
+    flex: 1;
+    min-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pizzaCanvas {
+    border: 2px dashed #ff9a3c;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff9a3c;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button {
+    background-color: #4ecdc4;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #36b5ac;
+}
+
+#resetBtn {
+    background-color: #ff9a3c;
+}
+
+#resetBtn:hover {
+    background-color: #ff8a2c;
+}
+
+/* 信息区域 */
+.info-area {
+    flex: 1;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.calculation-box, .explanation-box, .formula-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h3 {
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+.value {
+    font-family: 'Courier New', monospace;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.explanation-content p {
+    margin-bottom: 0.8rem;
+}
+
+.formula-content {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.1rem;
+}
+
+.formula-content p {
+    margin-bottom: 0.8rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .visualization-area, .info-area {
+        min-width: 100%;
+    }
+}

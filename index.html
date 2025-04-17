@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微积分披萨 - 割圆术演示</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>微积分披萨</h1>
+        <h2>通过切披萨学习割圆术与微积分</h2>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="visualization-area">
+                <canvas id="pizzaCanvas" width="400" height="400"></canvas>
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="sliceSlider">切片数量: <span id="sliceCount">4</span></label>
+                        <input type="range" id="sliceSlider" min="3" max="100" value="4" step="1">
+                    </div>
+                    <div class="control-group">
+                        <button id="animateBtn">动画演示</button>
+                        <button id="resetBtn">重置</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-area">
+                <div class="calculation-box">
+                    <h3>面积计算</h3>
+                    <div class="result-container">
+                        <div class="result-item">
+                            <span class="label">近似面积:</span>
+                            <span id="approxArea" class="value">0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">实际面积:</span>
+                            <span id="exactArea" class="value">0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">误差:</span>
+                            <span id="errorValue" class="value">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="explanation-box">
+                    <h3>微积分原理</h3>
+                    <div id="explanation" class="explanation-content">
+                        <p>这个演示展示了割圆术的基本原理，这是微积分中积分概念的前身。</p>
+                        <p>通过增加切片数量，我们可以看到近似值如何越来越接近圆的实际面积。</p>
+                        <p>当切片数趋于无穷大时，近似值与实际值的差异趋于零，这正是极限的概念。</p>
+                    </div>
+                </div>
+
+                <div class="formula-box">
+                    <h3>数学公式</h3>
+                    <div class="formula-content">
+                        <p>圆的面积: A = πr²</p>
+                        <p>n个切片的近似面积: A ≈ n × (r² × sin(2π/n) / 2)</p>
+                        <p>当n→∞时: lim<sub>n→∞</sub> A<sub>n</sub> = πr²</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>微积分披萨演示 - 通过有趣的方式学习数学</p>
+    </footer>
+
+    <script src="js/calculator.js"></script>
+    <script src="js/visualizer.js"></script>
+    <script src="js/ui-controller.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
