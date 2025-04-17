@@ -56,7 +56,7 @@ main {
 }
 
 #pizzaCanvas {
-    border: 2px dashed #ff9a3c;
+    border: none;
     border-radius: 50%;
     margin-bottom: 1.5rem;
 }

@@ -3,7 +3,7 @@
  */
 
 class PizzaVisualizer {
-    constructor(canvasId, radius = 150) {
+    constructor(canvasId, radius = 180) {
         this.canvas = document.getElementById(canvasId);
         this.ctx = this.canvas.getContext('2d');
         this.centerX = this.canvas.width / 2;
@@ -165,17 +165,31 @@ class PizzaVisualizer {
         // 在现有披萨上添加辅助线和说明
         const anglePerSlice = (2 * Math.PI) / slices;
         
-        // 清除画布并绘制基本圆形
+        // 清除画布
         this.clear();
         
-        // 绘制完整圆形作为参考（使用淡色）
+        // 1. 首先绘制完整圆形
         this.ctx.beginPath();
         this.ctx.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI);
-        this.ctx.strokeStyle = 'rgba(150, 150, 150, 0.3)';
-        this.ctx.lineWidth = 1;
+        this.ctx.fillStyle = this.pizzaColor;
+        this.ctx.fill();
+        this.ctx.strokeStyle = this.outlineColor;
+        this.ctx.lineWidth = 2;
         this.ctx.stroke();
         
-        // 绘制一个切片的三角形近似
+        // 2. 然后绘制扇形
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.centerX, this.centerY);
+        this.ctx.arc(this.centerX, this.centerY, this.radius, 0, anglePerSlice);
+        this.ctx.closePath();
+        this.ctx.fillStyle = this.sliceColors[0];
+        this.ctx.fill();
+        this.ctx.strokeStyle = this.outlineColor;
+        this.ctx.lineWidth = 2;
+        this.ctx.stroke();
+        
+        // 3. 最后绘制三角形，使用明显的颜色和粗线条
+        // 绘制三角形底色
         this.ctx.beginPath();
         this.ctx.moveTo(this.centerX, this.centerY);
         this.ctx.lineTo(
@@ -187,9 +201,7 @@ class PizzaVisualizer {
             this.centerY + this.radius * Math.sin(anglePerSlice)
         );
         this.ctx.closePath();
-        
-        // 高亮显示这个三角形
-        this.ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
+        this.ctx.fillStyle = 'rgba(255, 255, 0, 0.7)';
         this.ctx.fill();
         
         // 绘制圆弧部分，显示三角形与圆弧之间的差异区域
@@ -204,9 +216,7 @@ class PizzaVisualizer {
             this.centerY + this.radius * Math.sin(anglePerSlice)
         );
         this.ctx.closePath();
-        
-        // 使用不同颜色填充差异区域
-        this.ctx.fillStyle = 'rgba(0, 128, 255, 0.4)';
+        this.ctx.fillStyle = 'rgba(0, 128, 255, 0.5)';
         this.ctx.fill();
         
         // 明确绘制三角形的边缘线 - 使用更粗更明显的线条
@@ -218,7 +228,7 @@ class PizzaVisualizer {
             this.centerY + this.radius * Math.sin(0)
         );
         this.ctx.strokeStyle = '#FF0000'; // 纯红色
-        this.ctx.lineWidth = 3;
+        this.ctx.lineWidth = 5; // 增加线宽
         this.ctx.stroke();
         
         // 绘制从中心到第二个点的线
@@ -229,7 +239,7 @@ class PizzaVisualizer {
             this.centerY + this.radius * Math.sin(anglePerSlice)
         );
         this.ctx.strokeStyle = '#FF0000'; // 纯红色
-        this.ctx.lineWidth = 3;
+        this.ctx.lineWidth = 5; // 增加线宽
         this.ctx.stroke();
         
         // 绘制三角形底边（弧附近的边）- 使用更粗更明显的线条
@@ -243,8 +253,14 @@ class PizzaVisualizer {
             this.centerY + this.radius * Math.sin(anglePerSlice)
         );
         this.ctx.strokeStyle = '#FF0000'; // 纯红色
-        this.ctx.lineWidth = 3;
+        this.ctx.lineWidth = 5; // 增加线宽
         this.ctx.stroke();
+        
+        // 绘制中心点
+        this.ctx.beginPath();
+        this.ctx.arc(this.centerX, this.centerY, 5, 0, 2 * Math.PI);
+        this.ctx.fillStyle = '#FF0000';
+        this.ctx.fill();
         
         // 添加详细的数学公式说明
         this.drawMathFormulas(slices);
@@ -261,71 +277,106 @@ class PizzaVisualizer {
         const approximateArea = slices * triangleArea;
         const exactArea = Math.PI * Math.pow(this.radius, 2);
         
-        // 保存当前上下文状态
+        // 创建或更新HTML元素来显示公式，而不是在画布上绘制
+        let formulaBox = document.getElementById('triangle-formula-box');
+        
+        // 如果元素不存在，创建一个新的
+        if (!formulaBox) {
+            formulaBox = document.createElement('div');
+            formulaBox.id = 'triangle-formula-box';
+            formulaBox.className = 'formula-overlay';
+            document.querySelector('.visualization-area').appendChild(formulaBox);
+            
+            // 添加样式
+            const style = document.createElement('style');
+            style.textContent = `
+                .formula-overlay {
+                    position: absolute;
+                    top: 10px;
+                    left: 420px;
+                    width: 300px;
+                    background-color: rgba(255, 255, 255, 0.95);
+                    border: 2px solid #ff9a3c;
+                    border-radius: 10px;
+                    padding: 15px;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+                    font-family: 'Arial', sans-serif;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    max-height: 380px;
+                    overflow-y: auto;
+                    z-index: 100;
+                }
+                .formula-overlay h4 {
+                    color: #ff6b6b;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid #f0f0f0;
+                    padding-bottom: 5px;
+                }
+                .formula-overlay p {
+                    margin-bottom: 8px;
+                }
+                .formula-section {
+                    margin-bottom: 15px;
+                }
+                .close-btn {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    color: #ff6b6b;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // 更新公式内容
+        formulaBox.innerHTML = `
+            <span class="close-btn" onclick="this.parentElement.style.display='none';">×</span>
+            <h4>数学公式详解</h4>
+            
+            <div class="formula-section">
+                <p><strong>1. 三角形面积计算:</strong></p>
+                <p>底 = 2 × r × sin(θ/2)</p>
+                <p>高 = r × cos(θ/2)</p>
+                <p>面积 = (1/2) × 底 × 高</p>
+                <p>= (1/2) × 2r × sin(${(anglePerSlice/2).toFixed(4)}) × r × cos(${(anglePerSlice/2).toFixed(4)})</p>
+                <p>= r² × sin(${anglePerSlice.toFixed(4)}) / 2</p>
+                <p>= ${triangleArea.toFixed(4)}</p>
+            </div>
+            
+            <div class="formula-section">
+                <p><strong>2. n个切片的近似面积:</strong></p>
+                <p>A ≈ n × (r² × sin(2π/n) / 2)</p>
+                <p>= ${slices} × (${Math.pow(this.radius, 2)} × sin(${anglePerSlice.toFixed(4)}) / 2)</p>
+                <p>= ${slices} × ${triangleArea.toFixed(4)}</p>
+                <p>= ${approximateArea.toFixed(4)}</p>
+            </div>
+            
+            <div class="formula-section">
+                <p><strong>3. 圆的精确面积:</strong></p>
+                <p>A = πr²</p>
+                <p>= π × ${Math.pow(this.radius, 2)}</p>
+                <p>= ${exactArea.toFixed(4)}</p>
+            </div>
+            
+            <div class="formula-section">
+                <p><strong>4. 当n→∞时:</strong></p>
+                <p>lim n→∞ [n × (r² × sin(2π/n) / 2)] = πr²</p>
+                <p>误差: ${((Math.abs(exactArea - approximateArea) / exactArea) * 100).toFixed(4)}%</p>
+            </div>
+        `;
+        
+        // 显示公式框
+        formulaBox.style.display = 'block';
+        
+        // 在画布上添加提示文字
         this.ctx.save();
-        
-        // 设置文本样式
-        this.ctx.font = '14px Arial';
-        this.ctx.fillStyle = '#000';
-        this.ctx.textAlign = 'left';
-        
-        // 计算文本位置（在画布右侧）
-        const textX = this.centerX + this.radius + 20;
-        let textY = this.centerY - this.radius + 20;
-        const lineHeight = 20;
-        
-        // 绘制标题
         this.ctx.font = 'bold 16px Arial';
-        this.ctx.fillText('数学公式详解:', textX, textY);
-        textY += lineHeight + 5;
-        this.ctx.font = '14px Arial';
-        
-        // 1. 三角形面积公式
-        this.ctx.fillText('1. 三角形面积计算:', textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText('   底 = 2 × r × sin(θ/2)', textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText('   高 = r × cos(θ/2)', textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText('   面积 = (1/2) × 底 × 高', textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   = (1/2) × 2r × sin(${(anglePerSlice/2).toFixed(4)}) × r × cos(${(anglePerSlice/2).toFixed(4)})`, textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   = r² × sin(${anglePerSlice.toFixed(4)}) / 2`, textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   = ${triangleArea.toFixed(4)}`, textX, textY);
-        textY += lineHeight + 5;
-        
-        // 2. n个切片的近似面积
-        this.ctx.fillText('2. n个切片的近似面积:', textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   A ≈ n × (r² × sin(2π/n) / 2)`, textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   = ${slices} × (${Math.pow(this.radius, 2)} × sin(${anglePerSlice.toFixed(4)}) / 2)`, textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   = ${slices} × ${triangleArea.toFixed(4)}`, textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   = ${approximateArea.toFixed(4)}`, textX, textY);
-        textY += lineHeight + 5;
-        
-        // 3. 圆的精确面积
-        this.ctx.fillText('3. 圆的精确面积:', textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText('   A = πr²', textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   = π × ${Math.pow(this.radius, 2)}`, textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   = ${exactArea.toFixed(4)}`, textX, textY);
-        textY += lineHeight + 5;
-        
-        // 4. 极限说明
-        this.ctx.fillText('4. 当n→∞时:', textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText('   lim n→∞ [n × (r² × sin(2π/n) / 2)] = πr²', textX, textY);
-        textY += lineHeight;
-        this.ctx.fillText(`   误差: ${((Math.abs(exactArea - approximateArea) / exactArea) * 100).toFixed(4)}%`, textX, textY);
-        
-        // 恢复上下文状态
+        this.ctx.fillStyle = '#FF6B6B';
+        this.ctx.textAlign = 'center';
+        this.ctx.fillText('三角形近似法演示', this.centerX, this.centerY - this.radius - 20);
         this.ctx.restore();
     }
 }

@@ -13,6 +13,7 @@ class PizzaUIController {
         this.sliceCountDisplay = document.getElementById('sliceCount');
         this.animateBtn = document.getElementById('animateBtn');
         this.resetBtn = document.getElementById('resetBtn');
+        this.explainBtn = document.getElementById('explainBtn');
         
         // 结果显示元素
         this.approxAreaDisplay = document.getElementById('approxArea');
@@ -59,6 +60,11 @@ class PizzaUIController {
         this.resetBtn.addEventListener('click', () => {
             this.visualizer.drawFullPizza();
             this.updateExplanation(0);
+        });
+        
+        // 三角形近似法按钮点击事件
+        this.explainBtn.addEventListener('click', () => {
+            this.visualizer.drawApproximationExplanation(this.currentSlices);
         });
     }
     
