@@ -7,6 +7,15 @@ class PizzaCalculator {
         this.radius = radius; // 披萨半径，默认为1个单位
         this.exactArea = Math.PI * Math.pow(this.radius, 2); // 精确的圆面积
     }
+    
+    /**
+     * 更新披萨半径
+     * @param {number} newRadius - 新的半径值
+     */
+    setRadius(newRadius) {
+        this.radius = newRadius;
+        this.exactArea = Math.PI * Math.pow(this.radius, 2); // 更新精确的圆面积
+    }
 
     /**
      * 计算n个切片时的近似面积

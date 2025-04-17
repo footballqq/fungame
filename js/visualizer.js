@@ -3,7 +3,7 @@
  */
 
 class PizzaVisualizer {
-    constructor(canvasId, radius = 180) {
+    constructor(canvasId, radius = 240) {
         this.canvas = document.getElementById(canvasId);
         this.ctx = this.canvas.getContext('2d');
         this.centerX = this.canvas.width / 2;
@@ -20,6 +20,14 @@ class PizzaVisualizer {
         
         // 初始化
         this.clear();
+    }
+    
+    /**
+     * 设置披萨半径
+     * @param {number} newRadius - 新的半径值（像素）
+     */
+    setRadius(newRadius) {
+        this.radius = newRadius;
     }
     
     /**

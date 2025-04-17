@@ -11,6 +11,8 @@ class PizzaUIController {
         // 获取DOM元素
         this.sliceSlider = document.getElementById('sliceSlider');
         this.sliceCountDisplay = document.getElementById('sliceCount');
+        this.radiusSlider = document.getElementById('radiusSlider');
+        this.radiusValueDisplay = document.getElementById('radiusValue');
         this.animateBtn = document.getElementById('animateBtn');
         this.resetBtn = document.getElementById('resetBtn');
         this.explainBtn = document.getElementById('explainBtn');
@@ -35,10 +37,20 @@ class PizzaUIController {
      * 初始化所有事件监听器
      */
     initEventListeners() {
-        // 滑块变化事件
+        // 切片数量滑块变化事件
         this.sliceSlider.addEventListener('input', () => {
             this.currentSlices = parseInt(this.sliceSlider.value);
             this.sliceCountDisplay.textContent = this.currentSlices;
+            this.updateUI();
+        });
+        
+        // 半径滑块变化事件
+        this.radiusSlider.addEventListener('input', () => {
+            const newRadius = parseInt(this.radiusSlider.value);
+            this.radiusValueDisplay.textContent = newRadius;
+            this.visualizer.setRadius(newRadius);
+            // 同时更新计算器的半径值
+            this.calculator.setRadius(newRadius / 150); // 将像素半径转换为单位半径（150px对应单位半径1）
             this.updateUI();
         });
         
@@ -58,6 +70,9 @@ class PizzaUIController {
         
         // 重置按钮点击事件
         this.resetBtn.addEventListener('click', () => {
+            // 保持当前半径设置
+            const currentRadius = parseInt(this.radiusSlider.value);
+            this.visualizer.setRadius(currentRadius);
             this.visualizer.drawFullPizza();
             this.updateExplanation(0);
         });
