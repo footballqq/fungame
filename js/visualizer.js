@@ -168,6 +168,13 @@ class PizzaVisualizer {
         // 清除画布并绘制基本圆形
         this.clear();
         
+        // 绘制完整圆形作为参考（使用淡色）
+        this.ctx.beginPath();
+        this.ctx.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI);
+        this.ctx.strokeStyle = 'rgba(150, 150, 150, 0.3)';
+        this.ctx.lineWidth = 1;
+        this.ctx.stroke();
+        
         // 绘制一个切片的三角形近似
         this.ctx.beginPath();
         this.ctx.moveTo(this.centerX, this.centerY);
@@ -182,11 +189,8 @@ class PizzaVisualizer {
         this.ctx.closePath();
         
         // 高亮显示这个三角形
-        this.ctx.fillStyle = 'rgba(255, 255, 0, 0.3)';
+        this.ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
         this.ctx.fill();
-        this.ctx.strokeStyle = 'rgba(255, 0, 0, 0.8)';
-        this.ctx.lineWidth = 2;
-        this.ctx.stroke();
         
         // 绘制圆弧部分，显示三角形与圆弧之间的差异区域
         this.ctx.beginPath();
@@ -205,7 +209,7 @@ class PizzaVisualizer {
         this.ctx.fillStyle = 'rgba(0, 128, 255, 0.4)';
         this.ctx.fill();
         
-        // 明确绘制三角形的边缘线
+        // 明确绘制三角形的边缘线 - 使用更粗更明显的线条
         // 绘制从中心到第一个点的线
         this.ctx.beginPath();
         this.ctx.moveTo(this.centerX, this.centerY);
@@ -213,8 +217,8 @@ class PizzaVisualizer {
             this.centerX + this.radius * Math.cos(0),
             this.centerY + this.radius * Math.sin(0)
         );
-        this.ctx.strokeStyle = 'rgba(255, 0, 0, 0.8)';
-        this.ctx.lineWidth = 2;
+        this.ctx.strokeStyle = '#FF0000'; // 纯红色
+        this.ctx.lineWidth = 3;
         this.ctx.stroke();
         
         // 绘制从中心到第二个点的线
@@ -224,11 +228,11 @@ class PizzaVisualizer {
             this.centerX + this.radius * Math.cos(anglePerSlice),
             this.centerY + this.radius * Math.sin(anglePerSlice)
         );
-        this.ctx.strokeStyle = 'rgba(255, 0, 0, 0.8)';
-        this.ctx.lineWidth = 2;
+        this.ctx.strokeStyle = '#FF0000'; // 纯红色
+        this.ctx.lineWidth = 3;
         this.ctx.stroke();
         
-        // 绘制三角形底边（弧附近的边）
+        // 绘制三角形底边（弧附近的边）- 使用更粗更明显的线条
         this.ctx.beginPath();
         this.ctx.moveTo(
             this.centerX + this.radius * Math.cos(0),
@@ -238,8 +242,8 @@ class PizzaVisualizer {
             this.centerX + this.radius * Math.cos(anglePerSlice),
             this.centerY + this.radius * Math.sin(anglePerSlice)
         );
-        this.ctx.strokeStyle = 'rgba(255, 0, 0, 0.8)';
-        this.ctx.lineWidth = 2;
+        this.ctx.strokeStyle = '#FF0000'; // 纯红色
+        this.ctx.lineWidth = 3;
         this.ctx.stroke();
         
         // 添加详细的数学公式说明
