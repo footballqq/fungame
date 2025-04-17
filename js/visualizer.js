@@ -300,9 +300,10 @@ class PizzaVisualizer {
             style.textContent = `
                 .formula-overlay {
                     position: absolute;
-                    top: 10px;
-                    left: 420px;
-                    width: 300px;
+                    top: 200px;
+                    left: 1080px;
+                    width: 500px;
+                    height: 1680px;
                     background-color: rgba(255, 255, 255, 0.95);
                     border: 2px solid #ff9a3c;
                     border-radius: 10px;
@@ -311,15 +312,17 @@ class PizzaVisualizer {
                     font-family: 'Arial', sans-serif;
                     font-size: 14px;
                     line-height: 1.5;
-                    max-height: 380px;
+                    max-height: 680px;
                     overflow-y: auto;
                     z-index: 100;
+                    cursor: move;
                 }
                 .formula-overlay h4 {
                     color: #ff6b6b;
                     margin-bottom: 10px;
                     border-bottom: 1px solid #f0f0f0;
                     padding-bottom: 5px;
+                    padding-right: 30px; /* 为关闭按钮留出空间 */
                 }
                 .formula-overlay p {
                     margin-bottom: 8px;
@@ -333,11 +336,54 @@ class PizzaVisualizer {
                     right: 10px;
                     cursor: pointer;
                     font-weight: bold;
-                    color: #ff6b6b;
+                    color: white;
+                    background-color: #ff6b6b;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                    z-index: 101;
                 }
             `;
             document.head.appendChild(style);
         }
+        
+        // 添加拖动功能
+        let isDragging = false;
+        let offsetX, offsetY;
+        
+        formulaBox.addEventListener('mousedown', function(e) {
+            // 只有点击框体而不是内部元素时才允许拖动
+            if (e.target === formulaBox) {
+                isDragging = true;
+                offsetX = e.clientX - formulaBox.getBoundingClientRect().left;
+                offsetY = e.clientY - formulaBox.getBoundingClientRect().top;
+            }
+        });
+        
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                formulaBox.style.left = (e.clientX - offsetX) + 'px';
+                formulaBox.style.top = (e.clientY - offsetY) + 'px';
+            }
+        });
+        
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+        });
+        
+        // 点击框外自动关闭
+        document.addEventListener('click', function(e) {
+            if (formulaBox.style.display === 'block' && 
+                !formulaBox.contains(e.target) && 
+                e.target.id !== 'explainBtn') {
+                formulaBox.style.display = 'none';
+            }
+        });
         
         // 更新公式内容
         formulaBox.innerHTML = `
