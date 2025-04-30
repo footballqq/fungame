@@ -48,10 +48,10 @@ h1 {
 .visualization-container {
     display: flex;
     justify-content: center; /* 水平居中 */
-    align-items: flex-end; /* 底部对齐 */
-    gap: 5px; /* 三角形之间的间距 */
+    align-items: flex-end; /* 恢复为底部对齐 */
+    gap: 10px; /* 增加三角形之间的间距 */
     margin-bottom: 30px;
-    min-height: 250px; /* 保证容器有足够高度 */
+    min-height: 850px; /* 保证容器有足够高度 - 适应放大后的图形 */
     width: 100%;
     position: relative; /* 用于绝对定位矩形 */
     overflow: hidden; /* 隐藏超出部分 */
@@ -60,19 +60,38 @@ h1 {
 /* 三角形和矩形容器的基础样式 */
 .triangle-container, .rectangle-container {
     display: flex;
-    align-items: flex-end; /* 柱子底部对齐 */
-    transition: all 0.8s ease-in-out; /* 平滑过渡效果 */
+    /* align-items: flex-end; /* 默认底部对齐 */
+    transition: transform 1.5s ease-in-out, opacity 1s ease-in-out; /* 调整过渡时间和属性 */
 }
 
-/* 第一个三角形（正序） */
+/* 第一个三角形容器特定样式 */
 #triangle1 {
-    /* 初始位置 */
+    align-items: flex-start; /* 绿色柱子顶部对齐 */
 }
 
-/* 第二个三角形（逆序） */
+/* 第二个三角形容器特定样式 */
 #triangle2 {
-    transform: scaleX(-1); /* 水平翻转以模拟倒序 */
-    /* 初始位置 */
+    align-items: flex-end; /* 恢复为橙色柱子底部对齐 */
+    /* 初始时可以不加偏移，移动时再调整，或者预留空间 */
+}
+
+/* 矩形容器特定样式 */
+#rectangle {
+    align-items: flex-start; /* 矩形柱子顶部对齐，因为它们代表总和 */
+}
+
+/* 第一个三角形（绿色，逆序） */
+#triangle1 {
+    /* 初始位置在左侧 */
+}
+
+/* 第二个三角形（橙色，正序） */
+#triangle2 {
+    /* 初始位置在右侧 */
+    /* transform: scaleX(-1); */ /* 不再需要翻转，JS已处理数据顺序 */
+    /* 为了实现上下错开，需要调整其垂直位置 */
+    /* 这个调整比较复杂，可能需要在JS中动态计算 */
+    /* 暂时先在CSS中留空，看JS能否处理 */
 }
 
 /* 合并后的矩形容器 */
@@ -87,17 +106,17 @@ h1 {
 
 /* 柱子样式 */
 .bar {
-    width: 15px; /* 柱子宽度 */
-    margin: 0 1px; /* 柱子间距 */
+    width: 30px; /* 柱子宽度 - 放大 */
+    margin: 0 2px; /* 柱子间距 - 放大 */
     background-color: #4CAF50; /* 柱子颜色 */
     transition: height 0.5s ease; /* 高度变化动画 */
     position: relative; /* 用于显示数字 */
     text-align: center;
     color: white;
-    font-size: 10px;
+    font-size: 12px; /* 稍微增大字体 */
     writing-mode: vertical-rl; /* 垂直文字 */
     text-orientation: mixed;
-    line-height: 15px; /* 调整行高使文字居中 */
+    line-height: 30px; /* 调整行高使文字居中 - 放大 */
 }
 
 /* 第二个三角形的柱子颜色 */
@@ -138,20 +157,31 @@ h1 {
     color: #007bff;
 }
 
-/* 动画状态类 */
-.visualization-container.merging #triangle1 {
-    transform: translateX(50%); /* 向右移动 */
-    opacity: 0;
-    visibility: hidden;
+/* 动画第一阶段：移动到中间 */
+.visualization-container.preparing-merge #triangle1 {
+    /* 计算精确的移动距离，使其右边缘刚好接触中心线 */
+    /* 这个值依赖于容器宽度和柱子总宽度，暂时用一个估计值，可能需要JS动态计算 */
+    transform: translateX(calc(50% - 2px)); /* 稍微向右移动，留出间隙 */
 }
 
+.visualization-container.preparing-merge #triangle2 {
+    /* 计算精确的移动距离，使其左边缘刚好接触中心线 */
+    /* 这个值依赖于容器宽度和柱子总宽度，暂时用一个估计值，可能需要JS动态计算 */
+    transform: translateX(calc(-50% + 2px)); /* 稍微向左移动，留出间隙 */
+    /* 同时，可能需要向上移动以实现错位对齐 */
+    /* transform: translate(calc(-50% + 2px), -100%); /* 向上移动自身高度，尝试对齐 */
+    /* 精确的 translateY 需要基于最大柱子高度计算，暂时注释 */
+}
+
+/* 动画第二阶段：合并为矩形 */
+.visualization-container.merging #triangle1,
 .visualization-container.merging #triangle2 {
-    transform: translateX(-50%) scaleX(-1); /* 向左移动并保持翻转 */
-    opacity: 0;
+    opacity: 0; /* 隐藏原始三角形 */
     visibility: hidden;
 }
 
 .visualization-container.merging #rectangle {
-    opacity: 1;
+    opacity: 1; /* 显示合并后的矩形 */
     visibility: visible;
+    transition-delay: 0.5s; /* 稍微延迟矩形的出现，让三角形先消失 */
 }
