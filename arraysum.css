@@ -1,0 +1,157 @@
+/* 全局样式 */
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 控制区域样式 */
+.controls {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.controls label {
+    font-weight: bold;
+}
+
+.controls input[type="number"] {
+    padding: 5px;
+    width: 60px;
+}
+
+.controls button {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+/* 可视化容器 */
+.visualization-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: flex-end; /* 底部对齐 */
+    gap: 5px; /* 三角形之间的间距 */
+    margin-bottom: 30px;
+    min-height: 250px; /* 保证容器有足够高度 */
+    width: 100%;
+    position: relative; /* 用于绝对定位矩形 */
+    overflow: hidden; /* 隐藏超出部分 */
+}
+
+/* 三角形和矩形容器的基础样式 */
+.triangle-container, .rectangle-container {
+    display: flex;
+    align-items: flex-end; /* 柱子底部对齐 */
+    transition: all 0.8s ease-in-out; /* 平滑过渡效果 */
+}
+
+/* 第一个三角形（正序） */
+#triangle1 {
+    /* 初始位置 */
+}
+
+/* 第二个三角形（逆序） */
+#triangle2 {
+    transform: scaleX(-1); /* 水平翻转以模拟倒序 */
+    /* 初始位置 */
+}
+
+/* 合并后的矩形容器 */
+#rectangle {
+    position: absolute; /* 绝对定位，覆盖在原位置 */
+    bottom: 0;
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 精确居中 */
+    opacity: 0; /* 初始隐藏 */
+    visibility: hidden; /* 初始不可见 */
+}
+
+/* 柱子样式 */
+.bar {
+    width: 15px; /* 柱子宽度 */
+    margin: 0 1px; /* 柱子间距 */
+    background-color: #4CAF50; /* 柱子颜色 */
+    transition: height 0.5s ease; /* 高度变化动画 */
+    position: relative; /* 用于显示数字 */
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    writing-mode: vertical-rl; /* 垂直文字 */
+    text-orientation: mixed;
+    line-height: 15px; /* 调整行高使文字居中 */
+}
+
+/* 第二个三角形的柱子颜色 */
+#triangle2 .bar {
+    background-color: #FF9800;
+}
+
+/* 矩形中的柱子颜色 */
+#rectangle .bar {
+    background-color: #2196F3;
+}
+
+/* 解释区域样式 */
+.explanation {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.explanation h2 {
+    margin-top: 0;
+    color: #555;
+}
+
+.explanation p {
+    line-height: 1.6;
+    color: #333;
+}
+
+#sumResult {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #007bff;
+}
+
+/* 动画状态类 */
+.visualization-container.merging #triangle1 {
+    transform: translateX(50%); /* 向右移动 */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visualization-container.merging #triangle2 {
+    transform: translateX(-50%) scaleX(-1); /* 向左移动并保持翻转 */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visualization-container.merging #rectangle {
+    opacity: 1;
+    visibility: visible;
+}

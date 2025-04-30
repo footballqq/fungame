@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>等差数列求和可视化</title>
+    <link rel="stylesheet" href="arraysum.css">
+</head>
+<body>
+    <h1>等差数列求和可视化 (高斯求和法)</h1>
+    
+    <div class="controls">
+        <label for="nTerms">项数 (n):</label>
+        <input type="number" id="nTerms" value="10" min="2" max="50">
+        <button id="visualizeBtn">开始演示</button>
+        <button id="resetBtn">重置</button>
+    </div>
+
+    <div class="visualization-container">
+        <div id="triangle1" class="triangle-container"></div>
+        <div id="triangle2" class="triangle-container"></div>
+        <div id="rectangle" class="rectangle-container"></div>
+    </div>
+
+    <div class="explanation">
+        <h2>原理说明</h2>
+        <p>将等差数列 S = a<sub>1</sub> + a<sub>2</sub> + ... + a<sub>n</sub></p>
+        <p>与倒序数列 S = a<sub>n</sub> + a<sub>n-1</sub> + ... + a<sub>1</sub> 相加</p>
+        <p>得到 2S = (a<sub>1</sub> + a<sub>n</sub>) + (a<sub>2</sub> + a<sub>n-1</sub>) + ... + (a<sub>n</sub> + a<sub>1</sub>)</p>
+        <p>由于是等差数列，每一对的和都等于 (a<sub>1</sub> + a<sub>n</sub>)，共 n 对</p>
+        <p>所以 2S = n * (a<sub>1</sub> + a<sub>n</sub>)</p>
+        <p>最终 S = n * (a<sub>1</sub> + a<sub>n</sub>) / 2</p>
+        <p id="sumResult"></p>
+    </div>
+
+    <script src="arraysum.js"></script>
+</body>
+</html>
