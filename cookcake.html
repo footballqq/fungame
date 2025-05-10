@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>烙饼小游戏 - CookCake</title>
+    <link rel="stylesheet" href="css/cookcake_style.css">
+</head>
+<body>
+    <header>
+        <h1>烙饼小游戏</h1>
+    </header>
+
+    <main>
+        <div class="game-container">
+            <div class="config-area">
+                <h2>游戏配置</h2>
+                <div>
+                    <label for="numCakes">饼的数量 (1-10):</label>
+                    <input type="number" id="numCakes" value="5" min="1" max="10">
+                </div>
+                <div>
+                    <label for="timeA">A面烙制时间 (分钟):</label>
+                    <input type="number" id="timeA" value="4" min="1">
+                </div>
+                <div>
+                    <label for="timeB">B面烙制时间 (分钟):</label>
+                    <input type="number" id="timeB" value="3" min="1">
+                </div>
+                <button id="startGameBtn">开始游戏</button>
+            </div>
+
+            <div class="game-status-area">
+                <h2>游戏状态</h2>
+                <p>已用时间: <span id="timer">0</span> 秒</p>
+                <button id="pauseResumeBtn" disabled>暂停</button>
+                 <button id="nextStepBtn" disabled>下一步 (手动)</button>
+            </div>
+
+            <div class="game-play-area">
+                <div class="area" id="pending-area">
+                    <h3>未完成区</h3>
+                    <!-- 饼将在这里动态添加 -->
+                </div>
+                <div class="area" id="baking-area">
+                    <h3>烙饼区 (锅，最多2张饼)</h3>
+                    <div class="pan-slot" id="pan-slot-1">空位1</div>
+                    <div class="pan-slot" id="pan-slot-2">空位2</div>
+                </div>
+                <div class="area" id="completed-area">
+                    <h3>已完成区</h3>
+                    <!-- 烙好的饼将在这里动态添加 -->
+                </div>
+            </div>
+
+            <div class="instructions-area">
+                <h2>操作说明</h2>
+                <p>1. 配置饼的数量和两面所需的烙制时间，点击“开始游戏”。</p>
+                <p>2. 游戏开始后，计时器启动。</p>
+                <p>3. 从“未完成区”拖动饼到“烙饼区”的空位上，或点击饼选择放入并指定烙哪一面。</p>
+                <p>4. 每一分钟（游戏中为1秒），游戏会提示操作。你可以选择：</p>
+                <ul>
+                    <li>从未完成区选择饼放入空的烙饼区，并指定烙A面或B面。</li>
+                    <li>将烙饼区的饼翻面。</li>
+                    <li>将烙饼区的饼移回未完成区。</li>
+                </ul>
+                <p>5. 饼的两面都烙熟后，会自动移到“已完成区”。</p>
+                <p>6. 目标：用最短的时间烙完所有的饼。</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>烙饼小游戏 - 享受思考的乐趣</p>
+    </footer>
+
+    <script src="js/cookcake_game.js"></script>
+</body>
+</html>

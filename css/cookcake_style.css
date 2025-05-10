@@ -1,0 +1,227 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2em auto;
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/* Configuration Area */
+.config-area, .game-status-area, .instructions-area {
+    background-color: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.config-area h2, .game-status-area h2, .instructions-area h2, .game-play-area h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5em;
+}
+
+.config-area div {
+    margin-bottom: 1em;
+}
+
+.config-area label {
+    display: inline-block;
+    width: 180px;
+    font-weight: bold;
+}
+
+.config-area input[type="number"] {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Game Status Area */
+.game-status-area p {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+#timer {
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+/* Game Play Area */
+.game-play-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+.area {
+    flex: 1;
+    background-color: #e9f5e9;
+    padding: 1em;
+    border-radius: 6px;
+    border: 1px solid #c8e6c9;
+    min-height: 200px; /* Ensure areas have some height */
+}
+
+.area h3 {
+    text-align: center;
+}
+
+/* Cake Styling */
+.cake {
+    background-color: #ffcc80; /* Light orange for uncooked cake */
+    border: 2px solid #ffa726; /* Darker orange border */
+    border-radius: 50%; /* Make it round */
+    width: 60px;
+    height: 60px;
+    margin: 0.5em auto; /* Center cakes in their areas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.8em;
+    position: relative; /* For status indicators */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.cake.cooking-a .side-a {
+    background-color: #brown; /* Indicate cooking side A */
+}
+
+.cake.cooking-b .side-b {
+    background-color: #brown; /* Indicate cooking side B */
+}
+
+.cake .side-status {
+    font-size: 0.7em;
+}
+
+.cake .side-a.cooked, .cake .side-b.cooked {
+    color: green;
+    font-weight: bold;
+}
+
+.cake .side-a.raw, .cake .side-b.raw {
+    color: #d32f2f;
+}
+
+/* Pan Slot Styling */
+.pan-slot {
+    background-color: #silver;
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+.pan-slot.occupied {
+    border-style: solid;
+    border-color: #888;
+    font-style: normal;
+}
+
+/* Instructions Area */
+.instructions-area ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.instructions-area p, .instructions-area li {
+    margin-bottom: 0.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-play-area {
+        flex-direction: column;
+    }
+
+    .config-area label {
+        width: auto;
+        display: block;
+        margin-bottom: 0.3em;
+    }
+
+    .config-area input[type="number"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    main {
+        padding: 1em;
+    }
+}
