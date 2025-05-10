@@ -122,6 +122,17 @@ button:disabled {
     min-height: 200px; /* Ensure areas have some height */
 }
 
+/* 增加未完成区的特殊样式 */
+#pending-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pending-area .cake {
+    margin: 1.2em auto; /* 进一步增加未完成区饼之间的间距 */
+}
+
 .area h3 {
     text-align: center;
 }
@@ -133,7 +144,7 @@ button:disabled {
     border-radius: 50%; /* Make it round */
     width: 60px;
     height: 60px;
-    margin: 0.5em auto; /* Center cakes in their areas */
+    margin: 1em auto; /* 增加饼之间的间距，从0.5em改为1em */
     display: flex;
     flex-direction: column;
     justify-content: center;
