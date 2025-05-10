@@ -45,7 +45,7 @@ function initializeGame() {
     if (isNaN(initialNumCakes) || initialNumCakes < 1 || initialNumCakes > 10 ||
         isNaN(initialTimeA) || initialTimeA < 1 ||
         isNaN(initialTimeB) || initialTimeB < 1) {
-        alert('请输入有效的游戏配置！');
+        showCustomAlert('请输入有效的游戏配置！');
         return;
     }
 
@@ -68,7 +68,9 @@ function initializeGame() {
     startGameBtn.textContent = '重新开始';
     pauseResumeBtn.disabled = true; // 不再需要暂停按钮
     pauseResumeBtn.style.display = 'none'; // 隐藏暂停按钮
-    nextStepBtn.disabled = false; // 启用下一步按钮
+    // 游戏开始时，下一步按钮的状态由updateNextStepButtonState函数决定
+    // 此时应该是禁用状态，因为烙饼区还没有饼
+    updateNextStepButtonState();
     console.log('Game initialized with', initialNumCakes, 'cakes. A:', initialTimeA, 'B:', initialTimeB);
 }
 
@@ -103,6 +105,10 @@ function renderGame() {
             }
         }
     });
+    
+    // 更新下一步按钮状态
+    updateNextStepButtonState();
+    
     checkWinCondition();
 }
 
@@ -142,9 +148,190 @@ function createCakeElement(cake) {
  * @description Handles click events on cakes in the pending area.
  * @param {number} cakeId - The ID of the clicked cake.
  */
-function handlePendingCakeClick(cakeId) {
+/**
+ * @function showCustomAlert
+ * @description 显示自定义的居中alert对话框
+ * @param {string} message - 要显示的消息
+ */
+function showCustomAlert(message) {
+    // 创建对话框元素
+    const dialog = document.createElement('div');
+    dialog.style.position = 'fixed';
+    dialog.style.top = '50%';
+    dialog.style.left = '50%';
+    dialog.style.transform = 'translate(-50%, -50%)';
+    dialog.style.padding = '20px';
+    dialog.style.backgroundColor = 'white';
+    dialog.style.border = '1px solid #ccc';
+    dialog.style.borderRadius = '5px';
+    dialog.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+    dialog.style.zIndex = '1000';
+    dialog.style.minWidth = '300px';
+    dialog.style.textAlign = 'center';
+    
+    // 添加消息
+    const messageElement = document.createElement('p');
+    messageElement.textContent = message;
+    messageElement.style.marginBottom = '20px';
+    
+    // 添加确认按钮
+    const confirmButton = document.createElement('button');
+    confirmButton.textContent = '确定';
+    confirmButton.style.padding = '8px 16px';
+    confirmButton.style.backgroundColor = '#4CAF50';
+    confirmButton.style.color = 'white';
+    confirmButton.style.border = 'none';
+    confirmButton.style.borderRadius = '4px';
+    confirmButton.style.cursor = 'pointer';
+    
+    // 添加背景遮罩
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    overlay.style.zIndex = '999';
+    
+    // 点击确认按钮关闭对话框
+    confirmButton.addEventListener('click', function() {
+        document.body.removeChild(dialog);
+        document.body.removeChild(overlay);
+    });
+    
+    // 组装对话框
+    dialog.appendChild(messageElement);
+    dialog.appendChild(confirmButton);
+    
+    // 添加到页面
+    document.body.appendChild(overlay);
+    document.body.appendChild(dialog);
+    
+    // 聚焦确认按钮
+    confirmButton.focus();
+}
+
+/**
+ * @function showCustomPrompt
+ * @description 显示自定义的居中prompt对话框
+ * @param {string} message - 提示消息
+ * @param {string} defaultValue - 默认值
+ * @returns {Promise} 返回用户输入的值或null
+ */
+function showCustomPrompt(message, defaultValue = '') {
+    return new Promise((resolve) => {
+        // 创建对话框元素
+        const dialog = document.createElement('div');
+        dialog.style.position = 'fixed';
+        dialog.style.top = '50%';
+        dialog.style.left = '50%';
+        dialog.style.transform = 'translate(-50%, -50%)';
+        dialog.style.padding = '20px';
+        dialog.style.backgroundColor = 'white';
+        dialog.style.border = '1px solid #ccc';
+        dialog.style.borderRadius = '5px';
+        dialog.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+        dialog.style.zIndex = '1000';
+        dialog.style.minWidth = '300px';
+        dialog.style.textAlign = 'center';
+        
+        // 添加消息
+        const messageElement = document.createElement('p');
+        messageElement.textContent = message;
+        messageElement.style.marginBottom = '15px';
+        
+        // 添加输入框
+        const inputElement = document.createElement('input');
+        inputElement.type = 'text';
+        inputElement.value = defaultValue;
+        inputElement.style.width = '100%';
+        inputElement.style.padding = '8px';
+        inputElement.style.marginBottom = '15px';
+        inputElement.style.boxSizing = 'border-box';
+        inputElement.style.border = '1px solid #ccc';
+        inputElement.style.borderRadius = '4px';
+        
+        // 添加按钮容器
+        const buttonContainer = document.createElement('div');
+        buttonContainer.style.display = 'flex';
+        buttonContainer.style.justifyContent = 'space-between';
+        
+        // 添加确认按钮
+        const confirmButton = document.createElement('button');
+        confirmButton.textContent = '确定';
+        confirmButton.style.padding = '8px 16px';
+        confirmButton.style.backgroundColor = '#4CAF50';
+        confirmButton.style.color = 'white';
+        confirmButton.style.border = 'none';
+        confirmButton.style.borderRadius = '4px';
+        confirmButton.style.cursor = 'pointer';
+        confirmButton.style.flex = '1';
+        confirmButton.style.marginRight = '10px';
+        
+        // 添加取消按钮
+        const cancelButton = document.createElement('button');
+        cancelButton.textContent = '取消';
+        cancelButton.style.padding = '8px 16px';
+        cancelButton.style.backgroundColor = '#f44336';
+        cancelButton.style.color = 'white';
+        cancelButton.style.border = 'none';
+        cancelButton.style.borderRadius = '4px';
+        cancelButton.style.cursor = 'pointer';
+        cancelButton.style.flex = '1';
+        
+        // 添加背景遮罩
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        overlay.style.zIndex = '999';
+        
+        // 点击确认按钮
+        confirmButton.addEventListener('click', function() {
+            const value = inputElement.value;
+            document.body.removeChild(dialog);
+            document.body.removeChild(overlay);
+            resolve(value);
+        });
+        
+        // 点击取消按钮
+        cancelButton.addEventListener('click', function() {
+            document.body.removeChild(dialog);
+            document.body.removeChild(overlay);
+            resolve(null);
+        });
+        
+        // 按Enter键确认
+        inputElement.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                confirmButton.click();
+            }
+        });
+        
+        // 组装对话框
+        buttonContainer.appendChild(confirmButton);
+        buttonContainer.appendChild(cancelButton);
+        dialog.appendChild(messageElement);
+        dialog.appendChild(inputElement);
+        dialog.appendChild(buttonContainer);
+        
+        // 添加到页面
+        document.body.appendChild(overlay);
+        document.body.appendChild(dialog);
+        
+        // 聚焦输入框
+        inputElement.focus();
+        inputElement.select();
+    });
+}
+
+async function handlePendingCakeClick(cakeId) {
     if (!gameRunning || gameEnded) {
-        alert('游戏未开始或已结束！');
+        showCustomAlert('游戏未开始或已结束！');
         return;
     }
     const cake = cakes.find(c => c.id === cakeId);
@@ -152,15 +339,15 @@ function handlePendingCakeClick(cakeId) {
 
     const targetPanSlotIndex = pan[0] === null ? 0 : (pan[1] === null ? 1 : -1);
     if (targetPanSlotIndex === -1) {
-        alert('烙饼区已满！');
+        showCustomAlert('烙饼区已满！');
         return;
     }
 
-    const sideToCook = prompt(`将饼 #${cakeId} 放入烙饼区，烙哪一面？ (输入 A 或 B):`, 'A');
+    const sideToCook = await showCustomPrompt(`将饼 #${cakeId} 放入烙饼区，烙哪一面？ (输入 A 或 B):`, 'A');
     if (sideToCook && (sideToCook.toUpperCase() === 'A' || sideToCook.toUpperCase() === 'B')) {
         moveCakeToPan(cake, targetPanSlotIndex, sideToCook.toUpperCase());
     } else if (sideToCook !== null) {
-        alert('请输入有效的面 (A 或 B)。');
+        showCustomAlert('请输入有效的面 (A 或 B)。');
     }
 }
 
@@ -169,21 +356,21 @@ function handlePendingCakeClick(cakeId) {
  * @description Handles click events on cakes in the baking area (pan).
  * @param {number} cakeId - The ID of the clicked cake.
  */
-function handleBakingCakeClick(cakeId) {
+async function handleBakingCakeClick(cakeId) {
     if (!gameRunning || gameEnded) {
-        alert('游戏未开始或已结束！');
+        showCustomAlert('游戏未开始或已结束！');
         return;
     }
     const cake = cakes.find(c => c.id === cakeId);
     if (!cake) return;
 
-    const action = prompt(`操作饼 #${cakeId}：\n1. 翻面\n2. 移回未完成区\n请输入操作编号 (1 或 2):`);
+    const action = await showCustomPrompt(`操作饼 #${cakeId}：\n1. 翻面\n2. 移回未完成区\n请输入操作编号 (1 或 2):`);
     if (action === '1') {
         flipCakeInPan(cake);
     } else if (action === '2') {
         moveCakeFromPanToPending(cake);
     } else if (action !== null) {
-        alert('无效操作！');
+        showCustomAlert('无效操作！');
     }
 }
 
@@ -196,11 +383,11 @@ function handleBakingCakeClick(cakeId) {
  */
 function moveCakeToPan(cake, panSlotIndex, side) {
     if (pan[panSlotIndex] !== null) {
-        alert('该烙饼位已被占用！');
+        showCustomAlert('该烙饼位已被占用！');
         return;
     }
     if ((side === 'A' && cake.isSideACooked) || (side === 'B' && cake.isSideBCooked)) {
-        alert(`饼 #${cake.id} 的 ${side}面 已经烙熟了！请选择另一面或另一块饼。`);
+        showCustomAlert(`饼 #${cake.id} 的 ${side}面 已经烙熟了！请选择另一面或另一块饼。`);
         return;
     }
 
@@ -224,7 +411,7 @@ function flipCakeInPan(cake) {
     const newSide = oldSide === 'A' ? 'B' : 'A';
 
     if ((newSide === 'A' && cake.isSideACooked) || (newSide === 'B' && cake.isSideBCooked)) {
-        alert(`饼 #${cake.id} 的 ${newSide}面 已经烙熟了！`);
+        showCustomAlert(`饼 #${cake.id} 的 ${newSide}面 已经烙熟了！`);
         // Optionally, move it out or let user decide next action
         return;
     }
@@ -262,7 +449,7 @@ function updateGame() {
     // 检查是否有饼在烙饼区
     const hasCakesInPan = pan[0] !== null || pan[1] !== null;
     if (!hasCakesInPan) {
-        alert('烙饼区没有饼，请先放入饼再点击下一步！');
+        showCustomAlert('烙饼区没有饼，请先放入饼再点击下一步！');
         return;
     }
 
@@ -369,11 +556,11 @@ function endGame() {
  */
 function manualNextStep() {
     if (!gameRunning) {
-        alert('游戏未开始！');
+        showCustomAlert('游戏未开始！');
         return;
     }
     if (gameEnded) {
-        alert('游戏已结束！');
+        showCustomAlert('游戏已结束！');
         return;
     }
     updateGame(); // Perform one step of game logic
@@ -409,5 +596,54 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render or placeholder text for areas
     renderGame(); // Render empty state initially
     pauseResumeBtn.style.display = 'none'; // 隐藏暂停按钮
+    // 初始状态下，下一步按钮应该是禁用的，直到游戏开始
     nextStepBtn.disabled = true;
 });
+
+/**
+ * @function updateNextStepButtonState
+ * @description 更新下一步按钮的启用状态，根据烙饼区是否有饼来决定
+ */
+/**
+ * @function updateNextStepButtonState
+ * @description 更新下一步按钮的状态，根据游戏状态和烙饼区饼的状态决定是否启用下一步按钮
+ */
+function updateNextStepButtonState() {
+    // 只有在游戏运行中且烙饼区有饼的情况下，下一步按钮才启用
+    const hasCakesInPan = pan[0] !== null || pan[1] !== null;
+    
+    // 检查烙饼区是否有已烙熟但未处理的饼
+    let hasCookedSideInPan = false;
+    let cookedCakeId = -1;
+    let cookedSide = '';
+    
+    // 遍历烙饼区中的饼
+    for (let i = 0; i < pan.length; i++) {
+        const cake = pan[i];
+        if (cake !== null) {
+            // 检查当前烙制的面是否已熟
+            if (cake.currentBakingSide === 'A' && cake.isSideACooked) {
+                hasCookedSideInPan = true;
+                cookedCakeId = cake.id;
+                cookedSide = 'A';
+                break;
+            } else if (cake.currentBakingSide === 'B' && cake.isSideBCooked) {
+                hasCookedSideInPan = true;
+                cookedCakeId = cake.id;
+                cookedSide = 'B';
+                break;
+            }
+        }
+    }
+    
+    // 如果有已烙熟但未处理的饼，禁用下一步按钮并显示提示
+    if (hasCookedSideInPan) {
+        nextStepBtn.disabled = true;
+        // 添加提示信息到按钮上
+        nextStepBtn.title = `饼 #${cookedCakeId} 的 ${cookedSide}面 已烙熟，请先处理（翻面或移走）！`;
+    } else {
+        // 正常逻辑：游戏运行中且烙饼区有饼时启用按钮
+        nextStepBtn.disabled = !gameRunning || gameEnded || !hasCakesInPan;
+        nextStepBtn.title = '';
+    }
+}
