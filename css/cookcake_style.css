@@ -145,11 +145,11 @@ button:disabled {
 }
 
 .cake.cooking-a .side-a {
-    background-color: #brown; /* Indicate cooking side A */
+    background-color: brown; /* Indicate cooking side A */
 }
 
 .cake.cooking-b .side-b {
-    background-color: #brown; /* Indicate cooking side B */
+    background-color: brown; /* Indicate cooking side B */
 }
 
 .cake .side-status {
@@ -167,7 +167,7 @@ button:disabled {
 
 /* Pan Slot Styling */
 .pan-slot {
-    background-color: #silver;
+    background-color: silver;
     border: 2px dashed #aaa;
     border-radius: 10px;
     height: 80px;

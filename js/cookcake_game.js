@@ -14,12 +14,12 @@ const panSlot2 = document.getElementById('pan-slot-2');
 
 // Game State
 let cakes = []; // Array to store cake objects
-let gameInterval = null; // For the game timer
-let elapsedTime = 0; // Total time elapsed in seconds (simulating minutes)
+let elapsedTime = 0; // Total time elapsed (simulating minutes)
 let gameRunning = false;
 let initialNumCakes = 5;
 let initialTimeA = 4;
 let initialTimeB = 3;
+let gameEnded = false;
 
 // Pan state: null or cake object
 let pan = [null, null]; 
@@ -31,12 +31,12 @@ let pan = [null, null];
  */
 function initializeGame() {
     console.log('Initializing game...');
-    stopGame(); // Stop any existing game
     cakes = [];
     pan = [null, null];
     elapsedTime = 0;
     timerDisplay.textContent = elapsedTime;
-    gameRunning = false;
+    gameRunning = true;
+    gameEnded = false;
 
     initialNumCakes = parseInt(numCakesInput.value);
     initialTimeA = parseInt(timeAInput.value);
@@ -66,11 +66,10 @@ function initializeGame() {
     }
     renderGame();
     startGameBtn.textContent = '重新开始';
-    pauseResumeBtn.disabled = false;
-    pauseResumeBtn.textContent = '暂停';
-    nextStepBtn.disabled = true; // Disabled when game is running automatically
+    pauseResumeBtn.disabled = true; // 不再需要暂停按钮
+    pauseResumeBtn.style.display = 'none'; // 隐藏暂停按钮
+    nextStepBtn.disabled = false; // 启用下一步按钮
     console.log('Game initialized with', initialNumCakes, 'cakes. A:', initialTimeA, 'B:', initialTimeB);
-    startGame();
 }
 
 /**
@@ -144,8 +143,8 @@ function createCakeElement(cake) {
  * @param {number} cakeId - The ID of the clicked cake.
  */
 function handlePendingCakeClick(cakeId) {
-    if (!gameRunning && !gameInterval) {
-        alert('请先开始或继续游戏！');
+    if (!gameRunning || gameEnded) {
+        alert('游戏未开始或已结束！');
         return;
     }
     const cake = cakes.find(c => c.id === cakeId);
@@ -171,8 +170,8 @@ function handlePendingCakeClick(cakeId) {
  * @param {number} cakeId - The ID of the clicked cake.
  */
 function handleBakingCakeClick(cakeId) {
-    if (!gameRunning && !gameInterval) {
-        alert('请先开始或继续游戏！');
+    if (!gameRunning || gameEnded) {
+        alert('游戏未开始或已结束！');
         return;
     }
     const cake = cakes.find(c => c.id === cakeId);
@@ -254,11 +253,18 @@ function moveCakeFromPanToPending(cake) {
 
 /**
  * @function updateGame
- * @description Updates the game state every second (simulating a minute).
+ * @description Updates the game state when player clicks "next step".
  * Handles baking progress, checks for cooked sides/cakes, and updates UI.
  */
 function updateGame() {
-    if (!gameRunning) return;
+    if (!gameRunning || gameEnded) return;
+
+    // 检查是否有饼在烙饼区
+    const hasCakesInPan = pan[0] !== null || pan[1] !== null;
+    if (!hasCakesInPan) {
+        alert('烙饼区没有饼，请先放入饼再点击下一步！');
+        return;
+    }
 
     elapsedTime++;
     timerDisplay.textContent = elapsedTime;
@@ -302,72 +308,71 @@ function updateGame() {
     }
 
     if (checkWinCondition()) {
-        stopGame();
-        alert(`恭喜！所有饼都在 ${elapsedTime} 分钟内烙熟了！`);
+        endGame();
     }
 }
 
 /**
- * @function startGame
- * @description Starts the game timer and sets the game to running state.
+ * @function endGame
+ * @description Ends the game and shows the game over screen.
  */
-function startGame() {
-    if (gameInterval) clearInterval(gameInterval); // Clear existing interval if any
-    gameRunning = true;
-    pauseResumeBtn.textContent = '暂停';
-    pauseResumeBtn.disabled = false;
-    nextStepBtn.disabled = true; // Disable manual step when auto-running
-    // Game updates every 1 second (simulating 1 minute)
-    gameInterval = setInterval(updateGame, 1000);
-    console.log('Game started.');
-}
-
-/**
- * @function stopGame
- * @description Stops the game timer and clears the interval.
- */
-function stopGame() {
-    clearInterval(gameInterval);
-    gameInterval = null;
+function endGame() {
     gameRunning = false;
-    pauseResumeBtn.textContent = '继续';
-    // Enable next step button only if game is not won and there are cakes to cook
-    const pendingOrBakingCakes = cakes.some(c => c.location === 'pending' || c.location === 'baking');
-    if (!checkWinCondition() && pendingOrBakingCakes) {
-        nextStepBtn.disabled = false;
-    }
-    console.log('Game stopped/paused.');
-}
-
-/**
- * @function togglePauseResume
- * @description Toggles the game between paused and running states.
- */
-function togglePauseResume() {
-    if (gameRunning) {
-        stopGame(); // This will set gameRunning to false and update button text
-    } else {
-        // Check if there's anything to resume or if it's a fresh start needed
-        if (cakes.length === 0 || checkWinCondition()) {
-            // If no cakes or game won, effectively means 'start new game'
-            initializeGame(); // This will also call startGame()
-        } else {
-            startGame(); // Resume existing game
-        }
-    }
+    gameEnded = true;
+    nextStepBtn.disabled = true;
+    
+    // 创建游戏结束画面
+    const gameOverScreen = document.createElement('div');
+    gameOverScreen.style.position = 'fixed';
+    gameOverScreen.style.top = '0';
+    gameOverScreen.style.left = '0';
+    gameOverScreen.style.width = '100%';
+    gameOverScreen.style.height = '100%';
+    gameOverScreen.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    gameOverScreen.style.display = 'flex';
+    gameOverScreen.style.flexDirection = 'column';
+    gameOverScreen.style.justifyContent = 'center';
+    gameOverScreen.style.alignItems = 'center';
+    gameOverScreen.style.zIndex = '1000';
+    
+    const gameOverText = document.createElement('h2');
+    gameOverText.textContent = `恭喜！所有饼都在 ${elapsedTime} 分钟内烙熟了！`;
+    gameOverText.style.color = 'white';
+    gameOverText.style.marginBottom = '2em';
+    
+    const restartButton = document.createElement('button');
+    restartButton.textContent = '再来一局';
+    restartButton.style.padding = '1em 2em';
+    restartButton.style.fontSize = '1.2em';
+    restartButton.style.backgroundColor = '#4CAF50';
+    restartButton.style.color = 'white';
+    restartButton.style.border = 'none';
+    restartButton.style.borderRadius = '4px';
+    restartButton.style.cursor = 'pointer';
+    
+    restartButton.addEventListener('click', function() {
+        document.body.removeChild(gameOverScreen);
+        initializeGame();
+    });
+    
+    gameOverScreen.appendChild(gameOverText);
+    gameOverScreen.appendChild(restartButton);
+    document.body.appendChild(gameOverScreen);
+    
+    console.log('Game ended.');
 }
 
 /**
  * @function manualNextStep
  * @description Advances the game by one time unit manually.
- * This is used when the game is paused.
+ * This is the main control for game progression.
  */
 function manualNextStep() {
-    if (gameRunning || gameInterval) {
-        alert('请先暂停游戏以使用手动模式！');
+    if (!gameRunning) {
+        alert('游戏未开始！');
         return;
     }
-    if (checkWinCondition()) {
+    if (gameEnded) {
         alert('游戏已结束！');
         return;
     }
@@ -392,7 +397,6 @@ function checkWinCondition() {
 
 // Event Listeners
 startGameBtn.addEventListener('click', initializeGame);
-pauseResumeBtn.addEventListener('click', togglePauseResume);
 nextStepBtn.addEventListener('click', manualNextStep);
 
 // Initial setup message or placeholder content
@@ -404,6 +408,6 @@ document.addEventListener('DOMContentLoaded', () => {
     timeBInput.value = initialTimeB;
     // Initial render or placeholder text for areas
     renderGame(); // Render empty state initially
-    pauseResumeBtn.disabled = true;
+    pauseResumeBtn.style.display = 'none'; // 隐藏暂停按钮
     nextStepBtn.disabled = true;
 });
