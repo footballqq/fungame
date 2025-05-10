@@ -846,10 +846,32 @@ function updateGame() {
  * @function endGame
  * @description Ends the game and shows the game over screen.
  */
+/**
+ * @function calculateOptimalSteps
+ * @description 计算完成所有饼的理论最小步数
+ * @returns {number} 理论最小步数
+ */
+function calculateOptimalSteps() {
+    const numCakes = parseInt(numCakesInput.value);
+    const timeA = parseInt(timeAInput.value);
+    const timeB = parseInt(timeBInput.value);
+    
+    // 每个饼都需要烙A面和B面，且每面只能烙一次
+    // 锅可以同时烙2个饼，所以理论最小步数为：
+    // Math.ceil(总烙饼时间 / 锅的容量)
+    // 其中，总烙饼时间 = 所有饼的(A面时间 + B面时间)
+    const totalBakingTime = numCakes * (timeA + timeB);
+    const panCapacity = 2; // 锅的容量
+    
+    return Math.ceil(totalBakingTime / panCapacity);
+}
+
 function endGame() {
     gameRunning = false;
     gameEnded = true;
     nextStepBtn.disabled = true;
+    
+    const optimalSteps = calculateOptimalSteps();
     
     // 创建游戏结束画面
     const gameOverScreen = document.createElement('div');
@@ -868,7 +890,20 @@ function endGame() {
     const gameOverText = document.createElement('h2');
     gameOverText.textContent = `恭喜！所有饼都在 ${elapsedTime} 分钟内烙熟了！`;
     gameOverText.style.color = 'white';
-    gameOverText.style.marginBottom = '2em';
+    gameOverText.style.marginBottom = '1em';
+    
+    const optimalText = document.createElement('p');
+    optimalText.style.color = 'white';
+    optimalText.style.marginBottom = '2em';
+    if (elapsedTime === optimalSteps) {
+        optimalText.textContent = `太棒了！你用最少的步数(${optimalSteps}步)完成了游戏！你是烙饼高手！`;
+        optimalText.style.color = '#4CAF50';
+    } else if (elapsedTime <= optimalSteps + 3) {
+        optimalText.textContent = `很不错！理论最少步数是${optimalSteps}步，你只用了多${elapsedTime - optimalSteps}步就完成了！`;
+        optimalText.style.color = '#FFC107';
+    } else {
+        optimalText.textContent = `理论最少步数是${optimalSteps}步，再接再厉，相信下次你一定能做得更好！`;
+    }
     
     const restartButton = document.createElement('button');
     restartButton.textContent = '再来一局';
@@ -886,10 +921,11 @@ function endGame() {
     });
     
     gameOverScreen.appendChild(gameOverText);
+    gameOverScreen.appendChild(optimalText);
     gameOverScreen.appendChild(restartButton);
     document.body.appendChild(gameOverScreen);
     
-    console.log('Game ended.');
+    console.log('Game ended with', elapsedTime, 'steps. Optimal steps:', optimalSteps);
 }
 
 /**
