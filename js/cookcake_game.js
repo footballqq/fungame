@@ -724,6 +724,17 @@ function flipCakeInPan(cake) {
 
     const oldSide = cake.currentBakingSide;
     const newSide = oldSide === 'A' ? 'B' : 'A';
+    
+    // 检查当前烙制的面是否已经完成
+    const isSideACurrentlyBaking = oldSide === 'A';
+    const isSideBCurrentlyBaking = oldSide === 'B';
+    const currentSideCooked = isSideACurrentlyBaking ? cake.isSideACooked : cake.isSideBCooked;
+    
+    // 如果当前面还未烙熟，则不允许翻面
+    if (!currentSideCooked) {
+        showCustomAlert(`饼 #${cake.id} 的 ${oldSide}面 还未烙熟，不能翻面！`);
+        return;
+    }
 
     // 检查另一面是否已烙熟
     if ((newSide === 'A' && cake.isSideACooked) || (newSide === 'B' && cake.isSideBCooked)) {
@@ -753,11 +764,10 @@ function moveCakeFromPanToPending(cake) {
     
     // 检查当前烙制的面是否已经完成
     const currentSide = cake.currentBakingSide;
-    const currentSideBakingTime = currentSide === 'A' ? cake.sideABakingTime : cake.sideBBakingTime;
-    const requiredTime = currentSide === 'A' ? cake.sideARequiredTime : cake.sideBRequiredTime;
+    const currentSideCooked = currentSide === 'A' ? cake.isSideACooked : cake.isSideBCooked;
     
-    // 如果当前面还未烙熟（未达到所需时间），则不允许移回未完成区
-    if (currentSideBakingTime < requiredTime) {
+    // 如果当前面还未烙熟，则不允许移回未完成区
+    if (!currentSideCooked) {
         showCustomAlert(`饼 #${cake.id} 正在烙${currentSide}面，还未完成烙制，不能移回未完成区！`);
         return;
     }
