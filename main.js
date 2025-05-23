@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Initialization ---
     updateDashboard();
-    if (methodsExemplifiedCountEl) methodsExemplifiedCountEl.textContent = methodsExemplifiedDisplay + " / 3";
+    if (methodsExemplifiedCountEl) methodsExemplifiedCountEl.textContent = methodsExemplifiedDisplay.toString();
 
     // Apply initial rotation and cursor style via JavaScript
     if (cubeContainer) { // Ensure cubeContainer exists
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
              currentValueEl.textContent = '0'; 
         }
         
-        if (methodsExemplifiedCountEl) methodsExemplifiedCountEl.textContent = methodsExemplifiedDisplay + " / 3";
+        if (methodsExemplifiedCountEl) methodsExemplifiedCountEl.textContent = methodsExemplifiedDisplay.toString();
         alert(submissionMessage);
 
         if (methodsExemplifiedDisplay === 3) {

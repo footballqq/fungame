@@ -1,6 +1,5 @@
 class CubeGame {
     constructor() {
-        this.solutionMap = new Map();
         this.faceAdjacency = {
             0: [2, 3, 4, 5], // Front: Top, Bottom, Left, Right
             1: [2, 3, 4, 5], // Back: Top, Bottom, Left, Right
@@ -10,7 +9,6 @@ class CubeGame {
             5: [0, 1, 2, 3]  // Right: Front, Back, Top, Bottom
         };
         this.SYMMETRIES = this.generateSymmetries();
-        this.actualSolutionMap = new Map();
     }
 
     generateSymmetries() {
@@ -61,21 +59,6 @@ class CubeGame {
         return symmetries_list;
     }
 
-    normalizeColors(faces) {
-        const colorToNormalizedId = new Map();
-        let nextToken = 1;
-        const normalizedFaceColors = [];
-
-        for (const color of faces) {
-            if (!colorToNormalizedId.has(color)) {
-                colorToNormalizedId.set(color, nextToken);
-                nextToken++;
-            }
-            normalizedFaceColors.push(colorToNormalizedId.get(color));
-        }
-        return normalizedFaceColors.join('');
-    }
-
     isValidColoring(faces) {
         // Ensure this.faceAdjacency is accessible
         for (let i = 0; i < 6; i++) {
@@ -97,71 +80,92 @@ class CubeGame {
         return true; // All checks passed
     }
 
-    isNewSolution(faces) {
-        const rotated_normalized_patterns = [];
+    checkMethod1Structure(faces, uniqueColorsCount) {
+        // Assumes isValidColoring(faces) is already true.
+        // Any valid 3-color solution must be of the {C1,C1}, {C2,C2}, {C3,C3} structure.
+        return uniqueColorsCount === 3;
+    }
 
-        for (const transform of this.SYMMETRIES) {
-            // Apply the transform to the input 'faces'
-            // transform[k] is the OLD face index that provides color for NEW face k.
-            const transformed_actual_colors = transform.map(original_face_idx => faces[original_face_idx]);
-            
-            const normalized_pattern = this.normalizeColors(transformed_actual_colors);
-            rotated_normalized_patterns.push(normalized_pattern);
+    checkMethod2Structure(faces, uniqueColorsCount) {
+        // Structure: {C1,C1}, {C2,C2}, {C3,C4} using 4 unique colors.
+        if (uniqueColorsCount !== 4) return false;
+        // Assumes isValidColoring(faces) is true.
+
+        const colorCounts = new Map();
+        for (const color of faces) {
+            colorCounts.set(color, (colorCounts.get(color) || 0) + 1);
         }
 
-        // Check if any of these normalized patterns (from any rotation) exist in the solutionMap
-        // This means we are checking if the CURRENT submitted pattern, in ANY of its symmetric forms,
-        // normalizes to something already stored as a canonical key.
-        for (const pattern_str of rotated_normalized_patterns) {
-            if (this.solutionMap.has(pattern_str)) {
-                return false; // This abstract pattern is already registered
+        if (colorCounts.size !== 4) return false; // Should be caught by uniqueColorsCount, but defensive.
+
+        let singleCountColors = 0;
+        let doubleCountColors = 0;
+        let colorsAppearingTwice = [];
+
+        for (const [color, count] of colorCounts) {
+            if (count === 1) {
+                singleCountColors++;
+            } else if (count === 2) {
+                doubleCountColors++;
+                colorsAppearingTwice.push(color);
+            } else {
+                return false; // Invalid count for this structure (e.g. color appears > 2 times)
             }
         }
 
-        // If none were found, it's a new solution.
-        // Determine the canonical pattern (lexicographically smallest) and store that one.
-        rotated_normalized_patterns.sort(); // Sorts strings lexicographically
-        const canonical_pattern = rotated_normalized_patterns[0];
+        if (!(singleCountColors === 2 && doubleCountColors === 2)) return false;
+
+        // Check if the two colors appearing twice are on opposite faces.
+        let pairsFound = 0;
+        for (const color of colorsAppearingTwice) {
+            if ((faces[0] === color && faces[1] === color) || // Front-Back
+                (faces[2] === color && faces[3] === color) || // Top-Bottom
+                (faces[4] === color && faces[5] === color)) { // Left-Right
+                pairsFound++;
+            } else {
+                // This color that appears twice is not on an opposite pair, so invalid structure.
+                return false; 
+            }
+        }
+        return pairsFound === 2; // Both colors that appear twice must form opposite pairs.
+    }
+
+    checkMethod3Structure(faces, uniqueColorsCount) {
+        // Structure: {C1,C1}, C2,C3,C4,C5 using 5 unique colors.
+        if (uniqueColorsCount !== 5) return false;
+        // Assumes isValidColoring(faces) is true.
+
+        const colorCounts = new Map();
+        for (const color of faces) {
+            colorCounts.set(color, (colorCounts.get(color) || 0) + 1);
+        }
+
+        if (colorCounts.size !== 5) return false;
+
+        let singleCountColors = 0;
+        let doubleCountColor = null;
+        let hasDouble = false;
+
+        for (const [color, count] of colorCounts) {
+            if (count === 1) {
+                singleCountColors++;
+            } else if (count === 2 && !hasDouble) { // Only one color can appear twice
+                doubleCountColor = color;
+                hasDouble = true;
+            } else {
+                return false; // Invalid count (e.g., >1 color appears twice, or a color appears >2 times)
+            }
+        }
         
-        this.solutionMap.set(canonical_pattern, true);
+        if (!(singleCountColors === 4 && hasDouble)) return false;
+
+        // Check if the color appearing twice is on opposite faces.
+        if (!((faces[0] === doubleCountColor && faces[1] === doubleCountColor) ||
+              (faces[2] === doubleCountColor && faces[3] === doubleCountColor) ||
+              (faces[4] === doubleCountColor && faces[5] === doubleCountColor))) {
+            return false;
+        }
         return true;
-    }
-
-    getCanonicalActualColors(faces) {
-        if (!faces || faces.length !== 6) {
-            // Or throw an error, but returning null might be safer if called unexpectedly
-            console.error("getCanonicalActualColors received invalid faces array", faces);
-            return null; 
-        }
-
-        let canonicalKey = null;
-        for (const transform of this.SYMMETRIES) {
-            // transform[k] is the OLD face index that provides color for NEW face k.
-            const transformed_colors = transform.map(original_face_idx => faces[original_face_idx]);
-            const key_string = JSON.stringify(transformed_colors); // Robust key from array
-
-            if (canonicalKey === null || key_string < canonicalKey) {
-                canonicalKey = key_string;
-            }
-        }
-        return canonicalKey;
-    }
-
-    isNewActualColorSolution(faces) {
-        if (!faces || faces.length !== 6 || faces.some(f => f === null || f === undefined)) {
-            // Ensure faces are valid for an actual solution submission
-            console.error("isNewActualColorSolution received invalid faces array", faces);
-            return false; 
-        }
-
-        const canonicalKey = this.getCanonicalActualColors(faces);
-        if (canonicalKey === null) return false; // Should not happen if faces are valid
-
-        if (!this.actualSolutionMap.has(canonicalKey)) {
-            this.actualSolutionMap.set(canonicalKey, true);
-            return true;
-        }
-        return false;
     }
 
     // Other methods will be added later
