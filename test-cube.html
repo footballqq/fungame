@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubeGame Test</title>
+    <script src="cube-game.js"></script>
+</head>
+<body>
+    <h1>CubeGame Test Page</h1>
+    <p>Open the browser's developer console to see test results.</p>
+
+    <script>
+        console.log("Starting CubeGame tests...");
+        const game = new CubeGame();
+
+        // --- Test Suite ---
+        function runTests() {
+            console.log("--- Testing generateSymmetries() ---");
+            // Test Case 1.1: Check for 24 symmetries
+            console.assert(game.SYMMETRIES.length === 24, `Test Case 1.1 Failed: Expected 24 symmetries, got ${game.SYMMETRIES.length}`);
+            if (game.SYMMETRIES.length === 24) console.log("Test Case 1.1 Passed: Found 24 symmetries.");
+
+            // Test Case 1.2: Check if identity is present
+            const identity = JSON.stringify([0,1,2,3,4,5]);
+            const hasIdentity = game.SYMMETRIES.some(s => JSON.stringify(s) === identity);
+            console.assert(hasIdentity, "Test Case 1.2 Failed: Identity permutation [0,1,2,3,4,5] not found.");
+            if (hasIdentity) console.log("Test Case 1.2 Passed: Identity permutation found.");
+
+            console.log("--- Testing normalizeColors() ---");
+            // Test Case 2.1
+            let faces = ['red', 'blue', 'red', 'green', 'blue', 'yellow'];
+            let expected = '121324';
+            let result = game.normalizeColors(faces);
+            console.assert(result === expected, `Test Case 2.1 Failed: Input ${faces}, Expected ${expected}, Got ${result}`);
+            if (result === expected) console.log(`Test Case 2.1 Passed: ${faces} -> ${result}`);
+
+            // Test Case 2.2
+            faces = ['A', 'A', 'B', 'C', 'C', 'D'];
+            expected = '112334';
+            result = game.normalizeColors(faces);
+            console.assert(result === expected, `Test Case 2.2 Failed: Input ${faces}, Expected ${expected}, Got ${result}`);
+            if (result === expected) console.log(`Test Case 2.2 Passed: ${faces} -> ${result}`);
+
+            console.log("--- Testing isValidColoring() ---");
+            // Test Case 3.1 (Valid: opposite faces same color)
+            faces = ['red', 'red', 'blue', 'blue', 'green', 'green']; // F/B=R, T/D=B, L/R=G
+            expected = true;
+            result = game.isValidColoring(faces);
+            console.assert(result === expected, `Test Case 3.1 Failed: Input ${faces}, Expected ${expected}, Got ${result}`);
+            if (result === expected) console.log(`Test Case 3.1 Passed: ${faces} is valid.`);
+            
+            // Test Case 3.2 (Invalid: adjacent same color Front-Top)
+            faces = ['red', 'blue', 'red', 'yellow', 'green', 'orange']; // F=R, T=R
+            expected = false;
+            result = game.isValidColoring(faces);
+            console.assert(result === expected, `Test Case 3.2 Failed: Input ${faces}, Expected ${expected}, Got ${result}`);
+            if (result === expected) console.log(`Test Case 3.2 Passed: ${faces} is invalid (F/T same).`);
+
+            // Test Case 3.3 (Invalid: uncolored face)
+            faces = [null, 'blue', 'green', 'yellow', 'purple', 'orange'];
+            expected = false;
+            result = game.isValidColoring(faces);
+            console.assert(result === expected, `Test Case 3.3 Failed: Input ${faces}, Expected ${expected}, Got ${result}`);
+            if (result === expected) console.log(`Test Case 3.3 Passed: ${faces} is invalid (null face).`);
+
+            console.log("--- Testing isNewSolution() ---");
+            // Reset solutionMap for these tests by creating a new game instance or clearing map
+            const gameForSolutionTests = new CubeGame(); 
+
+            // Test Case 4.1 (First solution)
+            faces = ['red', 'red', 'blue', 'blue', 'green', 'green']; // Opposites same
+            expected = true;
+            result = gameForSolutionTests.isNewSolution(faces);
+            console.assert(result === expected, `Test Case 4.1 Failed: Input ${faces}, Expected ${expected}, Got ${result}`);
+            if (result === expected) console.log(`Test Case 4.1 Passed: ${faces} is a new solution.`);
+            // console.log("SolutionMap after TC 4.1:", gameForSolutionTests.solutionMap);
+
+
+            // Test Case 4.2 (Rotation of first solution)
+            // Original: F/B=R, T/D=B, L/R=G. Let's rotate around Y so F/B=G, T/D=B, L/R=R
+            // This means old L/R (green) becomes new F/B. Old F/B (red) becomes new R/L. T/D (blue) stays.
+            // So, new F=G, B=G, T=B, D=B, L=R, R=R
+            faces = ['green', 'green', 'blue', 'blue', 'red', 'red']; 
+            expected = false;
+            result = gameForSolutionTests.isNewSolution(faces);
+            console.assert(result === expected, `Test Case 4.2 Failed: Input ${faces} (rotated), Expected ${expected}, Got ${result}`);
+            if (result === expected) console.log(`Test Case 4.2 Passed: Rotated ${faces} is NOT a new solution.`);
+            // console.log("SolutionMap after TC 4.2:", gameForSolutionTests.solutionMap);
+
+            // Test Case 4.3 (Different colors, same pattern)
+            faces = ['cyan', 'cyan', 'magenta', 'magenta', 'yellow', 'yellow']; // Opposites same
+            expected = false;
+            result = gameForSolutionTests.isNewSolution(faces);
+            console.assert(result === expected, `Test Case 4.3 Failed: Input ${faces} (diff colors), Expected ${expected}, Got ${result}`);
+            if (result === expected) console.log(`Test Case 4.3 Passed: ${faces} (diff colors) is NOT a new solution.`);
+            // console.log("SolutionMap after TC 4.3:", gameForSolutionTests.solutionMap);
+
+            // Test Case 4.4 (Genuinely new pattern - all faces different)
+            faces = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+            expected = true;
+            result = gameForSolutionTests.isNewSolution(faces);
+            console.assert(result === expected, `Test Case 4.4 Failed: Input ${faces} (all diff), Expected ${expected}, Got ${result}`);
+            if (result === expected) console.log(`Test Case 4.4 Passed: ${faces} (all diff) IS a new solution.`);
+            // console.log("SolutionMap after TC 4.4:", gameForSolutionTests.solutionMap);
+            
+            console.log("--- All tests complete ---");
+        }
+
+        runTests();
+    </script>
+</body>
+</html>
