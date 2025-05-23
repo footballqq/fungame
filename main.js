@@ -147,7 +147,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 highscore = currentScore;
                 highscoreEl.textContent = highscore.toString();
             }
-            alert(`New unique solution found! Score: ${currentScore}`);
+
+            let solutionTypeDescription = "";
+            // Note: The counts 10, 10, 5 refer to C(5,k) * (number of abstract patterns for k colors)
+            // k=3: C(5,3)*1 = 10
+            // k=4: C(5,4)*2 = 10
+            // k=5: C(5,5)*5 = 5
+            if (uniqueColorsCount === 3) {
+                solutionTypeDescription = "10 possible distinct colorings of this type when choosing 3 colors from 5.";
+            } else if (uniqueColorsCount === 4) {
+                solutionTypeDescription = "10 possible distinct colorings of this type when choosing 4 colors from 5.";
+            } else if (uniqueColorsCount === 5) {
+                solutionTypeDescription = "5 possible distinct colorings of this type when choosing 5 colors from 5.";
+            }
+
+            let alertMessage = `New abstract pattern found using ${uniqueColorsCount} colors!\nYour Score: ${currentScore}.`;
+            if (solutionTypeDescription) {
+                alertMessage += `\n(This discovery is part of ${solutionTypeDescription})`;
+            }
+            alert(alertMessage);
             // Potentially reset cube or allow modification for next solution
         } else {
             alert("This coloring pattern has already been found or is a symmetrical equivalent of a found pattern.");
