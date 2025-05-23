@@ -10,6 +10,7 @@ class CubeGame {
             5: [0, 1, 2, 3]  // Right: Front, Back, Top, Bottom
         };
         this.SYMMETRIES = this.generateSymmetries();
+        this.actualSolutionMap = new Map();
     }
 
     generateSymmetries() {
@@ -124,6 +125,43 @@ class CubeGame {
         
         this.solutionMap.set(canonical_pattern, true);
         return true;
+    }
+
+    getCanonicalActualColors(faces) {
+        if (!faces || faces.length !== 6) {
+            // Or throw an error, but returning null might be safer if called unexpectedly
+            console.error("getCanonicalActualColors received invalid faces array", faces);
+            return null; 
+        }
+
+        let canonicalKey = null;
+        for (const transform of this.SYMMETRIES) {
+            // transform[k] is the OLD face index that provides color for NEW face k.
+            const transformed_colors = transform.map(original_face_idx => faces[original_face_idx]);
+            const key_string = JSON.stringify(transformed_colors); // Robust key from array
+
+            if (canonicalKey === null || key_string < canonicalKey) {
+                canonicalKey = key_string;
+            }
+        }
+        return canonicalKey;
+    }
+
+    isNewActualColorSolution(faces) {
+        if (!faces || faces.length !== 6 || faces.some(f => f === null || f === undefined)) {
+            // Ensure faces are valid for an actual solution submission
+            console.error("isNewActualColorSolution received invalid faces array", faces);
+            return false; 
+        }
+
+        const canonicalKey = this.getCanonicalActualColors(faces);
+        if (canonicalKey === null) return false; // Should not happen if faces are valid
+
+        if (!this.actualSolutionMap.has(canonicalKey)) {
+            this.actualSolutionMap.set(canonicalKey, true);
+            return true;
+        }
+        return false;
     }
 
     // Other methods will be added later

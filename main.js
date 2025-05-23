@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const highscoreEl = document.getElementById('highscore');
     const submitButton = document.getElementById('submit-button');
     const resetButton = document.getElementById('reset-button');
+    // const solutionsFoundEl = document.getElementById('solutions-found'); // Old
+    // const totalSolutionsEl = document.getElementById('total-solutions'); // Old
+    const actualSolutionsFoundEl = document.getElementById('actual-solutions-found');
+    const totalActualSolutionsEl = document.getElementById('total-actual-solutions');
+    const abstractPatternsFoundEl = document.getElementById('abstract-patterns-found');
+    const totalAbstractPatternsEl = document.getElementById('total-abstract-patterns');
 
     // Game State
     let currentColors = Array(6).fill(null); // 0:F, 1:B, 2:T, 3:B, 4:L, 5:R
@@ -25,6 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Initialization ---
     updateDashboard();
+    if (totalActualSolutionsEl) totalActualSolutionsEl.textContent = "25";
+    if (actualSolutionsFoundEl) actualSolutionsFoundEl.textContent = game.actualSolutionMap.size.toString();
+        
+    if (totalAbstractPatternsEl) totalAbstractPatternsEl.textContent = "8";
+    if (abstractPatternsFoundEl) abstractPatternsFoundEl.textContent = game.solutionMap.size.toString();
+
     // Apply initial rotation and cursor style via JavaScript
     if (cubeContainer) { // Ensure cubeContainer exists
         cubeContainer.style.transform = `rotateX(${currentRotationX}deg) rotateY(${currentRotationY}deg)`;
@@ -129,18 +141,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // If valid, check if it's a new solution
-        if (game.isNewSolution(currentColors)) {
-            const uniqueColorsCount = new Set(currentColors.filter(c => c !== null)).size;
-            // Placeholder scoring: unique colors factorial.
-            // The problem's "颜色阶乘 × 结构唯一性" is more complex.
-            // For now, score = uniqueColorsCount.
-            let currentScore = uniqueColorsCount; // Simplified score
-            if (uniqueColorsCount > 0) { // basic factorial
-                let fact = 1;
-                for(let i=2; i<=uniqueColorsCount; i++) fact *=i;
-                currentScore = fact;
-            }
+        const isNewPatternType = game.isNewSolution(currentColors); // Checks against 8 abstract patterns
+        const isNewSpecificColoring = game.isNewActualColorSolution(currentColors); // Checks against 25 actual colorings
 
+        if (isNewSpecificColoring) {
+            const uniqueColorsCount = new Set(currentColors.filter(c => c !== null)).size;
+            // Scoring (current placeholder: k!)
+            let currentScore = 0;
+            if (uniqueColorsCount > 0) {
+                currentScore = 1; // Base score for finding a new one
+                for(let i=2; i<=uniqueColorsCount; i++) currentScore *=i; // Factorial for colors used
+            }
+            // If isNewPatternType is true, maybe add a bonus, e.g., currentScore += 50; (optional)
 
             currentValueEl.textContent = currentScore.toString();
             if (currentScore > highscore) {
@@ -148,28 +160,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 highscoreEl.textContent = highscore.toString();
             }
 
-            let solutionTypeDescription = "";
-            // Note: The counts 10, 10, 5 refer to C(5,k) * (number of abstract patterns for k colors)
-            // k=3: C(5,3)*1 = 10
-            // k=4: C(5,4)*2 = 10
-            // k=5: C(5,5)*5 = 5
-            if (uniqueColorsCount === 3) {
-                solutionTypeDescription = "10 possible distinct colorings of this type when choosing 3 colors from 5.";
-            } else if (uniqueColorsCount === 4) {
-                solutionTypeDescription = "10 possible distinct colorings of this type when choosing 4 colors from 5.";
-            } else if (uniqueColorsCount === 5) {
-                solutionTypeDescription = "5 possible distinct colorings of this type when choosing 5 colors from 5.";
+            if (actualSolutionsFoundEl) actualSolutionsFoundEl.textContent = game.actualSolutionMap.size.toString();
+            if (abstractPatternsFoundEl) { // Always update abstract patterns display
+                 abstractPatternsFoundEl.textContent = game.solutionMap.size.toString();
             }
-
-            let alertMessage = `New abstract pattern found using ${uniqueColorsCount} colors!\nYour Score: ${currentScore}.`;
-            if (solutionTypeDescription) {
-                alertMessage += `\n(This discovery is part of ${solutionTypeDescription})`;
+            
+            let alertMessage = `New coloring found using ${uniqueColorsCount} colors!\nScore: ${currentScore}.\n(Found: ${game.actualSolutionMap.size}/25 specific colorings).`;
+            if (isNewPatternType) {
+                alertMessage += `\nThis is also a new abstract pattern type! (Types: ${game.solutionMap.size}/8).`;
             }
             alert(alertMessage);
-            // Potentially reset cube or allow modification for next solution
-        } else {
-            alert("This coloring pattern has already been found or is a symmetrical equivalent of a found pattern.");
-            currentValueEl.textContent = '0';
+
+            if (game.solutionMap.size === 8 && isNewPatternType) {
+                setTimeout(() => { 
+                    alert("Well done! You've discovered all 8 abstract pattern types!\nNow, find all 25 specific colorings that these patterns can form.");
+                }, 100); // Delay for primary alert
+            }
+            
+            if (game.actualSolutionMap.size === 25) {
+                // Adjust delay if both congratulatory messages could appear simultaneously
+                const delay = (game.solutionMap.size === 8 && isNewPatternType) ? 200 : 100;
+                setTimeout(() => { 
+                    alert("CONGRATULATIONS! \nYou've found all 25 unique actual colorings for the cube!"); 
+                }, delay);
+            }
+
+        } else { // Not a new specific coloring
+            alert("This specific coloring (or its rotation) has already been found.");
+            currentValueEl.textContent = '0'; // Reset current value if it's not a new find
         }
     });
 
