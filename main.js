@@ -11,15 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetButton = document.getElementById('reset-button');
     // const solutionsFoundEl = document.getElementById('solutions-found'); // Old
     // const totalSolutionsEl = document.getElementById('total-solutions'); // Old
-    const actualSolutionsFoundEl = document.getElementById('actual-solutions-found');
-    const totalActualSolutionsEl = document.getElementById('total-actual-solutions');
-    const abstractPatternsFoundEl = document.getElementById('abstract-patterns-found');
-    const totalAbstractPatternsEl = document.getElementById('total-abstract-patterns');
+    // const actualSolutionsFoundEl = document.getElementById('actual-solutions-found'); // Old
+    // const totalActualSolutionsEl = document.getElementById('total-actual-solutions'); // Old
+    // const abstractPatternsFoundEl = document.getElementById('abstract-patterns-found'); // Old
+    // const totalAbstractPatternsEl = document.getElementById('total-abstract-patterns'); // Old
+    const methodsExemplifiedCountEl = document.getElementById('methods-exemplified-count');
 
     // Game State
     let currentColors = Array(6).fill(null); // 0:F, 1:B, 2:T, 3:B, 4:L, 5:R
     let selectedColorValue = null;
     let highscore = 0;
+    let method1Exemplified = false;
+    let method2Exemplified = false;
+    let method3Exemplified = false;
+    let methodsExemplifiedDisplay = 0;
 
     // Cube Rotation State
     const cubeContainer = document.querySelector('.cube-container');
@@ -31,11 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Initialization ---
     updateDashboard();
-    if (totalActualSolutionsEl) totalActualSolutionsEl.textContent = "25";
-    if (actualSolutionsFoundEl) actualSolutionsFoundEl.textContent = game.actualSolutionMap.size.toString();
-        
-    if (totalAbstractPatternsEl) totalAbstractPatternsEl.textContent = "8";
-    if (abstractPatternsFoundEl) abstractPatternsFoundEl.textContent = game.solutionMap.size.toString();
+    if (methodsExemplifiedCountEl) methodsExemplifiedCountEl.textContent = methodsExemplifiedDisplay + " / 3";
 
     // Apply initial rotation and cursor style via JavaScript
     if (cubeContainer) { // Ensure cubeContainer exists
@@ -140,56 +141,84 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // If valid, check if it's a new solution
-        const isNewPatternType = game.isNewSolution(currentColors); // Checks against 8 abstract patterns
-        const isNewSpecificColoring = game.isNewActualColorSolution(currentColors); // Checks against 25 actual colorings
+        // New core logic for checking methods
+        const uniqueColorsCount = new Set(currentColors.filter(c => c !== null)).size;
+        let newMethodFoundThisTurn = false;
+        let submissionMessage = "";
+        let newMethodType = 0; // 1, 2, or 3
 
-        if (isNewSpecificColoring) {
-            const uniqueColorsCount = new Set(currentColors.filter(c => c !== null)).size;
-            // Scoring (current placeholder: k!)
-            let currentScore = 0;
-            if (uniqueColorsCount > 0) {
-                currentScore = 1; // Base score for finding a new one
-                for(let i=2; i<=uniqueColorsCount; i++) currentScore *=i; // Factorial for colors used
+        if (!method1Exemplified && game.checkMethod1Structure(currentColors, uniqueColorsCount)) {
+            method1Exemplified = true;
+            newMethodType = 1;
+            submissionMessage = "Congratulations! You've found an example of Method 1 (3-color type: {C1,C1},{C2,C2},{C3,C3}).";
+        } else if (!method2Exemplified && game.checkMethod2Structure(currentColors, uniqueColorsCount)) {
+            method2Exemplified = true;
+            newMethodType = 2;
+            submissionMessage = "Congratulations! You've found an example of Method 2 (4-color type: {C1,C1},{C2,C2},{C3,C4}).";
+        } else if (!method3Exemplified && game.checkMethod3Structure(currentColors, uniqueColorsCount)) {
+            method3Exemplified = true;
+            newMethodType = 3;
+            submissionMessage = "Congratulations! You've found an example of Method 3 (5-color type: {C1,C1}, with 4 other distinct colors).";
+        } else {
+            // Check if it's a valid coloring but matches an already found method type or none of the specific structures
+            if ( (uniqueColorsCount === 3 && method1Exemplified) ||
+                 (uniqueColorsCount === 4 && method2Exemplified && game.checkMethod2Structure(currentColors, uniqueColorsCount)) || // also check structure to be sure
+                 (uniqueColorsCount === 5 && method3Exemplified && game.checkMethod3Structure(currentColors, uniqueColorsCount)) ) {
+                submissionMessage = "This is a valid coloring, but you've already exemplified this method type.";
+            } else if (uniqueColorsCount === 4 && !method2Exemplified && !game.checkMethod2Structure(currentColors, uniqueColorsCount)) {
+                submissionMessage = "This 4-color coloring is valid, but doesn't match the specific structure needed for Method 2 ({C1,C1},{C2,C2},{C3,C4}). Try again!";
+            } else if (uniqueColorsCount === 5 && !method3Exemplified && !game.checkMethod3Structure(currentColors, uniqueColorsCount)) {
+                submissionMessage = "This 5-color coloring is valid, but doesn't match the specific structure needed for Method 3 ({C1,C1}, plus 4 distinct others). Try again!";
+            } else {
+                submissionMessage = "This is a valid coloring, but it doesn't match a new method type you still need to find, or its specific structure.";
             }
-            // If isNewPatternType is true, maybe add a bonus, e.g., currentScore += 50; (optional)
+        }
 
+        if (newMethodType > 0) {
+            methodsExemplifiedDisplay++;
+            newMethodFoundThisTurn = true; // Used by scoring if desired
+            // Update score - e.g., 10 points per method
+            let currentScore = methodsExemplifiedDisplay * 10; 
             currentValueEl.textContent = currentScore.toString();
             if (currentScore > highscore) {
                 highscore = currentScore;
                 highscoreEl.textContent = highscore.toString();
             }
+        } else {
+             // If not a new method, reset current value or leave as is based on preference
+             currentValueEl.textContent = '0'; 
+        }
+        
+        if (methodsExemplifiedCountEl) methodsExemplifiedCountEl.textContent = methodsExemplifiedDisplay + " / 3";
+        alert(submissionMessage);
 
-            if (actualSolutionsFoundEl) actualSolutionsFoundEl.textContent = game.actualSolutionMap.size.toString();
-            if (abstractPatternsFoundEl) { // Always update abstract patterns display
-                 abstractPatternsFoundEl.textContent = game.solutionMap.size.toString();
-            }
-            
-            let alertMessage = `New coloring found using ${uniqueColorsCount} colors!\nScore: ${currentScore}.\n(Found: ${game.actualSolutionMap.size}/25 specific colorings).`;
-            if (isNewPatternType) {
-                alertMessage += `\nThis is also a new abstract pattern type! (Types: ${game.solutionMap.size}/8).`;
-            }
-            alert(alertMessage);
-
-            if (game.solutionMap.size === 8 && isNewPatternType) {
-                setTimeout(() => { 
-                    alert("Well done! You've discovered all 8 abstract pattern types!\nNow, find all 25 specific colorings that these patterns can form.");
-                }, 100); // Delay for primary alert
-            }
-            
-            if (game.actualSolutionMap.size === 25) {
-                // Adjust delay if both congratulatory messages could appear simultaneously
-                const delay = (game.solutionMap.size === 8 && isNewPatternType) ? 200 : 100;
-                setTimeout(() => { 
-                    alert("CONGRATULATIONS! \nYou've found all 25 unique actual colorings for the cube!"); 
-                }, delay);
-            }
-
-        } else { // Not a new specific coloring
-            alert("This specific coloring (or its rotation) has already been found.");
-            currentValueEl.textContent = '0'; // Reset current value if it's not a new find
+        if (methodsExemplifiedDisplay === 3) {
+            setTimeout(() => {
+                displayFinalExplanation();
+            }, 100);
         }
     });
+
+    function displayFinalExplanation() {
+        const explanationText = "恭喜您发现所有3种基本构造方法！\n\n" +
+                            "这些方法揭示了所有独特的着色方案：\n\n" +
+                            "使用恰好3种不同颜色的10种解法：\n（例如，{C1,C1}, {C2,C2}, {C3,C3} —— C代表颜色）\n" +
+                            "  - 从5种颜色中选出3种：C(5,3) = 10种选择方式。\n" +
+                            "  - 为每组对立面分配一种颜色：结构上仅1种排列方式。\n" +
+                            "  - 总计：10 × 1 = 10种。\n\n" +
+                            "使用恰好4种不同颜色的30种解法：\n（例如，{C1,C1}, {C2,C2}, {C3,C4} —— 即您所述的“2对是30种”）\n" +
+                            "  - 为两组完整对立面选择颜色：C(5,2) = 10种选择方式。\n" +
+                            "  - 从剩余3种颜色中为混合对立面选择2种：C(3,2) = 3种方式。\n" +
+                            "  - 排列组合（此结构类型仅1种排列方式）。\n" +
+                            "  - 总计：10 × 3 = 30种。\n\n" +
+                            "使用恰好5种不同颜色的15种解法：\n（例如，{C1,C1}，其余4个面使用C2,C3,C4,C5 ）\n" +
+                            "  - 为完整对立面选择1种颜色：C(5,1) = 5种选择方式。\n" +
+                            "  - 在赤道环上排列其余4种不同颜色：存在3种不同的排列方式。(选择一种颜色固定，比如C2, 则C2的对面有三种可能，C3,C4,C5)\n" +
+                            "  - 总计：5 × 3 = 15种。\n\n" +
+                            "总和 = 10 + 30 + 15 = 55种不同的着色方案。";
+        alert(explanationText);
+        // In future, this could populate a modal div for better formatting.
+    }
 
     // --- Helper Functions ---
 

@@ -64,3 +64,26 @@ The 8 abstract patterns are the fundamental structures, and the 25 solutions are
 Given this, I strongly recommend we set the game's target for 'Actual Solutions Found' to 25. The isNewActualColorSolution function we designed will correctly identify these 25 unique colorings. This also aligns better with the 8 abstract patterns you are implicitly discovering.
 
 Would you be comfortable with adjusting the target in the dashboard and congratulatory messages from 55 to 25? This would make the game consistent with established mathematical results for this classic problem.
+
+
+
+使用恰好3种不同颜色的10种解法：（例如，{C1,C1}, {C2,C2}, {C3,C3} —— C-> color）
+
+从5种颜色中选出3种：C(5,3) = 10种选择方式。
+为每组对立面分配一种颜色：结构上仅1种排列方式。
+总计：10 × 1 = 10种。
+
+使用恰好4种不同颜色的30种解法：（例如，{C1,C1}, {C2,C2}, {C3,C4} —— 即您所述的“2对是30种”）
+
+为两组完整对立面选择颜色：C(5,2) = 10种选择方式。
+从剩余3种颜色中为混合对立面选择2种：C(3,2) = 3种方式。
+排列组合（此结构类型仅1种排列方式）。
+总计：10 × 3 = 30种。
+
+使用恰好5种不同颜色的15种解法：（例如，{C1,C1}，其余4个面使用C2,C3,C4,C5 ）
+
+为完整对立面选择1种颜色：C(5,1) = 5种选择方式。
+在赤道环上排列其余4种不同颜色：存在3种不同的排列方式。(选择一种颜色固定，比如C2, 则C2的对面有三种可能，C3,C4,C5)
+总计：5 × 3 = 15种。
+
+总和 = 10 + 30 + 15 = 55种不同的着色方案。
