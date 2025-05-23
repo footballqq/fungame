@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    display: flex;
+    gap: 30px;
+}
+
+.cube-area {
+    width: 350px; /* Approximate size for cube layout */
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Enable 3D space */
+}
+
+.cube-container {
+    width: 100px; /* Reference size for face translations */
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(-30deg); /* Initial rotation to see 3D effect */
+}
+
+.face {
+    position: absolute; /* Position faces within the cube-container */
+    width: 100px;
+    height: 100px;
+    border: 1px solid #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: #ddd; /* Default uncolored face, overridden below for debugging */
+    box-sizing: border-box;
+    backface-visibility: hidden; /* Good practice for 3D objects */
+}
+
+.face.front  { 
+    transform: rotateY(0deg) translateZ(50px);
+    background-color: rgba(255, 0, 0, 0.7); /* Red */
+}
+.face.back   { 
+    transform: rotateY(180deg) translateZ(50px); 
+    background-color: rgba(0, 255, 255, 0.7); /* Cyan */
+}
+.face.top    { 
+    transform: rotateX(90deg) translateZ(50px);
+    background-color: rgba(0, 255, 0, 0.7); /* Green */
+}
+.face.bottom { 
+    transform: rotateX(-90deg) translateZ(50px);
+    background-color: rgba(255, 255, 0, 0.7); /* Yellow */
+}
+.face.left   { 
+    transform: rotateY(-90deg) translateZ(50px);
+    background-color: rgba(0, 0, 255, 0.7); /* Blue */
+}
+.face.right  { 
+    transform: rotateY(90deg) translateZ(50px);
+    background-color: rgba(255, 0, 255, 0.7); /* Magenta */
+}
+
+/* For visual feedback */
+.face.violating {
+    border: 3px solid red !important;
+    box-shadow: 0 0 10px red;
+}
+
+.controls-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.color-palette {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 50%; /* Circular color options */
+    cursor: pointer;
+    transition: transform 0.1s ease-out;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    border-color: #000;
+    box-shadow: 0 0 5px 2px #007bff;
+}
+
+.dashboard {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dashboard div {
+    margin-bottom: 8px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
