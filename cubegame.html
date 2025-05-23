@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cube Color Game</title>
+    <title>立方体涂色游戏 Cube Color Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,14 +31,24 @@
             </div>
 
             <div class="dashboard">
-                <div>Used Colors: <span id="used-colors">0</span></div>
-                <div>Current Value: <span id="current-value">0</span></div>
-                <div>High Score: <span id="highscore">0</span></div>
-                <div>Methods Exemplified: <span id="methods-exemplified-count">0</span> / 3</div>
+                <div>使用的颜色数量：Used Colors: <span id="used-colors">0</span></div>
+                <div>当前分数：Current Value: <span id="current-value">0</span></div>
+                <div>最高分数：High Score: <span id="highscore">0</span></div>
+                <div>独立方案：Methods Exemplified: <span id="methods-exemplified-count">0</span> / 3</div>
             </div>
 
-            <button id="submit-button">Submit Solution</button>
-            <button id="reset-button">Reset Cube</button>
+            <button id="submit-button">提交Submit Solution</button>
+            <button id="reset-button">重置立方体Reset Cube</button>
+            <div class="gamedescription">
+                <p><b>游戏玩法：</b></p>
+                <p>使用调色板为立方体的各个面着色。目标是将立方体着色为任意两个相邻面的颜色不同。  </p>
+                <p>最多使用5种颜色，你可以使用少于5中颜色。 </p>
+
+                <P>点击一种颜色，再点击一个面进行着色。</P>
+                <P>拖拽可以旋转立方体</P>
+                <P>重置按钮将刷新所有颜色为空白。</P>
+            </div>
+
         </div>
     </div>
 
