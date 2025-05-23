@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Color Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="cube-area">
+            <div class="cube-container">
+                <!-- Faces will be explicitly positioned with CSS later, data-face-id for JS -->
+                <div class="face front" data-face-id="0">Front (0)</div>
+                <div class="face back" data-face-id="1">Back (1)</div>
+                <div class="face top" data-face-id="2">Top (2)</div>
+                <div class="face bottom" data-face-id="3">Bottom (3)</div>
+                <div class="face left" data-face-id="4">Left (4)</div>
+                <div class="face right" data-face-id="5">Right (5)</div>
+            </div>
+        </div>
+
+        <div class="controls-area">
+            <div class="color-palette">
+                <div class="color-option" data-color-value="red" style="background-color: red;"></div>
+                <div class="color-option" data-color-value="blue" style="background-color: blue;"></div>
+                <div class="color-option" data-color-value="green" style="background-color: green;"></div>
+                <div class="color-option" data-color-value="yellow" style="background-color: yellow;"></div>
+                <div class="color-option" data-color-value="purple" style="background-color: purple;"></div>
+                <!-- Add more colors if needed, up to 5 as per problem -->
+            </div>
+
+            <div class="dashboard">
+                <div>Used Colors: <span id="used-colors">0</span></div>
+                <div>Current Value: <span id="current-value">0</span></div>
+                <div>High Score: <span id="highscore">0</span></div>
+            </div>
+
+            <button id="submit-button">Submit Solution</button>
+            <button id="reset-button">Reset Cube</button>
+        </div>
+    </div>
+
+    <script src="cube-game.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
