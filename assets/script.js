@@ -62,7 +62,7 @@ function showCard(index) {
         document.getElementById('english').textContent = word.english;
         document.getElementById('example').textContent = word.example;
         document.getElementById('translation').textContent = word.translation;
-        details.classList.remove('hidden'); // 中文模式下直接显示所有信息
+       // details.classList.remove('hidden'); // 中文模式下直接显示所有信息
     }
     
     document.getElementById('current').textContent = index + 1;
@@ -73,7 +73,7 @@ function toggleDetails() {
 
     const details = document.getElementById('details');
     
-    if (currentMode === 'english') {
+//    if (currentMode === 'english') {
         // 英文模式下才切换显示/隐藏
         showingDetails = !showingDetails;
         if (showingDetails) {
@@ -81,7 +81,7 @@ function toggleDetails() {
         } else {
             details.classList.add('hidden');
         }
-    }
+//    }
     // 中文模式下点击无效
 }
 
