@@ -12,13 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const visualizationContainer = document.querySelector('.visualization-container');
     const sumResultDisplay = document.getElementById('sumResult');
 
-    // 向下平移 triangle1Container
-    if (triangle1Container) {
-        const downwardShiftAmount = '920px'; // 您可以根据需要调整这个值
-        triangle1Container.style.position = 'relative'; // 确保可以相对定位
-        triangle1Container.style.top = downwardShiftAmount;
-    }
-
     let initialDelayTimeout = null; // 用于存储初始延迟超时ID
     let mergeDelayTimeout = null; // 用于存储合并延迟超时ID
 
@@ -104,6 +97,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isNaN(n) || n < 2) {
             alert('请输入有效的项数 (n >= 2)');
             return;
+        }
+
+        // Dynamically set the downward shift for triangle1Container
+        if (triangle1Container) {
+            const baselineShiftPx = 920; // The shift amount that works for baselineN terms
+            const baselineN = 10;        // The number of terms for which baselineShiftPx is correct
+            const shiftPerTerm = baselineN > 0 ? baselineShiftPx / baselineN : 0; // Calculate shift per term
+            
+            const dynamicDownwardShiftAmount = shiftPerTerm * n ;
+            
+            triangle1Container.style.position = 'relative'; // Ensure relative positioning for 'top' to work
+            triangle1Container.style.top = `${dynamicDownwardShiftAmount}px`;
         }
 
         // 生成等差数列 (1, 2, ..., n)
