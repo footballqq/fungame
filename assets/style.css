@@ -1,0 +1,103 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f7ff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.setup {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.word {
+    font-size: 24px;
+    color: #2196F3;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.phonetic {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.chinese {
+    font-size: 18px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.example {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.translation {
+    color: #666;
+    font-style: italic;
+}
+
+.controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #1976D2;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.progress {
+    text-align: center;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .card {
+        margin: 10px;
+    }
+    
+    .word {
+        font-size: 20px;
+    }
+}

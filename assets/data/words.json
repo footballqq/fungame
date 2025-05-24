@@ -1,0 +1,214 @@
+{
+  "words": [
+    {
+      "english": "secret",
+      "phonetic": "/ˈsiːkrɪt/",
+      "chinese": "秘密的",
+      "example": "I have a secret garden.",
+      "translation": "我有一个秘密花园。"
+    },
+    {
+      "english": "lake",
+      "phonetic": "/leɪk/",
+      "chinese": "湖",
+      "example": "The lake is very blue.",
+      "translation": "这个湖很蓝。"
+    },
+    {
+      "english": "neck",
+      "phonetic": "/nek/",
+      "chinese": "脖子",
+      "example": "The swan has a long neck.",
+      "translation": "天鹅有一个长脖子。"
+    },
+    {
+      "english": "swan",
+      "phonetic": "/swɒn/",
+      "chinese": "天鹅",
+      "example": "The white swan is swimming.",
+      "translation": "白天鹅在游泳。"
+    },
+    {
+      "english": "still",
+      "phonetic": "/stɪl/",
+      "chinese": "静止的",
+      "example": "The water is still.",
+      "translation": "水面很平静。"
+    },
+    {
+      "english": "strange",
+      "phonetic": "/streɪndʒ/",
+      "chinese": "奇怪的",
+      "example": "I saw a strange bird.",
+      "translation": "我看见一只奇怪的鸟。"
+    },
+    {
+      "english": "snow",
+      "phonetic": "/snəʊ/",
+      "chinese": "雪",
+      "example": "I love to play in the snow.",
+      "translation": "我喜欢在雪地里玩耍。"
+    },
+    {
+      "english": "smile",
+      "phonetic": "/smaɪl/",
+      "chinese": "微笑",
+      "example": "Mom has a sweet smile.",
+      "translation": "妈妈有甜美的笑容。"
+    },
+    {
+      "english": "think",
+      "phonetic": "/θɪŋk/",
+      "chinese": "思考",
+      "example": "I think about my cat.",
+      "translation": "我在想我的猫。"
+    },
+    {
+      "english": "maybe",
+      "phonetic": "/ˈmeɪbi/",
+      "chinese": "也许",
+      "example": "Maybe it will rain today.",
+      "translation": "今天也许会下雨。"
+    },
+    {
+      "english": "glide",
+      "phonetic": "/ɡlaɪd/",
+      "chinese": "滑行",
+      "example": "Birds glide in the sky.",
+      "translation": "鸟儿在天空中滑翔。"
+    },
+    {
+      "english": "ripple",
+      "phonetic": "/ˈrɪpl/",
+      "chinese": "涟漪",
+      "example": "I see ripples on the water.",
+      "translation": "我看见水面上有涟漪。"
+    },
+    {
+      "english": "dance",
+      "phonetic": "/dɑːns/",
+      "chinese": "跳舞",
+      "example": "I like to dance with my friends.",
+      "translation": "我喜欢和朋友一起跳舞。"
+    },
+    {
+      "english": "behind",
+      "phonetic": "/bɪˈhaɪnd/",
+      "chinese": "在...后面",
+      "example": "The cat is behind the tree.",
+      "translation": "猫在树后面。"
+    },
+    {
+      "english": "around",
+      "phonetic": "/əˈraʊnd/",
+      "chinese": "在...周围",
+      "example": "The birds fly around the tree.",
+      "translation": "鸟儿在树周围飞。"
+    },
+    {
+      "english": "soft",
+      "phonetic": "/sɒft/",
+      "chinese": "柔软的",
+      "example": "My pillow is soft.",
+      "translation": "我的枕头很软。"
+    },
+    {
+      "english": "smell",
+      "phonetic": "/smel/",
+      "chinese": "闻，气味",
+      "example": "The flowers smell nice.",
+      "translation": "这些花闻起来很香。"
+    },
+    {
+      "english": "sweet",
+      "phonetic": "/swiːt/",
+      "chinese": "甜的",
+      "example": "This candy is sweet.",
+      "translation": "这个糖果很甜。"
+    },
+    {
+      "english": "sit",
+      "phonetic": "/sɪt/",
+      "chinese": "坐",
+      "example": "I sit on my chair.",
+      "translation": "我坐在椅子上。"
+    },
+    {
+      "english": "rock",
+      "phonetic": "/rɒk/",
+      "chinese": "岩石",
+      "example": "The big rock is gray.",
+      "translation": "这块大石头是灰色的。"
+    },
+    {
+      "english": "turn",
+      "phonetic": "/tɜːn/",
+      "chinese": "转动",
+      "example": "The wheel can turn.",
+      "translation": "轮子可以转动。"
+    },
+    {
+      "english": "gentle",
+      "phonetic": "/ˈdʒentl/",
+      "chinese": "温柔的",
+      "example": "My mom is very gentle.",
+      "translation": "我妈妈很温柔。"
+    },
+    {
+      "english": "worry",
+      "phonetic": "/ˈwʌri/",
+      "chinese": "担心",
+      "example": "Don't worry, I am here.",
+      "translation": "别担心，我在这里。"
+    },
+    {
+      "english": "bottom",
+      "phonetic": "/ˈbɒtəm/",
+      "chinese": "底部",
+      "example": "The toy is at the bottom of the box.",
+      "translation": "玩具在盒子底部。"
+    },
+    {
+      "english": "peace",
+      "phonetic": "/piːs/",
+      "chinese": "和平",
+      "example": "The dove brings peace.",
+      "translation": "鸽子带来和平。"
+    },
+    {
+      "english": "stay",
+      "phonetic": "/steɪ/",
+      "chinese": "停留",
+      "example": "Please stay with me.",
+      "translation": "请和我在一起。"
+    },
+    {
+      "english": "lift",
+      "phonetic": "/lɪft/",
+      "chinese": "举起",
+      "example": "I can lift my bag.",
+      "translation": "我能举起我的书包。"
+    },
+    {
+      "english": "camera",
+      "phonetic": "/ˈkæmərə/",
+      "chinese": "相机",
+      "example": "Dad has a new camera.",
+      "translation": "爸爸有一个新相机。"
+    },
+    {
+      "english": "picture",
+      "phonetic": "/ˈpɪktʃər/",
+      "chinese": "图片",
+      "example": "I draw a picture of my dog.",
+      "translation": "我画了一张我的狗的图片。"
+    },
+    {
+      "english": "dream",
+      "phonetic": "/driːm/",
+      "chinese": "梦",
+      "example": "I had a happy dream.",
+      "translation": "我做了一个快乐的梦。"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="英语单词学习卡片">
+    <title>英语单词卡片</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="setup">
+        <button onclick="setMode('english')" id="englishBtn">英文模式</button>
+        <button onclick="setMode('chinese')" id="chineseBtn">中文模式</button>
+    </div>
+    
+    <div id="card" class="card">
+        <div id="initialWord" class="word">加载中...</div>
+        <div id="details" class="hidden">
+            <div id="phonetic" class="phonetic"></div>
+            <div id="chinese" class="chinese"></div>
+            <div id="example" class="example"></div>
+            <div id="translation" class="translation"></div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button onclick="prevCard()" id="prevBtn">上一个</button>
+        <button onclick="nextCard()" id="nextBtn">下一个</button>
+    </div>
+    <div class="progress">
+        卡片 <span id="current">0</span> / <span id="total">0</span>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
