@@ -1,1 +1,136 @@
-sa
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>趣味数学游戏集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4ecdc4;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .game-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .game-card h2 {
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .game-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .game-card a {
+            display: inline-block;
+            background-color: #4ecdc4;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .game-card a:hover {
+            background-color: #36b5ac;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>趣味数学游戏集</h1>
+            <p>通过有趣的游戏学习数学概念</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="games-grid">
+            <div class="game-card">
+                <h2>微积分披萨</h2>
+                <p>通过切披萨的方式学习微积分中的割圆术原理。这个互动演示帮助你理解极限和面积计算的基本概念。通过增加切片数量，观察近似值如何逐渐接近圆的实际面积。</p>
+                <a href="pie.html">开始游戏</a>
+            </div>
+
+            <div class="game-card">
+                <h2>单词拼写游戏</h2>
+                <p>一个有趣的单词拼写游戏，帮助提高英语词汇量和拼写能力。游戏提供丰富的词库，通过互动的方式让学习更加生动有趣。</p>
+                <a href="words.html">开始游戏</a>
+            </div>
+
+            <div class="game-card">
+                <h2>立方配色</h2>
+                <p>体验三维空间的立方配色游戏。通过旋转和调整魔方的面，学习空间思维和颜色搭配。这个游戏既能锻炼逻辑思维，又能培养空间想象力。</p>
+                <a href="cubegame.html">开始游戏</a>
+            </div>
+
+            <div class="game-card">
+                <h2>烘焙蛋糕</h2>
+                <p>一个模拟烘焙的游戏，将数学思维融入烹饪过程。通过调整配料比例和烘焙时间，学习比例、测量和时间管理的概念。</p>
+                <a href="cookcake.html">开始游戏</a>
+            </div>
+
+            <div class="game-card">
+                <h2>数组求和</h2>
+                <p>探索数组和算法的基础概念。通过可视化的方式展示数组操作和求和过程，帮助理解程序设计中的基本数据结构和算法思想。</p>
+                <a href="arraysum.html">开始游戏</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 趣味数学游戏集 - 让学习更有趣</p>
+        </div>
+    </footer>
+</body>
+</html>
