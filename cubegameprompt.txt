@@ -1,0 +1,112 @@
+我有一个题目：
+====
+给一个正方体的六个面涂色，使得任意两个相邻面颜色不同，共有多少种不同的涂法？
+
+每个面只能涂一种颜色。
+
+有五种颜色可供选择，但不要求用完所有颜色。
+
+（经过旋转或翻转后，对应面颜色相同的两种涂法视为同一种涂法 。）
+
+====
+我现在需要把他设计成一个游戏：（你也可以进行改进）
+
+以下是针对该HTML游戏的设计思路，分为核心机制、交互逻辑、去重算法和界面设计四个部分：
+
+一、游戏核心机制设计
+颜色池与规则
+
+提供5种不同色块（1-5号颜色），玩家可拖拽色块到正方体表面。
+
+硬性规则：相邻面颜色不同，实时用红色边框提示违规。
+
+动态计数：根据已用颜色数量（1-5种）动态计算理论最大值。
+自动去重策略
+
+旋转去重：记录所有24种正方体旋转变换，自动折叠等效方案。
+
+颜色映射计算：将实际颜色抽象为"颜色使用模式"（如1-2-3等价于2-3-4）。
+智能评分系统
+
+基础分 = 颜色阶乘 × 结构唯一性（例：用3色得3!×2=12分）
+
+连击加成：连续提交有效方案获得倍率奖励。
+
+二、三维交互实现方案
+
+<div class="cube-container">
+  <!-- 正方体6个面 -->
+  <div class="face front" data-face="0"></div>
+  <div class="face back"  data-face="1"></div>
+  ...其他4个面...
+  
+  <!-- 颜色面板 -->
+  <div class="color-palette">
+    <div class="color" data-color="1" style="background:#FF0000;"></div>
+    ...其他颜色...
+  </div>
+</div>
+
+<script>
+class CubeGame {
+  constructor() {
+    this.SYMMETRIES = this.generateSymmetries(); // 预生成24种对称变换
+    this.solutionMap = new Map();  // 存储标准化后的方案
+// 标准化颜色方案（将实际颜色映射为模式）
+
+  normalizeColors(faces) {
+    const colorMap = {};
+    let counter = 1;
+    return faces.map(c => {
+      if(!colorMap[c]) colorMap[c] = counter++;
+      return colorMap[c];
+    }).join('');
+}
+
+</script>
+
+三、去重算法关键技术
+对称变换预处理
+
+generateSymmetries() {
+  // 生成绕X/Y/Z轴的90°旋转组合
+  return [
+    [0,1,2,3,4,5], // 原始状态
+    [1,2,3,0,4,5], // X轴旋转
+    ...其他23种变换...
+  ];
+
+智能模式匹配
+
+isNewSolution(faces) {
+  const normalized = this.normalizeColors(faces);
+  for(const transform of this.SYMMETRIES) {
+    const transformed = transform.map(i => faces[i]);
+    const key = this.normalizeColors(transformed);
+    if(this.solutionMap.has(key)) return false;
+this.solutionMap.set(normalized, true);
+
+  return true;
+
+四、游戏界面与反馈设计
+实时三维预览
+
+使用CSS 3D Transform实现可拖拽旋转的正方体
+
+点击面时弹出径向颜色选择菜单
+动态数据看板
+
+<div class="dashboard">
+  <div>已用颜色：<span id="used-colors">0</span></div>
+  <div>当前方案价值：<span id="current-value">0</span>分</div>
+  <div>历史最高：<span id="highscore">0</span></div>
+</div>
+
+粒子反馈系统
+
+成功时触发颜色粒子从正方体迸发
+
+错误时显示红色脉冲警示
+
+
+该设计通过将复杂的数学问题转化为可视化交互，在保持数学严谨性的同时提升趣味性。玩家通过直观操作理解抽象的组合概念，系统后台的智能去重和自动映射机制则确保游戏进程流畅自然。
