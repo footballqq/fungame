@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>铁道机车调度游戏 🚂</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .game-description {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .task-selector {
+            margin-bottom: 20px;
+        }
+
+        .task-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            margin: 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .task-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .task-btn.active {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+        }
+
+        .game-board {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 20px auto;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* 轨道线条 */
+        .rails {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        /* 外圈圆形轨道 */
+        .outer-circle {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 400px;
+            height: 400px;
+            border: 6px solid rgba(255,255,255,0.6);
+            border-radius: 50%;
+        }
+
+        /* 十字轨道 - 水平线 */
+        .cross-horizontal {
+            position: absolute;
+            top: 247px;
+            left: 50px;
+            width: 400px;
+            height: 6px;
+            background: rgba(255,255,255,0.6);
+        }
+
+        /* 十字轨道 - 垂直线 */
+        .cross-vertical {
+            position: absolute;
+            top: 50px;
+            left: 247px;
+            width: 6px;
+            height: 400px;
+            background: rgba(255,255,255,0.6);
+        }
+
+        .station {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.8);
+            border: 3px solid #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            color: #333;
+        }
+
+        .station:hover {
+            background: rgba(255,255,255,0.9);
+            transform: scale(1.1);
+        }
+
+        .station.empty {
+            background: rgba(200,200,200,0.5);
+            border-color: #ccc;
+        }
+
+        .station.next-move {
+            border-color: #f39c12;
+            background: rgba(255,193,7,0.8);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+                 /* 车站位置 - A在正下方，逆时针BCDEFGH */
+         .station-A { bottom: 25px; left: 225px; } /* 6点方向 - 正下方 */
+         .station-B { bottom: 105px; right: 45px; } /* 4:30方向 - A逆时针第1个 */
+         .station-C { top: 225px; right: 25px; }  /* 3点方向 - A逆时针第2个 */
+         .station-D { top: 105px; right: 45px; }  /* 1:30方向 - A逆时针第3个 */
+         .station-E { top: 25px; left: 225px; }   /* 12点方向 - A逆时针第4个 */
+         .station-F { top: 105px; left: 45px; }   /* 10:30方向 - A逆时针第5个 */
+         .station-G { top: 225px; left: 25px; }   /* 9点方向 - A逆时针第6个 */
+         .station-H { bottom: 105px; left: 45px; } /* 7:30方向 - A逆时针第7个 */
+         .station-O { top: 225px; left: 225px; }  /* 中心 */
+
+        .train {
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+
+                 .train-number {
+             font-size: 14px;
+             background: #333;
+             color: white;
+             border-radius: 50%;
+             width: 22px;
+             height: 22px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin-top: 1px;
+             font-weight: bold;
+         }
+
+         .station-label {
+             font-size: 12px;
+             color: #333;
+             position: absolute;
+             top: -4px;
+             left: -4px;
+             background: white;
+             border-radius: 50%;
+             width: 18px;
+             height: 18px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-weight: bold;
+             border: 1px solid #ccc;
+         }
+
+        .game-controls {
+            margin: 20px 0;
+        }
+
+        .control-btn {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .game-info {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-title {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .move-history {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .move-record {
+            margin: 5px 0;
+            padding: 5px 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .success-message {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            animation: celebration 0.5s ease;
+        }
+
+                 @keyframes celebration {
+             0%, 100% { transform: scale(1); }
+             50% { transform: scale(1.05); }
+         }
+
+         .task-tip {
+             background: rgba(255, 193, 7, 0.9);
+             color: #333;
+             padding: 10px 15px;
+             border-radius: 10px;
+             margin: 10px 0;
+             font-size: 16px;
+             font-weight: bold;
+             text-align: center;
+         }
+
+         .error-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(231, 76, 60, 0.9);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            z-index: 1000;
+            animation: fadeInOut 2s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            20%, 80% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚂 铁道机车调度游戏 🚂</h1>
+        
+        <div class="game-description">
+            <p>八辆机车分布在圆形轨道的九个车站上，目标是让1-8号机车在外圈按顺序排列（顺时针或逆时针均可，从任意位置开始），中心O站保持空置。</p>
+            <p>规则：轨道单行，不能对向行驶，有车的站不能穿过，类似华容道。单击车辆直接移动到下一个可达空站。</p>
+        </div>
+
+        <div class="task-selector">
+            <button class="task-btn active" onclick="selectTask(1)">任务1: 机车按序排列</button>
+            <button class="task-btn" onclick="selectTask(2)">任务2: 17步限制挑战</button>
+        </div>
+
+        <div id="successMessage" class="success-message" style="display: none;"></div>
+        
+        <div id="taskTip" class="task-tip" style="display: none;">
+            <p>请点击选择一辆不可移动的车辆</p>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+            <!-- 铁轨 -->
+            <div class="rails">
+                <!-- 外圈圆形轨道 -->
+                <div class="outer-circle"></div>
+                <!-- 十字轨道 -->
+                <div class="cross-horizontal"></div>
+                <div class="cross-vertical"></div>
+            </div>
+
+            <!-- 车站 -->
+            <div class="station station-A" data-station="A" onclick="clickTrain('A')">
+                <div class="station-label">A</div>
+                <div class="train" id="train-A">🚂</div>
+                <div class="train-number" id="number-A"></div>
+            </div>
+            <div class="station station-B" data-station="B" onclick="clickTrain('B')">
+                <div class="station-label">B</div>
+                <div class="train" id="train-B">🚂</div>
+                <div class="train-number" id="number-B"></div>
+            </div>
+            <div class="station station-C" data-station="C" onclick="clickTrain('C')">
+                <div class="station-label">C</div>
+                <div class="train" id="train-C">🚂</div>
+                <div class="train-number" id="number-C"></div>
+            </div>
+            <div class="station station-D" data-station="D" onclick="clickTrain('D')">
+                <div class="station-label">D</div>
+                <div class="train" id="train-D">🚂</div>
+                <div class="train-number" id="number-D"></div>
+            </div>
+            <div class="station station-E" data-station="E" onclick="clickTrain('E')">
+                <div class="station-label">E</div>
+                <div class="train" id="train-E">🚂</div>
+                <div class="train-number" id="number-E"></div>
+            </div>
+            <div class="station station-F" data-station="F" onclick="clickTrain('F')">
+                <div class="station-label">F</div>
+                <div class="train" id="train-F">🚂</div>
+                <div class="train-number" id="number-F"></div>
+            </div>
+            <div class="station station-G" data-station="G" onclick="clickTrain('G')">
+                <div class="station-label">G</div>
+                <div class="train" id="train-G">🚂</div>
+                <div class="train-number" id="number-G"></div>
+            </div>
+            <div class="station station-H" data-station="H" onclick="clickTrain('H')">
+                <div class="station-label">H</div>
+                <div class="train" id="train-H">🚂</div>
+                <div class="train-number" id="number-H"></div>
+            </div>
+            <div class="station station-O" data-station="O" onclick="clickTrain('O')">
+                <div class="station-label">O</div>
+                <div class="train" id="train-O">🚂</div>
+                <div class="train-number" id="number-O"></div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button class="control-btn" onclick="resetGame()">🔄 重置游戏</button>
+            <button class="control-btn" onclick="undoMove()">↩️ 撤销移动</button>
+            <button class="control-btn" onclick="showHint()">💡 提示</button>
+        </div>
+
+        <div class="game-info">
+            <div class="info-item">
+                <div class="info-title">当前任务</div>
+                <div class="info-value" id="currentTask">任务1</div>
+            </div>
+            <div class="info-item">
+                <div class="info-title">移动步数</div>
+                <div class="info-value" id="moveCount">0</div>
+            </div>
+            <div class="info-item">
+                <div class="info-title">剩余步数</div>
+                <div class="info-value" id="remainingMoves">∞</div>
+            </div>
+            <div class="info-item">
+                <div class="info-title">不可移动车辆</div>
+                <div class="info-value" id="immobileTrain">无</div>
+            </div>
+        </div>
+
+        <div class="move-history">
+            <h3>📝 移动记录</h3>
+            <div id="moveHistory"></div>
+        </div>
+
+    </div>
+
+    <script>
+        // 游戏状态
+        let currentTask = 1;
+        let moveCount = 0;
+        let maxMoves = Infinity;
+        let immobileTrain = null;
+        let moveHistory = [];
+        let gameHistory = [];
+        let selectingImmobileTrain = false;
+
+                 // 初始状态：O-7 A-6 B-8 C-4 D-2 E-1 F-5 H-3 G-空
+         // 现在A在最下面（6点位置），E在最上面（12点位置）
+         let gameState = {
+             'O': 7, 'A': 6, 'B': 8, 'C': 4, 'D': 2, 'E': 1, 'F': 5, 'H': 3, 'G': null
+         };
+
+        // 轨道连接关系 - A在正下方，逆时针BCDEFGH
+        const railConnections = {
+            'A': ['B', 'H', 'O'],
+            'B': ['A', 'C'],
+            'C': ['B', 'D', 'O'],
+            'D': ['C', 'E'],
+            'E': ['D', 'F', 'O'],
+            'F': ['E', 'G'],
+            'G': ['F', 'H', 'O'],
+            'H': ['G', 'A'],
+            'O': ['A', 'C', 'E', 'G']
+        };
+
+        // 显示错误消息
+        function showErrorMessage(message) {
+            // 移除已存在的错误消息
+            const existingError = document.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.textContent = message;
+            document.body.appendChild(errorDiv);
+
+            setTimeout(() => {
+                errorDiv.remove();
+            }, 2000);
+        }
+
+        // 初始化游戏
+        function initGame() {
+            selectingImmobileTrain = false;
+            document.getElementById('taskTip').style.display = 'none';
+            updateDisplay();
+            updateGameInfo();
+            saveGameState();
+        }
+
+        // 选择任务
+        function selectTask(taskNumber) {
+            currentTask = taskNumber;
+            
+            // 更新按钮状态
+            document.querySelectorAll('.task-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (taskNumber === 1) {
+                maxMoves = Infinity;
+                immobileTrain = null;
+                selectingImmobileTrain = false;
+                document.getElementById('currentTask').textContent = '任务1';
+                document.getElementById('remainingMoves').textContent = '∞';
+                document.getElementById('immobileTrain').textContent = '无';
+                document.getElementById('taskTip').style.display = 'none';
+            } else {
+                maxMoves = 17;
+                immobileTrain = null;
+                selectingImmobileTrain = true;
+                document.getElementById('currentTask').textContent = '任务2';
+                document.getElementById('remainingMoves').textContent = maxMoves - moveCount;
+                document.getElementById('immobileTrain').textContent = '请选择';
+                document.getElementById('taskTip').style.display = 'block';
+            }
+            
+            resetGame();
+        }
+
+        // 更新显示
+        function updateDisplay() {
+            Object.keys(gameState).forEach(station => {
+                const stationElement = document.querySelector(`[data-station="${station}"]`);
+                const trainElement = document.getElementById(`train-${station}`);
+                const numberElement = document.getElementById(`number-${station}`);
+                
+                const train = gameState[station];
+                
+                if (train !== null) {
+                    // 有车辆
+                    stationElement.classList.remove('empty');
+                    trainElement.style.display = 'block';
+                    numberElement.style.display = 'flex';
+                    numberElement.textContent = train;
+                    
+                    // 如果是不可移动的车辆，添加特殊样式
+                    if (train === immobileTrain) {
+                        trainElement.style.opacity = '0.5';
+                        trainElement.style.filter = 'grayscale(100%)';
+                        numberElement.style.opacity = '0.5';
+                        numberElement.style.filter = 'grayscale(100%)';
+                    } else {
+                        trainElement.style.opacity = '1';
+                        trainElement.style.filter = 'none';
+                        numberElement.style.opacity = '1';
+                        numberElement.style.filter = 'none';
+                    }
+                } else {
+                    // 空车站
+                    stationElement.classList.add('empty');
+                    trainElement.style.display = 'none';
+                    numberElement.style.display = 'none';
+                }
+            });
+
+            // 清除高亮
+            document.querySelectorAll('.station').forEach(station => {
+                station.classList.remove('next-move');
+            });
+
+            updateGameInfo();
+        }
+
+        // 点击车辆
+        function clickTrain(station) {
+            const train = gameState[station];
+            
+            // 如果点击空车站，忽略
+            if (train === null) {
+                if (!selectingImmobileTrain) {
+                    showErrorMessage('这里没有车辆！');
+                }
+                return;
+            }
+            
+            // 如果正在选择不可移动车辆
+            if (selectingImmobileTrain) {
+                immobileTrain = train;
+                selectingImmobileTrain = false;
+                document.getElementById('immobileTrain').textContent = `🚂${train}`;
+                document.getElementById('taskTip').style.display = 'none';
+                updateDisplay();
+                return;
+            }
+            
+            // 如果是不可移动的车辆，显示错误
+            if (train === immobileTrain) {
+                showErrorMessage(`车辆 ${train} 不可移动！`);
+                return;
+            }
+
+            // 检查步数限制
+            if (moveCount >= maxMoves) {
+                showErrorMessage('已达到最大移动步数！');
+                return;
+            }
+
+            // 寻找下一个可移动的位置
+            const nextStation = findNextMoveableStation(station);
+            
+            if (nextStation) {
+                makeMove(station, nextStation);
+            } else {
+                showErrorMessage('没有可移动的位置！');
+            }
+        }
+
+        // 寻找下一个可移动的车站（按顺序优先）
+        function findNextMoveableStation(fromStation) {
+            const connections = railConnections[fromStation];
+            
+            // 优先直接相邻的空车站
+            for (const station of connections) {
+                if (gameState[station] === null) {
+                    return station;
+                }
+            }
+            
+            // 如果没有直接相邻的空车站，寻找通过空车站可达的位置
+            for (const station of connections) {
+                if (gameState[station] === null) {
+                    continue;
+                }
+                
+                // 通过BFS寻找可达的空车站
+                const reachable = findReachableEmptyStations(fromStation);
+                if (reachable.length > 0) {
+                    return reachable[0]; // 返回第一个找到的
+                }
+            }
+            
+            return null;
+        }
+
+        // 使用BFS寻找所有可达的空车站
+        function findReachableEmptyStations(start) {
+            const visited = new Set([start]);
+            const queue = [start];
+            const emptyStations = [];
+            
+            while (queue.length > 0) {
+                const current = queue.shift();
+                
+                for (const neighbor of railConnections[current]) {
+                    if (!visited.has(neighbor)) {
+                        visited.add(neighbor);
+                        
+                        if (gameState[neighbor] === null) {
+                            emptyStations.push(neighbor);
+                        } else {
+                            // 如果邻居有车，不能继续通过它
+                            continue;
+                        }
+                        
+                        queue.push(neighbor);
+                    }
+                }
+            }
+            
+            return emptyStations;
+        }
+
+        // 执行移动
+        function makeMove(fromStation, toStation) {
+            const train = gameState[fromStation];
+            
+            // 保存当前状态到历史
+            saveGameState();
+            
+            // 执行移动
+            gameState[fromStation] = null;
+            gameState[toStation] = train;
+            
+            // 记录移动
+            moveCount++;
+            const moveRecord = `${moveCount}: 🚂${train} ${fromStation}→${toStation}`;
+            moveHistory.push(moveRecord);
+            
+            // 更新显示
+            updateDisplay();
+            updateMoveHistory();
+            
+            // 检查胜利条件
+            checkWinCondition();
+        }
+
+        // 保存游戏状态
+        function saveGameState() {
+            gameHistory.push({
+                state: { ...gameState },
+                moveCount: moveCount,
+                moveHistory: [...moveHistory]
+            });
+        }
+
+        // 撤销移动
+        function undoMove() {
+            if (gameHistory.length > 1) {
+                gameHistory.pop(); // 移除当前状态
+                const previousState = gameHistory[gameHistory.length - 1];
+                
+                gameState = { ...previousState.state };
+                moveCount = previousState.moveCount;
+                moveHistory = [...previousState.moveHistory];
+                
+                updateDisplay();
+                updateMoveHistory();
+            }
+        }
+
+        // 重置游戏
+        function resetGame() {
+            gameState = {
+                'O': 7, 'A': 6, 'B': 8, 'C': 4, 'D': 2, 'E': 1, 'F': 5, 'H': 3, 'G': null
+            };
+            moveCount = 0;
+            moveHistory = [];
+            gameHistory = [];
+            
+            // 如果是任务2且还在选择不可移动车辆状态，重置相关界面
+            if (currentTask === 2 && selectingImmobileTrain) {
+                document.getElementById('taskTip').style.display = 'block';
+                document.getElementById('immobileTrain').textContent = '请选择';
+            }
+            
+            updateDisplay();
+            updateMoveHistory();
+            saveGameState();
+            
+            document.getElementById('successMessage').style.display = 'none';
+        }
+
+        // 更新游戏信息
+        function updateGameInfo() {
+            document.getElementById('moveCount').textContent = moveCount;
+            
+            if (maxMoves === Infinity) {
+                document.getElementById('remainingMoves').textContent = '∞';
+            } else {
+                document.getElementById('remainingMoves').textContent = maxMoves - moveCount;
+            }
+        }
+
+        // 更新移动历史
+        function updateMoveHistory() {
+            const historyDiv = document.getElementById('moveHistory');
+            historyDiv.innerHTML = '';
+            
+            moveHistory.forEach(move => {
+                const moveDiv = document.createElement('div');
+                moveDiv.className = 'move-record';
+                moveDiv.textContent = move;
+                historyDiv.appendChild(moveDiv);
+            });
+        }
+
+                // 检查胜利条件
+        function checkWinCondition() {
+            let isWin = false;
+            
+            // 首先检查O站是否为空
+            if (gameState['O'] !== null) {
+                isWin = false;
+                                     } else {
+                // 外圈车站排列：逆时针A-B-C-D-E-F-G-H，顺时针A-H-G-F-E-D-C-B
+                const counterClockwiseStations = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+                const clockwiseStations = ['A', 'H', 'G', 'F', 'E', 'D', 'C', 'B'];
+                
+                // 检查逆时针和顺时针两个方向的连续1-8排列
+                function checkDirection(stations) {
+                    for (let startIndex = 0; startIndex < stations.length; startIndex++) {
+                        let isValidSequence = true;
+                        
+                        for (let i = 0; i < 8; i++) {
+                            const stationIndex = (startIndex + i) % 8;
+                            const station = stations[stationIndex];
+                            const expectedNumber = i + 1;
+                            
+                            if (gameState[station] !== expectedNumber) {
+                                isValidSequence = false;
+                                break;
+                            }
+                        }
+                        
+                        if (isValidSequence) {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+                
+                // 检查逆时针或顺时针方向
+                isWin = checkDirection(counterClockwiseStations) || checkDirection(clockwiseStations);
+            }
+            
+            if (isWin) {
+                const message = currentTask === 1 ? 
+                    `🎉 恭喜完成任务1！用了 ${moveCount} 步！` : 
+                    `🎉 恭喜完成任务2！在 ${moveCount}/17 步内完成，且车辆 ${immobileTrain} 未移动！`;
+                
+                document.getElementById('successMessage').textContent = message;
+                document.getElementById('successMessage').style.display = 'block';
+            } else if (currentTask === 2 && moveCount >= maxMoves) {
+                document.getElementById('successMessage').textContent = '😞 任务2失败：超过17步限制！';
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        }
+
+        // 显示提示
+        function showHint() {
+            let hint = '';
+            
+            if (currentTask === 1) {
+                hint = '💡 提示：利用中心站O作为中转站，先把一些车辆移到O，再调整其他车辆的位置。直接点击车辆即可移动！';
+            } else {
+                hint = '💡 提示：计划好移动路径，避免不必要的移动。选择合适的不可移动车辆很关键！直接点击车辆即可移动！';
+            }
+            
+            alert(hint);
+        }
+
+        // 启动游戏
+        initGame();
+    </script>
+</body>
+</html>
