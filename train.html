@@ -391,6 +391,7 @@
             <button class="control-btn" onclick="resetGame()">🔄 重置游戏</button>
             <button class="control-btn" onclick="undoMove()">↩️ 撤销移动</button>
             <button class="control-btn" onclick="showHint()">💡 提示</button>
+            <button class="control-btn" onclick="showOptimalSolution()">🧠 最优解</button>
         </div>
 
         <div class="game-info">
@@ -804,6 +805,139 @@
             }
             
             alert(hint);
+        }
+
+        // 显示最优解
+        function showOptimalSolution() {
+            const solution = getOptimalSolution();
+            if (solution) {
+                let message = `🧠 最优解方案（${solution.length}步）：\n\n`;
+                solution.forEach((move, index) => {
+                    message += `${index + 1}: 🚂${move.train} ${move.from}→${move.to}\n`;
+                });
+                
+                const showNext = confirm(message + '\n是否要自动演示解决方案？');
+                
+                if (showNext) {
+                    autoSolvePuzzle(solution);
+                }
+            } else {
+                alert('当前状态无法找到解决方案，请重置游戏或调整不可移动车辆选择');
+            }
+        }
+        
+        // 获取最优解
+        function getOptimalSolution() {
+            // 任务1的最优解：17步
+            if (currentTask === 1) {
+                return [
+                    {train: 7, from: 'O', to: 'G'},
+                    {train: 6, from: 'A', to: 'O'},
+                    {train: 3, from: 'H', to: 'A'},
+                    {train: 7, from: 'G', to: 'H'},
+                    {train: 6, from: 'O', to: 'G'},
+                    {train: 1, from: 'E', to: 'O'},
+                    {train: 2, from: 'D', to: 'E'},
+                    {train: 4, from: 'C', to: 'D'},
+                    {train: 1, from: 'O', to: 'C'},
+                    {train: 3, from: 'A', to: 'O'},
+                    {train: 8, from: 'B', to: 'A'},
+                    {train: 1, from: 'C', to: 'B'},
+                    {train: 3, from: 'O', to: 'C'},
+                    {train: 2, from: 'E', to: 'O'},
+                    {train: 4, from: 'D', to: 'E'},
+                    {train: 3, from: 'C', to: 'D'},
+                    {train: 2, from: 'O', to: 'C'}
+                ];
+            } else {
+                // 任务2：如果选择车辆5不移动，可以在17步内完成
+                if (immobileTrain === 5) {
+                    return [
+                        {train: 7, from: 'O', to: 'G'},
+                        {train: 6, from: 'A', to: 'O'},
+                        {train: 3, from: 'H', to: 'A'},
+                        {train: 7, from: 'G', to: 'H'},
+                        {train: 6, from: 'O', to: 'G'},
+                        {train: 1, from: 'E', to: 'O'},
+                        {train: 2, from: 'D', to: 'E'},
+                        {train: 4, from: 'C', to: 'D'},
+                        {train: 1, from: 'O', to: 'C'},
+                        {train: 3, from: 'A', to: 'O'},
+                        {train: 8, from: 'B', to: 'A'},
+                        {train: 1, from: 'C', to: 'B'},
+                        {train: 3, from: 'O', to: 'C'},
+                        {train: 2, from: 'E', to: 'O'},
+                        {train: 4, from: 'D', to: 'E'},
+                        {train: 3, from: 'C', to: 'D'},
+                        {train: 2, from: 'O', to: 'C'}
+                    ];
+                } else {
+                    return null; // 其他车辆不移动时无法在17步内完成
+                }
+            }
+        }
+        
+        // 自动演示解决方案
+        async function autoSolvePuzzle(solution) {
+            // 重置到初始状态
+            resetGame();
+            
+            for (let i = 0; i < solution.length; i++) {
+                const move = solution[i];
+                
+                // 等待一段时间让用户看清楚
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // 执行移动
+                if (gameState[move.from] === move.train && gameState[move.to] === null) {
+                    makeMove(move.from, move.to);
+                } else {
+                    alert(`演示中断：第${i+1}步无法执行`);
+                    break;
+                }
+                
+                // 检查是否完成
+                if (isGoalState(gameState)) {
+                    break;
+                }
+            }
+            
+            alert('自动演示完成！');
+        }
+
+        // 检查目标状态（用于自动演示）
+        function isGoalState(state) {
+            // O站必须为空
+            if (state['O'] !== null) return false;
+            
+            // 外圈车站排列：逆时针A-B-C-D-E-F-G-H，顺时针A-H-G-F-E-D-C-B
+            const counterClockwiseStations = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+            const clockwiseStations = ['A', 'H', 'G', 'F', 'E', 'D', 'C', 'B'];
+            
+            // 检查逆时针和顺时针两个方向的连续1-8排列
+            function checkDirection(stations) {
+                for (let startIndex = 0; startIndex < stations.length; startIndex++) {
+                    let isValidSequence = true;
+                    
+                    for (let i = 0; i < 8; i++) {
+                        const stationIndex = (startIndex + i) % 8;
+                        const station = stations[stationIndex];
+                        const expectedNumber = i + 1;
+                        
+                        if (state[station] !== expectedNumber) {
+                            isValidSequence = false;
+                            break;
+                        }
+                    }
+                    
+                    if (isValidSequence) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            
+            return checkDirection(counterClockwiseStations) || checkDirection(clockwiseStations);
         }
 
         // 启动游戏
