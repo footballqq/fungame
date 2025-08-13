@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可交互的齿轮问题讲解</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .problem-box, .step-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .problem-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .step-content {
+            display: none;
+        }
+        .step-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .formula {
+            background-color: #e8f4fd;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin: 15px 0;
+            font-size: 1.1em;
+            overflow-x: auto;
+        }
+        .final-answer {
+            font-weight: bold;
+            color: #27ae60;
+            font-size: 1.2em;
+        }
+        details {
+            background-color: #f0f8ff;
+            border: 1px solid #b0e0e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 15px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+        .quiz-options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .quiz-feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .quiz-feedback.correct {
+            color: #27ae60;
+        }
+        .quiz-feedback.incorrect {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>可交互的齿轮问题讲解</h1>
+
+    <div class="problem-box">
+        <h2>问题描述</h2>
+        <img src="微信图片_2025-08-12_210510_548.jpg" alt="齿轮问题图片">
+        <p>
+            <strong>8. </strong>如图3-1所示,A、B、C、D、E、F是六个齿轮. 其中A和B相互咬合,B和C相互咬合,D和E、E和F也都相互咬合;而C和D是同轴的两个齿轮,也就是说C和D转动的圈数始终相同,当A转了7圈时,B恰好转了5圈;当E转了8圈时,F恰好转了9圈;当C转了5圈时,B和E恰好共转了28圈. 请问:
+        </p>
+        <p>
+            <strong>(1)</strong> 如果A、E转的总圈数总是和B、F转的总圈数相同,那么当A、F共转了 100 圈时, D转了多少圈?
+        </p>
+        <p>
+            <strong>(2)</strong> 如果A、E的总齿数和B、F的总齿数相等,D的齿数是C的齿数的2倍,那么当A转了210圈时,D和F分别转了多少圈?
+        </p>
+    </div>
+
+    <div id="interactive-solution">
+        <!-- Steps will be injected here by JavaScript -->
+    </div>
+
+    <div class="btn-container">
+        <button id="prevBtn" disabled>上一步</button>
+        <button id="nextBtn">开始解题</button>
+    </div>
+
+    <script>
+        function checkAnswer(questionName, correctAnswer) {
+            const options = document.getElementsByName(questionName);
+            let selectedValue = null;
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].checked) {
+                    selectedValue = options[i].value;
+                    break;
+                }
+            }
+            const feedbackElement = document.querySelector(`.quiz-feedback[data-question="${questionName}"]`);
+            if (selectedValue === correctAnswer) {
+                feedbackElement.textContent = "回答正确！";
+                feedbackElement.className = "quiz-feedback correct";
+            } else if (selectedValue) {
+                feedbackElement.textContent = "回答错误，请再思考。";
+                feedbackElement.className = "quiz-feedback incorrect";
+            } else {
+                feedbackElement.textContent = "请选择一个选项。";
+                feedbackElement.className = "quiz-feedback incorrect";
+            }
+            feedbackElement.style.display = 'block';
+        }
+
+        const steps = [
+            {
+                title: "第一部分：问题(1)求解",
+                content: `
+                    <h3>步骤 1.1: 分析题目给出的转速关系</h3>
+                    <p>我们用 <code>R_X</code> 代表齿轮X的转速。根据题意：</p>
+                    <ul>
+                        <li>A转7圈, B转5圈  => <code>R_A / R_B = 7 / 5</code> 或 <code>R_B = (5/7)R_A</code></li>
+                        <li>E转8圈, F转9圈  => <code>R_E / R_F = 8 / 9</code> 或 <code>R_F = (9/8)R_E</code></li>
+                        <li>C转5圈, B和E共转28圈 => <code>(R_B + R_E) / R_C = 28 / 5</code></li>
+                        <li>C和D同轴 => <code>R_C = R_D</code></li>
+                    </ul>
+
+                    <details>
+                        <summary>详细解释</summary>
+                        <p>齿轮的转速与齿数成反比。当两个齿轮咬合时，它们的线速度相同。因此，<code>R_X * T_X = R_Y * T_Y</code>。从这个关系可以推导出转速比与齿数比的关系。例如，A转7圈B转5圈，意味着在相同时间内A的转数是B的7/5倍，所以<code>R_A/R_B = 7/5</code>。反过来，B的齿数就是A的7/5倍，即<code>T_B/T_A = 7/5</code>。</p>
+                        <p>对于“C转5圈，B和E共转28圈”这个条件，它给出了一个重要的比例关系。由于齿轮系统是线性的，这个比例关系在任何时刻都成立。即<code>(R_B + R_E) / R_C = 28 / 5</code>。这个比例是解题的关键。</p>
+                    </details>
+
+                    <details>
+                        <summary>小测验</summary>
+                        <p>如果齿轮X和齿轮Y相互咬合，当X转3圈时，Y转2圈。那么X和Y的齿数比 <code>T_X / T_Y</code> 是多少？</p>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="A"> 3/2</label><br>
+                            <label><input type="radio" name="q1" value="B"> 2/3</label><br>
+                            <label><input type="radio" name="q1" value="C"> 1/1</label><br>
+                            <label><input type="radio" name="q1" value="D"> 无法确定</label><br>
+                        </div>
+                        <button onclick="checkAnswer('q1', 'B')">检查答案</button>
+                        <p class="quiz-feedback" data-question="q1" style="display:none;"></p>
+                    </details>
+
+                    <h3>步骤 1.2: 应用问题(1)的特殊假设</h3>
+                    <p>本问的假设是：A、E转的总圈数总是和B、F转的总圈数相同。</p>
+                    <div class="formula">R_A + R_E = R_B + R_F</div>
+                    <p>我们将已知的转速关系代入这个等式，来寻找A和E之间的关系。</p>
+                    <p><code>R_A + R_E = (5/7)R_A + (9/8)R_E</code></p>
+                    <p>移项得：<code>(2/7)R_A = (1/8)R_E</code></p>
+                    <p>最终我们得到A和E的转速关系：</p>
+                    <div class="formula">R_E = (16/7)R_A</div>
+                `
+            },
+            {
+                title: "第一部分：问题(1)求解",
+                content: `
+                    <h3>步骤 1.3: 求解C的转速</h3>
+                    <p>现在我们有了 <code>R_E</code> 和 <code>R_A</code> 的关系，可以利用第3个已知条件 <code>(R_B + R_E) / R_C = 28 / 5</code> 来求解 <code>R_C</code>。</p>
+                    <p>首先，用 <code>R_A</code> 表示 <code>R_B + R_E</code>:</p>
+                    <p><code>R_B + R_E = (5/7)R_A + (16/7)R_A = (21/7)R_A = 3R_A</code></p>
+                    <p>代入条件中：</p>
+                    <p><code>3R_A / R_C = 28 / 5</code></p>
+                    <p>解得 <code>R_C</code> 与 <code>R_A</code> 的关系：</p>
+                    <div class="formula">R_C = (15/28)R_A</div>
+
+                    <details>
+                        <summary>详细解释</summary>
+                        <p>这一步是连接A、B、E和C的关键。我们已经通过问题(1)的假设得到了<code>R_E</code>和<code>R_A</code>的关系，以及题目给出的<code>R_B</code>和<code>R_A</code>的关系。将它们代入<code>(R_B + R_E) / R_C = 28 / 5</code>这个比例式，就可以将<code>R_C</code>也用<code>R_A</code>来表示。这样，整个齿轮链的转速关系就都统一到<code>R_A</code>上了。</p>
+                    </details>
+
+                    <details>
+                        <summary>小测验</summary>
+                        <p>如果 <code>X + Y = 10Z</code> 且 <code>X = 2A</code>, <code>Y = 3A</code>，那么 <code>Z</code> 和 <code>A</code> 的关系是什么？</p>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q2" value="A"> Z = 5A</label><br>
+                            <label><input type="radio" name="q2" value="B"> Z = 0.5A</label><br>
+                            <label><input type="radio" name="q2" value="C"> Z = 2A</label><br>
+                            <label><input type="radio" name="q2" value="D"> Z = 10A</label><br>
+                        </div>
+                        <button onclick="checkAnswer('q2', 'B')">检查答案</button>
+                        <p class="quiz-feedback" data-question="q2" style="display:none;"></p>
+                    </details>
+                `
+            },
+            {
+                title: "第一部分：问题(1)求解",
+                content: `
+                    <h3>步骤 1.4: 计算最终答案</h3>
+                    <p>题目要求当 <code>R_A + R_F = 100</code> 时 <code>R_D</code> 的值。我们知道 <code>R_D = R_C</code>。</p>
+                    <p>首先，我们需要用 <code>R_A</code> 来表示 <code>R_F</code>：</p>
+                    <p><code>R_F = (9/8)R_E = (9/8) * (16/7)R_A = (18/7)R_A</code></p>
+                    <p>现在代入 <code>R_A + R_F = 100</code>：</p>
+                    <p><code>R_A + (18/7)R_A = 100 => (25/7)R_A = 100 => R_A = 28</code></p>
+                    <p>最后，计算 <code>R_D</code> 的值：</p>
+                    <p><code>R_D = R_C = (15/28)R_A = (15/28) * 28</code></p>
+                    <div class="formula final-answer">R_D = 15</div>
+                    <p>所以，D转了15圈。</p>
+
+                    <details>
+                        <summary>详细解释</summary>
+                        <p>这一步是最终的计算。我们已经将所有齿轮的转速都用<code>R_A</code>表示出来了。题目给出了<code>R_A + R_F = 100</code>这个总转数条件，我们可以利用这个条件先求出<code>R_A</code>的具体数值，然后代入<code>R_D</code>与<code>R_A</code>的关系式中，即可得到<code>R_D</code>的值。注意，<code>R_D = R_C</code>是因为它们同轴。</p>
+                    </details>
+
+                    <details>
+                        <summary>小测验</summary>
+                        <p>如果 <code>X = 2Y</code> 且 <code>X + Y = 30</code>，那么 <code>Y</code> 的值是多少？</p>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q3" value="A"> 10</label><br>
+                            <label><input type="radio" name="q3" value="B"> 15</label><br>
+                            <label><input type="radio" name="q3" value="C"> 20</label><br>
+                            <label><input type="radio" name="q3" value="D"> 30</label><br>
+                        </div>
+                        <button onclick="checkAnswer('q3', 'A')">检查答案</button>
+                        <p class="quiz-feedback" data-question="q3" style="display:none;"></p>
+                    </details>
+                `
+            },
+            {
+                title: "第二部分：问题(2)求解",
+                content: `
+                    <h3>步骤 2.1: 分析齿数关系</h3>
+                    <p>在第二部分，我们有新的假设。我们用 <code>T_X</code> 代表齿轮X的齿数。</p>
+                    <ul>
+                        <li>从转速关系反推齿数关系：
+                            <ul>
+                                <li><code>R_A / R_B = 7 / 5  => T_B / T_A = 7 / 5</code></li>
+                                <li><code>R_E / R_F = 8 / 9  => T_F / T_E = 8 / 9</code></li>
+                            </ul>
+                        </li>
+                        <li>问题(2)的假设：
+                            <ul>
+                                <li><code>T_A + T_E = T_B + T_F</code></li>
+                                <li><code>T_D = 2 * T_C</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+                     <p>我们还需要用到第一部分推导出的关键公式：<code>T_C / T_B + T_D / T_E = 28 / 5</code></p>
+
+                    <details>
+                        <summary>详细解释</summary>
+                        <p>第二问引入了关于齿数的新假设，这与第一问的假设不同。齿数关系是齿轮问题的另一个核心。<code>R_X * T_X = R_Y * T_Y</code> 意味着转速比等于齿数比的倒数。例如，<code>R_A / R_B = 7 / 5</code> 意味着 <code>T_B / T_A = 7 / 5</code>。同时，第一问中推导出的<code>T_C / T_B + T_D / T_E = 28 / 5</code>这个关系式，是基于“C转5圈，B和E共转28圈”这个条件，它是一个普遍成立的齿数关系，因此在第二问中依然适用。</p>
+                    </details>
+
+                    <details>
+                        <summary>小测验</summary>
+                        <p>如果 <code>R_X / R_Y = 4 / 3</code>，那么 <code>T_X / T_Y</code> 是多少？</p>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q4" value="A"> 4/3</label><br>
+                            <label><input type="radio" name="q4" value="B"> 3/4</label><br>
+                            <label><input type="radio" name="q4" value="C"> 1/1</label><br>
+                            <label><input type="radio" name="q4" value="D"> 无法确定</label><br>
+                        </div>
+                        <button onclick="checkAnswer('q4', 'B')">检查答案</button>
+                        <p class="quiz-feedback" data-question="q4" style="display:none;"></p>
+                    </details>
+                `
+            },
+            {
+                title: "第二部分：问题(2)求解",
+                content: `
+                    <h3>步骤 2.2: 建立齿数间的比例关系</h3>
+                    <p>利用假设 <code>T_A + T_E = T_B + T_F</code> 建立 <code>T_E</code> 和 <code>T_A</code> 的关系。</p>
+                    <p><code>T_A + T_E = (7/5)T_A + (8/9)T_E</code></p>
+                    <p><code>(1/9)T_E = (2/5)T_A => </code> <span class="formula" style="display: inline-block;">T_E = (18/5)T_A</span></p>
+                    <br>
+                    <p>接下来，利用关键公式 <code>T_C / T_B + T_D / T_E = 28 / 5</code> 和假设 <code>T_D = 2T_C</code> 来建立 <code>T_C</code> 和 <code>T_A</code> 的关系。</p>
+                    <p><code>T_C/T_B + 2T_C/T_E = 28/5</code></p>
+                    <p><code>T_C * (1/T_B + 2/T_E) = 28/5</code></p>
+                    <p>代入 <code>T_B=(7/5)T_A</code> 和 <code>T_E=(18/5)T_A</code>:</p>
+                    <p><code>(T_C/T_A) * (5/7 + 10/18) = 28/5 => (T_C/T_A) * (80/63) = 28/5</code></p>
+                    <div class="formula">T_C / T_A = 441 / 100</div>
+
+                    <details>
+                        <summary>详细解释</summary>
+                        <p>这一步是代数运算的集中体现。我们利用了第二问的两个新假设，以及齿数和转速之间的基本关系，将所有未知齿数都用<code>T_A</code>表示出来。然后将这些关系代入到核心的齿数比例式<code>T_C / T_B + T_D / T_E = 28 / 5</code>中，最终解出<code>T_C</code>与<code>T_A</code>的比例关系。这个比例关系是计算第二问答案的关键。</p>
+                    </details>
+
+                    <details>
+                        <summary>小测验</summary>
+                        <p>如果 <code>X = 3Y</code> 且 <code>1/Y + 1/Z = 5</code>，并且 <code>Z = 2X</code>，那么 <code>Y</code> 和 <code>Z</code> 的关系是什么？</p>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q5" value="A"> Y = 1/5 Z</label><br>
+                            <label><input type="radio" name="q5" value="B"> Y = 5 Z</label><br>
+                            <label><input type="radio" name="q5" value="C"> Y = 1/6 Z</label><br>
+                            <label><input type="radio" name="q5" value="D"> Y = 6 Z</label><br>
+                        </div>
+                        <button onclick="checkAnswer('q5', 'C')">检查答案</button>
+                        <p class="quiz-feedback" data-question="q5" style="display:none;"></p>
+                    </details>
+                `
+            },
+            {
+                title: "第二部分：问题(2)求解",
+                content: `
+                    <h3>步骤 2.3: 计算最终答案</h3>
+                    <p>题目要求当 <code>R_A = 210</code> 时, <code>R_D</code> 和 <code>R_F</code> 的值。</p>
+                    <p><strong>计算D的转数 (R_D):</strong></p>
+                    <p>转数比是齿数比的倒数: <code>R_D/R_A = R_C/R_A = T_A/T_C = 100/441</code></p>
+                    <p><code>R_D = (100/441) * R_A = (100/441) * 210</code></p>
+                    <div class="formula final-answer">R_D = 1000 / 21 ≈ 47.62 圈</div>
+                    <br>
+                    <p><strong>计算F的转数 (R_F):</strong></p>
+                    <p>我们需要 <code>R_F / R_A</code> 的比值。可以通过关系链 <code>A -> C -> D -> F</code> 得到：</p>
+                    <p><code>R_F/R_A = (R_F/R_D) * (R_D/R_A) = (T_D/T_F) * (T_A/T_C)</code></p>
+                    <p>我们有 <code>T_D = 2T_C = 2*(441/100)T_A</code> 和 <code>T_F = (8/9)T_E = (16/5)T_A</code>。</p>
+                    <p><code>T_D/T_F = (882/100) / (16/5) = 441/160</code></p>
+                    <p><code>R_F/R_A = (441/160) * (100/441) = 100/160 = 5/8</code></p>
+                    <p><code>R_F = (5/8) * R_A = (5/8) * 210</code></p>
+                    <div class="formula final-answer">R_F = 525 / 4 = 131.25 圈</div>
+
+                    <details>
+                        <summary>详细解释</summary>
+                        <p>最后一步是将所有齿数比例关系转化为转数比例关系，并代入题目给定的<code>R_A = 210</code>来计算<code>R_D</code>和<code>R_F</code>的具体数值。记住，转数比是齿数比的倒数。对于<code>R_F</code>的计算，我们通过建立从A到F的完整齿轮链转数比，确保了计算的准确性。</p>
+                    </details>
+
+                    <details>
+                        <summary>小测验</summary>
+                        <p>如果 <code>R_X / R_Y = 1/2</code> 且 <code>R_Y = 100</code>，那么 <code>R_X</code> 是多少？</p>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q6" value="A"> 200</label><br>
+                            <label><input type="radio" name="q6" value="B"> 50</label><br>
+                            <label><input type="radio" name="q6" value="C"> 100</label><br>
+                            <label><input type="radio" name="q6" value="D"> 无法确定</label><br>
+                        </div>
+                        <button onclick="checkAnswer('q6', 'B')">检查答案</button>
+                        <p class="quiz-feedback" data-question="q6" style="display:none;"></p>
+                    </details>
+                `
+            },
+             {
+                title: "解题完毕",
+                content: `
+                    <h3>总结</h3>
+                    <p>通过以上步骤，我们得到了两问的答案：</p>
+                    <ul>
+                        <li><b>问题 (1):</b> 当A、F共转了 100 圈时, D转了 <span class="final-answer">15</span> 圈。</li>
+                        <li><b>问题 (2):</b> 当A转了210圈时, D转了 <span class="final-answer">1000/21</span> 圈, F转了 <span class="final-answer">131.25</span> 圈。</li>
+                    </ul>
+                    <p>你可以点击“上一步”按钮回顾整个解题过程。</p>
+                `
+            }
+        ];
+
+        let currentStep = -1;
+        const solutionContainer = document.getElementById('interactive-solution');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        function renderStep() {
+            if (currentStep === -1) {
+                solutionContainer.innerHTML = '<!-- Steps will be injected here by JavaScript -->';
+            } else {
+                const stepData = steps[currentStep];
+                const stepHTML = `
+                    <div class="step-box">
+                        <h2>${stepData.title}</h2>
+                        <div class="step-content active">
+                            ${stepData.content}
+                        </div>
+                    </div>
+                `;
+                solutionContainer.innerHTML = stepHTML;
+                solutionContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            updateButtons();
+        }
+        
+        function updateButtons() {
+            prevBtn.disabled = currentStep <= 0;
+
+            if (currentStep === -1) {
+                nextBtn.textContent = '开始解题';
+                nextBtn.disabled = false;
+            } else if (currentStep >= steps.length - 1) {
+                nextBtn.textContent = '解题完毕';
+                nextBtn.disabled = true;
+            } else {
+                nextBtn.textContent = '下一步';
+                nextBtn.disabled = false;
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentStep < steps.length - 1) {
+                currentStep++;
+                renderStep();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 0) {
+                currentStep--;
+                renderStep();
+            }
+        });
+
+        // Initial call to set button states
+        updateButtons();
+    </script>
+
+</body>
+</html>
