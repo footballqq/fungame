@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>叮当的单词大挑战！</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+        body {
+            font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 800px;
+            height: 95%;
+            max-height: 600px;
+            background: #fff;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #start-screen h1 {
+            font-size: 3rem;
+            color: #ff6347;
+        }
+
+        .button {
+            font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
+            font-size: 2rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(145deg, #ff8a65, #ff6347);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 99, 71, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 99, 71, 0.7);
+        }
+
+        #quiz-screen {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #word-display {
+            font-size: 9vw;
+            font-weight: bold;
+            color: #007bff;
+            min-height: 15vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.2;
+        }
+        
+        #progress-indicator {
+            font-size: 1.5rem;
+            color: #888;
+        }
+
+        .answer-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .choice-button {
+            font-size: 5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease-out;
+        }
+
+        .choice-button:hover:not(:disabled) {
+            transform: scale(1.1);
+        }
+        
+        .choice-button.clicked {
+            transform: scale(1.25);
+        }
+
+        #results-screen {
+            font-size: 1.8rem;
+        }
+
+        #results-screen h1 {
+            color: #28a745;
+            font-size: 3.5rem;
+        }
+        
+        #praise-message {
+            font-size: 2.5rem;
+            color: #ff69b4;
+            margin: 20px 0;
+        }
+
+        #error-list {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            text-align: left;
+            max-height: 200px;
+            overflow-y: auto;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        #error-list h3 {
+            text-align: center;
+        }
+
+        #error-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        #error-list li {
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="start-screen">
+            <h1>单词大挑战！</h1>
+            <button id="start-btn" class="button">准备好了吗？开始！</button>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <h1 style="font-size: 2.5rem; color: #ff6347; margin: 0;">单词大挑战</h1>
+            <div id="progress-indicator">1 / 50</div>
+            <div id="word-display"></div>
+            <div class="answer-buttons">
+                <button class="choice-button" id="wrong-btn">❌</button>
+                <button class="choice-button" id="correct-btn">⭕</button>
+            </div>
+        </div>
+
+        <div id="results-screen" class="hidden">
+            <h1>挑战完成!</h1>
+            <div id="praise-message">你太棒啦！真是个单词小天才！🎉</div>
+            <p id="score">你的分数是: 100</p>
+            <div id="error-list" class="hidden">
+                <h3>要加油的单词：</h3>
+                <ul id="errors"></ul>
+                <button class="button" id="copy-errors-btn" style="font-size: 1.2rem; padding: 10px 20px; margin-top: 15px;">复制错题本</button>
+            </div>
+            <button id="restart-btn" class="button">再玩一次</button>
+        </div>
+    </div>
+
+    <script>
+        const csvData = `animals,chicken,cow,dog,duck,goat,pig,sheep
+动物,鸡,奶牛,狗,鸭子,山羊,猪,羊
+animals,birds,cats,cows,dogs,ducks,go,goats,pigs
+动物,鸟类,猫,牛,狗,鸭子,去,山羊,猪
+cat,cow,deer,fox,girl,goat,horse,jumps,over
+猫,奶牛,鹿,狐狸,女孩,山羊,马,跳,超过
+bird,bunny,cat,dog,goldfish,hamster,mouse,turtle
+鸟,兔子,猫,狗,金鱼,仓鼠,老鼠,龟
+crocodile,elephant,giraffe,ostrich,plains,zebra
+鳄鱼,大象,长颈鹿,鸵鸟,平原,斑马
+beetle,butterfly,monkey,parrot,rainforest,snake
+甲虫,蝴蝶,猴,鹦鹉,雨林,蛇
+beach,birds,cliff,coast,lighthouse,ocean,rocks,waves
+海滩,鸟类,悬崖,海岸,灯塔,海洋,岩石,波浪
+ice,lake,ocean,rain,river,snow,water
+冰,湖,海洋,雨,河,雪,水
+ball,bikes,birds,bunny,flowers,rain,rainbow,spring
+球,自行车,鸟类,兔子,花朵,雨,彩虹,春天
+ball,beach,flowers,garden,rain,summer,sunshine,swimsuit
+球,海滩,花朵,花园,雨,夏天,阳光,泳装
+acorn,apple,corn,jacket,leaf,moon,pumpkin,rake
+橡子,苹果,玉米,夹克,叶子,月亮,南瓜,耙
+coat,fire,ice skates,mittens,sled,snow,snowman,winter
+外套,火,冰刀,手套,雪橇,雪,雪人,冬天
+coral,crab,ocean,sand,seaweed,starfish
+珊瑚,螃蟹,海洋,沙,海藻,海星
+dirt,hole,plant,rain,seed,shovel,sunshine
+污垢,洞,植物,雨,种子,铲,阳光
+beak,chicken,egg,feathers,feet,legs,tail,wings
+喙,鸡,蛋,羽毛,脚,腿,尾巴,翅膀
+birds,crows,doves,eagles,geese,hawks,owls,turkeys
+鸟类,乌鸦,鸽子,老鹰,鹅,鹰,猫头鹰,火鸡
+animals,fairies,flowers,leaves,rain,roofs
+动物,仙女,花朵,树叶,雨,屋顶
+friends,frog,jungle,monkey,snake,tiger
+朋友们,青蛙,丛林,猴,蛇,老虎
+bat,fish,giraffe,horse,lizard,naps
+蝙蝠,鱼,长颈鹿,马,蜥蜴,小睡
+blue,colorful,egg,green,orange,pink,purple,red
+蓝色的,丰富多彩的,蛋,绿色的,橙子,粉色的,紫色的,红色的
+shirt,hat,backpack,ball,bucket,flip-flop,ice pop,purple
+衬衫,帽子,背包,球,桶,拖鞋,冰流,紫色的
+bus,cab,hat,light,lines,signs,truck,vest,yellow
+公共汽车,出租车,帽子,光,线,标志,卡车,背心,黄色的
+bench,bike,blue,bottle,helmet,playground,sky,slide,swing
+长椅,自行车,蓝色的,瓶子,头盔,操场,天空,滑动,摇摆
+bird,forest,frog,grass,insect,leaf,lizard,moss,snake
+鸟,森林,青蛙,草,昆虫,叶子,蜥蜴,苔藓,蛇
+butterfly,field,flower,leaf,orange,pumpkin,snake,sunset,tree
+蝴蝶,场地,花,叶子,橙子,南瓜,蛇,日落,树
+apple,beet,cherry,pepper,potato,radish,red,strawberry,tomato
+苹果,甜菜,樱桃,胡椒,土豆,萝卜,红色的,草莓,番茄
+fox,igloo,owl,seal,snow,whale,flowers,eggs,white
+狐狸,冰屋,猫头鹰,海豹,雪,鲸,花朵,鸡蛋,白色的
+cape,sheet,stage,suit,tie,wand,hat,rabbit,black
+岬,床单,阶段,套装,领带,魔杖,帽子,兔子,黑色的
+bed,blanket,book,desk,one,pillow,rug,toy,window
+床,毯子,书,桌子,一,枕头,小地毯,玩具,窗户
+birds,bugs,cats,cows,dogs,fish,horses,kids,two
+鸟类,错误,猫,牛,狗,鱼,马匹,孩子们,二
+bears,camels,elephants,frogs,lions,monkeys,pandas,three
+熊,骆驼,大象,青蛙,狮子,猴子,熊猫,三
+airplanes,boats,buses,cars,carts,four,trucks,vans,wagons
+飞机,船,公共汽车,汽车,购物车,四个,卡车,货车,货车
+bowls,chairs,cups,five,forks,lunches,pans,plates,spoons
+碗,椅子,杯子,五,叉子,午餐,锅,盘子,汤匙
+coat,dresses,gloves,hats,pants,shirts,shorts,six,socks
+外套,连衣裙,手套,帽子,裤子,衬衫,短裤,六,袜子
+turtles,worms,bees,frogs,ladybugs,lizards,seven,snakes,spiders
+海龟,蠕虫,蜜蜂,青蛙,瓢虫,蜥蜴,七,蛇,蜘蛛
+backpacks,bottles,chairs,eight,friends,hot dogs,lights,raincoats,sticks
+背包,瓶子,椅子,八,朋友们,热狗,灯,雨衣,棍
+bulls,chickens,cows,geese,goats,horses,nine,pigs,sheep
+公牛,鸡,牛,鹅,山羊,马匹,九,猪,羊
+apples,beets,carrots,lemons,pears,potatoes,Ten,strawberries,tomatoes
+苹果,甜菜,胡萝卜,柠檬,梨,土豆,十,草莓,西红柿
+balloons,candy bars,cards,cupcakes,eleven,friends,hats,pizzas,presents
+气球,糖果棒,牌,蛋糕,十一,朋友们,帽子,比萨饼,礼物
+aprons,bowls,cookies,cups,hats,pans,plates,spoons,twelve
+围裙,碗,曲奇饼,杯子,帽子,锅,盘子,汤匙,十二
+bugs,one,two,three,four,five,six,seven,many
+错误,一,二,三,四个,五,六,七,许多
+body,five,four,head,legs,one,six,three,two
+身体,五,四个,头,腿,一,六,三,二
+one,two,three,four,five,six,seven,letter,word
+一,二,三,四个,五,六,七,信,单词
+bike,fence,flowers,friend,gate,mailbox,sidewalk
+自行车,栅栏,花朵,朋友,门,邮箱,人行道
+buildings,bus,city,food,people,sidewalk,steps,street,taxi
+建筑物,公共汽车,城市,食物,人们,人行道,步骤,街道,出租车
+big,buildings,buses,cars,noise,park,people,stores,streets
+大的,建筑物,公共汽车,汽车,噪音,公园,人们,商店,街道
+bridge,gate,ladder,slide,swing,wheel,sandbox,playground
+桥,门,梯子,滑动,摇摆,车轮,沙箱,操场
+cookies,eggnog,lights,meal,presents,stockings,tree,cards
+曲奇饼,蛋酒,灯,一顿饭,礼物,长袜,树,牌
+bread,candle,family,gift,Hanukkah,toy,candy,cookie
+面包,蜡烛,家庭,礼物,光明节,玩具,糖果,曲奇饼
+belly,brownie,cookie,cupcake,ice cream,pie,cake,candy
+腹部,布朗尼,曲奇饼,蛋糕,冰淇淋,馅饼,蛋糕,糖果
+bag,carrots,cookie,friends,lunch,milk,napkin,noodles
+包,胡萝卜,曲奇饼,朋友们,午餐,牛奶,餐巾,面条
+balloons,chocolates,cookies,flowers,gifts,valentine,candy,bear
+气球,巧克力,曲奇饼,花朵,礼物,情人节,糖果,熊
+curly,green,long,pasta,red,short,thin,wide,yummy
+卷曲,绿色的,长的,面食,红色的,短的,薄的,宽的,美味
+bow,bowl,box,day,gift,hug,paper,smile
+弓,碗,盒子,天,礼物,拥抱,纸,微笑
+beans,corn,garden,melons,onions,peas,potatoes,tomatoes
+豆子,玉米,花园,瓜,洋葱,豌豆,土豆,西红柿
+ball,baseball,basketball,beach,football,golf,soccer,tennis,volleyball
+球,棒球,篮球,海滩,足球,高尔夫球,足球,网球,排球
+base,baseball,bat,helmet,team,uniform,field,hat,game
+根据,棒球,蝙蝠,头盔,团队,制服,场地,帽子,游戏
+book,car,clothes,dog,grandparents,map,seat belt,suitcase
+书,车,衣服,狗,祖父母,地图,安全带,手提箱
+bread,carts,cereal,eggs,fruits,meat,vegetables,checkout
+面包,购物车,谷物,鸡蛋,水果,肉,蔬菜,查看
+lion,tiger,bear,wolf,ape,chimp,snake,zebra,zoo
+狮子,老虎,熊,狼,猿,黑猩猩,蛇,斑马,动物园
+art,classroom,gym,library,lunchroom,music,playground,room,school
+艺术,课堂,健身房,图书馆,小吃店,音乐,操场,房间,学校
+backpack,book,classroom,chair,desk,eraser,paper,pencil
+背包,书,课堂,椅子,桌子,橡皮,纸,铅笔
+bus,kids,art,camp,games,lake,lunch,songs
+公共汽车,孩子们,艺术,营,游戏,湖,午餐,歌曲
+cups,foods,fun,hats,picnics,plates,shoes,summer,sun
+杯子,食物,乐趣,帽子,野餐,盘子,鞋,夏天,太阳
+letter,line,mailbox,scale,stamp,worker,money,post office
+信,线,邮箱,规模,邮票,工人,钱,邮局
+door,bookstore,chair,helpers,room,snacks,story,books
+门,书店,椅子,帮助者,房间,小吃,故事,图书
+airplane,pilot,seat,snack,ticket,window,bag,sky
+飞机,飞行员,座位,小吃,票,窗户,包,天空
+doors,gate,stairs,subway,ticket,tunnel
+门,门,楼梯,地铁,票,隧道
+boat,dock,fish,lake,rock,swimsuit
+船,码头,鱼,湖,岩石,泳装
+backyard,ball,dog,fence,flower,hose,swing,tree
+后院,球,狗,栅栏,花,软管,摇摆,树
+bench,bus,door,school,seat,steps,walk,window
+长椅,公共汽车,门,学校,座位,步骤,走,窗户
+boots,cape,mask,scarf,sunglasses,sweater
+靴子,岬,面具,围巾,太阳镜,毛衣
+apples,basket,farmer,friends,ladder,tractor
+苹果,篮子,农民,朋友们,梯子,拖拉机
+belts,blankets,closet,hangers,pants,shoes
+皮带,毯子,壁橱,衣架,裤子,鞋
+balloons,birthday,candles,gifts,guests,singing
+气球,生日,蜡烛,礼物,客人,歌唱
+card,gift,hand,hug,kiss,lick,pat,smile
+卡片,礼物,手,拥抱,吻,舔,拍,微笑
+cookie jar,counter,cupboard,fridge,sink,stove,toaster,trash can
+饼干罐,柜台,橱柜,冰箱,下沉,火炉,烤面包机,垃圾桶
+bath,bubbles,shampoo,soap,towel,tub
+洗澡,气泡,洗发水,肥皂,毛巾,浴缸
+bear,blocks,drum,kite,paint,plane,robot,wagon
+熊,块,鼓,风筝,画,飞机,机器人,车皮
+draw,drill,glue,hammer,hang,paint,sand,saw
+画,钻头,胶水,锤,悬挂,画,沙,锯
+camp,drive,spot,stories,tent,tools
+营,驾驶,点,故事,帐篷,工具
+blankets,chairs,food,fort,friends,games,lights,pillows
+毯子,椅子,食物,堡,朋友们,游戏,灯,枕头
+garden,hoe,hose,plants,seeds,shovel
+花园,锄,软管,植物,种子,铲
+back cover,front cover,letters,number,pages,title
+封底,封面,信件,数字,页面,标题
+basket,candy,dress,Easter,eggs,family
+篮子,糖果,裙子,复活节,鸡蛋,家庭
+eyes,help,love,smile,tuck,voice
+眼睛,帮助,爱,微笑,塔克,嗓音
+line,movie,popcorn,screen,seats,tickets
+线,电影,爆米花,屏幕,座位,门票
+brother,family,father,grandfather,grandmother,me,mother,my,sister
+兄弟,家庭,父亲,祖父,祖母,我,母亲,我的,姐姐
+blanket,dream,kiss,Moon,pillow,story
+毯子,梦,吻,月亮,枕头,故事
+funny,cat,hat,shirt,bow,tie,pants,boots,glasses
+有趣的,猫,帽子,衬衫,弓,领带,裤子,靴子,眼镜
+big,bus,car,dinosaur,dog,elephant,house,plane,tree
+大的,公共汽车,车,恐龙,狗,大象,房子,飞机,树
+baby,bug,car,dog,house,little,mouse,plane,tree
+婴儿,漏洞,车,狗,房子,小的,老鼠,飞机,树
+bed,chair,desk,pillow,swing,table,tree,umbrella,under
+床,椅子,桌子,枕头,摇摆,桌子,树,伞,在下面
+airplane,bed,bike,fence,house,on,skates,swing,table
+飞机,床,自行车,栅栏,房子,在,冰鞋,摇摆,桌子
+bathtub,boat,car,grass,house,in,mud,wagon,water
+浴缸,船,车,草,房子,在,泥,车皮,水
+bathtub,boat,car,grass,house,mud,out,wagon,water
+浴缸,船,车,草,房子,泥,出去,车皮,水
+chair,computer,couch,off,step,towel
+椅子,电脑,长椅,离开,步,毛巾
+ball,bat,bike,cat,doll,hole,log,pot
+球,蝙蝠,自行车,猫,玩具娃娃,洞,日志,锅
+cookies,market,farmers,tents,jam,vegetables
+曲奇饼,市场,农民,帐篷,果酱,蔬菜
+dry,round,lat,small,hat,wet
+干燥,圆形的,拉特,小的,帽子,湿的`;
+
+        // Screen and Button elements
+        const startScreen = document.getElementById('start-screen');
+        const quizScreen = document.getElementById('quiz-screen');
+        const resultsScreen = document.getElementById('results-screen');
+        
+        const startBtn = document.getElementById('start-btn');
+        const restartBtn = document.getElementById('restart-btn');
+        const correctBtn = document.getElementById('correct-btn');
+        const wrongBtn = document.getElementById('wrong-btn');
+        const copyErrorsBtn = document.getElementById('copy-errors-btn');
+
+        // Display elements
+        const wordDisplay = document.getElementById('word-display');
+        const scoreDisplay = document.getElementById('score');
+        const errorList = document.getElementById('error-list');
+        const errorUl = document.getElementById('errors');
+        const progressIndicator = document.getElementById('progress-indicator');
+
+        // Quiz state variables
+        let allWords = [];
+        let quizWords = [];
+        let currentWordIndex = 0;
+        let score = 0;
+        let incorrectWords = [];
+        const QUIZ_LENGTH = 50;
+
+        function parseCSV() {
+            const lines = csvData.trim().split('\n').map(line => line.trim());
+            const pairs = [];
+            for (let i = 0; i < lines.length; i += 2) {
+                if (i + 1 < lines.length) {
+                    const englishLine = lines[i].split(',');
+                    const chineseLine = lines[i + 1].split(',');
+                    if (englishLine.length === chineseLine.length) {
+                        for (let j = 0; j < englishLine.length; j++) {
+                            const en = englishLine[j].trim();
+                            const zh = chineseLine[j].trim();
+                            if (en && zh) {
+                                pairs.push({ en, zh });
+                            }
+                        }
+                    }
+                }
+            }
+            return pairs;
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function startGame() {
+            currentWordIndex = 0;
+            score = 0;
+            incorrectWords = [];
+            
+            shuffleArray(allWords);
+            const selectedWords = allWords.slice(0, QUIZ_LENGTH);
+            
+            const englishQuestions = selectedWords.slice(0, QUIZ_LENGTH / 2).map(word => ({...word, type: 'en'}));
+            const chineseQuestions = selectedWords.slice(QUIZ_LENGTH / 2).map(word => ({...word, type: 'zh'}));
+
+            quizWords = [...englishQuestions, ...chineseQuestions];
+            shuffleArray(quizWords);
+
+            startScreen.classList.add('hidden');
+            resultsScreen.classList.add('hidden');
+            quizScreen.classList.remove('hidden');
+            
+            displayNextWord();
+        }
+        
+        function restartGame() {
+            resultsScreen.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        }
+
+        function displayNextWord() {
+            if (currentWordIndex < quizWords.length) {
+                const word = quizWords[currentWordIndex];
+                wordDisplay.innerHTML = ''; // Clear previous content
+                wordDisplay.textContent = word.type === 'en' ? word.en : word.zh;
+                progressIndicator.textContent = `${currentWordIndex + 1} / ${QUIZ_LENGTH}`;
+            } else {
+                showResults();
+            }
+        }
+
+        function handleAnswer(isCorrect) {
+            if (currentWordIndex >= quizWords.length) return;
+
+            correctBtn.disabled = true;
+            wrongBtn.disabled = true;
+
+            if (isCorrect) {
+                score += 2;
+                setTimeout(() => {
+                    currentWordIndex++;
+                    displayNextWord();
+                    correctBtn.disabled = false;
+                    wrongBtn.disabled = false;
+                }, 300);
+            } else {
+                incorrectWords.push(quizWords[currentWordIndex]);
+                const word = quizWords[currentWordIndex];
+                
+                const displayType = word.type === 'en' ? word.en : word.zh;
+                const answerType = word.type === 'en' ? word.zh : word.en;
+                wordDisplay.innerHTML = `${displayType}<br><span style="color: #28a745; font-size: 5vw;">${answerType}</span>`;
+                
+                setTimeout(() => {
+                    currentWordIndex++;
+                    displayNextWord();
+                    correctBtn.disabled = false;
+                    wrongBtn.disabled = false;
+                }, 1200);
+            }
+        }
+
+        function showResults() {
+            quizScreen.classList.add('hidden');
+            resultsScreen.classList.remove('hidden');
+            scoreDisplay.textContent = `你的分数是: ${score}`;
+
+            if (incorrectWords.length > 0) {
+                errorUl.innerHTML = '';
+                incorrectWords.forEach(word => {
+                    const li = document.createElement('li');
+                    li.textContent = `${word.en} - ${word.zh}`;
+                    errorUl.appendChild(li);
+                });
+                errorList.classList.remove('hidden');
+            } else {
+                errorList.classList.add('hidden');
+            }
+        }
+        
+        function handleKeyDown(event) {
+            if (!startScreen.classList.contains('hidden') && event.key === 'Enter') {
+                startBtn.click();
+            } else if (!quizScreen.classList.contains('hidden')) {
+                if (event.key === 'ArrowLeft') {
+                    wrongBtn.click();
+                } else if (event.key === 'ArrowRight') {
+                    correctBtn.click();
+                }
+            }
+        }
+
+        function copyErrorsToClipboard() {
+            if (incorrectWords.length === 0) return;
+            const errorText = incorrectWords.map(word => `${word.en} - ${word.zh}`).join('\n');
+            navigator.clipboard.writeText(errorText).then(() => {
+                const originalText = copyErrorsBtn.textContent;
+                copyErrorsBtn.textContent = '复制成功!';
+                copyErrorsBtn.disabled = true;
+                setTimeout(() => {
+                    copyErrorsBtn.textContent = originalText;
+                    copyErrorsBtn.disabled = false;
+                }, 2000);
+            }).catch(err => {
+                console.error('无法复制错题: ', err);
+                alert('复制失败，请手动复制。');
+            });
+        }
+
+        // --- Event Listeners ---
+        startBtn.addEventListener('click', startGame);
+        restartBtn.addEventListener('click', restartGame);
+
+        correctBtn.addEventListener('click', () => {
+            if (correctBtn.disabled) return;
+            correctBtn.classList.add('clicked');
+            setTimeout(() => correctBtn.classList.remove('clicked'), 200);
+            handleAnswer(true);
+        });
+
+        wrongBtn.addEventListener('click', () => {
+            if (wrongBtn.disabled) return;
+            wrongBtn.classList.add('clicked');
+            setTimeout(() => wrongBtn.classList.remove('clicked'), 200);
+            handleAnswer(false);
+        });
+
+        document.addEventListener('keydown', handleKeyDown);
+        copyErrorsBtn.addEventListener('click', copyErrorsToClipboard);
+
+        // --- Initial load ---
+        allWords = parseCSV();
+
+    </script>
+</body>
+</html>
