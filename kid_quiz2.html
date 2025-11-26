@@ -1,0 +1,509 @@
+<!-- codex: 2025-11-25 重构 kid_quiz.html 支持等级选择/复习模式/错题本 localStorage -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词闯关 & 复习</title>
+    <style>
+        :root { --primary:#ff7a59; --accent:#4cafef; --bg:#f7fbff; --card:#fff; --text:#1f2a44; }
+        * { box-sizing:border-box; }
+        body { margin:0; font-family:'ZCOOL KuaiLe', 'Noto Sans SC', system-ui; background:var(--bg); color:var(--text); }
+        .wrap { max-width:1100px; margin:0 auto; padding:16px; }
+        .card { background:var(--card); border-radius:18px; box-shadow:0 10px 25px rgba(0,0,0,.08); padding:16px 18px; margin-bottom:14px; }
+        h1 { margin:0 0 8px; font-size:28px; color:var(--primary); }
+        h2 { margin:8px 0; font-size:20px; }
+        label { font-weight:600; margin-right:6px; }
+        select, input { padding:6px 10px; border:1px solid #d8e3f0; border-radius:10px; min-width:120px; }
+        .row { display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center; }
+        .btn { cursor:pointer; border:none; border-radius:12px; padding:10px 18px; font-weight:700; color:#fff; background:linear-gradient(145deg,var(--primary),#ff5c3a); transition:transform .15s ease, box-shadow .15s ease; box-shadow:0 6px 14px rgba(255,122,89,.35); }
+        .btn.secondary { background:linear-gradient(145deg,#4cafef,#2e8adf); box-shadow:0 6px 14px rgba(76,175,239,.28); }
+        .btn.text { background:transparent; color:var(--primary); box-shadow:none; padding:8px 10px; }
+        .btn:active { transform:translateY(1px); }
+        #word-box { text-align:center; min-height:160px; display:flex; flex-direction:column; justify-content:center; gap:8px; }
+        #word-main { font-size:48px; font-weight:800; color:var(--accent); }
+        #word-aux { font-size:26px; color:#28a745; }
+        #progress { color:#70839d; font-size:14px; }
+        #results ul { padding-left:20px; max-height:200px; overflow:auto; }
+        #notice { font-size:14px; color:#6c7a92; }
+        .badge { display:inline-block; padding:4px 8px; border-radius:10px; background:#eef5ff; color:#2e8adf; font-size:12px; margin-right:6px; }
+        dialog { border:none; border-radius:14px; padding:16px; width:min(520px,90vw); }
+        dialog::backdrop { background:rgba(0,0,0,.25); }
+        @media (max-width:700px){ #word-main{font-size:38px;} .row{flex-direction:column; align-items:flex-start;} select,input{width:100%;} .btn{width:100%; text-align:center;} }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            <div class="row" style="justify-content:space-between; align-items:flex-end;">
+                <div>
+                    <h1>单词闯关 & 复习</h1>
+                    <div id="notice">基于 RAZAA2G.csv · 本地存储错题本与掌握本（localStorage），换设备会丢失数据。</div>
+                </div>
+                <button class="btn text" id="help-btn">使用说明</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>选择与设置</h2>
+            <div class="row">
+                <label for="level-select">级别</label>
+                <select id="level-select"></select>
+                <label for="mode-select">模式</label>
+                <select id="mode-select">
+                    <option value="exam">考试模式</option>
+                    <option value="review">复习模式</option>
+                </select>
+                <label for="source-select">题源</label>
+                <select id="source-select">
+                    <option value="all">全部单词</option>
+                    <option value="errors">只出错题本</option>
+                    <option value="excludeMastered">排除已掌握</option>
+                    <option value="onlyMastered">只出已掌握</option>
+                </select>
+                <label for="count-input">题量</label>
+                <select id="count-input" style="width:90px;">
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50" selected>50</option>
+                </select>
+                <button class="btn secondary" id="start-btn">开始</button>
+            </div>
+            <div id="review-hint" style="margin-top:8px; font-size:14px; color:#4a5c75;">复习模式默认每轮 5 个单词，可选择“错题本”或“全部单词”源。</div>
+            <div id="ebbinghaus" style="margin-top:8px; font-size:14px;"></div>
+        </div>
+
+        <div class="card" id="quiz-card" style="display:none;">
+            <div class="row" style="justify-content:space-between;">
+                <div>
+                    <span class="badge" id="badge-mode">考试</span>
+                    <span class="badge" id="badge-level"></span>
+                    <span class="badge" id="badge-source"></span>
+                </div>
+                <div id="progress"></div>
+            </div>
+            <div id="word-box">
+                <div id="word-main">准备开始</div>
+                <div id="word-aux"></div>
+            </div>
+            <div class="row">
+                <button class="btn" id="btn-reveal" style="display:none;">显示中文</button>
+                <button class="btn" id="btn-know">认识 / 对</button>
+                <button class="btn secondary" id="btn-dontknow">不认识 / 错</button>
+                <button class="btn text" id="btn-exit">结束返回</button>
+            </div>
+        </div>
+
+        <div class="card" id="results" style="display:none;">
+            <h2>结果</h2>
+            <div id="summary"></div>
+            <div class="row" style="gap:8px; margin-top:8px;">
+                <button class="btn secondary" id="btn-copy-errors">复制错题</button>
+                <button class="btn" id="btn-clear-errors">清空本级错题本</button>
+            </div>
+            <div>
+                <h3>错题列表</h3>
+                <ul id="errors-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="help-dialog">
+        <h3>使用说明</h3>
+        <ol style="padding-left:20px; line-height:1.6;">
+            <li>选择等级、模式与题源：考试模式支持“全部/错题本/排除已掌握/仅已掌握”；复习模式可选“全部/错题本”。</li>
+            <li>错题本保存在浏览器 localStorage（按等级分开）；考试或复习答错会加入错题本，答对会从错题本移除并加入“已掌握”。</li>
+            <li>“排除已掌握”可避免重复出题；“仅已掌握”用于巩固；复习模式每次显示英文，点击“显示中文”查看答案。</li>
+            <li>艾宾浩斯提示：根据错题与已掌握的最近复习时间，给出建议复习数量。</li>
+            <li>平板/手机建议添加到主屏幕；清除浏览器数据会丢失错题本与已掌握记录。</li>
+        </ol>
+        <div style="text-align:right;"><button class="btn text" id="help-close">关闭</button></div>
+    </dialog>
+
+    <script>
+    const csvPath = 'RAZAA2G.csv';
+    const REVIEW_BATCH = 5;
+    const MAX_LINES = 500;
+    const EB_SCHEDULE_ERRORS = [1, 2, 4, 7, 15, 30]; // 天
+    const EB_SCHEDULE_MASTERED = [3, 7, 14, 30]; // 天
+
+    const qs = id => document.getElementById(id);
+    const levelSelect = qs('level-select');
+    const modeSelect = qs('mode-select');
+    const sourceSelect = qs('source-select');
+    const countInput = qs('count-input');
+    const startBtn = qs('start-btn');
+    const badgeMode = qs('badge-mode');
+    const badgeLevel = qs('badge-level');
+    const badgeSource = qs('badge-source');
+    const progressEl = qs('progress');
+    const wordMain = qs('word-main');
+    const wordAux = qs('word-aux');
+    const btnKnow = qs('btn-know');
+    const btnDontKnow = qs('btn-dontknow');
+    const btnExit = qs('btn-exit');
+    const btnReveal = qs('btn-reveal');
+    const quizCard = qs('quiz-card');
+    const resultsCard = qs('results');
+    const summaryEl = qs('summary');
+    const errorsList = qs('errors-list');
+    const btnCopyErrors = qs('btn-copy-errors');
+    const btnClearErrors = qs('btn-clear-errors');
+    const ebHint = qs('ebbinghaus');
+    const helpDialog = qs('help-dialog');
+    const helpBtn = qs('help-btn');
+    const helpClose = qs('help-close');
+
+    let allWordsByLevel = {};
+    let currentSession = null;
+
+    function csvParse(text) {
+        const rows = []; let row = []; let cur = ''; let inQuotes = false;
+        for (let i = 0; i < text.length; i++) {
+            const ch = text[i], next = text[i + 1];
+            if (ch === '"' && !inQuotes) { inQuotes = true; continue; }
+            if (ch === '"' && inQuotes) { if (next === '"') { cur += '"'; i++; } else { inQuotes = false; } continue; }
+            if (ch === ',' && !inQuotes) { row.push(cur.trim()); cur = ''; continue; }
+            if ((ch === '\n' || ch === '\r') && !inQuotes) {
+                if (cur.length || row.length) { row.push(cur.trim()); rows.push(row); row = []; cur = ''; }
+                continue;
+            }
+            cur += ch;
+        }
+        if (cur.length || row.length) { row.push(cur.trim()); rows.push(row); }
+        return rows.filter(r => r.length);
+    }
+
+    async function loadCsv() {
+        const resp = await fetch(csvPath);
+        const buf = await resp.arrayBuffer();
+        let text;
+        try { text = new TextDecoder('gbk').decode(buf); }
+        catch { text = new TextDecoder('utf-8').decode(buf); }
+        return text;
+    }
+
+    function parseRazFull(text) {
+        const rows = csvParse(text);
+        if (!rows.length) return {};
+        rows.shift(); // drop header
+        const byLevel = {};
+        for (let i = 0; i < rows.length; i += 2) {
+            const zhRow = rows[i] || [];
+            const enRow = rows[i + 1] || [];
+            const level = enRow[0] || zhRow[0] || 'unknown';
+            const titleZh = zhRow[1] || '';
+            const titleEn = enRow[1] || '';
+            const maxLen = Math.max(enRow.length, zhRow.length);
+            for (let j = 2; j < maxLen; j++) {
+                const en = (enRow[j] || '').trim();
+                const zh = (zhRow[j] || '').trim();
+                if (!en && !zh) continue;
+                const item = { level, titleEn, titleZh, en, zh: zh || en };
+                if (!byLevel[level]) byLevel[level] = [];
+                byLevel[level].push(item);
+            }
+        }
+        return byLevel;
+    }
+
+    const storage = {
+        keyError: level => `kidquiz_error_${level}`,
+        keyMastered: level => `kidquiz_mastered_${level}`,
+        keySettings: 'kidquiz_settings',
+        load(key) { try { return JSON.parse(localStorage.getItem(key) || '[]'); } catch { return []; } },
+        save(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+    };
+
+    function now() { return Date.now(); }
+
+    function loadError(level) { return storage.load(storage.keyError(level)); }
+    function saveError(level, list) { storage.save(storage.keyError(level), list); }
+    function loadMastered(level) { return storage.load(storage.keyMastered(level)); }
+    function saveMastered(level, list) { storage.save(storage.keyMastered(level), list); }
+
+    function upsert(list, word) {
+        const idx = list.findIndex(w => w.en === word.en && w.zh === word.zh);
+        if (idx >= 0) { list[idx] = { ...list[idx], ...word }; }
+        else list.push(word);
+    }
+
+    function recordWrong(level, word) {
+        const errs = loadError(level);
+        const idx = errs.findIndex(w => w.en === word.en);
+        if (idx >= 0) { errs[idx].wrong_count = (errs[idx].wrong_count || 1) + 1; errs[idx].last_wrong_at = now(); }
+        else errs.push({ ...word, wrong_count: 1, last_wrong_at: now() });
+        saveError(level, errs);
+    }
+
+    function recordRight(level, word) {
+        const errs = loadError(level).filter(w => w.en !== word.en);
+        saveError(level, errs);
+        const mastered = loadMastered(level);
+        const idx = mastered.findIndex(w => w.en === word.en);
+        if (idx >= 0) {
+            const item = mastered[idx];
+            mastered[idx] = {
+                ...item,
+                ...word,
+                review_count: (item.review_count || 1) + 1,
+                last_review_at: now(),
+                first_right_at: item.first_right_at || now()
+            };
+        } else {
+            mastered.push({
+                ...word,
+                review_count: 1,
+                first_right_at: now(),
+                last_review_at: now()
+            });
+        }
+        saveMastered(level, mastered);
+    }
+
+    function pickQuestions(level, sourceType, limit) {
+        const source = allWordsByLevel[level] || [];
+        const errs = loadError(level);
+        const mastered = loadMastered(level);
+        let pool = [...source];
+        if (sourceType === 'errors') pool = source.filter(w => errs.some(e => e.en === w.en));
+        else if (sourceType === 'excludeMastered') pool = source.filter(w => !mastered.some(m => m.en === w.en));
+        else if (sourceType === 'onlyMastered') pool = source.filter(w => mastered.some(m => m.en === w.en));
+        shuffle(pool);
+        return pool.slice(0, limit);
+    }
+
+    function shuffle(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } }
+
+    function startExam() {
+        const level = levelSelect.value;
+        const sourceType = sourceSelect.value;
+        const total = Math.max(1, Math.min(Number(countInput.value) || 20, 200));
+        const questions = pickQuestions(level, sourceType, total).map(q => ({
+            ...q,
+            prompt: Math.random() < 0.5 ? "en" : "zh", // 随机出中文或英文
+        }));
+        if (!questions.length) { alert('当前条件下没有可出题的单词，请切换题源或等级。'); return; }
+        currentSession = { mode: 'exam', level, sourceType, questions, idx: 0, correct: 0, wrong: [] };
+        updateBadges();
+        showQuiz();
+        renderQuestion();
+    }
+
+    function startReview(presetSource) {
+        const level = levelSelect.value;
+        let sourceType = presetSource || sourceSelect.value;
+        if (!['errors', 'onlyMastered', 'all', 'excludeMastered'].includes(sourceType)) {
+            sourceType = 'all';
+        }
+        const questions = pickQuestions(level, sourceType, REVIEW_BATCH).map(q => ({ ...q, prompt: 'en' }));
+        if (!questions.length) { alert('当前条件下没有可复习的单词。'); return; }
+        currentSession = { mode: 'review', level, sourceType, questions, idx: 0, correct: 0, wrong: [], revealed: false };
+        updateBadges();
+        showQuiz(true);
+        renderQuestion();
+    }
+
+    function updateBadges() {
+        badgeMode.textContent = currentSession.mode === 'exam' ? '考试' : '复习';
+        badgeLevel.textContent = `级别: ${currentSession.level}`;
+        const map = { all:'全部', errors:'错题本', excludeMastered:'排除已掌握', onlyMastered:'仅已掌握' };
+        badgeSource.textContent = `题源: ${map[currentSession.sourceType] || '全部'}`;
+    }
+
+    function renderQuestion() {
+        const s = currentSession;
+        if (s.idx >= s.questions.length) { endSession(); return; }
+        const item = s.questions[s.idx];
+        progressEl.textContent = `${s.idx + 1} / ${s.questions.length}`;
+        if (s.mode === 'exam') {
+            const promptLang = item.prompt || 'en';
+            wordMain.textContent = promptLang === 'en' ? item.en : item.zh;
+            wordAux.textContent = '';
+            btnReveal.style.display = 'none';
+            btnKnow.textContent = '认识 / 对';
+            btnDontKnow.textContent = '不认识 / 错';
+            btnKnow.disabled = false;
+            btnDontKnow.disabled = false;
+        } else {
+            wordMain.textContent = item.en;
+            wordAux.textContent = s.revealed ? item.zh : '点击“显示中文”查看';
+            btnReveal.style.display = s.revealed ? 'none' : 'inline-block';
+            btnKnow.textContent = '认识 / 记住了';
+            btnDontKnow.textContent = '不认识';
+            btnKnow.disabled = false; // 允许直接记住或不会
+            btnDontKnow.disabled = false;
+        }
+    }
+
+    function handleKnow() {
+        const s = currentSession;
+        if (!s) return;
+        const item = s.questions[s.idx];
+        // 复习模式允许不揭示直接记住
+        recordRight(s.level, item);
+        s.correct += 1;
+        s.idx += 1;
+        s.revealed = false;
+        renderQuestion();
+    }
+
+    function handleDontKnow() {
+        const s = currentSession;
+        if (!s) return;
+        const item = s.questions[s.idx];
+        const answerText = item.zh;
+        if (s.mode === 'exam') {
+            btnKnow.disabled = true;
+            btnDontKnow.disabled = true;
+            recordWrong(s.level, item);
+            s.wrong.push(item);
+            const promptLang = item.prompt || 'en';
+            wordMain.textContent = promptLang === 'en' ? item.en : item.zh;
+            wordAux.textContent = promptLang === 'en' ? item.zh : item.en;
+            setTimeout(() => {
+                s.idx += 1;
+                s.revealed = false;
+                btnKnow.disabled = false;
+                btnDontKnow.disabled = false;
+                renderQuestion();
+            }, 1000);
+        } else {
+            btnKnow.disabled = true;
+            btnDontKnow.disabled = true;
+            wordMain.textContent = item.en;
+            wordAux.textContent = answerText;
+            recordWrong(s.level, item);
+            s.wrong.push(item);
+            setTimeout(() => {
+                s.idx += 1;
+                s.revealed = false;
+                btnKnow.disabled = false;
+                btnDontKnow.disabled = false;
+                renderQuestion();
+            }, 1000);
+        }
+    }
+
+    function endSession() {
+        const s = currentSession;
+        quizCard.style.display = 'none';
+        resultsCard.style.display = 'block';
+        const total = s.questions.length;
+        const wrongCount = s.wrong.length;
+        summaryEl.textContent = `完成！共 ${total} 题，正确 ${s.correct}，错误 ${wrongCount}。错题已写入错题本，正确已写入掌握本。`;
+        errorsList.innerHTML = '';
+        s.wrong.forEach(w => { const li = document.createElement('li'); li.textContent = `${w.en} - ${w.zh}`; errorsList.appendChild(li); });
+        currentSession = null;
+        refreshEbHint();
+    }
+
+    function showQuiz(isReview=false) {
+        resultsCard.style.display = 'none';
+        quizCard.style.display = 'block';
+        btnReveal.style.display = isReview ? 'inline-block' : 'none';
+    }
+
+    function handleExit() { currentSession = null; quizCard.style.display = 'none'; }
+
+    function copyErrors() {
+        const level = levelSelect.value;
+        const errs = loadError(level);
+        if (!errs.length) { alert('当前等级错题本为空'); return; }
+        const text = errs.map(w => `${w.en} - ${w.zh}`).join('\n');
+        navigator.clipboard.writeText(text).then(() => alert('已复制错题')).catch(() => alert('复制失败，请手动选择复制'));
+    }
+
+    function clearErrors() {
+        const level = levelSelect.value;
+        if (!confirm(`清空 ${level} 等级的错题本？此操作不可恢复。`)) return;
+        saveError(level, []);
+        alert('已清空错题本');
+        refreshEbHint();
+    }
+
+    function refreshEbHint() {
+        const levels = Object.keys(allWordsByLevel);
+        const parts = [];
+        const dayMs = 86400000;
+        const nowTs = now();
+        levels.forEach(lv => {
+            const errs = loadError(lv);
+            const mastered = loadMastered(lv);
+            const dueErr = errs.filter(w => {
+                const stage = Math.min((w.wrong_count || 1) - 1, EB_SCHEDULE_ERRORS.length - 1);
+                const needDays = EB_SCHEDULE_ERRORS[stage];
+                return (nowTs - (w.last_wrong_at || nowTs)) >= needDays * dayMs;
+            });
+            const dueMas = mastered.filter(w => {
+                const stage = Math.min((w.review_count || 1) - 1, EB_SCHEDULE_MASTERED.length - 1);
+                const needDays = EB_SCHEDULE_MASTERED[stage];
+                return (nowTs - (w.last_review_at || w.first_right_at || nowTs)) >= needDays * dayMs;
+            });
+            if (dueErr.length || dueMas.length) {
+                const errBtn = dueErr.length ? `<button class="btn text eb-btn" data-level="${lv}" data-src="errors">复习错题 (${dueErr.length})</button>` : '';
+                const masBtn = dueMas.length ? `<button class="btn text eb-btn" data-level="${lv}" data-src="onlyMastered">巩固已掌握 (${dueMas.length})</button>` : '';
+                parts.push(`<div class="row" style="align-items:center; gap:6px;"><span class="badge">${lv}</span><span>错题 ${dueErr.length} · 已掌握 ${dueMas.length}</span>${errBtn}${masBtn}</div>`);
+            }
+        });
+        ebHint.innerHTML = parts.length ? `艾宾浩斯提示：<br>${parts.join('')}` : '艾宾浩斯提示：暂无需要复习的单词。';
+    }
+
+    function populateLevels() {
+        const frag = document.createDocumentFragment();
+        Object.keys(allWordsByLevel).forEach(lv => {
+            const opt = document.createElement('option');
+            opt.value = lv; opt.textContent = lv;
+            frag.appendChild(opt);
+        });
+        levelSelect.innerHTML = '';
+        levelSelect.appendChild(frag);
+    }
+
+    async function init() {
+        try {
+            const text = await loadCsv();
+            allWordsByLevel = parseRazFull(text);
+            populateLevels();
+            refreshEbHint();
+            countInput.value = 20;
+        } catch (e) {
+            console.error(e);
+            alert('加载 razfulltranslate3.csv 失败，请确认文件与页面在同目录且可访问。');
+        }
+    }
+
+    startBtn.addEventListener('click', () => {
+        if (modeSelect.value === 'exam') startExam(); else startReview();
+    });
+    btnKnow.addEventListener('click', handleKnow);
+    btnDontKnow.addEventListener('click', handleDontKnow);
+    btnExit.addEventListener('click', handleExit);
+    btnReveal.addEventListener('click', () => {
+        if (!currentSession) return;
+        currentSession.revealed = true;
+        wordAux.textContent = currentSession.questions[currentSession.idx].zh;
+        btnReveal.style.display='none';
+        btnKnow.disabled = false;
+        btnDontKnow.disabled = false;
+    });
+    btnCopyErrors.addEventListener('click', copyErrors);
+    btnClearErrors.addEventListener('click', clearErrors);
+    helpBtn.addEventListener('click', () => helpDialog.showModal());
+    helpClose.addEventListener('click', () => helpDialog.close());
+    ebHint.addEventListener('click', (e) => {
+        const btn = e.target.closest('.eb-btn');
+        if (!btn) return;
+        const lv = btn.dataset.level;
+        const src = btn.dataset.src;
+        if (lv) levelSelect.value = lv;
+        modeSelect.value = 'review';
+        sourceSelect.value = src === 'onlyMastered' ? 'onlyMastered' : 'errors';
+        startReview(src);
+    });
+
+    init();
+    </script>
+</body>
+</html>
