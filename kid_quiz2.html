@@ -1,4 +1,4 @@
-<!-- codex: 2025-11-25 重构 kid_quiz.html 支持等级选择/复习模式/错题本 localStorage -->
+<!-- // codex: 2025-11-27 强化 UTF-8 解码优先级，避免移动端 GBK 解码导致乱码 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -38,7 +38,7 @@
             <div class="row" style="justify-content:space-between; align-items:flex-end;">
                 <div>
                     <h1>单词闯关 & 复习</h1>
-                    <div id="notice">基于 RAZAA2G.csv · 本地存储错题本与掌握本（localStorage），换设备会丢失数据。</div>
+                    <div id="notice">基于 razfulltranslate666.csv · 本地存储错题本与掌握本（localStorage），换设备会丢失数据。</div>
                 </div>
                 <button class="btn text" id="help-btn">使用说明</button>
             </div>
@@ -122,7 +122,7 @@
     </dialog>
 
     <script>
-    const csvPath = 'RAZAA2G.csv';
+    const csvPath = 'razfulltranslate666.csv';
     const REVIEW_BATCH = 5;
     const MAX_LINES = 500;
     const EB_SCHEDULE_ERRORS = [1, 2, 4, 7, 15, 30]; // 天
@@ -175,13 +175,23 @@
         return rows.filter(r => r.length);
     }
 
+    function stripBom(text) { return text.replace(/^\uFEFF/, ''); }
+
     async function loadCsv() {
         const resp = await fetch(csvPath);
         const buf = await resp.arrayBuffer();
-        let text;
-        try { text = new TextDecoder('gbk').decode(buf); }
-        catch { text = new TextDecoder('utf-8').decode(buf); }
-        return text;
+        const bytes = new Uint8Array(buf);
+        try {
+            // �ȳ��� UTF-8 ���룬 GBK ���ֻ�������ȡ�·�
+            return stripBom(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
+        } catch (e) {
+            try {
+                return stripBom(new TextDecoder('gbk').decode(bytes));
+            } catch {
+                // GBK �����������У�ʹ��ͨ�ÿ� fatal ��ֵ�� UTF-8 ��Ϊ��һ������
+                return stripBom(new TextDecoder('utf-8').decode(bytes));
+            }
+        }
     }
 
     function parseRazFull(text) {
