@@ -38,7 +38,7 @@
             <div class="row" style="justify-content:space-between; align-items:flex-end;">
                 <div>
                     <h1>单词闯关 & 复习</h1>
-                    <div id="notice">基于 RAZAA2G.csv · 本地存储错题本与掌握本（localStorage），换设备会丢失数据。</div>
+                    <div id="notice">基于 RAZ · 本地存储错题本与掌握本，换设备会丢失数据。</div>
                 </div>
                 <button class="btn text" id="help-btn">使用说明</button>
             </div>
@@ -77,21 +77,21 @@
         <div class="card" id="quiz-card" style="display:none;">
             <div class="row" style="justify-content:space-between;">
                 <div>
-                    <span class="badge" id="badge-mode">考试</span>
+                    <span class="badge" id="badge-mode">����</span>
                     <span class="badge" id="badge-level"></span>
                     <span class="badge" id="badge-source"></span>
                 </div>
                 <div id="progress"></div>
             </div>
             <div id="word-box">
-                <div id="word-main">准备开始</div>
+                <div id="word-main">׼����ʼ</div>
                 <div id="word-aux"></div>
             </div>
-            <div class="row">
+            <div class="row" style="justify-content:center;">
                 <button class="btn" id="btn-reveal" style="display:none;">显示中文</button>
                 <button class="btn" id="btn-know">认识 / 对</button>
                 <button class="btn secondary" id="btn-dontknow">不认识 / 错</button>
-                <button class="btn text" id="btn-exit">结束返回</button>
+                <button class="btn text" id="btn-exit">结束本轮</button>
             </div>
         </div>
 
@@ -179,16 +179,20 @@
 
     async function loadCsv() {
         const resp = await fetch(csvPath);
+        if (!resp.ok) {
+            throw new Error(`CSV 请求失败：HTTP ${resp.status}`);
+        }
         const buf = await resp.arrayBuffer();
         const bytes = new Uint8Array(buf);
         try {
-            // �ȳ��� UTF-8 ���룬 GBK ���ֻ�������ȡ�·�
+            // 优先按 UTF-8 解码，确保默认环境下不乱码
             return stripBom(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
         } catch (e) {
             try {
+                // 若 UTF-8 失败，再尝试 GBK 以兼容部分 Windows/国产设备
                 return stripBom(new TextDecoder('gbk').decode(bytes));
             } catch {
-                // GBK �����������У�ʹ��ͨ�ÿ� fatal ��ֵ�� UTF-8 ��Ϊ��һ������
+                // 最后一层兜底：关闭 fatal 再用 UTF-8 读一遍，至少给出可读内容
                 return stripBom(new TextDecoder('utf-8').decode(bytes));
             }
         }
@@ -196,7 +200,15 @@
 
     function parseRazFull(text) {
         const rows = csvParse(text);
-        if (!rows.length) return {};
+        if (!rows.length) {
+            throw new Error('CSV 内容为空');
+        }
+        const headerRow = rows[0] || [];
+        const firstCell = (headerRow[0] || '').trim();
+        // 先确认首列为“RAZ Level”，防止把 HTML/404 页面当成 CSV 解析
+        if (firstCell !== 'RAZ Level') {
+            throw new Error(`CSV 头部不符合预期（实际: "${firstCell || '空'}"），请确认 razfulltranslate666.csv 已和本页放在同一目录且能直接访问。`);
+        }
         rows.shift(); // drop header
         const byLevel = {};
         for (let i = 0; i < rows.length; i += 2) {
@@ -346,39 +358,43 @@
             btnDontKnow.disabled = false;
         }
     }
-
     function handleKnow() {
         const s = currentSession;
         if (!s) return;
         const item = s.questions[s.idx];
-        // 复习模式允许不揭示直接记住
         recordRight(s.level, item);
         s.correct += 1;
-        s.idx += 1;
-        s.revealed = false;
-        renderQuestion();
+        btnKnow.disabled = true;
+        btnDontKnow.disabled = true;
+        if (s.mode === "exam") {
+            const promptLang = item.prompt || "en";
+            wordMain.textContent = promptLang === "en" ? item.en : item.zh;
+            wordAux.textContent = promptLang === "en" ? item.zh : item.en;
+        } else {
+            wordMain.textContent = item.en;
+            wordAux.textContent = item.zh;
+        }
+        setTimeout(() => {
+            s.idx += 1;
+            s.revealed = false;
+            btnKnow.disabled = false;
+            btnDontKnow.disabled = false;
+            renderQuestion();
+        }, 500);
     }
-
     function handleDontKnow() {
         const s = currentSession;
         if (!s) return;
         const item = s.questions[s.idx];
         const answerText = item.zh;
-        if (s.mode === 'exam') {
+        if (s.mode === "exam") {
             btnKnow.disabled = true;
             btnDontKnow.disabled = true;
             recordWrong(s.level, item);
             s.wrong.push(item);
-            const promptLang = item.prompt || 'en';
-            wordMain.textContent = promptLang === 'en' ? item.en : item.zh;
-            wordAux.textContent = promptLang === 'en' ? item.zh : item.en;
-            setTimeout(() => {
-                s.idx += 1;
-                s.revealed = false;
-                btnKnow.disabled = false;
-                btnDontKnow.disabled = false;
-                renderQuestion();
-            }, 1000);
+            const promptLang = item.prompt || "en";
+            wordMain.textContent = promptLang === "en" ? item.en : item.zh;
+            wordAux.textContent = promptLang === "en" ? item.zh : item.en;
         } else {
             btnKnow.disabled = true;
             btnDontKnow.disabled = true;
@@ -386,16 +402,15 @@
             wordAux.textContent = answerText;
             recordWrong(s.level, item);
             s.wrong.push(item);
-            setTimeout(() => {
-                s.idx += 1;
-                s.revealed = false;
-                btnKnow.disabled = false;
-                btnDontKnow.disabled = false;
-                renderQuestion();
-            }, 1000);
         }
+        setTimeout(() => {
+            s.idx += 1;
+            s.revealed = false;
+            btnKnow.disabled = false;
+            btnDontKnow.disabled = false;
+            renderQuestion();
+        }, 500);
     }
-
     function endSession() {
         const s = currentSession;
         quizCard.style.display = 'none';
@@ -408,13 +423,11 @@
         currentSession = null;
         refreshEbHint();
     }
-
     function showQuiz(isReview=false) {
         resultsCard.style.display = 'none';
         quizCard.style.display = 'block';
         btnReveal.style.display = isReview ? 'inline-block' : 'none';
     }
-
     function handleExit() { currentSession = null; quizCard.style.display = 'none'; }
 
     function copyErrors() {
@@ -470,7 +483,6 @@
         levelSelect.innerHTML = '';
         levelSelect.appendChild(frag);
     }
-
     async function init() {
         try {
             const text = await loadCsv();
@@ -480,10 +492,9 @@
             countInput.value = 20;
         } catch (e) {
             console.error(e);
-            alert('加载 razfulltranslate3.csv 失败，请确认文件与页面在同目录且可访问。');
+            alert('加载 razfulltranslate666.csv 失败，请确认文件与页面在同目录且可访问。');
         }
     }
-
     startBtn.addEventListener('click', () => {
         if (modeSelect.value === 'exam') startExam(); else startReview();
     });
@@ -512,7 +523,6 @@
         sourceSelect.value = src === 'onlyMastered' ? 'onlyMastered' : 'errors';
         startReview(src);
     });
-
     init();
     </script>
 </body>
