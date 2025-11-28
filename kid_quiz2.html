@@ -1,4 +1,4 @@
-<!-- // codex: 2025-11-27 强化 UTF-8 解码优先级，避免移动端 GBK 解码导致乱码 -->
+<!-- // codex: 2025-11-28 ���� kid_quiz ��������发音按钮乱码并统一提示 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -29,6 +29,8 @@
         .badge { display:inline-block; padding:4px 8px; border-radius:10px; background:#eef5ff; color:#2e8adf; font-size:12px; margin-right:6px; }
         dialog { border:none; border-radius:14px; padding:16px; width:min(520px,90vw); }
         dialog::backdrop { background:rgba(0,0,0,.25); }
+        #pronunciation-box { display:flex; justify-content:center; align-items:center; gap:8px; font-size:18px; color:#555; }
+        #phonetic-text { font-weight:500; color:#444; }
         @media (max-width:700px){ #word-main{font-size:38px;} .row{flex-direction:column; align-items:flex-start;} select,input{width:100%;} .btn{width:100%; text-align:center;} }
     </style>
 </head>
@@ -38,7 +40,7 @@
             <div class="row" style="justify-content:space-between; align-items:flex-end;">
                 <div>
                     <h1>单词闯关 & 复习</h1>
-                    <div id="notice">基于 RAZ · 本地存储错题本与掌握本，换设备会丢失数据。</div>
+                    <div id="notice">基于 RAZ · 本地存储错题本与掌握本（localStorage），换设备会丢失数据。</div>
                 </div>
                 <button class="btn text" id="help-btn">使用说明</button>
             </div>
@@ -86,6 +88,10 @@
             <div id="word-box">
                 <div id="word-main">׼����ʼ</div>
                 <div id="word-aux"></div>
+                <div id="pronunciation-box">
+                    <button class="btn text" id="btn-pronounce">&#21457;&#38899;</button>
+                    <span id="phonetic-text"></span>
+                </div>
             </div>
             <div class="row" style="justify-content:center;">
                 <button class="btn" id="btn-reveal" style="display:none;">显示中文</button>
@@ -154,9 +160,20 @@
     const helpDialog = qs('help-dialog');
     const helpBtn = qs('help-btn');
     const helpClose = qs('help-close');
+    const pronunciationBox = qs('pronunciation-box');
+    const btnPronounce = qs('btn-pronounce');
+    const phoneticText = qs('phonetic-text');
+    const DICTIONARY_API_BASE = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
+    const PRONOUNCE_LABEL = '\u53d1\u97f3';
+    const PRONOUNCE_FETCHING_TEXT = '\u6b63\u5728\u83b7\u53d6\u53d1\u97f3...';
+    const PRONOUNCE_NOT_FOUND_TEXT = '\u672a\u627e\u5230\u97f3\u6807';
+    const PRONOUNCE_ERROR_TEXT = '\u83b7\u53d6\u53d1\u97f3\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5';
+
+    if (btnPronounce) btnPronounce.textContent = PRONOUNCE_LABEL;
 
     let allWordsByLevel = {};
     let currentSession = null;
+    const pronunciationCache = {};
 
     function csvParse(text) {
         const rows = []; let row = []; let cur = ''; let inQuotes = false;
@@ -207,7 +224,7 @@
         const firstCell = (headerRow[0] || '').trim();
         // 先确认首列为“RAZ Level”，防止把 HTML/404 页面当成 CSV 解析
         if (firstCell !== 'RAZ Level') {
-            throw new Error(`CSV 头部不符合预期（实际: "${firstCell || '空'}"），请确认 razfulltranslate666.csv 已和本页放在同一目录且能直接访问。`);
+            throw new Error(`CSV 头部不符合预期（实际: "${firstCell || '空'}"），请确认 RAZAA2G.csv 已和本页放在同一目录且能直接访问。`);
         }
         rows.shift(); // drop header
         const byLevel = {};
@@ -339,6 +356,8 @@
         if (s.idx >= s.questions.length) { endSession(); return; }
         const item = s.questions[s.idx];
         progressEl.textContent = `${s.idx + 1} / ${s.questions.length}`;
+        if (phoneticText) phoneticText.textContent = '';
+        if (btnPronounce) btnPronounce.disabled = false;
         if (s.mode === 'exam') {
             const promptLang = item.prompt || 'en';
             wordMain.textContent = promptLang === 'en' ? item.en : item.zh;
@@ -492,9 +511,77 @@
             countInput.value = 20;
         } catch (e) {
             console.error(e);
-            alert('加载 razfulltranslate666.csv 失败，请确认文件与页面在同目录且可访问。');
+            alert('加载 RAZAA2G.csv 失败，请确认文件与页面在同目录且可访问。');
         }
     }
+    async function fetchPronunciation(word) {
+        const key = (word || '').toLowerCase();
+        if (!key) {
+            return { phonetic: '', audioUrl: '' };
+        }
+        if (pronunciationCache[key]) {
+            return pronunciationCache[key];
+        }
+        const url = `${DICTIONARY_API_BASE}${encodeURIComponent(key)}`;
+        const resp = await fetch(url);
+        if (!resp.ok) {
+            throw new Error(`API request failed, HTTP ${resp.status}`);
+        }
+        const data = await resp.json();
+        let phonetic = '';
+        let audioUrl = '';
+        if (Array.isArray(data) && data.length) {
+            data.forEach(entry => {
+                if (!entry) return;
+                const phonetics = entry.phonetics || [];
+                phonetics.forEach(p => {
+                    if (!phonetic && p.text) phonetic = p.text;
+                    if (!audioUrl && p.audio) audioUrl = p.audio;
+                });
+                if (!phonetic && entry.phonetic) {
+                    phonetic = entry.phonetic;
+                }
+            });
+        }
+        const result = { phonetic, audioUrl };
+        pronunciationCache[key] = result;
+        return result;
+    }
+
+    async function handlePronounceClick() {
+        if (!currentSession) return;
+        const s = currentSession;
+        const item = s.questions[s.idx];
+        if (!item || !item.en) return;
+        const word = (item.en || '').trim();
+        if (!word) return;
+        if (phoneticText) {
+            phoneticText.textContent = PRONOUNCE_FETCHING_TEXT;
+        }
+        if (btnPronounce) {
+            btnPronounce.disabled = true;
+        }
+        try {
+            const info = await fetchPronunciation(word);
+            if (phoneticText) {
+                phoneticText.textContent = info.phonetic || PRONOUNCE_NOT_FOUND_TEXT;
+            }
+            if (info.audioUrl) {
+                const audio = new Audio(info.audioUrl);
+                audio.play().catch(() => {});
+            }
+        } catch (e) {
+            console.error(e);
+            if (phoneticText) {
+                phoneticText.textContent = PRONOUNCE_ERROR_TEXT;
+            }
+        } finally {
+            if (btnPronounce) {
+                btnPronounce.disabled = false;
+            }
+        }
+    }
+
     startBtn.addEventListener('click', () => {
         if (modeSelect.value === 'exam') startExam(); else startReview();
     });
@@ -523,7 +610,13 @@
         sourceSelect.value = src === 'onlyMastered' ? 'onlyMastered' : 'errors';
         startReview(src);
     });
+    btnPronounce.addEventListener('click', handlePronounceClick);
     init();
     </script>
 </body>
 </html>
+
+
+
+
+
