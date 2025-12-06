@@ -1,0 +1,17 @@
+{
+  "name": "Tap Fun",
+  "short_name": "Tap Fun",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0a0a0f",
+  "theme_color": "#00ffff",
+  "description": "Tap Fun - 敲击竞速游戏",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

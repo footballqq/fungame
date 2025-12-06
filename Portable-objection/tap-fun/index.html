@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="screen-orientation" content="landscape">
+    <meta name="x5-orientation" content="landscape">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <title>Tap Fun</title>
+    <meta name="description" content="Tap Fun - 敲击竞速游戏">
+    <link rel="manifest" href="manifest.json">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 主菜单 -->
+    <div id="menu" class="screen active">
+        <div class="menu-container">
+            <h1 class="game-title">TAP FUN</h1>
+            <p class="subtitle">敲击桌面，感受速度！</p>
+            <div class="menu-buttons">
+                <button class="menu-btn" data-mode="100m">🏃 100m 赛跑</button>
+                <button class="menu-btn" data-mode="110m">🏃‍♂️ 110m 栏</button>
+                <button class="menu-btn disabled" data-mode="endless">🎮 跑酷模式 (敬请期待)</button>
+            </div>
+            <div class="settings-row">
+                <label>难度：</label>
+                <select id="difficulty">
+                    <option value="easy">简单</option>
+                    <option value="normal" selected>普通</option>
+                    <option value="hard">困难</option>
+                </select>
+                <button id="btn-music" class="icon-btn">🔊</button>
+                <button id="btn-records" class="icon-btn">🏆</button>
+            </div>
+            <p class="tip">💡 将手机横屏放在桌面上，敲击桌面控制角色</p>
+        </div>
+    </div>
+
+    <!-- 游戏界面 -->
+    <div id="game" class="screen">
+        <div id="game-hud">
+            <div class="hud-left">
+                <span id="distance">0m</span>
+                <span id="status-text">准备...</span>
+            </div>
+            <div class="hud-center">
+                <div id="countdown"></div>
+            </div>
+            <div class="hud-right">
+                <span id="timer">00:00.00</span>
+                <button id="btn-pause" class="icon-btn">⏸️</button>
+            </div>
+        </div>
+        <div id="game-instructions">
+            <span>轻敲=加速 | 中敲=跳跃 | 重敲=摔倒</span>
+            <span class="desktop-hint">键盘: 方向键=跑 空格=跳</span>
+        </div>
+        <canvas id="track-canvas"></canvas>
+        <div id="speed-bar-container">
+            <div id="speed-bar"></div>
+            <span id="speed-label">速度</span>
+        </div>
+    </div>
+
+    <!-- 结果界面 -->
+    <div id="result" class="screen">
+        <div class="result-container">
+            <h2 id="result-title">比赛结束</h2>
+            <div id="result-ranking"></div>
+            <div id="result-time"></div>
+            <div id="result-record"></div>
+            <div class="result-buttons">
+                <button id="btn-retry" class="menu-btn">🔄 再来一次</button>
+                <button id="btn-home" class="menu-btn">🏠 返回主菜单</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 记录界面 -->
+    <div id="records" class="screen">
+        <div class="records-container">
+            <h2>🏆 最佳成绩</h2>
+            <div id="records-list"></div>
+            <button id="btn-records-close" class="menu-btn">返回</button>
+        </div>
+    </div>
+
+    <!-- 暂停界面 -->
+    <div id="pause" class="screen">
+        <div class="pause-container">
+            <h2>暂停</h2>
+            <button id="btn-resume" class="menu-btn">▶️ 继续</button>
+            <button id="btn-quit" class="menu-btn">🏠 退出</button>
+        </div>
+    </div>
+
+    <!-- 横屏提示 -->
+    <div id="rotate-hint">
+        <div class="rotate-content">
+            <div class="phone-icon">📱</div>
+            <p>请将手机横屏放置</p>
+        </div>
+    </div>
+
+    <script src="js/audio.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/motion.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/track.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
