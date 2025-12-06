@@ -8,9 +8,9 @@ class Player {
         // 位置状态
         this.distance = 0;
         this.speed = 0;
-        this.maxSpeed = 25; // 提高最大速度
-        this.baseAcceleration = 5; // 每次敲击给的加速度（增加）
-        this.friction = 0.008; // 摩擦力减小，速度持续更久
+        this.maxSpeed = 24; // 最大速度
+        this.baseAcceleration = 6; // 每次敲击给的加速度（4次达到上限: 6*4=24）
+        this.friction = 0.008; // 摩擦力，越小速度持续越久
         
         // 跳跃状态
         this.isJumping = false;
@@ -45,9 +45,9 @@ class Player {
         if (this.isPlayer) return;
         
         const difficultySettings = {
-            easy: { tapInterval: 90, winChance: 0.1, catchUpStrength: 0.5 },
-            normal: { tapInterval: 70, winChance: 0.2, catchUpStrength: 0.7 },
-            hard: { tapInterval: 55, winChance: 0.35, catchUpStrength: 0.9 }
+            easy: { tapInterval: 140, winChance: 0.1 },
+            normal: { tapInterval: 110, winChance: 0.15 },
+            hard: { tapInterval: 85, winChance: 0.25 }
         };
         
         this.aiSettings = difficultySettings[this.difficulty] || difficultySettings.normal;
@@ -175,6 +175,8 @@ class Player {
         this.isJumping = true;
         this.jumpProgress = 0;
         this.jumpStartX = this.distance;
+        // 跳跃自带初速度（相当于2次敲击）
+        this.speed = Math.min(this.maxSpeed, this.speed + this.baseAcceleration * 2);
         // 跳跃时根据当前速度计算水平距离
         this.jumpDistance = this.speed * 0.4 + 2;
     }

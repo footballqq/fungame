@@ -76,7 +76,47 @@ const Motion = {
             this.current.z ** 2
         );
         
+        // 更新调试显示
+        this.lastMagnitude = magnitude;
+        this.updateDebugDisplay(magnitude, null);
+        
         this.processTap(magnitude);
+    },
+
+    updateDebugDisplay(magnitude, action) {
+        const debugAcc = document.getElementById('debug-acc');
+        const debugBar = document.getElementById('debug-meter-bar');
+        const debugAction = document.getElementById('debug-action');
+        const meterLight = document.getElementById('debug-meter-light');
+        const meterMedium = document.getElementById('debug-meter-medium');
+        const meterHeavy = document.getElementById('debug-meter-heavy');
+        
+        if (debugAcc) {
+            debugAcc.textContent = `当前加速度: ${magnitude.toFixed(1)}`;
+        }
+        
+        if (debugBar) {
+            // 最大显示50，超过就满格
+            const percent = Math.min(100, (magnitude / 50) * 100);
+            debugBar.style.width = percent + '%';
+        }
+        
+        // 更新阈值标记位置
+        if (meterLight) meterLight.style.left = (this.thresholds.light / 50 * 100) + '%';
+        if (meterMedium) meterMedium.style.left = (this.thresholds.medium / 50 * 100) + '%';
+        if (meterHeavy) meterHeavy.style.left = (this.thresholds.heavy / 50 * 100) + '%';
+        
+        if (debugAction && action) {
+            debugAction.textContent = action === 'run' ? '跑步!' : action === 'jump' ? '跳跃!' : '摔倒!';
+            debugAction.className = action;
+            // 短暂高亮后恢复
+            setTimeout(() => {
+                if (debugAction.textContent !== '--') {
+                    debugAction.textContent = '--';
+                    debugAction.className = '';
+                }
+            }, 300);
+        }
     },
 
     processTap(magnitude) {
@@ -102,8 +142,11 @@ const Motion = {
             this.lastTapTime = now;
         }
         
-        if (action && this.callback) {
-            this.callback(action, magnitude);
+        if (action) {
+            this.updateDebugDisplay(magnitude, action);
+            if (this.callback) {
+                this.callback(action, magnitude);
+            }
         }
     },
 
@@ -120,11 +163,15 @@ const Motion = {
         document.addEventListener('keydown', (e) => {
             if (!this.callback) return;
             
+            let action = null;
+            let magnitude = 0;
+            
             switch (e.key.toLowerCase()) {
                 case ' ':
                 case 'w':
                 case 'arrowup':
-                    this.callback('jump', 20);
+                    action = 'jump';
+                    magnitude = 20;
                     break;
                 case 'a':
                 case 's':
@@ -132,11 +179,18 @@ const Motion = {
                 case 'arrowleft':
                 case 'arrowright':
                 case 'arrowdown':
-                    this.callback('run', 5);
+                    action = 'run';
+                    magnitude = 5;
                     break;
                 case 'x':
-                    this.callback('fall', 40);
+                    action = 'fall';
+                    magnitude = 40;
                     break;
+            }
+            
+            if (action) {
+                this.updateDebugDisplay(magnitude, action);
+                this.callback(action, magnitude);
             }
         });
     },
@@ -149,14 +203,20 @@ const Motion = {
             const now = Date.now();
             const timeDiff = now - lastClick;
             
+            let action, magnitude;
             if (timeDiff < 200) {
                 // 快速双击 = 跳跃
-                this.callback('jump', 20);
+                action = 'jump';
+                magnitude = 20;
             } else {
                 // 单击 = 跑步
-                this.callback('run', 5);
+                action = 'run';
+                magnitude = 5;
             }
             lastClick = now;
+            
+            this.updateDebugDisplay(magnitude, action);
+            this.callback(action, magnitude);
         });
     }
 };

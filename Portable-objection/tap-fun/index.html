@@ -55,6 +55,38 @@
         <div id="game-instructions">
             <span>轻敲=加速 | 中敲=跳跃 | 重敲=摔倒</span>
             <span class="desktop-hint">键盘: 方向键=跑 空格=跳</span>
+            <button id="btn-debug" class="icon-btn small">⚙️</button>
+        </div>
+        <div id="debug-panel" class="hide">
+            <div class="debug-header">
+                <span>灵敏度调试</span>
+                <button id="btn-debug-close">✕</button>
+            </div>
+            <div class="debug-row">
+                <label>轻敲阈值: <span id="val-light">3</span></label>
+                <input type="range" id="threshold-light" min="1" max="20" value="3" step="0.5">
+            </div>
+            <div class="debug-row">
+                <label>中敲阈值: <span id="val-medium">15</span></label>
+                <input type="range" id="threshold-medium" min="5" max="40" value="15" step="1">
+            </div>
+            <div class="debug-row">
+                <label>重敲阈值: <span id="val-heavy">35</span></label>
+                <input type="range" id="threshold-heavy" min="20" max="80" value="35" step="1">
+            </div>
+            <div class="debug-row">
+                <span id="debug-acc">当前加速度: 0</span>
+            </div>
+            <div class="debug-row">
+                <label>响应强度:</label>
+                <div id="debug-meter">
+                    <div id="debug-meter-bar"></div>
+                    <div id="debug-meter-light" class="meter-mark" style="left: 10%"></div>
+                    <div id="debug-meter-medium" class="meter-mark" style="left: 37%"></div>
+                    <div id="debug-meter-heavy" class="meter-mark" style="left: 70%"></div>
+                </div>
+                <span id="debug-action">--</span>
+            </div>
         </div>
         <canvas id="track-canvas"></canvas>
         <div id="speed-bar-container">
