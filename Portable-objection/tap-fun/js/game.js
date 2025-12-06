@@ -51,7 +51,18 @@ const Game = {
             resultRanking: document.getElementById('result-ranking'),
             resultTime: document.getElementById('result-time'),
             resultRecord: document.getElementById('result-record'),
-            recordsList: document.getElementById('records-list')
+            recordsList: document.getElementById('records-list'),
+            // 调试面板
+            btnDebug: document.getElementById('btn-debug'),
+            btnDebugClose: document.getElementById('btn-debug-close'),
+            debugPanel: document.getElementById('debug-panel'),
+            thresholdLight: document.getElementById('threshold-light'),
+            thresholdMedium: document.getElementById('threshold-medium'),
+            thresholdHeavy: document.getElementById('threshold-heavy'),
+            valLight: document.getElementById('val-light'),
+            valMedium: document.getElementById('val-medium'),
+            valHeavy: document.getElementById('val-heavy'),
+            debugAcc: document.getElementById('debug-acc')
         };
     },
 
@@ -89,6 +100,31 @@ const Game = {
         // 结果界面
         this.elements.btnRetry.addEventListener('click', () => this.startGame());
         this.elements.btnHome.addEventListener('click', () => this.quitToMenu());
+
+        // 调试面板
+        this.elements.btnDebug.addEventListener('click', () => {
+            this.elements.debugPanel.classList.toggle('hide');
+        });
+        this.elements.btnDebugClose.addEventListener('click', () => {
+            this.elements.debugPanel.classList.add('hide');
+        });
+
+        // 阈值滑块
+        this.elements.thresholdLight.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            Motion.thresholds.light = val;
+            this.elements.valLight.textContent = val;
+        });
+        this.elements.thresholdMedium.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            Motion.thresholds.medium = val;
+            this.elements.valMedium.textContent = val;
+        });
+        this.elements.thresholdHeavy.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            Motion.thresholds.heavy = val;
+            this.elements.valHeavy.textContent = val;
+        });
     },
 
     showScreen(name) {
