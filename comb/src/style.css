@@ -43,6 +43,26 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+.header-links {
+    margin-top: 1rem;
+}
+
+.math-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    transition: all 0.3s;
+}
+
+.math-link:hover {
+    background: rgba(56, 189, 248, 0.2);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
 .subtitle {
     font-size: 1.2rem;
     font-weight: 300;
