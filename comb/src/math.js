@@ -7,7 +7,7 @@ export const MODELS = {
         id: 'II',
         nameZh: '相同球 相同盒',
         nameEn: 'Identical Balls, Identical Boxes',
-        calculate: (n, m) => {
+        calculate: (n, m, alt = false) => {
             // Partition function p(n, m) - partitions of n into at most m parts
             const dp = Array.from({ length: n + 1 }, () => Array(m + 1).fill(0));
             for (let j = 0; j <= m; j++) dp[0][j] = 1;
@@ -21,10 +21,9 @@ export const MODELS = {
         },
         formulaZh: '递推 1：f(n, m) = f(n, m-1) + f(n-m, m)\n递推 2：f(n, m) = Σ_{k=1}^m f(n-k, k)',
         formulaEn: 'Recurrence 1: f(n, m) = f(n, m-1) + f(n-m, m)\nRecurrence 2: f(n, m) = Σ_{k=1}^m f(n-k, k)',
-        closedZh: '组合意义：n 的 m 分拆 (Integer Partitions)',
-        closedEn: 'Note: Partitions of n into at most m parts',
-        explainZh: '相同球相同盒。讨论如何分类：如果至少有一个空盒，即 f(n, m-1)；如果每个盒子都有球，先各放一个，剩下 n-m 个球放进 m 个盒子，即 f(n-m, m)。另一种方式是按非空盒子数 k 累加，在矩阵中表现为斜线。',
-        explainEn: 'Identical balls, Identical boxes. Two views: 1. At least one empty box f(n, m-1) vs. all boxes have balls f(n-m, m). 2. Summing over exactly k non-empty boxes, which forms a diagonal in the matrix.',
+        explainZh: '相同球相同盒 (整数分拆)。总数 f(n, m) 表示将 n 拆分为不超过 m 个正整数之和。\n【视角 1】：讨论是否有空盒。f(n, m-1) 表示至少一个空盒；f(n-m, m) 表示全部装满（先各发一个球）。\n【视角 2】：按非空盒子数 k 累加。由组合恒等式可知，分拆为“恰好 k 组”的方法数等于 f(n-k, k)。将 k 从 1 到 m 累加即得总数，在矩阵中形成斜线。\n【当前结果】：当 n={n}, m={m} 时，共有 {res} 种分拆方式。',
+        explainEn: 'Identical Balls, Identical Boxes (Integer Partitions).\n[View 1]: Empty boxes f(n, m-1) vs No empty boxes f(n-m, m).\n[View 2]: Summing over non-empty box count k. The number of partitions into "exactly k" parts equals f(n-k, k). Summing k from 1 to m forms a diagonal.\n[Result]: When n={n}, m={m}, there are {res} ways.',
+        modeLabels: ['恰好 m 盒 (Exactly m)', '至多 m 盒 (At most m)'],
         getDependencies: (n, m, alt = false) => {
             if (!alt) {
                 return [
@@ -46,7 +45,7 @@ export const MODELS = {
         id: 'DI',
         nameZh: '不同球 相同盒',
         nameEn: 'Distinct Balls, Identical Boxes',
-        calculate: (n, m) => {
+        calculate: (n, m, alt = false) => {
             const S = Array.from({ length: n + 1 }, () => Array(m + 1).fill(0));
             S[0][0] = 1;
             for (let i = 1; i <= n; i++) {
@@ -54,6 +53,8 @@ export const MODELS = {
                     S[i][j] = j * S[i - 1][j] + S[i - 1][j - 1];
                 }
             }
+            if (!alt) return { matrix: S, isStirling: true };
+
             const total = Array.from({ length: n + 1 }, () => Array(m + 1).fill(0));
             for (let i = 0; i <= n; i++) {
                 for (let j = 1; j <= m; j++) {
@@ -62,14 +63,15 @@ export const MODELS = {
                     total[i][j] = i === 0 ? 1 : sum;
                 }
             }
-            return { matrix: S, totalMatrix: total, isStirling: true };
+            return { matrix: total, componentMatrix: S };
         },
-        formulaZh: '递推 1：S(n, m) = m·S(n-1, m) + S(n-1, m-1)\n公式 2：f(n, m) = Σ_{k=1}^m S(n, k)',
-        formulaEn: 'Recurrence 1: S(n, m) = m·S(n-1, m) + S(n-1, m-1)\nFormula 2: f(n, m) = Σ_{k=1}^m S(n, k)',
-        closedZh: '总数：Σ S(n, k) (将 n 个不同球放入不超过 m 个相同盒子)',
-        closedEn: 'Total: Σ S(n, k) (n distinct balls into at most m identical boxes)',
-        explainZh: '不同球相同盒。S(n, m) 是第二类斯特林数。逻辑：新球可以放进已有的 m 个盒子里 (m*S(n-1, m))，也可以单独占一个新盒子 (S(n-1, m-1))。总数是放入 1 到 m 个盒子的方法和。',
-        explainEn: 'Distinct balls into identical boxes. S(n, m) is Stirling Number II. Logic: New ball enters one of m existing boxes, or creates a new box. The total f(n, m) is the sum of S(n, k) for k=1 to m.',
+        formulaZh: '递推 1 (恰好 m 盒)：S(n, m) = m·S(n-1, m) + S(n-1, m-1)\n公式 2 (至多 m 盒)：f(n, m) = Σ_{k=1}^m S(n, k)',
+        formulaEn: 'Recurrence 1 (Exactly m): S(n, m) = m·S(n-1, m) + S(n-1, m-1)\nFormula 2 (At most m): f(n, m) = Σ_{k=1}^m S(n, k)',
+        closedZh: '组合意义：不同球放入相同盒子 (盒子间无区别，像完全一样的袋子)',
+        closedEn: 'Note: Distinct balls into identical boxes (Individual items in generic bags)',
+        explainZh: '不同球相同盒 (斯特林数)。由于盒子不可辨，第 n 个球放在哪个空盒里都没有区别。\n【深度推导】：考虑第 n 个球的去向：\n1. 它单独占领一个新盒子：剩下 n-1 个球放在 m-1 个盒子里，即 S(n-1, m-1)。\n2. 它不单独占盒子：而是挤进已有的 m 个盒子之一。因为它有 m 种选择，所以是 m * S(n-1, m)。\n【总数逻辑】：如果要计算“至多 m 盒”，则需将放入 1 到 m 个盒子的方案数全部相加：f(n, m) = Σ S(n, k)。\n【当前结果】：当 n={n}, m={m} 时，总方案数为 {res}。',
+        explainEn: 'Distinct Balls, Identical Boxes (Stirling Numbers).\n[Deep Reasoning]: Since boxes are indistinguishable, it doesn\'t matter which empty box the n-th ball enters.\n1. n-th ball forms its own box: Put the other n-1 balls into m-1 boxes → S(n-1, m-1).\n2. n-th ball joins an existing box: There are m occupied boxes to choose from → m * S(n-1, m).\n[Total Logic]: For "At most m boxes", we sum options from 1 to m: f(n, m) = Σ S(n, k).\n[Result]: When n={n}, m={m}, there are {res} ways in total.',
+        modeLabels: ['恰好 m 盒 (Exactly m)', '至多 m 盒 (At most m)'],
         getDependencies: (n, m, alt = false) => {
             if (!alt) {
                 return [
@@ -89,11 +91,9 @@ export const MODELS = {
         id: 'ID',
         nameZh: '相同球 不同盒',
         nameEn: 'Identical Balls, Distinct Boxes',
-        calculate: (n, m) => {
+        calculate: (n, m, alt = false) => {
             // Combinations with repetition: H(m, n) = C(n+m-1, m-1)
-            // Recurrence: C(N, K) = C(N-1, K) + C(N-1, K-1)
-            // Here f(n, m) = C(n+m-1, m-1)
-            const maxN = 20;
+            const maxN = 30;
             const C = Array.from({ length: maxN + 1 }, () => Array(maxN + 1).fill(0));
             for (let i = 0; i <= maxN; i++) {
                 C[i][0] = 1;
@@ -101,20 +101,24 @@ export const MODELS = {
                     C[i][j] = C[i - 1][j - 1] + C[i - 1][j];
                 }
             }
-            const dp = Array.from({ length: n + 1 }, () => Array(m + 1).fill(0));
+            const total = Array.from({ length: n + 1 }, () => Array(m + 1).fill(0));
             for (let i = 0; i <= n; i++) {
                 for (let j = 1; j <= m; j++) {
-                    dp[i][j] = C[i + j - 1][j - 1];
+                    total[i][j] = C[i + j - 1][j - 1];
                 }
             }
-            return dp;
+            if (!alt) return total;
+
+            // In alt mode, show components if needed, but ID usually just shows the total recurrence
+            // Here we'll stick to total for consistency with the summation formula
+            return total;
         },
         formulaZh: '递推 1：f(n, m) = f(n, m-1) + f(n-1, m)\n递推 2：f(n, m) = Σ_{k=0}^n f(k, m-1)',
         formulaEn: 'Recurrence 1: f(n, m) = f(n, m-1) + f(n-1, m)\nRecurrence 2: f(n, m) = Σ_{k=0}^n f(k, m-1)',
         closedZh: '组合意义：n 个球放入 m 个盒子 (隔板法 C(n+m-1, m-1))',
         closedEn: 'Note: Identical balls into distinct boxes (Stars and Bars)',
-        explainZh: '相同球不同盒。可以按最后一个盒子的球数分类：放 0 个球，1 个球... 到 n 个球。即 f(n, m) 等于前 m-1 个盒子放不同数量球的方法数之和。',
-        explainEn: 'Identical balls into distinct boxes. Classify by the last box: it can have 0 to n balls. Thus f(n, m) is the sum of ways to put k balls into m-1 boxes.',
+        explainZh: '相同球不同盒 (隔板法)。\n【书本做法】：使用隔板法，通解为 C(n+m-1, m-1)。\n【递推推导】：如果你已经知道部分结果，可以通过最后一个盒子来推导：\n最后一个盒子可以放 0 个，1 个... 一直到 n 个球。如果最后一个盒子放了 k 个，那么剩下的球就放进前 m-1 个盒子，方案数为 f(n-k, m-1)。\n【更简递推】：f(n, m) = f(n, m-1) [第一个盒子为空] + f(n-1, m) [第一个盒子至少有1个球]。\n【当前结果】：当 n={n}, m={m} 时，共有 {res} 种放法。',
+        explainEn: 'Identical Balls, Distinct Boxes (Stars and Bars).\n[Standard View]: General solution is C(n+m-1, m-1).\n[Recursive Reasoning]: You can derive more results from known ones using the "last box" logic:\nThe last box can contain k balls (where 0 ≤ k ≤ n). For each choice of k, the remaining balls are distributed in m-1 boxes, giving Σ f(n-k, m-1).\n[Simplified]: f(n, m) = f(n, m-1) [1st box empty] + f(n-1, m) [1st box ≥ 1 ball].\n[Result]: When n={n}, m={m}, there are {res} ways.',
         getDependencies: (n, m, alt = false) => {
             if (!alt) {
                 return [
@@ -150,8 +154,8 @@ export const MODELS = {
         formulaEn: 'Recurrence: f(n, m) = m · f(n-1, m)',
         closedZh: '通项公式：m^n (每个球有 m 种选择)',
         closedEn: 'General Form: m^n (Each ball has m choices)',
-        explainZh: '不同球不同盒。假设已经放好了 n-1 个球，对于第 n 个球，依然有 m 种盒子可以选。所以 f(n, m) = m * f(n-1, m)。总数即 m^n。',
-        explainEn: 'Distinct balls into distinct boxes. Suppose n-1 balls are placed. The n-th ball still has m choices. Thus f(n, m) = m * f(n-1, m). Total is m^n.',
+        explainZh: '不同球不同盒 (指数模型)。\n【基本逻辑】：对于每个球来说都有 m 种选择（盒子是不同的），所以总共有 m^n 种方案。\n【递归通式】：假设你已经放好了 n-1 个球，即 f(n-1, m)。现在要放第 n 个球，它有 m 种选盒子的方法。因此：f(n, m) = m * f(n-1, m)。\n【边界条件】：f(0, m) = 1 (没有球也是 1 种状态)。\n【当前结果】：当 n={n}, m={m} 时，共有 {m}^{n} = {res} 种放法。',
+        explainEn: 'Distinct Balls, Distinct Boxes (Exponential Model).\n[Basic Logic]: Each of the n distinct balls has m choices of distinct boxes, leading to m^n.\n[Recursive Logic]: Suppose n-1 balls are already placed, f(n-1, m). For the n-th ball, there are m box options. Thus: f(n, m) = m * f(n-1, m).\n[Boundary]: f(0, m) = 1.\n[Result]: When n={n}, m={m}, there are {m}^{n} = {res} ways.',
         getDependencies: (n, m) => [
             { r: n - 1, c: m, cls: 'cell-source-1', label: 'm×' }
         ]
