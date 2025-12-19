@@ -32,17 +32,18 @@
 ```powershell
 npm run build
 ```
-执行完成后，项目目录下会生成一个 `dist` 文件夹。
+执行完成后，项目目录下会生成一个 `dist` 文件夹。本项目已配置 `vite.config.js` 中的 `base: './'`，构建产物支持**相对路径**，可部署在服务器的任何子目录下。
 
-### 2. 构建产物说明
-`dist` 文件夹包含了所有运行所需的静态资源：
-- `index.html`: 入口文件。
-- `assets/`: 包含混淆压缩后的 JavaScript 和 CSS 代码。
+### 2. 本地预览与手机访问
+由于浏览器安全策略，直接双击 `dist/index.html` 无法运行。建议使用静态服务器预览：
+```powershell
+# 在 local 127.0.0.1 预览
+npx serve dist
 
-### 3. 部署建议
-- **本地查看**：由于浏览器安全策略，直接双击 `dist/index.html` 可能无法运行。您可以使用任意静态服务器（如 `serve` 或 VS Code 的 Live Server 插件）预览。
-- **Web 服务器**：可以将 `dist` 目录下的内容直接上传到 GitHub Pages、Vercel、Netlify 或您自己的 Nginx 静态目录下。
-- **相对路径配置**：本项目已针对相对路径进行优化，通常可以直接部署在子目录下。
+# 指定端口并允许局域网（手机）访问
+npx serve dist -l 8080
+```
+运行后，在手机浏览器访问显示的 `Network` 地址（如 `http://192.168.x.x:8080`）即可。
 
 ### 1. 切换模型 (Modes)
 顶部的导航栏允许您在四种经典组合模型间切换：
