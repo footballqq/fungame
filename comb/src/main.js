@@ -76,9 +76,19 @@ function resizeCanvas() {
 function updateUI() {
     const model = MODELS[currentMode];
 
-    // Update labels
-    document.getElementById('explanation-zh').textContent = model.explainZh;
-    document.getElementById('explanation-en').textContent = model.explainEn;
+    // Update labels with dynamic result calculation
+    const resultData = model.calculate(10, 10, useAltRecurrence);
+    const matrix = resultData.matrix || resultData;
+    const currentRes = matrix[currentN][currentM];
+
+    const formatString = (str) => {
+        return str.replace(/{n}/g, currentN)
+            .replace(/{m}/g, currentM)
+            .replace(/{res}/g, currentRes);
+    };
+
+    document.getElementById('explanation-zh').innerText = formatString(model.explainZh);
+    document.getElementById('explanation-en').innerText = formatString(model.explainEn);
 
     const rf = document.getElementById('recurrence-formula');
     rf.innerHTML = model.formulaZh.replace('\n', '<br>');
@@ -93,7 +103,8 @@ function updateUI() {
         rf.title = '';
     }
 
-    document.getElementById('closed-formula').textContent = model.closedZh;
+    // Clear result display from formula (it will be in the matrix)
+    document.getElementById('closed-formula').innerHTML = model.closedZh;
 
     renderMatrix();
     drawVisualDemo();
@@ -101,7 +112,7 @@ function updateUI() {
 
 function renderMatrix() {
     const model = MODELS[currentMode];
-    const result = model.calculate(10, 10);
+    const result = model.calculate(10, 10, useAltRecurrence);
     const matrix = result.matrix || result;
 
     let html = '<table><thead><tr><th>n\\m</th>';
@@ -114,23 +125,42 @@ function renderMatrix() {
             let val = matrix[i][j];
             const isSelected = (i === currentN && j === currentM);
 
-            // Special for DI: if showing total sum, selected cell displays total
-            if (isSelected && currentMode === 'DI' && useAltRecurrence) {
-                val = result.totalMatrix[i][j];
+            // Calculate corner value (Exactly m) when in At most m mode
+            let cornerVal = '';
+            if (useAltRecurrence) {
+                if (currentMode === 'DI') {
+                    // DI: Matrix shows Sum, Corner shows S(i, j)
+                    cornerVal = result.componentMatrix[i][j];
+                } else if (currentMode === 'II') {
+                    // II: Matrix shows Sum f(i, j), Corner shows p(i, j) = f(i-j, j)
+                    if (i >= j) cornerVal = matrix[i - j][j];
+                    else cornerVal = 0;
+                }
             }
 
             let cls = isSelected ? 'cell-active' : '';
             let label = '';
+            let cornerHtml = cornerVal !== '' ? `<span class="cell-corner">${cornerVal}</span>` : '';
+
+            // In summation mode for DI, use componentMatrix for dependencies
+            const depMatrix = (currentMode === 'DI' && useAltRecurrence) ? result.componentMatrix : matrix;
 
             // Check if this cell is a dependency of the selected cell
             const deps = model.getDependencies(currentN, currentM, useAltRecurrence);
             const dep = deps.find(d => d.r === i && d.c === j);
-            if (dep && !isSelected) {
-                cls = dep.cls;
+            if (dep) {
+                // If it's a dependency, show the component value if in DI sum mode
+                if (currentMode === 'DI' && useAltRecurrence && !isSelected) {
+                    val = result.componentMatrix[i][j];
+                }
+
+                if (!isSelected) cls = dep.cls;
+                else cls += ' cell-source-overlap';
+
                 if (dep.label) label = `<span class="cell-label">${dep.label}</span>`;
             }
 
-            html += `<td class="${cls}" data-r="${i}" data-c="${j}">${label}${val}</td>`;
+            html += `<td class="${cls}" data-r="${i}" data-c="${j}">${label}${cornerHtml}${val}</td>`;
         }
         html += '</tr>';
     }
