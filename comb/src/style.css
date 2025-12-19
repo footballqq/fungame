@@ -189,6 +189,14 @@ td {
     z-index: 1;
 }
 
+/* Ensure corner value is visible on highlighted backgrounds */
+.cell-active .cell-corner,
+.cell-source-1 .cell-corner,
+.cell-source-2 .cell-corner,
+.cell-source-3 .cell-corner {
+    color: rgba(0, 0, 0, 0.6);
+}
+
 td:hover {
     background: rgba(255, 255, 255, 0.1);
 }
@@ -299,7 +307,72 @@ canvas {
 }
 
 @media (max-width: 1024px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
     .content-grid {
         grid-template-columns: 1fr;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .control-group {
+        justify-content: space-between;
+    }
+
+    input[type="range"] {
+        width: 60%;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .latex-box {
+        font-size: 1.1rem;
+    }
+
+    .result-highlight {
+        font-size: 1.4rem;
+    }
+
+    #visual-demo-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 640px) {
+    #mode-selector {
+        gap: 0.5rem;
+    }
+
+    .mode-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 0.85rem;
+        min-width: 40px;
+    }
+
+    .cell-label,
+    .cell-corner {
+        font-size: 0.5rem;
     }
 }
