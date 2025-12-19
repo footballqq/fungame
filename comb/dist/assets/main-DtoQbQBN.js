@@ -1,4 +1,4 @@
-(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const l of e)if(l.type==="childList")for(const o of l.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&r(o)}).observe(document,{childList:!0,subtree:!0});function s(e){const l={};return e.integrity&&(l.integrity=e.integrity),e.referrerPolicy&&(l.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?l.credentials="include":e.crossOrigin==="anonymous"?l.credentials="omit":l.credentials="same-origin",l}function r(e){if(e.ep)return;e.ep=!0;const l=s(e);fetch(e.href,l)}})();const $={II:{id:"II",nameZh:"相同球 相同盒",nameEn:"Identical Balls, Identical Boxes",calculate:(t,n,s=!1)=>{const r=Array.from({length:t+1},()=>Array(n+1).fill(0));for(let e=0;e<=n;e++)r[0][e]=1;for(let e=1;e<=t;e++)for(let l=1;l<=n;l++)r[e][l]=r[e][l-1],e>=l&&(r[e][l]+=r[e-l][l]);return r},formulaZh:`递推 1：f(n, m) = f(n, m-1) + f(n-m, m)
+/* empty css              */(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const l of e)if(l.type==="childList")for(const o of l.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&r(o)}).observe(document,{childList:!0,subtree:!0});function s(e){const l={};return e.integrity&&(l.integrity=e.integrity),e.referrerPolicy&&(l.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?l.credentials="include":e.crossOrigin==="anonymous"?l.credentials="omit":l.credentials="same-origin",l}function r(e){if(e.ep)return;e.ep=!0;const l=s(e);fetch(e.href,l)}})();const $={II:{id:"II",nameZh:"相同球 相同盒",nameEn:"Identical Balls, Identical Boxes",calculate:(t,n,s=!1)=>{const r=Array.from({length:t+1},()=>Array(n+1).fill(0));for(let e=0;e<=n;e++)r[0][e]=1;for(let e=1;e<=t;e++)for(let l=1;l<=n;l++)r[e][l]=r[e][l-1],e>=l&&(r[e][l]+=r[e-l][l]);return r},formulaZh:`递推 1：f(n, m) = f(n, m-1) + f(n-m, m)
 递推 2：f(n, m) = Σ_{k=1}^m f(n-k, k)`,formulaEn:`Recurrence 1: f(n, m) = f(n, m-1) + f(n-m, m)
 Recurrence 2: f(n, m) = Σ_{k=1}^m f(n-k, k)`,closedZh:"组合意义：整数分拆 (Partitions of n into ≤ m parts)",closedEn:"Note: Integer partitions of n into at most m parts",explainZh:`相同球相同盒 (整数分拆)。总数 f(n, m) 表示将 n 拆分为不超过 m 个正整数之和。
 【视角 1】：讨论是否有空盒。f(n, m-1) 表示至少一个空盒；f(n-m, m) 表示全部装满（先各发一个球）。
@@ -22,9 +22,11 @@ Formula 2 (At most m): f(n, m) = Σ_{k=1}^m S(n, k)`,closedZh:"组合意义：�
 递推 2：f(n, m) = Σ_{k=0}^n f(k, m-1)`,formulaEn:`Recurrence 1: f(n, m) = f(n, m-1) + f(n-1, m)
 Recurrence 2: f(n, m) = Σ_{k=0}^n f(k, m-1)`,closedZh:"组合意义：隔板法 (C(n+m-1, m-1))",closedEn:"Note: Identical balls into distinct boxes (Stars and Bars)",modeLabels:["递推 1 (增量递归)","递推 2 (逐项累加)"],explainZh:`相同球不同盒 (隔板法)。
 【书本做法】：使用隔板法，通解为 C(n+m-1, m-1)。
-【递推推导】：如果你已经知道部分结果，可以通过最后一个盒子来推导：
-最后一个盒子可以放 0 个，1 个... 一直到 n 个球。如果最后一个盒子放了 k 个，那么剩下的球就放进前 m-1 个盒子，方案数为 f(n-k, m-1)。
-【更简递推】：f(n, m) = f(n, m-1) [第一个盒子为空] + f(n-1, m) [第一个盒子至少有1个球]。
+【逐项累加推导】：想象有 n 个球分给 m 个小朋友。我们按【最后一个小朋友拿到了几个球】来分类：
+- 他拿 0 个：剩下的球分给前 m-1 人，即 f(n, m-1)；
+- 他拿 1 个：剩下的球分给前 m-1 人，即 f(n-1, m-1)；
+- ...直到他拿走所有球。
+把这些所有互斥的情况加起来，就是总数。因此 f(n, m) = Σ f(k, m-1)。
 【当前结果】：当 n={n}, m={m} 时，共有 {res} 种放法。`,explainEn:`Identical Balls, Distinct Boxes (Stars and Bars).
 [Standard View]: General solution is C(n+m-1, m-1).
 [Recursive Reasoning]: You can derive more results from known ones using the "last box" logic:
