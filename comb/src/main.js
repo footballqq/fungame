@@ -17,6 +17,8 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const visualCard = document.querySelector('.visual-card');
 
+let matrixSize = window.innerWidth < 640 ? 7 : 10;
+
 function init() {
     setupEventListeners();
     generateDistribution();
@@ -62,7 +64,31 @@ function setupEventListeners() {
         drawVisualDemo();
     });
 
-    window.addEventListener('resize', () => resizeCanvas());
+    window.addEventListener('resize', () => {
+        const newSize = window.innerWidth < 640 ? 7 : 10;
+        if (newSize !== matrixSize) {
+            matrixSize = newSize;
+            nInput.max = matrixSize;
+            mInput.max = matrixSize;
+            if (currentN > matrixSize) {
+                currentN = matrixSize;
+                nInput.value = currentN;
+                nVal.textContent = currentN;
+            }
+            if (currentM > matrixSize) {
+                currentM = matrixSize;
+                mInput.value = currentM;
+                mVal.textContent = currentM;
+            }
+            updateUI();
+        }
+        resizeCanvas();
+    });
+
+    // Initial slider setup
+    nInput.max = matrixSize;
+    mInput.max = matrixSize;
+
     resizeCanvas();
 }
 
@@ -77,7 +103,7 @@ function updateUI() {
     const model = MODELS[currentMode];
 
     // Update labels with dynamic result calculation
-    const resultData = model.calculate(10, 10, useAltRecurrence);
+    const resultData = model.calculate(matrixSize, matrixSize, useAltRecurrence);
     const matrix = resultData.matrix || resultData;
     const currentRes = matrix[currentN][currentM];
 
@@ -113,16 +139,16 @@ function updateUI() {
 
 function renderMatrix() {
     const model = MODELS[currentMode];
-    const result = model.calculate(10, 10, useAltRecurrence);
+    const result = model.calculate(matrixSize, matrixSize, useAltRecurrence);
     const matrix = result.matrix || result;
 
     let html = '<table><thead><tr><th>n\\m</th>';
-    for (let j = 0; j <= 10; j++) html += `<th>${j}</th>`;
+    for (let j = 0; j <= matrixSize; j++) html += `<th>${j}</th>`;
     html += '</tr></thead><tbody>';
 
-    for (let i = 0; i <= 10; i++) {
+    for (let i = 0; i <= matrixSize; i++) {
         html += `<tr><th>${i}</th>`;
-        for (let j = 0; j <= 10; j++) {
+        for (let j = 0; j <= matrixSize; j++) {
             let val = matrix[i][j];
             const isSelected = (i === currentN && j === currentM);
 
