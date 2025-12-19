@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>数学原理解析 | 球盒模型演示系统</title>
+    <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./src/style.css">
     <style>
         .math-content {
@@ -136,7 +137,8 @@
                 <p>在<strong>盒子相同</strong>的前提下：</p>
                 <ul>
                     <li><strong>恰好 2 个非空盒</strong>：方案只有 <code>{A,B | C}</code>, <code>{A,C | B}</code>,
-                        <code>{B,C | A}</code> 这 <strong>3 种</strong>。</li>
+                        <code>{B,C | A}</code> 这 <strong>3 种</strong>。
+                    </li>
                     <li><strong>至多 2 个盒 (允许空盒)</strong>：多出了“只用 1 个盒”的选择，即 <code>{A,B,C | 空}</code>，这是额外的 <strong>1
                             种</strong>。</li>
                     <li><strong>结果</strong>：3 (恰好) + 1 (分 1 堆) = <strong>4 种</strong>。</li>
@@ -148,7 +150,8 @@
                     <li>矩阵里的 <strong>25</strong> 代表 <strong>正好</strong> 装满 3 个盒子。</li>
                     <li>总数 <strong>41</strong> 代表 <strong>至多</strong> 装满 3 个盒子方案的总和。</li>
                     <li>计算逻辑：<code>S(5,1)=1</code> + <code>S(5,2)=15</code> + <code>S(5,3)=25</code> =
-                        <strong>41</strong>。</li>
+                        <strong>41</strong>。
+                    </li>
                 </ul>
             </section>
 

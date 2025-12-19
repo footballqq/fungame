@@ -28,22 +28,12 @@ function init() {
     if (canvas) ctx = canvas.getContext('2d');
     visualCard = query('.visual-card');
 
-    if (!nInput || !mInput || !matrixContainer) {
-        console.error("Critical UI elements not found!");
-        return;
-    }
+    currentN = 5;
+    currentM = 3;
+    currentMode = 'II';
+    useAltRecurrence = false;
 
-    // 2. Determine initial size based on screen
-    matrixSize = window.innerWidth < 640 ? 7 : 10;
-
-    // 3. Sync state with DOM, capping values to current matrix limits
-    let n = parseInt(nInput.value);
-    let m = parseInt(mInput.value);
-
-    currentN = Math.min(isNaN(n) ? 5 : n, matrixSize);
-    currentM = Math.min(isNaN(m) ? 3 : m, matrixSize);
-
-    // 4. Update UI to reflect internal state
+    // 4. Update DOM to match these defaults
     nInput.value = currentN;
     mInput.value = currentM;
     nInput.max = matrixSize;
@@ -51,22 +41,24 @@ function init() {
     if (nVal) nVal.textContent = currentN;
     if (mVal) mVal.textContent = currentM;
 
-    // 5. Sync mode with active button
-    const activeBtn = query('.mode-btn.active');
-    if (activeBtn) currentMode = activeBtn.dataset.mode;
+    // Reset button states
+    modeBtns.forEach(btn => {
+        if (btn.dataset.mode === currentMode) btn.classList.add('active');
+        else btn.classList.remove('active');
+    });
 
-    // 6. Setup all interactions
+    // 5. Setup all interactions
     setupEventListeners();
 
-    // 7. Initial render sequence
+    // 6. Initial render sequence
     generateDistribution();
     updateUI();
 
-    // 8. Re-render after a short delay to account for CSS Grid/Flex layout settling
+    // 7. Final polish after layout settles (especially for Canvas and Matrix grid)
     setTimeout(() => {
         resizeCanvas();
         updateUI();
-    }, 150);
+    }, 100);
 }
 
 function setupEventListeners() {
@@ -144,39 +136,48 @@ function resizeCanvas() {
 }
 
 function updateUI() {
+    if (!currentMode || !MODELS[currentMode]) return;
     const model = MODELS[currentMode];
 
-    // Update labels with dynamic result calculation
+    // 1. Calculate values
     const resultData = model.calculate(matrixSize, matrixSize, useAltRecurrence);
     const matrix = resultData.matrix || resultData;
-    const currentRes = matrix[currentN][currentM];
+    const currentRes = matrix[currentN] ? matrix[currentN][currentM] : 0;
 
+    // 2. Update explanations
     const formatString = (str) => {
+        if (!str) return '';
         return str.replace(/{n}/g, currentN)
             .replace(/{m}/g, currentM)
             .replace(/{res}/g, currentRes);
     };
 
-    document.getElementById('explanation-zh').innerText = formatString(model.explainZh);
-    document.getElementById('explanation-en').innerText = formatString(model.explainEn);
+    const exZh = getEl('explanation-zh');
+    const exEn = getEl('explanation-en');
+    if (exZh) exZh.innerText = formatString(model.explainZh);
+    if (exEn) exEn.innerText = formatString(model.explainEn);
 
-    const rf = document.getElementById('recurrence-formula');
-    rf.innerHTML = model.formulaZh.replace('\n', '<br>');
-    if (model.formulaZh.includes('\n')) {
-        rf.style.cursor = 'pointer';
-        rf.title = '点击切换递推演示 / Click to toggle recurrence demo';
-        const lines = model.formulaZh.split('\n');
-        const labels = model.modeLabels || [];
-        rf.innerHTML = `<div class="${!useAltRecurrence ? 'active-formula' : ''}">${labels[0] ? `<b>${labels[0]}</b><br>` : ''}${lines[0]}</div>
-                        <div class="${useAltRecurrence ? 'active-formula' : ''}">${labels[1] ? `<b>${labels[1]}</b><br>` : ''}${lines[1]}</div>`;
-    } else {
-        rf.style.cursor = 'default';
-        rf.title = '';
+    // 3. Update Formulas
+    const rf = getEl('recurrence-formula');
+    if (rf) {
+        if (model.formulaZh.includes('\n')) {
+            rf.style.cursor = 'pointer';
+            rf.title = '点击切换递推演示 / Click to toggle recurrence demo';
+            const lines = model.formulaZh.split('\n');
+            const labels = model.modeLabels || [];
+            rf.innerHTML = `<div class="${!useAltRecurrence ? 'active-formula' : ''}">${labels[0] ? `<b>${labels[0]}</b><br>` : ''}${lines[0]}</div>
+                            <div class="${useAltRecurrence ? 'active-formula' : ''}">${labels[1] ? `<b>${labels[1]}</b><br>` : ''}${lines[1]}</div>`;
+        } else {
+            rf.innerHTML = model.formulaZh.replace('\n', '<br>');
+            rf.style.cursor = 'default';
+            rf.title = '';
+        }
     }
 
-    // Clear result display from formula (it will be in the matrix)
-    document.getElementById('closed-formula').innerHTML = model.closedZh;
+    const cf = getEl('closed-formula');
+    if (cf) cf.innerHTML = model.closedZh || '';
 
+    // 4. Matrix & Visualization
     renderMatrix();
     drawVisualDemo();
 }
@@ -339,7 +340,12 @@ function drawVisualDemo() {
 }
 
 function varColor(name) {
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    const color = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    if (color) return color;
+    // Fallbacks if CSS isn't fully ready
+    if (name === '--accent-color') return '#38bdf8';
+    if (name === '--text-secondary') return '#94a3b8';
+    return '#ffffff';
 }
 
 // 1. Initialize logic as soon as DOM is ready
