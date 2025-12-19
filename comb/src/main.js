@@ -96,8 +96,9 @@ function updateUI() {
         rf.style.cursor = 'pointer';
         rf.title = '点击切换递推演示 / Click to toggle recurrence demo';
         const lines = model.formulaZh.split('\n');
-        rf.innerHTML = `<div class="${!useAltRecurrence ? 'active-formula' : ''}">${lines[0]}</div>
-                        <div class="${useAltRecurrence ? 'active-formula' : ''}">${lines[1]}</div>`;
+        const labels = model.modeLabels || [];
+        rf.innerHTML = `<div class="${!useAltRecurrence ? 'active-formula' : ''}">${labels[0] ? `<b>${labels[0]}</b><br>` : ''}${lines[0]}</div>
+                        <div class="${useAltRecurrence ? 'active-formula' : ''}">${labels[1] ? `<b>${labels[1]}</b><br>` : ''}${lines[1]}</div>`;
     } else {
         rf.style.cursor = 'default';
         rf.title = '';
