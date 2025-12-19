@@ -6,38 +6,67 @@ let currentM = 3;
 let useAltRecurrence = false;
 let distribution = [];
 
-const nInput = document.getElementById('n-input');
-const mInput = document.getElementById('m-input');
-const nVal = document.getElementById('n-val');
-const mVal = document.getElementById('m-val');
-const matrixContainer = document.getElementById('matrix-container');
-const modeBtns = document.querySelectorAll('.mode-btn');
-const formulaCard = document.querySelector('.formula-card');
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const visualCard = document.querySelector('.visual-card');
+let nInput, mInput, nVal, mVal, matrixContainer, modeBtns, formulaCard, canvas, ctx, visualCard;
+
+// Helper to safely get elements
+const getEl = (id) => document.getElementById(id);
+const queryAll = (sel) => document.querySelectorAll(sel);
+const query = (sel) => document.querySelector(sel);
 
 let matrixSize = window.innerWidth < 640 ? 7 : 10;
 
 function init() {
-    // 1. Sync state with DOM elements
-    currentN = parseInt(nInput.value) || 5;
-    currentM = parseInt(mInput.value) || 3;
-    nVal.textContent = currentN;
-    mVal.textContent = currentM;
+    // 1. Robust DOM selection
+    nInput = getEl('n-input');
+    mInput = getEl('m-input');
+    nVal = getEl('n-val');
+    mVal = getEl('m-val');
+    matrixContainer = getEl('matrix-container');
+    modeBtns = queryAll('.mode-btn');
+    formulaCard = query('.formula-card');
+    canvas = getEl('canvas');
+    if (canvas) ctx = canvas.getContext('2d');
+    visualCard = query('.visual-card');
 
-    // 2. Sync mode with active button
-    const activeBtn = document.querySelector('.mode-btn.active');
+    if (!nInput || !mInput || !matrixContainer) {
+        console.error("Critical UI elements not found!");
+        return;
+    }
+
+    // 2. Determine initial size based on screen
+    matrixSize = window.innerWidth < 640 ? 7 : 10;
+
+    // 3. Sync state with DOM, capping values to current matrix limits
+    let n = parseInt(nInput.value);
+    let m = parseInt(mInput.value);
+
+    currentN = Math.min(isNaN(n) ? 5 : n, matrixSize);
+    currentM = Math.min(isNaN(m) ? 3 : m, matrixSize);
+
+    // 4. Update UI to reflect internal state
+    nInput.value = currentN;
+    mInput.value = currentM;
+    nInput.max = matrixSize;
+    mInput.max = matrixSize;
+    if (nVal) nVal.textContent = currentN;
+    if (mVal) mVal.textContent = currentM;
+
+    // 5. Sync mode with active button
+    const activeBtn = query('.mode-btn.active');
     if (activeBtn) currentMode = activeBtn.dataset.mode;
 
-    // 3. Initialize components
+    // 6. Setup all interactions
     setupEventListeners();
-    generateDistribution();
 
-    // 4. Force dual update for layout settling
+    // 7. Initial render sequence
+    generateDistribution();
     updateUI();
-    resizeCanvas();
-    updateUI();
+
+    // 8. Re-render after a short delay to account for CSS Grid/Flex layout settling
+    setTimeout(() => {
+        resizeCanvas();
+        updateUI();
+    }, 150);
 }
 
 function setupEventListeners() {
