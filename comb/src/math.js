@@ -21,9 +21,11 @@ export const MODELS = {
         },
         formulaZh: '递推 1：f(n, m) = f(n, m-1) + f(n-m, m)\n递推 2：f(n, m) = Σ_{k=1}^m f(n-k, k)',
         formulaEn: 'Recurrence 1: f(n, m) = f(n, m-1) + f(n-m, m)\nRecurrence 2: f(n, m) = Σ_{k=1}^m f(n-k, k)',
+        closedZh: '组合意义：整数分拆 (Partitions of n into ≤ m parts)',
+        closedEn: 'Note: Integer partitions of n into at most m parts',
         explainZh: '相同球相同盒 (整数分拆)。总数 f(n, m) 表示将 n 拆分为不超过 m 个正整数之和。\n【视角 1】：讨论是否有空盒。f(n, m-1) 表示至少一个空盒；f(n-m, m) 表示全部装满（先各发一个球）。\n【视角 2】：按非空盒子数 k 累加。由组合恒等式可知，分拆为“恰好 k 组”的方法数等于 f(n-k, k)。将 k 从 1 到 m 累加即得总数，在矩阵中形成斜线。\n【当前结果】：当 n={n}, m={m} 时，共有 {res} 种分拆方式。',
         explainEn: 'Identical Balls, Identical Boxes (Integer Partitions).\n[View 1]: Empty boxes f(n, m-1) vs No empty boxes f(n-m, m).\n[View 2]: Summing over non-empty box count k. The number of partitions into "exactly k" parts equals f(n-k, k). Summing k from 1 to m forms a diagonal.\n[Result]: When n={n}, m={m}, there are {res} ways.',
-        modeLabels: ['恰好 m 盒 (Exactly m)', '至多 m 盒 (At most m)'],
+        modeLabels: ['视角 1 (空盒递归)', '视角 2 (斜线累加)'],
         getDependencies: (n, m, alt = false) => {
             if (!alt) {
                 return [
@@ -115,8 +117,9 @@ export const MODELS = {
         },
         formulaZh: '递推 1：f(n, m) = f(n, m-1) + f(n-1, m)\n递推 2：f(n, m) = Σ_{k=0}^n f(k, m-1)',
         formulaEn: 'Recurrence 1: f(n, m) = f(n, m-1) + f(n-1, m)\nRecurrence 2: f(n, m) = Σ_{k=0}^n f(k, m-1)',
-        closedZh: '组合意义：n 个球放入 m 个盒子 (隔板法 C(n+m-1, m-1))',
+        closedZh: '组合意义：隔板法 (C(n+m-1, m-1))',
         closedEn: 'Note: Identical balls into distinct boxes (Stars and Bars)',
+        modeLabels: ['递推 1 (增量递归)', '递推 2 (逐项累加)'],
         explainZh: '相同球不同盒 (隔板法)。\n【书本做法】：使用隔板法，通解为 C(n+m-1, m-1)。\n【递推推导】：如果你已经知道部分结果，可以通过最后一个盒子来推导：\n最后一个盒子可以放 0 个，1 个... 一直到 n 个球。如果最后一个盒子放了 k 个，那么剩下的球就放进前 m-1 个盒子，方案数为 f(n-k, m-1)。\n【更简递推】：f(n, m) = f(n, m-1) [第一个盒子为空] + f(n-1, m) [第一个盒子至少有1个球]。\n【当前结果】：当 n={n}, m={m} 时，共有 {res} 种放法。',
         explainEn: 'Identical Balls, Distinct Boxes (Stars and Bars).\n[Standard View]: General solution is C(n+m-1, m-1).\n[Recursive Reasoning]: You can derive more results from known ones using the "last box" logic:\nThe last box can contain k balls (where 0 ≤ k ≤ n). For each choice of k, the remaining balls are distributed in m-1 boxes, giving Σ f(n-k, m-1).\n[Simplified]: f(n, m) = f(n, m-1) [1st box empty] + f(n-1, m) [1st box ≥ 1 ball].\n[Result]: When n={n}, m={m}, there are {res} ways.',
         getDependencies: (n, m, alt = false) => {
