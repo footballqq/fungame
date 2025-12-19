@@ -20,21 +20,24 @@ const visualCard = document.querySelector('.visual-card');
 let matrixSize = window.innerWidth < 640 ? 7 : 10;
 
 function init() {
-    // Sync with DOM values in case they differ or for robustness
-    currentN = parseInt(nInput.value);
-    currentM = parseInt(mInput.value);
+    // 1. Sync state with DOM elements
+    currentN = parseInt(nInput.value) || 5;
+    currentM = parseInt(mInput.value) || 3;
     nVal.textContent = currentN;
     mVal.textContent = currentM;
 
+    // 2. Sync mode with active button
+    const activeBtn = document.querySelector('.mode-btn.active');
+    if (activeBtn) currentMode = activeBtn.dataset.mode;
+
+    // 3. Initialize components
     setupEventListeners();
     generateDistribution();
-    updateUI();
 
-    // Explicitly trigger a resize to ensure canvas is correct
-    setTimeout(() => {
-        resizeCanvas();
-        updateUI();
-    }, 100);
+    // 4. Force dual update for layout settling
+    updateUI();
+    resizeCanvas();
+    updateUI();
 }
 
 function setupEventListeners() {
@@ -310,5 +313,15 @@ function varColor(name) {
     return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
-// Initialize when everything is loaded to ensure canvas dimensions are ready
-window.addEventListener('load', init);
+// 1. Initialize logic as soon as DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
+
+// 2. Refresh canvas once everything (CSS/Fonts) is fully loaded
+window.addEventListener('load', () => {
+    resizeCanvas();
+    updateUI();
+});
