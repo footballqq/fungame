@@ -20,9 +20,21 @@ const visualCard = document.querySelector('.visual-card');
 let matrixSize = window.innerWidth < 640 ? 7 : 10;
 
 function init() {
+    // Sync with DOM values in case they differ or for robustness
+    currentN = parseInt(nInput.value);
+    currentM = parseInt(mInput.value);
+    nVal.textContent = currentN;
+    mVal.textContent = currentM;
+
     setupEventListeners();
     generateDistribution();
     updateUI();
+
+    // Explicitly trigger a resize to ensure canvas is correct
+    setTimeout(() => {
+        resizeCanvas();
+        updateUI();
+    }, 100);
 }
 
 function setupEventListeners() {
@@ -298,4 +310,5 @@ function varColor(name) {
     return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
-init();
+// Initialize when everything is loaded to ensure canvas dimensions are ready
+window.addEventListener('load', init);
