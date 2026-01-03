@@ -388,30 +388,117 @@ header p {
     animation: shake 0.3s ease-in-out;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
+/* --- Responsive Design --- */
+
+/* Tablet (Portrait & Landscape: 600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .game-container {
+        padding: 30px;
+        max-width: 90%;
     }
 
     .hole-wrapper {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .content {
+        font-size: 3.5rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Mobile (Phone: < 600px) */
+@media (max-width: 599px) {
+    body {
+        padding: 10px;
+    }
+
+    .game-container {
+        padding: 15px;
+        border-radius: 15px;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .difficulty-toggle {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .difficulty-toggle .mode-btn {
+        flex: 1;
+    }
+
+    #restart-btn,
+    #strategy-btn {
+        width: 100%;
+    }
+
+    .scene {
+        padding: 20px 5px;
+        background-size: 40px 40px;
+        /* Smaller pattern */
+    }
+
+    .holes-container {
+        min-height: 80px;
+    }
+
+    .hole-wrapper {
+        width: 16vw;
+        height: 16vw;
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    .hole {
+        height: 50%;
     }
 
     .content {
         font-size: 2rem;
+        bottom: 5px;
     }
 
-    .scene {
-        padding: 30px 10px;
+    .hole-wrapper::after {
+        font-size: 0.8rem;
+        bottom: -20px;
     }
 
+    /* Stack result buttons vertical on small screens */
     .result-actions {
         flex-direction: column;
+        width: 100%;
     }
 
-    .btn {
+    .result-actions .btn {
         width: 100%;
+    }
+
+    #log-container {
+        padding: 10px;
+    }
+
+    #game-log li {
+        font-size: 0.85rem;
     }
 }
