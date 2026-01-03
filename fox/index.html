@@ -83,27 +83,75 @@
     <!-- Strategy Modal -->
     <div id="strategy-modal" class="modal hidden">
         <div class="modal-content">
-            <h2>📚 必胜攻略</h2>
             <div class="intro-body">
-                <p>利用<strong>奇偶性分析</strong>，可以在6天内必抓狐狸。</p>
-                <p class="highlight-text"><strong>必胜口诀：2, 3, 4, 2, 3, 4</strong></p>
-                <hr style="border: 0; border-top: 1px dashed #ccc; margin: 10px 0;">
-                <p><strong>原理解析：</strong></p>
-                <ol>
-                    <li><strong>前3天 (2, 3, 4洞口)</strong>：
-                        <br>先抓捕 <strong>偶数位</strong> 起始的狐狸。
-                        <br>如果狐狸起始在偶数 (2,4)，则第1-3天必被抓。。
-                        <br> 选2以后没狐狸，则狐狸下一次或者3，或者5，先选3，
-                        <br> 如果没有狐狸，则狐狸在5，那下一步狐狸必去4.
-                    </li>
-                    <li><strong>后3天</strong>：
-                        <br>如果前3天没抓到，说明狐狸是 <strong>奇数位</strong> (1,3,5) 起始。
-                        <br><strong>关键点</strong>：经过2晚移动 (奇→偶→奇)，第4天狐狸 <strong>必然在偶数位</strong>。
-                        <br>所以第4天必须从 <strong>偶数位</strong> 开始查，
-                        <br>如果没抓到，重复说明去了奇数位，按照奇数方法即可必胜！
-                    </li>
-                </ol>
+                <p>这是一个经典的逻辑推理题，核心在于利用<strong>“奇偶性”</strong>来逐步缩小狐狸的藏身范围。要保证 100% 抓到狐狸，最少需要 <strong>6天</strong>。</p>
 
+                <h3 style="color: #d35400; border-bottom: 2px solid #eee; padding-bottom: 5px;">必胜策略方案</h3>
+                <p>按顺序检查以下洞口：<br>
+                    <span class="highlight-text" style="display:block; margin: 10px 0; font-size: 1.1em;">2 ➡ 3 ➡ 4 ➡ 4
+                        ➡ 3 ➡ 2</span>
+                </p>
+
+                <h4 style="margin-top: 20px;">为什么能赢？（原理解析）</h4>
+                <p>狐狸每天所在的洞口编号，其<strong>奇偶性是交替变换的</strong>。</p>
+
+                <p><strong>第一阶段：假设狐狸开始在“偶数洞”（第1-3天）</strong></p>
+                <ul style="text-align: left; background: #fdf6ec; padding: 10px 20px; border-radius: 10px;">
+                    <li><strong>第1天 (查2)</strong>：若狐狸在2则胜；若没抓到，狐狸(若在偶数)只能在4。</li>
+                    <li><strong>第2天 (查3)</strong>：昨晚狐狸从4移至3或5。查3，排除3。</li>
+                    <li><strong>第3天 (查4)</strong>：昨晚狐狸从5移至4。查4，<strong>必抓！</strong></li>
+                </ul>
+
+                <p><strong>第二阶段：若没抓到，说明狐狸开始在“奇数洞”</strong></p>
+                <p>经过3晚移动（奇→偶→奇→偶），<strong>第4天早上，狐狸一定位于“偶数洞”</strong>。此时反向重复策略：</p>
+                <ul style="text-align: left; background: #e8f6f3; padding: 10px 20px; border-radius: 10px;">
+                    <li><strong>第4天 (查4)</strong>：若没抓到，狐狸此时一定在2。</li>
+                    <li><strong>第5天 (查3)</strong>：昨晚狐狸从2移至1或3。查3，排除3。</li>
+                    <li><strong>第6天 (查2)</strong>：昨晚狐狸从1移至2。查2，<strong>必抓！</strong></li>
+                </ul>
+
+                <h4 style="margin-top: 20px;">策略总结表</h4>
+                <table class="strategy-table">
+                    <thead>
+                        <tr>
+                            <th>天数</th>
+                            <th>检查</th>
+                            <th>原理 (排除法)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>2</strong></td>
+                            <td>假设偶数起，排除2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>3</strong></td>
+                            <td>锁定剩余偶数变位</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>4</strong></td>
+                            <td><strong>若偶数起，必抓</strong></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>4</strong></td>
+                            <td>转为奇数起逻辑 (变偶)</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>3</strong></td>
+                            <td>锁定剩余变位</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><strong>2</strong></td>
+                            <td><strong>无处可逃，必抓</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <button id="close-strategy-btn" class="btn secondary big-btn">学会了！</button>
         </div>
