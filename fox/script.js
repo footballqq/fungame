@@ -1,3 +1,227 @@
+class AudioManager {
+    constructor() {
+        this.ctx = null;
+        this.masterGain = null;
+        this.sfxGain = null;
+        this.bgmGain = null;
+
+        this.isMuted = true;
+        this.volMaster = 0.6;
+        this.volSfx = 0.9;
+        this.volBgm = 0.35;
+
+        this.isPlayingBgm = false;
+        this.bgmNodes = [];
+        this.bgmTimeout = null;
+
+        try {
+            const saved = localStorage.getItem('fox_audio_muted');
+            if (saved !== null) this.isMuted = saved === '1';
+        } catch { }
+    }
+
+    persist() {
+        try {
+            localStorage.setItem('fox_audio_muted', this.isMuted ? '1' : '0');
+        } catch { }
+    }
+
+    async init() {
+        if (!this.ctx) {
+            try {
+                const AC = window.AudioContext || window.webkitAudioContext;
+                this.ctx = new AC();
+                this.masterGain = this.ctx.createGain();
+                this.sfxGain = this.ctx.createGain();
+                this.bgmGain = this.ctx.createGain();
+
+                this.masterGain.connect(this.ctx.destination);
+                this.sfxGain.connect(this.masterGain);
+                this.bgmGain.connect(this.masterGain);
+
+                this.updateVolumes();
+            } catch (e) {
+                console.error('Audio init failed', e);
+                return;
+            }
+        }
+
+        if (this.ctx && this.ctx.state === 'suspended') {
+            try { await this.ctx.resume(); } catch { }
+        }
+
+        if (!this.isMuted && !this.isPlayingBgm) this.startBgm();
+    }
+
+    updateVolumes() {
+        if (!this.ctx || !this.masterGain || !this.sfxGain || !this.bgmGain) return;
+        const t = this.ctx.currentTime;
+        this.masterGain.gain.setValueAtTime(this.isMuted ? 0 : this.volMaster, t);
+        this.sfxGain.gain.setValueAtTime(this.volSfx, t);
+        this.bgmGain.gain.setValueAtTime(this.volBgm, t);
+    }
+
+    setMute(muted) {
+        this.isMuted = muted;
+        this.updateVolumes();
+        this.persist();
+        if (this.isMuted) this.stopBgm();
+        else this.startBgm();
+    }
+
+    toggleMute() {
+        this.setMute(!this.isMuted);
+        if (!this.isMuted) this.playSelect();
+    }
+
+    startBgm() {
+        if (!this.ctx || !this.bgmGain || this.isMuted) return;
+        if (this.isPlayingBgm) return;
+        this.isPlayingBgm = true;
+        this.playBGMLoop();
+    }
+
+    stopBgm() {
+        this.isPlayingBgm = false;
+        if (this.bgmTimeout !== null) {
+            clearTimeout(this.bgmTimeout);
+            this.bgmTimeout = null;
+        }
+        this.bgmNodes.forEach(n => {
+            try {
+                n.osc.stop();
+                n.osc.disconnect();
+                n.gain.disconnect();
+            } catch { }
+        });
+        this.bgmNodes = [];
+    }
+
+    playBGMLoop() {
+        if (!this.isPlayingBgm || this.isMuted || !this.ctx || !this.bgmGain) return;
+
+        const bpm = 124;
+        const beat = 60 / bpm;
+        const start = this.ctx.currentTime;
+        this.bgmNodes = [];
+
+        [220, 277, 330].forEach(freq => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.value = freq;
+            gain.gain.setValueAtTime(0.04, start);
+            gain.gain.linearRampToValueAtTime(0.04, start + beat * 7);
+            gain.gain.linearRampToValueAtTime(0, start + beat * 8);
+            osc.connect(gain);
+            gain.connect(this.bgmGain);
+            osc.start(start);
+            osc.stop(start + beat * 8);
+            this.bgmNodes.push({ osc, gain });
+        });
+
+        const melody = [440, 523, 659, 784, 659, 523, 440, 392];
+        melody.forEach((freq, i) => {
+            const t = start + i * beat;
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.value = freq;
+            gain.gain.setValueAtTime(0, t);
+            gain.gain.linearRampToValueAtTime(0.10, t + 0.01);
+            gain.gain.exponentialRampToValueAtTime(0.01, t + beat * 0.55);
+            osc.connect(gain);
+            gain.connect(this.bgmGain);
+            osc.start(t);
+            osc.stop(t + beat * 0.6);
+            this.bgmNodes.push({ osc, gain });
+        });
+
+        const loopMs = beat * 8 * 1000;
+        this.bgmTimeout = window.setTimeout(() => {
+            if (this.isPlayingBgm) this.playBGMLoop();
+        }, Math.max(0, loopMs - 50));
+    }
+
+    playSelect() {
+        if (this.isMuted || !this.ctx || !this.sfxGain) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(440, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(880, this.ctx.currentTime + 0.10);
+        gain.gain.setValueAtTime(0.10, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.10);
+        osc.connect(gain);
+        gain.connect(this.sfxGain);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.10);
+    }
+
+    playCheck() {
+        if (this.isMuted || !this.ctx || !this.sfxGain) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(660, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(520, this.ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.12, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.10);
+        osc.connect(gain);
+        gain.connect(this.sfxGain);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.10);
+    }
+
+    playMiss() {
+        if (this.isMuted || !this.ctx || !this.sfxGain) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(180, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(70, this.ctx.currentTime + 0.16);
+        gain.gain.setValueAtTime(0.25, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.18);
+        osc.connect(gain);
+        gain.connect(this.sfxGain);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.18);
+    }
+
+    playWin() {
+        if (this.isMuted || !this.ctx || !this.sfxGain) return;
+        const t = this.ctx.currentTime;
+        [523.25, 659.25, 783.99, 1046.5].forEach((freq, i) => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            const start = t + i * 0.05;
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(freq, start);
+            gain.gain.setValueAtTime(0.10, start);
+            gain.gain.exponentialRampToValueAtTime(0.01, start + 0.12);
+            osc.connect(gain);
+            gain.connect(this.sfxGain);
+            osc.start(start);
+            osc.stop(start + 0.12);
+        });
+    }
+
+    playNightMove() {
+        if (this.isMuted || !this.ctx || !this.sfxGain) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(320, this.ctx.currentTime);
+        osc.frequency.linearRampToValueAtTime(120, this.ctx.currentTime + 0.22);
+        gain.gain.setValueAtTime(0.08, this.ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.01, this.ctx.currentTime + 0.22);
+        osc.connect(gain);
+        gain.connect(this.sfxGain);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.22);
+    }
+}
+
 class FoxGame {
     constructor() {
         this.minHoles = 2;
@@ -16,6 +240,8 @@ class FoxGame {
         this.possibleFoxPositions = null;
         this.possibleFoxStartSets = [];
 
+        this.audio = new AudioManager();
+
         this.ui = {
             holesContainer: document.getElementById('holes-container'),
             message: document.getElementById('message'),
@@ -24,6 +250,7 @@ class FoxGame {
             replayControls: document.getElementById('replay-controls'),
             holesSelect: document.getElementById('holes-count'),
             holesTitleCount: document.getElementById('holes-count-title'),
+            audioBtn: document.getElementById('audio-btn'),
 
             // Difficulty Buttons
             modeEasy: document.getElementById('mode-easy'),
@@ -62,44 +289,92 @@ class FoxGame {
         this.setupHoleSelector();
         this.updateHoleCountUI();
         this.updateStrategyUI();
+        this.updateAudioButtonUI();
         this.bindEvents();
         // Don't auto-start, wait for modal
     }
 
     bindEvents() {
-        this.ui.restartBtn.addEventListener('click', () => this.startNewGame());
-        this.ui.restartEndBtn.addEventListener('click', () => this.startNewGame());
+        this.ui.restartBtn.addEventListener('click', () => {
+            this.audio.init();
+            this.audio.playSelect();
+            this.startNewGame();
+        });
+        this.ui.restartEndBtn.addEventListener('click', () => {
+            this.audio.init();
+            this.audio.playSelect();
+            this.startNewGame();
+        });
 
         // Difficulty Toggles
-        this.ui.modeEasy.addEventListener('click', () => this.setDifficulty('easy'));
-        this.ui.modeHard.addEventListener('click', () => this.setDifficulty('hard'));
+        this.ui.modeEasy.addEventListener('click', () => {
+            this.audio.init();
+            this.audio.playSelect();
+            this.setDifficulty('easy');
+        });
+        this.ui.modeHard.addEventListener('click', () => {
+            this.audio.init();
+            this.audio.playSelect();
+            this.setDifficulty('hard');
+        });
 
         if (this.ui.holesSelect) {
             this.ui.holesSelect.addEventListener('change', (e) => {
                 const next = parseInt(e.target.value, 10);
+                this.audio.init();
+                this.audio.playSelect();
                 this.setHoleCount(next);
             });
         }
 
         this.ui.startBtn.addEventListener('click', () => {
+            this.audio.init();
+            this.audio.playSelect();
             this.ui.introModal.classList.add('hidden');
             this.startNewGame();
         });
 
         // Strategy Events
         this.ui.strategyBtn.addEventListener('click', () => {
+            this.audio.init();
+            this.audio.playSelect();
             this.ui.strategyModal.classList.remove('hidden');
         });
         this.ui.closeStrategyBtn.addEventListener('click', () => {
+            this.audio.init();
+            this.audio.playSelect();
             this.ui.strategyModal.classList.add('hidden');
         });
 
+        if (this.ui.audioBtn) {
+            this.ui.audioBtn.addEventListener('click', async (e) => {
+                e.stopPropagation();
+                await this.audio.init();
+                this.audio.toggleMute();
+                this.updateAudioButtonUI();
+            });
+        }
+
         // Replay events
-        this.ui.prevBtn.addEventListener('click', () => this.replayStep(-1));
-        this.ui.nextBtn.addEventListener('click', () => this.replayStep(1));
+        this.ui.prevBtn.addEventListener('click', () => {
+            this.audio.init();
+            this.audio.playSelect();
+            this.replayStep(-1);
+        });
+        this.ui.nextBtn.addEventListener('click', () => {
+            this.audio.init();
+            this.audio.playSelect();
+            this.replayStep(1);
+        });
         this.ui.autoPlayBtn.addEventListener('click', () => this.autoPlayReplay());
         this.ui.shareBtn.addEventListener('click', () => this.shareResult());
         this.ui.copyDebugBtn.addEventListener('click', () => this.copyDebugLogs());
+    }
+
+    updateAudioButtonUI() {
+        if (!this.ui.audioBtn) return;
+        this.ui.audioBtn.textContent = this.audio.isMuted ? "🔇" : "🔊";
+        this.ui.audioBtn.title = this.audio.isMuted ? "开启背景音乐与音效" : "关闭背景音乐与音效";
     }
 
     isCheatMode() {
@@ -260,6 +535,9 @@ class FoxGame {
         this.hasCheckedToday = true;
         this.ui.holesContainer.classList.add('disabled');
 
+        this.audio.init();
+        this.audio.playCheck();
+
         const wrapper = this.ui.holesContainer.children[index];
 
         // Visual feedback
@@ -293,6 +571,7 @@ class FoxGame {
             turnRecord.foxPosAtStart = this.isCheatMode() ? index : this.foxPosition;
             this.history.push(turnRecord);
             this.isProcessingTurn = false;
+            this.audio.playWin();
             this.endGame(true);
             return;
         } else {
@@ -305,6 +584,7 @@ class FoxGame {
             this.history.push(turnRecord);
 
             // Wait a moment then Night Phase
+            this.audio.playMiss();
             await this.wait(1000);
             await this.nightPhase(index);
             this.hasCheckedToday = false;
@@ -323,6 +603,8 @@ class FoxGame {
         });
 
         this.ui.message.textContent = "天黑了，狐狸正在移动...";
+        this.audio.init();
+        this.audio.playNightMove();
 
         await this.wait(1000); // Suspense
 
@@ -426,6 +708,8 @@ class FoxGame {
     }
 
     copyDebugLogs() {
+        this.audio.init();
+        this.audio.playSelect();
         let logText = "=== 🦊 Game Debug Log ===\n";
         logText += `Holes: ${this.holes}\n`;
         logText += `Difficulty: ${this.difficulty}\n`;
@@ -450,6 +734,8 @@ class FoxGame {
     }
 
     shareResult() {
+        this.audio.init();
+        this.audio.playSelect();
         const diffText = this.difficulty === 'easy' ? '简单' : '困难';
         const title = `🦊 ${this.holes}洞抓狐狸挑战成功！`;
         const textToShare = `${title} 网址：https://circlecal.pages.dev/fox/ （复制到浏览器使用）\n\n洞口数：${this.holes}\n难度：${diffText}\n用时：${this.day} 天\n\n快来试试你能几天抓到！`;
