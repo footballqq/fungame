@@ -283,7 +283,7 @@ class FoxGame {
 
     shareResult() {
         const diffText = this.difficulty === 'easy' ? '简单' : '困难';
-        const textToShare = `🦊 五洞抓狐狸挑战成功！\n\n难度：${diffText}\n用时：${this.day} 天\n\n快来试试你能几天抓到！`;
+        const textToShare = `🦊 五洞抓狐狸挑战成功！ 网址：https://circlecal.pages.dev/fox/ （复制到浏览器使用）\n\n难度：${diffText}\n用时：${this.day} 天\n\n快来试试你能几天抓到！`;
 
         navigator.clipboard.writeText(textToShare).then(() => {
             const originalText = this.ui.shareBtn.textContent;
