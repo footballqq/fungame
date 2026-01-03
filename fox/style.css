@@ -303,10 +303,16 @@ header p {
 
 .modal-content {
     background: white;
-    padding: 30px;
+    padding: 25px;
     border-radius: 20px;
     max-width: 500px;
     width: 90%;
+    max-height: 90vh;
+    /* Limit height to viewport */
+    display: flex;
+    /* Use flexbox */
+    flex-direction: column;
+    /* Stack children vertically */
     text-align: center;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -315,12 +321,27 @@ header p {
 .modal-content h2 {
     color: var(--primary-color);
     margin-top: 0;
+    flex-shrink: 0;
+    /* Keep header fixed */
 }
 
 .intro-body {
     text-align: left;
-    margin: 20px 0;
+    margin: 15px 0;
     line-height: 1.6;
+    overflow-y: auto;
+    /* Enable internal scrolling */
+    flex: 1;
+    /* Take up remaining space */
+    padding-right: 10px;
+    /* Prevent scrollbar overlap */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scroll on iOS */
+    border-top: 1px solid #f0f0f0;
+    /* Visual separator */
+    border-bottom: 1px solid #f0f0f0;
+    /* Visual separator */
+    padding-top: 10px;
 }
 
 .difficulty-hint {
@@ -328,6 +349,8 @@ header p {
     padding: 10px;
     border-radius: 10px;
     font-size: 0.9rem;
+    flex-shrink: 0;
+    /* Keep hint fixed if possible, or inside body */
 }
 
 .big-btn {
