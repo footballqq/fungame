@@ -148,6 +148,11 @@ header p {
     color: white;
 }
 
+.audio-btn {
+    width: 42px;
+    justify-content: center;
+}
+
 .status-bar {
     text-align: center;
 }
