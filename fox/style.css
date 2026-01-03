@@ -60,6 +60,32 @@ header p {
     border-radius: 50px;
 }
 
+.holes-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #dfe6e9;
+    border-radius: 25px;
+    padding: 4px 10px;
+    font-size: 0.95rem;
+}
+
+.holes-selector label {
+    color: #636e72;
+    font-weight: bold;
+}
+
+.holes-selector select {
+    border: none;
+    border-radius: 18px;
+    padding: 6px 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: white;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
 .difficulty-toggle {
     background: #dfe6e9;
     border-radius: 25px;
@@ -153,14 +179,22 @@ header p {
 
 .holes-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 10px;
     align-items: flex-end;
     min-height: 120px;
+    width: 100%;
+}
+
+.holes-container.disabled {
+    pointer-events: none;
 }
 
 .hole-wrapper {
     position: relative;
-    width: 80px;
+    flex: 1;
+    max-width: 80px;
+    min-width: 52px;
     height: 80px;
     cursor: pointer;
     transition: transform 0.2s;
@@ -463,6 +497,16 @@ header p {
         flex: 1;
     }
 
+    .holes-selector {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .holes-selector select {
+        flex: 1;
+        max-width: 160px;
+    }
+
     #restart-btn,
     #strategy-btn {
         width: 100%;
@@ -475,13 +519,16 @@ header p {
 
     .holes-container {
         min-height: 80px;
+        gap: 6px;
     }
 
     .hole-wrapper {
-        width: 16vw;
+        flex: 1;
+        width: auto;
         height: 16vw;
         max-width: 70px;
         max-height: 70px;
+        min-width: 30px;
     }
 
     .hole {
