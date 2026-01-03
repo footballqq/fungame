@@ -25,3 +25,53 @@
 
 
 
+抓捕记录在游戏结束后也显示狐狸位置，增加复制按钮方便我给你调试用。
+
+抓捕记录也需要记录做后一次抓到
+
+=== 🦊 Game Debug Log ===
+Difficulty: easy
+Total Days: 2
+
+Day 1: Fox@3 | PlayerChecked@2 | Result: MISS
+Day 2: Fox@4 | PlayerChecked@4 | Result: WIN
+13:27 2026-1-3
+
+
+bug：fix it！
+=== 🦊 Game Debug Log ===
+Difficulty: hard
+Total Days: 9
+
+Day 1: Fox@3 | PlayerChecked@2 | Result: MISS
+Day 2: Fox@4 | PlayerChecked@3 | Result: MISS
+Day 3: Fox@3 | PlayerChecked@4 | Result: MISS
+Day 4: Fox@2 | PlayerChecked@1 | Result: MISS
+Day 5: Fox@1 | PlayerChecked@4 | Result: MISS
+Day 6: Fox@2 | PlayerChecked@3 | Result: MISS
+Day 7: Fox@3 | PlayerChecked@2 | Result: MISS
+Day 8: Fox@2 | PlayerChecked@1 | Result: MISS
+Day 8: Fox@2 | PlayerChecked@2 | Result: WIN
+
+=== 🦊 Game Debug Log ===
+Difficulty: hard
+Total Days: 10
+
+Day 1: Fox@4 | PlayerChecked@2 | Result: MISS
+Day 1: Fox@4 | PlayerChecked@3 | Result: MISS
+Day 2: Fox@5 | PlayerChecked@4 | Result: MISS
+Day 3: Fox@4 | PlayerChecked@2 | Result: MISS
+Day 4: Fox@5 | PlayerChecked@3 | Result: MISS
+Day 6: Fox@5 | PlayerChecked@4 | Result: MISS
+Day 7: Fox@4 | PlayerChecked@2 | Result: MISS
+Day 7: Fox@4 | PlayerChecked@3 | Result: MISS
+Day 8: Fox@3 | PlayerChecked@4 | Result: MISS
+Day 10: Fox@5 | PlayerChecked@5 | Result: WIN
+
+明确一下规则：
+第一天是狐狸选洞 猎人找
+第二天再是狐狸换洞 猎人找
+
+每天天数+1
+
+不要出现狐狸不动或者天数不动。
