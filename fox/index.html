@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>五洞抓狐狸 🦊</title>
+    <title>抓狐狸 🦊</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
 </head>
@@ -12,11 +12,15 @@
 <body>
     <div class="game-container">
         <header>
-            <h1>🦊 五洞抓狐狸</h1>
+            <h1>🦊 <span id="holes-count-title">5</span>洞抓狐狸</h1>
             <p>小狐狸每天晚上会跳到相邻的洞口，你能抓住它吗？</p>
         </header>
 
         <div class="controls">
+            <div class="holes-selector">
+                <label for="holes-count">洞口</label>
+                <select id="holes-count" aria-label="选择洞口数量"></select>
+            </div>
             <div class="difficulty-toggle">
                 <button id="mode-easy" class="btn mode-btn active">简单</button>
                 <button id="mode-hard" class="btn mode-btn">困难</button>
@@ -62,18 +66,18 @@
     <!-- Intro Modal -->
     <div id="intro-modal" class="modal">
         <div class="modal-content">
-            <h2>🦊 五洞抓狐狸</h2>
+            <h2>🦊 <span id="intro-holes-count">5</span>洞抓狐狸</h2>
             <div class="intro-body">
                 <p><strong>游戏规则：</strong></p>
                 <ol>
-                    <li>山上有 <strong>5个洞口</strong>，小狐狸躲在其中一个。</li>
+                    <li>山上有 <strong><span id="intro-holes-count-inline">5</span>个洞口</strong>，小狐狸躲在其中一个。</li>
                     <li>你每天只能检查 <strong>1个洞口</strong>。</li>
                     <li>如果没抓到，天黑后狐狸会跳到 <strong>相邻</strong> 的洞口。</li>
                     <li>看看你需要几天才能抓到它！</li>
                 </ol>
                 <div class="difficulty-hint">
                     <p>🔥 <strong>简单模式</strong>：狐狸随机跳。</p>
-                    <p>😈 <strong>困难模式</strong>：狐狸很狡猾，可能会利用你的思维盲区！</p>
+                    <p>😈 <strong>困难模式</strong>：狐狸会作弊——只要你没用必胜策略，它就永远不会被抓到。</p>
                 </div>
             </div>
             <button id="start-game-btn" class="btn primary big-btn">开始抓捕！</button>
@@ -84,7 +88,15 @@
     <div id="strategy-modal" class="modal hidden">
         <div class="modal-content">
             <div class="intro-body">
-                <p>这是一个经典的逻辑推理题，核心在于利用<strong>“奇偶性”</strong>来逐步缩小狐狸的藏身范围。要保证 100% 抓到狐狸，最少需要 <strong>6天</strong>。</p>
+                <p>这是一个经典的逻辑推理题，核心在于利用<strong>“奇偶性”</strong>来逐步缩小狐狸的藏身范围。下方详细推演以 <strong>5洞</strong> 为例。</p>
+
+                <p>
+                    当前洞口数：<strong><span id="strategy-holes-count">5</span></strong>，保证抓到最少需要
+                    <strong><span id="strategy-days">6</span></strong> 天。<br>
+                    按顺序检查：
+                    <span class="highlight-text" id="strategy-seq"
+                        style="display:block; margin: 10px 0; font-size: 1.1em;"></span>
+                </p>
 
                 <h3 style="color: #d35400; border-bottom: 2px solid #eee; padding-bottom: 5px;">必胜策略方案</h3>
                 <p>按顺序检查以下洞口：<br>
