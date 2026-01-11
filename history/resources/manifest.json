@@ -1,0 +1,124 @@
+{
+  "cards": [
+    {
+      "id": "caochuanjiejian",
+      "name": "草船借箭",
+      "period": "Eastern Han Dynasty",
+      "year_estimate": 208,
+      "meaning": "比喻巧妙利用他人资源或借力打力，以智取胜。",
+      "story": "赤壁之战前夕，周瑜刁难诸葛亮，限其十日造十万支箭。诸葛亮立下军令状，只求三日，并密请鲁肃备船二十只、草人千余。第三日四更，江上大雾，诸葛亮率船逼近曹营擂鼓佯攻。曹操疑有伏兵，命弓弩手乱箭齐发，箭如雨下。天明雾散，船队满载十余万支箭返航。周瑜叹服其智谋，此即“草船借箭”之计。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, night scene with thick mist over a river, wooden boats filled with straw targets approaching a distant camp, arrows sticking densely into the straw, silhouettes of archers on the shore, dramatic torchlight glow through the fog, ripple reflections on water.",
+      "image_path": "cards/caochuanjiejian/image.png"
+    },
+    {
+      "id": "fujingqingzui",
+      "name": "负荆请罪",
+      "period": "Warring States Period",
+      "year_estimate": 279,
+      "meaning": "表示主动向对方承认错误，请求责罚，态度非常诚恳。",
+      "story": "战国时期，赵国大将廉颇因不服蔺相如地位高于自己，扬言要羞辱他。蔺相如为了国家利益，处处避让。廉颇得知真相后，深感惭愧，于是光着上身，背着荆条，亲自到蔺相如府上请罪。两人最终和好，成为生死之交，共同保卫赵国。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, an elderly general with a muscular torso bare to the waist, carrying a bundle of prickly ash branches on his back, kneeling solemnly in the courtyard of a Warring States period residence, awaiting judgment.",
+      "image_path": "cards/fujingqingzui/image.png"
+    },
+    {
+      "id": "id_6t51d77xj",
+      "name": "桃园结义",
+      "period": "东汉",
+      "year_estimate": 200,
+      "meaning": "Mock meaning for 桃园结义",
+      "story": "Mock story content for 桃园结义. This is a placeholder.",
+      "prompt": "Trading card style, ancient chinese, illustration of 桃园结义",
+      "image_path": "cards/id_6t51d77xj/image.png"
+    },
+    {
+      "id": "id_a6ngpf4m3",
+      "name": "守株待兔",
+      "period": "东汉",
+      "year_estimate": 200,
+      "meaning": "Mock meaning for 守株待兔",
+      "story": "Mock story content for 守株待兔. This is a placeholder.",
+      "prompt": "Trading card style, ancient chinese, illustration of 守株待兔",
+      "image_path": "cards/id_a6ngpf4m3/image.png"
+    },
+    {
+      "id": "id_pkhyu4l1q",
+      "name": "叶公好龙",
+      "period": "东汉",
+      "year_estimate": 200,
+      "meaning": "Mock meaning for 叶公好龙",
+      "story": "Mock story content for 叶公好龙. This is a placeholder.",
+      "prompt": "Trading card style, ancient chinese, illustration of 叶公好龙",
+      "image_path": "cards/id_pkhyu4l1q/image.png"
+    },
+    {
+      "id": "kongrongrangli",
+      "name": "孔融让梨",
+      "period": "Eastern Han Dynasty",
+      "year_estimate": 153,
+      "meaning": "比喻兄弟姐妹间谦让有礼、长幼有序的美德，强调谦让、礼让和尊敬长辈。",
+      "story": "孔融，东汉末年名士，四岁与诸兄食梨。众人争大，融独取小。人问其故，答曰：‘我年幼，当取小梨；兄长年长，应食大梨。’其谦让识礼，显长幼有序之德。此事被后人传为佳话，以此教化孩童知礼谦让、敬长爱幼。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, Four-year-old Kong Rong in modest Han attire stands before a wooden table with a pile of pears; he reaches for the smallest pear while older brothers reach for larger ones; soft window light, bamboo scrolls and earthenware in the background; muted ink-wash tones, paper texture edges, calligraphic caption.",
+      "image_path": "cards/kongrongrangli/image.png"
+    },
+    {
+      "id": "sangumaolu",
+      "name": "三顾茅庐",
+      "period": "Late Eastern Han Dynasty",
+      "year_estimate": 207,
+      "meaning": "比喻诚心诚意地一再拜访或邀请。",
+      "story": "东汉末年，天下大乱。刘备求贤若渴，听闻卧龙诸葛亮有经天纬地之才，便带着关羽、张飞前去隆中拜访。第一次和第二次都未见到诸葛亮，张飞一度怒欲放火烧屋，被刘备制止。第三次拜访时，诸葛亮正在午睡，刘备便在阶下静候，直到诸葛亮醒来。诸葛亮感其诚意，献上《隆中对》，出山辅佐刘备，成就一番霸业。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, Liu Bei standing respectfully in the snowy courtyard of a humble thatched cottage in Longzhong, waiting for Zhuge Liang to wake up, while Guan Yu and Zhang Fei wait impatiently by the gate, winter atmosphere, muted colors.",
+      "image_path": "cards/sangumaolu/image.png"
+    },
+    {
+      "id": "taoyuanjieyi",
+      "name": "桃园结义",
+      "period": "Late Eastern Han Dynasty",
+      "year_estimate": 184,
+      "meaning": "比喻志同道合的兄弟结盟，同心协力，共图大业。",
+      "story": "东汉末年，黄巾起义爆发，天下大乱。幽州涿郡的刘备、关羽、张飞三位豪杰在街头相遇，志趣相投。三人来到张飞庄园后的桃园，焚香礼拜，结为异姓兄弟：不求同年同月同日生，但求同年同月同日死。刘备为兄，关羽次之，张飞为弟。他们誓要匡扶汉室，从此开启了并肩作战、共图大业的传奇。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, Liu Bei, Guan Yu, and Zhang Fei stand solemnly beneath blooming peach trees in a secluded garden, incense smoke rising as they kneel to swear brotherhood, with halberds and swords resting against a stone table and distant mountains under a warm sunset.",
+      "image_path": "cards/taoyuanjieyi/image.png"
+    },
+    {
+      "id": "wanbiguizhao",
+      "name": "完璧归赵",
+      "period": "Warring States Period",
+      "year_estimate": 283,
+      "meaning": "指将原物完好无损地归还物主；也比喻坚持原则，不辱使命。",
+      "story": "战国时，赵惠文王得和氏璧。秦昭王闻之，愿以十五城换璧。蔺相如奉璧入秦，见秦王无意割城，便设计取回玉璧，怒发冲冠斥秦王，遣从者怀璧从小道归赵。秦王无奈，终礼送相如归国。相如完璧归赵，智勇双全，名震诸侯。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, Lin Xiangru stands firm in a Qin palace hall, holding the Hetian jade, hair bristling with anger as he confronts the King of Qin; ornate bronze tripods and columns, dramatic candlelight, tension-filled mood",
+      "image_path": "cards/wanbiguizhao/image.png"
+    },
+    {
+      "id": "wenjiqiwu",
+      "name": "闻鸡起舞",
+      "period": "Jin Dynasty",
+      "year_estimate": 300,
+      "meaning": "字面意思是听到鸡叫就起来舞剑。比喻有志之士抓紧时间勤学苦练，或奋发图强。",
+      "story": "东晋时期，祖逖与刘琨同为司州主簿，两人志同道合，情同手足。他们同寝共被，胸怀报国之志。一日，凌晨的鸡鸣声惊醒了祖逖，他没有贪睡，而是踢醒刘琨说：‘此非恶声也！’（这并不是不好的声音啊！）随即起身，在晨曦中拔剑起舞，磨砺武艺。两人以此互勉，日复一日地苦练本领，时刻准备为国效力，成为了千古佳话。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, a young warrior in ancient Hanfu practicing swordplay at dawn in a rustic courtyard, a rooster standing on a wooden fence crowing in the background, misty mountains in the distance, dynamic motion, cinematic lighting",
+      "image_path": "cards/wenjiqiwu/image.png"
+    },
+    {
+      "id": "woxinchangdan",
+      "name": "卧薪尝胆",
+      "period": "Spring and Autumn Period",
+      "year_estimate": 494,
+      "meaning": "刻苦自励，发愤图强；忍受艰苦磨砺，不忘复仇或达成目标。",
+      "story": "春秋末年，越王勾践被吴王夫差击败，被迫入吴为奴。获释回国后，他卧于薪柴之上，日尝苦胆，提醒自己勿忘耻辱。他与民同苦，十年生聚，十年教训，最终灭吴雪耻，成就霸业。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, 在昏暗的越王宫中，勾践卧于干薪之上，手悬苦胆，眼神坚毅，烛火摇曳，墙上有古朴篆书与铜剑，粗粝的质感与肃杀氛围",
+      "image_path": "cards/woxinchangdan/image.png"
+    },
+    {
+      "id": "zhishangtanbing",
+      "name": "纸上谈兵",
+      "period": "Warring States Period",
+      "year_estimate": 260,
+      "meaning": "比喻空谈理论，不能解决实际问题。也指空谈不切实际。",
+      "story": "战国时期，赵国名将赵奢之子赵括，自幼熟读兵书，谈兵论战无人能及。但他缺乏实战经验。公元前260年，秦国进攻赵国，廉颇在长平筑垒固守。赵王听信秦军反间计，以赵括替换廉颇。赵括盲目变更军制，主动出击。秦将白起佯装败退，截断赵军粮道，最终将赵军围困。赵括在突围时被射死，四十万赵军投降后被坑杀。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, A young Chinese general in ornate armor holding a scroll of military formations, standing arrogantly in a command tent filled with maps and scrolls, while an older advisor bows deeply with a worried expression, warm candlelight illuminating the tension",
+      "image_path": "cards/zhishangtanbing/image.png"
+    }
+  ]
+}

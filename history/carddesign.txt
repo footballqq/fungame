@@ -1,0 +1,83 @@
+这是一个非常有趣的设计需求。为了实现“Koei三国志风格”和“厚重的历史感”，我们需要在边框材质、色调、光影以及人物绘画风格上下功夫，融合汉代的青铜器、玉器、竹简等元素。
+
+以下是为您设计的卡牌概念图和详细参数。
+
+### 1. 卡牌设计概念图 (AI生成提示词辅助描述)
+
+这是一张概念设计图，旨在捕捉您描述的每一个细节。
+
+**(此处为模拟图像输出，实际请使用下方的提示词在Midjourney等工具中生成)**
+
+> **视觉描述：**
+> 整张卡牌散发着古老而珍贵的气息，仿佛是从汉代墓葬中出土的文物。
+> **边框 (Border):** 极其厚重、华丽。采用深沉的青铜材质，表面带有氧化的铜绿和岁月的磨损痕迹。边框上浮雕着汉代的云气纹（云雷纹）和螭龙纹，在四个角落镶嵌着温润但略显暗淡的古玉璧，玉璧中心隐约发着微光。整体给人一种沉甸甸金属和石材结合的质感。
+> **上半区 (Top 2/3 - Illustration):**
+> 画面采用了Koei《三国志》系列标志性的厚重油画/数字绘画风格。色调偏暖黄、深褐，光影对比强烈，具有戏剧性。
+> * **场景：** 一个古朴的汉代家庭内堂。背景有木制屏风和摆放竹简的书案。
+> * **人物：** 中心是年幼的孔融（约4-5岁），穿着质朴但做工精细的汉服深衣，面容聪慧、谦逊。他正从一个装满梨的竹筐中挑出一个最小的梨子拿在手中，同时微笑着抬手示意身边的两位年长的兄长去拿筐里的大梨。兄长们面带惊讶和赞许的表情。
+> * **光线：** 一束暖光从侧面的窗棂射入，照亮了孔融和手中的梨，强调了主题。
+> 
+> 
+> **下半区 (Bottom 1/3 - Text Area):**
+> 这一区域设计成一个展开的、古旧的竹简或一块厚重的木牌匾。边缘有烧焦和磨损的痕迹，用粗麻绳或皮条固定在主框架上。
+> * **背景：** 深褐色的陈旧竹片或木纹理。
+> * **文字：** 中央是四个苍劲有力的大字——“**孔融让梨**”。字体采用汉代隶书（Clerical Script），使用甚至带有金石韵味的墨色书写，笔触浑厚，带有斑驳的历史感。在成语下方，也许有一行非常小的、几乎看不清的小篆作为装饰性注释。
+> 
+> 
+
+---
+
+### 2. AI 生成提示词 (Midjourney V6 Prompt)
+
+如果您需要自己生成这张图片，可以使用以下精确的提示词。
+
+**英文 Prompt:**
+
+```markdown
+/imagine prompt: A trading card design with a heavy historical feel, in the art style of Koei Romance of the Three Kingdoms game. The card features an ornate, thick bronze border with ancient Chinese cloud patterns, dragon motifs, and aged jade inlays, looking ancient and weathered. The top 2/3 of the card is an illustration: A young Han Dynasty boy, Kong Rong, humbly choosing the smallest pear from a basket and offering larger pears to his older brothers in a rustic, warmly lit ancient Chinese study interior. Dramatic lighting, rich painted textures. The bottom 1/3 of the card is a separate panel designed to look like an aged wooden plaque or bamboo scroll section, displaying the Chinese calligraphy text "孔融让梨" written in bold, ancient clerical script with dark, textured ink. The entire card feels like a excavated artifact. --ar 2:3 --v 6.0 --style raw
+
+```
+
+---
+
+### 3. 卡牌设计参数规格书
+
+为了将此设计用于实际开发或打印，以下是推荐的技术参数：
+
+#### A. 整体规格 (Overall Specifications)
+
+* **目标尺寸 (Target Physical Size):** 标准集换式卡牌尺寸 (Standard TCG Size)
+* 63mm x 88mm (2.48" x 3.46")
+
+
+* **数字分辨率 (Digital Resolution):**
+* **画布尺寸 (Canvas Size):** 建议至少 1080 x 1620 Pixels (为了保持高质量细节)
+* **打印分辨率 (Print DPI):** 300 DPI (Dots Per Inch)
+
+
+* **纵横比 (Aspect Ratio):** 2:3 (Portrait)
+* **风格基调 (Style Tone):** Koei历史模拟游戏风格、厚重、写实绘画、文物感、深褐色调 (Sepia/Dark tones)。
+
+#### B. 区域划分尺寸 (Area Dimensions - 基于1080x1620像素画布)
+
+为了严格符合您要求的 2/3 和 1/3 比例，我们需要扣除边框厚度来计算内部内容区域。
+
+* **1. 边框区域 (Border Area):**
+* *设计说明:* 极具装饰性的厚重青铜/玉石边框。
+* *预估厚度:* 上下左右各约 60-80 Pixels 的厚度，以营造“厚重感”。
+
+
+* **(假设扣除边框后的) 内部有效内容区:** 约 920 x 1460 Pixels
+* **2. 上半区：插画显示 (Top Illustration Area):**
+* *比例:* 占内部有效高度的 2/3。
+* *像素高度 (约):* 973 Pixels
+* *内容:* 孔融让梨的故事画面。要求高精度的角色与环境绘制。
+
+
+* **3. 下半区：文字显示 (Bottom Text Area):**
+* *比例:* 占内部有效高度的 1/3。
+* *像素高度 (约):* 487 Pixels
+* *内容:* 成语名称展示。
+* *文字容器:* 仿竹简或木牌材质。
+* *主标题:* “孔融让梨”
+* *字体推荐:* 汉仪隶书、方正古隶、或专门设计的书法字提。字体颜色应为磨损的金漆色或深沉的古墨色。

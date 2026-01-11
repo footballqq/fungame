@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成语排序 - 历史长河</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen">
+            <h1>成语排序</h1>
+            <p>按历史年代排序成语</p>
+            <div class="difficulty-select">
+                <button data-level="easy">简单 (5张)</button>
+                <button data-level="medium">中等 (7张)</button>
+                <button data-level="hard">困难 (10张)</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen hidden">
+            <header>
+                <button id="back-btn">返回</button>
+                <span id="level-indicator"></span>
+                <button id="submit-btn">提交验证</button>
+            </header>
+            <div id="card-container">
+                <!-- Cards will be injected here -->
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen hidden">
+            <h2 id="result-title"></h2>
+            <p id="result-message"></p>
+            <button id="retry-btn">再试一次</button>
+            <button id="show-answer-btn">查看答案</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

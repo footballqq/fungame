@@ -1,0 +1,35 @@
+下面讨论内容都请保存在 history目录，包括相关开发、资源文件等。
+
+我要和你讨论一个游戏设计，游戏名称叫做 成语排序
+游戏如下：
+1、选择难度 高中低，对应卡片数量10 7 5
+2、卡片上显示成语名称，成语图片
+3、用户通过拖拽对卡片排序，拖拽过程就交换卡片位置
+4、用户点击提交，如果排序正确，游戏结束，如果排序错误，提示错误，错误次数，可以选择看答案
+5、看答案点击后，可以点卡牌，会显示卡牌背面，卡牌背面显示成语名称和典故来历，成语释义，预估产生时间。
+6、效果酷炫，比如鼠标附上去卡片晃动一下，背景发光等等
+7、适配手机、平板、电脑
+
+为了完成上述游戏，我们需要有一个资源文件管理系统，也就是每个卡牌信息、图片，请你给出一个方案
+
+我们还需要设计一个资源生成系统：
+1、我给你成语列表，有可能也会给一些成语基本信息，比如产生年代，典故来历，释义等，也可能没有
+2、你需要根据这些信息，生成卡牌图片， 卡牌名称，卡牌背面典故来历，卡牌背面释义，卡牌背面产生年代等
+3、比如我只有成语名称：桃园结义，你需要设计一个程序，调用llm来获得桃园结义的典故来历，释义，产生年代等信息，然后根据典故来历生成卡牌图片（画面）
+4、最终输入是一批成语信息，比如一个csv的成语列表，先用过llm生成前面要求的文字信息，然后根据文字信息生成卡牌图片。注意保存过程，如果中间中断可以宣传。
+
+生成程序支持cli模式，每个功能可以独立运行。
+
+图片参考 E:\users\kpan\BaiduSyncdisk\program\aigc\fungame\history\resources\samplecard.png
+图片提示词参考
+/imagine prompt: A trading card design with a heavy historical feel, in the art style of Koei Romance of the Three Kingdoms game. The card features an ornate, thick bronze border with ancient Chinese cloud patterns, dragon motifs, and aged jade inlays, looking ancient and weathered. The top 2/3 of the card is an illustration: A young Han Dynasty boy, Kong Rong, humbly choosing the smallest pear from a basket and offering larger pears to his older brothers in a rustic, warmly lit ancient Chinese study interior. Dramatic lighting, rich painted textures. The bottom 1/3 of the card is a separate panel designed to look like an aged wooden plaque or bamboo scroll section, displaying the Chinese calligraphy text "孔融让梨" written in bold, ancient clerical script with dark, textured ink. The entire card feels like a excavated artifact. --ar 2:3 --v 6.0 --style raw
+
+
+注意你的设计文件请保留为 productdesign.md
+
+咱们继续 history 项目。注意所有内容都基于history目录，除了llmapi在 utils目录。
+你已经设计了 productdesign.md，
+请你作为一个架构设计师，详细拆分你设计的内容，设计文件结构，程序结构，任务分解，细分任务，以便后续执行。注意，llm调用部分使用现成的库E:\users\kpan\BaiduSyncdisk\program\aigc\fungame\utils\llm_api.md
+E:\users\kpan\BaiduSyncdisk\program\aigc\fungame\utils\config.ini
+E:\users\kpan\BaiduSyncdisk\program\aigc\fungame\utils\llm_api.py
+E:\users\kpan\BaiduSyncdisk\program\aigc\fungame\utils\config.py 。 还有就是图片生成调用api部分可以先mock，后面再讨论。任务生成为 task.md
