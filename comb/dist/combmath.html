@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学原理解析 | 球盒模型演示系统</title>
+    <link rel="icon" href="./assets/favicon-CUenFZYv.ico">
+    <style>
+        .math-content {
+            max-width: 900px;
+            margin: 4rem auto;
+            line-height: 1.8;
+        }
+
+        .math-content h1 {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .math-content h2 {
+            margin-top: 3rem;
+            color: var(--accent-color);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .math-content h3 {
+            margin-top: 2rem;
+            color: var(--highlight-1);
+        }
+
+        .math-content table {
+            margin: 2rem 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .math-content blockquote {
+            border-left: 4px solid var(--accent-color);
+            background: rgba(56, 189, 248, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 0 1rem 1rem 0;
+            margin: 1.5rem 0;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            transition: transform 0.2s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .math-card {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: var(--highlight-3);
+        }
+    </style>
+  <link rel="stylesheet" crossorigin href="./assets/style-CHCS5WgV.css">
+</head>
+
+<body>
+    <div class="math-content">
+        <a href="index.html" class="back-link">← 返回演示系统 / Back to Demo</a>
+
+        <div class="math-card">
+            <h1>球盒模型数学原理解析</h1>
+            <p style="color: var(--text-secondary); text-align: center; margin-bottom: 3rem;">
+                本文档总结了本项目开发过程中关于组合数学逻辑的深度讨论与直观物理解释。</p>
+
+            <section>
+                <h2>1. 四种经典模型概览</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>模型</th>
+                            <th>球 (Balls)</th>
+                            <th>盒子 (Boxes)</th>
+                            <th>数学对应</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>II</strong> (ID/ID)</td>
+                            <td>相同</td>
+                            <td>相同</td>
+                            <td><strong>整数分拆</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>DI</strong> (DS/ID)</td>
+                            <td>不同</td>
+                            <td>相同</td>
+                            <td><strong>第二类斯特林数</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ID</strong> (ID/DS)</td>
+                            <td>相同</td>
+                            <td>不同</td>
+                            <td><strong>隔板法</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>DD</strong> (DS/DS)</td>
+                            <td>不同</td>
+                            <td>不同</td>
+                            <td><strong>指数分配 m^n</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>2. 核心疑问解答</h2>
+                <h3>❓ 为什么 3个球放2个盒，有的说是 3 种，有的说是 4 种？</h3>
+                <blockquote>
+                    <strong>解答核心：</strong> 关键在于“盒子是否相同”以及是否“允许空盒”。
+                </blockquote>
+                <p>在<strong>盒子相同</strong>的前提下：</p>
+                <ul>
+                    <li><strong>恰好 2 个非空盒</strong>：方案只有 <code>{A,B | C}</code>, <code>{A,C | B}</code>,
+                        <code>{B,C | A}</code> 这 <strong>3 种</strong>。
+                    </li>
+                    <li><strong>至多 2 个盒 (允许空盒)</strong>：多出了“只用 1 个盒”的选择，即 <code>{A,B,C | 空}</code>，这是额外的 <strong>1
+                            种</strong>。</li>
+                    <li><strong>结果</strong>：3 (恰好) + 1 (分 1 堆) = <strong>4 种</strong>。</li>
+                </ul>
+
+                <h3>❓ 为什么球异盒同 (DI) 下会出现 41 这个数字？</h3>
+                <p>当 n=5, m=3 时：</p>
+                <ul>
+                    <li>矩阵里的 <strong>25</strong> 代表 <strong>正好</strong> 装满 3 个盒子。</li>
+                    <li>总数 <strong>41</strong> 代表 <strong>至多</strong> 装满 3 个盒子方案的总和。</li>
+                    <li>计算逻辑：<code>S(5,1)=1</code> + <code>S(5,2)=15</code> + <code>S(5,3)=25</code> =
+                        <strong>41</strong>。
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. 递推公式的“物理解释”</h2>
+
+                <h3>🟢 球同盒异 (ID)：最后一个小朋友拿球故事</h3>
+                <p>公式：<code>f(n, m) = Σ f(k, m-1)</code></p>
+                <p><strong>故事：</strong>将 n 个球分给 m 个小朋友。我们盯着最后那个人看。他可能拿走 0 个、1 个、甚至所有 n 个球。如果他拿了 x 个，那么剩下的 n-x 个球就分给前面
+                    m-1 个人。把所有这些互斥的情况累加，就得到了总方案。</p>
+
+                <h3>🔵 球同盒同 (II)：空盒 vs 发球逻辑</h3>
+                <p>公式：<code>f(n, m) = f(n, m-1) + f(n-m, m)</code></p>
+                <ul>
+                    <li><strong>至少有一个空盒：</strong>相当于把球放进 m-1 个盒子里，即 <code>f(n, m-1)</code>。</li>
+                    <li><strong>每一个盒子都有球：</strong>先给每个盒子发 1 个球固定住（消耗 m 个球），剩下的 n-m 个球随便放，即 <code>f(n-m, m)</code>。</li>
+                </ul>
+
+                <h3>🟣 球同盒同 (II)：对角线累加 (斜线由来)</h3>
+                <p>公式：<code>f(n, m) = Σ f(n-k, k)</code></p>
+                <p><strong>深度直觉：</strong>由于盒子无区别，我们可以按“到底用了几个盒子”分类。将 n 拆分为“恰好 k 组”的方法数，数学上等于将 n-k 拆分为“至多 k
+                    组”的方法数。这在矩阵中形成了一条美妙的斜线。</p>
+            </section>
+
+            <section>
+                <h2>4. 教学演示系统设计逻辑</h2>
+                <ul>
+                    <li><strong>数值绑定公式：</strong>选中哪个公式，矩阵大数字就是该公式的答案。</li>
+                    <li><strong>右上角“分量显示”：</strong>演示“总数”时，右上角保留斯特林数分量，揭示加法本质。</li>
+                    <li><strong>动态解说：</strong>文字随参数实时计算，不仅给答案，更给证明过程。</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

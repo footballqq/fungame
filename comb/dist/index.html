@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>球盒模型演示系统（n球m盒) | Balls and Boxes Demo</title>
+    <link rel="icon" href="./assets/favicon-CUenFZYv.ico">
+  <script type="module" crossorigin src="./assets/main-B8s0SRBv.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-CHCS5WgV.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>球盒模型演示系统 <span class="subtitle">Balls into Boxes</span></h1>
+            <div class="header-links">
+                <a href="combmath.html" class="math-link">📖 数学原理解析 / Math Principles</a>
+            </div>
+            <nav id="mode-selector">
+                <button class="mode-btn active" data-mode="II">球同 盒同 (ID/ID)</button>
+                <button class="mode-btn" data-mode="DI">球异 盒同 (DS/ID)</button>
+                <button class="mode-btn" data-mode="ID">球同 盒异 (ID/DS)</button>
+                <button class="mode-btn" data-mode="DD">球异 盒异 (DS/DS)</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="controls">
+                <div class="control-group">
+                    <label for="n-input">球数 (n):</label>
+                    <input type="range" id="n-input" min="0" max="10" value="5">
+                    <span id="n-val">5</span>
+                </div>
+                <div class="control-group">
+                    <label for="m-input">盒数 (m):</label>
+                    <input type="range" id="m-input" min="1" max="10" value="3">
+                    <span id="m-val">3</span>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <section class="matrix-section card">
+                    <h2>递推矩阵 Matrix f(n, m)</h2>
+                    <div class="matrix-container" id="matrix-container"></div>
+                </section>
+
+                <section class="details-section">
+                    <div class="formula-card card">
+                        <h2>公式 Formulas</h2>
+                        <div id="recurrence-formula" class="latex-box"></div>
+                        <div id="closed-formula" class="latex-box highlight"></div>
+                    </div>
+
+                    <div class="visual-card card">
+                        <h2>可视化演示 Visual Demo</h2>
+                        <div id="visual-demo-container">
+                            <canvas id="canvas"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="explanation-card card">
+                        <h2>原理解说 Explanation</h2>
+                        <div id="explanation-zh" class="lang-box"></div>
+                        <div id="explanation-en" class="lang-box en"></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
