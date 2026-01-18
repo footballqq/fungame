@@ -7,7 +7,15 @@ from urllib.parse import urlparse
 # from google.oauth2 import service_account
 # from google.cloud import aiplatform
 # from vertexai.generative_models import GenerativeModel
-from zhipuai import ZhipuAI
+try:
+    from zai import ZhipuAiClient  # New official-style client (OpenAI-like)
+except Exception:  # pragma: no cover - optional import fallback
+    ZhipuAiClient = None
+
+try:
+    from zhipuai import ZhipuAI  # Legacy SDK fallback
+except Exception:  # pragma: no cover - optional import fallback
+    ZhipuAI = None
 # from volcenginesdkarkruntime import Ark
 import requests  # Import requests
 # from mistralai import Mistral
@@ -27,7 +35,7 @@ def setup_llm_client(config, logger=None):
     llm_source_raw = config.get('llmsources', 'llmsource', fallback='zhipuai')
     llm_source = llm_source_raw.lower()
 
-    valid_sources = ['deepseek', 'openai', 'openrouter', 'google', 'mistral', 'zhipuai', 'googlecloud', 'doubao', 'geminiweb']
+    valid_sources = ['deepseek', 'openai', 'openrouter', 'xiaomimimo', 'google', 'mistral', 'zhipuai', 'googlecloud', 'doubao', 'geminiweb']
 
     # Read proxy settings
     use_proxy = config.getboolean('Proxy', 'use_proxy', fallback=False)
@@ -41,12 +49,13 @@ def setup_llm_client(config, logger=None):
 
     models = []  # Initialize model list for fallback handling
 
-    if llm_source in ['deepseek', 'openai', 'openrouter']:
+    if llm_source in ['deepseek', 'openai', 'openrouter', 'xiaomimimo']:
         # These are OpenAI-compatible and can support model lists
         # Determine the correct section name, handling capitalization
         if llm_source == 'deepseek': llm_source_name = 'DeepSeek'
         elif llm_source == 'openai': llm_source_name = 'OpenAI'
         elif llm_source == 'openrouter': llm_source_name = 'OpenRouter'
+        elif llm_source == 'xiaomimimo': llm_source_name = 'XiaomiMimo'
 
         api_key = config.get(llm_source_name, 'api_key')
         base_url = config.get(llm_source_name, 'base_url')
@@ -74,7 +83,24 @@ def setup_llm_client(config, logger=None):
         api_key = config.get('ZhipuAI', 'api_key')
         model_name = config.get('ZhipuAI', 'model')
         models = [model_name] # Wrap single model in a list
-        client = ZhipuAI(api_key=api_key)
+        temperature = config.getfloat('ZhipuAI', 'temperature', fallback=0.6)
+        system_prompt = config.get('ZhipuAI', 'system_prompt', fallback='你是一个有用的AI助手。')
+
+        if ZhipuAiClient is not None:
+            client = {
+                "client": ZhipuAiClient(api_key=api_key),
+                "temperature": temperature,
+                "system_prompt": system_prompt,
+            }
+        elif ZhipuAI is not None:
+            # Legacy fallback keeps compatibility with older environments
+            client = {
+                "client": ZhipuAI(api_key=api_key),
+                "temperature": temperature,
+                "system_prompt": system_prompt,
+            }
+        else:
+            raise RuntimeError("ZhipuAI SDK not available: neither 'zai' nor 'zhipuai' import succeeded.")
         llm_info = f"ZhipuAI API, model: {model_name}"
 
     elif llm_source == 'googlecloud':
@@ -145,9 +171,19 @@ def generate_llm_response(client, llm_source, prompt, models: list, logger=None)
                 response = client.generate_content(prompt)
                 return response.text
             elif llm_source == 'zhipuai':
-                response = client.chat.completions.create(
+                client_obj = client.get("client") if isinstance(client, dict) else client
+                temperature = client.get("temperature", 0.6) if isinstance(client, dict) else 0.6
+                system_prompt = client.get("system_prompt") if isinstance(client, dict) else None
+
+                messages = []
+                if system_prompt:
+                    messages.append({"role": "system", "content": system_prompt})
+                messages.append({"role": "user", "content": prompt})
+
+                response = client_obj.chat.completions.create(
                     model=model_name,
-                    messages=[{"role": "user", "content": prompt}]
+                    messages=messages,
+                    temperature=temperature,
                 )
                 return response.choices[0].message.content
             elif llm_source == 'doubao':
@@ -162,7 +198,7 @@ def generate_llm_response(client, llm_source, prompt, models: list, logger=None)
                     messages=[{"role": "user", "content": prompt}]
                 )
                 return response.choices[0].message.content
-            elif llm_source in ['openai', 'deepseek', 'openrouter']:
+            elif llm_source in ['openai', 'deepseek', 'openrouter', 'xiaomimimo']:
                 response = client.chat.completions.create(
                     model=model_name,
                     messages=[{"role": "user", "content": prompt}]

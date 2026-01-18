@@ -1,0 +1,11 @@
+{
+  "id": "qiaomenzhuan",
+  "name": "敲门砖",
+  "period": "唐",
+  "year_estimate": 618,
+  "popular": 7,
+  "meaning": "A metaphorical term for a tool used to gain entry or attention, often in the context of seeking a position or opportunity.",
+  "story": "相传唐代诗人白居易为了求取功名，曾以诗作为敲门砖，敲开了官府的门。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, featuring a traditional Chinese scholar knocking on the door of a government hall with a scroll of poetry in hand.",
+  "image_path": "cards/qiaomenzhuan/image.png"
+}

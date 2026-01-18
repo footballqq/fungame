@@ -1,0 +1,17 @@
+{
+  "cards": [
+    {
+      "id": "qiaomenzhuan",
+      "name": "敲门砖",
+      "period": "Ming Dynasty",
+      "year_estimate": 1550,
+      "popular": 7,
+      "meaning": "比喻借以获取名利或达到目的的工具或手段。一旦目的达到，工具便被抛弃，如同敲开门后砖头不再需要。",
+      "story": "明代科举盛行，士子为求功名，常携砖石至考场或官府门前，以砖叩门求见，借机呈递文章或拜谒权贵。事成之后，砖即弃置，故称“敲门砖”。后引申为达成目的的工具，目的既达，工具便失其用。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, a Ming Dynasty scholar holding a brick at a wooden gate, ink-wash mountains in the background, warm lantern light, weathered paper texture, subtle gold accents, Chinese calligraphy title '敲门砖', vintage border with carved motifs, cinematic composition, high detail, soft shadows.",
+      "image_path": "cards/qiaomenzhuan/image.png"
+    }
+  ],
+  "updated_at": "2026-01-18",
+  "version": "1.0"
+}

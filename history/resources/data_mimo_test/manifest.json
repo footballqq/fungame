@@ -1,0 +1,17 @@
+{
+  "cards": [
+    {
+      "id": "qiaomenzhuan",
+      "name": "敲门砖",
+      "period": "Ming Dynasty",
+      "year_estimate": 1500,
+      "popular": 7,
+      "meaning": "比喻借以谋取名利或达到某种目的的工具或手段。一旦目的达到，工具便被抛弃。",
+      "story": "明代科举制度盛行，读书人为了敲开仕途之门，必须熟读八股文。八股文就像一块砖头，用来敲开官府的大门。一旦考中进士，这块“敲门砖”便完成了使命，被弃之不顾。后来人们用此比喻借以谋取名利的工具。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, depicting a scholar in Ming Dynasty attire holding a brick-like object, standing before a heavy wooden gate of a government office, dim lantern light, intricate ink wash painting details, muted earth tones with accents of deep red, historical authenticity.",
+      "image_path": "cards\\qiaomenzhuan\\image.png"
+    }
+  ],
+  "updated_at": "2026-01-18",
+  "version": "1.0"
+}

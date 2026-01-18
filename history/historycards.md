@@ -44,7 +44,7 @@
 
 - `--config path/to/config.ini`
 - `--llmsource zhipuai`（临时覆盖 `config.ini` 的 `[llmsources].llmsource`）
-- `--models modelA,modelB`（临时覆盖模型列表）
+- `--models modelA,modelB`（临时覆盖模型列表；例如智谱常见可用模型：`glm-4-flash`）
 - `--max-models 3`（限制回退尝试的模型数量，避免 `openrouter` 配置过长导致很慢）
 
 参考：`utils/llm_api.md`
@@ -100,6 +100,8 @@
 
 同时做了 `id` 冲突规避：当拼音 id 与既有卡片不一致时，会自动追加稳定后缀。
 
+性能提示：重复检查本身开销不大——脚本会一次性读取 `manifest.json` 并在内存里用 `set` 做 O(1) 检索；真正容易变慢的是**每生成一条就重写一次巨大的 manifest**。
+
 ---
 
 ## 7. 调用节奏（随机等待）
@@ -109,6 +111,27 @@
 - `--sleep-min 2 --sleep-max 5`
 
 每次成功生成一条后随机 sleep（秒）。
+
+## 7.1 失败重试的指数退避（访问失败等待时间指数增加）
+
+脚本支持失败后的重试等待策略：
+
+- `--retry-backoff linear`：线性增加（默认，等待 `base * attempt`）
+- `--retry-backoff exponential`：指数增加（等待 `base * 2^(attempt-1)`）
+
+相关参数：
+
+- `--max-retries 6`
+- `--retry-wait-base 2`
+- `--retry-wait-max 120`
+- `--retry-jitter 1`（额外加 0~1 秒随机抖动，避免“扎堆重试”）
+
+## 7.2 大规模生成时的 manifest 写入策略（避免越来越慢）
+
+当 `manifest.json` 变得很大（几万条）时，建议不要每条都写一次：
+
+- `--manifest-write-every 50`：每新增 50 条才写一次（中断也没关系，已生成的 `data.json` 仍在，下次可继续或重新打包）
+- `--manifest-write-every 0`：只在最后写一次（最快，但中途中断会导致 manifest 落后于 data.json）
 
 ---
 
@@ -125,16 +148,36 @@ python history/historycards.py --resources-dir history/resources/data --range 1-
 2) 真正生成（可加随机间隔）：
 
 ```bash
-python history/historycards.py --resources-dir history/resources/data --range 1-10 --sleep-min 1 --sleep-max 3
+python history/historycards.py --resources-dir history/resources/data --range 1-10 --sleep-min 1 --sleep-max 3 --llmsource zhipuai --models glm-4-flash --max-models 1
 ```
-
-> 当你使用 `--resources-dir history/resources/data` 时，若不额外指定 `--progress-file`，进度文件会自动写到 `history/resources/data/.historycards_progress.json`。
 
 3) 检查输出：
 
 - `history/resources/data/manifest.json` 是否存在且包含 10 个 `cards`
 - `history/resources/data/cards/<id>/data.json` 是否都存在
 - 每个卡片应包含字段：`id,name,period,year_estimate,popular,meaning,story,image_path,prompt`
+
+> 当你使用 `--resources-dir history/resources/data` 时，若不额外指定 `--progress-file`，进度文件会自动写到 `history/resources/data/.historycards_progress.json`。
+
+---
+
+## 10. 2 万条时的目录结构建议（避免单目录下 2w 个子目录）
+
+默认布局是：
+
+- `cards/<id>/data.json`（2w 条会导致 `cards/` 下出现 2w 个子目录）
+
+更稳妥的做法是“分片（sharding）”：
+
+- `--card-rel-dir-template "cards/{shard2}/{id}"`
+- `--image-path-template "cards/{shard2}/{id}/image.png"`
+
+这样会变成：
+
+- `cards/qi/qiaomenzhuan/data.json`
+- `cards/mo/moxuyou/data.json`
+
+`{shard2}` 是 `id` 的前两位（拼音 id 的前两字母），通常可以把单目录的子目录数分散到最多 ~676 个桶里。
 
 ---
 
@@ -148,3 +191,20 @@ python history/historycards.py --resources-dir history/resources/data --range 1-
 - 写入 `data.json`（原子写）
 - 追加到 `manifest.json`（原子写）
 - 每条更新 progress 文件，支持断点续传
+
+---
+
+## 11. 全量扫描推荐命令（智谱 + 随机休息 + 指数退避 + 分片目录）
+
+全量扫描（会从词表第 1 条一直跑到末尾；可随时中断后用 `--resume` 继续）：
+
+```bash
+python history/historycards.py --llmsource zhipuai --max-models 1 --resume ^
+  --sleep-min 2 --sleep-max 3 ^
+  --max-retries 6 --retry-backoff exponential --retry-wait-base 2 --retry-wait-max 120 --retry-jitter 1 ^
+  --card-rel-dir-template "cards/{shard2}/{id}" --image-path-template "cards/{shard2}/{id}/image.png"
+```
+
+说明：
+- 如果你本机 `utils/config.ini` 默认 `OpenRouter` 返回 401（User not found），请显式加 `--llmsource zhipuai`（如上）。
+- 如果你遇到智谱 `400` 且错误码类似 `1210`（参数有误），通常是 `utils/config.ini` 里的 `ZhipuAI.model` 不是当前可用的模型名；推荐直接加：`--models glm-4-flash`。

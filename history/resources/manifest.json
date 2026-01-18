@@ -119,6 +119,41 @@
       "story": "战国时期，赵国名将赵奢之子赵括，自幼熟读兵书，谈兵论战无人能及。但他缺乏实战经验。公元前260年，秦国进攻赵国，廉颇在长平筑垒固守。赵王听信秦军反间计，以赵括替换廉颇。赵括盲目变更军制，主动出击。秦将白起佯装败退，截断赵军粮道，最终将赵军围困。赵括在突围时被射死，四十万赵军投降后被坑杀。",
       "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, A young Chinese general in ornate armor holding a scroll of military formations, standing arrogantly in a command tent filled with maps and scrolls, while an older advisor bows deeply with a worried expression, warm candlelight illuminating the tension",
       "image_path": "cards/zhishangtanbing/image.png"
+    },
+    {
+      "id": "qiaomenzhuan",
+      "name": "敲门砖",
+      "period": "唐",
+      "year_estimate": 618,
+      "popular": 7,
+      "meaning": "A metaphorical term for a tool used to gain entry or attention, often in the context of seeking a position or opportunity.",
+      "story": "相传唐代诗人白居易为了求取功名，曾以诗作为敲门砖，敲开了官府的门。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, featuring a traditional Chinese scholar knocking on the door of a government hall with a scroll of poetry in hand.",
+      "image_path": "cards/qiaomenzhuan/image.png"
+    },
+    {
+      "id": "moxuyou",
+      "name": "莫须有",
+      "period": "春秋",
+      "year_estimate": -770,
+      "popular": 3,
+      "meaning": "Meaningless or unfounded allegations; to charge someone without evidence.",
+      "story": "出自《左传·僖公二十四年》，原指晋文公被秦穆公怀疑，但秦穆公以莫须有的罪名将晋文公扣留。",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, depicting a scene from the Spring and Autumn Period where a noble is unjustly accused of a crime with no evidence.",
+      "image_path": "cards/moxuyou/image.png"
+    },
+    {
+      "id": "yierguang",
+      "name": "一而光",
+      "period": "春秋",
+      "year_estimate": -770,
+      "popular": 3,
+      "meaning": "Meaning: To shine brightly from the start; referring to someone who excels from the very beginning.",
+      "story": "Story: The idiom is derived from the ancient Chinese saying '一鸣惊人，再鸣惊人，三鸣惊人，终而光耀', which means 'to shine brightly after three surprising acts'. It is often used to describe a person who achieves remarkable success early in life.",
+      "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, showcasing a young, brilliant figure in traditional attire, holding a scroll or book symbolizing wisdom and talent, amidst ancient Chinese architecture and landscapes.",
+      "image_path": "cards/yierguang/image.png"
     }
-  ]
+  ],
+  "updated_at": "2026-01-18",
+  "version": "1.0"
 }

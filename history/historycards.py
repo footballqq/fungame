@@ -40,6 +40,7 @@ import hashlib
 import json
 import logging
 import os
+import posixpath
 import random
 import re
 import sys
@@ -196,7 +197,7 @@ def _normalize_card(data: dict, idiom: str, card_id: str, image_path: str) -> di
     normalized = dict(data)
     normalized["id"] = card_id
     normalized["name"] = idiom
-    normalized["image_path"] = image_path
+    normalized["image_path"] = image_path.replace("\\", "/")
 
     try:
         normalized["year_estimate"] = int(normalized["year_estimate"])
@@ -233,7 +234,37 @@ def _append_to_manifest(manifest: dict, card: dict) -> bool:
     return True
 
 
-def _choose_card_id(idiom: str, base_id: str, manifest: dict, cards_dir: str) -> str:
+def _format_vars(card_id: str) -> dict:
+    shard1 = card_id[:1] if card_id else "x"
+    shard2 = card_id[:2] if len(card_id) >= 2 else (card_id or "x")
+    return {"id": card_id, "shard1": shard1, "shard2": shard2}
+
+
+def _safe_relpath_fs(relpath: str) -> str:
+    relpath = relpath.strip().replace("/", os.sep).replace("\\", os.sep)
+    if not relpath:
+        raise ValueError("Empty relative path.")
+    if os.path.isabs(relpath):
+        raise ValueError(f"Absolute path not allowed: {relpath}")
+    norm = os.path.normpath(relpath)
+    if norm == ".." or norm.startswith(".." + os.sep):
+        raise ValueError(f"Path traversal not allowed: {relpath}")
+    return norm
+
+
+def _safe_relpath_url(relpath: str) -> str:
+    relpath = relpath.strip().replace("\\", "/")
+    if not relpath:
+        raise ValueError("Empty relative path.")
+    if relpath.startswith("/"):
+        raise ValueError(f"Absolute path not allowed: {relpath}")
+    norm = posixpath.normpath(relpath)
+    if norm == ".." or norm.startswith("../"):
+        raise ValueError(f"Path traversal not allowed: {relpath}")
+    return norm
+
+
+def _choose_card_id(idiom: str, base_id: str, manifest: dict, data_file_for_id) -> str:
     """
     Prefer pinyin id, but avoid collisions (same id for different idioms).
     If collision is detected, suffix a deterministic short hash.
@@ -248,7 +279,7 @@ def _choose_card_id(idiom: str, base_id: str, manifest: dict, cards_dir: str) ->
         if existing_name is not None and existing_name != idiom:
             return False
 
-        data_file = os.path.join(cards_dir, card_id, "data.json")
+        data_file = data_file_for_id(card_id)
         if os.path.exists(data_file):
             try:
                 existing = _load_json(data_file) or {}
@@ -308,9 +339,46 @@ def main(argv: Optional[list[str]] = None) -> int:
     parser.add_argument("--sleep-max", type=float, default=0.0, help="Max seconds to sleep between LLM calls.")
     parser.add_argument("--max-retries", type=int, default=3, help="Max retries per idiom on LLM/parse failure.")
     parser.add_argument(
+        "--retry-backoff",
+        choices=["linear", "exponential"],
+        default="linear",
+        help="Retry wait strategy when a request fails (default: linear).",
+    )
+    parser.add_argument(
+        "--retry-wait-base",
+        type=float,
+        default=1.5,
+        help="Base seconds for retry waits (linear: base*attempt, exponential: base*2^(attempt-1)).",
+    )
+    parser.add_argument(
+        "--retry-wait-max",
+        type=float,
+        default=10.0,
+        help="Max seconds to wait between retries (default: 10).",
+    )
+    parser.add_argument(
+        "--retry-jitter",
+        type=float,
+        default=0.0,
+        help="Add 0..jitter seconds random jitter to retry waits (default: 0).",
+    )
+    parser.add_argument(
         "--image-path-template",
         default="cards/{id}/image.png",
         help="Relative image path template stored in card JSON (default: cards/{id}/image.png).",
+    )
+    parser.add_argument(
+        "--card-rel-dir-template",
+        default="cards/{id}",
+        help="Relative dir (under --resources-dir) for per-card files. "
+        "Example sharding: cards/{shard2}/{id} (default: cards/{id}).",
+    )
+    parser.add_argument(
+        "--manifest-write-every",
+        type=int,
+        default=1,
+        help="Write manifest.json every N newly-added cards. "
+        "Use 0 to write only once at the end (faster for huge manifests). Default: 1.",
     )
     parser.add_argument(
         "--config",
@@ -357,6 +425,10 @@ def main(argv: Optional[list[str]] = None) -> int:
         raise ValueError("--sleep-min/--sleep-max must be >= 0.")
     if args.sleep_max and args.sleep_max < args.sleep_min:
         raise ValueError("--sleep-max must be >= --sleep-min.")
+    if args.retry_wait_base < 0 or args.retry_wait_max < 0 or args.retry_jitter < 0:
+        raise ValueError("--retry-wait-base/--retry-wait-max/--retry-jitter must be >= 0.")
+    if args.manifest_write_every < 0:
+        raise ValueError("--manifest-write-every must be >= 0.")
 
     if args.range_text:
         args.start, args.end = _parse_range(args.range_text)
@@ -400,6 +472,7 @@ def main(argv: Optional[list[str]] = None) -> int:
 
     manifest = _load_manifest(paths.manifest_file)
     existing_names = {c.get("name") for c in manifest["cards"] if isinstance(c, dict)}
+    existing_ids = {c.get("id") for c in manifest["cards"] if isinstance(c, dict)}
 
     logger.info(f"Loading LLM config: {args.config}")
     llm_config = load_llm_config(args.config)
@@ -419,13 +492,20 @@ def main(argv: Optional[list[str]] = None) -> int:
     processed = 0
     skipped = 0
     failed = 0
+    added_since_flush = 0
+
+    def data_file_for_id(card_id: str) -> str:
+        rel_dir = _safe_relpath_fs(args.card_rel_dir_template.format(**_format_vars(card_id)))
+        return os.path.join(paths.resources_dir, rel_dir, "data.json")
 
     for idx, idiom in selected:
         base_id = _slugify_id(idiom)
-        card_id = _choose_card_id(idiom, base_id, manifest, paths.cards_dir)
-        card_dir = os.path.join(paths.cards_dir, card_id)
+        card_id = _choose_card_id(idiom, base_id, manifest, data_file_for_id)
+        rel_vars = _format_vars(card_id)
+        card_rel_dir_fs = _safe_relpath_fs(args.card_rel_dir_template.format(**rel_vars))
+        card_dir = os.path.join(paths.resources_dir, card_rel_dir_fs)
         data_file = os.path.join(card_dir, "data.json")
-        image_path = args.image_path_template.format(id=card_id)
+        image_path = _safe_relpath_url(args.image_path_template.format(**rel_vars))
 
         already_manifest = idiom in existing_names
         already_file = os.path.exists(data_file)
@@ -450,9 +530,13 @@ def main(argv: Optional[list[str]] = None) -> int:
 
                 _atomic_write_json(data_file, card)
 
-                if _append_to_manifest(manifest, card):
+                if card_id not in existing_ids and idiom not in existing_names and _append_to_manifest(manifest, card):
                     existing_names.add(idiom)
-                    _atomic_write_json(paths.manifest_file, manifest)
+                    existing_ids.add(card_id)
+                    added_since_flush += 1
+                    if args.manifest_write_every > 0 and added_since_flush >= args.manifest_write_every:
+                        _atomic_write_json(paths.manifest_file, manifest)
+                        added_since_flush = 0
 
                 _save_progress(
                     args.progress_file,
@@ -467,7 +551,15 @@ def main(argv: Optional[list[str]] = None) -> int:
                 last_error = e
                 logger.warning(f"Attempt {attempt}/{args.max_retries} failed for {idx}:{idiom}: {e}")
                 if attempt < args.max_retries:
-                    time.sleep(min(10.0, 1.5 * attempt))
+                    if args.retry_backoff == "exponential":
+                        wait = args.retry_wait_base * (2 ** (attempt - 1))
+                    else:
+                        wait = args.retry_wait_base * attempt
+                    wait = min(args.retry_wait_max, wait)
+                    if args.retry_jitter:
+                        wait += random.uniform(0.0, args.retry_jitter)
+                    if wait > 0:
+                        time.sleep(wait)
 
         if last_error is not None:
             failed += 1
@@ -492,6 +584,9 @@ def main(argv: Optional[list[str]] = None) -> int:
             if delay > 0:
                 logger.debug(f"Sleep {delay:.2f}s")
                 time.sleep(delay)
+
+    if added_since_flush > 0:
+        _atomic_write_json(paths.manifest_file, manifest)
 
     logger.info(f"Done. processed={processed}, skipped={skipped}, failed={failed}")
     return 0 if failed == 0 else 2

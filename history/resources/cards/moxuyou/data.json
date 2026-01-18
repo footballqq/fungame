@@ -1,0 +1,11 @@
+{
+  "id": "moxuyou",
+  "name": "莫须有",
+  "period": "春秋",
+  "year_estimate": -770,
+  "popular": 3,
+  "meaning": "Meaningless or unfounded allegations; to charge someone without evidence.",
+  "story": "出自《左传·僖公二十四年》，原指晋文公被秦穆公怀疑，但秦穆公以莫须有的罪名将晋文公扣留。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, depicting a scene from the Spring and Autumn Period where a noble is unjustly accused of a crime with no evidence.",
+  "image_path": "cards/moxuyou/image.png"
+}
