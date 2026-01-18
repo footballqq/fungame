@@ -1,0 +1,42 @@
+# codex: 2024-05-31 调整忽略列表以提交依赖文件
+/history/resources/
+/artifacts/
+/config/image/
+/data/
+/report/
+/debug/
+/backup/
+/logs/
+/log/
+/output/
+/doc/
+article.json
+failed_packages.txt
+test.txt
+news_scraper.log
+difftemp.py
+emok.py
+app.log
+reddit_20241230.log
+__pycache__/llm_api.cpython-312.pyc
+xchrome.log
+twitter.db-shm
+twitter.db-wal
+twitter.db
+# 忽略所有.pyc文件
+*.pyc
+
+# 忽略所有__pycache__目录
+__pycache__/
+
+# 忽略所有.py[cod]文件（包括.pyc、.pyo和.pyd）
+*.py[cod]
+
+tweets.db-shm
+tweets.db-wal
+/data/*.html
+tweets.db
+removal_log.txt
+remove
+tweets.sqbpro
+todayurl.json
