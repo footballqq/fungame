@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>成语排序 - 历史长河</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="app">
         <!-- Start Screen -->
         <div id="start-screen" class="screen">
-            <h1>成语排序</h1>
-            <p>按历史年代排序成语</p>
+            <h1 class="game-title">历史成语<br><span>长河排序</span></h1>
+
+            <div id="player-profile">
+                <!-- Profile injected by JS -->
+            </div>
+
             <div class="difficulty-select">
                 <button data-level="easy">简单 (5张)</button>
                 <button data-level="medium">中等 (7张)</button>
@@ -22,13 +28,20 @@
         <!-- Game Screen -->
         <div id="game-screen" class="screen hidden">
             <header>
-                <button id="back-btn">返回</button>
+                <div class="header-left">
+                    <button id="back-btn">返回</button>
+                    <div id="score-display">积分: 0</div>
+                </div>
                 <span id="level-indicator"></span>
-                <button id="submit-btn">提交验证</button>
+                <div class="header-controls">
+                    <button id="surrender-btn" class="secondary-btn">认输/看答案</button>
+                    <button id="submit-btn" class="primary-btn">提交验证</button>
+                </div>
             </header>
             <div id="card-container">
                 <!-- Cards will be injected here -->
             </div>
+            <p id="game-hint" style="color: #8d6e63; margin-top: 10px; font-weight: bold;">点击卡片选中，再点击另一张交换位置</p>
         </div>
 
         <!-- Result Screen -->
@@ -38,7 +51,30 @@
             <button id="retry-btn">再试一次</button>
             <button id="show-answer-btn">查看答案</button>
         </div>
+
+        <!-- Confirmation Modal -->
+        <div id="confirmation-modal" class="screen hidden">
+            <div class="modal-content">
+                <h2>确认认输？</h2>
+                <p>认输将显示正确答案，并扣除 <span id="penalty-point"></span> 积分。</p>
+                <div class="modal-buttons">
+                    <button id="confirm-surrender-btn" class="primary-btn">确认认输</button>
+                    <button id="cancel-surrender-btn" class="secondary-btn">取消</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Effects Layer -->
+    <canvas id="effects-canvas"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1500;"></canvas>
+
+    <!-- Audio Placeholders -->
+    <audio id="sfx-hover" src="../assets/hover.mp3" preload="auto"></audio>
+    <audio id="sfx-flip" src="../assets/flip.mp3" preload="auto"></audio>
+    <audio id="sfx-win" src="../assets/win.mp3" preload="auto"></audio>
+    <audio id="sfx-wrong" src="../assets/wrong.mp3" preload="auto"></audio>
+
     <script src="script.js"></script>
 </body>
+
 </html>
