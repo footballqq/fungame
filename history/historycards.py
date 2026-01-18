@@ -43,6 +43,7 @@ import os
 import posixpath
 import random
 import re
+import signal
 import sys
 import time
 from dataclasses import dataclass
@@ -61,6 +62,9 @@ from utils.llm_api import generate_llm_response, load_llm_config, setup_llm_clie
 
 logger = logging.getLogger("historycards")
 
+_STOP_REQUESTED = False
+_SIGINT_COUNT = 0
+
 
 @dataclass(frozen=True)
 class Paths:
@@ -76,6 +80,25 @@ def _setup_logging(verbose: bool) -> None:
         level=logging.DEBUG if verbose else logging.INFO,
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     )
+
+def _install_sigint_handler() -> None:
+    """
+    First Ctrl+C: request graceful stop (finish current request, then exit).
+    Second Ctrl+C: force KeyboardInterrupt.
+    """
+    def handler(sig, frame):  # noqa: ARG001
+        global _STOP_REQUESTED, _SIGINT_COUNT
+        _SIGINT_COUNT += 1
+        if _SIGINT_COUNT == 1:
+            _STOP_REQUESTED = True
+            try:
+                logger.warning("Ctrl+C received: will stop after current LLM call finishes. Press Ctrl+C again to force.")
+            except Exception:
+                pass
+            return
+        signal.default_int_handler(sig, frame)
+
+    signal.signal(signal.SIGINT, handler)
 
 
 def _resolve_paths() -> Paths:
@@ -174,11 +197,11 @@ You are a historian and art director for a Chinese idiom time-line card game.
 For the idiom "{idiom}", output ONLY valid JSON with these fields:
 - "id": "{card_id}"
 - "name": "{idiom}"
-- "period": Chinese or English period label (short, e.g. "战国" or "Warring States Period")
+- "period": Chinese or English period label, dynasty (short, e.g. "战国" or "Warring States Period")
 - "year_estimate": integer year estimate (BC as negative, AD as positive)
 - "popular": integer 1-10 (10 = very common in modern Chinese; 1 = rare)
 - "meaning": Chinese meaning/explanation (1-2 sentences)
-- "story": Chinese historical allusion/background (about 80-150 Chinese characters)
+- "story": Chinese historical allusion/background, best from literary quotation like <shiji>,choose the oldest (about 80-150 Chinese characters)
 - "prompt": English image prompt. Start with:
   "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, ..."
 
@@ -405,6 +428,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     args = parser.parse_args(argv)
 
     _setup_logging(args.verbose)
+    _install_sigint_handler()
 
     resources_dir = os.path.abspath(args.resources_dir)
     cards_dir = os.path.join(resources_dir, "cards")
@@ -499,6 +523,10 @@ def main(argv: Optional[list[str]] = None) -> int:
         return os.path.join(paths.resources_dir, rel_dir, "data.json")
 
     for idx, idiom in selected:
+        if _STOP_REQUESTED:
+            logger.warning("Stop requested: exiting before starting next idiom.")
+            break
+
         base_id = _slugify_id(idiom)
         card_id = _choose_card_id(idiom, base_id, manifest, data_file_for_id)
         rel_vars = _format_vars(card_id)
@@ -519,6 +547,9 @@ def main(argv: Optional[list[str]] = None) -> int:
 
         last_error: Optional[Exception] = None
         for attempt in range(1, args.max_retries + 1):
+            if _STOP_REQUESTED and attempt > 1:
+                logger.warning("Stop requested: skipping further retries for current idiom.")
+                break
             try:
                 prompt = _build_prompt(idiom, card_id)
                 response_text = generate_llm_response(client, llm_source, prompt, models, logger)
@@ -550,6 +581,9 @@ def main(argv: Optional[list[str]] = None) -> int:
             except Exception as e:
                 last_error = e
                 logger.warning(f"Attempt {attempt}/{args.max_retries} failed for {idx}:{idiom}: {e}")
+                if _STOP_REQUESTED:
+                    logger.warning("Stop requested: will exit after current attempt.")
+                    break
                 if attempt < args.max_retries:
                     if args.retry_backoff == "exponential":
                         wait = args.retry_wait_base * (2 ** (attempt - 1))
@@ -562,6 +596,13 @@ def main(argv: Optional[list[str]] = None) -> int:
                         time.sleep(wait)
 
         if last_error is not None:
+            if _STOP_REQUESTED:
+                _save_progress(
+                    args.progress_file,
+                    {"next_index": idx, "last_idiom": idiom, "last_status": "interrupted"},
+                )
+                logger.warning("Stopped by user.")
+                break
             failed += 1
             err_file = os.path.join(card_dir, "error.txt")
             try:
@@ -585,10 +626,16 @@ def main(argv: Optional[list[str]] = None) -> int:
                 logger.debug(f"Sleep {delay:.2f}s")
                 time.sleep(delay)
 
+        if _STOP_REQUESTED:
+            logger.warning("Stop requested: exiting after finishing current idiom.")
+            break
+
     if added_since_flush > 0:
         _atomic_write_json(paths.manifest_file, manifest)
 
     logger.info(f"Done. processed={processed}, skipped={skipped}, failed={failed}")
+    if _STOP_REQUESTED:
+        return 0
     return 0 if failed == 0 else 2
 
 
