@@ -1,0 +1,11 @@
+{
+  "id": "liaodongshi",
+  "name": "辽东豕",
+  "period": "东汉",
+  "year_estimate": 100,
+  "popular": 5,
+  "meaning": "比喻事物在某地是稀有的，但在其他地方却很普通。",
+  "story": "东汉时期，辽东一人家养了一头白头猪，以为稀奇。后来得知中原地区白头猪很多，方知自己见识浅薄。后用以比喻见识短浅，不知事物在别处很普遍。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, featuring a white-headed pig in a traditional Chinese setting with elements representing the Eastern Han Dynasty.",
+  "image_path": "cards/liaodongshi/image.png"
+}

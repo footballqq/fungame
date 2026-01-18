@@ -1,0 +1,11 @@
+{
+  "id": "yirendi",
+  "name": "一人敌",
+  "period": "战国",
+  "year_estimate": -208,
+  "popular": 4,
+  "meaning": "形容武艺超群，一人能抵挡千军万马。",
+  "story": "项梁见项羽学书不成，学剑又不成，怒斥之。项羽曰：‘书足以记姓名而已，剑一人敌，不足学，要学万人敌。’后项羽果成勇将，力能扛鼎，万夫莫敌。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, depicting a fierce warrior in Warring States Period armor mid-battle, dynamic pose with a halberd, dramatic lighting, ink wash painting background with bamboo and mountains, muted earth tones.",
+  "image_path": "cards/yirendi/image.png"
+}

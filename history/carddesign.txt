@@ -83,3 +83,22 @@
 * *字体推荐:* 汉仪隶书、方正古隶、或专门设计的书法字提。字体颜色应为磨损的金漆色或深沉的古墨色。
 
 如果年份一样你是如何处理的
+
+请生成一个python程序 historycards.py
+1、读取 E:\users\kpan\BaiduSyncdisk\program\aigc\fungame\history\resources\汉语成语词典_词表_23889条.txt 指定文件（注意你可以试读前面的几行，整体比较长）
+2、每行是一个成语，你需要按照 history\resources.md 中的 json结构""cards": [
+    {
+      "id": "1001",
+      "name": "完璧归赵",
+      "period": "战国",
+      "year_estimate": -283,
+      "popular": 5,
+      "meaning": "本指蔺相如将和氏璧完好地自秦送回赵国。后比喻把原物完好地归还本人。",
+      "story": "战国时期，赵国得到和氏璧，秦王欲以十五城交换...",
+      "image_path": "images/1001.png",
+      "prompt": "High quality, historical illustration, ancient Chinese official Lin Xiangru holding a jade disc, standing in a grand Qin dynasty palace hall, facing strict soldiers, dramatic lighting, detailed texture, cinematic compilation."
+    }" ，调用大模型生成同样的文字. 其中popular是我增加的，原文件没有。是常用程度，评分 1-10.
+    3、调用的大模型请你学习 \utils\ 中的项目内容，直接调用。
+
+    给出使用方式说明，可以支持断点续传，可以指定运行条数，比如 5-10. 可以发现已经有了就不进行。支持调用大模型时间加随机数间隔等。
+    其他你能想到的内容。

@@ -1,0 +1,11 @@
+{
+  "id": "fengmaniu",
+  "name": "风马牛",
+  "period": "春秋",
+  "year_estimate": -685,
+  "popular": 7,
+  "meaning": "源自'风马牛不相及'，比喻事物之间毫无关联，互不相干。",
+  "story": "春秋时期，齐桓公率军南下攻打楚国，楚成王派使者质问。齐桓公谎称只是巡视边境，并无攻楚之意。楚王问两国相隔遥远，如何保证不相侵犯。管仲回答：即使风把两国的马牛吹到一起，也不会相遇，比喻两国相距遥远，互不侵犯。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, depicting Duke Huan of Qi and King of Chu in a historical confrontation, with horses and cattle separated by a visual representation of wind, symbolizing the idiom's meaning of unrelated elements.",
+  "image_path": "cards/fengmaniu/image.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "moxuyou",
+  "name": "莫须有",
+  "period": "南宋",
+  "year_estimate": 1142,
+  "popular": 9,
+  "meaning": "指没有事实根据的罪名或指控，形容凭空捏造的罪名。",
+  "story": "南宋时，宰相秦桧以‘谋反’罪名陷害抗金名将岳飞。大将韩世忠质问秦桧有何证据，秦桧冷然答曰：‘莫须有’（意为‘也许有’）。岳飞最终被冤杀于风波亭。此成语遂成‘毫无根据’之代名词。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, ink wash painting background. Depicts Qin Hui in a dark Song Dynasty courtroom, holding a scroll, with a stern expression. Behind him, a faint, ghostly silhouette of Yue Fei in armor. Dramatic lighting with muted earth tones, traditional Chinese calligraphy border, and subtle gold accents.",
+  "image_path": "cards/moxuyou/image.png"
+}

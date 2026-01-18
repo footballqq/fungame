@@ -1,0 +1,11 @@
+{
+  "id": "mihunzhen",
+  "name": "迷魂阵",
+  "period": "Warring States Period",
+  "year_estimate": -310,
+  "popular": 7,
+  "meaning": "指一种复杂的军事阵法，用以迷惑敌人，使其陷入混乱而无法逃脱。",
+  "story": "战国时期，军事家孙膑在马陵之战中，面对强大的魏将庞涓，假装受伤示弱，诱敌深入。随后，他精心布置了一个复杂多变的阵法，使魏军迷失方向，陷入混乱。最终，齐军以少胜多，大败魏军，庞涓兵败自杀。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, depicting a complex military formation with soldiers in ancient Chinese armor moving in confusing patterns, with a strategist observing from above, battlefield scene with mountains in the background, traditional Chinese painting elements with muted earth tones.",
+  "image_path": "cards/mihunzhen/image.png"
+}

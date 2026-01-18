@@ -1,0 +1,11 @@
+{
+  "id": "qiaobiangu",
+  "name": "敲边鼓",
+  "period": "明朝",
+  "year_estimate": 1500,
+  "popular": 8,
+  "meaning": "比喻在旁边帮忙、助势，但不担任主要角色。",
+  "story": "源于中国传统戏曲表演。在明代，戏曲艺术蓬勃发展，边鼓手作为伴奏者，虽不为主角，但通过敲击边鼓为表演者提供节奏和情绪引导，对整个演出起着重要的支持作用。后来人们用'敲边鼓'比喻在旁边帮忙、助势，但不担任主要角色。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, depicting a traditional Chinese opera performance with a drummer playing the side drum, surrounded by other performers in elaborate costumes, with traditional Chinese stage settings and props.",
+  "image_path": "cards/qiaobiangu/image.png"
+}

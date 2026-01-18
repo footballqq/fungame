@@ -1,0 +1,11 @@
+{
+  "id": "beizhongwu",
+  "name": "杯中物",
+  "period": "唐朝",
+  "year_estimate": 750,
+  "popular": 6,
+  "meaning": "指酒，因为酒常放在杯中饮用而得名。",
+  "story": "唐代诗人李白好酒，常以酒为伴，称酒为'杯中物'。他在诗中多次提到'杯中物'，如'人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。烹羊宰牛且为乐，会须一饮三百杯。'",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, featuring Li Bai, the famous Tang Dynasty poet, holding a wine cup with a serene expression, surrounded by traditional Chinese elements like calligraphy brushes, scrolls, and plum blossoms, with a warm golden light illuminating the scene.",
+  "image_path": "cards/beizhongwu/image.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "mihuntang",
+  "name": "迷魂汤",
+  "period": "战国",
+  "year_estimate": -350,
+  "popular": 6,
+  "meaning": "比喻能迷惑人心、使人失去判断力的甜言蜜语或诱惑之物。",
+  "story": "相传古时有人用特制汤药迷惑他人，使其失去自主意识。后以此比喻甜言蜜语或诱惑之物能使人神魂颠倒，失去理性判断。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, featuring a steaming bowl of mysterious soup with swirling vapors, surrounded by ancient Chinese characters and symbols representing confusion and bewilderment. The background should evoke an ancient Chinese setting with subtle elements of both temptation and warning.",
+  "image_path": "cards/mihuntang/image.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "qiaomenzhuan",
+  "name": "敲门砖",
+  "period": "唐朝",
+  "year_estimate": 750,
+  "popular": 8,
+  "meaning": "比喻用来达到目的的手段，目的达到后就不再需要了。",
+  "story": "唐代科举考试盛行，考生常携带一块砖头作为敲门砖，用以敲开考官的门请求考试机会。一旦考试通过，砖头便失去用处，被丢弃。后来人们用'敲门砖'比喻帮助自己达到目的但随后就被抛弃的手段。",
+  "prompt": "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, featuring a Tang Dynasty scholar holding a brick outside a traditional Chinese gate with intricate wooden carvings, warm autumn colors, calligraphy elements in the background, and a subtle glow around the brick to symbolize its temporary importance.",
+  "image_path": "cards/qiaomenzhuan/image.png"
+}
