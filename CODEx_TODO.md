@@ -1,0 +1,3 @@
+- [X] 新增: `history/historycards.py` 失败记录后继续处理，连续失败达到阈值才停止（默认 10）（新增 `--max-consecutive-failures`/`--stop-on-failure`）
+- [X] 新增: 将失败条目汇总写入 `history/resources/cards/_errors.jsonl` 便于后续统一处理（新增 `--errors-file`，默认写到 `cards/_errors.jsonl`）
+- [X] 测试: 使用 `pytest` 覆盖“继续处理/连续失败停止/错误汇总写入”3 个场景（新增 `tests/test_historycards_failure_handling.py`）

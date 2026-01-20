@@ -167,50 +167,10 @@ def generate_llm_response(client, llm_source, prompt, models: list, logger=None)
             if logger:
                 logger.info(f"Attempting to use model: {model_name} via {llm_source}")
 
-            if llm_source == 'googlecloud':
-                response = client.generate_content(prompt)
-                return response.text
-            elif llm_source == 'zhipuai':
-                client_obj = client.get("client") if isinstance(client, dict) else client
-                temperature = client.get("temperature", 0.6) if isinstance(client, dict) else 0.6
-                system_prompt = client.get("system_prompt") if isinstance(client, dict) else None
-
-                messages = []
-                if system_prompt:
-                    messages.append({"role": "system", "content": system_prompt})
-                messages.append({"role": "user", "content": prompt})
-
-                response = client_obj.chat.completions.create(
-                    model=model_name,
-                    messages=messages,
-                    temperature=temperature,
-                )
-                return response.choices[0].message.content
-            elif llm_source == 'doubao':
-                response = client.chat.completions.create(
-                    model=model_name,
-                    messages=[{"role": "user", "content": prompt}]
-                )
-                return response.choices[0].message.content
-            elif llm_source == 'mistral':
-                response = client.chat.complete(
-                    model=model_name,
-                    messages=[{"role": "user", "content": prompt}]
-                )
-                return response.choices[0].message.content
-            elif llm_source in ['openai', 'deepseek', 'openrouter', 'xiaomimimo']:
-                response = client.chat.completions.create(
-                    model=model_name,
-                    messages=[{"role": "user", "content": prompt}]
-                )
-                if logger:
-                    logger.info(f"Successfully generated response with model: {model_name}")
-                return response.choices[0].message.content.strip()
-            elif llm_source == 'geminiweb':
-                return _invoke_gemini_web(client, model_name, prompt, logger)
-            else:
-                # This case should ideally not be reached due to checks in setup_llm_client
-                raise ValueError(f"Unsupported llm_source: {llm_source}")
+            text = generate_llm_response_single(client, llm_source, prompt, model_name, logger)
+            if logger and llm_source in ['openai', 'deepseek', 'openrouter', 'xiaomimimo']:
+                logger.info(f"Successfully generated response with model: {model_name}")
+            return text
 
         except Exception as e:
             error_msg = f"Model '{model_name}' failed: {e}"
@@ -227,6 +187,56 @@ def generate_llm_response(client, llm_source, prompt, models: list, logger=None)
     if logger:
         logger.error(final_error_message)
     raise Exception(final_error_message)
+
+
+def generate_llm_response_single(client, llm_source, prompt: str, model_name: str, logger=None) -> str:
+    """调用单个模型生成回复（不做回退）。"""
+    if llm_source == 'googlecloud':
+        response = client.generate_content(prompt)
+        return response.text
+
+    if llm_source == 'zhipuai':
+        client_obj = client.get("client") if isinstance(client, dict) else client
+        temperature = client.get("temperature", 0.6) if isinstance(client, dict) else 0.6
+        system_prompt = client.get("system_prompt") if isinstance(client, dict) else None
+
+        messages = []
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": prompt})
+
+        response = client_obj.chat.completions.create(
+            model=model_name,
+            messages=messages,
+            temperature=temperature,
+        )
+        return response.choices[0].message.content
+
+    if llm_source == 'doubao':
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.choices[0].message.content
+
+    if llm_source == 'mistral':
+        response = client.chat.complete(
+            model=model_name,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.choices[0].message.content
+
+    if llm_source in ['openai', 'deepseek', 'openrouter', 'xiaomimimo']:
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.choices[0].message.content.strip()
+
+    if llm_source == 'geminiweb':
+        return _invoke_gemini_web(client, model_name, prompt, logger)
+
+    raise ValueError(f"Unsupported llm_source: {llm_source}")
 
 
 def _invoke_gemini_web(client_config: Dict[str, Any], model_name: str, prompt: str, logger=None) -> str:

@@ -1,0 +1,13 @@
+{
+  "current_task": "historycards 失败记录后继续处理，连续失败 N 个才停止",
+  "last_changes": [
+    "history/historycards.py",
+    "tests/test_historycards_failure_handling.py",
+    "CODEx_TODO.md"
+  ],
+  "next_actions": [
+    "实际运行 history/historycards.py，确认失败条目写入 cards/_errors.jsonl 且不中断全量任务",
+    "如仍频繁出现 JSONDecodeError，可考虑增强 _clean_llm_json（仅做安全的提取/去 fence）或优化 prompt 约束"
+  ],
+  "notes": "已改为默认继续处理：单条失败会写 per-card error.txt/error_response.txt/error_cleaned.json，并追加汇总到 cards/_errors.jsonl；连续失败达到 --max-consecutive-failures（默认 10）才停止；pytest 已通过。"
+}

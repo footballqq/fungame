@@ -209,3 +209,17 @@ python history/historycards.py --llmsource zhipuai --max-models 1 --resume ^
 说明：
 - 如果你本机 `utils/config.ini` 默认 `OpenRouter` 返回 401（User not found），请显式加 `--llmsource zhipuai`（如上）。
 - 如果你遇到智谱 `400` 且错误码类似 `1210`（参数有误），通常是 `utils/config.ini` 里的 `ZhipuAI.model` 不是当前可用的模型名；推荐直接加：`--models glm-4-flash`。
+
+---
+
+## 12. 运行统计与日志（耗时/模型使用/调用耗时）
+
+脚本会自动输出两类文件（默认写到 `--resources-dir`）：
+
+- `historycards_runlog.jsonl`：每条成语一行，包含 `idx/idiom/id/status/model/wall_s` 等（便于后处理统计）
+- `historycards_summary.json`：本次运行汇总，包含总运行时长、LLM 调用次数/平均耗时、按模型的成功/失败/耗时统计等
+
+可用参数自定义：
+
+- `--runlog-file path/to/runlog.jsonl`
+- `--summary-file path/to/summary.json`
