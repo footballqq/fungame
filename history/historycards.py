@@ -288,21 +288,71 @@ def _clean_llm_json(text: str) -> str:
 
 def _build_prompt(idiom: str, card_id: str) -> str:
     return f"""
-You are a historian and art director for a Chinese idiom time-line card game.
+你是个历史学家、语言学家、艺术家，擅长中文典故和成语，为历史时间线成语游戏写游戏卡牌描述.
 
 For the idiom "{idiom}", output ONLY valid JSON with these fields:
 - "id": "{card_id}"
 - "name": "{idiom}"
-- "period": 使用中文 Chinese period label, dynasty (short, e.g. "战国" or "Warring States Period")
+- "period": 使用中文 中国朝代标签，例如战国 唐朝等
 - "year_estimate": integer year estimate (BC as negative, AD as positive)
 - "popular": integer 1-10 (10 = very common in modern Chinese; 1 = rare)
-- "meaning": 使用中文：Chinese meaning/explanation (1-2 sentences)
-- "story": 使用中文：Chinese historical allusion/background, best from literary quotation like <shiji>,choose the oldest (about 80-150 Chinese characters)
+- "meaning": 使用中文：中文释义，1-2句话
+- "story": 使用中文：成语典故产生的背景故事，最好是出现时代最早的典籍中选取。80-150字
 - "prompt": image prompt. Start with:   "A trading card design with a heavy historical feel, ancient Chinese art style, realistic texture, ..." 后面可以用中文或者英语 表达清晰场景描述，包含人物、服饰、场景、色调等细节。Focus on vivid and detailed descriptions of characters, attire, settings, and color tones.
 
 Rules:
 - Keep it factual; if origin is uncertain, choose the most likely period and make the story conservative.
 - Do not include markdown fences.
+- 参考信息：
+朝代	起止时间	都城	都城今址	建立者
+夏朝	约前2029年-约前1559年	阳城、阳翟、老丘、斟𬩽、西河	河南登封、陈留、偃师、安阳等	禹(姒文命)
+商朝	约前1559年-约前1046年	亳、西毫、奄、殷	河南商丘、偃师、郑州、安阳	汤(子天乙)
+周朝 约前1046年-前256年
+西周	约前1046年-前771年	镐京	陕西西安	周武王姬发
+东周(分为春秋、战国两个时期)	前770年-前256年	洛邑	河南洛阳	周平王姬宜臼
+秦朝	前221年-前207年	咸阳	陕西咸阳	秦始皇帝嬴政
+西楚	前206年-前202年	彭城	江苏徐州	西楚霸王项羽
+西汉	前202年-公元8年11月	长安	陕西西安	汉高祖刘邦
+新朝	公元8年12月1日-公元23年10月6日	长安	陕西西安	建兴帝王莽
+玄汉	23年-25年	长安	陕西西安	更始帝刘玄
+东汉	25年-220年	洛阳	河南洛阳	光武帝刘秀
+三国 220年-280年
+魏	220年-266年	洛阳	河南洛阳	魏文帝曹丕
+蜀	221年-263年	成都	四川成都	昭烈帝刘备
+吴	222年-280年	建业	江苏南京	吴大帝孙权
+西晋	266年-316年	洛阳、长安	河南洛阳、陕西西安	晋武帝司马炎
+东晋	317年-420年	建康	江苏南京	晋元帝司马睿
+十六国	304年-439年	平阳等	山西临汾	石勒、刘渊等
+南朝 420年-589年
+宋	420年-479年	建康	江苏南京	宋武帝刘裕
+齐	479年-502年	建康	江苏南京	齐高帝萧道成
+梁	502年-557年	建康	江苏南京	梁武帝萧衍
+陈	557年-589年	建康	江苏南京	陈武帝陈霸先
+北朝 386年-581年
+北魏	386年-557年	平城、洛阳	山西大同、河南洛阳	道武帝拓跋圭
+东魏	534年-550年	邺城	河南安阳	魏静帝元善见
+北齐	550年-577年	邺城	河南安阳	齐文宣帝高洋
+西魏	535年-557年	长安	陕西西安	魏文帝元宝炬
+北周	557年-581年	长安	陕西西安	周明帝宇文毓
+隋朝	581年-618年	大兴	陕西西安	隋文帝杨坚
+唐朝	618年-690年、705年-907年	长安	陕西西安	唐高祖李渊
+武周	690年-705年	神都、长安	陕西西安、河南洛阳	圣神皇帝武则天
+十国 891年-979年
+五代 907年-960年
+后梁	907年-923年	开封	河南开封	梁太祖朱温
+后唐	923年-936年	洛阳	河南洛阳	唐庄宗李存勖
+后晋	936年-947年	开封	河南开封	晋高祖石敬瑭
+后汉	947年-951年	开封	河南开封	汉高祖刘知远
+后周	951年-960年	开封	河南开封	周太祖郭威
+宋朝 960年-1279年
+北宋	960年-1127年	开封	河南开封	宋太祖赵匡胤
+南宋	1127年-1279年	应天、临安	江苏南京、浙江杭州	宋高宗赵构
+辽朝	907年-1125年	上京	内蒙古巴林左旗	耶律阿保机
+西夏	1038年-1227年	兴庆府	宁夏银川	李元昊
+金朝	1115年-1234年	中都、汴京	山东汶上、河南开封	完颜阿骨打
+元朝	1271年-1368年	大都	北京	元太祖铁木真
+明朝	1368年-1644年	应天府、顺天府	江苏南京、北京	明太祖朱元璋
+清朝	1636年或1644年-1912年	奉天府、顺天府	辽宁沈阳、北京	清太祖努尔哈赤
 """.strip()
 
 

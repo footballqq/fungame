@@ -33,3 +33,7 @@
 E:\users\kpan\BaiduSyncdisk\program\aigc\fungame\utils\config.ini
 E:\users\kpan\BaiduSyncdisk\program\aigc\fungame\utils\llm_api.py
 E:\users\kpan\BaiduSyncdisk\program\aigc\fungame\utils\config.py 。 还有就是图片生成调用api部分可以先mock，后面再讨论。任务生成为 task.md
+
+
+咱们继续 history 项目。注意所有内容都基于history目录，除了llmapi在 utils目录。
+之前程序意外终止，请你自己按照任务列表检查未完成事项。每一步都记录在history\task.md中
