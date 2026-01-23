@@ -372,27 +372,35 @@ class AdventureMode extends BaseGame {
     }
 }
 
+// codex: 2026-01-23 重构 MastermindMode，实现 IMO 2024 第5题最优 3 次尝试算法
+// 算法核心：第一次扫描第二行找 M1，根据 M1 位置选择阶梯或双路径策略
 class MastermindMode extends BaseGame {
     start() {
         this.attempts = 0;
-        this.monsters = []; // Start EMPTY in Mastermind?
-        // User says: "Player places traps". BUT "Hidden in Rows 2..N-1".
-        // Does Setup exist? Or Player places dynamically?
-        // Rules say: "Player intercepts... on the cell he has stepped on".
-        // Constraints: "Row has at least 1, max 1. Col max 1."
-        // "If snail traversed row, auto-place".
-        // IMPLICATION: Monsters are NOT pre-generated. They are Quantum?
-        // Or user places them on the fly.
-        // Let's assume Monsters are EMPTY initially and defined by "Intercepts".
+        this.monsters = [];
 
-        this.initGrid(); // Empty grid
+        this.initGrid();
         this.updateStats();
-        this.snailPos = { r: 0, c: 0 };
-        this.statusEl.textContent = this.getText('status_moving');
+
+        // 核心状态变量
+        this.snailPos = null;
         this.moveInterval = null;
-        this.aiState = 'PROBE';
-        this.pathStack = [];
-        this.gameLoop();
+        this.pathStack = [];          // 当前尝试的路径栈
+        this.safeCells = new Set();   // 已确认安全的格子 "r,c" 格式
+
+        // IMO 2024 算法状态
+        this.aiPhase = 'ATTEMPT_1';   // ATTEMPT_1, ATTEMPT_2, ATTEMPT_3
+        this.aiState = 'INIT';        // 当前阶段内的子状态
+        this.m1Pos = null;            // 第一个怪物位置
+        this.m2Pos = null;            // 第二个怪物位置
+        this.staircaseDir = 0;        // 阶梯方向: 1=向右下, -1=向左下
+        this.plannedPath = [];        // 预规划路径
+        this.plannedPathIndex = 0;    // 当前执行到的路径索引
+
+        this.statusEl.textContent = this.getText('status_ready');
+
+        // 自动开始第一次尝试
+        this.startAttempt();
     }
 
     destroy() {
@@ -400,8 +408,231 @@ class MastermindMode extends BaseGame {
         clearTimeout(this.moveInterval);
     }
 
-    // Override base generate (Empty)
     generateMonsters() { return []; }
+
+    // 开始新的尝试
+    startAttempt() {
+        // 清除当前路径标记
+        this.pathStack.forEach(p => {
+            if (this.grid[p.r] && this.grid[p.r][p.c]) {
+                this.grid[p.r][p.c].isCurrentPath = false;
+            }
+        });
+        this.pathStack = [];
+
+        // 根据当前阶段确定起始位置
+        let startCol = Math.floor(this.cols / 2);
+
+        if (this.aiPhase === 'ATTEMPT_1') {
+            this.aiState = 'SCAN_ROW2';
+            startCol = Math.floor(this.cols / 2);
+        } else if (this.aiPhase === 'ATTEMPT_2') {
+            // 根据 M1 位置规划第二次尝试
+            this.planAttempt2();
+            startCol = this.plannedPath.length > 0 ? this.plannedPath[0].c : 0;
+        } else if (this.aiPhase === 'ATTEMPT_3') {
+            // 规划第三次尝试
+            this.planAttempt3();
+            startCol = this.plannedPath.length > 0 ? this.plannedPath[0].c : 0;
+        }
+
+        this.snailPos = { r: 0, c: startCol };
+        this.pathStack.push({ ...this.snailPos });
+        this.markCellSafe(0, startCol);
+        this.statusEl.textContent = this.getText('status_moving');
+        this.render();
+        this.gameLoop();
+    }
+
+    // 第二次尝试规划
+    planAttempt2() {
+        this.plannedPath = [];
+        this.plannedPathIndex = 0;
+
+        if (!this.m1Pos) {
+            // 没发现 M1，直接向下走
+            this.aiState = 'DIRECT_DOWN';
+            return;
+        }
+
+        const m1Col = this.m1Pos.c;
+
+        // 判断 M1 是否在边缘
+        if (m1Col === 0) {
+            // M1 在左边缘，使用右下阶梯
+            this.staircaseDir = 1;
+            this.aiState = 'STAIRCASE';
+            this.buildStaircasePath(1);
+        } else if (m1Col === this.cols - 1) {
+            // M1 在右边缘，使用左下阶梯
+            this.staircaseDir = -1;
+            this.aiState = 'STAIRCASE';
+            this.buildStaircasePath(this.cols - 2);
+        } else {
+            // M1 不在边缘，选择双路径策略（先尝试左侧）
+            this.aiState = 'DUAL_PATH_LEFT';
+            this.buildDualPath(m1Col - 1);
+        }
+    }
+
+    // 构建阶梯路径
+    buildStaircasePath(startCol) {
+        this.plannedPath = [];
+        let c = startCol;
+
+        // 从第 0 行开始
+        this.plannedPath.push({ r: 0, c: c });
+
+        // 阶梯式向下
+        for (let r = 1; r < this.rows; r++) {
+            this.plannedPath.push({ r, c });
+
+            // 如果还没到底，水平移动一格
+            if (r < this.rows - 1 && c + this.staircaseDir >= 0 && c + this.staircaseDir < this.cols) {
+                c += this.staircaseDir;
+                this.plannedPath.push({ r, c });
+            }
+        }
+    }
+
+    // 构建双路径（IMO 2024 正确解法）
+    // 关键洞察：M1 所在列从第2行开始是安全的（M1 是该列唯一怪物）
+    // 两条路径都进入 M1 列，只是入口不同（左侧或右侧）
+    // 每行只有一个怪物，所以两条路径在第2行不可能同时被阻塞
+    buildDualPath(sideCol) {
+        this.plannedPath = [];
+        const m1Col = this.m1Pos.c;
+
+        // 路径策略：
+        // 1. 从 sideCol 列进入
+        // 2. 经过第1行（M1 在该行的 m1Col 列，不影响 sideCol 列）
+        // 3. 到达第2行的 sideCol 列
+        // 4. 水平移动到 m1Col 列
+        // 5. 从 m1Col 列向下走到底（该列从第2行开始安全）
+
+        // 第0行：起点
+        this.plannedPath.push({ r: 0, c: sideCol });
+
+        // 第1行：sideCol 列（安全，因为 M1 在 m1Col 列）
+        this.plannedPath.push({ r: 1, c: sideCol });
+
+        // 第2行：先到 sideCol 列
+        this.plannedPath.push({ r: 2, c: sideCol });
+
+        // 如果 sideCol != m1Col，水平移动到 m1Col
+        let currentCol = sideCol;
+        while (currentCol !== m1Col) {
+            currentCol += (m1Col > currentCol) ? 1 : -1;
+            this.plannedPath.push({ r: 2, c: currentCol });
+        }
+
+        // 从 m1Col 列第3行开始向下走到底
+        for (let r = 3; r < this.rows; r++) {
+            this.plannedPath.push({ r, c: m1Col });
+        }
+    }
+
+    // 第三次尝试规划
+    planAttempt3() {
+        this.plannedPath = [];
+        this.plannedPathIndex = 0;
+
+        if (this.aiState === 'DUAL_PATH_LEFT' && this.m1Pos) {
+            // 双路径模式，切换到右侧
+            this.aiState = 'DUAL_PATH_RIGHT';
+            this.buildDualPath(this.m1Pos.c + 1);
+        } else if (this.aiState === 'STAIRCASE' && this.m1Pos && this.m2Pos) {
+            // 阶梯模式遇到 M2，切入 M1 下方
+            this.aiState = 'CUT_BELOW_M1';
+            this.buildCutBelowPath();
+        } else {
+            // 其他情况，使用已知安全路径
+            this.aiState = 'SAFE_RUN';
+            this.buildSafeRunPath();
+        }
+    }
+
+    // 构建切入 M1 下方的路径
+    // 关键：避免重复点，确保路径是有效的相邻格子序列
+    buildCutBelowPath() {
+        this.plannedPath = [];
+
+        if (!this.m1Pos || !this.m2Pos) return;
+
+        const m1Col = this.m1Pos.c;  // M1 在边缘（0 或 cols-1）
+        const m2Row = this.m2Pos.r;
+
+        // 使用 Set 避免重复点
+        const addedPoints = new Set();
+        const addPoint = (r, c) => {
+            const key = `${r},${c}`;
+            if (!addedPoints.has(key)) {
+                addedPoints.add(key);
+                this.plannedPath.push({ r, c });
+            }
+        };
+
+        // 从阶梯起始列开始
+        let col = this.staircaseDir === 1 ? 1 : this.cols - 2;
+
+        // 第 0 行起点
+        addPoint(0, col);
+
+        // 沿阶梯走到 M2 上一行（避免到达 M2）
+        for (let r = 1; r < m2Row; r++) {
+            addPoint(r, col);
+            // 阶梯水平移动
+            if (r < m2Row - 1) {  // 在 M2 之前的行才水平移动
+                if (col + this.staircaseDir >= 0 && col + this.staircaseDir < this.cols) {
+                    col += this.staircaseDir;
+                    addPoint(r, col);
+                }
+            }
+        }
+
+        // 现在在 (m2Row - 1, col) 位置
+        // 需要水平移动到 M1 所在列
+        const targetRow = m2Row - 1;
+        while (col !== m1Col) {
+            col += (m1Col > col) ? 1 : -1;
+            addPoint(targetRow, col);
+        }
+
+        // 从 M1 所在列向下走到底部
+        for (let r = targetRow + 1; r < this.rows; r++) {
+            addPoint(r, m1Col);
+        }
+
+        console.log(`[AI] buildCutBelowPath: ${this.plannedPath.length} points, from (0,${this.staircaseDir === 1 ? 1 : this.cols - 2}) to M1 col ${m1Col}`);
+    }
+
+    // 构建基于已知安全格子的路径
+    buildSafeRunPath() {
+        this.plannedPath = [];
+
+        // 简单策略：找一个没有已知怪物的列直接向下
+        const monsterCols = new Set(this.monsters.map(m => m.c));
+        let safeCol = 0;
+
+        for (let c = 0; c < this.cols; c++) {
+            if (!monsterCols.has(c)) {
+                safeCol = c;
+                break;
+            }
+        }
+
+        for (let r = 0; r < this.rows; r++) {
+            this.plannedPath.push({ r, c: safeCol });
+        }
+    }
+
+    markCellSafe(r, c) {
+        this.safeCells.add(`${r},${c}`);
+    }
+
+    isCellSafe(r, c) {
+        return this.safeCells.has(`${r},${c}`);
+    }
 
     handleCellClick(e) {
         const div = e.target.closest('.cell');
@@ -409,28 +640,26 @@ class MastermindMode extends BaseGame {
         const r = parseInt(div.dataset.r);
         const c = parseInt(div.dataset.c);
 
-        // Allow intercept ONLY at snail position
-        if (this.snailPos.r === r && this.snailPos.c === c && r > 0 && r < this.rows - 1) {
+        // 只允许在蜗牛当前位置拦截
+        if (this.snailPos && this.snailPos.r === r && this.snailPos.c === c && r > 0 && r < this.rows - 1) {
             this.triggerIntercept(r, c);
         }
     }
 
     triggerIntercept(r, c) {
-        // VALIDATION
-        // 1. One per Row check
+        // 验证放置规则
         const rowHas = this.monsters.some(m => m.r === r);
         if (rowHas) {
             alert(this.getText('msg_bad_place') + " (Row already has monster)");
             return;
         }
-        // 2. One per Col check
         const colHas = this.monsters.some(m => m.c === c);
         if (colHas) {
             alert(this.getText('msg_bad_place') + " (Col already has monster)");
             return;
         }
 
-        // PLACE
+        // 放置怪物
         const cell = this.grid[r][c];
         cell.monsterRevealed = true;
         cell.hasMonster = true;
@@ -439,26 +668,31 @@ class MastermindMode extends BaseGame {
         this.statusEl.textContent = this.getText('msg_intercept');
         clearTimeout(this.moveInterval);
 
+        // 记录怪物位置
+        this.recordMonsterHit(r, c);
+
         setTimeout(() => {
-            alert(this.getText('msg_intercept'));
             this.handleCollision(r, c);
         }, 100);
         this.render();
     }
 
     forceIntercept(r, c) {
-        // Auto-placement logic (override constraints? No, must satisfy constraints, but user design ensures solvability?)
-        // "If row has no monster and we reached end... auto place".
-        // We force place at {r, c}.
-        // Note: Logic must ensure we don't violate Col constraint if possible. 
-        // But if 'Auto-place' is rule, it dominates.
         const cell = this.grid[r][c];
         cell.monsterRevealed = true;
         cell.hasMonster = true;
         this.monsters.push({ r, c });
 
-        alert("Auto-Intercept! (End of Row)");
+        this.recordMonsterHit(r, c);
         this.handleCollision(r, c);
+    }
+
+    recordMonsterHit(r, c) {
+        if (this.aiPhase === 'ATTEMPT_1') {
+            this.m1Pos = { r, c };
+        } else if (this.aiPhase === 'ATTEMPT_2') {
+            this.m2Pos = { r, c };
+        }
     }
 
     hasMonsterInRow(r) {
@@ -468,7 +702,8 @@ class MastermindMode extends BaseGame {
     async gameLoop() {
         if (!this.snailPos) return;
 
-        const delay = this.aiState === 'SAFE_RUN' ? 200 : 1000;
+        // 根据状态调整速度
+        const delay = (this.aiState === 'SAFE_RUN' || this.plannedPath.length > 0) ? 300 : 600;
 
         this.moveInterval = setTimeout(() => {
             this.executeMove();
@@ -478,130 +713,150 @@ class MastermindMode extends BaseGame {
     executeMove() {
         const move = this.calculateNextMove();
         if (move) {
-            // Check Auto-Placement Logic BEFORE moving? Or AFTER?
-            // "If snail walks horizontally... and player hasn't placed... last one auto placed".
-            // Suggests Check BEFORE leaving the row? Or AT the last cell?
-            // "Walked to col N-1 (last col)". 
-            // So if Snail Moves To Last Col... and still no monster... Intercept!
-
-            // Logic:
-            // If we are MOVING TO (move.r, move.c).
-            // If move.r == current.r (Horizontal move to Right)
-            // AND move.c is the last column (cols-1) or end of sequence?
-            // Actually, if we are AT (r, c) and we move Right...
-
-            // Let's check: If we are AT the last column?
-            // If Snail is at (r, lastCol). It can't move Right. It must move Down?
-            // If it moves Down, it leaves the row.
-            // If it leaves the row and `!hasMonsterInRow(r)`, we must FAIL or Intercept.
-            // User says "Automatic place".
-            // Where? At current pos? Or next?
-            // "Last one auto placed". imply at the last cell of the row.
-
-            // Refined Check:
-            // If Snail is at (r, c).
-            // If calculating move implies leaving the row (move.r != r)
-            // AND `!hasMonsterInRow(r)`
-            // THEN we MUST intercept at (r, c) NOW. (Unless r=0).
-
+            // 检查是否要离开当前行
             const currentR = this.snailPos.r;
             if (currentR > 0 && currentR < this.rows - 1 && move.r !== currentR) {
                 if (!this.hasMonsterInRow(currentR)) {
-                    // Force Intercept HERE before moving
                     this.forceIntercept(currentR, this.snailPos.c);
-                    return; // Collision handler will loop.
+                    return;
                 }
             }
 
             this.moveTo(move.r, move.c);
 
-            // Continue Loop if safe
-            if (this.snailPos.r < this.rows - 1 && !this.grid[this.snailPos.r][this.snailPos.c].monsterRevealed) {
-                this.gameLoop();
+            // 如果没有撞到怪物且没到终点，继续移动
+            if (this.snailPos && this.snailPos.r < this.rows - 1) {
+                const cell = this.grid[this.snailPos.r][this.snailPos.c];
+                if (!cell.hasMonster || !cell.monsterRevealed) {
+                    this.gameLoop();
+                }
             }
         }
     }
 
     calculateNextMove() {
+        if (!this.snailPos) return null;
         const { r, c } = this.snailPos;
 
-        // 0. Win
+        // 已到达终点
         if (r >= this.rows - 1) return null;
 
-        // 1. PROBE (0,0 -> 1,0)
-        if (this.aiState === 'PROBE') {
-            if (r === 0) return { r: 1, c: 0 };
-            this.aiState = 'SWEEP';
-        }
+        // 如果有预规划路径，跟随路径
+        if (this.plannedPath.length > 0) {
+            // 找到当前位置在路径中的位置
+            let foundIndex = -1;
+            for (let i = 0; i < this.plannedPath.length; i++) {
+                if (this.plannedPath[i].r === r && this.plannedPath[i].c === c) {
+                    foundIndex = i;
+                    break;
+                }
+            }
 
-        // 2. ESCAPE (Left -> Down)
-        if (this.aiState === 'ESCAPE') {
-            if (c > 0) return { r, c: c - 1 };
-            this.aiState = 'SWEEP'; // Resume sweep
-            return { r: r + 1, c };
-        }
+            console.log(`[AI] pos=(${r},${c}), foundIdx=${foundIndex}, pathLen=${this.plannedPath.length}`);
 
-        // 3. SAFE RUN / OPTIMIZATION
-        // If we know row r+1 is safe to cross?
-        const knownMonster = this.monsters.find(m => m.r === r + 1);
-        if (knownMonster) {
-            // We know where monster is in next row.
-            // If our current column != monster column, we can go Down.
-            // But we must check if we are in Z mode?
-            // User: "If optimal path found...". 
-            // Let's apply: If known monster is NOT at (r+1, c), and we want to go down...
-            if (knownMonster.c !== c) {
-                // Optimization: Go Down immediately?
-                // Unless we are strictly Sweeping? 
-                // User: "If no monster... continue right...". 
-                // If we KNOW monster is elsewhere, we don't need to sweep.
-                this.statusEl.textContent = this.getText('msg_ai_safe');
-                return { r: r + 1, c };
+            if (foundIndex >= 0 && foundIndex < this.plannedPath.length - 1) {
+                const next = this.plannedPath[foundIndex + 1];
+                // 验证是移动到相邻格子
+                const dr = Math.abs(next.r - r);
+                const dc = Math.abs(next.c - c);
+                if (dr + dc === 1) {
+                    console.log(`[AI] following path to (${next.r},${next.c})`);
+                    return next;
+                }
+            }
+
+            // 如果在路径末尾，已完成
+            if (foundIndex === this.plannedPath.length - 1) {
+                console.log(`[AI] at path end`);
+                return null;
+            }
+
+            // 如果找不到当前位置，尝试移动到路径起点
+            if (foundIndex === -1 && this.plannedPath.length > 0) {
+                const pathStart = this.plannedPath[0];
+                // 计算到起点的移动
+                const dr = Math.abs(pathStart.r - r);
+                const dc = Math.abs(pathStart.c - c);
+                if (dr + dc === 1) {
+                    console.log(`[AI] moving to path start (${pathStart.r},${pathStart.c})`);
+                    return pathStart;
+                } else if (dr === 0 && dc > 0) {
+                    // 水平移动到起点列
+                    const nextC = c + (pathStart.c > c ? 1 : -1);
+                    console.log(`[AI] horizontal move to (${r},${nextC})`);
+                    return { r, c: nextC };
+                } else if (dc === 0 && dr > 0) {
+                    // 垂直移动到起点行
+                    const nextR = r + (pathStart.r > r ? 1 : -1);
+                    console.log(`[AI] vertical move to (${nextR},${c})`);
+                    return { r: nextR, c };
+                }
             }
         }
 
-        // 4. SWEEP (Right until... blocked? Or End?)
-        if (this.aiState === 'SWEEP') {
-            // If we can move right?
-            if (c < this.cols - 1) {
-                return { r, c: c + 1 };
-            } else {
-                // End of row. 
-                // Logic check: If no monster found, Force Intercept will fail us before we go down.
-                // So we try to go down.
-                return { r: r + 1, c };
-            }
+        // 第一次尝试：扫描第二行
+        if (this.aiPhase === 'ATTEMPT_1') {
+            return this.calculateAttempt1Move(r, c);
         }
 
-        // 5. Z_PATTERN
-        if (this.aiState === 'Z_PATTERN') {
-            // Toggles between Down and Right
-            // Heuristic: If we are at C, try Down.
-            if (!this.isKnownMonster(r + 1, c)) return { r: r + 1, c };
-            if (c < this.cols - 1 && !this.isKnownMonster(r, c + 1)) return { r, c: c + 1 };
+        // 默认：向下移动（备用逻辑）
+        if (r < this.rows - 1) {
             return { r: r + 1, c };
         }
 
+        return null;
+    }
+
+    // 第一次尝试的移动逻辑
+    calculateAttempt1Move(r, c) {
+        // 如果在第 0 行，进入第 1 行
+        if (r === 0) {
+            return { r: 1, c };
+        }
+
+        // 在第 1 行，扫描整行
+        if (r === 1) {
+            // 先向右扫描
+            if (this.aiState === 'SCAN_ROW2') {
+                if (c < this.cols - 1) {
+                    return { r, c: c + 1 };
+                } else {
+                    // 到达右边缘，改为向左扫描
+                    this.aiState = 'SCAN_LEFT';
+                }
+            }
+
+            if (this.aiState === 'SCAN_LEFT') {
+                if (c > 0) {
+                    return { r, c: c - 1 };
+                } else {
+                    // 扫描完成，没有怪物（理论上不应该发生）
+                    // 向下移动
+                    return { r: r + 1, c };
+                }
+            }
+        }
+
+        // 如果已经不在第 1 行，继续向下
         return { r: r + 1, c };
     }
 
-    isKnownMonster(r, c) {
-        if (r >= this.rows) return false;
-        return this.grid[r][c].monsterRevealed;
-    }
-
     moveTo(r, c) {
-        const lastPos = this.snailPos;
         this.snailPos = { r, c };
         this.pathStack.push({ r, c });
+        this.grid[r][c].isCurrentPath = true;
 
-        // Check if we walked into a PRE-EXISTING monster (Known)
+        // 标记为安全
+        this.markCellSafe(r, c);
+
         const cell = this.grid[r][c];
+
         if (cell.hasMonster && cell.monsterRevealed) {
             this.handleCollision(r, c);
         } else if (r === this.rows - 1) {
+            // 到达终点
             this.statusEl.textContent = this.getText('status_win');
-            this.controller.showVictory(this.attempts);
+            this.controller.showVictory(this.attempts + 1);
             clearTimeout(this.moveInterval);
         }
 
@@ -611,24 +866,38 @@ class MastermindMode extends BaseGame {
     handleCollision(r, c) {
         this.grid[r][c].monsterRevealed = true;
 
-        let validSafeSpot = { r: Math.max(0, r), c: Math.max(0, c - 1) };
+        // 保存当前路径的访问层
+        const layerIdx = this.attempts;
+        this.pathStack.forEach(p => {
+            if (this.grid[p.r] && this.grid[p.r][p.c]) {
+                this.grid[p.r][p.c].visitedLayers.push(layerIdx);
+                this.grid[p.r][p.c].isCurrentPath = false;
+            }
+        });
 
-        if (this.aiState === 'PROBE' || this.aiState === 'SWEEP') {
-            this.aiState = 'Z_PATTERN';
-            // Valid spot: If we moved Right (r, c-1). If we moved Down (r-1, c).
-            // Logic: Reset to previous step.
-            validSafeSpot = this.pathStack.length > 1 ? this.pathStack[this.pathStack.length - 2] : { r: 0, c: 0 };
-        } else if (this.aiState === 'Z_PATTERN') {
-            this.aiState = 'ESCAPE';
-            if (r > 0 && c > 0) validSafeSpot = { r: r - 1, c: c - 1 };
-            else validSafeSpot = { r: 0, c: 0 };
-        }
-
-        this.snailPos = validSafeSpot;
         this.attempts++;
         this.updateStats();
-        // Loop restart handled by trigger? No, trigger stops loop. We must restart it.
-        this.gameLoop();
+        this.snailPos = null;
+
+        // 进入下一阶段
+        if (this.aiPhase === 'ATTEMPT_1') {
+            this.aiPhase = 'ATTEMPT_2';
+            this.statusEl.textContent = `发现 M1 @ (${r},${c})，规划第二次尝试...`;
+        } else if (this.aiPhase === 'ATTEMPT_2') {
+            this.aiPhase = 'ATTEMPT_3';
+            this.statusEl.textContent = `发现 M2 @ (${r},${c})，规划第三次尝试...`;
+        } else {
+            // 第三次尝试失败（理论上不应该发生）
+            this.statusEl.textContent = '算法异常，重新开始...';
+            this.aiPhase = 'ATTEMPT_1';
+        }
+
+        this.render();
+
+        // 短暂延迟后开始下一次尝试
+        setTimeout(() => {
+            this.startAttempt();
+        }, 800);
     }
 }
 
