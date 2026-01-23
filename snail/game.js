@@ -3,6 +3,8 @@ const STRINGS = {
         title: "Snail vs Monsters",
         btn_menu: "Menu",
         btn_restart: "Restart Level",
+        btn_rules: "Game Rules",
+        btn_close: "Close",
         intro_p1: "Welcome to the maze! Hidden monsters are waiting.",
         intro_p2: "Choose your side:",
         mode_adventure_title: "Adventure Mode",
@@ -20,12 +22,27 @@ const STRINGS = {
         msg_reset: "Snail Reset!",
         msg_ai_safe: "AI found safe path! Speeding up!",
         msg_ai_blocked: "AI blocked. Calculating Z-pattern...",
-        msg_intercept: "Intercepted! Monster placed."
+        msg_intercept: "Intercepted! Monster placed.",
+        msg_bad_place: "Invalid Placement! (Row/Col constraint)",
+        rules_title: "Game Rules",
+        rules_generic: "Goal: Move from Row 1 to the Last Row.",
+        rules_monsters_title: "Monsters:",
+        rules_m1: "Hidden in Rows 2 to N-1.",
+        rules_m2: "Exactly ONE monster per ROW.",
+        rules_m3: "At most ONE monster per COLUMN.",
+        rules_snail_title: "The Snail:",
+        rules_s1: "Can move Up, Down, Left, Right to adjacent cells.",
+        rules_s2: "If it hits a monster, it restarts from Row 1.",
+        rules_s3: "Monsters remain revealed after discovery.",
+        victory_title: "VICTORY!",
+        victory_msg: "You completed the maze!"
     },
     CN: {
         title: "蜗牛与怪物",
         btn_menu: "主菜单",
         btn_restart: "重置关卡",
+        btn_rules: "游戏规则",
+        btn_close: "关闭",
         intro_p1: "欢迎来到迷宫！小心隐藏的怪物。",
         intro_p2: "请选择你的角色：",
         mode_adventure_title: "冒险模式 (我是蜗牛)",
@@ -43,46 +60,83 @@ const STRINGS = {
         msg_reset: "蜗牛已重置！",
         msg_ai_safe: "AI发现安全路径！加速中！",
         msg_ai_blocked: "AI受阻。计算Z字形走法...",
-        msg_intercept: "拦截成功！放置怪物。"
+        msg_intercept: "拦截成功！放置怪物。",
+        msg_bad_place: "放置失败！违反规则（同行/同列已有怪物）",
+        rules_title: "游戏规则",
+        rules_generic: "目标：从第一行到达最后一行。",
+        rules_monsters_title: "关于怪物：",
+        rules_m1: "隐藏在第 2 行到第 N-1 行。",
+        rules_m2: "每一行 *必须且只能* 有一个怪物。",
+        rules_m3: "每一列 *最多* 有一个怪物。",
+        rules_snail_title: "关于蜗牛：",
+        rules_s1: "可以向上下左右相邻格子移动。",
+        rules_s2: "如果撞到怪物，尝试结束，重置回起点。",
+        rules_s3: "被撞到的怪物会永久显示。",
+        victory_title: "游戏胜利！",
+        victory_msg: "恭喜你完成了迷宫！"
     }
 };
 
 class GameController {
     constructor() {
         this.lang = 'CN';
-        this.mode = null; // 'ADVENTURE' | 'MASTERMIND'
+        this.mode = null;
         this.rows = 10;
         this.cols = 9;
-        
+
         this.currentGame = null;
-        
+
         // UI Elements
         this.uiOverlay = document.getElementById('start-overlay');
         this.uiGame = document.getElementById('game-ui');
+        this.uiRules = document.getElementById('rules-overlay');
+        this.uiVictory = document.getElementById('victory-modal');
+
+        this.inputRows = document.getElementById('input-rows');
+        this.inputCols = document.getElementById('input-cols');
         this.btnLangCN = document.getElementById('btn-lang-cn');
         this.btnLangEN = document.getElementById('btn-lang-en');
+        // Mode Cards
         this.cardAdventure = document.getElementById('card-adventure');
         this.cardMastermind = document.getElementById('card-mastermind');
+        // Nav
         this.btnBack = document.getElementById('btn-back-menu');
         this.btnRestart = document.getElementById('btn-restart');
-        
+        this.btnShowRules = document.getElementById('btn-show-rules');
+        this.btnCloseRules = document.getElementById('btn-close-rules');
+
+        // Victory
+        this.btnVicRestart = document.getElementById('btn-victory-restart');
+        this.btnVicMenu = document.getElementById('btn-victory-menu');
+
         this.init();
     }
-    
+
     init() {
         this.updateLanguageUI();
-        
-        // Bind UI Events
+
         this.btnLangCN.addEventListener('click', () => this.setLang('CN'));
         this.btnLangEN.addEventListener('click', () => this.setLang('EN'));
-        
+
         this.cardAdventure.addEventListener('click', () => this.startMode('ADVENTURE'));
         this.cardMastermind.addEventListener('click', () => this.startMode('MASTERMIND'));
-        
+
         this.btnBack.addEventListener('click', () => this.showMenu());
         this.btnRestart.addEventListener('click', () => this.currentGame?.start());
+
+        this.btnShowRules.addEventListener('click', () => this.uiRules.classList.remove('hidden'));
+        this.btnCloseRules.addEventListener('click', () => this.uiRules.classList.add('hidden'));
+
+        this.btnVicRestart.addEventListener('click', () => {
+            this.uiVictory.classList.add('hidden');
+            this.currentGame?.start();
+        });
+        this.btnVicMenu.addEventListener('click', () => {
+            this.uiVictory.classList.add('hidden');
+            this.showMenu();
+        });
     }
-    
+
     setLang(lang) {
         this.lang = lang;
         this.btnLangCN.classList.toggle('active', lang === 'CN');
@@ -90,7 +144,7 @@ class GameController {
         this.updateLanguageUI();
         if (this.currentGame) this.currentGame.render();
     }
-    
+
     updateLanguageUI() {
         const textCtx = STRINGS[this.lang];
         document.querySelectorAll('[data-key]').forEach(el => {
@@ -98,22 +152,26 @@ class GameController {
             if (textCtx[key]) el.textContent = textCtx[key];
         });
     }
-    
+
     startMode(mode) {
         this.mode = mode;
+        if (this.inputRows && this.inputCols) {
+            this.rows = parseInt(this.inputRows.value) || 10;
+            this.cols = parseInt(this.inputCols.value) || 9;
+        }
         this.uiOverlay.classList.add('hidden');
         this.uiGame.classList.remove('hidden');
-        
+
         const modeTitleKey = mode === 'ADVENTURE' ? 'mode_adventure_title' : 'mode_mastermind_title';
         document.getElementById('mode-title').textContent = STRINGS[this.lang][modeTitleKey];
-        
+
         if (mode === 'ADVENTURE') {
             this.currentGame = new AdventureMode(this);
         } else {
             this.currentGame = new MastermindMode(this);
         }
     }
-    
+
     showMenu() {
         this.uiGame.classList.add('hidden');
         this.uiOverlay.classList.remove('hidden');
@@ -122,6 +180,12 @@ class GameController {
             this.currentGame = null;
         }
     }
+
+    showVictory(attempts) {
+        this.uiVictory.classList.remove('hidden');
+        document.getElementById('victory-attempts').textContent = attempts;
+        // Should stop game loop if any
+    }
 }
 
 class BaseGame {
@@ -129,45 +193,46 @@ class BaseGame {
         this.controller = controller;
         this.rows = controller.rows;
         this.cols = controller.cols;
-        this.grid = []; 
+        this.grid = [];
         this.monsters = [];
         this.snailPos = null;
         this.attempts = 0;
         this.gridEl = document.getElementById('game-grid');
         this.statusEl = document.getElementById('game-status');
         this.attemptEl = document.getElementById('attempt-count');
-        
+
         this.start();
-        
-        // Bind Click
+
         this.clickHandler = this.handleCellClick.bind(this);
         this.gridEl.addEventListener('click', this.clickHandler);
     }
-    
+
     destroy() {
         this.gridEl.removeEventListener('click', this.clickHandler);
         this.gridEl.innerHTML = '';
     }
-    
+
     getText(key) { return STRINGS[this.controller.lang][key]; }
-    
+
     start() {
         this.attempts = 0;
-        this.monsters = this.generateMonsters();
+        this.monsters = this.generateMonsters(); // In Adventure Mode is Random. In Mastermind ??
+        // Actually Base Game init monsters for Adventure. Mastermind should override to empty?
+
         this.initGrid();
         this.updateStats();
         this.render();
     }
-    
+
     initGrid() {
         this.grid = [];
-        for(let r=0; r<this.rows; r++) {
+        for (let r = 0; r < this.rows; r++) {
             const row = [];
-            for(let c=0; c<this.cols; c++) {
+            for (let c = 0; c < this.cols; c++) {
                 row.push({
                     r, c,
                     hasMonster: this.isMonsterAt(r, c),
-                    visitedLayers: [], // Array of attempt indices (0, 1, 2...)
+                    visitedLayers: [],
                     isCurrentPath: false,
                     monsterRevealed: false
                 });
@@ -177,59 +242,56 @@ class BaseGame {
     }
 
     generateMonsters() {
-        // Logic: 1 per row (except 1st/last), max 1 per col.
-        // Simplified: Random col for each middle row.
+        // Default random generation for Adventure Mode
         const monsters = [];
         const rows = [];
-        for(let r=1; r < this.rows - 1; r++) rows.push(r);
-        
-        const cols = Array.from({length: this.cols}, (_, i) => i);
+        for (let r = 1; r < this.rows - 1; r++) rows.push(r);
+
+        const cols = Array.from({ length: this.cols }, (_, i) => i);
         // Shuffle cols
         for (let i = cols.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [cols[i], cols[j]] = [cols[j], cols[i]];
         }
-        
+
         rows.forEach((r, i) => {
-            monsters.push({r, c: cols[i % cols.length]});
+            monsters.push({ r, c: cols[i % cols.length] });
         });
         return monsters;
     }
 
     isMonsterAt(r, c) { return this.monsters.some(m => m.r === r && m.c === c); }
-    
+
     handleCellClick(e) { /* Override */ }
-    
+
     updateStats() {
         this.attemptEl.textContent = this.attempts;
     }
-    
+
     render() {
         this.gridEl.style.gridTemplateColumns = `repeat(${this.cols}, 45px)`;
         this.gridEl.innerHTML = '';
-        
-        for(let r=0; r<this.rows; r++) {
-            for(let c=0; c<this.cols; c++) {
+
+        for (let r = 0; r < this.rows; r++) {
+            for (let c = 0; c < this.cols; c++) {
                 const cell = this.grid[r][c];
                 const div = document.createElement('div');
                 div.className = 'cell';
                 div.dataset.r = r;
                 div.dataset.c = c;
-                
-                // Layers
+
                 cell.visitedLayers.forEach(layerIdx => {
                     const colorIdx = (layerIdx % 4) + 1;
                     div.classList.add(`path-layer-${colorIdx}`);
                 });
-                
+
                 if (cell.monsterRevealed) div.classList.add('monster-revealed');
                 if (cell.isCurrentPath) div.classList.add('path-current');
-                
-                // Snail
+
                 if (this.snailPos && this.snailPos.r === r && this.snailPos.c === c) {
                     div.classList.add('snail');
                 }
-                
+
                 this.gridEl.appendChild(div);
             }
         }
@@ -239,7 +301,7 @@ class BaseGame {
 class AdventureMode extends BaseGame {
     start() {
         super.start();
-        this.snailPos = null; // Wait for user to pick start
+        this.snailPos = null;
         this.currentPath = [];
         this.statusEl.textContent = this.getText('status_ready');
     }
@@ -249,19 +311,18 @@ class AdventureMode extends BaseGame {
         if (!div) return;
         const r = parseInt(div.dataset.r);
         const c = parseInt(div.dataset.c);
-        
-        // 1. Start Condition
+
         if (!this.snailPos) {
+            // Start at any cell in Row 0
             if (r === 0) {
-                this.snailPos = {r, c};
+                this.snailPos = { r, c };
                 this.visit(r, c);
                 this.statusEl.textContent = this.getText('status_moving');
                 this.render();
             }
             return;
         }
-        
-        // 2. Move Logic (Adjacent)
+
         const dr = Math.abs(r - this.snailPos.r);
         const dc = Math.abs(c - this.snailPos.c);
         if (dr + dc === 1) {
@@ -270,13 +331,12 @@ class AdventureMode extends BaseGame {
     }
 
     moveTo(r, c) {
-        this.snailPos = {r, c};
+        this.snailPos = { r, c };
         this.visit(r, c);
-        
+
         const cell = this.grid[r][c];
-        
+
         if (cell.hasMonster) {
-            // Hit Monster
             cell.monsterRevealed = true;
             this.statusEl.textContent = this.getText('status_hit');
             setTimeout(() => {
@@ -284,27 +344,25 @@ class AdventureMode extends BaseGame {
                 this.resetSnail();
             }, 100);
         } else if (r === this.rows - 1) {
-            // Win
             this.statusEl.textContent = this.getText('status_win');
-            setTimeout(() => alert(this.getText('status_win') + " Attempts: " + (this.attempts+1)), 100);
+            this.controller.showVictory(this.attempts + 1);
         }
-        
+
         this.render();
     }
 
     visit(r, c) {
         this.grid[r][c].isCurrentPath = true;
-        this.currentPath.push({r, c});
+        this.currentPath.push({ r, c });
     }
 
     resetSnail() {
-        // Archive path
         const layerIdx = this.attempts;
         this.currentPath.forEach(p => {
             this.grid[p.r][p.c].visitedLayers.push(layerIdx);
             this.grid[p.r][p.c].isCurrentPath = false;
         });
-        
+
         this.attempts++;
         this.updateStats();
         this.snailPos = null;
@@ -316,175 +374,261 @@ class AdventureMode extends BaseGame {
 
 class MastermindMode extends BaseGame {
     start() {
-        super.start();
-        this.snailPos = {r: 0, c: 0}; // Starts at top-left automatically
+        this.attempts = 0;
+        this.monsters = []; // Start EMPTY in Mastermind?
+        // User says: "Player places traps". BUT "Hidden in Rows 2..N-1".
+        // Does Setup exist? Or Player places dynamically?
+        // Rules say: "Player intercepts... on the cell he has stepped on".
+        // Constraints: "Row has at least 1, max 1. Col max 1."
+        // "If snail traversed row, auto-place".
+        // IMPLICATION: Monsters are NOT pre-generated. They are Quantum?
+        // Or user places them on the fly.
+        // Let's assume Monsters are EMPTY initially and defined by "Intercepts".
+
+        this.initGrid(); // Empty grid
+        this.updateStats();
+        this.snailPos = { r: 0, c: 0 };
         this.statusEl.textContent = this.getText('status_moving');
         this.moveInterval = null;
-        this.speed = 1000; // ms
-        
-        // AI State
-        this.aiState = 'PROBE'; // PROBE, SWEEP, Z_PATTERN, ESCAPE, SAFE_RUN
-        this.targetQ = [{r:1, c:0}, {r:2, c:0}]; // Initial moves 1,1 -> 2,1 (if 0-indexed: 0,0 -> 1,0 -> ??)
-        // Wait, coords are r=[0..9], c=[0..8].
-        // Logic says: "Go to 2,1". (Row index 1, Col index 0).
-        // Let's queue: (0,0) -> start. Target: (1,0).
-        
-        this.pathStack = []; // For retracing
-        this.knownMonsters = new Set();
-        
+        this.aiState = 'PROBE';
+        this.pathStack = [];
         this.gameLoop();
     }
-    
+
     destroy() {
         super.destroy();
         clearTimeout(this.moveInterval);
     }
-    
+
+    // Override base generate (Empty)
+    generateMonsters() { return []; }
+
     handleCellClick(e) {
-        // Intercept logic
         const div = e.target.closest('.cell');
         if (!div) return;
         const r = parseInt(div.dataset.r);
         const c = parseInt(div.dataset.c);
-        
-        // Player can only click where snail IS
-        if (this.snailPos.r === r && this.snailPos.c === c) {
-            // Can't intercept on row 0
-            if (r > 0) {
-                 this.triggerIntercept(r, c);
+
+        // Allow intercept ONLY at snail position
+        if (this.snailPos.r === r && this.snailPos.c === c && r > 0 && r < this.rows - 1) {
+            this.triggerIntercept(r, c);
+        }
+    }
+
+    triggerIntercept(r, c) {
+        // VALIDATION
+        // 1. One per Row check
+        const rowHas = this.monsters.some(m => m.r === r);
+        if (rowHas) {
+            alert(this.getText('msg_bad_place') + " (Row already has monster)");
+            return;
+        }
+        // 2. One per Col check
+        const colHas = this.monsters.some(m => m.c === c);
+        if (colHas) {
+            alert(this.getText('msg_bad_place') + " (Col already has monster)");
+            return;
+        }
+
+        // PLACE
+        const cell = this.grid[r][c];
+        cell.monsterRevealed = true;
+        cell.hasMonster = true;
+        this.monsters.push({ r, c });
+
+        this.statusEl.textContent = this.getText('msg_intercept');
+        clearTimeout(this.moveInterval);
+
+        setTimeout(() => {
+            alert(this.getText('msg_intercept'));
+            this.handleCollision(r, c);
+        }, 100);
+        this.render();
+    }
+
+    forceIntercept(r, c) {
+        // Auto-placement logic (override constraints? No, must satisfy constraints, but user design ensures solvability?)
+        // "If row has no monster and we reached end... auto place".
+        // We force place at {r, c}.
+        // Note: Logic must ensure we don't violate Col constraint if possible. 
+        // But if 'Auto-place' is rule, it dominates.
+        const cell = this.grid[r][c];
+        cell.monsterRevealed = true;
+        cell.hasMonster = true;
+        this.monsters.push({ r, c });
+
+        alert("Auto-Intercept! (End of Row)");
+        this.handleCollision(r, c);
+    }
+
+    hasMonsterInRow(r) {
+        return this.monsters.some(m => m.r === r);
+    }
+
+    async gameLoop() {
+        if (!this.snailPos) return;
+
+        const delay = this.aiState === 'SAFE_RUN' ? 200 : 1000;
+
+        this.moveInterval = setTimeout(() => {
+            this.executeMove();
+        }, delay);
+    }
+
+    executeMove() {
+        const move = this.calculateNextMove();
+        if (move) {
+            // Check Auto-Placement Logic BEFORE moving? Or AFTER?
+            // "If snail walks horizontally... and player hasn't placed... last one auto placed".
+            // Suggests Check BEFORE leaving the row? Or AT the last cell?
+            // "Walked to col N-1 (last col)". 
+            // So if Snail Moves To Last Col... and still no monster... Intercept!
+
+            // Logic:
+            // If we are MOVING TO (move.r, move.c).
+            // If move.r == current.r (Horizontal move to Right)
+            // AND move.c is the last column (cols-1) or end of sequence?
+            // Actually, if we are AT (r, c) and we move Right...
+
+            // Let's check: If we are AT the last column?
+            // If Snail is at (r, lastCol). It can't move Right. It must move Down?
+            // If it moves Down, it leaves the row.
+            // If it leaves the row and `!hasMonsterInRow(r)`, we must FAIL or Intercept.
+            // User says "Automatic place".
+            // Where? At current pos? Or next?
+            // "Last one auto placed". imply at the last cell of the row.
+
+            // Refined Check:
+            // If Snail is at (r, c).
+            // If calculating move implies leaving the row (move.r != r)
+            // AND `!hasMonsterInRow(r)`
+            // THEN we MUST intercept at (r, c) NOW. (Unless r=0).
+
+            const currentR = this.snailPos.r;
+            if (currentR > 0 && currentR < this.rows - 1 && move.r !== currentR) {
+                if (!this.hasMonsterInRow(currentR)) {
+                    // Force Intercept HERE before moving
+                    this.forceIntercept(currentR, this.snailPos.c);
+                    return; // Collision handler will loop.
+                }
+            }
+
+            this.moveTo(move.r, move.c);
+
+            // Continue Loop if safe
+            if (this.snailPos.r < this.rows - 1 && !this.grid[this.snailPos.r][this.snailPos.c].monsterRevealed) {
+                this.gameLoop();
             }
         }
     }
-    
-    triggerIntercept(r, c) {
-        const cell = this.grid[r][c];
-        // Enforce: Must be a valid place (no cheat placing monsters where they shouldn't be?)
-        // Design says: "Player places traps... Snail hit monster". 
-        // Actually Design implies "Reveal/Place". 
-        // We will assume this IS a monster spot (or we force it to be one for gameplay sake?)
-        // "Player chooses whether to intercept... premise is getting to 2nd row."
-        // Let's assume hitting it counts as finding a monster.
-        
-        if (!cell.monsterRevealed) {
-            cell.monsterRevealed = true;
-            cell.hasMonster = true; // Force it if randomly wasn't there? Or valid only if real monster?
-            // "Player can choose...". imply Player IS the monster controller.
-            // Let's just say Intercept = Monster Hit.
-            
-            this.statusEl.textContent = this.getText('msg_intercept');
-            clearTimeout(this.moveInterval);
-            
-            setTimeout(() => {
-                alert(this.getText('msg_intercept'));
-                this.handleCollision(r, c);
-                this.gameLoop();
-            }, 100);
-            this.render();
-        }
-    }
-    
-    async gameLoop() {
-        if (!this.snailPos) return;
-        
-        // Calculate Next Move
-        const move = this.calculateNextMove();
-        
-        if (move) {
-            this.moveInterval = setTimeout(() => {
-                this.moveTo(move.r, move.c);
-                this.gameLoop();
-            }, this.speed);
-        } else {
-             // No move? Win or Stuck.
-        }
-    }
-    
+
     calculateNextMove() {
-        // AI Logic
-        const {r, c} = this.snailPos;
-        
-        // 0. Win Check
-        if (r === this.rows - 1) return null; // Done
-        
-        // 1. Initial State: Go to Row 1 (Index 1) Col 0
-        if (r === 0) return {r:1, c}; 
-        
-        // 2. Safe Run: If we know a column is safe (because monster found in this row elsewhere), RUN!
-        // Constraint: 1 monster per row.
-        // If we found a monster at (r, x), then (r, c) is SAFE.
-        const rowHasMonster = this.grid[r].some(cell => cell.monsterRevealed);
-        if (rowHasMonster) {
-            // Safe to move Down? No, safe to move SIDEWAYS.
-            // Safe to move DOWN if we know this COL is safe.
-            // Col is safe if ... we know all monsters? No.
-            // "1 monster per col". If Monster at (x, c), then (r, c) is safe? No, max 1.
-            
-            // "Moves fast if finds optimal path".
-            // Let's stick to the requested pattern: Sweep -> Z -> Escape.
+        const { r, c } = this.snailPos;
+
+        // 0. Win
+        if (r >= this.rows - 1) return null;
+
+        // 1. PROBE (0,0 -> 1,0)
+        if (this.aiState === 'PROBE') {
+            if (r === 0) return { r: 1, c: 0 };
+            this.aiState = 'SWEEP';
         }
-        
-        // PATTERN LOGIC
-        // Priority:
-        // If Just Hit Monster (Collision State) -> Logic handled in Collision?
-        
-        // Simple State Machine for movement
-        
-        // Default: Move Right
-        if (c < this.cols - 1) {
-             // Check if Right is known monster?
-             if (!this.grid[r][c+1].monsterRevealed) return {r, c: c+1};
+
+        // 2. ESCAPE (Left -> Down)
+        if (this.aiState === 'ESCAPE') {
+            if (c > 0) return { r, c: c - 1 };
+            this.aiState = 'SWEEP'; // Resume sweep
+            return { r: r + 1, c };
         }
-        
-        // If Blocked Right (End of grid OR Monster), Z-Pattern (Down, Right...) from current?
-        // Wait, Z-Pattern is Down -> Right.
-        if (r < this.rows - 1) {
-             return {r: r+1, c};
+
+        // 3. SAFE RUN / OPTIMIZATION
+        // If we know row r+1 is safe to cross?
+        const knownMonster = this.monsters.find(m => m.r === r + 1);
+        if (knownMonster) {
+            // We know where monster is in next row.
+            // If our current column != monster column, we can go Down.
+            // But we must check if we are in Z mode?
+            // User: "If optimal path found...". 
+            // Let's apply: If known monster is NOT at (r+1, c), and we want to go down...
+            if (knownMonster.c !== c) {
+                // Optimization: Go Down immediately?
+                // Unless we are strictly Sweeping? 
+                // User: "If no monster... continue right...". 
+                // If we KNOW monster is elsewhere, we don't need to sweep.
+                this.statusEl.textContent = this.getText('msg_ai_safe');
+                return { r: r + 1, c };
+            }
         }
-        
-        return null; // Stuck
+
+        // 4. SWEEP (Right until... blocked? Or End?)
+        if (this.aiState === 'SWEEP') {
+            // If we can move right?
+            if (c < this.cols - 1) {
+                return { r, c: c + 1 };
+            } else {
+                // End of row. 
+                // Logic check: If no monster found, Force Intercept will fail us before we go down.
+                // So we try to go down.
+                return { r: r + 1, c };
+            }
+        }
+
+        // 5. Z_PATTERN
+        if (this.aiState === 'Z_PATTERN') {
+            // Toggles between Down and Right
+            // Heuristic: If we are at C, try Down.
+            if (!this.isKnownMonster(r + 1, c)) return { r: r + 1, c };
+            if (c < this.cols - 1 && !this.isKnownMonster(r, c + 1)) return { r, c: c + 1 };
+            return { r: r + 1, c };
+        }
+
+        return { r: r + 1, c };
     }
-    
+
+    isKnownMonster(r, c) {
+        if (r >= this.rows) return false;
+        return this.grid[r][c].monsterRevealed;
+    }
+
     moveTo(r, c) {
-        this.snailPos = {r, c};
-        this.pathStack.push({r, c});
-        
-        // Check Collision (Passive check, player active intercept overrides this usually, but simple collision exists too)
+        const lastPos = this.snailPos;
+        this.snailPos = { r, c };
+        this.pathStack.push({ r, c });
+
+        // Check if we walked into a PRE-EXISTING monster (Known)
         const cell = this.grid[r][c];
         if (cell.hasMonster && cell.monsterRevealed) {
-            // Known monster, AI shouldn't have stepped here... but if it did:
             this.handleCollision(r, c);
         } else if (r === this.rows - 1) {
             this.statusEl.textContent = this.getText('status_win');
+            this.controller.showVictory(this.attempts);
             clearTimeout(this.moveInterval);
         }
-        
+
         this.render();
     }
-    
+
     handleCollision(r, c) {
-        // Reset logic:
-        // "Snail resets to i-1, j-1... then Left... then Down"
-        // Actually, "Snail resets to start" is for Adventure.
-        // For Mastermind: "Snail chooses other method... goes back to safe spot".
-        // Let's implement the specific Escape:
-        // 1. Jump back to r-1, c-1 (if c>0).
-        if (c > 0 && r > 0) {
-            this.snailPos = {r: r-1, c: c-1};
-            // Now logic change: "Always Left until left wall, then Down".
-             // We need to override the normal "Sweep Right" logic.
-             // This requires a complex state override.
-             // For prototype, let's just reset Snail to 0,0 and clear memory?
-             // No, "Memory of monsters" is key.
-             
-             // Simplification for V1: Reset to Start (0,0). AI calculates path again with new monster info.
-             this.snailPos = {r: 0, c: 0};
-        } else {
-             this.snailPos = {r: 0, c: 0};
+        this.grid[r][c].monsterRevealed = true;
+
+        let validSafeSpot = { r: Math.max(0, r), c: Math.max(0, c - 1) };
+
+        if (this.aiState === 'PROBE' || this.aiState === 'SWEEP') {
+            this.aiState = 'Z_PATTERN';
+            // Valid spot: If we moved Right (r, c-1). If we moved Down (r-1, c).
+            // Logic: Reset to previous step.
+            validSafeSpot = this.pathStack.length > 1 ? this.pathStack[this.pathStack.length - 2] : { r: 0, c: 0 };
+        } else if (this.aiState === 'Z_PATTERN') {
+            this.aiState = 'ESCAPE';
+            if (r > 0 && c > 0) validSafeSpot = { r: r - 1, c: c - 1 };
+            else validSafeSpot = { r: 0, c: 0 };
         }
-        
+
+        this.snailPos = validSafeSpot;
         this.attempts++;
         this.updateStats();
-        this.render();
+        // Loop restart handled by trigger? No, trigger stops loop. We must restart it.
+        this.gameLoop();
     }
 }
 

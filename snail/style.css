@@ -58,6 +58,54 @@ body {
     text-align: center;
     max-width: 600px;
     padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.rules-content {
+    text-align: left;
+}
+
+.rules-text {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.rules-list {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.victory-content .victory-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    animation: bounce 1s infinite;
+}
+
+.victory-stats {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.victory-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .mode-cards {
@@ -115,6 +163,9 @@ body {
     max-width: 900px;
     width: 100%;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Contains the modal */
 }
 
 .game-container.hidden {
