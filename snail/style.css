@@ -1,3 +1,4 @@
+/* // codex: 2026-01-24 将系统弹窗改为居中可爱对话框并适配移动端 */
 :root {
     --primary-color: #6c5ce7;
     --secondary-color: #a29bfe;
@@ -17,6 +18,8 @@
     --path-color-current: rgba(255, 234, 167, 0.8);
 
     --border-radius: 12px;
+    --cell-size: clamp(28px, 6.2vw, 45px);
+    --cell-font-size: clamp(1rem, 3.4vw, 1.5rem);
 }
 
 * {
@@ -33,6 +36,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 16px;
 }
 
 /* OVERLAY */
@@ -48,6 +52,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    backdrop-filter: blur(6px);
 }
 
 .overlay.hidden {
@@ -61,6 +66,34 @@ body {
     background: white;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cute-dialog {
+    max-width: 420px;
+    border: 2px solid #f1f2f6;
+    background: linear-gradient(160deg, #ffffff 0%, #fff7fb 100%);
+    position: relative;
+}
+
+.cute-dialog::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 20px;
+    background: radial-gradient(circle at top left, rgba(162, 155, 254, 0.25), transparent 60%);
+    z-index: -1;
+}
+
+.cute-dialog-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cute-dialog-message {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0.5rem 0 1.2rem;
+    white-space: pre-line;
 }
 
 .rules-content {
@@ -160,7 +193,7 @@ body {
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
+    max-width: 980px;
     width: 100%;
     text-align: center;
     position: relative;
@@ -177,6 +210,8 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .grid-wrapper {
@@ -197,14 +232,14 @@ header {
 }
 
 .cell {
-    width: 45px;
-    height: 45px;
+    width: var(--cell-size);
+    height: var(--cell-size);
     background-color: var(--cell-empty);
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: var(--cell-font-size);
     cursor: pointer;
     user-select: none;
     position: relative;
@@ -242,13 +277,13 @@ header {
 .cell.snail::after {
     content: '🐌';
     position: absolute;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .cell.monster-revealed::after {
     content: '👹';
     position: absolute;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .primary-btn {
@@ -273,4 +308,162 @@ header {
 .small-btn {
     padding: 5px 10px;
     font-size: 0.9rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.debug-panel {
+    width: min(900px, 100%);
+    border: 1px solid #eef0f3;
+    border-radius: 12px;
+    padding: 10px;
+    background: linear-gradient(160deg, #ffffff 0%, #f8f9ff 100%);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    margin: 12px auto 0;
+}
+
+.debug-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.debug-title {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.debug-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.debug-textarea {
+    width: 100%;
+    min-height: 160px;
+    max-height: 40vh;
+    resize: vertical;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e6e8ef;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.45;
+    background: #0b1020;
+    color: #e9ecff;
+    outline: none;
+}
+
+.speed-control {
+    width: min(900px, 100%);
+    border: 1px solid #eef0f3;
+    border-radius: 12px;
+    padding: 10px 12px;
+    background: #ffffff;
+    margin: 10px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.speed-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+#ai-speed-value {
+    color: var(--primary-color);
+    font-variant-numeric: tabular-nums;
+}
+
+#input-ai-speed {
+    width: 100%;
+    accent-color: var(--primary-color);
+}
+
+.mastermind-hint {
+    width: min(900px, 100%);
+    margin: 10px auto 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(162, 155, 254, 0.18);
+    border: 1px solid rgba(162, 155, 254, 0.35);
+    color: #2d3436;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+    .debug-textarea {
+        min-height: 140px;
+        font-size: 11px;
+    }
+
+    .speed-label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .game-container {
+        padding: 1.5rem;
+    }
+
+    .overlay-content {
+        width: min(92vw, 560px);
+    }
+
+    .mode-cards {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 720px) {
+    :root {
+        --cell-size: clamp(24px, 8vw, 38px);
+        --cell-font-size: clamp(0.9rem, 4vw, 1.3rem);
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-panel {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 540px) {
+    .game-container {
+        padding: 1.2rem;
+    }
+
+    .grid-wrapper {
+        padding: 6px;
+    }
+
+    .controls-area {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .mode-cards .card {
+        width: 100%;
+    }
 }

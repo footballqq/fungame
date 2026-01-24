@@ -1,3 +1,4 @@
+<!-- // codex: 2026-01-24 将系统弹窗改为居中可爱对话框并适配移动端 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,6 +54,7 @@
             <div class="header-left">
                 <button id="btn-back-menu" class="secondary-btn small-btn">← <span
                         data-key="btn_menu">Menu</span></button>
+                <button id="btn-show-rules" class="secondary-btn small-btn" data-key="btn_rules">Game Rules</button>
             </div>
             <div class="header-center">
                 <h2 id="mode-title">Adventure Mode</h2>
@@ -82,15 +84,80 @@
             <div class="controls-area">
                 <div class="action-group">
                     <button id="btn-restart" class="primary-btn" data-key="btn_restart">Restart Level</button>
+                    <button id="btn-stop-ai" class="secondary-btn" data-key="btn_stop">Stop</button>
+                    <button id="btn-resume-ai" class="primary-btn hidden" data-key="btn_resume">Resume</button>
+                    <button id="btn-toggle-log" class="secondary-btn" data-key="btn_log">Log</button>
                 </div>
-                <div class="legend">
-                    <div class="legend-item"><span class="cell safe"></span> <span data-key="legend_safe">Safe</span>
+                <div id="ai-speed-control" class="speed-control">
+                    <div class="speed-label">
+                        <span data-key="speed_label">Snail Speed</span>
+                        <span id="ai-speed-value">1000ms</span>
                     </div>
-                    <div class="legend-item"><span class="cell monster-revealed"></span> <span
-                            data-key="legend_monster">Monster</span></div>
+                    <input id="input-ai-speed" type="range" min="80" max="1500" step="20" value="600">
+                </div>
+                <div id="snail-log-panel" class="debug-panel hidden">
+                    <div class="debug-panel-header">
+                        <div class="debug-title" data-key="log_title">Snail Log</div>
+                        <div class="debug-actions">
+                            <button id="btn-copy-log" class="secondary-btn small-btn" data-key="btn_copy">Copy</button>
+                            <button id="btn-clear-log" class="secondary-btn small-btn" data-key="btn_clear">Clear</button>
+                        </div>
+                    </div>
+                    <textarea id="snail-log-textarea" class="debug-textarea" readonly
+                        placeholder="Snail log will appear here..."></textarea>
+                </div>
+                <div id="mastermind-hint" class="mastermind-hint hidden" data-key="mastermind_hint">
+                    点击蜗牛放置怪物阻止蜗牛。看看你能阻止聪明的蜗牛几次？
                 </div>
             </div>
         </main>
+    </div>
+
+    <div id="rules-overlay" class="overlay hidden">
+        <div class="overlay-content cute-dialog rules-content">
+            <div class="cute-dialog-icon">📜</div>
+            <h2 data-key="rules_title">Game Rules</h2>
+            <div class="rules-text">
+                <p data-key="rules_generic">Goal: Move from Row 1 to the Last Row.</p>
+                <h3 data-key="rules_monsters_title">Monsters:</h3>
+                <ul class="rules-list">
+                    <li data-key="rules_m1">Hidden in Rows 2 to N-1.</li>
+                    <li data-key="rules_m2">Exactly ONE monster per ROW.</li>
+                    <li data-key="rules_m3">At most ONE monster per COLUMN.</li>
+                </ul>
+                <h3 data-key="rules_snail_title">The Snail:</h3>
+                <ul class="rules-list">
+                    <li data-key="rules_s1">Can move Up, Down, Left, Right to adjacent cells.</li>
+                    <li data-key="rules_s2">If it hits a monster, it restarts from Row 1.</li>
+                    <li data-key="rules_s3">Monsters remain revealed after discovery.</li>
+                </ul>
+            </div>
+            <button id="btn-close-rules" class="primary-btn" data-key="btn_close">Close</button>
+        </div>
+    </div>
+
+    <div id="victory-modal" class="overlay hidden">
+        <div class="overlay-content cute-dialog victory-content">
+            <div class="victory-icon">🏁</div>
+            <h2 data-key="victory_title">VICTORY!</h2>
+            <div class="victory-stats">
+                <span id="victory-attempts">0</span>
+                <span data-key="stat_attempts">Attempts</span>
+            </div>
+            <p data-key="victory_msg">You completed the maze!</p>
+            <div class="victory-actions">
+                <button id="btn-victory-restart" class="primary-btn" data-key="btn_restart">Restart Level</button>
+                <button id="btn-victory-menu" class="secondary-btn" data-key="btn_menu">Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cute-dialog" class="overlay hidden">
+        <div class="overlay-content cute-dialog">
+            <div class="cute-dialog-icon">🐌</div>
+            <p id="cute-dialog-message" class="cute-dialog-message"></p>
+            <button id="btn-dialog-ok" class="primary-btn" data-key="dialog_ok">OK</button>
+        </div>
     </div>
     <script src="game.js"></script>
 </body>

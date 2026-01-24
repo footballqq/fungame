@@ -1,3 +1,8 @@
 - [X] 新增: `history/historycards.py` 失败记录后继续处理，连续失败达到阈值才停止（默认 10）（新增 `--max-consecutive-failures`/`--stop-on-failure`）
 - [X] 新增: 将失败条目汇总写入 `history/resources/cards/_errors.jsonl` 便于后续统一处理（新增 `--errors-file`，默认写到 `cards/_errors.jsonl`）
 - [X] 测试: 使用 `pytest` 覆盖“继续处理/连续失败停止/错误汇总写入”3 个场景（新增 `tests/test_historycards_failure_handling.py`）
+- [X] 修复: `snail/game.js` Mastermind 模式 AI 卡死，按 IMO 2024/5 三次尝试策略重写“边缘 M1 + 阶梯遇到 M2”的第三次逃脱路径，并移除自动强制放怪物逻辑
+- [X] 测试: 使用 `node --test` 覆盖第三次逃脱路径规划关键分支（新增 `snail/ai_strategy.test.js`）
+- [X] 体验: 用居中可爱对话框替换系统 alert，并补齐中英文文案（新增 `dialog_ok`/错误细分文案）
+- [X] 适配: 改造 `snail/index.html`/`snail/style.css`，让游戏在手机与平板自适应布局与字号
+- [X] 新增: 主宰模式 Stop/Resume + 可复制蜗牛日志（含决策/行动/碰撞），并在“第三次仍失败”时自动暂停提示复制日志；新增速度滑块可调蜗牛移动速度

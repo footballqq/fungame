@@ -1,13 +1,17 @@
 {
-  "current_task": "historycards 失败记录后继续处理，连续失败 N 个才停止",
+  "current_task": "snail 主宰模式：蜗牛日志与停止按钮",
   "last_changes": [
-    "history/historycards.py",
-    "tests/test_historycards_failure_handling.py",
-    "CODEx_TODO.md"
+    "snail/index.html",
+    "snail/style.css",
+    "snail/game.js",
+    "CODEx_TODO.md",
+    ".codex/state.json"
   ],
   "next_actions": [
-    "实际运行 history/historycards.py，确认失败条目写入 cards/_errors.jsonl 且不中断全量任务",
-    "如仍频繁出现 JSONDecodeError，可考虑增强 _clean_llm_json（仅做安全的提取/去 fence）或优化 prompt 约束"
+    "打开 snail/index.html，进入主宰模式，点击 Stop/Resume 确认暂停/继续生效",
+    "主宰模式中在蜗牛当前位置放怪物，确认日志记录 intercept/decision/move/collision 并可 Copy",
+    "调节“蜗牛速度”滑块，确认移动间隔立即生效",
+    "若仍出现“第三次仍失败”，点击“日志→复制”把记录发我定位"
   ],
-  "notes": "已改为默认继续处理：单条失败会写 per-card error.txt/error_response.txt/error_cleaned.json，并追加汇总到 cards/_errors.jsonl；连续失败达到 --max-consecutive-failures（默认 10）才停止；pytest 已通过。"
+  "notes": "新增主宰模式 Stop/Resume + 蜗牛日志面板（结构化记录决策/行动/碰撞，可复制/清空）；第三次尝试仍失败会自动暂停并提示复制日志；AI 移动速度增加滑块可调；网格列宽改为使用 CSS 变量以更好适配移动端。"
 }

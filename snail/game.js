@@ -1,3 +1,4 @@
+// codex: 2026-01-24 将系统弹窗改为居中可爱对话框并适配移动端
 const STRINGS = {
     EN: {
         title: "Snail vs Monsters",
@@ -5,14 +6,26 @@ const STRINGS = {
         btn_restart: "Restart Level",
         btn_rules: "Game Rules",
         btn_close: "Close",
+        dialog_ok: "OK",
+        btn_stop: "Stop",
+        btn_resume: "Resume",
+        btn_log: "Log",
+        log_title: "Snail Log",
+        btn_copy: "Copy",
+        btn_clear: "Clear",
+        speed_label: "Snail speed",
+        mastermind_hint: "Click the snail to place a monster and stop it. How many times can you stop the smart snail?",
+        btn_explain: "Explain",
+        explain_title: "Why 3 attempts is optimal",
+        explain_prev: "Prev",
+        explain_next: "Next",
+        explain_close: "Close",
         intro_p1: "Welcome to the maze! Hidden monsters are waiting.",
         intro_p2: "Choose your side:",
         mode_adventure_title: "Adventure Mode",
         mode_adventure_desc: "You are the Snail. Explore the grid, discover safe paths, and reach the finish line.",
         mode_mastermind_title: "Mastermind Mode",
         mode_mastermind_desc: "You are the Monster. Place traps to stop the Smart AI Snail.",
-        legend_safe: "Safe",
-        legend_monster: "Monster",
         stat_attempts: "Attempts",
         stat_status: "Status",
         status_ready: "Ready. Click start row to begin.",
@@ -24,6 +37,8 @@ const STRINGS = {
         msg_ai_blocked: "AI blocked. Calculating Z-pattern...",
         msg_intercept: "Intercepted! Monster placed.",
         msg_bad_place: "Invalid Placement! (Row/Col constraint)",
+        msg_bad_place_row: "This row already has a monster.",
+        msg_bad_place_col: "This column already has a monster.",
         rules_title: "Game Rules",
         rules_generic: "Goal: Move from Row 1 to the Last Row.",
         rules_monsters_title: "Monsters:",
@@ -43,14 +58,26 @@ const STRINGS = {
         btn_restart: "重置关卡",
         btn_rules: "游戏规则",
         btn_close: "关闭",
+        dialog_ok: "知道了",
+        btn_stop: "停止",
+        btn_resume: "继续",
+        btn_log: "日志",
+        log_title: "蜗牛日志",
+        btn_copy: "复制",
+        btn_clear: "清空",
+        speed_label: "蜗牛速度",
+        mastermind_hint: "点击蜗牛放置怪物阻止蜗牛。看看你能阻止聪明的蜗牛几次？",
+        btn_explain: "解释",
+        explain_title: "为什么 3 次就是最优解",
+        explain_prev: "上一步",
+        explain_next: "下一步",
+        explain_close: "关闭",
         intro_p1: "欢迎来到迷宫！小心隐藏的怪物。",
         intro_p2: "请选择你的角色：",
         mode_adventure_title: "冒险模式 (我是蜗牛)",
         mode_adventure_desc: "你扮演蜗牛。探索网格，发现安全路径，到达终点。",
         mode_mastermind_title: "主宰模式 (我是怪物)",
         mode_mastermind_desc: "你扮演怪物。设置陷阱阻止智能AI蜗牛。",
-        legend_safe: "安全",
-        legend_monster: "怪物",
         stat_attempts: "尝试次数",
         stat_status: "状态",
         status_ready: "准备就绪。点击第一行开始。",
@@ -62,6 +89,8 @@ const STRINGS = {
         msg_ai_blocked: "AI受阻。计算Z字形走法...",
         msg_intercept: "拦截成功！放置怪物。",
         msg_bad_place: "放置失败！违反规则（同行/同列已有怪物）",
+        msg_bad_place_row: "该行已有怪物。",
+        msg_bad_place_col: "该列已有怪物。",
         rules_title: "游戏规则",
         rules_generic: "目标：从第一行到达最后一行。",
         rules_monsters_title: "关于怪物：",
@@ -85,12 +114,39 @@ class GameController {
         this.cols = 9;
 
         this.currentGame = null;
+        this.isAiPaused = false; // 是否暂停蜗牛（用于 Mastermind 自动移动）
+        this.snailLogLines = []; // 蜗牛行动记录（用于 debug）
+        this.maxSnailLogLines = 2000; // 日志上限，避免过大卡顿
+        this.aiMoveDelayMs = 600; // aiMoveDelayMs：主宰模式蜗牛每步移动延迟（毫秒）
 
         // UI Elements
         this.uiOverlay = document.getElementById('start-overlay');
         this.uiGame = document.getElementById('game-ui');
         this.uiRules = document.getElementById('rules-overlay');
         this.uiVictory = document.getElementById('victory-modal');
+        this.uiDialog = document.getElementById('cute-dialog'); // 可爱对话框容器
+        this.dialogMessage = document.getElementById('cute-dialog-message'); // 可爱对话框正文
+        this.btnDialogOk = document.getElementById('btn-dialog-ok'); // 可爱对话框确认按钮
+        this.btnStopAi = document.getElementById('btn-stop-ai'); // 停止蜗牛按钮
+        this.btnResumeAi = document.getElementById('btn-resume-ai'); // 继续蜗牛按钮
+        this.btnToggleLog = document.getElementById('btn-toggle-log'); // 展开/收起日志
+        this.logPanel = document.getElementById('snail-log-panel'); // 日志面板
+        this.logTextarea = document.getElementById('snail-log-textarea'); // 日志文本框
+        this.btnCopyLog = document.getElementById('btn-copy-log'); // 复制日志
+        this.btnClearLog = document.getElementById('btn-clear-log'); // 清空日志
+        this.aiSpeedControl = document.getElementById('ai-speed-control'); // 速度控制容器
+        this.inputAiSpeed = document.getElementById('input-ai-speed'); // 速度滑块
+        this.aiSpeedValue = document.getElementById('ai-speed-value'); // 速度数值展示
+        this.mastermindHint = document.getElementById('mastermind-hint'); // 主宰模式引导文案
+        this.btnExplain = document.getElementById('btn-explain'); // 解释按钮（主宰模式）
+        this.explainOverlay = document.getElementById('explain-overlay'); // 解释弹层
+        this.explainText = document.getElementById('explain-text'); // 解释正文
+        this.explainStep = document.getElementById('explain-step'); // 步骤展示
+        this.btnExplainPrev = document.getElementById('btn-explain-prev'); // 上一步
+        this.btnExplainNext = document.getElementById('btn-explain-next'); // 下一步
+        this.btnExplainClose = document.getElementById('btn-explain-close'); // 关闭
+        this.explainBoard = document.getElementById('explain-board'); // 演示棋盘容器
+        this.explainArrowLayer = document.getElementById('explain-arrow-layer'); // 箭头 SVG 图层
 
         this.inputRows = document.getElementById('input-rows');
         this.inputCols = document.getElementById('input-cols');
@@ -108,12 +164,17 @@ class GameController {
         // Victory
         this.btnVicRestart = document.getElementById('btn-victory-restart');
         this.btnVicMenu = document.getElementById('btn-victory-menu');
+        this.dialogTimer = null; // 对话框自动关闭计时器
+
+        this.explainIndex = 0; // explainIndex：交互式解释当前步骤索引
+        this.explainWasPaused = false; // explainWasPaused：打开解释前是否已暂停 AI
 
         this.init();
     }
 
     init() {
         this.updateLanguageUI();
+        this.updateAiSpeedUi();
 
         this.btnLangCN.addEventListener('click', () => this.setLang('CN'));
         this.btnLangEN.addEventListener('click', () => this.setLang('EN'));
@@ -134,6 +195,25 @@ class GameController {
         this.btnVicMenu.addEventListener('click', () => {
             this.uiVictory.classList.add('hidden');
             this.showMenu();
+        });
+
+        this.btnDialogOk?.addEventListener('click', () => this.hideDialog());
+        this.uiDialog?.addEventListener('click', (event) => {
+            if (event.target === this.uiDialog) this.hideDialog();
+        });
+
+        this.btnStopAi?.addEventListener('click', () => this.pauseAi(true));
+        this.btnResumeAi?.addEventListener('click', () => this.pauseAi(false));
+        this.btnToggleLog?.addEventListener('click', () => this.toggleLogPanel());
+        this.btnCopyLog?.addEventListener('click', () => this.copyLogToClipboard());
+        this.btnClearLog?.addEventListener('click', () => this.clearSnailLog());
+        this.inputAiSpeed?.addEventListener('input', () => {
+            const value = parseInt(this.inputAiSpeed.value, 10);
+            if (Number.isFinite(value) && value > 0) {
+                this.aiMoveDelayMs = value;
+                this.updateAiSpeedUi();
+                this.appendSnailLog({ event_type: 'speed_changed', delay_ms: value });
+            }
         });
     }
 
@@ -165,6 +245,25 @@ class GameController {
         const modeTitleKey = mode === 'ADVENTURE' ? 'mode_adventure_title' : 'mode_mastermind_title';
         document.getElementById('mode-title').textContent = STRINGS[this.lang][modeTitleKey];
 
+        const isMastermindMode = mode === 'MASTERMIND';
+        this.btnToggleLog?.classList.toggle('hidden', !isMastermindMode);
+        this.aiSpeedControl?.classList.toggle('hidden', !isMastermindMode);
+        if (!isMastermindMode) this.toggleLogPanel(false);
+
+        this.isAiPaused = false;
+        this.clearSnailLog();
+        this.setStopResumeButtons();
+        if (!isMastermindMode) {
+            this.btnStopAi?.classList.add('hidden');
+            this.btnResumeAi?.classList.add('hidden');
+        }
+        this.appendSnailLog({
+            event_type: 'mode_start',
+            mode,
+            rows: this.rows,
+            cols: this.cols,
+        });
+
         if (mode === 'ADVENTURE') {
             this.currentGame = new AdventureMode(this);
         } else {
@@ -172,9 +271,18 @@ class GameController {
         }
     }
 
+    updateAiSpeedUi() { // 更新速度 UI 文案与数值
+        if (this.inputAiSpeed) this.inputAiSpeed.value = String(this.aiMoveDelayMs);
+        if (this.aiSpeedValue) this.aiSpeedValue.textContent = `${this.aiMoveDelayMs}ms`;
+    }
+
     showMenu() {
         this.uiGame.classList.add('hidden');
         this.uiOverlay.classList.remove('hidden');
+        this.hideDialog();
+        this.isAiPaused = false;
+        this.setStopResumeButtons();
+        this.toggleLogPanel(false);
         if (this.currentGame) {
             this.currentGame.destroy();
             this.currentGame = null;
@@ -185,6 +293,97 @@ class GameController {
         this.uiVictory.classList.remove('hidden');
         document.getElementById('victory-attempts').textContent = attempts;
         // Should stop game loop if any
+    }
+
+    showDialog(message, options = {}) { // 显示可爱对话框
+        if (!this.uiDialog || !this.dialogMessage) return;
+        if (this.dialogTimer) {
+            clearTimeout(this.dialogTimer);
+            this.dialogTimer = null;
+        }
+        this.dialogMessage.textContent = message;
+        this.uiDialog.classList.remove('hidden');
+        if (options.autoCloseMs) {
+            this.dialogTimer = setTimeout(() => {
+                this.hideDialog();
+            }, options.autoCloseMs);
+        }
+    }
+
+    hideDialog() { // 隐藏可爱对话框
+        if (!this.uiDialog) return;
+        this.uiDialog.classList.add('hidden');
+        if (this.dialogTimer) {
+            clearTimeout(this.dialogTimer);
+            this.dialogTimer = null;
+        }
+    }
+
+    toggleLogPanel(forceOpen = null) { // 展开/收起日志面板
+        if (!this.logPanel) return;
+        const shouldOpen = forceOpen === null ? this.logPanel.classList.contains('hidden') : forceOpen;
+        this.logPanel.classList.toggle('hidden', !shouldOpen);
+    }
+
+    pauseAi(shouldPause) { // 暂停/恢复蜗牛（仅影响 Mastermind 的自动移动）
+        this.isAiPaused = shouldPause;
+        this.setStopResumeButtons();
+        if (shouldPause) this.toggleLogPanel(true);
+        this.currentGame?.setPaused?.(shouldPause);
+        this.appendSnailLog({ event_type: shouldPause ? 'paused' : 'resumed' });
+    }
+
+    setStopResumeButtons() { // 切换按钮显示状态
+        if (!this.btnStopAi || !this.btnResumeAi) return;
+        this.btnStopAi.classList.toggle('hidden', this.isAiPaused);
+        this.btnResumeAi.classList.toggle('hidden', !this.isAiPaused);
+    }
+
+    clearSnailLog() { // 清空日志
+        this.snailLogLines = [];
+        if (this.logTextarea) this.logTextarea.value = '';
+    }
+
+    formatSnailLogLine(data) { // 统一日志格式，便于复制给我 debug
+        const timestamp = new Date().toISOString();
+        const safeJson = (() => {
+            try {
+                return JSON.stringify(data);
+            } catch {
+                return JSON.stringify({ event_type: 'log_serialize_error' });
+            }
+        })();
+        return `[${timestamp}] ${safeJson}`;
+    }
+
+    appendSnailLog(data) { // 追加日志
+        const line = this.formatSnailLogLine(data);
+        this.snailLogLines.push(line);
+        if (this.snailLogLines.length > this.maxSnailLogLines) {
+            this.snailLogLines.splice(0, this.snailLogLines.length - this.maxSnailLogLines);
+        }
+        if (this.logTextarea) {
+            this.logTextarea.value = this.snailLogLines.join('\n');
+            this.logTextarea.scrollTop = this.logTextarea.scrollHeight;
+        }
+    }
+
+    async copyLogToClipboard() { // 复制日志到剪贴板
+        const text = this.logTextarea ? this.logTextarea.value : this.snailLogLines.join('\n');
+        if (!text) {
+            this.showDialog(this.lang === 'CN' ? '没有可复制的日志。' : 'No log to copy.', { autoCloseMs: 1200 });
+            return;
+        }
+        try {
+            await navigator.clipboard.writeText(text);
+            this.showDialog(this.lang === 'CN' ? '已复制日志，可以直接粘贴给我。' : 'Copied. Paste it here.', { autoCloseMs: 1200 });
+        } catch {
+            if (this.logTextarea) {
+                this.logTextarea.focus();
+                this.logTextarea.select();
+            }
+            this.showDialog(this.lang === 'CN' ? '复制失败：已选中日志，请手动复制。' : 'Copy failed: selected, please copy manually.', { autoCloseMs: 1600 });
+        }
     }
 }
 
@@ -211,6 +410,8 @@ class BaseGame {
         this.gridEl.removeEventListener('click', this.clickHandler);
         this.gridEl.innerHTML = '';
     }
+
+    setPaused(_shouldPause) { /* 可选：由子类实现 */ }
 
     getText(key) { return STRINGS[this.controller.lang][key]; }
 
@@ -269,7 +470,7 @@ class BaseGame {
     }
 
     render() {
-        this.gridEl.style.gridTemplateColumns = `repeat(${this.cols}, 45px)`;
+        this.gridEl.style.gridTemplateColumns = `repeat(${this.cols}, var(--cell-size))`;
         this.gridEl.innerHTML = '';
 
         for (let r = 0; r < this.rows; r++) {
@@ -340,7 +541,7 @@ class AdventureMode extends BaseGame {
             cell.monsterRevealed = true;
             this.statusEl.textContent = this.getText('status_hit');
             setTimeout(() => {
-                alert(this.getText('status_hit'));
+                this.controller.showDialog(this.getText('status_hit'), { autoCloseMs: 900 });
                 this.resetSnail();
             }, 100);
         } else if (r === this.rows - 1) {
@@ -385,6 +586,8 @@ class MastermindMode extends BaseGame {
         // 核心状态变量
         this.snailPos = null;
         this.moveInterval = null;
+        this.nextAttemptTimer = null; // 下一次尝试的定时器（暂停/销毁时需要清理）
+        this.isPaused = false; // 是否暂停蜗牛自动移动（由 Stop/Resume 控制）
         this.pathStack = [];          // 当前尝试的路径栈
         this.safeCells = new Set();   // 已确认安全的格子 "r,c" 格式
 
@@ -393,11 +596,20 @@ class MastermindMode extends BaseGame {
         this.aiState = 'INIT';        // 当前阶段内的子状态
         this.m1Pos = null;            // 第一个怪物位置
         this.m2Pos = null;            // 第二个怪物位置
+        this.m2EncounterAxis = null;  // M2 遇到时的移动轴：HORIZONTAL(向东/西) 或 VERTICAL(向南)，用于第三次路径分支
         this.staircaseDir = 0;        // 阶梯方向: 1=向右下, -1=向左下
         this.plannedPath = [];        // 预规划路径
         this.plannedPathIndex = 0;    // 当前执行到的路径索引
 
         this.statusEl.textContent = this.getText('status_ready');
+
+        this.controller.appendSnailLog({
+            event_type: 'ai_init',
+            ai_phase: this.aiPhase,
+            ai_state: this.aiState,
+            rows: this.rows,
+            cols: this.cols,
+        });
 
         // 自动开始第一次尝试
         this.startAttempt();
@@ -406,12 +618,36 @@ class MastermindMode extends BaseGame {
     destroy() {
         super.destroy();
         clearTimeout(this.moveInterval);
+        clearTimeout(this.nextAttemptTimer);
     }
 
     generateMonsters() { return []; }
 
+    setPaused(shouldPause) { // 主宰模式：暂停/恢复蜗牛自动移动
+        this.isPaused = shouldPause;
+        if (shouldPause) {
+            clearTimeout(this.moveInterval);
+            this.moveInterval = null;
+            clearTimeout(this.nextAttemptTimer);
+            this.nextAttemptTimer = null;
+            return;
+        }
+
+        // 恢复时：若当前有位置则继续移动，否则进入下一次尝试
+        if (this.snailPos) {
+            this.gameLoop();
+        } else {
+            this.startAttempt();
+        }
+    }
+
     // 开始新的尝试
     startAttempt() {
+        if (this.isPaused) {
+            this.controller.appendSnailLog({ event_type: 'start_attempt_skipped_paused', ai_phase: this.aiPhase, ai_state: this.aiState });
+            return;
+        }
+
         // 清除当前路径标记
         this.pathStack.forEach(p => {
             if (this.grid[p.r] && this.grid[p.r][p.c]) {
@@ -439,6 +675,22 @@ class MastermindMode extends BaseGame {
         this.snailPos = { r: 0, c: startCol };
         this.pathStack.push({ ...this.snailPos });
         this.markCellSafe(0, startCol);
+
+        this.controller.appendSnailLog({
+            event_type: 'attempt_start',
+            attempt_index: this.attempts + 1,
+            ai_phase: this.aiPhase,
+            ai_state: this.aiState,
+            start_pos: { ...this.snailPos },
+            m1_pos: this.m1Pos,
+            m2_pos: this.m2Pos,
+            m2_encounter_axis: this.m2EncounterAxis,
+            staircase_dir: this.staircaseDir,
+            planned_path_len: this.plannedPath.length,
+            planned_path_head: this.plannedPath.slice(0, 6),
+            planned_path_tail: this.plannedPath.slice(-6),
+        });
+
         this.statusEl.textContent = this.getText('status_moving');
         this.render();
         this.gameLoop();
@@ -556,54 +808,29 @@ class MastermindMode extends BaseGame {
     // 关键：避免重复点，确保路径是有效的相邻格子序列
     buildCutBelowPath() {
         this.plannedPath = [];
-
         if (!this.m1Pos || !this.m2Pos) return;
 
-        const m1Col = this.m1Pos.c;  // M1 在边缘（0 或 cols-1）
-        const m2Row = this.m2Pos.r;
+        const plannedPath = buildImoEdgeEscapePath({
+            rows: this.rows,
+            cols: this.cols,
+            m1Col: this.m1Pos.c,
+            m2Row: this.m2Pos.r,
+            m2Col: this.m2Pos.c,
+            staircaseDir: this.staircaseDir,
+            m2EncounterAxis: this.m2EncounterAxis,
+        });
 
-        // 使用 Set 避免重复点
-        const addedPoints = new Set();
-        const addPoint = (r, c) => {
-            const key = `${r},${c}`;
-            if (!addedPoints.has(key)) {
-                addedPoints.add(key);
-                this.plannedPath.push({ r, c });
-            }
-        };
-
-        // 从阶梯起始列开始
-        let col = this.staircaseDir === 1 ? 1 : this.cols - 2;
-
-        // 第 0 行起点
-        addPoint(0, col);
-
-        // 沿阶梯走到 M2 上一行（避免到达 M2）
-        for (let r = 1; r < m2Row; r++) {
-            addPoint(r, col);
-            // 阶梯水平移动
-            if (r < m2Row - 1) {  // 在 M2 之前的行才水平移动
-                if (col + this.staircaseDir >= 0 && col + this.staircaseDir < this.cols) {
-                    col += this.staircaseDir;
-                    addPoint(r, col);
-                }
-            }
+        if (!plannedPath || plannedPath.length === 0) {
+            this.buildSafeRunPath();
+            return;
         }
 
-        // 现在在 (m2Row - 1, col) 位置
-        // 需要水平移动到 M1 所在列
-        const targetRow = m2Row - 1;
-        while (col !== m1Col) {
-            col += (m1Col > col) ? 1 : -1;
-            addPoint(targetRow, col);
-        }
+        this.plannedPath = plannedPath;
+    }
 
-        // 从 M1 所在列向下走到底部
-        for (let r = targetRow + 1; r < this.rows; r++) {
-            addPoint(r, m1Col);
-        }
-
-        console.log(`[AI] buildCutBelowPath: ${this.plannedPath.length} points, from (0,${this.staircaseDir === 1 ? 1 : this.cols - 2}) to M1 col ${m1Col}`);
+    // 获取本次尝试最后一步的移动轴，用于区分“向东/西遇到 M2”与“向南遇到 M2”。
+    getCurrentAttemptLastMoveAxis() {
+        return getLastMoveAxisFromPath(this.pathStack);
     }
 
     // 构建基于已知安全格子的路径
@@ -635,6 +862,7 @@ class MastermindMode extends BaseGame {
     }
 
     handleCellClick(e) {
+        if (this.isPaused) return;
         const div = e.target.closest('.cell');
         if (!div) return;
         const r = parseInt(div.dataset.r);
@@ -650,12 +878,30 @@ class MastermindMode extends BaseGame {
         // 验证放置规则
         const rowHas = this.monsters.some(m => m.r === r);
         if (rowHas) {
-            alert(this.getText('msg_bad_place') + " (Row already has monster)");
+            this.controller.appendSnailLog({
+                event_type: 'intercept_invalid',
+                reason: 'row_already_has_monster',
+                pos: { r, c },
+                ai_phase: this.aiPhase,
+                ai_state: this.aiState,
+                monsters: this.monsters.slice(),
+            });
+            const dialogMessage = `${this.getText('msg_bad_place')}\n${this.getText('msg_bad_place_row')}`; // 组合后的放置错误提示
+            this.controller.showDialog(dialogMessage, { autoCloseMs: 1400 });
             return;
         }
         const colHas = this.monsters.some(m => m.c === c);
         if (colHas) {
-            alert(this.getText('msg_bad_place') + " (Col already has monster)");
+            this.controller.appendSnailLog({
+                event_type: 'intercept_invalid',
+                reason: 'col_already_has_monster',
+                pos: { r, c },
+                ai_phase: this.aiPhase,
+                ai_state: this.aiState,
+                monsters: this.monsters.slice(),
+            });
+            const dialogMessage = `${this.getText('msg_bad_place')}\n${this.getText('msg_bad_place_col')}`; // 组合后的放置错误提示
+            this.controller.showDialog(dialogMessage, { autoCloseMs: 1400 });
             return;
         }
 
@@ -664,6 +910,14 @@ class MastermindMode extends BaseGame {
         cell.monsterRevealed = true;
         cell.hasMonster = true;
         this.monsters.push({ r, c });
+
+        this.controller.appendSnailLog({
+            event_type: 'intercept_placed',
+            pos: { r, c },
+            ai_phase: this.aiPhase,
+            ai_state: this.aiState,
+            monsters: this.monsters.slice(),
+        });
 
         this.statusEl.textContent = this.getText('msg_intercept');
         clearTimeout(this.moveInterval);
@@ -690,8 +944,10 @@ class MastermindMode extends BaseGame {
     recordMonsterHit(r, c) {
         if (this.aiPhase === 'ATTEMPT_1') {
             this.m1Pos = { r, c };
+            this.controller.appendSnailLog({ event_type: 'monster_recorded', monster_id: 'M1', pos: { r, c } });
         } else if (this.aiPhase === 'ATTEMPT_2') {
             this.m2Pos = { r, c };
+            this.controller.appendSnailLog({ event_type: 'monster_recorded', monster_id: 'M2', pos: { r, c } });
         }
     }
 
@@ -701,9 +957,9 @@ class MastermindMode extends BaseGame {
 
     async gameLoop() {
         if (!this.snailPos) return;
+        if (this.isPaused) return;
 
-        // 根据状态调整速度
-        const delay = (this.aiState === 'SAFE_RUN' || this.plannedPath.length > 0) ? 300 : 600;
+        const delay = Math.max(60, Number(this.controller.aiMoveDelayMs) || 600);
 
         this.moveInterval = setTimeout(() => {
             this.executeMove();
@@ -711,18 +967,27 @@ class MastermindMode extends BaseGame {
     }
 
     executeMove() {
+        if (this.isPaused) return;
+        const fromPos = this.snailPos ? { ...this.snailPos } : null;
         const move = this.calculateNextMove();
         if (move) {
-            // 检查是否要离开当前行
-            const currentR = this.snailPos.r;
-            if (currentR > 0 && currentR < this.rows - 1 && move.r !== currentR) {
-                if (!this.hasMonsterInRow(currentR)) {
-                    this.forceIntercept(currentR, this.snailPos.c);
-                    return;
-                }
-            }
-
+            this.controller.appendSnailLog({
+                event_type: 'move_execute',
+                from: fromPos,
+                to: { r: move.r, c: move.c },
+                ai_phase: this.aiPhase,
+                ai_state: this.aiState,
+                attempts: this.attempts,
+            });
             this.moveTo(move.r, move.c);
+
+            this.controller.appendSnailLog({
+                event_type: 'move_result',
+                after_pos: this.snailPos ? { ...this.snailPos } : null,
+                ai_phase: this.aiPhase,
+                ai_state: this.aiState,
+                attempts: this.attempts,
+            });
 
             // 如果没有撞到怪物且没到终点，继续移动
             if (this.snailPos && this.snailPos.r < this.rows - 1) {
@@ -752,7 +1017,13 @@ class MastermindMode extends BaseGame {
                 }
             }
 
-            console.log(`[AI] pos=(${r},${c}), foundIdx=${foundIndex}, pathLen=${this.plannedPath.length}`);
+            this.controller.appendSnailLog({
+                event_type: 'ai_decision',
+                branch: 'planned_path',
+                pos: { r, c },
+                found_index: foundIndex,
+                path_len: this.plannedPath.length,
+            });
 
             if (foundIndex >= 0 && foundIndex < this.plannedPath.length - 1) {
                 const next = this.plannedPath[foundIndex + 1];
@@ -760,14 +1031,23 @@ class MastermindMode extends BaseGame {
                 const dr = Math.abs(next.r - r);
                 const dc = Math.abs(next.c - c);
                 if (dr + dc === 1) {
-                    console.log(`[AI] following path to (${next.r},${next.c})`);
+                    this.controller.appendSnailLog({
+                        event_type: 'ai_decision_chosen',
+                        branch: 'planned_path_follow_next',
+                        from: { r, c },
+                        to: { r: next.r, c: next.c },
+                    });
                     return next;
                 }
             }
 
             // 如果在路径末尾，已完成
             if (foundIndex === this.plannedPath.length - 1) {
-                console.log(`[AI] at path end`);
+                this.controller.appendSnailLog({
+                    event_type: 'ai_decision_stop',
+                    reason: 'planned_path_end',
+                    pos: { r, c },
+                });
                 return null;
             }
 
@@ -778,17 +1058,34 @@ class MastermindMode extends BaseGame {
                 const dr = Math.abs(pathStart.r - r);
                 const dc = Math.abs(pathStart.c - c);
                 if (dr + dc === 1) {
-                    console.log(`[AI] moving to path start (${pathStart.r},${pathStart.c})`);
+                    this.controller.appendSnailLog({
+                        event_type: 'ai_decision_chosen',
+                        branch: 'planned_path_move_to_start_adjacent',
+                        from: { r, c },
+                        to: { r: pathStart.r, c: pathStart.c },
+                    });
                     return pathStart;
                 } else if (dr === 0 && dc > 0) {
                     // 水平移动到起点列
                     const nextC = c + (pathStart.c > c ? 1 : -1);
-                    console.log(`[AI] horizontal move to (${r},${nextC})`);
+                    this.controller.appendSnailLog({
+                        event_type: 'ai_decision_chosen',
+                        branch: 'planned_path_seek_horizontal',
+                        from: { r, c },
+                        to: { r, c: nextC },
+                        target_start: { r: pathStart.r, c: pathStart.c },
+                    });
                     return { r, c: nextC };
                 } else if (dc === 0 && dr > 0) {
                     // 垂直移动到起点行
                     const nextR = r + (pathStart.r > r ? 1 : -1);
-                    console.log(`[AI] vertical move to (${nextR},${c})`);
+                    this.controller.appendSnailLog({
+                        event_type: 'ai_decision_chosen',
+                        branch: 'planned_path_seek_vertical',
+                        from: { r, c },
+                        to: { r: nextR, c },
+                        target_start: { r: pathStart.r, c: pathStart.c },
+                    });
                     return { r: nextR, c };
                 }
             }
@@ -796,14 +1093,37 @@ class MastermindMode extends BaseGame {
 
         // 第一次尝试：扫描第二行
         if (this.aiPhase === 'ATTEMPT_1') {
-            return this.calculateAttempt1Move(r, c);
+            const next = this.calculateAttempt1Move(r, c);
+            this.controller.appendSnailLog({
+                event_type: 'ai_decision_chosen',
+                branch: 'attempt_1_scan',
+                from: { r, c },
+                to: next ? { r: next.r, c: next.c } : null,
+                ai_state: this.aiState,
+            });
+            return next;
         }
 
         // 默认：向下移动（备用逻辑）
         if (r < this.rows - 1) {
+            this.controller.appendSnailLog({
+                event_type: 'ai_decision_chosen',
+                branch: 'fallback_down',
+                from: { r, c },
+                to: { r: r + 1, c },
+                ai_phase: this.aiPhase,
+                ai_state: this.aiState,
+            });
             return { r: r + 1, c };
         }
 
+        this.controller.appendSnailLog({
+            event_type: 'ai_decision_stop',
+            reason: 'already_at_last_row',
+            pos: { r, c },
+            ai_phase: this.aiPhase,
+            ai_state: this.aiState,
+        });
         return null;
     }
 
@@ -865,6 +1185,32 @@ class MastermindMode extends BaseGame {
 
     handleCollision(r, c) {
         this.grid[r][c].monsterRevealed = true;
+        clearTimeout(this.moveInterval);
+        this.moveInterval = null;
+        clearTimeout(this.nextAttemptTimer);
+        this.nextAttemptTimer = null;
+
+        this.controller.appendSnailLog({
+            event_type: 'collision',
+            pos: { r, c },
+            ai_phase: this.aiPhase,
+            ai_state: this.aiState,
+            attempts_before: this.attempts,
+            m1_pos: this.m1Pos,
+            m2_pos: this.m2Pos,
+            m2_encounter_axis: this.m2EncounterAxis,
+            planned_path_len: this.plannedPath.length,
+        });
+
+        // 记录 M2 的“碰撞方向”，用于第三次逃脱路径分支（见 IMO 原文两种紫色路径）
+        if (this.aiPhase === 'ATTEMPT_2' && this.m2Pos && this.m2Pos.r === r && this.m2Pos.c === c) {
+            this.m2EncounterAxis = this.getCurrentAttemptLastMoveAxis();
+            this.controller.appendSnailLog({
+                event_type: 'm2_encounter_axis_recorded',
+                pos: { r, c },
+                axis: this.m2EncounterAxis,
+            });
+        }
 
         // 保存当前路径的访问层
         const layerIdx = this.attempts;
@@ -875,30 +1221,160 @@ class MastermindMode extends BaseGame {
             }
         });
 
+        const attemptIndex = this.attempts + 1;
         this.attempts++;
         this.updateStats();
         this.snailPos = null;
+
+        this.controller.appendSnailLog({
+            event_type: 'attempt_end',
+            attempt_index: attemptIndex,
+            collision_pos: { r, c },
+            next_attempt_index: this.attempts + 1,
+            ai_phase_before: this.aiPhase,
+            m1_pos: this.m1Pos,
+            m2_pos: this.m2Pos,
+            m2_encounter_axis: this.m2EncounterAxis,
+        });
 
         // 进入下一阶段
         if (this.aiPhase === 'ATTEMPT_1') {
             this.aiPhase = 'ATTEMPT_2';
             this.statusEl.textContent = `发现 M1 @ (${r},${c})，规划第二次尝试...`;
+            this.controller.appendSnailLog({ event_type: 'phase_transition', from: 'ATTEMPT_1', to: 'ATTEMPT_2', collision_pos: { r, c } });
         } else if (this.aiPhase === 'ATTEMPT_2') {
             this.aiPhase = 'ATTEMPT_3';
             this.statusEl.textContent = `发现 M2 @ (${r},${c})，规划第三次尝试...`;
+            this.controller.appendSnailLog({ event_type: 'phase_transition', from: 'ATTEMPT_2', to: 'ATTEMPT_3', collision_pos: { r, c } });
         } else {
             // 第三次尝试失败（理论上不应该发生）
-            this.statusEl.textContent = '算法异常，重新开始...';
-            this.aiPhase = 'ATTEMPT_1';
+            const isCn = this.controller.lang === 'CN';
+            this.statusEl.textContent = isCn ? '算法异常：已暂停（请复制日志）' : 'AI error: paused (copy log)';
+            this.controller.appendSnailLog({
+                event_type: 'algo_error_attempts_exceeded',
+                collision_pos: { r, c },
+                attempts: this.attempts,
+                ai_phase: this.aiPhase,
+                ai_state: this.aiState,
+                m1_pos: this.m1Pos,
+                m2_pos: this.m2Pos,
+                m2_encounter_axis: this.m2EncounterAxis,
+            });
+            this.render();
+            this.controller.showDialog(
+                isCn
+                    ? '算法异常：蜗牛在第 3 次尝试仍失败（理论上不该发生）。已自动停止。\n请点“日志→复制”把完整记录发给我。'
+                    : 'AI error: failed on 3rd attempt (should not happen). Paused.\nClick Log→Copy and send it to me.',
+                { autoCloseMs: 2600 }
+            );
+            this.controller.pauseAi(true);
+            return;
         }
 
         this.render();
 
         // 短暂延迟后开始下一次尝试
-        setTimeout(() => {
+        this.nextAttemptTimer = setTimeout(() => {
+            this.nextAttemptTimer = null;
             this.startAttempt();
         }, 800);
     }
 }
 
-new GameController();
+// 仅在浏览器环境启动 UI；Node 单测/脚本加载时跳过。
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    new GameController();
+}
+
+// getLastMoveAxisFromPath：从路径点序列中推断最后一步的移动轴（纯函数，便于单测）。
+function getLastMoveAxisFromPath(pathPoints) {
+    if (!Array.isArray(pathPoints) || pathPoints.length < 2) return null;
+    const prev = pathPoints[pathPoints.length - 2];
+    const curr = pathPoints[pathPoints.length - 1];
+    if (!prev || !curr) return null;
+    const dr = curr.r - prev.r;
+    const dc = curr.c - prev.c;
+    if (Math.abs(dr) + Math.abs(dc) !== 1) return null;
+    return dr === 0 ? 'HORIZONTAL' : 'VERTICAL';
+}
+
+// buildImoEdgeEscapePath：IMO 2024/5 “M1 在边缘 + 阶梯遇到 M2”场景下的第三次尝试逃脱路径（纯函数，便于单测）。
+function buildImoEdgeEscapePath({
+    rows,
+    cols,
+    m1Col,
+    m2Row,
+    m2Col,
+    staircaseDir,
+    m2EncounterAxis,
+}) {
+    if (
+        !Number.isInteger(rows) ||
+        !Number.isInteger(cols) ||
+        !Number.isInteger(m1Col) ||
+        !Number.isInteger(m2Row) ||
+        !Number.isInteger(m2Col) ||
+        (staircaseDir !== 1 && staircaseDir !== -1)
+    ) {
+        return null;
+    }
+
+    const staircaseStartCol = staircaseDir === 1 ? 1 : cols - 2;
+    if (staircaseStartCol < 0 || staircaseStartCol >= cols) return null;
+
+    const isHorizontalEncounter = m2EncounterAxis === 'HORIZONTAL';
+    const pivotRow = isHorizontalEncounter ? m2Row : m2Row - 1;
+    const pivotCol = m2Col - staircaseDir;
+
+    if (pivotRow < 0 || pivotRow >= rows) return null;
+    if (pivotCol < 0 || pivotCol >= cols) return null;
+
+    const path = [];
+    const addStep = (r, c) => {
+        const last = path[path.length - 1];
+        if (last && last.r === r && last.c === c) return;
+        path.push({ r, c });
+    };
+
+    // 1) 沿第二次尝试的阶梯安全路径走到 pivot（避免进入 M2）
+    let currentCol = staircaseStartCol;
+    addStep(0, currentCol);
+
+    for (let r = 1; r <= pivotRow && r < rows; r++) {
+        addStep(r, currentCol); // 向下
+        if (r === pivotRow && currentCol === pivotCol) break;
+
+        const nextCol = currentCol + staircaseDir;
+        if (nextCol < 0 || nextCol >= cols) break;
+        addStep(r, nextCol); // 水平（阶梯）
+        currentCol = nextCol;
+        if (r === pivotRow && currentCol === pivotCol) break;
+    }
+
+    const last = path[path.length - 1];
+    if (!last || last.r !== pivotRow || last.c !== pivotCol) return null;
+
+    // 2) 若是“向南撞上”，从对角点下移到 M2 左侧/右侧的安全格
+    if (!isHorizontalEncounter) {
+        addStep(m2Row, pivotCol);
+    }
+
+    // 3) 在 M2 所在行水平移动到 M1 所在列（不会跨过 M2 列）
+    let escapeCol = path[path.length - 1].c;
+    while (escapeCol !== m1Col) {
+        escapeCol += m1Col > escapeCol ? 1 : -1;
+        addStep(m2Row, escapeCol);
+    }
+
+    // 4) 沿 M1 列直达终点（该列除 M1 行外无怪物）
+    for (let r = m2Row + 1; r < rows; r++) {
+        addStep(r, m1Col);
+    }
+
+    return path;
+}
+
+// Node 环境导出：用于单测路径规划（浏览器环境下 module 不存在，不影响运行）。
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { buildImoEdgeEscapePath, getLastMoveAxisFromPath };
+}
