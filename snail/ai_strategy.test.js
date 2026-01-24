@@ -1,8 +1,8 @@
-// codex: 2026-01-24 为 Mastermind AI 逃脱路径补充 Node 单测
+// codex: 2026-01-24 补测试：主宰模式安全格禁放怪物 + 冒险模式起点规则 + AI 逃脱路径
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const { buildImoEdgeEscapePath, getLastMoveAxisFromPath } = require('./game.js');
+const { buildImoEdgeEscapePath, getLastMoveAxisFromPath, validateMastermindIntercept, canStartAdventureAtCell } = require('./game.js');
 
 function assertPathPointsAreValid(path, rows, cols) {
     assert.ok(Array.isArray(path), 'path 必须是数组');
@@ -157,6 +157,43 @@ test('buildImoEdgeEscapePath：右边缘 M1 + 向西遇到 M2（HORIZONTAL）', 
     assert.ok(path.some((p) => p.r === m2Row && p.c === m2Col - staircaseDir), '应到达 M2 右侧安全格');
 });
 
+test('validateMastermindIntercept：已确认安全格禁止放怪物（优先级最高）', () => {
+    const safeCells = new Set(['2,3']);
+    const monsters = [{ r: 2, c: 3 }];
+    assert.deepEqual(
+        validateMastermindIntercept({ safeCells, monsters, r: 2, c: 3 }),
+        { ok: false, reason: 'cell_already_safe' },
+    );
+});
+
+test('validateMastermindIntercept：同行/同列规则校验', () => {
+    const safeCells = new Set();
+    assert.deepEqual(
+        validateMastermindIntercept({ safeCells, monsters: [{ r: 2, c: 1 }], r: 2, c: 3 }),
+        { ok: false, reason: 'row_already_has_monster' },
+    );
+    assert.deepEqual(
+        validateMastermindIntercept({ safeCells, monsters: [{ r: 2, c: 1 }], r: 4, c: 1 }),
+        { ok: false, reason: 'col_already_has_monster' },
+    );
+    assert.deepEqual(
+        validateMastermindIntercept({ safeCells, monsters: [{ r: 2, c: 1 }], r: 4, c: 3 }),
+        { ok: true, reason: 'ok' },
+    );
+});
+
+test('canStartAdventureAtCell：允许第0行任意格出发', () => {
+    assert.equal(canStartAdventureAtCell({ visitedLayers: [], monsterRevealed: false }, 0), true);
+    assert.equal(canStartAdventureAtCell({ visitedLayers: [], monsterRevealed: true }, 0), true);
+});
+
+test('canStartAdventureAtCell：允许从已确认安全格出发（走过且未揭示怪物）', () => {
+    assert.equal(canStartAdventureAtCell({ visitedLayers: [0], monsterRevealed: false }, 3), true);
+    assert.equal(canStartAdventureAtCell({ visitedLayers: [], monsterRevealed: false }, 3), false);
+    assert.equal(canStartAdventureAtCell({ visitedLayers: [0], monsterRevealed: true }, 3), false);
+    assert.equal(canStartAdventureAtCell(null, 3), false);
+});
+
 test('buildImoEdgeEscapePath：参数不合法返回 null', () => {
     const path = buildImoEdgeEscapePath({
         rows: 10,
@@ -169,4 +206,3 @@ test('buildImoEdgeEscapePath：参数不合法返回 null', () => {
     });
     assert.equal(path, null);
 });
-

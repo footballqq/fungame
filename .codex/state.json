@@ -1,16 +1,14 @@
 {
-  "current_task": "snail 主宰模式：解释引导与规则提示",
+  "current_task": "snail 冒险模式：任意安全格出发",
   "last_changes": [
-    "snail/index.html",
-    "snail/style.css",
     "snail/game.js",
+    "snail/ai_strategy.test.js",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "打开 snail/index.html，进入主宰模式，确认底部提示与“解释”按钮可用",
-    "点“解释”查看交互式步骤，确认棋盘与箭头对齐；关闭后恢复暂停状态",
-    "第一轮扫描时如果一直不点蜗牛放怪物，应在最后格自动揭示怪物并弹出规则提示（打开规则弹层）"
+    "打开 snail/index.html，进入冒险模式：在撞怪重置后，点击任意走过且未揭示怪物的格子，应能作为起点",
+    "运行 node --test snail/ai_strategy.test.js"
   ],
-  "notes": "移除无用的“安全/怪物”图例；主宰模式底部新增引导文案与“解释”按钮（含小棋盘+箭头演示 why 3 optimal，并在打开时暂停蜗牛）；若第一轮扫描未触发怪物，自动在最后探索格揭示怪物并弹窗提示规则（同时打开规则弹层）。"
+  "notes": "主宰模式：仅当蜗牛能离开某格时才记为安全；拦截放怪物时新增安全格校验与中英文提示。冒险模式：允许从已确认安全格（走过且未揭示怪物）出发。"
 }

@@ -1,4 +1,4 @@
-// codex: 2026-01-24 主宰模式加停止/日志/速度/解释引导，并完善规则提示与移动端适配
+// codex: 2026-01-24 修复主宰模式安全格禁放怪物；优化冒险模式任意安全格出发
 const STRINGS = {
     EN: {
         title: "Snail vs Monsters",
@@ -37,6 +37,7 @@ const STRINGS = {
         msg_ai_blocked: "AI blocked. Calculating Z-pattern...",
         msg_intercept: "Intercepted! Monster placed.",
         msg_bad_place: "Invalid Placement! (Row/Col constraint)",
+        msg_bad_place_safe: "Invalid Placement! This cell is already confirmed safe.",
         msg_bad_place_row: "This row already has a monster.",
         msg_bad_place_col: "This column already has a monster.",
         msg_rules_reminder_row_missing: "Rule reminder: each middle row must have exactly one monster.\nTip: in Mastermind mode, click the snail to place a monster.\nOpening rules...",
@@ -90,6 +91,7 @@ const STRINGS = {
         msg_ai_blocked: "AI受阻。计算Z字形走法...",
         msg_intercept: "拦截成功！放置怪物。",
         msg_bad_place: "放置失败！违反规则（同行/同列已有怪物）",
+        msg_bad_place_safe: "放置失败！该格已被蜗牛走过，必为安全格，不能放怪物。",
         msg_bad_place_row: "该行已有怪物。",
         msg_bad_place_col: "该列已有怪物。",
         msg_rules_reminder_row_missing: "规则提示：中间每一行必须且只能有 1 个怪物。\n提示：主宰模式请点击蜗牛放置怪物。\n已为你打开规则说明…",
@@ -721,8 +723,9 @@ class AdventureMode extends BaseGame {
         const c = parseInt(div.dataset.c);
 
         if (!this.snailPos) {
-            // Start at any cell in Row 0
-            if (r === 0) {
+            const cell = this.grid[r][c];
+            // 起点规则：允许从第 0 行任意格出发；或从“已确认安全”的格子出发（曾经走过且未揭示怪物）
+            if (canStartAdventureAtCell(cell, r)) {
                 this.snailPos = { r, c };
                 this.visit(r, c);
                 this.statusEl.textContent = this.getText('status_moving');
@@ -778,6 +781,20 @@ class AdventureMode extends BaseGame {
         this.statusEl.textContent = this.getText('msg_reset');
         this.render();
     }
+}
+
+function canStartAdventureAtCell(cell, r) { // canStartAdventureAtCell：冒险模式起点校验（第0行任意格 / 已确认安全格）
+    if (!cell) return false;
+    if (r === 0) return true;
+    return Array.isArray(cell.visitedLayers) && cell.visitedLayers.length > 0 && !cell.monsterRevealed;
+}
+
+function validateMastermindIntercept({ safeCells, monsters, r, c }) { // validateMastermindIntercept：主宰模式放置怪物校验（安全格/同行/同列）
+    const cellKey = `${r},${c}`;
+    if (safeCells && safeCells.has(cellKey)) return { ok: false, reason: 'cell_already_safe' };
+    if (monsters && monsters.some(m => m.r === r)) return { ok: false, reason: 'row_already_has_monster' };
+    if (monsters && monsters.some(m => m.c === c)) return { ok: false, reason: 'col_already_has_monster' };
+    return { ok: true, reason: 'ok' };
 }
 
 // codex: 2026-01-23 重构 MastermindMode，实现 IMO 2024 第5题最优 3 次尝试算法
@@ -881,7 +898,6 @@ class MastermindMode extends BaseGame {
 
         this.snailPos = { r: 0, c: startCol };
         this.pathStack.push({ ...this.snailPos });
-        this.markCellSafe(0, startCol);
 
         this.controller.appendSnailLog({
             event_type: 'attempt_start',
@@ -1082,32 +1098,27 @@ class MastermindMode extends BaseGame {
     }
 
     triggerIntercept(r, c) {
-        // 验证放置规则
-        const rowHas = this.monsters.some(m => m.r === r);
-        if (rowHas) {
+        // 验证放置规则（已走过=安全格 / 同行 / 同列）
+        const validation = validateMastermindIntercept({ safeCells: this.safeCells, monsters: this.monsters, r, c });
+        if (!validation.ok) {
             this.controller.appendSnailLog({
                 event_type: 'intercept_invalid',
-                reason: 'row_already_has_monster',
+                reason: validation.reason,
                 pos: { r, c },
                 ai_phase: this.aiPhase,
                 ai_state: this.aiState,
                 monsters: this.monsters.slice(),
             });
-            const dialogMessage = `${this.getText('msg_bad_place')}\n${this.getText('msg_bad_place_row')}`; // 组合后的放置错误提示
-            this.controller.showDialog(dialogMessage, { autoCloseMs: 1400 });
-            return;
-        }
-        const colHas = this.monsters.some(m => m.c === c);
-        if (colHas) {
-            this.controller.appendSnailLog({
-                event_type: 'intercept_invalid',
-                reason: 'col_already_has_monster',
-                pos: { r, c },
-                ai_phase: this.aiPhase,
-                ai_state: this.aiState,
-                monsters: this.monsters.slice(),
-            });
-            const dialogMessage = `${this.getText('msg_bad_place')}\n${this.getText('msg_bad_place_col')}`; // 组合后的放置错误提示
+
+            let dialogMessage = this.getText('msg_bad_place');
+            if (validation.reason === 'cell_already_safe') {
+                dialogMessage = this.getText('msg_bad_place_safe');
+            } else if (validation.reason === 'row_already_has_monster') {
+                dialogMessage = `${this.getText('msg_bad_place')}\n${this.getText('msg_bad_place_row')}`; // 组合后的放置错误提示
+            } else if (validation.reason === 'col_already_has_monster') {
+                dialogMessage = `${this.getText('msg_bad_place')}\n${this.getText('msg_bad_place_col')}`; // 组合后的放置错误提示
+            }
+
             this.controller.showDialog(dialogMessage, { autoCloseMs: 1400 });
             return;
         }
@@ -1178,6 +1189,9 @@ class MastermindMode extends BaseGame {
         const fromPos = this.snailPos ? { ...this.snailPos } : null;
         const move = this.calculateNextMove();
         if (move) {
+            // 蜗牛能离开当前格，说明当前格不含怪物 => 记为“已确认安全格”
+            if (fromPos) this.markCellSafe(fromPos.r, fromPos.c);
+
             this.controller.appendSnailLog({
                 event_type: 'move_execute',
                 from: fromPos,
@@ -1386,9 +1400,6 @@ class MastermindMode extends BaseGame {
         this.pathStack.push({ r, c });
         this.grid[r][c].isCurrentPath = true;
 
-        // 标记为安全
-        this.markCellSafe(r, c);
-
         const cell = this.grid[r][c];
 
         if (cell.hasMonster && cell.monsterRevealed) {
@@ -1596,5 +1607,5 @@ function buildImoEdgeEscapePath({
 
 // Node 环境导出：用于单测路径规划（浏览器环境下 module 不存在，不影响运行）。
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { buildImoEdgeEscapePath, getLastMoveAxisFromPath };
+    module.exports = { buildImoEdgeEscapePath, getLastMoveAxisFromPath, validateMastermindIntercept, canStartAdventureAtCell };
 }
