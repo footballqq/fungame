@@ -1,4 +1,4 @@
-// codex: 2026-01-24 将系统弹窗改为居中可爱对话框并适配移动端
+// codex: 2026-01-24 主宰模式加停止/日志/速度/解释引导，并完善规则提示与移动端适配
 const STRINGS = {
     EN: {
         title: "Snail vs Monsters",
@@ -39,6 +39,7 @@ const STRINGS = {
         msg_bad_place: "Invalid Placement! (Row/Col constraint)",
         msg_bad_place_row: "This row already has a monster.",
         msg_bad_place_col: "This column already has a monster.",
+        msg_rules_reminder_row_missing: "Rule reminder: each middle row must have exactly one monster.\nTip: in Mastermind mode, click the snail to place a monster.\nOpening rules...",
         rules_title: "Game Rules",
         rules_generic: "Goal: Move from Row 1 to the Last Row.",
         rules_monsters_title: "Monsters:",
@@ -91,6 +92,7 @@ const STRINGS = {
         msg_bad_place: "放置失败！违反规则（同行/同列已有怪物）",
         msg_bad_place_row: "该行已有怪物。",
         msg_bad_place_col: "该列已有怪物。",
+        msg_rules_reminder_row_missing: "规则提示：中间每一行必须且只能有 1 个怪物。\n提示：主宰模式请点击蜗牛放置怪物。\n已为你打开规则说明…",
         rules_title: "游戏规则",
         rules_generic: "目标：从第一行到达最后一行。",
         rules_monsters_title: "关于怪物：",
@@ -207,6 +209,18 @@ class GameController {
         this.btnToggleLog?.addEventListener('click', () => this.toggleLogPanel());
         this.btnCopyLog?.addEventListener('click', () => this.copyLogToClipboard());
         this.btnClearLog?.addEventListener('click', () => this.clearSnailLog());
+        this.btnExplain?.addEventListener('click', () => this.openExplain());
+        this.btnExplainClose?.addEventListener('click', () => this.closeExplain());
+        this.btnExplainPrev?.addEventListener('click', () => this.setExplainIndex(this.explainIndex - 1));
+        this.btnExplainNext?.addEventListener('click', () => this.setExplainIndex(this.explainIndex + 1));
+        this.explainOverlay?.addEventListener('click', (event) => {
+            if (event.target === this.explainOverlay) this.closeExplain();
+        });
+        window.addEventListener('resize', () => {
+            if (this.explainOverlay && !this.explainOverlay.classList.contains('hidden')) {
+                this.renderExplainBoard();
+            }
+        });
         this.inputAiSpeed?.addEventListener('input', () => {
             const value = parseInt(this.inputAiSpeed.value, 10);
             if (Number.isFinite(value) && value > 0) {
@@ -248,6 +262,8 @@ class GameController {
         const isMastermindMode = mode === 'MASTERMIND';
         this.btnToggleLog?.classList.toggle('hidden', !isMastermindMode);
         this.aiSpeedControl?.classList.toggle('hidden', !isMastermindMode);
+        this.mastermindHint?.classList.toggle('hidden', !isMastermindMode);
+        this.btnExplain?.classList.toggle('hidden', !isMastermindMode);
         if (!isMastermindMode) this.toggleLogPanel(false);
 
         this.isAiPaused = false;
@@ -269,6 +285,197 @@ class GameController {
         } else {
             this.currentGame = new MastermindMode(this);
         }
+    }
+
+    setExplainIndex(nextIndex) { // setExplainIndex：切换解释步骤并刷新 UI
+        const steps = this.getExplainSteps();
+        const clamped = Math.max(0, Math.min(steps.length - 1, nextIndex));
+        this.explainIndex = clamped;
+        this.updateExplainUi();
+    }
+
+    openExplain() { // openExplain：打开交互式解释（主宰模式），并暂停蜗牛移动避免干扰
+        if (!this.explainOverlay) return;
+        this.explainWasPaused = this.isAiPaused;
+        this.isAiPaused = true;
+        this.setStopResumeButtons();
+        this.currentGame?.setPaused?.(true);
+
+        this.explainIndex = 0;
+        this.explainOverlay.classList.remove('hidden');
+        requestAnimationFrame(() => this.updateExplainUi());
+        this.appendSnailLog({ event_type: 'explain_open' });
+    }
+
+    closeExplain() { // closeExplain：关闭解释，并恢复打开前的暂停状态
+        if (!this.explainOverlay) return;
+        this.explainOverlay.classList.add('hidden');
+        const shouldResume = !this.explainWasPaused;
+        if (shouldResume) {
+            this.isAiPaused = false;
+            this.setStopResumeButtons();
+            this.currentGame?.setPaused?.(false);
+        }
+        this.appendSnailLog({ event_type: 'explain_close', resumed: shouldResume });
+    }
+
+    updateExplainUi() { // 更新解释弹层文案/按钮状态，并渲染棋盘
+        const steps = this.getExplainSteps();
+        const step = steps[this.explainIndex] || steps[0];
+        if (this.explainText) this.explainText.textContent = step.text;
+        if (this.explainStep) this.explainStep.textContent = `${this.explainIndex + 1}/${steps.length}`;
+        this.btnExplainPrev?.toggleAttribute('disabled', this.explainIndex <= 0);
+        this.btnExplainNext?.toggleAttribute('disabled', this.explainIndex >= steps.length - 1);
+        this.renderExplainBoard();
+    }
+
+    getExplainSteps() { // 演示步骤（固定小棋盘，不依赖当前关卡）
+        const isCn = this.lang === 'CN';
+        return [
+            {
+                key: 'intro',
+                text: isCn
+                    ? '规则：每一行恰好 1 个怪物；每一列最多 1 个怪物。蜗牛每次撞到怪物就重置回第 1 行。\n下面用一个小棋盘演示“为什么 3 次就是最优解”。'
+                    : 'Rules: exactly 1 monster per row; at most 1 per column. If the snail hits a monster, it resets to row 1.\nBelow is a small demo of why 3 attempts is optimal.',
+                state: {
+                    rows: 5,
+                    cols: 5,
+                    snail: { r: 0, c: 2 },
+                    monsters: [{ r: 1, c: 0 }, { r: 2, c: 3 }],
+                    revealed: [{ r: 1, c: 0 }],
+                    monsterIds: { '1,0': 'M1', '2,3': 'M2' },
+                    arrows: [],
+                },
+            },
+            {
+                key: 'attempt1',
+                text: isCn
+                    ? '第 1 次：蜗牛会“扫描第 2 行”来找第一个怪物 M1。怪物方可以让它必撞到 M1，从而提供信息。'
+                    : 'Attempt 1: the snail scans row 2 to find the first monster M1. The monster can force a hit, which reveals information.',
+                state: {
+                    rows: 5,
+                    cols: 5,
+                    snail: { r: 1, c: 0 },
+                    monsters: [{ r: 1, c: 0 }, { r: 2, c: 3 }],
+                    revealed: [{ r: 1, c: 0 }],
+                    monsterIds: { '1,0': 'M1', '2,3': 'M2' },
+                    arrows: [{ from: { r: 0, c: 2 }, to: { r: 1, c: 0 } }],
+                },
+            },
+            {
+                key: 'attempt2',
+                text: isCn
+                    ? '第 2 次：知道 M1 后，蜗牛会选一条“结构化路径”（阶梯或双路径）去逼出第二个关键信息 M2。怪物方也能让第 2 次失败，但必须暴露 M2。'
+                    : 'Attempt 2: after knowing M1, the snail uses a structured path (staircase or dual-path) to force the next key info M2. The monster can stop attempt 2, but must reveal M2.',
+                state: {
+                    rows: 5,
+                    cols: 5,
+                    snail: { r: 2, c: 3 },
+                    monsters: [{ r: 1, c: 0 }, { r: 2, c: 3 }],
+                    revealed: [{ r: 1, c: 0 }, { r: 2, c: 3 }],
+                    monsterIds: { '1,0': 'M1', '2,3': 'M2' },
+                    arrows: [{ from: { r: 0, c: 2 }, to: { r: 2, c: 3 } }],
+                },
+            },
+            {
+                key: 'attempt3',
+                text: isCn
+                    ? '第 3 次：此时 M1 与 M2 都已暴露。结合“每行一个/每列最多一个”的约束，蜗牛能构造一条保证不再撞到怪物的绕行路径，必到终点。\n因此：怪物最强也只能让你赢在第 3 次；同时怪物也能保证前两次至少各撞一次，所以 2 次不可能保证通关。'
+                    : 'Attempt 3: now M1 and M2 are known. Using the row/column constraints, the snail can construct a detour path that is guaranteed safe to the finish.\nSo: the monster can force at least 3 attempts in the worst case, but cannot prevent success by the 3rd.',
+                state: {
+                    rows: 5,
+                    cols: 5,
+                    snail: { r: 4, c: 4 },
+                    monsters: [{ r: 1, c: 0 }, { r: 2, c: 3 }],
+                    revealed: [{ r: 1, c: 0 }, { r: 2, c: 3 }],
+                    monsterIds: { '1,0': 'M1', '2,3': 'M2' },
+                    arrows: [{ from: { r: 2, c: 2 }, to: { r: 4, c: 4 } }],
+                },
+            },
+        ];
+    }
+
+    renderExplainBoard() { // 渲染解释用小棋盘 + 箭头
+        if (!this.explainBoard) return;
+        const steps = this.getExplainSteps();
+        const step = steps[this.explainIndex] || steps[0];
+        const { rows, cols, snail, monsters, revealed, arrows } = step.state;
+
+        this.explainBoard.style.gridTemplateColumns = `repeat(${cols}, var(--cell-size))`;
+        this.explainBoard.innerHTML = '';
+        const revealedSet = new Set((revealed || []).map(p => `${p.r},${p.c}`));
+        const monsterSet = new Set((monsters || []).map(p => `${p.r},${p.c}`));
+        const monsterIds = step.state.monsterIds || {};
+
+        for (let r = 0; r < rows; r++) {
+            for (let c = 0; c < cols; c++) {
+                const div = document.createElement('div');
+                div.className = 'cell';
+                div.dataset.r = r;
+                div.dataset.c = c;
+                const key = `${r},${c}`;
+                if (monsterSet.has(key) && revealedSet.has(key)) {
+                    div.classList.add('monster-revealed');
+                    if (monsterIds[key]) div.dataset.monsterId = monsterIds[key];
+                }
+                if (snail && snail.r === r && snail.c === c) div.classList.add('snail');
+                this.explainBoard.appendChild(div);
+            }
+        }
+
+        requestAnimationFrame(() => this.renderExplainArrows(arrows || [], rows, cols));
+    }
+
+    renderExplainArrows(arrows, rows, cols) { // 用 SVG 在小棋盘上画箭头
+        if (!this.explainArrowLayer || !this.explainBoard) return;
+        const svg = this.explainArrowLayer;
+        svg.innerHTML = '';
+
+        const boardRect = this.explainBoard.getBoundingClientRect();
+        svg.setAttribute('width', `${boardRect.width}`);
+        svg.setAttribute('height', `${boardRect.height}`);
+        svg.setAttribute('viewBox', `0 0 ${boardRect.width} ${boardRect.height}`);
+
+        const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        const marker = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
+        marker.setAttribute('id', 'arrowhead');
+        marker.setAttribute('markerWidth', '10');
+        marker.setAttribute('markerHeight', '10');
+        marker.setAttribute('refX', '8');
+        marker.setAttribute('refY', '5');
+        marker.setAttribute('orient', 'auto');
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', 'M 0 0 L 10 5 L 0 10 z');
+        path.setAttribute('fill', '#6c5ce7');
+        marker.appendChild(path);
+        defs.appendChild(marker);
+        svg.appendChild(defs);
+
+        const cellCenter = (r, c) => {
+            const cellEl = this.explainBoard.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`);
+            if (!cellEl) return null;
+            const cellRect = cellEl.getBoundingClientRect();
+            return {
+                x: (cellRect.left - boardRect.left) + cellRect.width / 2,
+                y: (cellRect.top - boardRect.top) + cellRect.height / 2,
+            };
+        };
+
+        arrows.forEach(a => {
+            const from = cellCenter(a.from.r, a.from.c);
+            const to = cellCenter(a.to.r, a.to.c);
+            if (!from || !to) return;
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', `${from.x}`);
+            line.setAttribute('y1', `${from.y}`);
+            line.setAttribute('x2', `${to.x}`);
+            line.setAttribute('y2', `${to.y}`);
+            line.setAttribute('stroke', '#6c5ce7');
+            line.setAttribute('stroke-width', '4');
+            line.setAttribute('stroke-linecap', 'round');
+            line.setAttribute('marker-end', 'url(#arrowhead)');
+            svg.appendChild(line);
+        });
     }
 
     updateAiSpeedUi() { // 更新速度 UI 文案与数值
@@ -1150,8 +1357,21 @@ class MastermindMode extends BaseGame {
                 if (c > 0) {
                     return { r, c: c - 1 };
                 } else {
-                    // 扫描完成，没有怪物（理论上不应该发生）
-                    // 向下移动
+                    // 扫描完成但没有怪物：提示规则，并在最后探索的格子强制“发现”怪物（引导玩家理解必须每行一个怪物）
+                    if (!this.hasMonsterInRow(1)) {
+                        this.controller.appendSnailLog({
+                            event_type: 'rules_enforced_row_missing',
+                            row: 1,
+                            forced_pos: { r, c },
+                            ai_phase: this.aiPhase,
+                            ai_state: this.aiState,
+                        });
+                        this.controller.showDialog(this.getText('msg_rules_reminder_row_missing'), { autoCloseMs: 2000 });
+                        this.controller.uiRules?.classList.remove('hidden');
+                        this.forceIntercept(r, c);
+                        return null;
+                    }
+
                     return { r: r + 1, c };
                 }
             }

@@ -1,4 +1,4 @@
-/* // codex: 2026-01-24 将系统弹窗改为居中可爱对话框并适配移动端 */
+/* // codex: 2026-01-24 主宰模式解释/提示样式与移动端布局优化 */
 :root {
     --primary-color: #6c5ce7;
     --secondary-color: #a29bfe;
@@ -402,6 +402,69 @@ header {
     line-height: 1.4;
 }
 
+.explain-content {
+    width: min(94vw, 760px);
+    max-width: 760px;
+    text-align: center;
+}
+
+.explain-body {
+    margin-top: 10px;
+}
+
+.explain-board-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 8px auto 0;
+}
+
+.explain-board {
+    --cell-size: clamp(24px, 7vw, 40px);
+    border-radius: 10px;
+}
+
+.board-annotation {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.explain-text {
+    margin-top: 12px;
+    white-space: pre-line;
+    text-align: left;
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+.explain-step {
+    font-weight: 800;
+    color: var(--primary-color);
+    font-variant-numeric: tabular-nums;
+}
+
+.explain-footer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.cell.monster-revealed[data-monster-id]::before {
+    content: attr(data-monster-id);
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
 @media (max-width: 720px) {
     .debug-textarea {
         min-height: 140px;
@@ -410,6 +473,10 @@ header {
 
     .speed-label {
         font-size: 0.9rem;
+    }
+
+    .explain-text {
+        font-size: 0.92rem;
     }
 }
 

@@ -1,4 +1,4 @@
-<!-- // codex: 2026-01-24 将系统弹窗改为居中可爱对话框并适配移动端 -->
+<!-- // codex: 2026-01-24 主宰模式加提示/解释弹层，并完善规则与移动端布局 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,6 +55,7 @@
                 <button id="btn-back-menu" class="secondary-btn small-btn">← <span
                         data-key="btn_menu">Menu</span></button>
                 <button id="btn-show-rules" class="secondary-btn small-btn" data-key="btn_rules">Game Rules</button>
+                <button id="btn-explain" class="secondary-btn small-btn hidden" data-key="btn_explain">Explain</button>
             </div>
             <div class="header-center">
                 <h2 id="mode-title">Adventure Mode</h2>
@@ -148,6 +149,26 @@
             <div class="victory-actions">
                 <button id="btn-victory-restart" class="primary-btn" data-key="btn_restart">Restart Level</button>
                 <button id="btn-victory-menu" class="secondary-btn" data-key="btn_menu">Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="explain-overlay" class="overlay hidden">
+        <div class="overlay-content cute-dialog explain-content">
+            <div class="cute-dialog-icon">🧠</div>
+            <h2 data-key="explain_title">Why 3 attempts is optimal</h2>
+            <div class="explain-body">
+                <div class="explain-board-wrapper">
+                    <div id="explain-board" class="grid-board explain-board"></div>
+                    <svg id="explain-arrow-layer" class="board-annotation" aria-hidden="true"></svg>
+                </div>
+                <div id="explain-text" class="explain-text"></div>
+            </div>
+            <div class="explain-footer">
+                <button id="btn-explain-prev" class="secondary-btn small-btn" data-key="explain_prev">Prev</button>
+                <span id="explain-step" class="explain-step">1/4</span>
+                <button id="btn-explain-next" class="primary-btn small-btn" data-key="explain_next">Next</button>
+                <button id="btn-explain-close" class="secondary-btn small-btn" data-key="explain_close">Close</button>
             </div>
         </div>
     </div>
