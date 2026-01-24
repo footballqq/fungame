@@ -1,8 +1,15 @@
-// codex: 2026-01-24 补测试：主宰模式安全格禁放怪物 + 冒险模式起点规则 + AI 逃脱路径
+// codex: 2026-01-24 补测试：主宰模式安全格禁放怪物/终点失败提示/暂停分支 + 冒险模式起点规则 + AI 逃脱路径
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const { buildImoEdgeEscapePath, getLastMoveAxisFromPath, validateMastermindIntercept, canStartAdventureAtCell } = require('./game.js');
+const {
+    buildImoEdgeEscapePath,
+    getLastMoveAxisFromPath,
+    validateMastermindIntercept,
+    canStartAdventureAtCell,
+    buildMastermindDefeatText,
+    shouldAutoStartNextAttempt,
+} = require('./game.js');
 
 function assertPathPointsAreValid(path, rows, cols) {
     assert.ok(Array.isArray(path), 'path 必须是数组');
@@ -205,4 +212,25 @@ test('buildImoEdgeEscapePath：参数不合法返回 null', () => {
         m2EncounterAxis: 'VERTICAL',
     });
     assert.equal(path, null);
+});
+
+test('buildMastermindDefeatText：中文文案包含次数与完整句', () => {
+    const text = buildMastermindDefeatText('CN', 3);
+    assert.equal(text.title, '你失败了');
+    assert.ok(text.message.includes('3'), 'message 应包含次数');
+    assert.ok(text.full.includes('你失败了'), 'full 应包含失败提示');
+    assert.ok(text.full.includes('3'), 'full 应包含次数');
+});
+
+test('buildMastermindDefeatText：英文文案包含次数与完整句', () => {
+    const text = buildMastermindDefeatText('EN', 2);
+    assert.equal(text.title, 'You lost');
+    assert.ok(text.message.includes('2'), 'message 应包含次数');
+    assert.ok(text.full.includes('You lost'), 'full 应包含失败提示');
+    assert.ok(text.full.includes('2'), 'full 应包含次数');
+});
+
+test('shouldAutoStartNextAttempt：暂停时不自动进入下一次', () => {
+    assert.equal(shouldAutoStartNextAttempt(true), false);
+    assert.equal(shouldAutoStartNextAttempt(false), true);
 });

@@ -1,4 +1,4 @@
-// codex: 2026-01-24 修复主宰模式安全格禁放怪物；优化冒险模式任意安全格出发
+// codex: 2026-01-24 主宰模式终点失败提示 + 第一轮缺怪暂停确认；对话框支持 onOk；补充单测导出函数
 const STRINGS = {
     EN: {
         title: "Snail vs Monsters",
@@ -40,7 +40,7 @@ const STRINGS = {
         msg_bad_place_safe: "Invalid Placement! This cell is already confirmed safe.",
         msg_bad_place_row: "This row already has a monster.",
         msg_bad_place_col: "This column already has a monster.",
-        msg_rules_reminder_row_missing: "Rule reminder: each middle row must have exactly one monster.\nTip: in Mastermind mode, click the snail to place a monster.\nOpening rules...",
+        msg_rules_reminder_row_missing: "Rule reminder: each middle row must have exactly one monster.\nTip: in Mastermind mode, click the snail to place a monster.\nSnail paused. Click OK to start the next attempt.",
         rules_title: "Game Rules",
         rules_generic: "Goal: Move from Row 1 to the Last Row.",
         rules_monsters_title: "Monsters:",
@@ -94,7 +94,7 @@ const STRINGS = {
         msg_bad_place_safe: "放置失败！该格已被蜗牛走过，必为安全格，不能放怪物。",
         msg_bad_place_row: "该行已有怪物。",
         msg_bad_place_col: "该列已有怪物。",
-        msg_rules_reminder_row_missing: "规则提示：中间每一行必须且只能有 1 个怪物。\n提示：主宰模式请点击蜗牛放置怪物。\n已为你打开规则说明…",
+        msg_rules_reminder_row_missing: "规则提示：中间每一行必须且只能有 1 个怪物。\n提示：主宰模式请点击蜗牛放置怪物。\n蜗牛已暂停行动，请点击“确定”开始下一次探索。",
         rules_title: "游戏规则",
         rules_generic: "目标：从第一行到达最后一行。",
         rules_monsters_title: "关于怪物：",
@@ -169,6 +169,7 @@ class GameController {
         this.btnVicRestart = document.getElementById('btn-victory-restart');
         this.btnVicMenu = document.getElementById('btn-victory-menu');
         this.dialogTimer = null; // 对话框自动关闭计时器
+        this.dialogOkHandler = null; // dialogOkHandler：对话框“确定”按钮回调（用于暂停流程继续）
 
         this.explainIndex = 0; // explainIndex：交互式解释当前步骤索引
         this.explainWasPaused = false; // explainWasPaused：打开解释前是否已暂停 AI
@@ -201,9 +202,15 @@ class GameController {
             this.showMenu();
         });
 
-        this.btnDialogOk?.addEventListener('click', () => this.hideDialog());
+        this.btnDialogOk?.addEventListener('click', () => {
+            const handler = this.dialogOkHandler;
+            this.hideDialog();
+            if (handler) handler();
+        });
         this.uiDialog?.addEventListener('click', (event) => {
-            if (event.target === this.uiDialog) this.hideDialog();
+            if (event.target !== this.uiDialog) return;
+            if (this.dialogOkHandler) return; // 有确认回调时，强制用户点“确定”避免遗漏流程
+            this.hideDialog();
         });
 
         this.btnStopAi?.addEventListener('click', () => this.pauseAi(true));
@@ -247,6 +254,19 @@ class GameController {
             const key = el.dataset.key;
             if (textCtx[key]) el.textContent = textCtx[key];
         });
+
+        const isVictoryVisible = this.uiVictory && !this.uiVictory.classList.contains('hidden');
+        if (isVictoryVisible && this.mode === 'MASTERMIND') {
+            const attemptsText = document.getElementById('victory-attempts')?.textContent || '0';
+            const attempts = parseInt(attemptsText, 10);
+            if (Number.isFinite(attempts) && attempts > 0) {
+                const { title, message } = buildMastermindDefeatText(this.lang, attempts);
+                const titleEl = this.uiVictory.querySelector('[data-key="victory_title"]');
+                const msgEl = this.uiVictory.querySelector('[data-key="victory_msg"]');
+                if (titleEl) titleEl.textContent = title;
+                if (msgEl) msgEl.textContent = message;
+            }
+        }
     }
 
     startMode(mode) {
@@ -501,6 +521,17 @@ class GameController {
     showVictory(attempts) {
         this.uiVictory.classList.remove('hidden');
         document.getElementById('victory-attempts').textContent = attempts;
+
+        const titleEl = this.uiVictory.querySelector('[data-key="victory_title"]');
+        const msgEl = this.uiVictory.querySelector('[data-key="victory_msg"]');
+        if (this.mode === 'MASTERMIND') {
+            const { title, message } = buildMastermindDefeatText(this.lang, attempts);
+            if (titleEl) titleEl.textContent = title;
+            if (msgEl) msgEl.textContent = message;
+        } else {
+            if (titleEl) titleEl.textContent = STRINGS[this.lang].victory_title;
+            if (msgEl) msgEl.textContent = STRINGS[this.lang].victory_msg;
+        }
         // Should stop game loop if any
     }
 
@@ -512,7 +543,8 @@ class GameController {
         }
         this.dialogMessage.textContent = message;
         this.uiDialog.classList.remove('hidden');
-        if (options.autoCloseMs) {
+        this.dialogOkHandler = typeof options.onOk === 'function' ? options.onOk : null;
+        if (options.autoCloseMs && !this.dialogOkHandler) {
             this.dialogTimer = setTimeout(() => {
                 this.hideDialog();
             }, options.autoCloseMs);
@@ -522,6 +554,7 @@ class GameController {
     hideDialog() { // 隐藏可爱对话框
         if (!this.uiDialog) return;
         this.uiDialog.classList.add('hidden');
+        this.dialogOkHandler = null;
         if (this.dialogTimer) {
             clearTimeout(this.dialogTimer);
             this.dialogTimer = null;
@@ -795,6 +828,20 @@ function validateMastermindIntercept({ safeCells, monsters, r, c }) { // validat
     if (monsters && monsters.some(m => m.r === r)) return { ok: false, reason: 'row_already_has_monster' };
     if (monsters && monsters.some(m => m.c === c)) return { ok: false, reason: 'col_already_has_monster' };
     return { ok: true, reason: 'ok' };
+}
+
+function buildMastermindDefeatText(lang, attempts) { // buildMastermindDefeatText：主宰模式“蜗牛到终点=玩家失败”的弹窗文案（纯函数，便于单测）
+    const safeAttempts = Number.isFinite(attempts) && attempts > 0 ? attempts : 0;
+    if (lang === 'CN') {
+        const message = `蜗牛只用了 ${safeAttempts} 次探索就到达了终点。`;
+        return { title: '你失败了', message, full: `你失败了，${message}` };
+    }
+    const message = `The snail reached the goal in only ${safeAttempts} attempts.`;
+    return { title: 'You lost', message, full: `You lost. ${message}` };
+}
+
+function shouldAutoStartNextAttempt(isPaused) { // shouldAutoStartNextAttempt：主宰模式碰撞后是否自动进入下一次尝试（纯函数，便于单测）
+    return !isPaused;
 }
 
 // codex: 2026-01-23 重构 MastermindMode，实现 IMO 2024 第5题最优 3 次尝试算法
@@ -1380,7 +1427,13 @@ class MastermindMode extends BaseGame {
                             ai_phase: this.aiPhase,
                             ai_state: this.aiState,
                         });
-                        this.controller.showDialog(this.getText('msg_rules_reminder_row_missing'), { autoCloseMs: 2000 });
+                        this.controller.pauseAi(true);
+                        this.controller.showDialog(this.getText('msg_rules_reminder_row_missing'), {
+                            onOk: () => {
+                                this.controller.uiRules?.classList.add('hidden');
+                                this.controller.pauseAi(false);
+                            },
+                        });
                         this.controller.uiRules?.classList.remove('hidden');
                         this.forceIntercept(r, c);
                         return null;
@@ -1406,8 +1459,10 @@ class MastermindMode extends BaseGame {
             this.handleCollision(r, c);
         } else if (r === this.rows - 1) {
             // 到达终点
-            this.statusEl.textContent = this.getText('status_win');
-            this.controller.showVictory(this.attempts + 1);
+            const attemptsUsed = this.attempts + 1;
+            const defeatText = buildMastermindDefeatText(this.controller.lang, attemptsUsed);
+            this.statusEl.textContent = defeatText.full;
+            this.controller.showVictory(attemptsUsed);
             clearTimeout(this.moveInterval);
         }
 
@@ -1505,6 +1560,10 @@ class MastermindMode extends BaseGame {
         this.render();
 
         // 短暂延迟后开始下一次尝试
+        if (!shouldAutoStartNextAttempt(this.isPaused)) {
+            this.controller.appendSnailLog({ event_type: 'next_attempt_deferred_paused', ai_phase: this.aiPhase, ai_state: this.aiState });
+            return;
+        }
         this.nextAttemptTimer = setTimeout(() => {
             this.nextAttemptTimer = null;
             this.startAttempt();
@@ -1607,5 +1666,5 @@ function buildImoEdgeEscapePath({
 
 // Node 环境导出：用于单测路径规划（浏览器环境下 module 不存在，不影响运行）。
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { buildImoEdgeEscapePath, getLastMoveAxisFromPath, validateMastermindIntercept, canStartAdventureAtCell };
+    module.exports = { buildImoEdgeEscapePath, getLastMoveAxisFromPath, validateMastermindIntercept, canStartAdventureAtCell, buildMastermindDefeatText, shouldAutoStartNextAttempt };
 }

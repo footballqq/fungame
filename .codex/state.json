@@ -1,5 +1,5 @@
 {
-  "current_task": "snail 冒险模式：任意安全格出发",
+  "current_task": "snail 主宰模式：终点失败提示 + 第一轮缺怪暂停确认",
   "last_changes": [
     "snail/game.js",
     "snail/ai_strategy.test.js",
@@ -7,8 +7,9 @@
     ".codex/state.json"
   ],
   "next_actions": [
-    "打开 snail/index.html，进入冒险模式：在撞怪重置后，点击任意走过且未揭示怪物的格子，应能作为起点",
-    "运行 node --test snail/ai_strategy.test.js"
+    "打开 snail/index.html，进入主宰模式：蜗牛到终点时应显示“你失败了…”并展示探索次数 N",
+    "主宰模式：第一轮扫描未放怪物时弹窗应暂停；点击“确定”后关闭规则弹层并进入下一次探索",
+    "运行 node --test snail/ai_strategy.test.js（已通过，可复测）"
   ],
-  "notes": "主宰模式：仅当蜗牛能离开某格时才记为安全；拦截放怪物时新增安全格校验与中英文提示。冒险模式：允许从已确认安全格（走过且未揭示怪物）出发。"
+  "notes": "主宰模式：新增“蜗牛到终点=玩家失败”的文案与弹窗展示；对话框支持 onOk 回调，第一轮缺怪时暂停 AI 并等待玩家确认后再进入下一次探索。"
 }
