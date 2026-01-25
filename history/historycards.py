@@ -1,4 +1,4 @@
-# codex: 2026-01-20 为避免单条 JSON 解析失败导致全量任务中断，改为记录失败并继续；连续失败达阈值再停止
+# codex: 2026-01-25 兼容缺依赖环境：pypinyin/openai 缺失时可导入并由测试注入假实现
 """
 Generate idiom cards metadata for `history/resources/manifest.json` using the project's LLM utilities.
 
@@ -52,7 +52,11 @@ from dataclasses import field
 from typing import Iterable, Optional, Tuple
 from time import perf_counter
 
-from pypinyin import lazy_pinyin
+try:
+    from pypinyin import lazy_pinyin
+except ModuleNotFoundError:  # pragma: no cover
+    def lazy_pinyin(text: str) -> list[str]:
+        return list(text)
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # history/
 _WORKSPACE_ROOT = os.path.dirname(_SCRIPT_DIR)  # fungame/
@@ -60,7 +64,17 @@ if _WORKSPACE_ROOT not in sys.path:
     sys.path.insert(0, _WORKSPACE_ROOT)
 
 from utils.config import get_utils_config_path
-from utils.llm_api import generate_llm_response_single, load_llm_config, setup_llm_client
+try:
+    from utils.llm_api import generate_llm_response_single, load_llm_config, setup_llm_client
+except (ModuleNotFoundError, ImportError):  # pragma: no cover
+    def load_llm_config(_path: str):
+        raise RuntimeError("缺少依赖：请安装 openai/pypinyin 等运行依赖，或在测试中注入假实现。")
+
+    def setup_llm_client(_cfg, _logger):
+        raise RuntimeError("缺少依赖：请安装 openai/pypinyin 等运行依赖，或在测试中注入假实现。")
+
+    def generate_llm_response_single(_client, _llm_source, _prompt, _model_name, _logger):
+        raise RuntimeError("缺少依赖：请安装 openai/pypinyin 等运行依赖，或在测试中注入假实现。")
 
 
 logger = logging.getLogger("historycards")

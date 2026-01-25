@@ -12,3 +12,6 @@
 - [X] 体验: 主宰模式蜗牛到终点改为失败提示（含探索次数 N）
 - [X] 体验: 主宰模式第一轮未放怪物时弹窗暂停，玩家确认后再进入下一次探索（对话框支持 `onOk` 回调）
 - [X] 测试: 使用 `node --test` 覆盖失败提示文案与“暂停不自动进入下一次”分支（新增纯函数 + 单测）
+- [X] 新增: `snail/game.js` 冒险模式作弊：玩家选择蜗牛时，移动前动态重排怪物；若存在合法布局则强制下一步踩雷（新增 `tryBuildAdventureCheatMonsterLayout`）
+- [X] 测试: 使用 `node --test` 覆盖冒险模式作弊布局求解器关键分支（更新 `snail/ai_strategy.test.js`）
+- [X] 修复: `history/historycards.py` 兼容缺依赖环境（`pypinyin`/`openai` 缺失时可导入，便于 `pytest` 运行）

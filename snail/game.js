@@ -1,4 +1,4 @@
-// codex: 2026-01-24 主宰模式终点失败提示 + 第一轮缺怪暂停确认；对话框支持 onOk；补充单测导出函数
+// codex: 2026-01-25 冒险模式作弊：玩家选蜗牛时尽可能让其踩雷
 const STRINGS = {
     EN: {
         title: "Snail vs Monsters",
@@ -774,7 +774,76 @@ class AdventureMode extends BaseGame {
         }
     }
 
+    buildAdventureConfirmedSafeCellKeys() { // buildAdventureConfirmedSafeCellKeys：冒险模式“已确认安全格”集合（作弊布局时禁止放怪）
+        const confirmedSafeCellKeys = new Set(); // confirmedSafeCellKeys：key='r,c'，用于约束作弊布局不把怪物放到已走过的安全格
+        for (let r = 0; r < this.rows; r++) {
+            for (let c = 0; c < this.cols; c++) {
+                const cell = this.grid[r][c];
+                if (!cell || cell.monsterRevealed) continue;
+                const visitedBefore = Array.isArray(cell.visitedLayers) && cell.visitedLayers.length > 0;
+                if (cell.isCurrentPath || visitedBefore) {
+                    confirmedSafeCellKeys.add(`${r},${c}`);
+                }
+            }
+        }
+        return confirmedSafeCellKeys;
+    }
+
+    buildAdventureRevealedMonsters() { // buildAdventureRevealedMonsters：冒险模式已揭示怪物列表（作弊布局时必须固定）
+        const revealedMonsters = []; // revealedMonsters：已揭示怪物坐标，用于固定每行怪物位置避免“已揭示却被移动”
+        for (let r = 0; r < this.rows; r++) {
+            for (let c = 0; c < this.cols; c++) {
+                const cell = this.grid[r][c];
+                if (cell && cell.monsterRevealed) revealedMonsters.push({ r, c });
+            }
+        }
+        return revealedMonsters;
+    }
+
+    syncGridMonstersFromList() { // syncGridMonstersFromList：将 this.monsters 同步回 grid[*][*].hasMonster（支持动态作弊重排）
+        for (let r = 0; r < this.rows; r++) {
+            for (let c = 0; c < this.cols; c++) {
+                const cell = this.grid[r][c];
+                if (cell) cell.hasMonster = false;
+            }
+        }
+        for (const monster of this.monsters) {
+            if (!monster) continue;
+            const r = monster.r;
+            const c = monster.c;
+            if (this.grid[r] && this.grid[r][c]) this.grid[r][c].hasMonster = true;
+        }
+    }
+
+    tryCheatBeforeAdventureMove(r, c) { // tryCheatBeforeAdventureMove：冒险模式作弊——若能让下一步踩雷则强制重排怪物
+        if (r <= 0 || r >= this.rows - 1) return; // 规则：第 0 行与终点行不放怪物
+        const targetCell = this.grid?.[r]?.[c];
+        if (!targetCell) return;
+        if (targetCell.monsterRevealed) return; // 已揭示怪物无需作弊
+
+        const confirmedSafeCellKeys = this.buildAdventureConfirmedSafeCellKeys();
+        const forcedKey = `${r},${c}`;
+        if (confirmedSafeCellKeys.has(forcedKey)) return; // 已确认安全格不能放怪，否则玩家会感知到“回溯改规则”
+
+        const revealedMonsters = this.buildAdventureRevealedMonsters();
+        const enforceUniqueColumns = this.cols >= Math.max(0, this.rows - 2);
+        const nextMonsters = tryBuildAdventureCheatMonsterLayout({
+            rows: this.rows,
+            cols: this.cols,
+            revealedMonsters,
+            confirmedSafeCellKeys,
+            forcedMonster: { r, c },
+            enforceUniqueColumns,
+        });
+        if (!nextMonsters) return;
+
+        this.monsters = nextMonsters;
+        this.syncGridMonstersFromList();
+    }
+
     moveTo(r, c) {
+        // 作弊必须发生在 visit() 之前：visit() 会把目标格标记为“已确认安全”
+        this.tryCheatBeforeAdventureMove(r, c);
         this.snailPos = { r, c };
         this.visit(r, c);
 
@@ -820,6 +889,141 @@ function canStartAdventureAtCell(cell, r) { // canStartAdventureAtCell：冒险�
     if (!cell) return false;
     if (r === 0) return true;
     return Array.isArray(cell.visitedLayers) && cell.visitedLayers.length > 0 && !cell.monsterRevealed;
+}
+
+function tryBuildAdventureCheatMonsterLayout({
+    rows,
+    cols,
+    revealedMonsters,
+    confirmedSafeCellKeys,
+    forcedMonster,
+    enforceUniqueColumns,
+}) { // tryBuildAdventureCheatMonsterLayout：冒险模式作弊用“怪物布局求解器”（强制让 forcedMonster 变成怪物，且不放在已确认安全格）
+    if (!Number.isInteger(rows) || !Number.isInteger(cols) || rows <= 0 || cols <= 0) return null;
+    if (!forcedMonster || !Number.isInteger(forcedMonster.r) || !Number.isInteger(forcedMonster.c)) return null;
+    const forcedRow = forcedMonster.r;
+    const forcedCol = forcedMonster.c;
+    const middleRowStart = 1;
+    const middleRowEnd = rows - 2;
+    if (forcedRow < middleRowStart || forcedRow > middleRowEnd) return null;
+    if (forcedCol < 0 || forcedCol >= cols) return null;
+
+    const safeKeys = confirmedSafeCellKeys instanceof Set ? confirmedSafeCellKeys : new Set();
+    const fixedMonsterByRow = new Map(); // fixedMonsterByRow：row -> col，用于固定已揭示怪物位置
+    const fixedCols = new Set();
+    const revealedList = Array.isArray(revealedMonsters) ? revealedMonsters : [];
+
+    for (const monster of revealedList) {
+        if (!monster || !Number.isInteger(monster.r) || !Number.isInteger(monster.c)) continue;
+        if (monster.r < middleRowStart || monster.r > middleRowEnd) continue;
+        if (monster.c < 0 || monster.c >= cols) continue;
+        const prev = fixedMonsterByRow.get(monster.r);
+        if (prev !== undefined && prev !== monster.c) return null;
+        fixedMonsterByRow.set(monster.r, monster.c);
+        fixedCols.add(monster.c);
+    }
+
+    const safeForcedKey = `${forcedRow},${forcedCol}`;
+    if (safeKeys.has(safeForcedKey)) return null;
+
+    const fixedAtForcedRow = fixedMonsterByRow.get(forcedRow);
+    if (fixedAtForcedRow !== undefined && fixedAtForcedRow !== forcedCol) return null;
+
+    if (enforceUniqueColumns && fixedCols.has(forcedCol) && fixedAtForcedRow === undefined) {
+        return null;
+    }
+
+    const middleRows = [];
+    for (let r = middleRowStart; r <= middleRowEnd; r++) middleRows.push(r);
+
+    if (!enforceUniqueColumns) {
+        const monsters = [];
+        for (const r of middleRows) {
+            const fixedCol = fixedMonsterByRow.get(r);
+            if (fixedCol !== undefined) {
+                monsters.push({ r, c: fixedCol });
+                continue;
+            }
+            if (r === forcedRow) {
+                monsters.push({ r, c: forcedCol });
+                continue;
+            }
+            let chosenCol = null;
+            for (let c = 0; c < cols; c++) {
+                if (!safeKeys.has(`${r},${c}`)) {
+                    chosenCol = c;
+                    break;
+                }
+            }
+            if (chosenCol === null) return null;
+            monsters.push({ r, c: chosenCol });
+        }
+        return monsters;
+    }
+
+    const allowedColsByRow = new Map(); // allowedColsByRow：row -> 可选列数组，用于二分图匹配求解唯一列布局
+    for (const r of middleRows) {
+        const fixedCol = fixedMonsterByRow.get(r);
+        if (fixedCol !== undefined) {
+            allowedColsByRow.set(r, [fixedCol]);
+            continue;
+        }
+        if (r === forcedRow) {
+            allowedColsByRow.set(r, [forcedCol]);
+            continue;
+        }
+        const allowedCols = [];
+        for (let c = 0; c < cols; c++) {
+            if (fixedCols.has(c)) continue;
+            if (safeKeys.has(`${r},${c}`)) continue;
+            allowedCols.push(c);
+        }
+        if (allowedCols.length === 0) return null;
+        allowedColsByRow.set(r, allowedCols);
+    }
+
+    const rowsSortedByConstraints = [...middleRows].sort((a, b) => {
+        return (allowedColsByRow.get(a)?.length ?? 0) - (allowedColsByRow.get(b)?.length ?? 0);
+    });
+
+    const matchColToRow = new Map(); // matchColToRow：col -> row，表示该列已被哪一行占用
+    function tryAssignRow(row, visitedCols) {
+        const allowed = allowedColsByRow.get(row) || [];
+        for (const col of allowed) {
+            if (visitedCols.has(col)) continue;
+            visitedCols.add(col);
+            const matchedRow = matchColToRow.get(col);
+            if (matchedRow === undefined || tryAssignRow(matchedRow, visitedCols)) {
+                matchColToRow.set(col, row);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    for (const row of rowsSortedByConstraints) {
+        const ok = tryAssignRow(row, new Set());
+        if (!ok) return null;
+    }
+
+    const assignedColByRow = new Map(); // assignedColByRow：row -> col，便于输出 monsters 列表
+    for (const [col, row] of matchColToRow.entries()) {
+        assignedColByRow.set(row, col);
+    }
+    // 固定列（已揭示怪物）可能未进入 match（若 cols 被过滤），这里兜底补齐
+    for (const [row, col] of fixedMonsterByRow.entries()) {
+        assignedColByRow.set(row, col);
+    }
+
+    if (assignedColByRow.get(forcedRow) !== forcedCol) return null;
+
+    const monsters = [];
+    for (const r of middleRows) {
+        const col = assignedColByRow.get(r);
+        if (col === undefined) return null;
+        monsters.push({ r, c: col });
+    }
+    return monsters;
 }
 
 function validateMastermindIntercept({ safeCells, monsters, r, c }) { // validateMastermindIntercept：主宰模式放置怪物校验（安全格/同行/同列）
@@ -1666,5 +1870,13 @@ function buildImoEdgeEscapePath({
 
 // Node 环境导出：用于单测路径规划（浏览器环境下 module 不存在，不影响运行）。
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { buildImoEdgeEscapePath, getLastMoveAxisFromPath, validateMastermindIntercept, canStartAdventureAtCell, buildMastermindDefeatText, shouldAutoStartNextAttempt };
+    module.exports = {
+        buildImoEdgeEscapePath,
+        getLastMoveAxisFromPath,
+        validateMastermindIntercept,
+        canStartAdventureAtCell,
+        tryBuildAdventureCheatMonsterLayout,
+        buildMastermindDefeatText,
+        shouldAutoStartNextAttempt,
+    };
 }

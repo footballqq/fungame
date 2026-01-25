@@ -1,15 +1,16 @@
 {
-  "current_task": "snail 主宰模式：终点失败提示 + 第一轮缺怪暂停确认",
+  "current_task": "snail 冒险模式：玩家选蜗牛时电脑尽可能让其踩雷",
   "last_changes": [
     "snail/game.js",
     "snail/ai_strategy.test.js",
+    "history/historycards.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "打开 snail/index.html，进入主宰模式：蜗牛到终点时应显示“你失败了…”并展示探索次数 N",
-    "主宰模式：第一轮扫描未放怪物时弹窗应暂停；点击“确定”后关闭规则弹层并进入下一次探索",
-    "运行 node --test snail/ai_strategy.test.js（已通过，可复测）"
+    "打开 snail/index.html，选择“冒险模式 (我是蜗牛)”，尝试走进中间行相邻格：若存在合法布局则会被强制踩雷",
+    "运行 node --test snail/ai_strategy.test.js",
+    "运行 python.exe -m pytest -q"
   ],
-  "notes": "主宰模式：新增“蜗牛到终点=玩家失败”的文案与弹窗展示；对话框支持 onOk 回调，第一轮缺怪时暂停 AI 并等待玩家确认后再进入下一次探索。"
+  "notes": "冒险模式：在 moveTo 前计算“已确认安全格/已揭示怪物”，并尝试重排每行怪物位置；若可行则强制将下一步目标格设为怪物，从而做到“能踩雷就踩雷”。同时为缺少 pypinyin/openai 的环境增加降级导入，保证 pytest 可运行。"
 }

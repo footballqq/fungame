@@ -1,4 +1,4 @@
-// codex: 2026-01-24 补测试：主宰模式安全格禁放怪物/终点失败提示/暂停分支 + 冒险模式起点规则 + AI 逃脱路径
+// codex: 2026-01-25 补测试：冒险模式作弊布局求解器（能踩雷就踩雷）
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
@@ -7,6 +7,7 @@ const {
     getLastMoveAxisFromPath,
     validateMastermindIntercept,
     canStartAdventureAtCell,
+    tryBuildAdventureCheatMonsterLayout,
     buildMastermindDefeatText,
     shouldAutoStartNextAttempt,
 } = require('./game.js');
@@ -233,4 +234,91 @@ test('buildMastermindDefeatText：英文文案包含次数与完整句', () => {
 test('shouldAutoStartNextAttempt：暂停时不自动进入下一次', () => {
     assert.equal(shouldAutoStartNextAttempt(true), false);
     assert.equal(shouldAutoStartNextAttempt(false), true);
+});
+
+function assertAdventureMonsterLayoutValid(monsters, rows, cols, { enforceUniqueColumns }) {
+    const middleRows = [];
+    for (let r = 1; r <= rows - 2; r++) middleRows.push(r);
+    assert.equal(monsters.length, middleRows.length, '怪物数量应等于中间行数');
+
+    const seenRow = new Set();
+    const seenCol = new Set();
+    for (const monster of monsters) {
+        assert.ok(Number.isInteger(monster.r) && Number.isInteger(monster.c), '怪物坐标必须为整数');
+        assert.ok(monster.r >= 1 && monster.r <= rows - 2, `怪物行必须在中间行: ${monster.r}`);
+        assert.ok(monster.c >= 0 && monster.c < cols, `怪物列越界: ${monster.c}`);
+        assert.equal(seenRow.has(monster.r), false, `每行应恰好 1 个怪物，重复行: ${monster.r}`);
+        seenRow.add(monster.r);
+        if (enforceUniqueColumns) {
+            assert.equal(seenCol.has(monster.c), false, `列应唯一（本用例要求），重复列: ${monster.c}`);
+            seenCol.add(monster.c);
+        }
+    }
+}
+
+test('tryBuildAdventureCheatMonsterLayout：可行时强制 forcedMonster 成为怪物（唯一列）', () => {
+    const rows = 8;
+    const cols = 10;
+    const confirmedSafeCellKeys = new Set(['1,0', '2,1', '3,2', '4,3']);
+    const forcedMonster = { r: 3, c: 7 };
+    const monsters = tryBuildAdventureCheatMonsterLayout({
+        rows,
+        cols,
+        revealedMonsters: [],
+        confirmedSafeCellKeys,
+        forcedMonster,
+        enforceUniqueColumns: true,
+    });
+    assert.ok(monsters, '应返回可行布局');
+    assertAdventureMonsterLayoutValid(monsters, rows, cols, { enforceUniqueColumns: true });
+    assert.ok(monsters.some((m) => m.r === forcedMonster.r && m.c === forcedMonster.c), '必须包含 forcedMonster');
+    for (const key of confirmedSafeCellKeys) {
+        assert.equal(monsters.some((m) => `${m.r},${m.c}` === key), false, `不应放在已确认安全格: ${key}`);
+    }
+});
+
+test('tryBuildAdventureCheatMonsterLayout：forcedMonster 在安全格时返回 null', () => {
+    const rows = 6;
+    const cols = 6;
+    const confirmedSafeCellKeys = new Set(['2,3']);
+    const monsters = tryBuildAdventureCheatMonsterLayout({
+        rows,
+        cols,
+        revealedMonsters: [],
+        confirmedSafeCellKeys,
+        forcedMonster: { r: 2, c: 3 },
+        enforceUniqueColumns: true,
+    });
+    assert.equal(monsters, null);
+});
+
+test('tryBuildAdventureCheatMonsterLayout：forcedMonster 与已揭示怪物冲突时返回 null', () => {
+    const rows = 8;
+    const cols = 8;
+    const monsters = tryBuildAdventureCheatMonsterLayout({
+        rows,
+        cols,
+        revealedMonsters: [{ r: 3, c: 1 }],
+        confirmedSafeCellKeys: new Set(),
+        forcedMonster: { r: 3, c: 2 },
+        enforceUniqueColumns: true,
+    });
+    assert.equal(monsters, null);
+});
+
+test('tryBuildAdventureCheatMonsterLayout：列数不足时降级允许重复列（仍强制踩雷）', () => {
+    const rows = 10;
+    const cols = 3; // 中间行=8，无法做到“列唯一”
+    const forcedMonster = { r: 4, c: 2 };
+    const monsters = tryBuildAdventureCheatMonsterLayout({
+        rows,
+        cols,
+        revealedMonsters: [{ r: 2, c: 1 }],
+        confirmedSafeCellKeys: new Set(['5,0', '6,0', '7,0']),
+        forcedMonster,
+        enforceUniqueColumns: false,
+    });
+    assert.ok(monsters, '应返回可行布局（允许重复列）');
+    assertAdventureMonsterLayoutValid(monsters, rows, cols, { enforceUniqueColumns: false });
+    assert.ok(monsters.some((m) => m.r === forcedMonster.r && m.c === forcedMonster.c), '必须包含 forcedMonster');
 });

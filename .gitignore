@@ -10,6 +10,7 @@
 /log/
 /output/
 /doc/
+/utils/config.ini
 article.json
 failed_packages.txt
 test.txt
