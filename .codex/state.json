@@ -1,16 +1,22 @@
 {
-  "current_task": "snail 冒险模式：玩家选蜗牛时电脑尽可能让其踩雷",
+  "current_task": "chesshorse：马踏遍棋盘（Knight's Tour）游戏",
   "last_changes": [
-    "snail/game.js",
-    "snail/ai_strategy.test.js",
-    "history/historycards.py",
+    "chesshorse/index.html",
+    "chesshorse/style.css",
+    "chesshorse/app.js",
+    "chesshorse/knight_tour_solver.js",
+    "chesshorse/knight_tour_solver.test.js",
+    "chesshorse/README.md",
+    "tools/chesshorse_knight_tour_solver.py",
+    "tests/test_chesshorse_knight_tour_solver.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "打开 snail/index.html，选择“冒险模式 (我是蜗牛)”，尝试走进中间行相邻格：若存在合法布局则会被强制踩雷",
-    "运行 node --test snail/ai_strategy.test.js",
-    "运行 python.exe -m pytest -q"
+    "运行 node --test chesshorse/knight_tour_solver.test.js",
+    "运行 python.exe -m pytest -q",
+    "git status 确认变更",
+    "git commit 并 push"
   ],
-  "notes": "冒险模式：在 moveTo 前计算“已确认安全格/已揭示怪物”，并尝试重排每行怪物位置；若可行则强制将下一步目标格设为怪物，从而做到“能踩雷就踩雷”。同时为缺少 pypinyin/openai 的环境增加降级导入，保证 pytest 可运行。"
+  "notes": "已实现 chesshorse 游戏（N×N 4..8）、求解器（答案+演示）、祝福/烟花彩蛋、localStorage 记录；并新增 Node + pytest 回归测试。"
 }

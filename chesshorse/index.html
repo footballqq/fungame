@@ -1,0 +1,189 @@
+<!-- codex: 2026-02-13 新增 Knight's Tour 游戏：N×N 棋盘走遍所有格（支持答案/演示/记录/春节元素） -->
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>小马闲逛（Knight's Tour）</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="小马闲逛游戏">
+      <div class="spring-banner" id="springBanner" aria-label="新春祝福">
+        <span class="spring-banner-text" id="springBannerText">新春快乐 · 马到成功</span>
+        <span class="spring-banner-decor" aria-hidden="true">🏮🧧🎆</span>
+      </div>
+
+      <header class="header">
+        <div class="title-wrap">
+          <h1 class="title">小马闲逛（Knight's Tour）</h1>
+          <p class="subtitle">
+            先点一个起点 → 然后按“日”字走。走过的格子会变色，不能再踩。
+          </p>
+        </div>
+
+        <div class="header-right" aria-label="信息与操作区">
+          <div class="stats" aria-label="统计信息">
+            <div class="stat">
+              <div class="stat-label">步数</div>
+              <div class="stat-value" id="moveCount">0</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">进度</div>
+              <div class="stat-value" id="progressText">0/0</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">用时</div>
+              <div class="stat-value" id="timeText">00:00</div>
+            </div>
+          </div>
+
+          <div class="header-actions" aria-label="配置与按钮">
+            <label class="field" aria-label="棋盘大小选择">
+              <span class="field-label">棋盘</span>
+              <select id="boardSizeSelect" class="field-input" aria-label="选择棋盘大小">
+                <option value="4" selected>4×4（默认）</option>
+                <option value="5">5×5</option>
+                <option value="6">6×6</option>
+                <option value="7">7×7</option>
+                <option value="8">8×8（国际象棋）</option>
+              </select>
+            </label>
+
+            <div class="btn-row" aria-label="主要按钮">
+              <button type="button" class="btn" id="rulesBtn" aria-haspopup="dialog" aria-controls="rulesModal">
+                规则
+              </button>
+              <button type="button" class="btn" id="undoBtn" disabled>撤销</button>
+              <button type="button" class="btn" id="hintBtn" disabled>提示一步</button>
+              <button type="button" class="btn" id="answerBtn" aria-haspopup="dialog" aria-controls="answerModal">
+                显示答案
+              </button>
+              <button type="button" class="btn primary" id="demoBtn" disabled>
+                动画演示
+              </button>
+              <button type="button" class="btn" id="resetBtn">重置</button>
+            </div>
+
+            <div class="btn-row" aria-label="演示速度与音效">
+              <label class="field field-inline" aria-label="动画速度">
+                <span class="field-label">速度</span>
+                <input id="speedRange" class="field-input" type="range" min="1" max="10" step="1" value="6" />
+              </label>
+              <button type="button" class="btn" id="soundBtn" aria-pressed="true">音效：开</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="board-wrap" aria-label="棋盘区域">
+        <div class="legend" aria-label="说明">
+          <div class="legend-item">
+            <span class="legend-icon" aria-hidden="true">♞</span>
+            <span>当前所在格（马）</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-icon visited" aria-hidden="true"></span>
+            <span>走过的格子（不能再踩）</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-icon target" aria-hidden="true"></span>
+            <span>可走的下一步</span>
+          </div>
+        </div>
+
+        <div class="board" id="board" role="grid" aria-label="棋盘"></div>
+
+        <div class="help" id="helpText" aria-live="polite"></div>
+
+        <div class="records" aria-label="游戏记录">
+          <div class="record-card">
+            <div class="record-title">我的记录</div>
+            <div class="record-grid">
+              <div class="record-item">
+                <div class="record-label">尝试次数</div>
+                <div class="record-value" id="recordAttempts">0</div>
+              </div>
+              <div class="record-item">
+                <div class="record-label">成功次数</div>
+                <div class="record-value" id="recordWins">0</div>
+              </div>
+              <div class="record-item">
+                <div class="record-label">最佳用时</div>
+                <div class="record-value" id="recordBestTime">-</div>
+              </div>
+              <div class="record-item">
+                <div class="record-label">最高覆盖</div>
+                <div class="record-value" id="recordBestCoverage">-</div>
+              </div>
+            </div>
+            <div class="record-actions">
+              <button type="button" class="btn" id="clearRecordsBtn">清空记录</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="fxLayer" class="fx-layer" aria-hidden="true"></div>
+
+    <div class="modal-backdrop" id="rulesModal" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="rulesTitle">
+        <h2 class="modal-title" id="rulesTitle">游戏规则</h2>
+        <div class="modal-body">
+          <ul class="rule-list" aria-label="规则列表">
+            <li>棋盘默认 4×4，你也可以切换到 5×5、6×6、7×7、8×8。</li>
+            <li>先点一个格子作为起点，马会出现在那里（♞）。</li>
+            <li>之后每一步必须走“日”字（Knight），并且不能走到已经走过的格子。</li>
+            <li>目标：走遍所有格子（覆盖 64/64 或 N²/N²），每格只走一次。</li>
+          </ul>
+          <p class="rule-ops">
+            “显示答案”会告诉你：从当前起点/当前状态是否还能走遍全盘；也可用“动画演示”展示一条可行路径。
+          </p>
+          <p class="rule-ops">
+            新春彩蛋：祝福语与小烟花会随机出现。祝你一路“马到成功”！
+          </p>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn primary" id="startBtn">开始游戏</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="answerModal" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="answerTitle">
+        <h2 class="modal-title" id="answerTitle">答案与演示</h2>
+        <div class="modal-body">
+          <div class="answer-block">
+            <div class="answer-label">从当前状态继续</div>
+            <div class="answer-value" id="answerFromCurrent">-</div>
+          </div>
+          <div class="answer-block">
+            <div class="answer-label">从起点重新开始</div>
+            <div class="answer-value" id="answerFromStart">-</div>
+          </div>
+          <div class="answer-hint" id="answerHint"></div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn" id="answerCloseBtn">关闭</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="winModal" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-label="通关提示">
+        <h2 class="modal-title" id="winTitle">恭喜通关！</h2>
+        <p class="modal-body" id="winBody"></p>
+        <div class="modal-actions">
+          <button type="button" class="btn" id="winDemoBtn">演示另一条</button>
+          <button type="button" class="btn primary" id="playAgainBtn">再来一局</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./knight_tour_solver.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
+
