@@ -37,8 +37,10 @@ const DEFAULT_QUESTIONS = [
 ];
 
 const DEFAULT_DECK_CONFIG = {
-    suits: ["♠", "♥", "♦", "♣"],
-    range: [1, 13]
+    '♠': { active: true, min: 1, max: 13 },
+    '♥': { active: true, min: 1, max: 13 },
+    '♣': { active: true, min: 1, max: 13 },
+    '♦': { active: true, min: 1, max: 13 }
 };
 
 // 封装状态管理对象
@@ -55,7 +57,15 @@ const AppStore = {
     // 获取牌库配置
     getDeckConfig: function() {
         const stored = localStorage.getItem('jh_deck_config');
-        return stored ? JSON.parse(stored) : DEFAULT_DECK_CONFIG;
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            // 兼容旧版本数据结构
+            if (parsed.suits) {
+                return DEFAULT_DECK_CONFIG;
+            }
+            return parsed;
+        }
+        return DEFAULT_DECK_CONFIG;
     },
     // 保存牌库配置
     saveDeckConfig: function(config) {

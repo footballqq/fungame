@@ -5,39 +5,54 @@ document.addEventListener('DOMContentLoaded', () => {
     let deckConfig = AppStore.getDeckConfig();
 
     // DOM Elements
-    const suitCheckboxes = document.querySelectorAll('#suit-options input');
-    const rangeMin = document.getElementById('range-min');
-    const rangeMax = document.getElementById('range-max');
+    const deckConfigContainer = document.getElementById('deck-config-container');
     const questionList = document.getElementById('question-list');
 
     // Initialize Config Form
     function initConfigForm() {
-        suitCheckboxes.forEach(cb => {
-            cb.checked = deckConfig.suits.includes(cb.value);
+        deckConfigContainer.innerHTML = '';
+        const suitNames = { '♠': '黑桃', '♥': '红桃', '♣': '梅花', '♦': '方块' };
+        
+        Object.keys(deckConfig).forEach(suit => {
+            const conf = deckConfig[suit];
+            const row = document.createElement('div');
+            row.className = 'suit-config-row form-group';
+            row.style.display = 'flex';
+            row.style.alignItems = 'center';
+            row.style.gap = '15px';
+            row.style.marginBottom = '10px';
+            
+            row.innerHTML = `
+                <label style="margin:0; width: 100px;">
+                    <input type="checkbox" class="suit-cb" data-suit="${suit}" ${conf.active ? 'checked' : ''}> 
+                    ${suitNames[suit]} (${suit})
+                </label>
+                <span>范围:</span>
+                <input type="number" class="suit-min" data-suit="${suit}" min="1" max="13" value="${conf.min}" style="width: 60px;">
+                <span>-</span>
+                <input type="number" class="suit-max" data-suit="${suit}" min="1" max="13" value="${conf.max}" style="width: 60px;">
+            `;
+            deckConfigContainer.appendChild(row);
         });
-        rangeMin.value = deckConfig.range[0];
-        rangeMax.value = deckConfig.range[1];
+
+        // 绑定事件实现自动保存
+        deckConfigContainer.querySelectorAll('input').forEach(input => {
+            input.addEventListener('change', saveConfigFromDOM);
+        });
     }
 
-    // Save Deck Config
-    document.getElementById('save-deck-btn').addEventListener('click', () => {
-        const suits = Array.from(suitCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
-        const min = parseInt(rangeMin.value) || 1;
-        const max = parseInt(rangeMax.value) || 13;
-
-        if (suits.length === 0) {
-            alert('请至少选择一种花色！');
-            return;
-        }
-        if (min > max) {
-            alert('范围最小值不能大于最大值！');
-            return;
-        }
-
-        deckConfig = { suits, range: [min, max] };
+    function saveConfigFromDOM() {
+        Object.keys(deckConfig).forEach(suit => {
+            const cb = deckConfigContainer.querySelector(`.suit-cb[data-suit="${suit}"]`);
+            const minInput = deckConfigContainer.querySelector(`.suit-min[data-suit="${suit}"]`);
+            const maxInput = deckConfigContainer.querySelector(`.suit-max[data-suit="${suit}"]`);
+            
+            deckConfig[suit].active = cb.checked;
+            deckConfig[suit].min = parseInt(minInput.value) || 1;
+            deckConfig[suit].max = parseInt(maxInput.value) || 13;
+        });
         AppStore.saveDeckConfig(deckConfig);
-        alert('牌库配置已保存！');
-    });
+    }
 
     // Reset History
     document.getElementById('reset-history-btn').addEventListener('click', () => {

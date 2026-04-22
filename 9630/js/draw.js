@@ -18,14 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Build available pool
     let fullPool = [];
-    deckConfig.suits.forEach(suit => {
-        for (let i = deckConfig.range[0]; i <= deckConfig.range[1]; i++) {
-            let valStr = i.toString();
-            if (i === 1) valStr = 'A';
-            if (i === 11) valStr = 'J';
-            if (i === 12) valStr = 'Q';
-            if (i === 13) valStr = 'K';
-            fullPool.push({ suit, valStr, id: `${suit}${valStr}` });
+    Object.keys(deckConfig).forEach(suit => {
+        const conf = deckConfig[suit];
+        if (conf.active) {
+            for (let i = conf.min; i <= conf.max; i++) {
+                let valStr = i.toString();
+                if (i === 1) valStr = 'A';
+                if (i === 11) valStr = 'J';
+                if (i === 12) valStr = 'Q';
+                if (i === 13) valStr = 'K';
+                fullPool.push({ suit, valStr, id: `${suit}${valStr}` });
+            }
         }
     });
 
@@ -62,6 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (e.code === 'Escape') {
             window.location.href = 'index.html';
+        }
+    });
+
+    // 重新选题按钮
+    document.getElementById('redraw-qs-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        // 如果当前是展示题目的状态，允许重新抽题
+        if (isShowingQuestions) {
+            showQuestions();
         }
     });
 

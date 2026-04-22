@@ -14,27 +14,12 @@
         </header>
 
         <section class="config-section">
-            <h3>牌库配置</h3>
-            <div class="deck-config">
-                <div class="form-group">
-                    <label>花色选择:</label>
-                    <div id="suit-options">
-                        <label><input type="checkbox" value="♠" checked> 黑桃 (♠)</label>
-                        <label><input type="checkbox" value="♥" checked> 红桃 (♥)</label>
-                        <label><input type="checkbox" value="♣" checked> 梅花 (♣)</label>
-                        <label><input type="checkbox" value="♦" checked> 方块 (♦)</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>数字范围:</label>
-                    <input type="number" id="range-min" min="1" max="13" value="1">
-                    <span> - </span>
-                    <input type="number" id="range-max" min="1" max="13" value="13">
-                </div>
-                <div class="actions">
-                    <button id="save-deck-btn" class="btn btn-primary">保存配置</button>
-                    <button id="reset-history-btn" class="btn btn-warning">清空抽奖历史</button>
-                </div>
+            <h3>牌库配置 (实时保存)</h3>
+            <div class="deck-config" id="deck-config-container">
+                <!-- 由 js 动态渲染 -->
+            </div>
+            <div class="actions" style="margin-top:15px;">
+                <button id="reset-history-btn" class="btn btn-warning">重置抽卡进度 (将已抽出的牌放回)</button>
             </div>
         </section>
 
