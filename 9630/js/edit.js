@@ -175,6 +175,16 @@ document.addEventListener('DOMContentLoaded', () => {
         URL.revokeObjectURL(url);
     });
 
+    // Reset Questions to Default
+    document.getElementById('reset-questions-btn').addEventListener('click', () => {
+        if (confirm('确定要恢复默认题库吗？这会覆盖掉您手动新增的题目。')) {
+            localStorage.removeItem('jh_questions');
+            questions = AppStore.getQuestions();
+            renderQuestions();
+            alert('已恢复为最新的默认题库（共 ' + questions.length + ' 题）！');
+        }
+    });
+
     // Init
     initConfigForm();
     renderQuestions();

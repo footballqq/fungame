@@ -33,7 +33,30 @@ const DEFAULT_QUESTIONS = [
     { id: 27, category: "选答题", subcategory: "展望未来", content: "对于下一代，你更希望他们继承你的逻辑思维，还是希望他们去尝试你未曾涉足的感性世界？" },
     { id: 28, category: "选答题", subcategory: "展望未来", content: "如果用一行代码（任何语言）来总结你的前 50 年人生，你会怎么写？" },
     { id: 29, category: "选答题", subcategory: "展望未来", content: "想象 2046 年（入学 50 周年）再次聚会，你最希望那时候的自己依然保持什么特质？" },
-    { id: 30, category: "选答题", subcategory: "展望未来", content: "现场选一位老同学，问一个你藏了 30 年一直想问但没问出口的问题。" }
+    { id: 30, category: "选答题", subcategory: "展望未来", content: "现场选一位老同学，问一个你藏了 30 年一直想问但没问出口的问题。" },
+    
+    // 以下为根据 9630ani.md 补充的丰富题目
+    { id: 31, category: "选答题", subcategory: "回忆杀", content: "刚进 清华大学 时，对校园的第一印象是什么？" },
+    { id: 32, category: "选答题", subcategory: "回忆杀", content: "你记得宿舍里最有特点的同学是谁？为什么？" },
+    { id: 33, category: "选答题", subcategory: "回忆杀", content: "校园里你最常出没的地方是哪儿？" },
+    { id: 34, category: "选答题", subcategory: "回忆杀", content: "当年班里最可能成功的人，现在兑现了吗？" },
+    { id: 35, category: "选答题", subcategory: "回忆杀", content: "你当年暗暗佩服过谁？（可匿名）" },
+    { id: 36, category: "选答题", subcategory: "回忆杀", content: "上学时最经典的“糗事”是什么？" },
+    { id: 37, category: "选答题", subcategory: "回忆杀", content: "当年谁最爱吹牛？后来真做到了吗？" },
+    { id: 38, category: "选答题", subcategory: "回忆杀", content: "有没有一件小事，现在回头看特别温暖？" },
+
+    { id: 39, category: "选答题", subcategory: "人生沉淀", content: "离开学校后，你发现社会最真实的一课是什么？" },
+    { id: 40, category: "选答题", subcategory: "人生沉淀", content: "如果让你给 25 岁的自己一句建议，会说什么？" },
+    { id: 41, category: "选答题", subcategory: "人生沉淀", content: "这些年你失去过什么，也因此得到过什么？" },
+    { id: 42, category: "选答题", subcategory: "人生沉淀", content: "你现在怎么看待“成功”这件事？" },
+    { id: 43, category: "选答题", subcategory: "人生沉淀", content: "人到这个阶段，你最珍惜的东西是什么？" },
+    { id: 44, category: "选答题", subcategory: "人生沉淀", content: "如果人生重来一次，你还会学计算机吗？为什么？" },
+
+    { id: 45, category: "选答题", subcategory: "现场高潮", content: "当年谁最像创业者？现在验证了吗？" },
+    { id: 46, category: "选答题", subcategory: "现场高潮", content: "谁当年最低调，现在最让人意外？" },
+    { id: 47, category: "选答题", subcategory: "现场高潮", content: "谁看起来变化最大？" },
+    { id: 48, category: "选答题", subcategory: "现场高潮", content: "谁一开口，还是当年的味道？" },
+    { id: 49, category: "选答题", subcategory: "现场高潮", content: "今天见到谁，让你一秒回到 1996？" }
 ];
 
 const DEFAULT_DECK_CONFIG = {
