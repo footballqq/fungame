@@ -1,3 +1,8 @@
+<!-- codex: 2026-02-13 新增 chesshorse：马踏遍棋盘（Knight's Tour）游戏与回归测试 -->
+- [X] 新增: `chesshorse/` 国际象棋“马”走遍棋盘（默认 4×4，可选 N×N），走过格子变色不可再踩，支持“显示答案/动画演示/提示一步/撤销”，含春节元素与祝福语、玩家记录
+- [X] 测试: 使用 `pytest` 覆盖 Knight's Tour 求解器的“无解/有解/路径合法性”关键场景（新增 `tests/test_chesshorse_knight_tour_solver.py`；并补 Node 单测 `chesshorse/knight_tour_solver.test.js`）
+- [X] 文档: 补齐 `chesshorse/README.md`（玩法/按钮/答案与演示说明）
+
 - [X] 新增: `history/historycards.py` 失败记录后继续处理，连续失败达到阈值才停止（默认 10）（新增 `--max-consecutive-failures`/`--stop-on-failure`）
 - [X] 新增: 将失败条目汇总写入 `history/resources/cards/_errors.jsonl` 便于后续统一处理（新增 `--errors-file`，默认写到 `cards/_errors.jsonl`）
 - [X] 测试: 使用 `pytest` 覆盖“继续处理/连续失败停止/错误汇总写入”3 个场景（新增 `tests/test_historycards_failure_handling.py`）

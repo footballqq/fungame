@@ -1,0 +1,150 @@
+<!-- codex: 2026-02-11 增加春节氛围：顶部祝福语/随机祝福成语/烟花特效/成绩记录/移动音效开关 -->
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>马互换（3×3 Knight Puzzle）</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="马互换游戏">
+      <div class="spring-banner" id="springBanner" aria-label="马年祝福">
+        <span class="spring-banner-text">马年吉祥 · 马到成功</span>
+        <span class="spring-banner-decor" aria-hidden="true">🏮🧧🎆</span>
+      </div>
+
+      <header class="header">
+        <div class="title-wrap">
+          <h1 class="title">马互换（3×3）</h1>
+          <p class="subtitle">
+            点按棋子 → 再点按目标格。马走“日”字，目标格必须为空。
+          </p>
+        </div>
+        <div class="header-right" aria-label="信息与辅助按钮">
+          <div class="stats" aria-label="统计信息">
+            <div class="stat">
+              <div class="stat-label">你的步数</div>
+              <div class="stat-value" id="moveCount">0</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">最优步数</div>
+              <div class="stat-value" id="bestCount">-</div>
+            </div>
+          </div>
+          <div class="header-buttons" aria-label="辅助按钮">
+            <button
+              type="button"
+              class="btn"
+              id="rulesBtn"
+              aria-haspopup="dialog"
+              aria-controls="rulesModal"
+            >
+              显示规则
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="board-wrap" aria-label="棋盘区域">
+        <div class="legend" aria-label="棋子说明">
+          <div class="legend-item">
+            <span class="piece white" aria-hidden="true">🐴</span>
+            <span>白马（目标：到顶部两个角）</span>
+          </div>
+          <div class="legend-item">
+            <span class="piece black" aria-hidden="true">🐎</span>
+            <span>黑马（目标：到底部两个角）</span>
+          </div>
+        </div>
+
+        <div class="board" id="board" role="grid" aria-label="3×3 棋盘"></div>
+
+        <div class="controls" aria-label="操作按钮">
+          <button type="button" class="btn" id="undoBtn">撤销一步</button>
+          <button type="button" class="btn" id="hintBtn">提示一步</button>
+          <button type="button" class="btn" id="soundBtn" aria-pressed="true">
+            音效：开
+          </button>
+          <button type="button" class="btn primary" id="resetBtn">重置</button>
+        </div>
+
+        <div class="records" aria-label="成绩记录">
+          <div class="record-card">
+            <div class="record-title">你的成绩</div>
+            <div class="record-grid">
+              <div class="record-item">
+                <div class="record-label">通关次数</div>
+                <div class="record-value" id="recordWins">0</div>
+              </div>
+              <div class="record-item">
+                <div class="record-label">个人最佳</div>
+                <div class="record-value" id="recordBest">-</div>
+              </div>
+              <div class="record-item">
+                <div class="record-label">最近通关</div>
+                <div class="record-value" id="recordLast">-</div>
+              </div>
+              <div class="record-item">
+                <div class="record-label">最优达成</div>
+                <div class="record-value" id="recordOptimal">-</div>
+              </div>
+            </div>
+            <div class="record-actions">
+              <button type="button" class="btn" id="clearRecordsBtn">清空成绩</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="help" id="helpText" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <div id="fxLayer" class="fx-layer" aria-hidden="true"></div>
+
+    <div class="modal-backdrop" id="rulesModal" hidden>
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="rulesTitle"
+      >
+        <h2 class="modal-title" id="rulesTitle">游戏规则</h2>
+        <div class="modal-body">
+          <ul class="rule-list" aria-label="规则列表">
+            <li>棋盘为 3×3，四个角各有一匹马。</li>
+            <li>初始：白马在底部两个角；黑马在顶部两个角。</li>
+            <li>目标：白马到顶部两个角；黑马到底部两个角（互换位置）。</li>
+            <li>走法：马只能走“日”字，且目标格必须为空。</li>
+          </ul>
+          <p class="rule-ops">
+            操作方法：点按棋子 → 再点按绿色标记的目标格。可用“撤销一步 / 提示一步 / 重置”辅助通关。
+          </p>
+          <p class="rule-ops">
+            你也可以在“音效：开/关”里切换走子音效（设置会被保存）。
+          </p>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn primary" id="startBtn">
+            开始游戏
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="winModal" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-label="胜利提示">
+        <h2 class="modal-title" id="winTitle">恭喜通关！</h2>
+        <p class="modal-body" id="winBody"></p>
+        <div class="modal-actions">
+          <button type="button" class="btn primary" id="playAgainBtn">
+            再来一局
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
