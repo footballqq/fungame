@@ -1,0 +1,8702 @@
+{
+  "generatedAt": "2026-02-21T01:41:24.294Z",
+  "weights": {
+    "gdp": 0.65,
+    "area": 0.35
+  },
+  "sources": {
+    "worldBankGDP": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json&per_page=20000",
+    "worldBankArea": "https://api.worldbank.org/v2/country/all/indicator/AG.LND.TOTL.K2?format=json&per_page=20000",
+    "restCountries": "https://restcountries.com/v3.1/all?fields=name,cca3,altSpellings,region,subregion"
+  },
+  "nameToIso3": {
+    "vietnam": "VNM",
+    "socialistrepublicofvietnam": "VNM",
+    "vn": "VNM",
+    "conghoaxahoichunghiavietnam": "VNM",
+    "frenchguiana": "GUF",
+    "guiana": "GUF",
+    "gf": "GUF",
+    "guyane": "GUF",
+    "sintmaarten": "SXM",
+    "sx": "SXM",
+    "sintmaartendutchpart": "SXM",
+    "britishvirginislands": "VGB",
+    "virginislands": "VGB",
+    "vg": "VGB",
+    "virginislandsbritish": "VGB",
+    "papuanewguinea": "PNG",
+    "independentstateofpapuanewguinea": "PNG",
+    "pg": "PNG",
+    "independenstetbilongpapuaniugini": "PNG",
+    "chile": "CHL",
+    "republicofchile": "CHL",
+    "cl": "CHL",
+    "republicadechile": "CHL",
+    "hungary": "HUN",
+    "hu": "HUN",
+    "colombia": "COL",
+    "republicofcolombia": "COL",
+    "co": "COL",
+    "republicadecolombia": "COL",
+    "djibouti": "DJI",
+    "republicofdjibouti": "DJI",
+    "dj": "DJI",
+    "jabuuti": "DJI",
+    "gabuuti": "DJI",
+    "republiquededjibouti": "DJI",
+    "gabuutihummuuno": "DJI",
+    "jamhuuriyaddajabuuti": "DJI",
+    "aruba": "ABW",
+    "aw": "ABW",
+    "tonga": "TON",
+    "kingdomoftonga": "TON",
+    "to": "TON",
+    "denmark": "DNK",
+    "kingdomofdenmark": "DNK",
+    "dk": "DNK",
+    "danmark": "DNK",
+    "kongerigetdanmark": "DNK",
+    "christmasisland": "CXR",
+    "territoryofchristmasisland": "CXR",
+    "cx": "CXR",
+    "dominicanrepublic": "DOM",
+    "do": "DOM",
+    "mexico": "MEX",
+    "unitedmexicanstates": "MEX",
+    "mx": "MEX",
+    "mexicanos": "MEX",
+    "estadosunidosmexicanos": "MEX",
+    "unitedkingdom": "GBR",
+    "unitedkingdomofgreatbritainandnorthernireland": "GBR",
+    "gb": "GBR",
+    "uk": "GBR",
+    "greatbritain": "GBR",
+    "turkey": "TUR",
+    "republicofturkey": "TUR",
+    "tr": "TUR",
+    "turkiye": "TUR",
+    "turkiyecumhuriyeti": "TUR",
+    "northmacedonia": "MKD",
+    "republicofnorthmacedonia": "MKD",
+    "mk": "MKD",
+    "theformeryugoslavrepublicofmacedonia": "MKD",
+    "macedoniatheformeryugoslavrepublicof": "MKD",
+    "ukraine": "UKR",
+    "ua": "UKR",
+    "ukrayina": "UKR",
+    "venezuela": "VEN",
+    "bolivarianrepublicofvenezuela": "VEN",
+    "ve": "VEN",
+    "venezuelabolivarianrepublicof": "VEN",
+    "republicabolivarianadevenezuela": "VEN",
+    "burkinafaso": "BFA",
+    "bf": "BFA",
+    "eritrea": "ERI",
+    "stateoferitrea": "ERI",
+    "er": "ERI",
+    "dawlatiritriya": "ERI",
+    "ertra": "ERI",
+    "iritriya": "ERI",
+    "westernsahara": "ESH",
+    "sahrawiarabdemocraticrepublic": "ESH",
+    "eh": "ESH",
+    "tanezrofttutrimt": "ESH",
+    "jersey": "JEY",
+    "bailiwickofjersey": "JEY",
+    "je": "JEY",
+    "bailliagedejersey": "JEY",
+    "bailliagedejerri": "JEY",
+    "saintbarthelemy": "BLM",
+    "collectivityofsaintbarthelemy": "BLM",
+    "bl": "BLM",
+    "stbarthelemy": "BLM",
+    "collectivitedesaintbarthelemy": "BLM",
+    "luxembourg": "LUX",
+    "grandduchyofluxembourg": "LUX",
+    "lu": "LUX",
+    "grandduchedeluxembourg": "LUX",
+    "groherzogtumluxemburg": "LUX",
+    "groussherzogtumletzebuerg": "LUX",
+    "reunion": "REU",
+    "reunionisland": "REU",
+    "re": "REU",
+    "tuvalu": "TUV",
+    "tv": "TUV",
+    "costarica": "CRI",
+    "republicofcostarica": "CRI",
+    "cr": "CRI",
+    "republicadecostarica": "CRI",
+    "romania": "ROU",
+    "ro": "ROU",
+    "rumania": "ROU",
+    "roumania": "ROU",
+    "greece": "GRC",
+    "hellenicrepublic": "GRC",
+    "gr": "GRC",
+    "ellada": "GRC",
+    "zimbabwe": "ZWE",
+    "republicofzimbabwe": "ZWE",
+    "zw": "ZWE",
+    "monaco": "MCO",
+    "principalityofmonaco": "MCO",
+    "mc": "MCO",
+    "principautedemonaco": "MCO",
+    "svalbardandjanmayen": "SJM",
+    "svalbardogjanmayen": "SJM",
+    "sj": "SJM",
+    "svalbardandjanmayenislands": "SJM",
+    "unitedstatesvirginislands": "VIR",
+    "virginislandsoftheunitedstates": "VIR",
+    "vi": "VIR",
+    "virginislandsus": "VIR",
+    "canada": "CAN",
+    "ca": "CAN",
+    "ghana": "GHA",
+    "republicofghana": "GHA",
+    "gh": "GHA",
+    "ivorycoast": "CIV",
+    "republicofcotedivoire": "CIV",
+    "ci": "CIV",
+    "cotedivoire": "CIV",
+    "republiquedecotedivoire": "CIV",
+    "myanmar": "MMR",
+    "republicoftheunionofmyanmar": "MMR",
+    "mm": "MMR",
+    "burma": "MMR",
+    "pyidaunzuthanmadamyamanainngandaw": "MMR",
+    "mauritania": "MRT",
+    "islamicrepublicofmauritania": "MRT",
+    "mr": "MRT",
+    "aljumhuriyyahalislamiyyahalmuritaniyyah": "MRT",
+    "jamaica": "JAM",
+    "jm": "JAM",
+    "southsudan": "SSD",
+    "republicofsouthsudan": "SSD",
+    "ss": "SSD",
+    "brunei": "BRN",
+    "nationofbruneiabodeofpeace": "BRN",
+    "bn": "BRN",
+    "bruneidarussalam": "BRN",
+    "nationofbrunei": "BRN",
+    "theabodeofpeace": "BRN",
+    "singapore": "SGP",
+    "republicofsingapore": "SGP",
+    "sg": "SGP",
+    "singapura": "SGP",
+    "republiksingapura": "SGP",
+    "bouvetisland": "BVT",
+    "bv": "BVT",
+    "bouvetya": "BVT",
+    "newzealand": "NZL",
+    "nz": "NZL",
+    "aotearoa": "NZL",
+    "spain": "ESP",
+    "kingdomofspain": "ESP",
+    "es": "ESP",
+    "reinodeespana": "ESP",
+    "philippines": "PHL",
+    "republicofthephilippines": "PHL",
+    "ph": "PHL",
+    "republikangpilipinas": "PHL",
+    "poland": "POL",
+    "republicofpoland": "POL",
+    "pl": "POL",
+    "rzeczpospolitapolska": "POL",
+    "republicofthecongo": "COG",
+    "cg": "COG",
+    "congo": "COG",
+    "congobrazzaville": "COG",
+    "newcaledonia": "NCL",
+    "nc": "NCL",
+    "azerbaijan": "AZE",
+    "republicofazerbaijan": "AZE",
+    "az": "AZE",
+    "azrbaycanrespublikas": "AZE",
+    "taiwan": "TWN",
+    "republicofchinataiwan": "TWN",
+    "tw": "TWN",
+    "republicofchina": "TWN",
+    "zhonghuaminguo": "TWN",
+    "chinesetaipei": "TWN",
+    "italy": "ITA",
+    "italianrepublic": "ITA",
+    "it": "ITA",
+    "repubblicaitaliana": "ITA",
+    "alandislands": "ALA",
+    "ax": "ALA",
+    "aaland": "ALA",
+    "aland": "ALA",
+    "ahvenanmaa": "ALA",
+    "algeria": "DZA",
+    "peoplesdemocraticrepublicofalgeria": "DZA",
+    "dz": "DZA",
+    "dzayer": "DZA",
+    "algerie": "DZA",
+    "andorra": "AND",
+    "principalityofandorra": "AND",
+    "ad": "AND",
+    "principatdandorra": "AND",
+    "turksandcaicosislands": "TCA",
+    "tc": "TCA",
+    "iceland": "ISL",
+    "is": "ISL",
+    "island": "ISL",
+    "republicoficeland": "ISL",
+    "lyveldiisland": "ISL",
+    "chad": "TCD",
+    "republicofchad": "TCD",
+    "td": "TCD",
+    "tchad": "TCD",
+    "republiquedutchad": "TCD",
+    "bahamas": "BHS",
+    "commonwealthofthebahamas": "BHS",
+    "bs": "BHS",
+    "brazil": "BRA",
+    "federativerepublicofbrazil": "BRA",
+    "br": "BRA",
+    "brasil": "BRA",
+    "republicafederativadobrasil": "BRA",
+    "thailand": "THA",
+    "kingdomofthailand": "THA",
+    "th": "THA",
+    "prathet": "THA",
+    "thai": "THA",
+    "ratchaanachakthai": "THA",
+    "micronesia": "FSM",
+    "federatedstatesofmicronesia": "FSM",
+    "fm": "FSM",
+    "micronesiafederatedstatesof": "FSM",
+    "israel": "ISR",
+    "stateofisrael": "ISR",
+    "il": "ISR",
+    "medinatyisrael": "ISR",
+    "anguilla": "AIA",
+    "ai": "AIA",
+    "dominica": "DMA",
+    "commonwealthofdominica": "DMA",
+    "dm": "DMA",
+    "dominique": "DMA",
+    "waitukubuli": "DMA",
+    "mali": "MLI",
+    "republicofmali": "MLI",
+    "ml": "MLI",
+    "republiquedumali": "MLI",
+    "mozambique": "MOZ",
+    "republicofmozambique": "MOZ",
+    "mz": "MOZ",
+    "republicademocambique": "MOZ",
+    "syria": "SYR",
+    "syrianarabrepublic": "SYR",
+    "sy": "SYR",
+    "aljumhuriyahalarabiyahassuriyah": "SYR",
+    "yemen": "YEM",
+    "republicofyemen": "YEM",
+    "ye": "YEM",
+    "yemenirepublic": "YEM",
+    "aljumhuriyyahalyamaniyyah": "YEM",
+    "slovakia": "SVK",
+    "slovakrepublic": "SVK",
+    "sk": "SVK",
+    "slovenskarepublika": "SVK",
+    "martinique": "MTQ",
+    "mq": "MTQ",
+    "saintvincentandthegrenadines": "VCT",
+    "vc": "VCT",
+    "guyana": "GUY",
+    "cooperativerepublicofguyana": "GUY",
+    "gy": "GUY",
+    "montenegro": "MNE",
+    "me": "MNE",
+    "crnagora": "MNE",
+    "gibraltar": "GIB",
+    "gi": "GIB",
+    "qatar": "QAT",
+    "stateofqatar": "QAT",
+    "qa": "QAT",
+    "dawlatqatar": "QAT",
+    "saotomeandprincipe": "STP",
+    "democraticrepublicofsaotomeandprincipe": "STP",
+    "st": "STP",
+    "republicademocraticadesaotomeeprincipe": "STP",
+    "uzbekistan": "UZB",
+    "republicofuzbekistan": "UZB",
+    "uz": "UZB",
+    "ozbekistonrespublikasi": "UZB",
+    "southgeorgia": "SGS",
+    "southgeorgiaandthesouthsandwichislands": "SGS",
+    "gs": "SGS",
+    "sweden": "SWE",
+    "kingdomofsweden": "SWE",
+    "se": "SWE",
+    "konungariketsverige": "SWE",
+    "nauru": "NRU",
+    "republicofnauru": "NRU",
+    "nr": "NRU",
+    "naoero": "NRU",
+    "pleasantisland": "NRU",
+    "ripubliknaoero": "NRU",
+    "mayotte": "MYT",
+    "departmentofmayotte": "MYT",
+    "yt": "MYT",
+    "departementdemayotte": "MYT",
+    "nicaragua": "NIC",
+    "republicofnicaragua": "NIC",
+    "ni": "NIC",
+    "republicadenicaragua": "NIC",
+    "britishindianoceanterritory": "IOT",
+    "io": "IOT",
+    "vanuatu": "VUT",
+    "republicofvanuatu": "VUT",
+    "vu": "VUT",
+    "ripablikblongvanuatu": "VUT",
+    "republiquedevanuatu": "VUT",
+    "china": "CHN",
+    "peoplesrepublicofchina": "CHN",
+    "cn": "CHN",
+    "zhongguo": "CHN",
+    "zhonghua": "CHN",
+    "zhonghuarenmingongheguo": "CHN",
+    "northkorea": "PRK",
+    "democraticpeoplesrepublicofkorea": "PRK",
+    "kp": "PRK",
+    "dprk": "PRK",
+    "chosonminjujuuiinminkonghwaguk": "PRK",
+    "koreademocraticpeoplesrepublicof": "PRK",
+    "indonesia": "IDN",
+    "republicofindonesia": "IDN",
+    "id": "IDN",
+    "republikindonesia": "IDN",
+    "belgium": "BEL",
+    "kingdomofbelgium": "BEL",
+    "be": "BEL",
+    "belgie": "BEL",
+    "belgien": "BEL",
+    "belgique": "BEL",
+    "koninkrijkbelgie": "BEL",
+    "royaumedebelgique": "BEL",
+    "konigreichbelgien": "BEL",
+    "czechia": "CZE",
+    "czechrepublic": "CZE",
+    "cz": "CZE",
+    "ceskarepublika": "CZE",
+    "cesko": "CZE",
+    "centralafricanrepublic": "CAF",
+    "cf": "CAF",
+    "republiquecentrafricaine": "CAF",
+    "panama": "PAN",
+    "republicofpanama": "PAN",
+    "pa": "PAN",
+    "republicadepanama": "PAN",
+    "unitedarabemirates": "ARE",
+    "ae": "ARE",
+    "uae": "ARE",
+    "emirates": "ARE",
+    "guineabissau": "GNB",
+    "republicofguineabissau": "GNB",
+    "gw": "GNB",
+    "republicadaguinebissau": "GNB",
+    "benin": "BEN",
+    "republicofbenin": "BEN",
+    "bj": "BEN",
+    "republiquedubenin": "BEN",
+    "norfolkisland": "NFK",
+    "territoryofnorfolkisland": "NFK",
+    "nf": "NFK",
+    "teratriofnorfkailen": "NFK",
+    "moldova": "MDA",
+    "republicofmoldova": "MDA",
+    "md": "MDA",
+    "moldovarepublicof": "MDA",
+    "republicamoldova": "MDA",
+    "samoa": "WSM",
+    "independentstateofsamoa": "WSM",
+    "ws": "WSM",
+    "malosaolototutoatasiosamoa": "WSM",
+    "tunisia": "TUN",
+    "tunisianrepublic": "TUN",
+    "tn": "TUN",
+    "republicoftunisia": "TUN",
+    "aljumhuriyyahattunisiyyah": "TUN",
+    "ecuador": "ECU",
+    "republicofecuador": "ECU",
+    "ec": "ECU",
+    "republicadelecuador": "ECU",
+    "niger": "NER",
+    "republicofniger": "NER",
+    "ne": "NER",
+    "nijar": "NER",
+    "cookislands": "COK",
+    "ck": "COK",
+    "kukiairani": "COK",
+    "northernmarianaislands": "MNP",
+    "commonwealthofthenorthernmarianaislands": "MNP",
+    "mp": "MNP",
+    "sankattansihanaislasmarianas": "MNP",
+    "antiguaandbarbuda": "ATG",
+    "ag": "ATG",
+    "malaysia": "MYS",
+    "my": "MYS",
+    "guadeloupe": "GLP",
+    "gp": "GLP",
+    "gwadloup": "GLP",
+    "oman": "OMN",
+    "sultanateofoman": "OMN",
+    "om": "OMN",
+    "saltanatuman": "OMN",
+    "southkorea": "KOR",
+    "republicofkorea": "KOR",
+    "kr": "KOR",
+    "korearepublicof": "KOR",
+    "pitcairnislands": "PCN",
+    "pitcairngroupofislands": "PCN",
+    "pn": "PCN",
+    "pitcairn": "PCN",
+    "pitcairnhendersonducieandoenoislands": "PCN",
+    "bosniaandherzegovina": "BIH",
+    "ba": "BIH",
+    "bosniaherzegovina": "BIH",
+    "lesotho": "LSO",
+    "kingdomoflesotho": "LSO",
+    "ls": "LSO",
+    "musooalesotho": "LSO",
+    "japan": "JPN",
+    "jp": "JPN",
+    "nippon": "JPN",
+    "nihon": "JPN",
+    "turkmenistan": "TKM",
+    "tm": "TKM",
+    "curacao": "CUW",
+    "countryofcuracao": "CUW",
+    "cw": "CUW",
+    "korsou": "CUW",
+    "landcuracao": "CUW",
+    "paiskorsou": "CUW",
+    "croatia": "HRV",
+    "republicofcroatia": "HRV",
+    "hr": "HRV",
+    "hrvatska": "HRV",
+    "republikahrvatska": "HRV",
+    "faroeislands": "FRO",
+    "fo": "FRO",
+    "froyar": "FRO",
+    "frerne": "FRO",
+    "bhutan": "BTN",
+    "kingdomofbhutan": "BTN",
+    "bt": "BTN",
+    "slovenia": "SVN",
+    "republicofslovenia": "SVN",
+    "si": "SVN",
+    "republikaslovenija": "SVN",
+    "laos": "LAO",
+    "laopeoplesdemocraticrepublic": "LAO",
+    "la": "LAO",
+    "lao": "LAO",
+    "sathalanalatpaxathipataipaxaxonlao": "LAO",
+    "guernsey": "GGY",
+    "bailiwickofguernsey": "GGY",
+    "gg": "GGY",
+    "bailliagedeguernesey": "GGY",
+    "lebanon": "LBN",
+    "lebaneserepublic": "LBN",
+    "lb": "LBN",
+    "aljumhuriyahallibnaniyah": "LBN",
+    "malta": "MLT",
+    "republicofmalta": "MLT",
+    "mt": "MLT",
+    "repubblikatamalta": "MLT",
+    "caymanislands": "CYM",
+    "ky": "CYM",
+    "serbia": "SRB",
+    "republicofserbia": "SRB",
+    "rs": "SRB",
+    "srbija": "SRB",
+    "republikasrbija": "SRB",
+    "latvia": "LVA",
+    "republicoflatvia": "LVA",
+    "lv": "LVA",
+    "latvijasrepublika": "LVA",
+    "drcongo": "COD",
+    "democraticrepublicofthecongo": "COD",
+    "cd": "COD",
+    "congokinshasa": "COD",
+    "congothedemocraticrepublicofthe": "COD",
+    "drc": "COD",
+    "cyprus": "CYP",
+    "republicofcyprus": "CYP",
+    "cy": "CYP",
+    "kypros": "CYP",
+    "kbrs": "CYP",
+    "kbrscumhuriyeti": "CYP",
+    "gabon": "GAB",
+    "gaboneserepublic": "GAB",
+    "ga": "GAB",
+    "republiquegabonaise": "GAB",
+    "sierraleone": "SLE",
+    "republicofsierraleone": "SLE",
+    "sl": "SLE",
+    "iraq": "IRQ",
+    "republicofiraq": "IRQ",
+    "iq": "IRQ",
+    "jumhuriyyataliraq": "IRQ",
+    "botswana": "BWA",
+    "republicofbotswana": "BWA",
+    "bw": "BWA",
+    "lefatshelabotswana": "BWA",
+    "caribbeannetherlands": "BES",
+    "bonairesinteustatiusandsaba": "BES",
+    "besislands": "BES",
+    "somalia": "SOM",
+    "federalrepublicofsomalia": "SOM",
+    "so": "SOM",
+    "assumal": "SOM",
+    "jamhuuriyaddafederaalkasoomaaliya": "SOM",
+    "jumhuriyyatassumalalfideraliyya": "SOM",
+    "mauritius": "MUS",
+    "republicofmauritius": "MUS",
+    "mu": "MUS",
+    "republiquedemaurice": "MUS",
+    "georgia": "GEO",
+    "ge": "GEO",
+    "sakartvelo": "GEO",
+    "madagascar": "MDG",
+    "republicofmadagascar": "MDG",
+    "mg": "MDG",
+    "repoblikanimadagasikara": "MDG",
+    "republiquedemadagascar": "MDG",
+    "unitedstatesminoroutlyingislands": "UMI",
+    "um": "UMI",
+    "libya": "LBY",
+    "stateoflibya": "LBY",
+    "ly": "LBY",
+    "dawlatlibya": "LBY",
+    "austria": "AUT",
+    "republicofaustria": "AUT",
+    "at": "AUT",
+    "osterreich": "AUT",
+    "oesterreich": "AUT",
+    "niue": "NIU",
+    "nu": "NIU",
+    "ethiopia": "ETH",
+    "federaldemocraticrepublicofethiopia": "ETH",
+    "et": "ETH",
+    "ityoppya": "ETH",
+    "cameroon": "CMR",
+    "republicofcameroon": "CMR",
+    "cm": "CMR",
+    "republiqueducameroun": "CMR",
+    "egypt": "EGY",
+    "arabrepublicofegypt": "EGY",
+    "eg": "EGY",
+    "palau": "PLW",
+    "republicofpalau": "PLW",
+    "pw": "PLW",
+    "beluuerabelau": "PLW",
+    "saintlucia": "LCA",
+    "lc": "LCA",
+    "puertorico": "PRI",
+    "commonwealthofpuertorico": "PRI",
+    "pr": "PRI",
+    "estadolibreasociadodepuertorico": "PRI",
+    "afghanistan": "AFG",
+    "islamicrepublicofafghanistan": "AFG",
+    "af": "AFG",
+    "afganistan": "AFG",
+    "albania": "ALB",
+    "republicofalbania": "ALB",
+    "al": "ALB",
+    "shqiperi": "ALB",
+    "shqiperia": "ALB",
+    "shqipnia": "ALB",
+    "russia": "RUS",
+    "russianfederation": "RUS",
+    "ru": "RUS",
+    "grenada": "GRD",
+    "gd": "GRD",
+    "kosovo": "UNK",
+    "republicofkosovo": "UNK",
+    "xk": "UNK",
+    "burundi": "BDI",
+    "republicofburundi": "BDI",
+    "bi": "BDI",
+    "republikayuburundi": "BDI",
+    "republiqueduburundi": "BDI",
+    "comoros": "COM",
+    "unionofthecomoros": "COM",
+    "km": "COM",
+    "uniondescomores": "COM",
+    "udzimawakomori": "COM",
+    "alittihadalqumuri": "COM",
+    "belarus": "BLR",
+    "republicofbelarus": "BLR",
+    "by": "BLR",
+    "bielarus": "BLR",
+    "heardislandandmcdonaldislands": "HMD",
+    "hm": "HMD",
+    "tanzania": "TZA",
+    "unitedrepublicoftanzania": "TZA",
+    "tz": "TZA",
+    "tanzaniaunitedrepublicof": "TZA",
+    "jamhuriyamuunganowatanzania": "TZA",
+    "bulgaria": "BGR",
+    "republicofbulgaria": "BGR",
+    "bg": "BGR",
+    "elsalvador": "SLV",
+    "republicofelsalvador": "SLV",
+    "sv": "SLV",
+    "republicadeelsalvador": "SLV",
+    "netherlands": "NLD",
+    "kingdomofthenetherlands": "NLD",
+    "nl": "NLD",
+    "holland": "NLD",
+    "nederland": "NLD",
+    "thenetherlands": "NLD",
+    "vaticancity": "VAT",
+    "vaticancitystate": "VAT",
+    "va": "VAT",
+    "holyseevaticancitystate": "VAT",
+    "statodellacittadelvaticano": "VAT",
+    "srilanka": "LKA",
+    "democraticsocialistrepublicofsrilanka": "LKA",
+    "lk": "LKA",
+    "ilankai": "LKA",
+    "finland": "FIN",
+    "republicoffinland": "FIN",
+    "fi": "FIN",
+    "suomi": "FIN",
+    "suomentasavalta": "FIN",
+    "republikenfinland": "FIN",
+    "frenchpolynesia": "PYF",
+    "pf": "PYF",
+    "polynesiefrancaise": "PYF",
+    "porinetiafarani": "PYF",
+    "maldives": "MDV",
+    "republicofthemaldives": "MDV",
+    "mv": "MDV",
+    "maldiveislands": "MDV",
+    "dhivehiraajjeygejumhooriyya": "MDV",
+    "paraguay": "PRY",
+    "republicofparaguay": "PRY",
+    "py": "PRY",
+    "republicadelparaguay": "PRY",
+    "tetaparaguai": "PRY",
+    "eswatini": "SWZ",
+    "kingdomofeswatini": "SWZ",
+    "sz": "SWZ",
+    "swaziland": "SWZ",
+    "weswatini": "SWZ",
+    "swatini": "SWZ",
+    "ngwane": "SWZ",
+    "umbusoweswatini": "SWZ",
+    "switzerland": "CHE",
+    "swissconfederation": "CHE",
+    "ch": "CHE",
+    "schweiz": "CHE",
+    "suisse": "CHE",
+    "svizzera": "CHE",
+    "svizra": "CHE",
+    "fiji": "FJI",
+    "republicoffiji": "FJI",
+    "fj": "FJI",
+    "viti": "FJI",
+    "matanitukoviti": "FJI",
+    "fijiganarajya": "FJI",
+    "southafrica": "ZAF",
+    "republicofsouthafrica": "ZAF",
+    "za": "ZAF",
+    "rsa": "ZAF",
+    "suidafrika": "ZAF",
+    "jordan": "JOR",
+    "hashemitekingdomofjordan": "JOR",
+    "jo": "JOR",
+    "almamlakahalurduniyahalhashimiyah": "JOR",
+    "belize": "BLZ",
+    "bz": "BLZ",
+    "peru": "PER",
+    "republicofperu": "PER",
+    "pe": "PER",
+    "republicadelperu": "PER",
+    "tajikistan": "TJK",
+    "republicoftajikistan": "TJK",
+    "tj": "TJK",
+    "tocikiston": "TJK",
+    "cumhuriyitocikiston": "TJK",
+    "guinea": "GIN",
+    "republicofguinea": "GIN",
+    "gn": "GIN",
+    "republiquedeguinee": "GIN",
+    "solomonislands": "SLB",
+    "sb": "SLB",
+    "senegal": "SEN",
+    "republicofsenegal": "SEN",
+    "sn": "SEN",
+    "republiquedusenegal": "SEN",
+    "greenland": "GRL",
+    "gl": "GRL",
+    "grnland": "GRL",
+    "isleofman": "IMN",
+    "im": "IMN",
+    "ellanvannin": "IMN",
+    "mann": "IMN",
+    "mannin": "IMN",
+    "lithuania": "LTU",
+    "republicoflithuania": "LTU",
+    "lt": "LTU",
+    "lietuvosrespublika": "LTU",
+    "mongolia": "MNG",
+    "mn": "MNG",
+    "bolivia": "BOL",
+    "plurinationalstateofbolivia": "BOL",
+    "bo": "BOL",
+    "buliwya": "BOL",
+    "wuliwya": "BOL",
+    "boliviaplurinationalstateof": "BOL",
+    "estadoplurinacionaldebolivia": "BOL",
+    "buliwyamamallaqta": "BOL",
+    "wuliwyasuyu": "BOL",
+    "tetavolivia": "BOL",
+    "kazakhstan": "KAZ",
+    "republicofkazakhstan": "KAZ",
+    "kz": "KAZ",
+    "qazaqstan": "KAZ",
+    "qazaqstanrespublikas": "KAZ",
+    "respublikakazakhstan": "KAZ",
+    "frenchsouthernandantarcticlands": "ATF",
+    "territoryofthefrenchsouthernandantarcticlands": "ATF",
+    "tf": "ATF",
+    "frenchsouthernterritories": "ATF",
+    "hongkong": "HKG",
+    "hongkongspecialadministrativeregionofthepeoplesrepublicofchina": "HKG",
+    "hk": "HKG",
+    "palestine": "PSE",
+    "stateofpalestine": "PSE",
+    "ps": "PSE",
+    "palestinestateof": "PSE",
+    "dawlatfilastin": "PSE",
+    "argentina": "ARG",
+    "argentinerepublic": "ARG",
+    "ar": "ARG",
+    "republicaargentina": "ARG",
+    "americansamoa": "ASM",
+    "as": "ASM",
+    "amerikasamoa": "ASM",
+    "amelikasamoa": "ASM",
+    "samoaamelika": "ASM",
+    "saintmartin": "MAF",
+    "mf": "MAF",
+    "collectivityofsaintmartin": "MAF",
+    "collectivitedesaintmartin": "MAF",
+    "saintmartinfrenchpart": "MAF",
+    "armenia": "ARM",
+    "republicofarmenia": "ARM",
+    "am": "ARM",
+    "hayastan": "ARM",
+    "angola": "AGO",
+    "republicofangola": "AGO",
+    "ao": "AGO",
+    "republicadeangola": "AGO",
+    "publikadeanla": "AGO",
+    "togo": "TGO",
+    "togoleserepublic": "TGO",
+    "tg": "TGO",
+    "togolese": "TGO",
+    "republiquetogolaise": "TGO",
+    "marshallislands": "MHL",
+    "republicofthemarshallislands": "MHL",
+    "mh": "MHL",
+    "aolepanaorokinmajel": "MHL",
+    "bahrain": "BHR",
+    "kingdomofbahrain": "BHR",
+    "bh": "BHR",
+    "mamlakatalbahrayn": "BHR",
+    "estonia": "EST",
+    "republicofestonia": "EST",
+    "ee": "EST",
+    "eesti": "EST",
+    "eestivabariik": "EST",
+    "montserrat": "MSR",
+    "ms": "MSR",
+    "equatorialguinea": "GNQ",
+    "republicofequatorialguinea": "GNQ",
+    "gq": "GNQ",
+    "republicadeguineaecuatorial": "GNQ",
+    "republiquedeguineeequatoriale": "GNQ",
+    "republicadaguineequatorial": "GNQ",
+    "nigeria": "NGA",
+    "federalrepublicofnigeria": "NGA",
+    "ng": "NGA",
+    "nijeriya": "NGA",
+    "naijiria": "NGA",
+    "bermuda": "BMU",
+    "bm": "BMU",
+    "theislandsofbermuda": "BMU",
+    "thebermudas": "BMU",
+    "somersisles": "BMU",
+    "morocco": "MAR",
+    "kingdomofmorocco": "MAR",
+    "ma": "MAR",
+    "almamlakahalmagribiyah": "MAR",
+    "namibia": "NAM",
+    "republicofnamibia": "NAM",
+    "na": "NAM",
+    "namibie": "NAM",
+    "falklandislands": "FLK",
+    "fk": "FLK",
+    "islasmalvinas": "FLK",
+    "falklandislandsmalvinas": "FLK",
+    "seychelles": "SYC",
+    "republicofseychelles": "SYC",
+    "sc": "SYC",
+    "repibliksesel": "SYC",
+    "republiquedesseychelles": "SYC",
+    "zambia": "ZMB",
+    "republicofzambia": "ZMB",
+    "zm": "ZMB",
+    "cambodia": "KHM",
+    "kingdomofcambodia": "KHM",
+    "kh": "KHM",
+    "ireland": "IRL",
+    "republicofireland": "IRL",
+    "ie": "IRL",
+    "eire": "IRL",
+    "poblachtnaheireann": "IRL",
+    "pakistan": "PAK",
+    "islamicrepublicofpakistan": "PAK",
+    "pk": "PAK",
+    "islamijumhuriyaehpakistan": "PAK",
+    "guam": "GUM",
+    "gu": "GUM",
+    "guahan": "GUM",
+    "macau": "MAC",
+    "macaospecialadministrativeregionofthepeoplesrepublicofchina": "MAC",
+    "mo": "MAC",
+    "macao": "MAC",
+    "regiaoadministrativaespecialdemacaudarepublicapopulardachina": "MAC",
+    "nepal": "NPL",
+    "federaldemocraticrepublicofnepal": "NPL",
+    "np": "NPL",
+    "loktantrikganatantranepal": "NPL",
+    "india": "IND",
+    "republicofindia": "IND",
+    "in": "IND",
+    "bharat": "IND",
+    "bharatganrajya": "IND",
+    "kyrgyzstan": "KGZ",
+    "kyrgyzrepublic": "KGZ",
+    "kg": "KGZ",
+    "kyrgyzrespublikasy": "KGZ",
+    "haiti": "HTI",
+    "republicofhaiti": "HTI",
+    "ht": "HTI",
+    "republiquedhaiti": "HTI",
+    "repiblikayiti": "HTI",
+    "germany": "DEU",
+    "federalrepublicofgermany": "DEU",
+    "de": "DEU",
+    "bundesrepublikdeutschland": "DEU",
+    "rwanda": "RWA",
+    "republicofrwanda": "RWA",
+    "rw": "RWA",
+    "repubulikayurwanda": "RWA",
+    "republiquedurwanda": "RWA",
+    "wallisandfutuna": "WLF",
+    "territoryofthewallisandfutunaislands": "WLF",
+    "wf": "WLF",
+    "territoiredesileswallisetfutuna": "WLF",
+    "unitedstates": "USA",
+    "unitedstatesofamerica": "USA",
+    "us": "USA",
+    "usa": "USA",
+    "kenya": "KEN",
+    "republicofkenya": "KEN",
+    "ke": "KEN",
+    "jamhuriyakenya": "KEN",
+    "gambia": "GMB",
+    "republicofthegambia": "GMB",
+    "gm": "GMB",
+    "bangladesh": "BGD",
+    "peoplesrepublicofbangladesh": "BGD",
+    "bd": "BGD",
+    "gonoprojatontribangladesh": "BGD",
+    "norway": "NOR",
+    "kingdomofnorway": "NOR",
+    "no": "NOR",
+    "norge": "NOR",
+    "noreg": "NOR",
+    "kongeriketnorge": "NOR",
+    "kongeriketnoreg": "NOR",
+    "barbados": "BRB",
+    "bb": "BRB",
+    "saintkittsandnevis": "KNA",
+    "federationofsaintchristopherandnevis": "KNA",
+    "kn": "KNA",
+    "kiribati": "KIR",
+    "independentandsovereignrepublicofkiribati": "KIR",
+    "ki": "KIR",
+    "republicofkiribati": "KIR",
+    "ribaberikikiribati": "KIR",
+    "timorleste": "TLS",
+    "democraticrepublicoftimorleste": "TLS",
+    "tl": "TLS",
+    "easttimor": "TLS",
+    "republicademocraticadetimorleste": "TLS",
+    "republikademokratikatimorleste": "TLS",
+    "timorlorosae": "TLS",
+    "saudiarabia": "SAU",
+    "kingdomofsaudiarabia": "SAU",
+    "saudi": "SAU",
+    "sa": "SAU",
+    "almamlakahalarabiyyahassuudiyyah": "SAU",
+    "cocoskeelingislands": "CCK",
+    "territoryofthecocoskeelingislands": "CCK",
+    "cc": "CCK",
+    "keelingislands": "CCK",
+    "cocosislands": "CCK",
+    "sanmarino": "SMR",
+    "republicofsanmarino": "SMR",
+    "sm": "SMR",
+    "repubblicadisanmarino": "SMR",
+    "uganda": "UGA",
+    "republicofuganda": "UGA",
+    "ug": "UGA",
+    "jamhuriyauganda": "UGA",
+    "saintpierreandmiquelon": "SPM",
+    "pm": "SPM",
+    "collectiviteterritorialedesaintpierreetmiquelon": "SPM",
+    "portugal": "PRT",
+    "portugueserepublic": "PRT",
+    "pt": "PRT",
+    "portuguesa": "PRT",
+    "republicaportuguesa": "PRT",
+    "sainthelenaascensionandtristandacunha": "SHN",
+    "sainthelena": "SHN",
+    "sthelenaascensionandtristandacunha": "SHN",
+    "malawi": "MWI",
+    "republicofmalawi": "MWI",
+    "mw": "MWI",
+    "tokelau": "TKL",
+    "tk": "TKL",
+    "honduras": "HND",
+    "republicofhonduras": "HND",
+    "hn": "HND",
+    "republicadehonduras": "HND",
+    "uruguay": "URY",
+    "orientalrepublicofuruguay": "URY",
+    "uy": "URY",
+    "republicaorientaldeluruguay": "URY",
+    "capeverde": "CPV",
+    "republicofcaboverde": "CPV",
+    "cv": "CPV",
+    "republicadecaboverde": "CPV",
+    "antarctica": "ATA",
+    "aq": "ATA",
+    "australia": "AUS",
+    "commonwealthofaustralia": "AUS",
+    "au": "AUS",
+    "iran": "IRN",
+    "islamicrepublicofiran": "IRN",
+    "ir": "IRN",
+    "iranislamicrepublicof": "IRN",
+    "jomhuriyeeslamiyeiran": "IRN",
+    "sudan": "SDN",
+    "republicofthesudan": "SDN",
+    "sd": "SDN",
+    "jumhuriyatassudan": "SDN",
+    "guatemala": "GTM",
+    "republicofguatemala": "GTM",
+    "gt": "GTM",
+    "liechtenstein": "LIE",
+    "principalityofliechtenstein": "LIE",
+    "li": "LIE",
+    "furstentumliechtenstein": "LIE",
+    "trinidadandtobago": "TTO",
+    "republicoftrinidadandtobago": "TTO",
+    "tt": "TTO",
+    "cuba": "CUB",
+    "republicofcuba": "CUB",
+    "cu": "CUB",
+    "republicadecuba": "CUB",
+    "france": "FRA",
+    "frenchrepublic": "FRA",
+    "fr": "FRA",
+    "republiquefrancaise": "FRA",
+    "suriname": "SUR",
+    "republicofsuriname": "SUR",
+    "sr": "SUR",
+    "sarnam": "SUR",
+    "sranangron": "SUR",
+    "republieksuriname": "SUR",
+    "liberia": "LBR",
+    "republicofliberia": "LBR",
+    "lr": "LBR",
+    "kuwait": "KWT",
+    "stateofkuwait": "KWT",
+    "kw": "KWT",
+    "dawlatalkuwait": "KWT",
+    "thebahamas": "BHS",
+    "northerncyprus": "CYP",
+    "macedonia": "MKD",
+    "somaliland": "SOM",
+    "westbank": "PSE"
+  },
+  "iso3Metrics": {
+    "VNM": {
+      "iso3": "VNM",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 476388230307.175,
+        "year": 2024
+      },
+      "area": {
+        "value": 313429,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8530805687203792,
+        "area": 0.6869158878504673,
+        "combined": 0.794923
+      }
+    },
+    "GUF": {
+      "iso3": "GUF",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "SXM": {
+      "iso3": "SXM",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 1797836665.95136,
+        "year": 2024
+      },
+      "area": {
+        "value": 34,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.0947867298578199,
+        "area": 0.02336448598130841,
+        "combined": 0.069789
+      }
+    },
+    "VGB": {
+      "iso3": "VGB",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": null,
+      "area": {
+        "value": 150,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0,
+        "area": 0.04205607476635514,
+        "combined": 0.01472
+      }
+    },
+    "PNG": {
+      "iso3": "PNG",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 31800428265.5246,
+        "year": 2024
+      },
+      "area": {
+        "value": 452860,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4786729857819905,
+        "area": 0.7523364485981309,
+        "combined": 0.574455
+      }
+    },
+    "CHL": {
+      "iso3": "CHL",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 330267137371.592,
+        "year": 2024
+      },
+      "area": {
+        "value": 742831.64,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7914691943127962,
+        "area": 0.8271028037383178,
+        "combined": 0.803941
+      }
+    },
+    "HUN": {
+      "iso3": "HUN",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 222722738925.641,
+        "year": 2024
+      },
+      "area": {
+        "value": 91260,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7440758293838863,
+        "area": 0.49065420560747663,
+        "combined": 0.655378
+      }
+    },
+    "COL": {
+      "iso3": "COL",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 418818154879.271,
+        "year": 2024
+      },
+      "area": {
+        "value": 1109500,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8246445497630331,
+        "area": 0.883177570093458,
+        "combined": 0.845131
+      }
+    },
+    "DJI": {
+      "iso3": "DJI",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 4152145939.98458,
+        "year": 2024
+      },
+      "area": {
+        "value": 23180,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.1848341232227488,
+        "area": 0.3177570093457944,
+        "combined": 0.231357
+      }
+    },
+    "ABW": {
+      "iso3": "ABW",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 4265650673.00236,
+        "year": 2024
+      },
+      "area": {
+        "value": 180,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.1895734597156398,
+        "area": 0.056074766355140186,
+        "combined": 0.142849
+      }
+    },
+    "TON": {
+      "iso3": "TON",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": {
+        "value": 591139749.44287,
+        "year": 2023
+      },
+      "area": {
+        "value": 720,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.02843601895734597,
+        "area": 0.1542056074766355,
+        "combined": 0.072455
+      }
+    },
+    "DNK": {
+      "iso3": "DNK",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 424524722037.047,
+        "year": 2024
+      },
+      "area": {
+        "value": 40000,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8341232227488151,
+        "area": 0.3925233644859813,
+        "combined": 0.679563
+      }
+    },
+    "CXR": {
+      "iso3": "CXR",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "DOM": {
+      "iso3": "DOM",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 124282245638.568,
+        "year": 2024
+      },
+      "area": {
+        "value": 48198.02,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7014218009478673,
+        "area": 0.40654205607476634,
+        "combined": 0.598214
+      }
+    },
+    "MEX": {
+      "iso3": "MEX",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 1856365616165.94,
+        "year": 2024
+      },
+      "area": {
+        "value": 1943950,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.943127962085308,
+        "area": 0.9439252336448598,
+        "combined": 0.943407
+      }
+    },
+    "GBR": {
+      "iso3": "GBR",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 3686033044482.13,
+        "year": 2024
+      },
+      "area": {
+        "value": 241930,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.976303317535545,
+        "area": 0.6355140186915887,
+        "combined": 0.857027
+      }
+    },
+    "TUR": {
+      "iso3": "TUR",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 1359123768774.12,
+        "year": 2024
+      },
+      "area": {
+        "value": 769630,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9241706161137441,
+        "area": 0.8364485981308412,
+        "combined": 0.893468
+      }
+    },
+    "MKD": {
+      "iso3": "MKD",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 16951682245.4202,
+        "year": 2024
+      },
+      "area": {
+        "value": 25220,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3459715639810427,
+        "area": 0.32710280373831774,
+        "combined": 0.339367
+      }
+    },
+    "UKR": {
+      "iso3": "UKR",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "gdp": {
+        "value": 190741262414.705,
+        "year": 2024
+      },
+      "area": {
+        "value": 579400,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7345971563981043,
+        "area": 0.7897196261682243,
+        "combined": 0.75389
+      }
+    },
+    "VEN": {
+      "iso3": "VEN",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 119802963257.783,
+        "year": 2024
+      },
+      "area": {
+        "value": 882050,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6919431279620853,
+        "area": 0.8551401869158879,
+        "combined": 0.749062
+      }
+    },
+    "BFA": {
+      "iso3": "BFA",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 23124729853.0218,
+        "year": 2024
+      },
+      "area": {
+        "value": 273600,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.41706161137440756,
+        "area": 0.6588785046728972,
+        "combined": 0.501698
+      }
+    },
+    "ERI": {
+      "iso3": "ERI",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 2065001626.01626,
+        "year": 2011
+      },
+      "area": {
+        "value": 121178.2,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.10900473933649289,
+        "area": 0.5514018691588785,
+        "combined": 0.263844
+      }
+    },
+    "ESH": {
+      "iso3": "ESH",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "JEY": {
+      "iso3": "JEY",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "BLM": {
+      "iso3": "BLM",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "LUX": {
+      "iso3": "LUX",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 93279851863.4062,
+        "year": 2024
+      },
+      "area": {
+        "value": 2574.46,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6492890995260664,
+        "area": 0.20093457943925233,
+        "combined": 0.492365
+      }
+    },
+    "REU": {
+      "iso3": "REU",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "TUV": {
+      "iso3": "TUV",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": {
+        "value": 62280311.5852172,
+        "year": 2023
+      },
+      "area": {
+        "value": 30,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0,
+        "area": 0.014018691588785047,
+        "combined": 0.004907
+      }
+    },
+    "CRI": {
+      "iso3": "CRI",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 95350423176.5962,
+        "year": 2024
+      },
+      "area": {
+        "value": 51060,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6540284360189573,
+        "area": 0.411214953271028,
+        "combined": 0.569044
+      }
+    },
+    "ROU": {
+      "iso3": "ROU",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 382564217988.866,
+        "year": 2024
+      },
+      "area": {
+        "value": 230080,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8056872037914692,
+        "area": 0.6261682242990654,
+        "combined": 0.742856
+      }
+    },
+    "GRC": {
+      "iso3": "GRC",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 256238371778.118,
+        "year": 2024
+      },
+      "area": {
+        "value": 128900,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7535545023696683,
+        "area": 0.5560747663551402,
+        "combined": 0.684437
+      }
+    },
+    "ZWE": {
+      "iso3": "ZWE",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 41539411516.4448,
+        "year": 2024
+      },
+      "area": {
+        "value": 386850,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5118483412322274,
+        "area": 0.719626168224299,
+        "combined": 0.584571
+      }
+    },
+    "MCO": {
+      "iso3": "MCO",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 11125783372.4794,
+        "year": 2024
+      },
+      "area": {
+        "value": 2.084,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2796208530805687,
+        "area": 0,
+        "combined": 0.181754
+      }
+    },
+    "SJM": {
+      "iso3": "SJM",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "VIR": {
+      "iso3": "VIR",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 4672000000,
+        "year": 2022
+      },
+      "area": {
+        "value": 350,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.1990521327014218,
+        "area": 0.08878504672897196,
+        "combined": 0.160459
+      }
+    },
+    "CAN": {
+      "iso3": "CAN",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 2243636826633.76,
+        "year": 2024
+      },
+      "area": {
+        "value": 8788700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9620853080568721,
+        "area": 0.985981308411215,
+        "combined": 0.970449
+      }
+    },
+    "GHA": {
+      "iso3": "GHA",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 82308110386.4641,
+        "year": 2024
+      },
+      "area": {
+        "value": 227533,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6208530805687204,
+        "area": 0.6214953271028038,
+        "combined": 0.621078
+      }
+    },
+    "CIV": {
+      "iso3": "CIV",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 87113179149.284,
+        "year": 2024
+      },
+      "area": {
+        "value": 318000,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6350710900473934,
+        "area": 0.6915887850467289,
+        "combined": 0.654852
+      }
+    },
+    "MMR": {
+      "iso3": "MMR",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 74068349523.8095,
+        "year": 2024
+      },
+      "area": {
+        "value": 652670,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5971563981042654,
+        "area": 0.822429906542056,
+        "combined": 0.676002
+      }
+    },
+    "MRT": {
+      "iso3": "MRT",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 10908045686.8808,
+        "year": 2024
+      },
+      "area": {
+        "value": 1030700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.27488151658767773,
+        "area": 0.8738317757009346,
+        "combined": 0.484514
+      }
+    },
+    "JAM": {
+      "iso3": "JAM",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 22014397089.7689,
+        "year": 2024
+      },
+      "area": {
+        "value": 10830,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4075829383886256,
+        "area": 0.2570093457943925,
+        "combined": 0.354882
+      }
+    },
+    "SSD": {
+      "iso3": "SSD",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 11997800760.2242,
+        "year": 2015
+      },
+      "area": {
+        "value": 631930,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2938388625592417,
+        "area": 0.8130841121495327,
+        "combined": 0.475575
+      }
+    },
+    "BRN": {
+      "iso3": "BRN",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 15340808592.48,
+        "year": 2024
+      },
+      "area": {
+        "value": 5270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.32701421800947866,
+        "area": 0.22429906542056074,
+        "combined": 0.291064
+      }
+    },
+    "SGP": {
+      "iso3": "SGP",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 547386645891.847,
+        "year": 2024
+      },
+      "area": {
+        "value": 718,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8767772511848341,
+        "area": 0.14953271028037382,
+        "combined": 0.622242
+      }
+    },
+    "BVT": {
+      "iso3": "BVT",
+      "region": "Antarctic",
+      "subregion": "",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "NZL": {
+      "iso3": "NZL",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "gdp": {
+        "value": 260172385097.616,
+        "year": 2024
+      },
+      "area": {
+        "value": 263310,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7582938388625592,
+        "area": 0.6542056074766355,
+        "combined": 0.721863
+      }
+    },
+    "ESP": {
+      "iso3": "ESP",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 1725671652742.19,
+        "year": 2024
+      },
+      "area": {
+        "value": 499697.4,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.933649289099526,
+        "area": 0.7663551401869159,
+        "combined": 0.875096
+      }
+    },
+    "PHL": {
+      "iso3": "PHL",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 461617509782.355,
+        "year": 2024
+      },
+      "area": {
+        "value": 298170,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8436018957345972,
+        "area": 0.6682242990654206,
+        "combined": 0.78222
+      }
+    },
+    "POL": {
+      "iso3": "POL",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 917767106146.761,
+        "year": 2024
+      },
+      "area": {
+        "value": 306270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9052132701421801,
+        "area": 0.677570093457944,
+        "combined": 0.825538
+      }
+    },
+    "COG": {
+      "iso3": "COG",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 15719986076.6464,
+        "year": 2024
+      },
+      "area": {
+        "value": 341500,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.33175355450236965,
+        "area": 0.7009345794392523,
+        "combined": 0.460967
+      }
+    },
+    "NCL": {
+      "iso3": "NCL",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 8548919387.12607,
+        "year": 2024
+      },
+      "area": {
+        "value": 18280,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.26066350710900477,
+        "area": 0.29439252336448596,
+        "combined": 0.272469
+      }
+    },
+    "AZE": {
+      "iso3": "AZE",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 74315882352.9412,
+        "year": 2024
+      },
+      "area": {
+        "value": 82650,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6018957345971564,
+        "area": 0.4766355140186916,
+        "combined": 0.558055
+      }
+    },
+    "TWN": {
+      "iso3": "TWN",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "ITA": {
+      "iso3": "ITA",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 2380825077243.59,
+        "year": 2024
+      },
+      "area": {
+        "value": 295720,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.966824644549763,
+        "area": 0.6635514018691588,
+        "combined": 0.860679
+      }
+    },
+    "ALA": {
+      "iso3": "ALA",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "DZA": {
+      "iso3": "DZA",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 269322281664.773,
+        "year": 2024
+      },
+      "area": {
+        "value": 2381740,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7630331753554502,
+        "area": 0.9579439252336449,
+        "combined": 0.831252
+      }
+    },
+    "AND": {
+      "iso3": "AND",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 4039842405.48117,
+        "year": 2024
+      },
+      "area": {
+        "value": 470,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.17535545023696683,
+        "area": 0.1261682242990654,
+        "combined": 0.15814
+      }
+    },
+    "TCA": {
+      "iso3": "TCA",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 1745378000,
+        "year": 2024
+      },
+      "area": {
+        "value": 950,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.09004739336492891,
+        "area": 0.17289719626168223,
+        "combined": 0.119045
+      }
+    },
+    "ISL": {
+      "iso3": "ISL",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 33255181468.9382,
+        "year": 2024
+      },
+      "area": {
+        "value": 100830,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4881516587677725,
+        "area": 0.514018691588785,
+        "combined": 0.497205
+      }
+    },
+    "TCD": {
+      "iso3": "TCD",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 19518819751.283,
+        "year": 2024
+      },
+      "area": {
+        "value": 1259200,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3744075829383886,
+        "area": 0.9065420560747663,
+        "combined": 0.560655
+      }
+    },
+    "BHS": {
+      "iso3": "BHS",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 15832800000,
+        "year": 2024
+      },
+      "area": {
+        "value": 10010,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.33649289099526064,
+        "area": 0.24299065420560748,
+        "combined": 0.303767
+      }
+    },
+    "BRA": {
+      "iso3": "BRA",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 2185821648943.86,
+        "year": 2024
+      },
+      "area": {
+        "value": 8358140,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.957345971563981,
+        "area": 0.9813084112149533,
+        "combined": 0.965733
+      }
+    },
+    "THA": {
+      "iso3": "THA",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 526517658841.684,
+        "year": 2024
+      },
+      "area": {
+        "value": 510890,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8625592417061612,
+        "area": 0.7710280373831776,
+        "combined": 0.830523
+      }
+    },
+    "FSM": {
+      "iso3": "FSM",
+      "region": "Oceania",
+      "subregion": "Micronesia",
+      "gdp": {
+        "value": 471425099.488675,
+        "year": 2024
+      },
+      "area": {
+        "value": 700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.023696682464454975,
+        "area": 0.14485981308411214,
+        "combined": 0.066104
+      }
+    },
+    "ISR": {
+      "iso3": "ISR",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 540379921261.681,
+        "year": 2024
+      },
+      "area": {
+        "value": 21640,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8720379146919431,
+        "area": 0.308411214953271,
+        "combined": 0.674769
+      }
+    },
+    "AIA": {
+      "iso3": "AIA",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "DMA": {
+      "iso3": "DMA",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 688881481.481481,
+        "year": 2024
+      },
+      "area": {
+        "value": 750,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.037914691943127965,
+        "area": 0.1588785046728972,
+        "combined": 0.080252
+      }
+    },
+    "MLI": {
+      "iso3": "MLI",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 26794747239.8805,
+        "year": 2024
+      },
+      "area": {
+        "value": 1220190,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.46445497630331756,
+        "area": 0.897196261682243,
+        "combined": 0.615914
+      }
+    },
+    "MOZ": {
+      "iso3": "MOZ",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 22745341305.0622,
+        "year": 2024
+      },
+      "area": {
+        "value": 786380,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.41232227488151657,
+        "area": 0.8457943925233645,
+        "combined": 0.564038
+      }
+    },
+    "SYR": {
+      "iso3": "SYR",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 23622827079.5047,
+        "year": 2022
+      },
+      "area": {
+        "value": 183630,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4218009478672986,
+        "area": 0.5934579439252337,
+        "combined": 0.481881
+      }
+    },
+    "YEM": {
+      "iso3": "YEM",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 21606160663.0318,
+        "year": 2018
+      },
+      "area": {
+        "value": 527970,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4028436018957346,
+        "area": 0.7757009345794392,
+        "combined": 0.533344
+      }
+    },
+    "SVK": {
+      "iso3": "SVK",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 140934076532.375,
+        "year": 2024
+      },
+      "area": {
+        "value": 48080,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7156398104265402,
+        "area": 0.40186915887850466,
+        "combined": 0.60582
+      }
+    },
+    "MTQ": {
+      "iso3": "MTQ",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "VCT": {
+      "iso3": "VCT",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 1157207407.40741,
+        "year": 2024
+      },
+      "area": {
+        "value": 390,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.06635071090047394,
+        "area": 0.09345794392523364,
+        "combined": 0.075838
+      }
+    },
+    "GUY": {
+      "iso3": "GUY",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 24662709832.1343,
+        "year": 2024
+      },
+      "area": {
+        "value": 211140,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4312796208530806,
+        "area": 0.616822429906542,
+        "combined": 0.49622
+      }
+    },
+    "MNE": {
+      "iso3": "MNE",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 8270016670.86774,
+        "year": 2024
+      },
+      "area": {
+        "value": 13450,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2559241706161137,
+        "area": 0.27102803738317754,
+        "combined": 0.261211
+      }
+    },
+    "GIB": {
+      "iso3": "GIB",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": null,
+      "area": {
+        "value": 10,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0,
+        "area": 0.004672897196261682,
+        "combined": 0.001636
+      }
+    },
+    "QAT": {
+      "iso3": "QAT",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 219162637362.637,
+        "year": 2024
+      },
+      "area": {
+        "value": 11490,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7393364928909952,
+        "area": 0.2616822429906542,
+        "combined": 0.572158
+      }
+    },
+    "STP": {
+      "iso3": "STP",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 822154621.088897,
+        "year": 2024
+      },
+      "area": {
+        "value": 960,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.04265402843601896,
+        "area": 0.17757009345794392,
+        "combined": 0.089875
+      }
+    },
+    "UZB": {
+      "iso3": "UZB",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 114965293466.611,
+        "year": 2024
+      },
+      "area": {
+        "value": 440650,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6872037914691943,
+        "area": 0.7429906542056075,
+        "combined": 0.706729
+      }
+    },
+    "SGS": {
+      "iso3": "SGS",
+      "region": "Antarctic",
+      "subregion": "",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "SWE": {
+      "iso3": "SWE",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 603715224265.798,
+        "year": 2024
+      },
+      "area": {
+        "value": 407270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8862559241706162,
+        "area": 0.7289719626168224,
+        "combined": 0.831207
+      }
+    },
+    "NRU": {
+      "iso3": "NRU",
+      "region": "Oceania",
+      "subregion": "Micronesia",
+      "gdp": {
+        "value": 162588620.632234,
+        "year": 2024
+      },
+      "area": {
+        "value": 20,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.004739336492890996,
+        "area": 0.009345794392523364,
+        "combined": 0.006352
+      }
+    },
+    "MYT": {
+      "iso3": "MYT",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "NIC": {
+      "iso3": "NIC",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 19693982967.5926,
+        "year": 2024
+      },
+      "area": {
+        "value": 120340,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3791469194312796,
+        "area": 0.5420560747663551,
+        "combined": 0.436165
+      }
+    },
+    "IOT": {
+      "iso3": "IOT",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "VUT": {
+      "iso3": "VUT",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 1117972034.22642,
+        "year": 2024
+      },
+      "area": {
+        "value": 12190,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.05687203791469194,
+        "area": 0.26635514018691586,
+        "combined": 0.130191
+      }
+    },
+    "CHN": {
+      "iso3": "CHN",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 18743803170827.2,
+        "year": 2024
+      },
+      "area": {
+        "value": 9388210,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.995260663507109,
+        "area": 0.9953271028037384,
+        "combined": 0.995284
+      }
+    },
+    "PRK": {
+      "iso3": "PRK",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": null,
+      "area": {
+        "value": 120410,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0,
+        "area": 0.5467289719626168,
+        "combined": 0.191355
+      }
+    },
+    "IDN": {
+      "iso3": "IDN",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 1396300098190.97,
+        "year": 2024
+      },
+      "area": {
+        "value": 1892555.47,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9289099526066351,
+        "area": 0.9392523364485982,
+        "combined": 0.93253
+      }
+    },
+    "BEL": {
+      "iso3": "BEL",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 671370081636.406,
+        "year": 2024
+      },
+      "area": {
+        "value": 30494,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9004739336492891,
+        "area": 0.3691588785046729,
+        "combined": 0.714514
+      }
+    },
+    "CZE": {
+      "iso3": "CZE",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 347034062928.479,
+        "year": 2024
+      },
+      "area": {
+        "value": 77167.31,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7962085308056872,
+        "area": 0.4672897196261682,
+        "combined": 0.681087
+      }
+    },
+    "CAF": {
+      "iso3": "CAF",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 2751494281.06887,
+        "year": 2024
+      },
+      "area": {
+        "value": 622980,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.14691943127962084,
+        "area": 0.8037383177570093,
+        "combined": 0.376806
+      }
+    },
+    "PAN": {
+      "iso3": "PAN",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 86523959131.7472,
+        "year": 2024
+      },
+      "area": {
+        "value": 74180,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6303317535545023,
+        "area": 0.46261682242990654,
+        "combined": 0.571632
+      }
+    },
+    "ARE": {
+      "iso3": "ARE",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 552324846834.581,
+        "year": 2024
+      },
+      "area": {
+        "value": 71020,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8815165876777251,
+        "area": 0.4532710280373832,
+        "combined": 0.731631
+      }
+    },
+    "GNB": {
+      "iso3": "GNB",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 2218393804.54798,
+        "year": 2024
+      },
+      "area": {
+        "value": 28120,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.12322274881516587,
+        "area": 0.35514018691588783,
+        "combined": 0.204394
+      }
+    },
+    "BEN": {
+      "iso3": "BEN",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 21482643706.4249,
+        "year": 2024
+      },
+      "area": {
+        "value": 112760,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3981042654028436,
+        "area": 0.5373831775700935,
+        "combined": 0.446852
+      }
+    },
+    "NFK": {
+      "iso3": "NFK",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "MDA": {
+      "iso3": "MDA",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "gdp": {
+        "value": 18200340853.6517,
+        "year": 2024
+      },
+      "area": {
+        "value": 32930,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.36492890995260663,
+        "area": 0.37383177570093457,
+        "combined": 0.368045
+      }
+    },
+    "WSM": {
+      "iso3": "WSM",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": {
+        "value": 1175749785.65113,
+        "year": 2024
+      },
+      "area": {
+        "value": 2780,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.07109004739336493,
+        "area": 0.205607476635514,
+        "combined": 0.118171
+      }
+    },
+    "TUN": {
+      "iso3": "TUN",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 51332285656.5422,
+        "year": 2024
+      },
+      "area": {
+        "value": 155360,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5592417061611374,
+        "area": 0.5747663551401869,
+        "combined": 0.564675
+      }
+    },
+    "ECU": {
+      "iso3": "ECU",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 124676074700,
+        "year": 2024
+      },
+      "area": {
+        "value": 248360,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7061611374407583,
+        "area": 0.6448598130841121,
+        "combined": 0.684706
+      }
+    },
+    "NER": {
+      "iso3": "NER",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 19876128485.7857,
+        "year": 2024
+      },
+      "area": {
+        "value": 1266700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.38388625592417064,
+        "area": 0.9112149532710281,
+        "combined": 0.568451
+      }
+    },
+    "COK": {
+      "iso3": "COK",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "MNP": {
+      "iso3": "MNP",
+      "region": "Oceania",
+      "subregion": "Micronesia",
+      "gdp": {
+        "value": 1096000000,
+        "year": 2022
+      },
+      "area": {
+        "value": 460,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.052132701421800945,
+        "area": 0.12149532710280374,
+        "combined": 0.07641
+      }
+    },
+    "ATG": {
+      "iso3": "ATG",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 2207622874.07407,
+        "year": 2024
+      },
+      "area": {
+        "value": 440,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.11848341232227488,
+        "area": 0.102803738317757,
+        "combined": 0.112996
+      }
+    },
+    "MYS": {
+      "iso3": "MYS",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 422227005428.688,
+        "year": 2024
+      },
+      "area": {
+        "value": 328550,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8293838862559242,
+        "area": 0.6962616822429907,
+        "combined": 0.782791
+      }
+    },
+    "GLP": {
+      "iso3": "GLP",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "OMN": {
+      "iso3": "OMN",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 107137198769.386,
+        "year": 2024
+      },
+      "area": {
+        "value": 309500,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6682464454976303,
+        "area": 0.6822429906542056,
+        "combined": 0.673145
+      }
+    },
+    "KOR": {
+      "iso3": "KOR",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 1875388209406.8,
+        "year": 2024
+      },
+      "area": {
+        "value": 97600,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9478672985781991,
+        "area": 0.5093457943925234,
+        "combined": 0.794385
+      }
+    },
+    "PCN": {
+      "iso3": "PCN",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "BIH": {
+      "iso3": "BIH",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 29613572022.8993,
+        "year": 2024
+      },
+      "area": {
+        "value": 51200,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.47393364928909953,
+        "area": 0.4158878504672897,
+        "combined": 0.453618
+      }
+    },
+    "LSO": {
+      "iso3": "LSO",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 2271759454.51107,
+        "year": 2024
+      },
+      "area": {
+        "value": 30360,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.12796208530805686,
+        "area": 0.3644859813084112,
+        "combined": 0.210745
+      }
+    },
+    "JPN": {
+      "iso3": "JPN",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 4027597523550.58,
+        "year": 2024
+      },
+      "area": {
+        "value": 364569.27,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.985781990521327,
+        "area": 0.7149532710280374,
+        "combined": 0.890992
+      }
+    },
+    "TKM": {
+      "iso3": "TKM",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 51387209872.2994,
+        "year": 2024
+      },
+      "area": {
+        "value": 469930,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5639810426540285,
+        "area": 0.7570093457943925,
+        "combined": 0.631541
+      }
+    },
+    "CUW": {
+      "iso3": "CUW",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 3561178196.20713,
+        "year": 2024
+      },
+      "area": {
+        "value": 444,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.17061611374407584,
+        "area": 0.10747663551401869,
+        "combined": 0.148517
+      }
+    },
+    "HRV": {
+      "iso3": "HRV",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 92983810328.9088,
+        "year": 2024
+      },
+      "area": {
+        "value": 55960,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6445497630331753,
+        "area": 0.4252336448598131,
+        "combined": 0.567789
+      }
+    },
+    "FRO": {
+      "iso3": "FRO",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 4052937169.76536,
+        "year": 2024
+      },
+      "area": {
+        "value": 1370,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.18009478672985782,
+        "area": 0.18691588785046728,
+        "combined": 0.182482
+      }
+    },
+    "BTN": {
+      "iso3": "BTN",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 3012896789.24928,
+        "year": 2023
+      },
+      "area": {
+        "value": 38140,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.15165876777251186,
+        "area": 0.38317757009345793,
+        "combined": 0.23269
+      }
+    },
+    "SVN": {
+      "iso3": "SVN",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 72972015197.3859,
+        "year": 2024
+      },
+      "area": {
+        "value": 20134.5,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5924170616113744,
+        "area": 0.29906542056074764,
+        "combined": 0.489744
+      }
+    },
+    "LAO": {
+      "iso3": "LAO",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 16502933121.3379,
+        "year": 2024
+      },
+      "area": {
+        "value": 230800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3412322274881517,
+        "area": 0.6308411214953271,
+        "combined": 0.442595
+      }
+    },
+    "GGY": {
+      "iso3": "GGY",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "LBN": {
+      "iso3": "LBN",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 20078620356.9931,
+        "year": 2023
+      },
+      "area": {
+        "value": 10230,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3886255924170616,
+        "area": 0.2523364485981308,
+        "combined": 0.340924
+      }
+    },
+    "MLT": {
+      "iso3": "MLT",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 24971574502.4475,
+        "year": 2024
+      },
+      "area": {
+        "value": 320,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.43601895734597157,
+        "area": 0.0794392523364486,
+        "combined": 0.311216
+      }
+    },
+    "CYM": {
+      "iso3": "CYM",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 7241244269.45972,
+        "year": 2023
+      },
+      "area": {
+        "value": 240,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.23696682464454977,
+        "area": 0.06542056074766354,
+        "combined": 0.176926
+      }
+    },
+    "SRB": {
+      "iso3": "SRB",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 90097765959.1114,
+        "year": 2024
+      },
+      "area": {
+        "value": 84090,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6398104265402843,
+        "area": 0.48130841121495327,
+        "combined": 0.584335
+      }
+    },
+    "LVA": {
+      "iso3": "LVA",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 43684254432.3609,
+        "year": 2024
+      },
+      "area": {
+        "value": 62230,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5260663507109005,
+        "area": 0.43457943925233644,
+        "combined": 0.494046
+      }
+    },
+    "COD": {
+      "iso3": "COD",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 70962185790.7094,
+        "year": 2024
+      },
+      "area": {
+        "value": 2267050,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5876777251184834,
+        "area": 0.9532710280373832,
+        "combined": 0.715635
+      }
+    },
+    "CYP": {
+      "iso3": "CYP",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 37634533331.8902,
+        "year": 2024
+      },
+      "area": {
+        "value": 9240,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5071090047393365,
+        "area": 0.2383177570093458,
+        "combined": 0.413032
+      }
+    },
+    "GAB": {
+      "iso3": "GAB",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 20895684425.6752,
+        "year": 2024
+      },
+      "area": {
+        "value": 257670,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3933649289099526,
+        "area": 0.6495327102803738,
+        "combined": 0.483024
+      }
+    },
+    "SLE": {
+      "iso3": "SLE",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 6971127235.3123,
+        "year": 2024
+      },
+      "area": {
+        "value": 72180,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.22748815165876776,
+        "area": 0.45794392523364486,
+        "combined": 0.308148
+      }
+    },
+    "IRQ": {
+      "iso3": "IRQ",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 279641257615.385,
+        "year": 2024
+      },
+      "area": {
+        "value": 434130,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7677725118483413,
+        "area": 0.7383177570093458,
+        "combined": 0.757463
+      }
+    },
+    "BWA": {
+      "iso3": "BWA",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 19402063512.9066,
+        "year": 2024
+      },
+      "area": {
+        "value": 566730,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3696682464454976,
+        "area": 0.7850467289719626,
+        "combined": 0.515051
+      }
+    },
+    "BES": {
+      "iso3": "BES",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "SOM": {
+      "iso3": "SOM",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 11967000000,
+        "year": 2024
+      },
+      "area": {
+        "value": 627340,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2890995260663507,
+        "area": 0.8084112149532711,
+        "combined": 0.470859
+      }
+    },
+    "MUS": {
+      "iso3": "MUS",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 14937861786.17,
+        "year": 2024
+      },
+      "area": {
+        "value": 1997,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3222748815165877,
+        "area": 0.19626168224299065,
+        "combined": 0.27817
+      }
+    },
+    "GEO": {
+      "iso3": "GEO",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 34189423544.9955,
+        "year": 2024
+      },
+      "area": {
+        "value": 69490,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4928909952606635,
+        "area": 0.4485981308411215,
+        "combined": 0.477388
+      }
+    },
+    "MDG": {
+      "iso3": "MDG",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 17420501490.1231,
+        "year": 2024
+      },
+      "area": {
+        "value": 581800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.35545023696682465,
+        "area": 0.7990654205607477,
+        "combined": 0.510716
+      }
+    },
+    "UMI": {
+      "iso3": "UMI",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "LBY": {
+      "iso3": "LBY",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 48487151215.345,
+        "year": 2024
+      },
+      "area": {
+        "value": 1759540,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5450236966824644,
+        "area": 0.9299065420560748,
+        "combined": 0.679733
+      }
+    },
+    "AUT": {
+      "iso3": "AUT",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 534790720466.822,
+        "year": 2024
+      },
+      "area": {
+        "value": 82520,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8672985781990521,
+        "area": 0.4719626168224299,
+        "combined": 0.728931
+      }
+    },
+    "NIU": {
+      "iso3": "NIU",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "ETH": {
+      "iso3": "ETH",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 149740297952.986,
+        "year": 2024
+      },
+      "area": {
+        "value": 1128498.8,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7203791469194313,
+        "area": 0.8878504672897196,
+        "combined": 0.778994
+      }
+    },
+    "CMR": {
+      "iso3": "CMR",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 53296694320.2057,
+        "year": 2024
+      },
+      "area": {
+        "value": 472710,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5687203791469194,
+        "area": 0.7616822429906542,
+        "combined": 0.636257
+      }
+    },
+    "EGY": {
+      "iso3": "EGY",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 389059911003.566,
+        "year": 2024
+      },
+      "area": {
+        "value": 995450,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8104265402843602,
+        "area": 0.8691588785046729,
+        "combined": 0.830983
+      }
+    },
+    "PLW": {
+      "iso3": "PLW",
+      "region": "Oceania",
+      "subregion": "Micronesia",
+      "gdp": {
+        "value": 276733062.744141,
+        "year": 2023
+      },
+      "area": {
+        "value": 460,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.009478672985781991,
+        "area": 0.11682242990654206,
+        "combined": 0.047049
+      }
+    },
+    "LCA": {
+      "iso3": "LCA",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 2549062962.96296,
+        "year": 2024
+      },
+      "area": {
+        "value": 610,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.13744075829383887,
+        "area": 0.14018691588785046,
+        "combined": 0.138402
+      }
+    },
+    "PRI": {
+      "iso3": "PRI",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 126029527033.705,
+        "year": 2024
+      },
+      "area": {
+        "value": 8870,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7109004739336493,
+        "area": 0.2336448598130841,
+        "combined": 0.543861
+      }
+    },
+    "AFG": {
+      "iso3": "AFG",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 17152234636.8715,
+        "year": 2023
+      },
+      "area": {
+        "value": 652230,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.35071090047393366,
+        "area": 0.8177570093457944,
+        "combined": 0.514177
+      }
+    },
+    "ALB": {
+      "iso3": "ALB",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 27046429296.6673,
+        "year": 2024
+      },
+      "area": {
+        "value": 27400,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.46919431279620855,
+        "area": 0.3364485981308411,
+        "combined": 0.422733
+      }
+    },
+    "RUS": {
+      "iso3": "RUS",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "gdp": {
+        "value": 2173835806671.66,
+        "year": 2024
+      },
+      "area": {
+        "value": 16376870,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.95260663507109,
+        "area": 1,
+        "combined": 0.969194
+      }
+    },
+    "GRD": {
+      "iso3": "GRD",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 1371918518.51852,
+        "year": 2024
+      },
+      "area": {
+        "value": 340,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.07582938388625593,
+        "area": 0.08411214953271028,
+        "combined": 0.078728
+      }
+    },
+    "UNK": {
+      "iso3": "UNK",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "BDI": {
+      "iso3": "BDI",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 3082433067.32634,
+        "year": 2024
+      },
+      "area": {
+        "value": 25680,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.15639810426540285,
+        "area": 0.3317757009345794,
+        "combined": 0.21778
+      }
+    },
+    "COM": {
+      "iso3": "COM",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 1440991455.45188,
+        "year": 2024
+      },
+      "area": {
+        "value": 1861,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.08056872037914692,
+        "area": 0.19158878504672897,
+        "combined": 0.119426
+      }
+    },
+    "BLR": {
+      "iso3": "BLR",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "gdp": {
+        "value": 75961865471.9129,
+        "year": 2024
+      },
+      "area": {
+        "value": 202983,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6066350710900474,
+        "area": 0.6121495327102804,
+        "combined": 0.608565
+      }
+    },
+    "HMD": {
+      "iso3": "HMD",
+      "region": "Antarctic",
+      "subregion": "",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "TZA": {
+      "iso3": "TZA",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 78844405385.2195,
+        "year": 2024
+      },
+      "area": {
+        "value": 885800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6113744075829384,
+        "area": 0.8598130841121495,
+        "combined": 0.698328
+      }
+    },
+    "BGR": {
+      "iso3": "BGR",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 113343355779.985,
+        "year": 2024
+      },
+      "area": {
+        "value": 108560,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6824644549763034,
+        "area": 0.5280373831775701,
+        "combined": 0.628415
+      }
+    },
+    "SLV": {
+      "iso3": "SLV",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 35364960000,
+        "year": 2024
+      },
+      "area": {
+        "value": 20720,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4976303317535545,
+        "area": 0.3037383177570093,
+        "combined": 0.429768
+      }
+    },
+    "NLD": {
+      "iso3": "NLD",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 1214927698572.66,
+        "year": 2024
+      },
+      "area": {
+        "value": 33670,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9146919431279621,
+        "area": 0.37850467289719625,
+        "combined": 0.727026
+      }
+    },
+    "VAT": {
+      "iso3": "VAT",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "LKA": {
+      "iso3": "LKA",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 98963185509.6499,
+        "year": 2024
+      },
+      "area": {
+        "value": 61860,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6587677725118484,
+        "area": 0.42990654205607476,
+        "combined": 0.578666
+      }
+    },
+    "FIN": {
+      "iso3": "FIN",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 298696961297.656,
+        "year": 2024
+      },
+      "area": {
+        "value": 303960,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7819905213270142,
+        "area": 0.6728971962616822,
+        "combined": 0.743808
+      }
+    },
+    "PYF": {
+      "iso3": "PYF",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": {
+        "value": 6323716355.05009,
+        "year": 2024
+      },
+      "area": {
+        "value": 3471,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.21800947867298578,
+        "area": 0.2102803738317757,
+        "combined": 0.215304
+      }
+    },
+    "MDV": {
+      "iso3": "MDV",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 7061608267.25451,
+        "year": 2024
+      },
+      "area": {
+        "value": 298,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.23222748815165878,
+        "area": 0.07476635514018691,
+        "combined": 0.177116
+      }
+    },
+    "PRY": {
+      "iso3": "PRY",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 44458118397.4445,
+        "year": 2024
+      },
+      "area": {
+        "value": 396012.03,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5308056872037915,
+        "area": 0.7242990654205608,
+        "combined": 0.598528
+      }
+    },
+    "SWZ": {
+      "iso3": "SWZ",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 4858885840.77236,
+        "year": 2024
+      },
+      "area": {
+        "value": 17200,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.20853080568720378,
+        "area": 0.2803738317757009,
+        "combined": 0.233676
+      }
+    },
+    "CHE": {
+      "iso3": "CHE",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 936564198048.516,
+        "year": 2024
+      },
+      "area": {
+        "value": 39509.63,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.909952606635071,
+        "area": 0.3878504672897196,
+        "combined": 0.727217
+      }
+    },
+    "FJI": {
+      "iso3": "FJI",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 5968125909.27126,
+        "year": 2024
+      },
+      "area": {
+        "value": 18270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2132701421800948,
+        "area": 0.2897196261682243,
+        "combined": 0.240027
+      }
+    },
+    "ZAF": {
+      "iso3": "ZAF",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 401144998373.585,
+        "year": 2024
+      },
+      "area": {
+        "value": 1213090,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8151658767772512,
+        "area": 0.8925233644859814,
+        "combined": 0.842241
+      }
+    },
+    "JOR": {
+      "iso3": "JOR",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 53352289577.4648,
+        "year": 2024
+      },
+      "area": {
+        "value": 88794,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5734597156398105,
+        "area": 0.48598130841121495,
+        "combined": 0.542842
+      }
+    },
+    "BLZ": {
+      "iso3": "BLZ",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 3203631800,
+        "year": 2024
+      },
+      "area": {
+        "value": 22810,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.16113744075829384,
+        "area": 0.3130841121495327,
+        "combined": 0.214319
+      }
+    },
+    "PER": {
+      "iso3": "PER",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 289221969062.941,
+        "year": 2024
+      },
+      "area": {
+        "value": 1280000,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7725118483412322,
+        "area": 0.9158878504672897,
+        "combined": 0.822693
+      }
+    },
+    "TJK": {
+      "iso3": "TJK",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 14204575548.5536,
+        "year": 2024
+      },
+      "area": {
+        "value": 138790,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3127962085308057,
+        "area": 0.5654205607476636,
+        "combined": 0.401215
+      }
+    },
+    "GIN": {
+      "iso3": "GIN",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 25008678293.4084,
+        "year": 2024
+      },
+      "area": {
+        "value": 245720,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.44075829383886256,
+        "area": 0.6401869158878505,
+        "combined": 0.510558
+      }
+    },
+    "SLB": {
+      "iso3": "SLB",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 1583964703.75061,
+        "year": 2024
+      },
+      "area": {
+        "value": 27990,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.08530805687203792,
+        "area": 0.34579439252336447,
+        "combined": 0.176478
+      }
+    },
+    "SEN": {
+      "iso3": "SEN",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 32808056600.9436,
+        "year": 2024
+      },
+      "area": {
+        "value": 192530,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4834123222748815,
+        "area": 0.602803738317757,
+        "combined": 0.525199
+      }
+    },
+    "GRL": {
+      "iso3": "GRL",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 3326543974.39193,
+        "year": 2023
+      },
+      "area": {
+        "value": 410450,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.16587677725118483,
+        "area": 0.7336448598130841,
+        "combined": 0.364596
+      }
+    },
+    "IMN": {
+      "iso3": "IMN",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 7431257410.92713,
+        "year": 2022
+      },
+      "area": {
+        "value": 570,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.24170616113744076,
+        "area": 0.13551401869158877,
+        "combined": 0.204539
+      }
+    },
+    "LTU": {
+      "iso3": "LTU",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 84869215513.3648,
+        "year": 2024
+      },
+      "area": {
+        "value": 62600,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6255924170616114,
+        "area": 0.4392523364485981,
+        "combined": 0.560373
+      }
+    },
+    "MNG": {
+      "iso3": "MNG",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 23794540024.5132,
+        "year": 2024
+      },
+      "area": {
+        "value": 1558499.786,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4265402843601896,
+        "area": 0.9205607476635514,
+        "combined": 0.599447
+      }
+    },
+    "BOL": {
+      "iso3": "BOL",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 54881327452.9667,
+        "year": 2024
+      },
+      "area": {
+        "value": 1083300,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5829383886255924,
+        "area": 0.8785046728971962,
+        "combined": 0.686387
+      }
+    },
+    "KAZ": {
+      "iso3": "KAZ",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 291480274648.826,
+        "year": 2024
+      },
+      "area": {
+        "value": 2699700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7772511848341233,
+        "area": 0.9626168224299065,
+        "combined": 0.842129
+      }
+    },
+    "ATF": {
+      "iso3": "ATF",
+      "region": "Antarctic",
+      "subregion": "",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "HKG": {
+      "iso3": "HKG",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 406863396487.342,
+        "year": 2024
+      },
+      "area": {
+        "value": 1050,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8199052132701422,
+        "area": 0.1822429906542056,
+        "combined": 0.596723
+      }
+    },
+    "PSE": {
+      "iso3": "PSE",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 13711100000,
+        "year": 2024
+      },
+      "area": {
+        "value": 6025,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3080568720379147,
+        "area": 0.22897196261682243,
+        "combined": 0.280377
+      }
+    },
+    "ARG": {
+      "iso3": "ARG",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 638365455340.04,
+        "year": 2024
+      },
+      "area": {
+        "value": 2736690,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8957345971563981,
+        "area": 0.9672897196261683,
+        "combined": 0.920779
+      }
+    },
+    "ASM": {
+      "iso3": "ASM",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": {
+        "value": 871000000,
+        "year": 2022
+      },
+      "area": {
+        "value": 200,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.04739336492890995,
+        "area": 0.06074766355140187,
+        "combined": 0.052067
+      }
+    },
+    "MAF": {
+      "iso3": "MAF",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 649206262.847519,
+        "year": 2021
+      },
+      "area": {
+        "value": 50,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.03317535545023697,
+        "area": 0.028037383177570093,
+        "combined": 0.031377
+      }
+    },
+    "ARM": {
+      "iso3": "ARM",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 25955275380.0321,
+        "year": 2024
+      },
+      "area": {
+        "value": 28199.44,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4597156398104265,
+        "area": 0.3598130841121495,
+        "combined": 0.42475
+      }
+    },
+    "AGO": {
+      "iso3": "AGO",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 100998916781.079,
+        "year": 2024
+      },
+      "area": {
+        "value": 1246700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6635071090047393,
+        "area": 0.9018691588785047,
+        "combined": 0.746934
+      }
+    },
+    "TGO": {
+      "iso3": "TGO",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 10651180146.531,
+        "year": 2024
+      },
+      "area": {
+        "value": 54390,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.27014218009478674,
+        "area": 0.4205607476635514,
+        "combined": 0.322789
+      }
+    },
+    "MHL": {
+      "iso3": "MHL",
+      "region": "Oceania",
+      "subregion": "Micronesia",
+      "gdp": {
+        "value": 290108489.990234,
+        "year": 2024
+      },
+      "area": {
+        "value": 180,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.014218009478672985,
+        "area": 0.0514018691588785,
+        "combined": 0.027232
+      }
+    },
+    "BHR": {
+      "iso3": "BHR",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 47109734308.5106,
+        "year": 2024
+      },
+      "area": {
+        "value": 800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5402843601895735,
+        "area": 0.16355140186915887,
+        "combined": 0.408428
+      }
+    },
+    "EST": {
+      "iso3": "EST",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 43130419829.35,
+        "year": 2024
+      },
+      "area": {
+        "value": 42730,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5213270142180095,
+        "area": 0.397196261682243,
+        "combined": 0.477881
+      }
+    },
+    "MSR": {
+      "iso3": "MSR",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "GNQ": {
+      "iso3": "GNQ",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 12765777677.0622,
+        "year": 2024
+      },
+      "area": {
+        "value": 28050,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2985781990521327,
+        "area": 0.35046728971962615,
+        "combined": 0.316739
+      }
+    },
+    "NGA": {
+      "iso3": "NGA",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 252261880141.151,
+        "year": 2024
+      },
+      "area": {
+        "value": 910770,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7488151658767772,
+        "area": 0.8644859813084113,
+        "combined": 0.7893
+      }
+    },
+    "BMU": {
+      "iso3": "BMU",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 9233600000,
+        "year": 2024
+      },
+      "area": {
+        "value": 54,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.26540284360189575,
+        "area": 0.03271028037383177,
+        "combined": 0.18396
+      }
+    },
+    "MAR": {
+      "iso3": "MAR",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 160610994054.734,
+        "year": 2024
+      },
+      "area": {
+        "value": 446300,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7298578199052133,
+        "area": 0.7476635514018691,
+        "combined": 0.73609
+      }
+    },
+    "NAM": {
+      "iso3": "NAM",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 13372354511.716,
+        "year": 2024
+      },
+      "area": {
+        "value": 823290,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3033175355450237,
+        "area": 0.8504672897196262,
+        "combined": 0.49482
+      }
+    },
+    "FLK": {
+      "iso3": "FLK",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "SYC": {
+      "iso3": "SYC",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 2167239562.46013,
+        "year": 2024
+      },
+      "area": {
+        "value": 460,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.11374407582938388,
+        "area": 0.11214953271028037,
+        "combined": 0.113186
+      }
+    },
+    "ZMB": {
+      "iso3": "ZMB",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 25303185342.2511,
+        "year": 2024
+      },
+      "area": {
+        "value": 743390,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.45023696682464454,
+        "area": 0.8317757009345794,
+        "combined": 0.583776
+      }
+    },
+    "KHM": {
+      "iso3": "KHM",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 46352647037.2406,
+        "year": 2024
+      },
+      "area": {
+        "value": 176520,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5355450236966824,
+        "area": 0.5887850467289719,
+        "combined": 0.554179
+      }
+    },
+    "IRL": {
+      "iso3": "IRL",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 609157459747.205,
+        "year": 2024
+      },
+      "area": {
+        "value": 68890,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8909952606635071,
+        "area": 0.4439252336448598,
+        "combined": 0.734521
+      }
+    },
+    "PAK": {
+      "iso3": "PAK",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 371570000121.266,
+        "year": 2024
+      },
+      "area": {
+        "value": 770880,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8009478672985783,
+        "area": 0.8411214953271028,
+        "combined": 0.815009
+      }
+    },
+    "GUM": {
+      "iso3": "GUM",
+      "region": "Oceania",
+      "subregion": "Micronesia",
+      "gdp": {
+        "value": 6910000000,
+        "year": 2022
+      },
+      "area": {
+        "value": 540,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.22274881516587677,
+        "area": 0.1308411214953271,
+        "combined": 0.190581
+      }
+    },
+    "MAC": {
+      "iso3": "MAC",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 49467258923.3244,
+        "year": 2024
+      },
+      "area": {
+        "value": 33,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5497630331753555,
+        "area": 0.018691588785046728,
+        "combined": 0.363888
+      }
+    },
+    "NPL": {
+      "iso3": "NPL",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 42914268286.7109,
+        "year": 2024
+      },
+      "area": {
+        "value": 143350,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5165876777251185,
+        "area": 0.5700934579439252,
+        "combined": 0.535315
+      }
+    },
+    "IND": {
+      "iso3": "IND",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 3909891533858.08,
+        "year": 2024
+      },
+      "area": {
+        "value": 2973190,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.981042654028436,
+        "area": 0.9719626168224299,
+        "combined": 0.977865
+      }
+    },
+    "KGZ": {
+      "iso3": "KGZ",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 17478259659.2625,
+        "year": 2024
+      },
+      "area": {
+        "value": 191800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.36018957345971564,
+        "area": 0.5981308411214953,
+        "combined": 0.443469
+      }
+    },
+    "HTI": {
+      "iso3": "HTI",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 25224154990.7946,
+        "year": 2024
+      },
+      "area": {
+        "value": 27560,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.44549763033175355,
+        "area": 0.3411214953271028,
+        "combined": 0.408966
+      }
+    },
+    "DEU": {
+      "iso3": "DEU",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 4685592577804.69,
+        "year": 2024
+      },
+      "area": {
+        "value": 349430,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.990521327014218,
+        "area": 0.705607476635514,
+        "combined": 0.890801
+      }
+    },
+    "RWA": {
+      "iso3": "RWA",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 14251642235.0968,
+        "year": 2024
+      },
+      "area": {
+        "value": 24670,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3175355450236967,
+        "area": 0.32242990654205606,
+        "combined": 0.319249
+      }
+    },
+    "WLF": {
+      "iso3": "WLF",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "USA": {
+      "iso3": "USA",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 28750956130731.2,
+        "year": 2024
+      },
+      "area": {
+        "value": 9147420,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 1,
+        "area": 0.9906542056074766,
+        "combined": 0.996729
+      }
+    },
+    "KEN": {
+      "iso3": "KEN",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 120339557905.932,
+        "year": 2024
+      },
+      "area": {
+        "value": 580876.3,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6966824644549763,
+        "area": 0.794392523364486,
+        "combined": 0.730881
+      }
+    },
+    "GMB": {
+      "iso3": "GMB",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 2404888749.21907,
+        "year": 2024
+      },
+      "area": {
+        "value": 10120,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.13270142180094788,
+        "area": 0.24766355140186916,
+        "combined": 0.172938
+      }
+    },
+    "BGD": {
+      "iso3": "BGD",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 450119432068.852,
+        "year": 2024
+      },
+      "area": {
+        "value": 129980,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8388625592417062,
+        "area": 0.5607476635514018,
+        "combined": 0.741522
+      }
+    },
+    "NOR": {
+      "iso3": "NOR",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 483592648313.301,
+        "year": 2024
+      },
+      "area": {
+        "value": 364270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8578199052132701,
+        "area": 0.7102803738317757,
+        "combined": 0.806181
+      }
+    },
+    "BRB": {
+      "iso3": "BRB",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 7498050000,
+        "year": 2024
+      },
+      "area": {
+        "value": 430,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.24644549763033174,
+        "area": 0.09813084112149532,
+        "combined": 0.194535
+      }
+    },
+    "KNA": {
+      "iso3": "KNA",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 1122388888.88889,
+        "year": 2024
+      },
+      "area": {
+        "value": 260,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.061611374407582936,
+        "area": 0.07009345794392523,
+        "combined": 0.06458
+      }
+    },
+    "KIR": {
+      "iso3": "KIR",
+      "region": "Oceania",
+      "subregion": "Micronesia",
+      "gdp": {
+        "value": 307862564.489711,
+        "year": 2024
+      },
+      "area": {
+        "value": 810,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.018957345971563982,
+        "area": 0.16822429906542055,
+        "combined": 0.071201
+      }
+    },
+    "TLS": {
+      "iso3": "TLS",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 1865608515.41321,
+        "year": 2024
+      },
+      "area": {
+        "value": 14870,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.0995260663507109,
+        "area": 0.2757009345794392,
+        "combined": 0.161187
+      }
+    },
+    "SAU": {
+      "iso3": "SAU",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 1239804533333.33,
+        "year": 2024
+      },
+      "area": {
+        "value": 2149690,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.919431279620853,
+        "area": 0.9485981308411215,
+        "combined": 0.92964
+      }
+    },
+    "CCK": {
+      "iso3": "CCK",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "SMR": {
+      "iso3": "SMR",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 2027527227.831,
+        "year": 2023
+      },
+      "area": {
+        "value": 60,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.10426540284360189,
+        "area": 0.037383177570093455,
+        "combined": 0.080857
+      }
+    },
+    "UGA": {
+      "iso3": "UGA",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 53911907086.1525,
+        "year": 2024
+      },
+      "area": {
+        "value": 200520,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5781990521327014,
+        "area": 0.6074766355140186,
+        "combined": 0.588446
+      }
+    },
+    "SPM": {
+      "iso3": "SPM",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "PRT": {
+      "iso3": "PRT",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 313271185085.102,
+        "year": 2024
+      },
+      "area": {
+        "value": 91605.6,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7867298578199052,
+        "area": 0.4953271028037383,
+        "combined": 0.684739
+      }
+    },
+    "SHN": {
+      "iso3": "SHN",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "MWI": {
+      "iso3": "MWI",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 11316411329.4619,
+        "year": 2024
+      },
+      "area": {
+        "value": 94280,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2843601895734597,
+        "area": 0.5,
+        "combined": 0.359834
+      }
+    },
+    "TKL": {
+      "iso3": "TKL",
+      "region": "Oceania",
+      "subregion": "Polynesia",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "HND": {
+      "iso3": "HND",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 37093565854.0437,
+        "year": 2024
+      },
+      "area": {
+        "value": 111890,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5023696682464455,
+        "area": 0.5327102803738317,
+        "combined": 0.512989
+      }
+    },
+    "URY": {
+      "iso3": "URY",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 80961511073.5797,
+        "year": 2024
+      },
+      "area": {
+        "value": 175020,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6161137440758294,
+        "area": 0.5841121495327103,
+        "combined": 0.604913
+      }
+    },
+    "CPV": {
+      "iso3": "CPV",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 2725414150.72735,
+        "year": 2024
+      },
+      "area": {
+        "value": 4030,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.14218009478672985,
+        "area": 0.21495327102803738,
+        "combined": 0.167651
+      }
+    },
+    "ATA": {
+      "iso3": "ATA",
+      "region": "Antarctic",
+      "subregion": "",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    "AUS": {
+      "iso3": "AUS",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "gdp": {
+        "value": 1757022451652.83,
+        "year": 2024
+      },
+      "area": {
+        "value": 7692020,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9383886255924171,
+        "area": 0.9766355140186916,
+        "combined": 0.951775
+      }
+    },
+    "IRN": {
+      "iso3": "IRN",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 475252089215.416,
+        "year": 2024
+      },
+      "area": {
+        "value": 1622500,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8483412322274881,
+        "area": 0.9252336448598131,
+        "combined": 0.875254
+      }
+    },
+    "SDN": {
+      "iso3": "SDN",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 49672435513.1126,
+        "year": 2024
+      },
+      "area": {
+        "value": 1868000,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5545023696682464,
+        "area": 0.9345794392523364,
+        "combined": 0.687529
+      }
+    },
+    "GTM": {
+      "iso3": "GTM",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 113199581158.203,
+        "year": 2024
+      },
+      "area": {
+        "value": 107160,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6777251184834123,
+        "area": 0.5233644859813084,
+        "combined": 0.623699
+      }
+    },
+    "LIE": {
+      "iso3": "LIE",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 8239379403.22096,
+        "year": 2023
+      },
+      "area": {
+        "value": 160,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.25118483412322273,
+        "area": 0.04672897196261682,
+        "combined": 0.179625
+      }
+    },
+    "TTO": {
+      "iso3": "TTO",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 25633544529.4849,
+        "year": 2024
+      },
+      "area": {
+        "value": 5130,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4549763033175355,
+        "area": 0.21962616822429906,
+        "combined": 0.372604
+      }
+    },
+    "CUB": {
+      "iso3": "CUB",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 107352000000,
+        "year": 2020
+      },
+      "area": {
+        "value": 103800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6729857819905213,
+        "area": 0.5186915887850467,
+        "combined": 0.618983
+      }
+    },
+    "FRA": {
+      "iso3": "FRA",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 3160442622465.08,
+        "year": 2024
+      },
+      "area": {
+        "value": 538950,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9715639810426541,
+        "area": 0.780373831775701,
+        "combined": 0.904647
+      }
+    },
+    "SUR": {
+      "iso3": "SUR",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 4416775112.09627,
+        "year": 2024
+      },
+      "area": {
+        "value": 160507.61,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.1943127962085308,
+        "area": 0.5794392523364486,
+        "combined": 0.329107
+      }
+    },
+    "LBR": {
+      "iso3": "LBR",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 4779300900,
+        "year": 2024
+      },
+      "area": {
+        "value": 96320,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2037914691943128,
+        "area": 0.5046728971962616,
+        "combined": 0.3091
+      }
+    },
+    "KWT": {
+      "iso3": "KWT",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 160227273053.334,
+        "year": 2024
+      },
+      "area": {
+        "value": 17820,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7251184834123223,
+        "area": 0.2850467289719626,
+        "combined": 0.571093
+      }
+    }
+  },
+  "countries": [
+    {
+      "name": "Afghanistan",
+      "iso3": "AFG",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 17152234636.8715,
+        "year": 2023
+      },
+      "area": {
+        "value": 652230,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.35071090047393366,
+        "area": 0.8177570093457944,
+        "combined": 0.514177
+      }
+    },
+    {
+      "name": "Angola",
+      "iso3": "AGO",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 100998916781.079,
+        "year": 2024
+      },
+      "area": {
+        "value": 1246700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6635071090047393,
+        "area": 0.9018691588785047,
+        "combined": 0.746934
+      }
+    },
+    {
+      "name": "Albania",
+      "iso3": "ALB",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 27046429296.6673,
+        "year": 2024
+      },
+      "area": {
+        "value": 27400,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.46919431279620855,
+        "area": 0.3364485981308411,
+        "combined": 0.422733
+      }
+    },
+    {
+      "name": "United Arab Emirates",
+      "iso3": "ARE",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 552324846834.581,
+        "year": 2024
+      },
+      "area": {
+        "value": 71020,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8815165876777251,
+        "area": 0.4532710280373832,
+        "combined": 0.731631
+      }
+    },
+    {
+      "name": "Argentina",
+      "iso3": "ARG",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 638365455340.04,
+        "year": 2024
+      },
+      "area": {
+        "value": 2736690,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8957345971563981,
+        "area": 0.9672897196261683,
+        "combined": 0.920779
+      }
+    },
+    {
+      "name": "Armenia",
+      "iso3": "ARM",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 25955275380.0321,
+        "year": 2024
+      },
+      "area": {
+        "value": 28199.44,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4597156398104265,
+        "area": 0.3598130841121495,
+        "combined": 0.42475
+      }
+    },
+    {
+      "name": "Antarctica",
+      "iso3": "ATA",
+      "region": "Antarctic",
+      "subregion": "",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    {
+      "name": "French Southern and Antarctic Lands",
+      "iso3": "ATF",
+      "region": "Antarctic",
+      "subregion": "",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    {
+      "name": "Australia",
+      "iso3": "AUS",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "gdp": {
+        "value": 1757022451652.83,
+        "year": 2024
+      },
+      "area": {
+        "value": 7692020,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9383886255924171,
+        "area": 0.9766355140186916,
+        "combined": 0.951775
+      }
+    },
+    {
+      "name": "Austria",
+      "iso3": "AUT",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 534790720466.822,
+        "year": 2024
+      },
+      "area": {
+        "value": 82520,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8672985781990521,
+        "area": 0.4719626168224299,
+        "combined": 0.728931
+      }
+    },
+    {
+      "name": "Azerbaijan",
+      "iso3": "AZE",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 74315882352.9412,
+        "year": 2024
+      },
+      "area": {
+        "value": 82650,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6018957345971564,
+        "area": 0.4766355140186916,
+        "combined": 0.558055
+      }
+    },
+    {
+      "name": "Burundi",
+      "iso3": "BDI",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 3082433067.32634,
+        "year": 2024
+      },
+      "area": {
+        "value": 25680,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.15639810426540285,
+        "area": 0.3317757009345794,
+        "combined": 0.21778
+      }
+    },
+    {
+      "name": "Belgium",
+      "iso3": "BEL",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 671370081636.406,
+        "year": 2024
+      },
+      "area": {
+        "value": 30494,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9004739336492891,
+        "area": 0.3691588785046729,
+        "combined": 0.714514
+      }
+    },
+    {
+      "name": "Benin",
+      "iso3": "BEN",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 21482643706.4249,
+        "year": 2024
+      },
+      "area": {
+        "value": 112760,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3981042654028436,
+        "area": 0.5373831775700935,
+        "combined": 0.446852
+      }
+    },
+    {
+      "name": "Burkina Faso",
+      "iso3": "BFA",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 23124729853.0218,
+        "year": 2024
+      },
+      "area": {
+        "value": 273600,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.41706161137440756,
+        "area": 0.6588785046728972,
+        "combined": 0.501698
+      }
+    },
+    {
+      "name": "Bangladesh",
+      "iso3": "BGD",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 450119432068.852,
+        "year": 2024
+      },
+      "area": {
+        "value": 129980,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8388625592417062,
+        "area": 0.5607476635514018,
+        "combined": 0.741522
+      }
+    },
+    {
+      "name": "Bulgaria",
+      "iso3": "BGR",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 113343355779.985,
+        "year": 2024
+      },
+      "area": {
+        "value": 108560,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6824644549763034,
+        "area": 0.5280373831775701,
+        "combined": 0.628415
+      }
+    },
+    {
+      "name": "The Bahamas",
+      "iso3": "BHS",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 15832800000,
+        "year": 2024
+      },
+      "area": {
+        "value": 10010,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.33649289099526064,
+        "area": 0.24299065420560748,
+        "combined": 0.303767
+      }
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "iso3": "BIH",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 29613572022.8993,
+        "year": 2024
+      },
+      "area": {
+        "value": 51200,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.47393364928909953,
+        "area": 0.4158878504672897,
+        "combined": 0.453618
+      }
+    },
+    {
+      "name": "Belarus",
+      "iso3": "BLR",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "gdp": {
+        "value": 75961865471.9129,
+        "year": 2024
+      },
+      "area": {
+        "value": 202983,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6066350710900474,
+        "area": 0.6121495327102804,
+        "combined": 0.608565
+      }
+    },
+    {
+      "name": "Belize",
+      "iso3": "BLZ",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 3203631800,
+        "year": 2024
+      },
+      "area": {
+        "value": 22810,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.16113744075829384,
+        "area": 0.3130841121495327,
+        "combined": 0.214319
+      }
+    },
+    {
+      "name": "Bermuda",
+      "iso3": "BMU",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 9233600000,
+        "year": 2024
+      },
+      "area": {
+        "value": 54,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.26540284360189575,
+        "area": 0.03271028037383177,
+        "combined": 0.18396
+      }
+    },
+    {
+      "name": "Bolivia",
+      "iso3": "BOL",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 54881327452.9667,
+        "year": 2024
+      },
+      "area": {
+        "value": 1083300,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5829383886255924,
+        "area": 0.8785046728971962,
+        "combined": 0.686387
+      }
+    },
+    {
+      "name": "Brazil",
+      "iso3": "BRA",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 2185821648943.86,
+        "year": 2024
+      },
+      "area": {
+        "value": 8358140,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.957345971563981,
+        "area": 0.9813084112149533,
+        "combined": 0.965733
+      }
+    },
+    {
+      "name": "Brunei",
+      "iso3": "BRN",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 15340808592.48,
+        "year": 2024
+      },
+      "area": {
+        "value": 5270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.32701421800947866,
+        "area": 0.22429906542056074,
+        "combined": 0.291064
+      }
+    },
+    {
+      "name": "Bhutan",
+      "iso3": "BTN",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 3012896789.24928,
+        "year": 2023
+      },
+      "area": {
+        "value": 38140,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.15165876777251186,
+        "area": 0.38317757009345793,
+        "combined": 0.23269
+      }
+    },
+    {
+      "name": "Botswana",
+      "iso3": "BWA",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 19402063512.9066,
+        "year": 2024
+      },
+      "area": {
+        "value": 566730,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3696682464454976,
+        "area": 0.7850467289719626,
+        "combined": 0.515051
+      }
+    },
+    {
+      "name": "Central African Republic",
+      "iso3": "CAF",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 2751494281.06887,
+        "year": 2024
+      },
+      "area": {
+        "value": 622980,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.14691943127962084,
+        "area": 0.8037383177570093,
+        "combined": 0.376806
+      }
+    },
+    {
+      "name": "Canada",
+      "iso3": "CAN",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 2243636826633.76,
+        "year": 2024
+      },
+      "area": {
+        "value": 8788700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9620853080568721,
+        "area": 0.985981308411215,
+        "combined": 0.970449
+      }
+    },
+    {
+      "name": "Switzerland",
+      "iso3": "CHE",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 936564198048.516,
+        "year": 2024
+      },
+      "area": {
+        "value": 39509.63,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.909952606635071,
+        "area": 0.3878504672897196,
+        "combined": 0.727217
+      }
+    },
+    {
+      "name": "Chile",
+      "iso3": "CHL",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 330267137371.592,
+        "year": 2024
+      },
+      "area": {
+        "value": 742831.64,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7914691943127962,
+        "area": 0.8271028037383178,
+        "combined": 0.803941
+      }
+    },
+    {
+      "name": "China",
+      "iso3": "CHN",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 18743803170827.2,
+        "year": 2024
+      },
+      "area": {
+        "value": 9388210,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.995260663507109,
+        "area": 0.9953271028037384,
+        "combined": 0.995284
+      }
+    },
+    {
+      "name": "Ivory Coast",
+      "iso3": "CIV",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 87113179149.284,
+        "year": 2024
+      },
+      "area": {
+        "value": 318000,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6350710900473934,
+        "area": 0.6915887850467289,
+        "combined": 0.654852
+      }
+    },
+    {
+      "name": "Cameroon",
+      "iso3": "CMR",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 53296694320.2057,
+        "year": 2024
+      },
+      "area": {
+        "value": 472710,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5687203791469194,
+        "area": 0.7616822429906542,
+        "combined": 0.636257
+      }
+    },
+    {
+      "name": "Democratic Republic of the Congo",
+      "iso3": "COD",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 70962185790.7094,
+        "year": 2024
+      },
+      "area": {
+        "value": 2267050,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5876777251184834,
+        "area": 0.9532710280373832,
+        "combined": 0.715635
+      }
+    },
+    {
+      "name": "Republic of the Congo",
+      "iso3": "COG",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 15719986076.6464,
+        "year": 2024
+      },
+      "area": {
+        "value": 341500,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.33175355450236965,
+        "area": 0.7009345794392523,
+        "combined": 0.460967
+      }
+    },
+    {
+      "name": "Colombia",
+      "iso3": "COL",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 418818154879.271,
+        "year": 2024
+      },
+      "area": {
+        "value": 1109500,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8246445497630331,
+        "area": 0.883177570093458,
+        "combined": 0.845131
+      }
+    },
+    {
+      "name": "Costa Rica",
+      "iso3": "CRI",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 95350423176.5962,
+        "year": 2024
+      },
+      "area": {
+        "value": 51060,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6540284360189573,
+        "area": 0.411214953271028,
+        "combined": 0.569044
+      }
+    },
+    {
+      "name": "Cuba",
+      "iso3": "CUB",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 107352000000,
+        "year": 2020
+      },
+      "area": {
+        "value": 103800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6729857819905213,
+        "area": 0.5186915887850467,
+        "combined": 0.618983
+      }
+    },
+    {
+      "name": "Northern Cyprus",
+      "iso3": "CYP",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 37634533331.8902,
+        "year": 2024
+      },
+      "area": {
+        "value": 9240,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5071090047393365,
+        "area": 0.2383177570093458,
+        "combined": 0.413032
+      }
+    },
+    {
+      "name": "Cyprus",
+      "iso3": "CYP",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 37634533331.8902,
+        "year": 2024
+      },
+      "area": {
+        "value": 9240,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5071090047393365,
+        "area": 0.2383177570093458,
+        "combined": 0.413032
+      }
+    },
+    {
+      "name": "Czech Republic",
+      "iso3": "CZE",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 347034062928.479,
+        "year": 2024
+      },
+      "area": {
+        "value": 77167.31,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7962085308056872,
+        "area": 0.4672897196261682,
+        "combined": 0.681087
+      }
+    },
+    {
+      "name": "Germany",
+      "iso3": "DEU",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 4685592577804.69,
+        "year": 2024
+      },
+      "area": {
+        "value": 349430,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.990521327014218,
+        "area": 0.705607476635514,
+        "combined": 0.890801
+      }
+    },
+    {
+      "name": "Djibouti",
+      "iso3": "DJI",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 4152145939.98458,
+        "year": 2024
+      },
+      "area": {
+        "value": 23180,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.1848341232227488,
+        "area": 0.3177570093457944,
+        "combined": 0.231357
+      }
+    },
+    {
+      "name": "Denmark",
+      "iso3": "DNK",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 424524722037.047,
+        "year": 2024
+      },
+      "area": {
+        "value": 40000,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8341232227488151,
+        "area": 0.3925233644859813,
+        "combined": 0.679563
+      }
+    },
+    {
+      "name": "Dominican Republic",
+      "iso3": "DOM",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 124282245638.568,
+        "year": 2024
+      },
+      "area": {
+        "value": 48198.02,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7014218009478673,
+        "area": 0.40654205607476634,
+        "combined": 0.598214
+      }
+    },
+    {
+      "name": "Algeria",
+      "iso3": "DZA",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 269322281664.773,
+        "year": 2024
+      },
+      "area": {
+        "value": 2381740,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7630331753554502,
+        "area": 0.9579439252336449,
+        "combined": 0.831252
+      }
+    },
+    {
+      "name": "Ecuador",
+      "iso3": "ECU",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 124676074700,
+        "year": 2024
+      },
+      "area": {
+        "value": 248360,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7061611374407583,
+        "area": 0.6448598130841121,
+        "combined": 0.684706
+      }
+    },
+    {
+      "name": "Egypt",
+      "iso3": "EGY",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 389059911003.566,
+        "year": 2024
+      },
+      "area": {
+        "value": 995450,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8104265402843602,
+        "area": 0.8691588785046729,
+        "combined": 0.830983
+      }
+    },
+    {
+      "name": "Eritrea",
+      "iso3": "ERI",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 2065001626.01626,
+        "year": 2011
+      },
+      "area": {
+        "value": 121178.2,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.10900473933649289,
+        "area": 0.5514018691588785,
+        "combined": 0.263844
+      }
+    },
+    {
+      "name": "Spain",
+      "iso3": "ESP",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 1725671652742.19,
+        "year": 2024
+      },
+      "area": {
+        "value": 499697.4,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.933649289099526,
+        "area": 0.7663551401869159,
+        "combined": 0.875096
+      }
+    },
+    {
+      "name": "Estonia",
+      "iso3": "EST",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 43130419829.35,
+        "year": 2024
+      },
+      "area": {
+        "value": 42730,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5213270142180095,
+        "area": 0.397196261682243,
+        "combined": 0.477881
+      }
+    },
+    {
+      "name": "Ethiopia",
+      "iso3": "ETH",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 149740297952.986,
+        "year": 2024
+      },
+      "area": {
+        "value": 1128498.8,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7203791469194313,
+        "area": 0.8878504672897196,
+        "combined": 0.778994
+      }
+    },
+    {
+      "name": "Finland",
+      "iso3": "FIN",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 298696961297.656,
+        "year": 2024
+      },
+      "area": {
+        "value": 303960,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7819905213270142,
+        "area": 0.6728971962616822,
+        "combined": 0.743808
+      }
+    },
+    {
+      "name": "Fiji",
+      "iso3": "FJI",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 5968125909.27126,
+        "year": 2024
+      },
+      "area": {
+        "value": 18270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2132701421800948,
+        "area": 0.2897196261682243,
+        "combined": 0.240027
+      }
+    },
+    {
+      "name": "Falkland Islands",
+      "iso3": "FLK",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    {
+      "name": "France",
+      "iso3": "FRA",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 3160442622465.08,
+        "year": 2024
+      },
+      "area": {
+        "value": 538950,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9715639810426541,
+        "area": 0.780373831775701,
+        "combined": 0.904647
+      }
+    },
+    {
+      "name": "Gabon",
+      "iso3": "GAB",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 20895684425.6752,
+        "year": 2024
+      },
+      "area": {
+        "value": 257670,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3933649289099526,
+        "area": 0.6495327102803738,
+        "combined": 0.483024
+      }
+    },
+    {
+      "name": "United Kingdom",
+      "iso3": "GBR",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 3686033044482.13,
+        "year": 2024
+      },
+      "area": {
+        "value": 241930,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.976303317535545,
+        "area": 0.6355140186915887,
+        "combined": 0.857027
+      }
+    },
+    {
+      "name": "Georgia",
+      "iso3": "GEO",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 34189423544.9955,
+        "year": 2024
+      },
+      "area": {
+        "value": 69490,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4928909952606635,
+        "area": 0.4485981308411215,
+        "combined": 0.477388
+      }
+    },
+    {
+      "name": "Ghana",
+      "iso3": "GHA",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 82308110386.4641,
+        "year": 2024
+      },
+      "area": {
+        "value": 227533,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6208530805687204,
+        "area": 0.6214953271028038,
+        "combined": 0.621078
+      }
+    },
+    {
+      "name": "Guinea",
+      "iso3": "GIN",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 25008678293.4084,
+        "year": 2024
+      },
+      "area": {
+        "value": 245720,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.44075829383886256,
+        "area": 0.6401869158878505,
+        "combined": 0.510558
+      }
+    },
+    {
+      "name": "Gambia",
+      "iso3": "GMB",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 2404888749.21907,
+        "year": 2024
+      },
+      "area": {
+        "value": 10120,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.13270142180094788,
+        "area": 0.24766355140186916,
+        "combined": 0.172938
+      }
+    },
+    {
+      "name": "Guinea Bissau",
+      "iso3": "GNB",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 2218393804.54798,
+        "year": 2024
+      },
+      "area": {
+        "value": 28120,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.12322274881516587,
+        "area": 0.35514018691588783,
+        "combined": 0.204394
+      }
+    },
+    {
+      "name": "Equatorial Guinea",
+      "iso3": "GNQ",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 12765777677.0622,
+        "year": 2024
+      },
+      "area": {
+        "value": 28050,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2985781990521327,
+        "area": 0.35046728971962615,
+        "combined": 0.316739
+      }
+    },
+    {
+      "name": "Greece",
+      "iso3": "GRC",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 256238371778.118,
+        "year": 2024
+      },
+      "area": {
+        "value": 128900,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7535545023696683,
+        "area": 0.5560747663551402,
+        "combined": 0.684437
+      }
+    },
+    {
+      "name": "Greenland",
+      "iso3": "GRL",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 3326543974.39193,
+        "year": 2023
+      },
+      "area": {
+        "value": 410450,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.16587677725118483,
+        "area": 0.7336448598130841,
+        "combined": 0.364596
+      }
+    },
+    {
+      "name": "Guatemala",
+      "iso3": "GTM",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 113199581158.203,
+        "year": 2024
+      },
+      "area": {
+        "value": 107160,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6777251184834123,
+        "area": 0.5233644859813084,
+        "combined": 0.623699
+      }
+    },
+    {
+      "name": "French Guiana",
+      "iso3": "GUF",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    {
+      "name": "Guyana",
+      "iso3": "GUY",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 24662709832.1343,
+        "year": 2024
+      },
+      "area": {
+        "value": 211140,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4312796208530806,
+        "area": 0.616822429906542,
+        "combined": 0.49622
+      }
+    },
+    {
+      "name": "Honduras",
+      "iso3": "HND",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 37093565854.0437,
+        "year": 2024
+      },
+      "area": {
+        "value": 111890,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5023696682464455,
+        "area": 0.5327102803738317,
+        "combined": 0.512989
+      }
+    },
+    {
+      "name": "Croatia",
+      "iso3": "HRV",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 92983810328.9088,
+        "year": 2024
+      },
+      "area": {
+        "value": 55960,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6445497630331753,
+        "area": 0.4252336448598131,
+        "combined": 0.567789
+      }
+    },
+    {
+      "name": "Haiti",
+      "iso3": "HTI",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 25224154990.7946,
+        "year": 2024
+      },
+      "area": {
+        "value": 27560,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.44549763033175355,
+        "area": 0.3411214953271028,
+        "combined": 0.408966
+      }
+    },
+    {
+      "name": "Hungary",
+      "iso3": "HUN",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 222722738925.641,
+        "year": 2024
+      },
+      "area": {
+        "value": 91260,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7440758293838863,
+        "area": 0.49065420560747663,
+        "combined": 0.655378
+      }
+    },
+    {
+      "name": "Indonesia",
+      "iso3": "IDN",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 1396300098190.97,
+        "year": 2024
+      },
+      "area": {
+        "value": 1892555.47,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9289099526066351,
+        "area": 0.9392523364485982,
+        "combined": 0.93253
+      }
+    },
+    {
+      "name": "India",
+      "iso3": "IND",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 3909891533858.08,
+        "year": 2024
+      },
+      "area": {
+        "value": 2973190,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.981042654028436,
+        "area": 0.9719626168224299,
+        "combined": 0.977865
+      }
+    },
+    {
+      "name": "Ireland",
+      "iso3": "IRL",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 609157459747.205,
+        "year": 2024
+      },
+      "area": {
+        "value": 68890,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8909952606635071,
+        "area": 0.4439252336448598,
+        "combined": 0.734521
+      }
+    },
+    {
+      "name": "Iran",
+      "iso3": "IRN",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 475252089215.416,
+        "year": 2024
+      },
+      "area": {
+        "value": 1622500,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8483412322274881,
+        "area": 0.9252336448598131,
+        "combined": 0.875254
+      }
+    },
+    {
+      "name": "Iraq",
+      "iso3": "IRQ",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 279641257615.385,
+        "year": 2024
+      },
+      "area": {
+        "value": 434130,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7677725118483413,
+        "area": 0.7383177570093458,
+        "combined": 0.757463
+      }
+    },
+    {
+      "name": "Iceland",
+      "iso3": "ISL",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 33255181468.9382,
+        "year": 2024
+      },
+      "area": {
+        "value": 100830,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4881516587677725,
+        "area": 0.514018691588785,
+        "combined": 0.497205
+      }
+    },
+    {
+      "name": "Israel",
+      "iso3": "ISR",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 540379921261.681,
+        "year": 2024
+      },
+      "area": {
+        "value": 21640,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8720379146919431,
+        "area": 0.308411214953271,
+        "combined": 0.674769
+      }
+    },
+    {
+      "name": "Italy",
+      "iso3": "ITA",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 2380825077243.59,
+        "year": 2024
+      },
+      "area": {
+        "value": 295720,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.966824644549763,
+        "area": 0.6635514018691588,
+        "combined": 0.860679
+      }
+    },
+    {
+      "name": "Jamaica",
+      "iso3": "JAM",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 22014397089.7689,
+        "year": 2024
+      },
+      "area": {
+        "value": 10830,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4075829383886256,
+        "area": 0.2570093457943925,
+        "combined": 0.354882
+      }
+    },
+    {
+      "name": "Jordan",
+      "iso3": "JOR",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 53352289577.4648,
+        "year": 2024
+      },
+      "area": {
+        "value": 88794,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5734597156398105,
+        "area": 0.48598130841121495,
+        "combined": 0.542842
+      }
+    },
+    {
+      "name": "Japan",
+      "iso3": "JPN",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 4027597523550.58,
+        "year": 2024
+      },
+      "area": {
+        "value": 364569.27,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.985781990521327,
+        "area": 0.7149532710280374,
+        "combined": 0.890992
+      }
+    },
+    {
+      "name": "Kazakhstan",
+      "iso3": "KAZ",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 291480274648.826,
+        "year": 2024
+      },
+      "area": {
+        "value": 2699700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7772511848341233,
+        "area": 0.9626168224299065,
+        "combined": 0.842129
+      }
+    },
+    {
+      "name": "Kenya",
+      "iso3": "KEN",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 120339557905.932,
+        "year": 2024
+      },
+      "area": {
+        "value": 580876.3,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6966824644549763,
+        "area": 0.794392523364486,
+        "combined": 0.730881
+      }
+    },
+    {
+      "name": "Kyrgyzstan",
+      "iso3": "KGZ",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 17478259659.2625,
+        "year": 2024
+      },
+      "area": {
+        "value": 191800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.36018957345971564,
+        "area": 0.5981308411214953,
+        "combined": 0.443469
+      }
+    },
+    {
+      "name": "Cambodia",
+      "iso3": "KHM",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 46352647037.2406,
+        "year": 2024
+      },
+      "area": {
+        "value": 176520,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5355450236966824,
+        "area": 0.5887850467289719,
+        "combined": 0.554179
+      }
+    },
+    {
+      "name": "South Korea",
+      "iso3": "KOR",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 1875388209406.8,
+        "year": 2024
+      },
+      "area": {
+        "value": 97600,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9478672985781991,
+        "area": 0.5093457943925234,
+        "combined": 0.794385
+      }
+    },
+    {
+      "name": "Kosovo",
+      "iso3": "UNK",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    {
+      "name": "Kuwait",
+      "iso3": "KWT",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 160227273053.334,
+        "year": 2024
+      },
+      "area": {
+        "value": 17820,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7251184834123223,
+        "area": 0.2850467289719626,
+        "combined": 0.571093
+      }
+    },
+    {
+      "name": "Laos",
+      "iso3": "LAO",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 16502933121.3379,
+        "year": 2024
+      },
+      "area": {
+        "value": 230800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3412322274881517,
+        "area": 0.6308411214953271,
+        "combined": 0.442595
+      }
+    },
+    {
+      "name": "Lebanon",
+      "iso3": "LBN",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 20078620356.9931,
+        "year": 2023
+      },
+      "area": {
+        "value": 10230,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3886255924170616,
+        "area": 0.2523364485981308,
+        "combined": 0.340924
+      }
+    },
+    {
+      "name": "Liberia",
+      "iso3": "LBR",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 4779300900,
+        "year": 2024
+      },
+      "area": {
+        "value": 96320,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2037914691943128,
+        "area": 0.5046728971962616,
+        "combined": 0.3091
+      }
+    },
+    {
+      "name": "Libya",
+      "iso3": "LBY",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 48487151215.345,
+        "year": 2024
+      },
+      "area": {
+        "value": 1759540,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5450236966824644,
+        "area": 0.9299065420560748,
+        "combined": 0.679733
+      }
+    },
+    {
+      "name": "Sri Lanka",
+      "iso3": "LKA",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 98963185509.6499,
+        "year": 2024
+      },
+      "area": {
+        "value": 61860,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6587677725118484,
+        "area": 0.42990654205607476,
+        "combined": 0.578666
+      }
+    },
+    {
+      "name": "Lesotho",
+      "iso3": "LSO",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 2271759454.51107,
+        "year": 2024
+      },
+      "area": {
+        "value": 30360,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.12796208530805686,
+        "area": 0.3644859813084112,
+        "combined": 0.210745
+      }
+    },
+    {
+      "name": "Lithuania",
+      "iso3": "LTU",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 84869215513.3648,
+        "year": 2024
+      },
+      "area": {
+        "value": 62600,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6255924170616114,
+        "area": 0.4392523364485981,
+        "combined": 0.560373
+      }
+    },
+    {
+      "name": "Luxembourg",
+      "iso3": "LUX",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 93279851863.4062,
+        "year": 2024
+      },
+      "area": {
+        "value": 2574.46,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6492890995260664,
+        "area": 0.20093457943925233,
+        "combined": 0.492365
+      }
+    },
+    {
+      "name": "Latvia",
+      "iso3": "LVA",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 43684254432.3609,
+        "year": 2024
+      },
+      "area": {
+        "value": 62230,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5260663507109005,
+        "area": 0.43457943925233644,
+        "combined": 0.494046
+      }
+    },
+    {
+      "name": "Morocco",
+      "iso3": "MAR",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 160610994054.734,
+        "year": 2024
+      },
+      "area": {
+        "value": 446300,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7298578199052133,
+        "area": 0.7476635514018691,
+        "combined": 0.73609
+      }
+    },
+    {
+      "name": "Moldova",
+      "iso3": "MDA",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "gdp": {
+        "value": 18200340853.6517,
+        "year": 2024
+      },
+      "area": {
+        "value": 32930,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.36492890995260663,
+        "area": 0.37383177570093457,
+        "combined": 0.368045
+      }
+    },
+    {
+      "name": "Madagascar",
+      "iso3": "MDG",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 17420501490.1231,
+        "year": 2024
+      },
+      "area": {
+        "value": 581800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.35545023696682465,
+        "area": 0.7990654205607477,
+        "combined": 0.510716
+      }
+    },
+    {
+      "name": "Mexico",
+      "iso3": "MEX",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 1856365616165.94,
+        "year": 2024
+      },
+      "area": {
+        "value": 1943950,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.943127962085308,
+        "area": 0.9439252336448598,
+        "combined": 0.943407
+      }
+    },
+    {
+      "name": "Macedonia",
+      "iso3": "MKD",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 16951682245.4202,
+        "year": 2024
+      },
+      "area": {
+        "value": 25220,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3459715639810427,
+        "area": 0.32710280373831774,
+        "combined": 0.339367
+      }
+    },
+    {
+      "name": "Mali",
+      "iso3": "MLI",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 26794747239.8805,
+        "year": 2024
+      },
+      "area": {
+        "value": 1220190,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.46445497630331756,
+        "area": 0.897196261682243,
+        "combined": 0.615914
+      }
+    },
+    {
+      "name": "Malta",
+      "iso3": "MLT",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 24971574502.4475,
+        "year": 2024
+      },
+      "area": {
+        "value": 320,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.43601895734597157,
+        "area": 0.0794392523364486,
+        "combined": 0.311216
+      }
+    },
+    {
+      "name": "Myanmar",
+      "iso3": "MMR",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 74068349523.8095,
+        "year": 2024
+      },
+      "area": {
+        "value": 652670,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5971563981042654,
+        "area": 0.822429906542056,
+        "combined": 0.676002
+      }
+    },
+    {
+      "name": "Montenegro",
+      "iso3": "MNE",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 8270016670.86774,
+        "year": 2024
+      },
+      "area": {
+        "value": 13450,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2559241706161137,
+        "area": 0.27102803738317754,
+        "combined": 0.261211
+      }
+    },
+    {
+      "name": "Mongolia",
+      "iso3": "MNG",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": {
+        "value": 23794540024.5132,
+        "year": 2024
+      },
+      "area": {
+        "value": 1558499.786,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4265402843601896,
+        "area": 0.9205607476635514,
+        "combined": 0.599447
+      }
+    },
+    {
+      "name": "Mozambique",
+      "iso3": "MOZ",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 22745341305.0622,
+        "year": 2024
+      },
+      "area": {
+        "value": 786380,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.41232227488151657,
+        "area": 0.8457943925233645,
+        "combined": 0.564038
+      }
+    },
+    {
+      "name": "Mauritania",
+      "iso3": "MRT",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 10908045686.8808,
+        "year": 2024
+      },
+      "area": {
+        "value": 1030700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.27488151658767773,
+        "area": 0.8738317757009346,
+        "combined": 0.484514
+      }
+    },
+    {
+      "name": "Malawi",
+      "iso3": "MWI",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 11316411329.4619,
+        "year": 2024
+      },
+      "area": {
+        "value": 94280,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2843601895734597,
+        "area": 0.5,
+        "combined": 0.359834
+      }
+    },
+    {
+      "name": "Malaysia",
+      "iso3": "MYS",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 422227005428.688,
+        "year": 2024
+      },
+      "area": {
+        "value": 328550,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8293838862559242,
+        "area": 0.6962616822429907,
+        "combined": 0.782791
+      }
+    },
+    {
+      "name": "Namibia",
+      "iso3": "NAM",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 13372354511.716,
+        "year": 2024
+      },
+      "area": {
+        "value": 823290,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3033175355450237,
+        "area": 0.8504672897196262,
+        "combined": 0.49482
+      }
+    },
+    {
+      "name": "New Caledonia",
+      "iso3": "NCL",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 8548919387.12607,
+        "year": 2024
+      },
+      "area": {
+        "value": 18280,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.26066350710900477,
+        "area": 0.29439252336448596,
+        "combined": 0.272469
+      }
+    },
+    {
+      "name": "Niger",
+      "iso3": "NER",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 19876128485.7857,
+        "year": 2024
+      },
+      "area": {
+        "value": 1266700,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.38388625592417064,
+        "area": 0.9112149532710281,
+        "combined": 0.568451
+      }
+    },
+    {
+      "name": "Nigeria",
+      "iso3": "NGA",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 252261880141.151,
+        "year": 2024
+      },
+      "area": {
+        "value": 910770,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7488151658767772,
+        "area": 0.8644859813084113,
+        "combined": 0.7893
+      }
+    },
+    {
+      "name": "Nicaragua",
+      "iso3": "NIC",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 19693982967.5926,
+        "year": 2024
+      },
+      "area": {
+        "value": 120340,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3791469194312796,
+        "area": 0.5420560747663551,
+        "combined": 0.436165
+      }
+    },
+    {
+      "name": "Netherlands",
+      "iso3": "NLD",
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "gdp": {
+        "value": 1214927698572.66,
+        "year": 2024
+      },
+      "area": {
+        "value": 33670,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9146919431279621,
+        "area": 0.37850467289719625,
+        "combined": 0.727026
+      }
+    },
+    {
+      "name": "Norway",
+      "iso3": "NOR",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 483592648313.301,
+        "year": 2024
+      },
+      "area": {
+        "value": 364270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8578199052132701,
+        "area": 0.7102803738317757,
+        "combined": 0.806181
+      }
+    },
+    {
+      "name": "Nepal",
+      "iso3": "NPL",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 42914268286.7109,
+        "year": 2024
+      },
+      "area": {
+        "value": 143350,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5165876777251185,
+        "area": 0.5700934579439252,
+        "combined": 0.535315
+      }
+    },
+    {
+      "name": "New Zealand",
+      "iso3": "NZL",
+      "region": "Oceania",
+      "subregion": "Australia and New Zealand",
+      "gdp": {
+        "value": 260172385097.616,
+        "year": 2024
+      },
+      "area": {
+        "value": 263310,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7582938388625592,
+        "area": 0.6542056074766355,
+        "combined": 0.721863
+      }
+    },
+    {
+      "name": "Oman",
+      "iso3": "OMN",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 107137198769.386,
+        "year": 2024
+      },
+      "area": {
+        "value": 309500,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6682464454976303,
+        "area": 0.6822429906542056,
+        "combined": 0.673145
+      }
+    },
+    {
+      "name": "Pakistan",
+      "iso3": "PAK",
+      "region": "Asia",
+      "subregion": "Southern Asia",
+      "gdp": {
+        "value": 371570000121.266,
+        "year": 2024
+      },
+      "area": {
+        "value": 770880,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8009478672985783,
+        "area": 0.8411214953271028,
+        "combined": 0.815009
+      }
+    },
+    {
+      "name": "Panama",
+      "iso3": "PAN",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 86523959131.7472,
+        "year": 2024
+      },
+      "area": {
+        "value": 74180,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6303317535545023,
+        "area": 0.46261682242990654,
+        "combined": 0.571632
+      }
+    },
+    {
+      "name": "Peru",
+      "iso3": "PER",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 289221969062.941,
+        "year": 2024
+      },
+      "area": {
+        "value": 1280000,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7725118483412322,
+        "area": 0.9158878504672897,
+        "combined": 0.822693
+      }
+    },
+    {
+      "name": "Philippines",
+      "iso3": "PHL",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 461617509782.355,
+        "year": 2024
+      },
+      "area": {
+        "value": 298170,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8436018957345972,
+        "area": 0.6682242990654206,
+        "combined": 0.78222
+      }
+    },
+    {
+      "name": "Papua New Guinea",
+      "iso3": "PNG",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 31800428265.5246,
+        "year": 2024
+      },
+      "area": {
+        "value": 452860,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4786729857819905,
+        "area": 0.7523364485981309,
+        "combined": 0.574455
+      }
+    },
+    {
+      "name": "Poland",
+      "iso3": "POL",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 917767106146.761,
+        "year": 2024
+      },
+      "area": {
+        "value": 306270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9052132701421801,
+        "area": 0.677570093457944,
+        "combined": 0.825538
+      }
+    },
+    {
+      "name": "Puerto Rico",
+      "iso3": "PRI",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 126029527033.705,
+        "year": 2024
+      },
+      "area": {
+        "value": 8870,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7109004739336493,
+        "area": 0.2336448598130841,
+        "combined": 0.543861
+      }
+    },
+    {
+      "name": "North Korea",
+      "iso3": "PRK",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": null,
+      "area": {
+        "value": 120410,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0,
+        "area": 0.5467289719626168,
+        "combined": 0.191355
+      }
+    },
+    {
+      "name": "Portugal",
+      "iso3": "PRT",
+      "region": "Europe",
+      "subregion": "Southern Europe",
+      "gdp": {
+        "value": 313271185085.102,
+        "year": 2024
+      },
+      "area": {
+        "value": 91605.6,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7867298578199052,
+        "area": 0.4953271028037383,
+        "combined": 0.684739
+      }
+    },
+    {
+      "name": "Paraguay",
+      "iso3": "PRY",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 44458118397.4445,
+        "year": 2024
+      },
+      "area": {
+        "value": 396012.03,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5308056872037915,
+        "area": 0.7242990654205608,
+        "combined": 0.598528
+      }
+    },
+    {
+      "name": "Qatar",
+      "iso3": "QAT",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 219162637362.637,
+        "year": 2024
+      },
+      "area": {
+        "value": 11490,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7393364928909952,
+        "area": 0.2616822429906542,
+        "combined": 0.572158
+      }
+    },
+    {
+      "name": "Romania",
+      "iso3": "ROU",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 382564217988.866,
+        "year": 2024
+      },
+      "area": {
+        "value": 230080,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8056872037914692,
+        "area": 0.6261682242990654,
+        "combined": 0.742856
+      }
+    },
+    {
+      "name": "Russia",
+      "iso3": "RUS",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "gdp": {
+        "value": 2173835806671.66,
+        "year": 2024
+      },
+      "area": {
+        "value": 16376870,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.95260663507109,
+        "area": 1,
+        "combined": 0.969194
+      }
+    },
+    {
+      "name": "Rwanda",
+      "iso3": "RWA",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 14251642235.0968,
+        "year": 2024
+      },
+      "area": {
+        "value": 24670,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3175355450236967,
+        "area": 0.32242990654205606,
+        "combined": 0.319249
+      }
+    },
+    {
+      "name": "Western Sahara",
+      "iso3": "ESH",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    {
+      "name": "Saudi Arabia",
+      "iso3": "SAU",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 1239804533333.33,
+        "year": 2024
+      },
+      "area": {
+        "value": 2149690,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.919431279620853,
+        "area": 0.9485981308411215,
+        "combined": 0.92964
+      }
+    },
+    {
+      "name": "Sudan",
+      "iso3": "SDN",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 49672435513.1126,
+        "year": 2024
+      },
+      "area": {
+        "value": 1868000,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5545023696682464,
+        "area": 0.9345794392523364,
+        "combined": 0.687529
+      }
+    },
+    {
+      "name": "South Sudan",
+      "iso3": "SSD",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 11997800760.2242,
+        "year": 2015
+      },
+      "area": {
+        "value": 631930,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2938388625592417,
+        "area": 0.8130841121495327,
+        "combined": 0.475575
+      }
+    },
+    {
+      "name": "Senegal",
+      "iso3": "SEN",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 32808056600.9436,
+        "year": 2024
+      },
+      "area": {
+        "value": 192530,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4834123222748815,
+        "area": 0.602803738317757,
+        "combined": 0.525199
+      }
+    },
+    {
+      "name": "Solomon Islands",
+      "iso3": "SLB",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 1583964703.75061,
+        "year": 2024
+      },
+      "area": {
+        "value": 27990,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.08530805687203792,
+        "area": 0.34579439252336447,
+        "combined": 0.176478
+      }
+    },
+    {
+      "name": "Sierra Leone",
+      "iso3": "SLE",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 6971127235.3123,
+        "year": 2024
+      },
+      "area": {
+        "value": 72180,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.22748815165876776,
+        "area": 0.45794392523364486,
+        "combined": 0.308148
+      }
+    },
+    {
+      "name": "El Salvador",
+      "iso3": "SLV",
+      "region": "Americas",
+      "subregion": "Central America",
+      "gdp": {
+        "value": 35364960000,
+        "year": 2024
+      },
+      "area": {
+        "value": 20720,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4976303317535545,
+        "area": 0.3037383177570093,
+        "combined": 0.429768
+      }
+    },
+    {
+      "name": "Somaliland",
+      "iso3": "SOM",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 11967000000,
+        "year": 2024
+      },
+      "area": {
+        "value": 627340,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2890995260663507,
+        "area": 0.8084112149532711,
+        "combined": 0.470859
+      }
+    },
+    {
+      "name": "Somalia",
+      "iso3": "SOM",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 11967000000,
+        "year": 2024
+      },
+      "area": {
+        "value": 627340,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.2890995260663507,
+        "area": 0.8084112149532711,
+        "combined": 0.470859
+      }
+    },
+    {
+      "name": "Republic of Serbia",
+      "iso3": "SRB",
+      "region": "Europe",
+      "subregion": "Southeast Europe",
+      "gdp": {
+        "value": 90097765959.1114,
+        "year": 2024
+      },
+      "area": {
+        "value": 84090,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6398104265402843,
+        "area": 0.48130841121495327,
+        "combined": 0.584335
+      }
+    },
+    {
+      "name": "Suriname",
+      "iso3": "SUR",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 4416775112.09627,
+        "year": 2024
+      },
+      "area": {
+        "value": 160507.61,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.1943127962085308,
+        "area": 0.5794392523364486,
+        "combined": 0.329107
+      }
+    },
+    {
+      "name": "Slovakia",
+      "iso3": "SVK",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 140934076532.375,
+        "year": 2024
+      },
+      "area": {
+        "value": 48080,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7156398104265402,
+        "area": 0.40186915887850466,
+        "combined": 0.60582
+      }
+    },
+    {
+      "name": "Slovenia",
+      "iso3": "SVN",
+      "region": "Europe",
+      "subregion": "Central Europe",
+      "gdp": {
+        "value": 72972015197.3859,
+        "year": 2024
+      },
+      "area": {
+        "value": 20134.5,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5924170616113744,
+        "area": 0.29906542056074764,
+        "combined": 0.489744
+      }
+    },
+    {
+      "name": "Sweden",
+      "iso3": "SWE",
+      "region": "Europe",
+      "subregion": "Northern Europe",
+      "gdp": {
+        "value": 603715224265.798,
+        "year": 2024
+      },
+      "area": {
+        "value": 407270,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8862559241706162,
+        "area": 0.7289719626168224,
+        "combined": 0.831207
+      }
+    },
+    {
+      "name": "Swaziland",
+      "iso3": "SWZ",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 4858885840.77236,
+        "year": 2024
+      },
+      "area": {
+        "value": 17200,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.20853080568720378,
+        "area": 0.2803738317757009,
+        "combined": 0.233676
+      }
+    },
+    {
+      "name": "Syria",
+      "iso3": "SYR",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 23622827079.5047,
+        "year": 2022
+      },
+      "area": {
+        "value": 183630,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4218009478672986,
+        "area": 0.5934579439252337,
+        "combined": 0.481881
+      }
+    },
+    {
+      "name": "Chad",
+      "iso3": "TCD",
+      "region": "Africa",
+      "subregion": "Middle Africa",
+      "gdp": {
+        "value": 19518819751.283,
+        "year": 2024
+      },
+      "area": {
+        "value": 1259200,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3744075829383886,
+        "area": 0.9065420560747663,
+        "combined": 0.560655
+      }
+    },
+    {
+      "name": "Togo",
+      "iso3": "TGO",
+      "region": "Africa",
+      "subregion": "Western Africa",
+      "gdp": {
+        "value": 10651180146.531,
+        "year": 2024
+      },
+      "area": {
+        "value": 54390,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.27014218009478674,
+        "area": 0.4205607476635514,
+        "combined": 0.322789
+      }
+    },
+    {
+      "name": "Thailand",
+      "iso3": "THA",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 526517658841.684,
+        "year": 2024
+      },
+      "area": {
+        "value": 510890,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8625592417061612,
+        "area": 0.7710280373831776,
+        "combined": 0.830523
+      }
+    },
+    {
+      "name": "Tajikistan",
+      "iso3": "TJK",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 14204575548.5536,
+        "year": 2024
+      },
+      "area": {
+        "value": 138790,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3127962085308057,
+        "area": 0.5654205607476636,
+        "combined": 0.401215
+      }
+    },
+    {
+      "name": "Turkmenistan",
+      "iso3": "TKM",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 51387209872.2994,
+        "year": 2024
+      },
+      "area": {
+        "value": 469930,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5639810426540285,
+        "area": 0.7570093457943925,
+        "combined": 0.631541
+      }
+    },
+    {
+      "name": "East Timor",
+      "iso3": "TLS",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 1865608515.41321,
+        "year": 2024
+      },
+      "area": {
+        "value": 14870,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.0995260663507109,
+        "area": 0.2757009345794392,
+        "combined": 0.161187
+      }
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "iso3": "TTO",
+      "region": "Americas",
+      "subregion": "Caribbean",
+      "gdp": {
+        "value": 25633544529.4849,
+        "year": 2024
+      },
+      "area": {
+        "value": 5130,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4549763033175355,
+        "area": 0.21962616822429906,
+        "combined": 0.372604
+      }
+    },
+    {
+      "name": "Tunisia",
+      "iso3": "TUN",
+      "region": "Africa",
+      "subregion": "Northern Africa",
+      "gdp": {
+        "value": 51332285656.5422,
+        "year": 2024
+      },
+      "area": {
+        "value": 155360,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5592417061611374,
+        "area": 0.5747663551401869,
+        "combined": 0.564675
+      }
+    },
+    {
+      "name": "Turkey",
+      "iso3": "TUR",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 1359123768774.12,
+        "year": 2024
+      },
+      "area": {
+        "value": 769630,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.9241706161137441,
+        "area": 0.8364485981308412,
+        "combined": 0.893468
+      }
+    },
+    {
+      "name": "Taiwan",
+      "iso3": "TWN",
+      "region": "Asia",
+      "subregion": "Eastern Asia",
+      "gdp": null,
+      "area": null,
+      "scores": {
+        "gdp": 0,
+        "area": 0,
+        "combined": 0
+      }
+    },
+    {
+      "name": "United Republic of Tanzania",
+      "iso3": "TZA",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 78844405385.2195,
+        "year": 2024
+      },
+      "area": {
+        "value": 885800,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6113744075829384,
+        "area": 0.8598130841121495,
+        "combined": 0.698328
+      }
+    },
+    {
+      "name": "Uganda",
+      "iso3": "UGA",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 53911907086.1525,
+        "year": 2024
+      },
+      "area": {
+        "value": 200520,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5781990521327014,
+        "area": 0.6074766355140186,
+        "combined": 0.588446
+      }
+    },
+    {
+      "name": "Ukraine",
+      "iso3": "UKR",
+      "region": "Europe",
+      "subregion": "Eastern Europe",
+      "gdp": {
+        "value": 190741262414.705,
+        "year": 2024
+      },
+      "area": {
+        "value": 579400,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.7345971563981043,
+        "area": 0.7897196261682243,
+        "combined": 0.75389
+      }
+    },
+    {
+      "name": "Uruguay",
+      "iso3": "URY",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 80961511073.5797,
+        "year": 2024
+      },
+      "area": {
+        "value": 175020,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6161137440758294,
+        "area": 0.5841121495327103,
+        "combined": 0.604913
+      }
+    },
+    {
+      "name": "United States of America",
+      "iso3": "USA",
+      "region": "Americas",
+      "subregion": "North America",
+      "gdp": {
+        "value": 28750956130731.2,
+        "year": 2024
+      },
+      "area": {
+        "value": 9147420,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 1,
+        "area": 0.9906542056074766,
+        "combined": 0.996729
+      }
+    },
+    {
+      "name": "Uzbekistan",
+      "iso3": "UZB",
+      "region": "Asia",
+      "subregion": "Central Asia",
+      "gdp": {
+        "value": 114965293466.611,
+        "year": 2024
+      },
+      "area": {
+        "value": 440650,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6872037914691943,
+        "area": 0.7429906542056075,
+        "combined": 0.706729
+      }
+    },
+    {
+      "name": "Venezuela",
+      "iso3": "VEN",
+      "region": "Americas",
+      "subregion": "South America",
+      "gdp": {
+        "value": 119802963257.783,
+        "year": 2024
+      },
+      "area": {
+        "value": 882050,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.6919431279620853,
+        "area": 0.8551401869158879,
+        "combined": 0.749062
+      }
+    },
+    {
+      "name": "Vietnam",
+      "iso3": "VNM",
+      "region": "Asia",
+      "subregion": "South-Eastern Asia",
+      "gdp": {
+        "value": 476388230307.175,
+        "year": 2024
+      },
+      "area": {
+        "value": 313429,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8530805687203792,
+        "area": 0.6869158878504673,
+        "combined": 0.794923
+      }
+    },
+    {
+      "name": "Vanuatu",
+      "iso3": "VUT",
+      "region": "Oceania",
+      "subregion": "Melanesia",
+      "gdp": {
+        "value": 1117972034.22642,
+        "year": 2024
+      },
+      "area": {
+        "value": 12190,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.05687203791469194,
+        "area": 0.26635514018691586,
+        "combined": 0.130191
+      }
+    },
+    {
+      "name": "West Bank",
+      "iso3": "PSE",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 13711100000,
+        "year": 2024
+      },
+      "area": {
+        "value": 6025,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.3080568720379147,
+        "area": 0.22897196261682243,
+        "combined": 0.280377
+      }
+    },
+    {
+      "name": "Yemen",
+      "iso3": "YEM",
+      "region": "Asia",
+      "subregion": "Western Asia",
+      "gdp": {
+        "value": 21606160663.0318,
+        "year": 2018
+      },
+      "area": {
+        "value": 527970,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.4028436018957346,
+        "area": 0.7757009345794392,
+        "combined": 0.533344
+      }
+    },
+    {
+      "name": "South Africa",
+      "iso3": "ZAF",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 401144998373.585,
+        "year": 2024
+      },
+      "area": {
+        "value": 1213090,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.8151658767772512,
+        "area": 0.8925233644859814,
+        "combined": 0.842241
+      }
+    },
+    {
+      "name": "Zambia",
+      "iso3": "ZMB",
+      "region": "Africa",
+      "subregion": "Eastern Africa",
+      "gdp": {
+        "value": 25303185342.2511,
+        "year": 2024
+      },
+      "area": {
+        "value": 743390,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.45023696682464454,
+        "area": 0.8317757009345794,
+        "combined": 0.583776
+      }
+    },
+    {
+      "name": "Zimbabwe",
+      "iso3": "ZWE",
+      "region": "Africa",
+      "subregion": "Southern Africa",
+      "gdp": {
+        "value": 41539411516.4448,
+        "year": 2024
+      },
+      "area": {
+        "value": 386850,
+        "year": 2023
+      },
+      "scores": {
+        "gdp": 0.5118483412322274,
+        "area": 0.719626168224299,
+        "combined": 0.584571
+      }
+    }
+  ]
+}

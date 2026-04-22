@@ -1,0 +1,274 @@
+[
+  {
+    "name": "北京市",
+    "enName": "%E5%8C%97%E4%BA%AC%E5%B8%82",
+    "lat": 39.904989,
+    "lon": 116.405285,
+    "type": "capital",
+    "province": "北京市"
+  },
+  {
+    "name": "天津市",
+    "enName": "%E5%A4%A9%E6%B4%A5%E5%B8%82",
+    "lat": 39.125596,
+    "lon": 117.190182,
+    "type": "capital",
+    "province": "天津市"
+  },
+  {
+    "name": "河北省",
+    "enName": "%E6%B2%B3%E5%8C%97%E7%9C%81",
+    "lat": 38.045474,
+    "lon": 114.502461,
+    "type": "capital",
+    "province": "河北省"
+  },
+  {
+    "name": "山西省",
+    "enName": "%E5%B1%B1%E8%A5%BF%E7%9C%81",
+    "lat": 37.857014,
+    "lon": 112.549248,
+    "type": "capital",
+    "province": "山西省"
+  },
+  {
+    "name": "内蒙古自治区",
+    "enName": "%E5%86%85%E8%92%99%E5%8F%A4%E8%87%AA%E6%B2%BB%E5%8C%BA",
+    "lat": 40.818311,
+    "lon": 111.670801,
+    "type": "capital",
+    "province": "内蒙古自治区"
+  },
+  {
+    "name": "辽宁省",
+    "enName": "%E8%BE%BD%E5%AE%81%E7%9C%81",
+    "lat": 41.796767,
+    "lon": 123.429096,
+    "type": "capital",
+    "province": "辽宁省"
+  },
+  {
+    "name": "吉林省",
+    "enName": "%E5%90%89%E6%9E%97%E7%9C%81",
+    "lat": 43.886841,
+    "lon": 125.3245,
+    "type": "capital",
+    "province": "吉林省"
+  },
+  {
+    "name": "黑龙江省",
+    "enName": "%E9%BB%91%E9%BE%99%E6%B1%9F%E7%9C%81",
+    "lat": 45.756967,
+    "lon": 126.642464,
+    "type": "capital",
+    "province": "黑龙江省"
+  },
+  {
+    "name": "上海市",
+    "enName": "%E4%B8%8A%E6%B5%B7%E5%B8%82",
+    "lat": 31.231706,
+    "lon": 121.472644,
+    "type": "capital",
+    "province": "上海市"
+  },
+  {
+    "name": "江苏省",
+    "enName": "%E6%B1%9F%E8%8B%8F%E7%9C%81",
+    "lat": 32.041544,
+    "lon": 118.767413,
+    "type": "capital",
+    "province": "江苏省"
+  },
+  {
+    "name": "浙江省",
+    "enName": "%E6%B5%99%E6%B1%9F%E7%9C%81",
+    "lat": 30.287459,
+    "lon": 120.153576,
+    "type": "capital",
+    "province": "浙江省"
+  },
+  {
+    "name": "安徽省",
+    "enName": "%E5%AE%89%E5%BE%BD%E7%9C%81",
+    "lat": 31.86119,
+    "lon": 117.283042,
+    "type": "capital",
+    "province": "安徽省"
+  },
+  {
+    "name": "福建省",
+    "enName": "%E7%A6%8F%E5%BB%BA%E7%9C%81",
+    "lat": 26.075302,
+    "lon": 119.306239,
+    "type": "capital",
+    "province": "福建省"
+  },
+  {
+    "name": "江西省",
+    "enName": "%E6%B1%9F%E8%A5%BF%E7%9C%81",
+    "lat": 28.676493,
+    "lon": 115.892151,
+    "type": "capital",
+    "province": "江西省"
+  },
+  {
+    "name": "山东省",
+    "enName": "%E5%B1%B1%E4%B8%9C%E7%9C%81",
+    "lat": 36.675807,
+    "lon": 117.000923,
+    "type": "capital",
+    "province": "山东省"
+  },
+  {
+    "name": "河南省",
+    "enName": "%E6%B2%B3%E5%8D%97%E7%9C%81",
+    "lat": 34.757975,
+    "lon": 113.665412,
+    "type": "capital",
+    "province": "河南省"
+  },
+  {
+    "name": "湖北省",
+    "enName": "%E6%B9%96%E5%8C%97%E7%9C%81",
+    "lat": 30.584355,
+    "lon": 114.298572,
+    "type": "capital",
+    "province": "湖北省"
+  },
+  {
+    "name": "湖南省",
+    "enName": "%E6%B9%96%E5%8D%97%E7%9C%81",
+    "lat": 28.19409,
+    "lon": 112.982279,
+    "type": "capital",
+    "province": "湖南省"
+  },
+  {
+    "name": "广东省",
+    "enName": "%E5%B9%BF%E4%B8%9C%E7%9C%81",
+    "lat": 23.125178,
+    "lon": 113.280637,
+    "type": "capital",
+    "province": "广东省"
+  },
+  {
+    "name": "广西壮族自治区",
+    "enName": "%E5%B9%BF%E8%A5%BF%E5%A3%AE%E6%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA",
+    "lat": 22.82402,
+    "lon": 108.320004,
+    "type": "capital",
+    "province": "广西壮族自治区"
+  },
+  {
+    "name": "海南省",
+    "enName": "%E6%B5%B7%E5%8D%97%E7%9C%81",
+    "lat": 20.031971,
+    "lon": 110.33119,
+    "type": "capital",
+    "province": "海南省"
+  },
+  {
+    "name": "重庆市",
+    "enName": "%E9%87%8D%E5%BA%86%E5%B8%82",
+    "lat": 29.533155,
+    "lon": 106.504962,
+    "type": "capital",
+    "province": "重庆市"
+  },
+  {
+    "name": "四川省",
+    "enName": "%E5%9B%9B%E5%B7%9D%E7%9C%81",
+    "lat": 30.659462,
+    "lon": 104.065735,
+    "type": "capital",
+    "province": "四川省"
+  },
+  {
+    "name": "贵州省",
+    "enName": "%E8%B4%B5%E5%B7%9E%E7%9C%81",
+    "lat": 26.578343,
+    "lon": 106.713478,
+    "type": "capital",
+    "province": "贵州省"
+  },
+  {
+    "name": "云南省",
+    "enName": "%E4%BA%91%E5%8D%97%E7%9C%81",
+    "lat": 25.040609,
+    "lon": 102.712251,
+    "type": "capital",
+    "province": "云南省"
+  },
+  {
+    "name": "西藏自治区",
+    "enName": "%E8%A5%BF%E8%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA",
+    "lat": 29.660361,
+    "lon": 91.132212,
+    "type": "capital",
+    "province": "西藏自治区"
+  },
+  {
+    "name": "陕西省",
+    "enName": "%E9%99%95%E8%A5%BF%E7%9C%81",
+    "lat": 34.263161,
+    "lon": 108.948024,
+    "type": "capital",
+    "province": "陕西省"
+  },
+  {
+    "name": "甘肃省",
+    "enName": "%E7%94%98%E8%82%83%E7%9C%81",
+    "lat": 36.058039,
+    "lon": 103.823557,
+    "type": "capital",
+    "province": "甘肃省"
+  },
+  {
+    "name": "青海省",
+    "enName": "%E9%9D%92%E6%B5%B7%E7%9C%81",
+    "lat": 36.623178,
+    "lon": 101.778916,
+    "type": "capital",
+    "province": "青海省"
+  },
+  {
+    "name": "宁夏回族自治区",
+    "enName": "%E5%AE%81%E5%A4%8F%E5%9B%9E%E6%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA",
+    "lat": 38.46637,
+    "lon": 106.278179,
+    "type": "capital",
+    "province": "宁夏回族自治区"
+  },
+  {
+    "name": "新疆维吾尔自治区",
+    "enName": "%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA",
+    "lat": 43.792818,
+    "lon": 87.617733,
+    "type": "capital",
+    "province": "新疆维吾尔自治区"
+  },
+  {
+    "name": "台湾省",
+    "enName": "%E5%8F%B0%E6%B9%BE%E7%9C%81",
+    "lat": 25.044332,
+    "lon": 121.509062,
+    "type": "capital",
+    "province": "台湾省"
+  },
+  {
+    "name": "香港特别行政区",
+    "enName": "%E9%A6%99%E6%B8%AF%E7%89%B9%E5%88%AB%E8%A1%8C%E6%94%BF%E5%8C%BA",
+    "lat": 22.320048,
+    "lon": 114.173355,
+    "type": "capital",
+    "province": "香港特别行政区"
+  },
+  {
+    "name": "澳门特别行政区",
+    "enName": "%E6%BE%B3%E9%97%A8%E7%89%B9%E5%88%AB%E8%A1%8C%E6%94%BF%E5%8C%BA",
+    "lat": 22.198951,
+    "lon": 113.54909,
+    "type": "capital",
+    "province": "澳门特别行政区"
+  }
+]

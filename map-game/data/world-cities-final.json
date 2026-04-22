@@ -1,0 +1,394 @@
+[
+  {
+    "name": "阿姆斯特丹",
+    "enName": "Amsterdam",
+    "lat": 52.3676,
+    "lon": 4.9041,
+    "type": "major",
+    "country": "Netherlands"
+  },
+  {
+    "name": "曼谷",
+    "enName": "Bangkok",
+    "lat": 13.7563,
+    "lon": 100.5018,
+    "type": "major",
+    "country": "Thailand"
+  },
+  {
+    "name": "巴塞罗那",
+    "enName": "Barcelona",
+    "lat": 41.3851,
+    "lon": 2.1734,
+    "type": "major",
+    "country": "Spain"
+  },
+  {
+    "name": "柏林",
+    "enName": "Berlin",
+    "lat": 52.5200,
+    "lon": 13.4050,
+    "type": "major",
+    "country": "Germany"
+  },
+  {
+    "name": "波哥大",
+    "enName": "Bogotá",
+    "lat": 4.7110,
+    "lon": -74.0721,
+    "type": "major",
+    "country": "Colombia"
+  },
+  {
+    "name": "布宜诺斯艾利斯",
+    "enName": "Buenos Aires",
+    "lat": -34.6037,
+    "lon": -58.3816,
+    "type": "major",
+    "country": "Argentina"
+  },
+  {
+    "name": "釜山",
+    "enName": "Busan",
+    "lat": 35.1796,
+    "lon": 129.0756,
+    "type": "major",
+    "country": "South Korea"
+  },
+  {
+    "name": "开罗",
+    "enName": "Cairo",
+    "lat": 30.0444,
+    "lon": 31.2357,
+    "type": "major",
+    "country": "Egypt"
+  },
+  {
+    "name": "芝加哥",
+    "enName": "Chicago",
+    "lat": 41.8781,
+    "lon": -87.6298,
+    "type": "major",
+    "country": "United States"
+  },
+  {
+    "name": "德里",
+    "enName": "Delhi",
+    "lat": 28.6139,
+    "lon": 77.2090,
+    "type": "major",
+    "country": "India"
+  },
+  {
+    "name": "达卡",
+    "enName": "Dhaka",
+    "lat": 23.8103,
+    "lon": 90.4125,
+    "type": "major",
+    "country": "Bangladesh"
+  },
+  {
+    "name": "迪拜",
+    "enName": "Dubai",
+    "lat": 25.2048,
+    "lon": 55.2708,
+    "type": "major",
+    "country": "UAE"
+  },
+  {
+    "name": "广州",
+    "enName": "Guangzhou",
+    "lat": 23.1291,
+    "lon": 113.2644,
+    "type": "major",
+    "country": "China"
+  },
+  {
+    "name": "胡志明市",
+    "enName": "Ho Chi Minh City",
+    "lat": 10.7769,
+    "lon": 106.7009,
+    "type": "major",
+    "country": "Vietnam"
+  },
+  {
+    "name": "香港",
+    "enName": "Hong Kong",
+    "lat": 22.3193,
+    "lon": 114.1694,
+    "type": "major",
+    "country": "China"
+  },
+  {
+    "name": "伊斯坦布尔",
+    "enName": "Istanbul",
+    "lat": 41.0082,
+    "lon": 28.9784,
+    "type": "major",
+    "country": "Turkey"
+  },
+  {
+    "name": "雅加达",
+    "enName": "Jakarta",
+    "lat": -6.2088,
+    "lon": 106.8456,
+    "type": "major",
+    "country": "Indonesia"
+  },
+  {
+    "name": "约翰内斯堡",
+    "enName": "Johannesburg",
+    "lat": -26.2041,
+    "lon": 28.0473,
+    "type": "major",
+    "country": "South Africa"
+  },
+  {
+    "name": "卡拉奇",
+    "enName": "Karachi",
+    "lat": 24.8607,
+    "lon": 67.0011,
+    "type": "major",
+    "country": "Pakistan"
+  },
+  {
+    "name": "吉隆坡",
+    "enName": "Kuala Lumpur",
+    "lat": 3.1390,
+    "lon": 101.6869,
+    "type": "major",
+    "country": "Malaysia"
+  },
+  {
+    "name": "拉各斯",
+    "enName": "Lagos",
+    "lat": 6.5244,
+    "lon": 3.3792,
+    "type": "major",
+    "country": "Nigeria"
+  },
+  {
+    "name": "拉合尔",
+    "enName": "Lahore",
+    "lat": 31.5204,
+    "lon": 74.3587,
+    "type": "major",
+    "country": "Pakistan"
+  },
+  {
+    "name": "利马",
+    "enName": "Lima",
+    "lat": -12.0464,
+    "lon": -77.0428,
+    "type": "major",
+    "country": "Peru"
+  },
+  {
+    "name": "伦敦",
+    "enName": "London",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "type": "major",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "洛杉矶",
+    "enName": "Los Angeles",
+    "lat": 34.0522,
+    "lon": -118.2437,
+    "type": "major",
+    "country": "United States"
+  },
+  {
+    "name": "马德里",
+    "enName": "Madrid",
+    "lat": 40.4168,
+    "lon": -3.7038,
+    "type": "major",
+    "country": "Spain"
+  },
+  {
+    "name": "曼彻斯特",
+    "enName": "Manchester",
+    "lat": 53.4808,
+    "lon": -2.2426,
+    "type": "major",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "马尼拉",
+    "enName": "Manila",
+    "lat": 14.5995,
+    "lon": 120.9842,
+    "type": "major",
+    "country": "Philippines"
+  },
+  {
+    "name": "墨尔本",
+    "enName": "Melbourne",
+    "lat": -37.8136,
+    "lon": 144.9631,
+    "type": "major",
+    "country": "Australia"
+  },
+  {
+    "name": "墨西哥城",
+    "enName": "Mexico City",
+    "lat": 19.4326,
+    "lon": -99.1332,
+    "type": "major",
+    "country": "Mexico"
+  },
+  {
+    "name": "迈阿密",
+    "enName": "Miami",
+    "lat": 25.7617,
+    "lon": -80.1918,
+    "type": "major",
+    "country": "United States"
+  },
+  {
+    "name": "莫斯科",
+    "enName": "Moscow",
+    "lat": 55.7558,
+    "lon": 37.6176,
+    "type": "major",
+    "country": "Russia"
+  },
+  {
+    "name": "孟买",
+    "enName": "Mumbai",
+    "lat": 19.0760,
+    "lon": 72.8777,
+    "type": "major",
+    "country": "India"
+  },
+  {
+    "name": "内罗毕",
+    "enName": "Nairobi",
+    "lat": -1.2921,
+    "lon": 36.8219,
+    "type": "major",
+    "country": "Kenya"
+  },
+  {
+    "name": "纽约",
+    "enName": "New York",
+    "lat": 40.7128,
+    "lon": -74.0060,
+    "type": "major",
+    "country": "United States"
+  },
+  {
+    "name": "大阪",
+    "enName": "Osaka",
+    "lat": 34.6937,
+    "lon": 135.5023,
+    "type": "major",
+    "country": "Japan"
+  },
+  {
+    "name": "巴黎",
+    "enName": "Paris",
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "type": "major",
+    "country": "France"
+  },
+  {
+    "name": "罗马",
+    "enName": "Rome",
+    "lat": 41.9028,
+    "lon": 12.4964,
+    "type": "major",
+    "country": "Italy"
+  },
+  {
+    "name": "旧金山",
+    "enName": "San Francisco",
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "type": "major",
+    "country": "United States"
+  },
+  {
+    "name": "首尔",
+    "enName": "Seoul",
+    "lat": 37.5665,
+    "lon": 126.9780,
+    "type": "major",
+    "country": "South Korea"
+  },
+  {
+    "name": "上海",
+    "enName": "Shanghai",
+    "lat": 31.2304,
+    "lon": 121.4737,
+    "type": "major",
+    "country": "China"
+  },
+  {
+    "name": "深圳",
+    "enName": "Shenzhen",
+    "lat": 22.5431,
+    "lon": 114.0579,
+    "type": "major",
+    "country": "China"
+  },
+  {
+    "name": "新加坡",
+    "enName": "Singapore",
+    "lat": 1.3521,
+    "lon": 103.8198,
+    "type": "major",
+    "country": "Singapore"
+  },
+  {
+    "name": "悉尼",
+    "enName": "Sydney",
+    "lat": -33.8688,
+    "lon": 151.2093,
+    "type": "major",
+    "country": "Australia"
+  },
+  {
+    "name": "圣保罗",
+    "enName": "São Paulo",
+    "lat": -23.5505,
+    "lon": -46.6333,
+    "type": "major",
+    "country": "Brazil"
+  },
+  {
+    "name": "台北",
+    "enName": "Taipei",
+    "lat": 25.0330,
+    "lon": 121.5654,
+    "type": "major",
+    "country": "Taiwan"
+  },
+  {
+    "name": "东京",
+    "enName": "Tokyo",
+    "lat": 35.6762,
+    "lon": 139.6503,
+    "type": "major",
+    "country": "Japan"
+  },
+  {
+    "name": "多伦多",
+    "enName": "Toronto",
+    "lat": 43.6532,
+    "lon": -79.3832,
+    "type": "major",
+    "country": "Canada"
+  },
+  {
+    "name": "维也纳",
+    "enName": "Vienna",
+    "lat": 48.2082,
+    "lon": 16.3738,
+    "type": "major",
+    "country": "Austria"
+  }
+]

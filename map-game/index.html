@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>地理知识问答 - 三国风</title>
+  <link rel="stylesheet" href="css/style.css?v=20260220-20" />
+</head>
+<body>
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <main id="app">
+    <section id="home-page" class="page">
+      <h1 class="title">地理知识问答</h1>
+      <p class="subtitle">运筹帷幄，决胜千里</p>
+      <p id="home-version" class="version-text">版本：-</p>
+
+      <div id="mode-selection" class="card mode-grid">
+        <button data-mode="province-click">省份大挑战</button>
+        <button data-mode="city-click">省会定位</button>
+        <button data-mode="world-province">世界国家挑战</button>
+        <button data-mode="world-city">世界城市定位</button>
+      </div>
+
+      <div class="card difficulty-panel">
+        <div class="difficulty-row">
+          <label for="province-difficulty">省份挑战难度</label>
+          <select id="province-difficulty" aria-label="省份挑战难度选择">
+            <option value="easy">简单（悬停提示）</option>
+            <option value="hard">困难（关闭悬停提示）</option>
+          </select>
+        </div>
+        <div class="difficulty-row">
+          <label for="city-difficulty">省会挑战难度</label>
+          <select id="city-difficulty" aria-label="省会挑战难度选择">
+            <option value="easy">简单（显示省界）</option>
+            <option value="hard">困难（隐藏省界）</option>
+            <option value="super">超级（加入第二大城市）</option>
+          </select>
+        </div>
+        <div class="difficulty-row">
+          <label for="world-country-difficulty">世界国家难度</label>
+          <select id="world-country-difficulty" aria-label="世界国家难度选择">
+            <option value="all">全部国家</option>
+            <option value="top50">Top 50 国家</option>
+          </select>
+        </div>
+        <div class="difficulty-row">
+          <label for="world-city-difficulty">世界城市难度</label>
+          <select id="world-city-difficulty" aria-label="世界城市难度选择">
+            <option value="top50">Top 50 城市</option>
+            <option value="top200" selected>Top 200 城市</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card rules-box" id="rules-box">
+        <h3>游戏规则</h3>
+        <p>1. 每局 10 题；点击地图作答，系统自动判分。</p>
+        <p>2. 省份/国家题：点中目标区域算正确；答对答错都 2 秒自动下一题。</p>
+        <p>3. 城市题：按点击点到目标点的球面距离计分，误差越小越好。</p>
+        <p>4. 可用“倍率”和“上下左右”按钮放大并平移地图，便于点击小区域。</p>
+      </div>
+
+      <div class="card records-box" id="records-box">
+        <h3>个人最佳成绩</h3>
+        <div id="records-content" class="records-content">暂无记录</div>
+      </div>
+
+      <p id="loading-text" class="muted">正在加载地图与题库数据...</p>
+      <p id="error-text" class="error hidden" role="alert"></p>
+    </section>
+
+    <section id="game-page" class="page hidden">
+      <div id="header" class="card header-row">
+        <span id="mode-title">模式</span>
+        <span id="progress">1/10</span>
+        <span id="live-score">得分</span>
+      </div>
+
+      <div id="question-box" class="card question-row">
+        <span id="question">请点击：</span>
+        <span id="feedback" class="feedback"></span>
+      </div>
+
+      <div id="map-tools" class="card map-tools">
+        <div class="map-tools-main">
+          <div class="map-tools-row map-primary-row">
+            <button id="next-btn" type="button" disabled>下一题</button>
+            <button id="quit-btn" type="button" class="secondary">返回首页</button>
+            <button id="assist-toggle-btn" type="button" class="secondary" aria-expanded="false">
+              显示辅助键
+            </button>
+          </div>
+          <div id="assist-tools" class="assist-tools hidden">
+            <div class="map-tools-row">
+              <button id="view-scale-btn" type="button">倍率：标准</button>
+              <button id="map-reset-btn" type="button" class="secondary">重置视图</button>
+            </div>
+            <div class="map-pan-pad" aria-label="地图平移控制">
+              <button id="pan-up-btn" type="button" class="secondary pan-btn pan-up">上</button>
+              <button id="pan-left-btn" type="button" class="secondary pan-btn pan-left">左</button>
+              <button id="pan-right-btn" type="button" class="secondary pan-btn pan-right">右</button>
+              <button id="pan-down-btn" type="button" class="secondary pan-btn pan-down">下</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="map-container" class="map-shell" aria-label="地图答题区域"></div>
+
+      <div id="dev-tools" class="card dev-tools hidden" aria-label="开发日志面板">
+        <div class="dev-tools-header">
+          <strong>开发日志（隐藏功能）</strong>
+          <div class="dev-tools-actions">
+            <button id="dev-copy-btn" type="button">复制日志</button>
+            <button id="dev-clear-btn" type="button" class="secondary">清空</button>
+            <button id="dev-toggle-btn" type="button" class="secondary">隐藏</button>
+          </div>
+        </div>
+        <textarea id="dev-log-output" readonly spellcheck="false"></textarea>
+      </div>
+
+      <p id="game-version" class="version-text">版本：-</p>
+    </section>
+
+    <section id="result-page" class="page hidden">
+      <h2 id="score-text" class="result-title">结果</h2>
+      <div id="details" class="card details"></div>
+      <div class="card controls">
+        <button id="restart-btn">再来一局</button>
+        <button id="share-btn">分享挑战</button>
+        <button id="home-btn" class="secondary">返回首页</button>
+      </div>
+      <div id="map-review" class="map-shell review" aria-label="答题复盘地图"></div>
+      <div id="history-list" class="card history"></div>
+      <p id="result-version" class="version-text">版本：-</p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="js/utils.js?v=20260220-20"></script>
+  <script src="js/game.js?v=20260220-20"></script>
+</body>
+</html>
