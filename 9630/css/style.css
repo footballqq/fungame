@@ -1,0 +1,310 @@
+/* codex: 2026-04-22 why: 初始化项目样式，定义紫黑极客主题，并实现扑克牌 3D 翻转动画 */
+
+:root {
+    --primary-color: #7952b3; /* 清华紫调 */
+    --secondary-color: #61dafb; /* 科技蓝 */
+    --bg-dark: #121212;
+    --text-light: #e0e0e0;
+    --card-bg: #ffffff;
+    --red-suit: #e74c3c;
+    --black-suit: #2c3e50;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ====================
+   Typography & Buttons
+   ==================== */
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+.glow-text {
+    color: #fff;
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary { background-color: var(--primary-color); color: #fff; }
+.btn-primary:hover { background-color: #5c3c8f; box-shadow: 0 0 10px var(--primary-color); }
+
+.btn-secondary { background-color: #333; color: #fff; border: 1px solid #555; }
+.btn-secondary:hover { background-color: #444; border-color: var(--secondary-color); }
+
+.btn-warning { background-color: #c0392b; color: #fff; }
+.btn-warning:hover { background-color: #a53125; }
+
+.btn-large { padding: 15px 30px; font-size: 20px; margin: 10px; }
+.btn-small { padding: 5px 10px; font-size: 14px; }
+
+/* ====================
+   Index Page
+   ==================== */
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+.menu-options { margin: 50px 0; }
+footer { margin-top: auto; opacity: 0.6; font-size: 0.9em; }
+
+/* ====================
+   Admin Page
+   ==================== */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.config-section, .question-section {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; color: #aaa; }
+#suit-options label { display: inline-block; margin-right: 15px; color: #fff; }
+input[type="number"], input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #2a2a2a;
+    color: #fff;
+}
+input[type="number"] { width: 80px; display: inline-block; }
+
+.question-item {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    border-left: 4px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.q-meta .badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.badge-primary { background: var(--primary-color); color: #fff; }
+.badge-secondary { background: #555; color: #fff; }
+.badge-outline { border: 1px solid #777; color: #bbb; }
+.q-actions { align-self: flex-end; }
+
+/* Modal */
+.modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: #1e1e1e; padding: 30px; border-radius: 8px;
+    width: 500px; max-width: 90%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.text-center { text-align: center; }
+
+/* ====================
+   Draw Page
+   ==================== */
+.draw-body {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.draw-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+.card-stage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-hint { text-align: center; font-size: 24px; margin-bottom: 20px; }
+.blinking { animation: blink 1.5s infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* Playing Card 3D Setup */
+.playing-card {
+    width: 240px;
+    height: 360px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card-inner.flipped {
+    transform: rotateY(180deg) scale(1.1);
+}
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.card-back {
+    background: #34495e;
+    border: 10px solid #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-back .pattern {
+    width: 90%; height: 90%;
+    background: repeating-linear-gradient(45deg, #2c3e50, #2c3e50 10px, #34495e 10px, #34495e 20px);
+}
+.card-front {
+    background: var(--card-bg);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.red-suit .card-front { color: var(--red-suit); }
+.black-suit .card-front { color: var(--black-suit); }
+
+.card-value {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.top-left { top: 15px; left: 15px; }
+.bottom-right { bottom: 15px; right: 15px; transform: rotate(180deg); }
+.card-center { font-size: 100px; }
+
+/* Shake Animation */
+.shake { animation: shake 0.1s infinite; }
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Question Stage */
+.question-stage {
+    flex: 2;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.questions-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+.q-column { flex: 1; }
+.q-col-title {
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.primary-color { color: var(--primary-color); border-color: var(--primary-color); }
+.secondary-color { color: var(--secondary-color); border-color: var(--secondary-color); }
+
+.q-item {
+    background: rgba(42, 42, 42, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s forwards;
+}
+.q-column:first-child .q-item { border-left-color: var(--primary-color); }
+.q-column:last-child .q-item { border-left-color: var(--secondary-color); }
+
+.q-badge {
+    font-size: 12px; color: #aaa; margin-bottom: 5px;
+}
+.q-text { font-size: 18px; font-weight: 500; }
+
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.navigation-hints {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: #666;
+    font-size: 14px;
+}

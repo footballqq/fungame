@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理与配置 - 清华计6 30周年纪念</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+    <div class="container">
+        <header class="admin-header">
+            <h2>管理与配置</h2>
+            <a href="index.html" class="btn btn-secondary btn-small">返回首页</a>
+        </header>
+
+        <section class="config-section">
+            <h3>牌库配置</h3>
+            <div class="deck-config">
+                <div class="form-group">
+                    <label>花色选择:</label>
+                    <div id="suit-options">
+                        <label><input type="checkbox" value="♠" checked> 黑桃 (♠)</label>
+                        <label><input type="checkbox" value="♥" checked> 红桃 (♥)</label>
+                        <label><input type="checkbox" value="♣" checked> 梅花 (♣)</label>
+                        <label><input type="checkbox" value="♦" checked> 方块 (♦)</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>数字范围:</label>
+                    <input type="number" id="range-min" min="1" max="13" value="1">
+                    <span> - </span>
+                    <input type="number" id="range-max" min="1" max="13" value="13">
+                </div>
+                <div class="actions">
+                    <button id="save-deck-btn" class="btn btn-primary">保存配置</button>
+                    <button id="reset-history-btn" class="btn btn-warning">清空抽奖历史</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="question-section">
+            <div class="section-header">
+                <h3>题库管理</h3>
+                <div>
+                    <button id="add-question-btn" class="btn btn-primary btn-small">新增题目</button>
+                    <button id="export-btn" class="btn btn-secondary btn-small">导出JSON</button>
+                </div>
+            </div>
+            
+            <div class="question-list" id="question-list">
+                <!-- 题目由 JS 动态渲染 -->
+            </div>
+        </section>
+    </div>
+
+    <!-- 弹窗：编辑题目 -->
+    <div id="edit-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="modal-title">编辑题目</h3>
+            <input type="hidden" id="edit-id">
+            <div class="form-group">
+                <label>类别:</label>
+                <select id="edit-category">
+                    <option value="必答题">必答题</option>
+                    <option value="选答题">选答题</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>子类别:</label>
+                <input type="text" id="edit-subcategory" placeholder="例如：现状快照">
+            </div>
+            <div class="form-group">
+                <label>题目内容:</label>
+                <textarea id="edit-content" rows="4"></textarea>
+            </div>
+            <div class="modal-actions">
+                <button id="save-question-btn" class="btn btn-primary">保存</button>
+                <button id="cancel-edit-btn" class="btn btn-secondary">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/edit.js"></script>
+</body>
+</html>

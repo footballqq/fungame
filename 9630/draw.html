@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖环节 - 清华计6 30周年纪念</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="draw-body">
+    <div class="draw-container">
+        <!-- 抽奖核心区 -->
+        <div class="card-stage" id="card-stage">
+            <div class="card-hint" id="card-hint">
+                <span class="blinking">按【空格键】开始抽奖</span>
+                <p id="pool-info">池中剩余: <span id="pool-count">0</span> 张</p>
+            </div>
+            <div class="playing-card hidden" id="playing-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!-- 牌面内容 -->
+                        <div class="card-value top-left"><span class="val">A</span><span class="suit">♠</span></div>
+                        <div class="card-center"><span class="suit">♠</span></div>
+                        <div class="card-value bottom-right"><span class="val">A</span><span class="suit">♠</span></div>
+                    </div>
+                    <div class="card-back">
+                        <div class="pattern"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 题目展示区 -->
+        <div class="question-stage hidden" id="question-stage">
+            <div class="questions-wrapper">
+                <div class="q-column">
+                    <h3 class="q-col-title primary-color">必答题 (3题)</h3>
+                    <div id="mandatory-questions" class="q-list"></div>
+                </div>
+                <div class="q-column">
+                    <h3 class="q-col-title secondary-color">选答题 (3题)</h3>
+                    <div id="optional-questions" class="q-list"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="navigation-hints">
+            <span>按【ESC】返回首页</span>
+        </div>
+    </div>
+
+    <!-- 弹窗：卡池已空 -->
+    <div id="empty-modal" class="modal hidden">
+        <div class="modal-content text-center">
+            <h3>卡池已抽空！</h3>
+            <p>请前往后台重置卡池。</p>
+            <div class="modal-actions">
+                <a href="index.html" class="btn btn-primary">返回首页</a>
+                <a href="edit.html" class="btn btn-secondary">前往配置</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/draw.js"></script>
+</body>
+</html>
