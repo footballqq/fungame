@@ -45,6 +45,68 @@ function resolveImgSrc(src) {
   return src;
 }
 
+// ---- Loading Overlay (for first load / slow network) ----
+function ensureLoadingOverlay() {
+  let el = document.getElementById('loadingOverlay');
+  if (el) return el;
+  el = document.createElement('div');
+  el.id = 'loadingOverlay';
+  el.style.cssText = 'position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);z-index:9999;padding:16px;';
+  el.innerHTML = `
+    <div style="width:min(520px,92vw);background:var(--bg-card-solid);border:1px solid var(--glass-border);border-radius:12px;padding:16px;box-shadow:var(--shadow)">
+      <div style="font-weight:600;margin-bottom:8px" id="loadingTitle">加载中…</div>
+      <div style="color:var(--text-muted);font-size:0.9rem;margin-bottom:10px" id="loadingText">首次进入可能需要加载题库数据，请耐心等待。</div>
+      <div style="height:10px;background:var(--bg-input);border-radius:999px;overflow:hidden;border:1px solid var(--glass-border)">
+        <div id="loadingBar" style="height:100%;width:12%;background:var(--accent);transition:width .2s ease"></div>
+      </div>
+      <div style="margin-top:8px;color:var(--text-muted);font-size:0.8rem" id="loadingPct"> </div>
+    </div>
+  `;
+  document.body.appendChild(el);
+  return el;
+}
+
+function showLoading({ title = '加载中…', text = '首次进入可能需要加载题库数据，请耐心等待。', pct = null } = {}) {
+  const el = ensureLoadingOverlay();
+  el.style.display = 'flex';
+  const t = document.getElementById('loadingTitle');
+  const tx = document.getElementById('loadingText');
+  const bar = document.getElementById('loadingBar');
+  const pctEl = document.getElementById('loadingPct');
+  if (t) t.textContent = title;
+  if (tx) tx.textContent = text;
+  if (bar) bar.style.width = pct === null ? '12%' : `${Math.max(3, Math.min(100, pct))}%`;
+  if (pctEl) pctEl.textContent = pct === null ? '' : `${Math.round(pct)}%`;
+}
+
+function hideLoading() {
+  const el = document.getElementById('loadingOverlay');
+  if (el) el.style.display = 'none';
+}
+
+async function nextFrame() {
+  return new Promise(r => requestAnimationFrame(() => r()));
+}
+
+async function loadProblemsForGradesWithProgress(grades, onProgress) {
+  const index = await loadIndex();
+  const tasks = [];
+  for (const g of grades) {
+    const years = index.grades[String(g)]?.years || [];
+    for (const y of years) tasks.push([g, y]);
+  }
+  const total = tasks.length;
+  let done = 0;
+  const all = [];
+  for (const [g, y] of tasks) {
+    const ps = await loadProblems(g, y);
+    all.push(...ps);
+    done++;
+    onProgress?.({ done, total, grade: g, year: y });
+  }
+  return all;
+}
+
 // ---- Router ----
 function navigate(page, params = {}) {
   currentPage = page;
@@ -200,12 +262,18 @@ async function renderPractice(params) {
     } else {
       const opts = getSelections();
       if (opts.mode === 'wrong') {
-        const allProblems = [];
-        for (const g of opts.grades) allProblems.push(...await loadAllProblems(g));
+        showLoading({ title: '加载题库…', text: '正在加载错题数据（首次进入可能较慢）' });
+        await nextFrame();
+        const allProblems = await loadProblemsForGradesWithProgress(opts.grades, ({ done, total, grade, year }) => {
+          showLoading({ title: '加载题库…', text: `正在加载：${grade}年级 ${year}年（${done}/${total}）`, pct: total ? (done / total * 100) : null });
+        });
         problems = filterProblems(allProblems, { onlyWrong: true, requireQuestionText: true, pool: 'practice' });
       } else {
-        const allProblems = [];
-        for (const g of opts.grades) allProblems.push(...await loadAllProblems(g));
+        showLoading({ title: '加载题库…', text: '正在加载题库数据（首次进入可能较慢）' });
+        await nextFrame();
+        const allProblems = await loadProblemsForGradesWithProgress(opts.grades, ({ done, total, grade, year }) => {
+          showLoading({ title: '加载题库…', text: `正在加载：${grade}年级 ${year}年（${done}/${total}）`, pct: total ? (done / total * 100) : null });
+        });
         problems = filterProblems(allProblems, {
           topic: opts.topics, difficulty: opts.difficulties, stage: opts.stages,
           excludeDone: opts.excludeDone && opts.mode !== 'wrong',
@@ -213,6 +281,7 @@ async function renderPractice(params) {
           pool: 'practice',
         });
       }
+      hideLoading();
       if (opts.mode === 'random') problems = sample(problems, opts.count);
       else problems = problems.slice(0, opts.count);
     }
