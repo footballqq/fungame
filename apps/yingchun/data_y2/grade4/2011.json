@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和解答，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#1",
           "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)计算: \\(80 \\times 37 + 47 \\times 63 = 5921\\) .",
       "answer": null,
@@ -70,13 +73,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含独立的题目题干，但同时有明确的答案和完整解析，存在答案泄露风险，不适合用于考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#2",
           "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)如图所示的竖式中,相同图形表示相同数字,不同图形表示不同数字,则 \\(\\triangle +\\bigcirc +\\) \\(\\square = \\_ 10\\) .\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg)",
       "answer": null,
@@ -318,13 +324,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整解答和答案，泄露风险高，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#6#8",
           "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (10分)在算式中, \\(\\overline{\\mathrm{ABCD}} +\\overline{\\mathrm{EFG}} = 2020\\) 中,不同的字母代表不同的数字,那么 \\(A + B + C + D + E + F + G = 31\\) .",
       "answer": null,
@@ -356,13 +365,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接填入了答案49，并包含完整解答过程，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#6#9",
           "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (10分)已知7个红球5个白球共重43克,5个红球7个白球共重47克,那么4个红球8个白球共重_49_克.",
       "answer": null,
@@ -394,13 +406,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中包含完整的解答过程和答案，存在答案泄露风险，不适合作为考试题目，但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#7#10",
           "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (10分)羊村小学四年级进行一次数学测验,测验共有15道题,如果小喜喜、小沸沸、小美美、小懒懒都答对的题目分别是11道、12道、13道、14道,那么他们四人都答对的题目最少有_5道.",
       "answer": null,
@@ -435,13 +450,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案'30'，且有完整解析，存在高风险泄露，因此仅适合作为练习材料。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#7#11",
           "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)今天是12月19日,我们将由边长为1的阴影小正方形组成的数字1、2、1、9放在 \\(8 \\times 5\\) 的大长方形中,将大长方形旋转 \\(180^{\\circ}\\) ,就变成了\"6121\",如果将这两个 \\(8 \\times 5\\) 的大长方形重叠放置,那么重叠的阴影格子共有_30_个.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_007/images/0.jpg)",
       "answer": null,
@@ -514,13 +532,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干部分独立完整，但块内包含解答过程，有解析泄露风险，适合练习使用。",
         "scan_leakage_risk": 2,
         "scan_src": {
           "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#8#13",
           "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "13. （12分）镖盘上的数字代表投中这个区域的积分，未中镖盘记0分，小明把三支飞镖掷向如图所示的镖盘上，然后把三支飞镖的得分相加．那么小明不可能得到的总分最小是22.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/0.jpg)",
       "answer": null,
@@ -552,13 +573,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案'16'并附有完整解析，泄露风险高，适合仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#9#14",
           "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "14. (12分)如图,一个长方形被分成4个小长方形,其中长方形 \\(A\\) 、 \\(B\\) 、 \\(C\\) 的周长分别是10厘米、12厘米、14厘米,那么长方形 \\(D\\) 的面积最大是_16_平方厘米.\n\n<table><tr><td>A</td><td>C</td></tr><tr><td>B</td><td>D</td></tr></table>",
       "answer": null,

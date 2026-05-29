@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案数值，并附有完整解答过程，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#3#1",
           "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)算式 \\((9\\frac{1}{2} +7\\frac{1}{6} +5\\frac{1}{12} +3\\frac{1}{20} +1\\frac{1}{30})\\times 12\\) 的计算结果是_310_",
       "answer": null,
@@ -67,13 +70,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中包含答案填空，解答部分直接给出答案和解析，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#3#2",
           "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)将棱长为5的大正方体切割成125个棱长为1的小正方体,这些小正方体的表面积总和是原大正方体表面积的_5_倍.",
       "answer": null,
@@ -105,13 +111,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案'1000元'，并附有完整解析，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#3#3",
           "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)一辆玩具汽车,第一天按 \\(100\\%\\) 的利润定价,无人来买;第二天降价 \\(10\\%\\) ,还是无人买;第三天再降价360元,终于卖出.已知卖出的价格是进价的1.44倍,那么这辆玩具汽车的进价是_1000_元.",
       "answer": null,
@@ -184,13 +193,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解答过程，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#5",
           "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)一个电子钟表上总把日期显示为八位数,如2011年1月1日显示为20110101,那么2011年最后一个能被101整除的日子是2011ABCD,那么 \\(\\overline{\\mathrm{ABCD}} = \\underline{1221}\\) .",
       "answer": null,
@@ -222,13 +234,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含了答案，且附有完整的解析过程，存在高风险泄露，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#6",
           "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)一个 \\(n\\) 位正整数 \\(x\\) ,如果把它补在任意两个正整数的后面,所得两个新数的乘积的末尾还是 \\(x\\) ,那么称 \\(x\\) 是\"吉祥数\".例如:6就是一个\"吉祥数\";但16不是,因为 \\(116 \\times 216 = 25056\\) ,末尾不再是16. 所有位数不超过3位的\"吉祥数\"之和是_1114_.",
       "answer": null,
@@ -348,13 +363,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和解答过程，存在泄露风险，不适合用于考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#6#9",
           "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (12分)甲车从 \\(A\\) 地开往 \\(B\\) 地,同时乙车也从 \\(B\\) 地开往 \\(A\\) 地,甲车速度是每小时80千米,乙速度是每小时70千米,甲车在中途 \\(C\\) 地停车,15分钟后乙车到达 \\(C\\) 地,这时甲车继续行驶,如果两车同时到达目的地,那么 \\(A\\) 、 \\(B\\) 两地相距_140_千米.",
       "answer": null,
@@ -435,13 +453,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案'288'，且解答过程完整，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#7#11",
           "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)在如图中,将一个每边长均为12厘米的正八边形的8个顶点间隔地连线,可以连出两个正方形.图中阴影部分的面积是_288_平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/images/0.jpg)",
       "answer": null,

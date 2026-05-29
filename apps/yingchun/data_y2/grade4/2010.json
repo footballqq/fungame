@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和解答过程，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#3#1",
           "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)计算: \\(64 \\times 46 + 73 \\times 37 + 82 \\times 28 + 91 \\times 19 = 9670\\) .",
       "answer": null,
@@ -67,13 +70,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案，存在信息泄露，不适合用于考试，但可作为练习题使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#3#2",
           "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)2010个连续自然数由小到大排成一排,排在奇数位上的各数的平均数是2345,那么排在偶数位上各数的平均数是2346.",
       "answer": null,
@@ -146,13 +152,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解析，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#4",
           "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. （10分）数一数，图中有_6_个平行四边形.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg)",
       "answer": null,
@@ -184,13 +193,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案，且有完整解答，存在高风险泄漏。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#5",
           "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. （10分）有8名小朋友，他们每人头上戴着一顶红帽子或蓝帽子．如果一名小朋友看到另外3名或3名以上的小朋友戴着红帽子，就拿一个红气球，否则就拿一个蓝气球．结果这些小朋友中既有拿红气球的，也有小朋友有拿蓝气球的，那么一共有_3_名小朋友戴红帽子.",
       "answer": null,
@@ -222,13 +234,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干和解答过程，答案直接出现在解答中，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#6",
           "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. （10分）六个人传球，每两人之间至多传一次，那么这六个人最多共进行_15_次传球.",
       "answer": null,
@@ -303,13 +318,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案'5'，并包含完整解答过程，导致高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#5#8",
           "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (12分)在左下表中,在有公共边的两格内的数同时加上1或同时减去1叫做一次操作.经过有限次操作后由表1变为右下表,那么表2中 \\(A\\) 处的数是_5_.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/1.jpg)\n\n<center>图2</center>",
       "answer": null,

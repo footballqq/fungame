@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案和完整解析，泄露风险高，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#3#1",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (5分)计算: \\(928 + 217 + 64 + 8 = 1217\\)",
       "answer": null,
@@ -67,13 +70,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出数字和为45，解答部分也包含解析，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#3#2",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (5分)短语\"myfavorite\"中,不同字母代表不同数字,这些数字的和 \\(m + y + f + a + v + o + r + i + t + e\\) \\(= 45\\)",
       "answer": null,
@@ -108,13 +114,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出答案100并包含完整解析，导致答案泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#3#3",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (5分)图中ABCD和DEFG都是正方形,已知 \\(CE = 14\\) , \\(AG = 2\\) ,则两个正方形面积的和是_100_.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_003/images/0.jpg)",
       "answer": null,
@@ -146,13 +155,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解答过程，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#4",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. (5分)骆驼有两种,背上只有一个驼峰的单峰骆驼和背上有两个驼峰的双峰骆驼,单峰骆驼比较高大,四肢较长,在沙漠中可走可跑;双峰骆驼四肢短粗,适合在沙漠和雪地中行走.有一群骆驼有23个驼峰,60只脚,这些骆驼有_15_只.",
       "answer": null,
@@ -184,13 +196,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案和解答过程，属于高泄露风险，因此建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#5",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (5分)将0,1,2,3,4,5,6,7,8,9这十个数字中,选出六个填在下面方框中,使算式成立,一个方框填一个数字,各个方框数字不相同. \\(\\square +\\square \\square = \\square \\square \\square\\) 则算式中的三位数最大是_105_.",
       "answer": null,
@@ -222,13 +237,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干完整但包含解答过程和明确答案，存在高风险泄露，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#6",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (5分)有一类四位数,任意相邻两位数字之和不大于2,把这样的数从小到大排列,那么倒数第2个数是_2011_.",
       "answer": null,
@@ -263,13 +281,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案和解答过程，存在泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#7",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (5分)图中,三张大小一样的等边三角形透明玻璃纸,各被分为49个大小相同的小等边三角形,每张玻璃纸上都各有16个小等边三角形涂上了阴影,如果把这三张玻璃纸重叠在一起,看到的阴影小等边三角形共有_31_个.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/images/0.jpg)",
       "answer": null,
@@ -301,13 +322,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出答案并附有完整解答，存在高风险答案泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#5#8",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (5分)甲乙二人相距30米面对面站好,两人玩\"石头剪子布\",胜者向前走8米,负者向后退5米,平局两人各向前走1米,玩了10局后,两人相距7米,那么两人平了7局.",
       "answer": null,
@@ -339,13 +363,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案'560'并带有完整解析，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#5#9",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (15分)在某天的聚会上,功夫熊猫把手里所有的肉包换成了加菲猫的意大利面,每3个肉包换2份面,小熊维尼把手里所有的蜂蜜也换成了加菲猫的意大利面,每4罐蜂蜜换5份面,已知功夫熊猫和小熊维尼换到的意大利面一样多,而且功夫熊猫的肉包个数与小熊维尼带的蜂蜜罐数相差28,那么加菲猫至少带了_560_份意大利面.",
       "answer": null,
@@ -377,13 +404,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#5#10",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (15分)30名同学按照身高由低到高排成一队,相邻两个同学的身高差都相同,前10名同学的身高和是1450厘米,前20名同学的身高和是3030厘米,那么这30名同学的身高和是_4740_厘米.",
       "answer": null,
@@ -498,13 +528,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和完整解析，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#4#1",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)计算: \\((2012 - 284 + 135) \\times 7 \\div 69 = 189\\) .",
       "answer": null,
@@ -536,13 +569,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和完整解析，存在高风险泄漏。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#4#2",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)小明发现在2012年3月的日历某一列上的5个日期的数字之和是80,那么这一列上的第二个日期是_9_号.",
       "answer": null,
@@ -577,13 +613,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解答过程，存在高风险泄露，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#4",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. (8分)在右面的算式中,不同的汉字代表不同的数字,相同的汉字代表相同的数字,使得算式成立.那么四位数\"望子成龙\"是_1468_.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_005/images/0.jpg)",
       "answer": null,
@@ -653,13 +692,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干、答案和解析，答案直接给出，泄露风险高，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#6#6",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)农历龙年的第一天(即大年初一)是01月23日,如果用四个数字来表示这天的日期,应该是0123. 我们会发现,这四个数字正好是四个连续数字,类似的日期还有02月13日,03月12日等.那么2012年最后一个用四个连续数字表示的日期是农历龙年的第_343_天.",
       "answer": null,
@@ -691,13 +733,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案，并包含完整解答过程。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#6#7",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (10分)一串珠子共31个,正中间一个最贵.从一端算起,后一个比前一个贵3元,到中间那个为止.从另一端算起,后一个比前一个贵4元,到中间那个为止.这串珠子总价值2012元,那么中间的一颗珠子价值_92_元.",
       "answer": null,
@@ -731,13 +776,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干完整可独立出题，但解析部分开始可能泄露信息，建议仅用于练习。",
         "scan_leakage_risk": 1,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#6#8",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (10分)如图,蕾蕾用12根小木棍摆成一个 \\(3\\times 3\\) 的正方形,凡凡摆了9根小木棍将它切割成3个 \\(1\\times 2\\) 的小长方形和3个 \\(1\\times 1\\) 的小正方形.如果蕾蕾用40根小木棍摆成一个 \\(8\\times 12\\) 的矩形,那么凡凡再摆_116_根小木棍,才能将它切割成40个小长方形,使得每个小长方形要么是 \\(1\\times 2\\) 的,要么是 \\(1\\times 3\\) 的.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_006/images/0.jpg)",
       "answer": null,
@@ -769,13 +817,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含了答案和完整解答过程，因此有高泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#7#9",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (10分)某次考试,得分不超过30分的有153人,平均24分;得分不低于80分的有59人,平均92分;得分超过30分的平均62分,得分低于80分的平均54分.那么这次考试共有_1007_人参加.",
       "answer": null,
@@ -883,13 +934,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案且附有详细解答，存在高风险泄露，仅适用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#8#12",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "12. (12分)红、黄、蓝三种颜色的球共2012个排成一排,相邻2球之间的距离为1厘米.每相邻的4个球中都有1个红球、1个黄球和2个蓝球.左数第100个红球和右数第100个黄球之间的距离是1213厘米.那么左数第100个蓝球和右数第100个蓝球之间的距离是_1615_厘米.",
       "answer": null,
@@ -926,13 +980,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案12204和完整解析，泄露风险高，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#9#13",
           "json_path": "source_pdf/三年级/2012年/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "13. (12分)将给定的所有数字串填入方格内,每个数字串恰好用一次,每个格内恰好填一个数字,同一个数字串中的数字不能被阴影断开,数字串的方向都是从上到下或者从左到右的,如图中给出了一个例子,图2是图1的唯一填法,请根据以上的规则,将图3填写完整,那么ABCDE是_12204_.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_009/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_009/images/1.jpg)\n\n<center>图2</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_009/images/2.jpg)\n\n<center>图3</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_009/images/3.jpg)",
       "answer": null,

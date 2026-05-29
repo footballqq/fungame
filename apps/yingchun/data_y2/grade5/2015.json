@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案并附带完整解析，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#3#1",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)算式 \\(2015 \\times \\left(\\frac{1}{13} + \\frac{1}{31}\\right)\\) 的计算结果是_220_.",
       "answer": null,
@@ -67,13 +70,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和解析过程，存在高泄露风险，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#3#2",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)有一个特殊的计算器,当输入一个数后,计算器先将这个数乘以3,然后将其结果是数字逆序排列,接着再加2后显示最后的结果,小明输入了一个四位数后,显示结果是2015,那么小明输入的四位数是_1034_.",
       "answer": null,
@@ -191,13 +197,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整解答和答案，泄露风险高，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#4#5",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)定义新运算: \\(\\theta_{a} = \\frac{1}{\\mathrm{a}^{2} - 1}\\) ,则 \\((\\theta_{3}) + (\\theta_{5}) + (\\theta_{7}) + (\\theta_{9}) + (\\theta_{11})\\) 的计算结果化成最简真分数后,分子与分母的和是29.",
       "answer": null,
@@ -232,13 +241,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案信息'3倍'并附有解答过程，存在高泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#4#6",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)如图六角星的6个顶点恰好是一个正六边形的6个顶点,那么阴影部分面积是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_004/images/1.jpg)\n\n空白部分面积的_3倍.",
       "answer": null,
@@ -397,13 +409,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含了答案512，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#6#10",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (12分)如图所示,正八边形的每条边长为16厘米,以正八边形的8条边为斜边,向内作8个等腰直角三角形,再将8个等腰直角三角形的顶点首尾相连,在内部构成一个新的正八边形,那么,图中空白部分面积与阴影部分面积差是_512_平方厘米.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_006/images/2.jpg)",
       "answer": null,
@@ -435,13 +450,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含完整题干、答案和解析，答案直接出现在题干和解答中，有高泄露风险，适合练习但不适合考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#7#11",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)如果一个自然数的数字和与它3倍的数字和相同,却与它2倍的数字和不同,我们称这种数为\"奇妙数\",那么,最小的\"奇妙数\"是_144_.",
       "answer": null,
@@ -473,13 +491,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含填空和解答部分，答案直接给出，泄露风险高，不适合考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#4#1",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)如果两个质数的差恰好是2,称这两个质数为一对孪生质数.\n\n例如3和5是一对孪生质数,29和31也是一对孪生质数.在数论研究中,孪生质数是最热门的研究课题之一.华裔数学家张益唐在该课题的研究中取得了令人瞩目的成就,他的事迹激励着更多的青年学子投身数学研究.在不超过100的整数中,一共可以找到_8对孪生质数.",
       "answer": null,
@@ -511,13 +532,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和解答过程，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#4#2",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)6个同学约好周六上午8:00-11:30去体育馆打乒乓球,他们租了两个球桌进行单打比赛每段时间都有4个人打球,另外两人当裁判,如此轮换到最后,发现每人都打了相同的时间,请问:每人打了_140_分钟.",
       "answer": null,
@@ -594,13 +618,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接嵌入了答案（12），存在答案泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#5#4",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. (10分)如图, \\(3 \\times 3\\) 的表面中有16小黑点,一个微型机器人从 \\(A\\) 点出发,沿格线运动,经过其他每个黑点恰好一次,再回到 \\(A\\) 点,共有_12_种不同的走法.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_005/images/1.jpg)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_005/images/2.jpg)",
       "answer": null,
@@ -634,13 +661,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接以填空形式给出了答案‘2520度’，且包含解答开始部分，存在明显的答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#6#6",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)如图是挨在一起的大、中、小三个圆,半径分别为 \\(9\\mathrm{cm}\\) , \\(3\\mathrm{cm}\\) , \\(1\\mathrm{cm}\\) ;中圆顺时针向下沿着大圆内侧滚动;小圆逆时针向上沿着中圆内侧滚动,速度都是沿着圆周方向每秒1厘米.如果小圆上固定着一个箭头,那么中圆滚动一周回到出发点的过程中,箭头的旋转角度(小圆绕着自身中心)是_2520_度.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_006/images/1.jpg)",
       "answer": null,
@@ -755,13 +785,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案并开始解答，存在泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#8#9",
           "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (18分)手工课上,老师发给学生红、黄、蓝3种颜色的纸带,每种颜色的纸带都有足够多,老师要求选4条纸带有先后顺序地摆放,后面的纸带只能整体放在已摆放纸带的上面;4条纸带都放好之后,从上往下看的轮廓如图,4个交叉点位置的颜色分别是红、蓝、黄、黄(如图).那么,不同的放置方法有_12_种.(只要有某一步选的纸带颜色不同,或者有某一步放置的位置不同,就算不同的放置方法.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_008/images/3.jpg)",
       "answer": null,
@@ -1157,13 +1190,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本不完整，仅描述场景，未包含明确问题或答案信息，无法独立出题。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/五年级/2015/五年级总决赛二试 答案.json#1#4",
           "json_path": "source_pdf/五年级/2015/五年级总决赛二试 答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. 甲、乙两人从 \\(A\\) 地,丙从 \\(B\\) 地同时出发,相向而行,甲丙在 \\(C\\) 地相遇。相遇后,甲立即掉头,",
       "answer": null,

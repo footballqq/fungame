@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含解答过程和直接答案，不是独立题干。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json#3#1",
           "json_path": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 是 1、1、4、4, 两个 1 与两个 4 分别处于对角位置, 有 2 种填法;\n\n\\(e\\) 、 \\(f\\) 分别是 2、3, 位置任选, 有 2 种填法;\n\n当 \\(e\\) 、 \\(f\\) 确定后, 其余位置全部固定不变, 共 \\(2 \\times 2 = 4\\) 种填法;",
       "answer": null,

@@ -422,13 +422,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和完整解析，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组d卷）.json#4#1",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组d卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)算式 \\(\\frac{2015 \\times 2016}{1 + \\frac{1}{2016} + \\frac{2}{2016} + \\frac{3}{2016} + \\dots + \\frac{2015}{2015 + \\frac{2015}{2016}}}\\) 的计算结果是_2017.",
       "answer": null,
@@ -460,13 +463,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解析，存在高泄露风险，但问题可独立用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组d卷）.json#4#2",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组d卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)销售一种商品,利润率为 \\(25\\%\\) ,如果想把利润率提高到 \\(40\\%\\) ,那么售价应该提高 \\(12\\%\\) .",
       "answer": null,
@@ -841,13 +847,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题目和解答，答案直接给出，存在高泄露风险，仅适用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#9#11",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)如图,直角三角形 \\(ABC\\) 中, \\(AB\\) 的长度是12厘米, \\(AC\\) 的长度是24厘米, \\(D\\) 、 \\(E\\) 分别在 \\(AC\\) 、 \\(BC\\) 上,那么等腰直角三角形 \\(BDE\\) 的面积是_80_平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_009/images/0.jpg)",
       "answer": null,
@@ -1014,13 +1023,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和完整解析，存在泄露风险，适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json#3#1",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)算式 \\((19\\times 19 - 12\\times 12)\\div (\\frac{19}{12} -\\frac{12}{19})\\) 的计算结果是_228.",
       "answer": null,
@@ -1052,13 +1064,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案'9'和完整解答过程，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json#3#2",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)有一种细胞,每隔1小时死亡2个细胞,余下的每个细胞分裂成2个,如果经过8小时后细胞的个数为1284,那么,最开始的时候有_9_个细胞.",
       "answer": null,
@@ -1093,13 +1108,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案6156，并包含完整解析过程。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json#3#3",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)如图,一道乘法竖式已经填出了2、0、1、6,那么乘积是_6156_.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（五年级a卷）/pages/page_003/images/0.jpg)",
       "answer": null,
@@ -1131,13 +1149,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干描述了一个数列问题，条件清晰，但未提供答案或解析，适合用于练习。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级a卷）.json#1#4",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. (8分)有一个数列,第一项为12,第二项为19,从第三项起,如果它的前两项和是奇数,那么该项就等于前两项的和,如果它的前两项的和是偶数,该项就等于前两项的差(较大数减较小数).那么,这列数中第 项第一次超过2016.\n\n## 二、填空题(共4小题,每小题10分,满分40分)",
       "answer": null,
@@ -1169,13 +1190,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案，并包含详细解析，存在高泄露风险，因此仅推荐用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json#4#5",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)四位数双成成双的所有因数中,有3个是质数,其它39个不是质数.那么,四位数成双双成有_12_个因数.",
       "answer": null,
@@ -1210,13 +1234,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中包含答案数字，且有完整解答过程，存在泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json#5#6",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)图中, \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 是正五边形各边的中点,那么,图中共有_35_个梯形.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（五年级a卷）/pages/page_005/images/0.jpg)",
       "answer": null,
@@ -1297,13 +1324,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案'36'，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级b卷）.json#6#8",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (10分)如图,魔术师在一个转盘上的16个位置写下来了1-16共16个数,四名观众甲、乙、丙、丁参与魔术表演.魔术师闭上眼,然后甲从转盘中选一个数,乙、丙、丁按照顺时针方向依次选取下一个数,图示是一种可能的选取方式,魔术师睁开眼,说:\"选到偶数的观众请举手.\",这时候,只有甲和丁举手,这时候魔术师就大喝一声:\"我知道你们选的数了!\".你认为甲和丁选的数的乘积是_120_.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（五年级a卷）/pages/page_006/images/0.jpg)",
       "answer": null,
@@ -1338,13 +1368,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解析，存在高泄露风险，不适合考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json#6#9",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级c卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (12分)正八边形的边长是16,那么阴影部分的面积是_512_.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（五年级a卷）/pages/page_006/images/1.jpg)",
       "answer": null,
@@ -1426,13 +1459,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目中直接包含答案和详细解答过程，存在高风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级b卷）.json#8#11",
           "json_path": "source_pdf/五年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（五年级b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12 分) 在空格中填入数字 1-5, 使得每行和每列数字不重复, 每个除法从上向下或者从左到右运算都能够整除. 那么第二行的前三个数字依次组成的三位数是_531_.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（五年级a卷）/pages/page_008/images/0.jpg)",
       "answer": null,

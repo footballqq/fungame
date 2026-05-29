@@ -494,13 +494,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本为题干的一部分，但被截断且不完整，无明确问题陈述或答案解析泄露。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/六年级/2018/2018年六年级二试_解答版.json#2#4",
           "json_path": "source_pdf/六年级/2018/2018年六年级二试_解答版.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. 如图在梯形ABCD中,EF平行于梯形的上下底.已知 \\(X\\) 、 \\(Y\\) 、 \\(Z\\) 为 \\(AB\\) 的四等分点, \\(M\\) 、",
       "answer": null,
@@ -734,13 +737,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本描述了四个圆相切的几何问题，但题干不完整且无答案或解析泄露。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json#1#3",
           "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. 右图为林林设计的太空仓轮廓图;已知图形中4个圆两两相切(紧挨在一起), \\(O_{1}\\) 、 \\(O_{2}\\) 、 \\(O_{3}\\) 、 \\(O_{4}\\) 分别为4个圆的圆心, \\(AO_{2}O_{4}B\\) 为长方形,且 \\(O_{3}\\) 为 \\(O_{2}O_{4}\\) 中点, \\(EF\\) 长度为80, \\(CD\\) 长度为100;那么图中太空舱面积为____。( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_001/images/0.jpg)\n\n## 二、填空题(每小题10分,共30分)",
       "answer": null,

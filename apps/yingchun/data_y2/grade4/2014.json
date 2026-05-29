@@ -224,13 +224,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "该文本块包含完整题干、选项和解答，存在答案泄露风险，适合练习但不适合考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#7#6",
           "json_path": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)大、中、小三个正方形,边长都是整数厘米,小正方形的周长比中正方形的边长小,把这两个正方形放在大正方形上(如图),大正方形露出的部分的面积是10平方厘米(图中阴影部分).那么,大正方形的面积是( )平方厘米.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_007/images/0.jpg)\n\nA.25\nB.36\nC.49\nD.64",
       "answer": null,
@@ -500,13 +503,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干和解答过程，解答直接给出答案，因此仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#10#13",
           "json_path": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "13. (12分)老师在黑板上将从1开始的计数连续地写下去:1,3,5,7,9,11…写好后,擦去了其中的两个数,将这些奇数隔成了3段,如果前两段的和分别是961和1001,那么,老师擦去的两个奇数之和是()\n\nA. 154\nB. 156\nC. 158\nD. 160",
       "answer": null,
@@ -538,13 +544,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整解答和明确答案，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#10#14",
           "json_path": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "14. (12分)甲乙两人合作打一份材料.开始甲每分钟打100个字,乙每分钟打200个字.合作到完成总量的一半时,甲速度变为原来的3倍,而乙休息了5分钟后继续按原速度打字.最后当材料完成时,甲、乙打字数相等.那么,这份材料共()个字.\n\nA. 3000\nB. 6000\nC. 12000\nD. 18000",
       "answer": null,
@@ -579,13 +588,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目结构完整但包含解答过程和答案，存在泄露风险，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#11#15",
           "json_path": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "15. (12分)如图是一个立方体,六个面分别写着1、2、3、4、5、6. 其中1的对面是6,2的对面是5,3的对面是4. 开始时,写有6的面朝下. 把立方体沿桌面翻滚,并记录下每次朝下的数字(从6开始). 5次翻转后,记录的数字刚好是1、2、3、4、5、6各一次. 那么,记录的这6个数字的排列顺序有( )种.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_011/images/0.jpg)\n\nA. 36\nB. 40\nC. 48\nD. 60",
       "answer": null,
@@ -617,13 +629,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干、选项、答案及解析，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json#5#1",
           "json_path": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)计算: \\(2014 \\div (2 \\times 2 + 2 \\times 3 + 3 \\times 3) = (\\) )\n\nA.53\nB.56\nC.103\nD.106",
       "answer": null,
@@ -772,13 +787,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含问题题干和部分解答开始，泄露解析信息，适合练习但不宜用于考试。",
         "scan_leakage_risk": 2,
         "scan_src": {
           "block_id": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json#6#5",
           "json_path": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)对于任何自然数,定义 \\(n i = 1\\times 2\\times 3\\times \\dots \\times n\\) ,如 \\(8i = 1\\times 2\\times 3\\times \\dots \\times 8\\) ;那么,算式: \\(2014i + 2013i - 2012i + 2011i + \\dots - 4i + 3i - 2i + 1i\\) ,计算结果的个位数字是( )\n\nA.0\nB.1\nC.3\nD.9",
       "answer": null,
@@ -924,13 +942,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目是完整的数学竞赛题干，包含选项但无解析和正确答案标记，因此适合用于练习而非直接考试。",
         "scan_leakage_risk": 1,
         "scan_src": {
           "block_id": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json#2#9",
           "json_path": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (10分)有一些大小相同的正方形纸片,把它们其中一部分2个一对拼成一种长是宽2倍的长方形,此时,所有新拼成的长方形周长总和与剩余正方形的周长总和恰好相等,并且已知拼完之后所有图形的周长比最初减少了40厘米.那么,原来所有正方形纸片的周长和为()厘米.\n\nA. 240\nB. 260\nC. 280\nD. 300",
       "answer": null,
@@ -1038,13 +1059,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整题干、选项和解析过程，答案直接泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json#11#12",
           "json_path": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "12. (12分)在下面的每个方框中填入\"+\"或\"- \",得到所有不同计算结果的总和是( ) \\(25\\square 9\\square 7\\square 5\\square 3\\square 1\\) .\n\nA.540\nB.600\nC.630\nD.650",
       "answer": null,
@@ -1154,13 +1178,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块中包含完整解答和答案，答案直接泄露，风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json#13#15",
           "json_path": "source_pdf/四年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "15. (12分)一只小甲虫从 \\(A\\) 点出发沿着线段或弧线走到了 \\(B\\) 点,要求途中不能重复经过任何点,那么这只甲虫可走的不同路线一共有( )种.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（四年级）/pages/page_013/images/0.jpg)\n\nA.64\nB.72\nC.128\nD.144",
       "answer": null,

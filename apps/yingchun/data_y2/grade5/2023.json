@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本是题干片段，缺少明确问题，但无答案泄露，适合练习使用。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json#1#2",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. 蚕娘在蚕房养了若干条蚕,一天她发现有 \\(\\frac{1}{3}\\) 的蚕结茧了,于是她取出了 \\(\\frac{1}{3}\\) 的蚕茧用分数应用:",
       "answer": null,
@@ -112,13 +115,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含计算过程和结果，答案泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json#1#5",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. 熊大参加为期10天的体能训练营,每天都要做俯卧撑。已知第一天它只做了11个。\n\n第2天比第1天多做1个或2个,第3天比第2天多做1个或3个……第10天比第\n\n9天多做到1个或10个。在这10天中他一共做了215个俯卧撑,那么,其中它有\n\n5 天比前一天仅多做1个 最少: \\(1 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 = 155\\) (个)\n\n转化点问题:",
       "answer": null,
@@ -150,13 +156,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和详细解析，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json#1#6",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. 如果一个个位数字为5的三位数除以2,3,4,5,6,7,8,9的余数互不相等,那么这个数是 935. 设这个三位数为 \\(a b\\) (奇数,5的倍数)\n\nab5 mod 2=1 ab5 mod 5=0\n\nab5 mod 2 3 4 5 6 7 8 9\n\n情况1 2 3 0 5 ④ 7 8 \\(\\Rightarrow\\) D,3,4,6,8,9] = 72 \\(\\Rightarrow\\) 72- 1=71 71+72×12=935√\n\n情况2 1 2 3 0 5 ⑥ 7·8\n\n\\(\\Rightarrow\\) 除数为2,3,4,6,7,8,9同补型:补1\n\nD,3,4,6,7,8,9] = 504 \\(\\Rightarrow\\) 504- 1=503\n\n503+504n(舍去)",
       "answer": null,
@@ -403,13 +412,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整的题干、答案和解析过程，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json#3#12",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "12. 一个三位数,考虑它的数字和 \\(A\\) 与它的101倍的数字和 \\(B\\)\n\n(1)(8分)如果 \\(A\\) 和 \\(B\\) 一样大,那么这个三位数是多少?\n\n(2)(10分)能否找到一个三位数使得 \\(A\\) 比 \\(B\\) 大?如果能,有多少个?如果不能,请说明理由.\n\n\\(A = a b c\\)\n\n\\(B = 10 \\times a b c = a b c o o + a b c\\)\n\n含 \\(S(n)\\) 为 \\(n\\) 的数字和\n\n若 \\(S(A) = S(B)\\)\n\n则 \\(a + c \\geq 10\\)\n\n\\(⑥\\) 一次进位\n\n\\(a + b + c = a + b + c + a + b + c - 9\\)\n\n\\(a + b + c = 9\\)\n\n\\(⑦\\) 二次进位\n\n\\(a + b + c = a + b + c + a + b c - 18\\)\n\n\\(a + b + c = 18\\)\n\n\\(b = 9\\) \\(a + c = 9\\)\n\n\\(③\\) 三次进位\n\n\\(a + b + c = 2a + 2b + 2c - 27\\)\n\n\\(a + b + c = 27\\)\n\n\\(a = 9\\) \\(b = 9\\) \\(c = 9\\)\n\n\\(\\therefore A = 999\\)\n\n\\(①\\) 一次进位\n\n\\(a + b + c < 9\\) x\n\n\\(②\\) 二次进位\n\n\\(a + b + c < 18\\)\n\n\\(b = 9\\)\n\n\\(a + c < 9\\) x\n\n\\(③ a + b + c < 27\\)\n\n\\(a = b = 9\\)\n\n\\(1 \\leq c < 9\\)\n\n\\(. 99 \\leq A \\leq 998\\)",
       "answer": null,
@@ -441,13 +453,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含独立题干，但后续文本直接给出了答案和解析步骤，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json#4#13",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组决赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "13. (1)(6分)将3种颜色的棋子各10枚分给若干名同学,发现任意两人之间都有相同颜色的棋子,那么最多可以分给多少名同学?\n\n(2)(12分)将4种颜色的棋子各10枚分给若干名同学,发现任意两人之间都有相同颜色的棋了,那么最多可以分给多少名同学?\n\n中任意两人之间都有相同颜色\n\n不在A,B,C三种颜色.\n\n取2个A,2个B,2个C分动(AB)(BC)(AC)三组\n3×10÷2=15名同学.\n\n(2)\n\n构造",
       "answer": null,
@@ -479,13 +494,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目直接包含答案和解析步骤，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json#1#1",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. 算式 \\((12.3 - 0.4) \\times (8 + 9) + 5 \\times 2\\) 的计算结果是 \\(\\underline{259}\\) .\n\n[思路]考察四则运算顺序",
       "answer": null,
@@ -557,13 +575,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接用下划线标记了答案'22'，并包含完整解析过程，导致答案泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json#1#3",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. 张老师带着一些钱去买签字笔,到商店后发现这种笔降价了 \\(12\\%\\) ,结果他带的钱恰好可以比原来多买3支.那么降价前这些钱可以买签字笔 \\(\\underline{22}\\) 支.\n\n[思路]经济问题中和差倍分关系",
       "answer": null,
@@ -636,13 +657,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案和解析，泄漏风险高，不适合用于考试，仅建议用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json#2#5",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. 在2022年北京冬奥会的奖牌榜上,挪威、德国分列第一、第二,中国以9块金牌列奖牌榜第三;中国与德国相比,金牌是德国的75%,银牌、铜牌都是德国的40%,奖牌总数是德国的 \\(\\frac{5}{9}\\);那么,中国\n\n共获奖牌 15 块.\n\n【思路】考察分百比应用题,先求出德国金牌数量,奖牌总数的 \\(\\frac{5}{9}\\) 即等量关系通过设德国银铜牌总量即可.",
       "answer": null,
@@ -674,13 +698,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和完整解析，泄漏风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json#2#6",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. 如图,正六边形被分割成了八个完全一样的直角梯形.如果AB长1厘米,\n那么CD长 16 厘米.\n\nK\n\n【思路】考察正六边形线段关系,正六边形边长与其平行对角线长度比:1:2",
       "answer": null,
@@ -712,13 +739,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干描述概率问题但附带完整解答和答案，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json#3#7",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. 将3个球随机放入5个盒子中,没有任意两个球在同一个盒子中的概率是 \\(\\frac{4.8}{4.8}\\%\\) .\n\n[思路]考察概率定义和排列组合:概率= \\(\\frac{\\text{事件数}}{\\text{总情况数}}\\)\n\n(本题题干稍有不清晰的地方,计球和盒子是否有区别)",
       "answer": null,
@@ -792,13 +822,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干、答案和解析，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json#4#9",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. 将1、2、3、4、5、6排成一列，使得从第3个数开始，每个数都与它前面（不必相邻）某个数相差2；那么，满足条件的排法一共有192种。\n\n思路分类枚举，由规则尝试可知前两个数可以任意排列，但由于满足第3个数起与前面数必差2，所以前两个必然不能连续差2或差4，再通过观察规律进行计数。",
       "answer": null,
@@ -830,13 +863,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干和解析，答案1800直接出现在条件中，有高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json#4#10",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. 老虎、狐狸、狼、狼各四只分别入住右图的16个房间中，每个房间一只，结果每只动物都说“有狐狸与我相邻”（有公共边的两个房间相邻）；老虎都说真话，狐狸都说假话，狼、狼相邻时都说假话，狼与狐狸相邻时也说假话，其余情况狼、狼都说真话；如果入住3、6、9号房间的都是狼，那么四只狼所在房间编号的乘积是1800。\n\n【思路】梳理出每个条件中四个动物相邻的位置关系。①老虎说真话 \\(\\Rightarrow\\) 老虎必与狐狸相邻（狐狸在哪，老虎紧随）②狐狸说假话 \\(\\Rightarrow\\) 狐狸与狐狸必不相邻\n\n③狼和羊都说假话 \\(\\Rightarrow\\) 狼和羊 \\(\\Rightarrow\\) 实际上狐狸与狼相邻④狼和羊 \\(\\Rightarrow\\) 实际上狐狸与狼相邻⑤狼与狐狸相邻时说假话 \\(\\Rightarrow\\) 若狼与狐狸相邻，则会议说：“我与狐狸不相邻”但目前所有的狼都说“与狐狸相邻”，说明狼与狐狸必然都不相邻 \\(\\Rightarrow\\) 说明2、4、5、7、10、13均不是狐狸⑥若0是狐狸，则2、5必狼和狼，只能为虎，若在8、11、12、14、15、16排开位置放狐狸，必然有8、11、14中两个即必然出现狼与狐狸相邻，或狼与狐狸相邻 \\(\\Rightarrow\\) 0不是狐狸，0只能是狼 \\(\\Rightarrow\\) 2、5分别为狼⑦狼已排完，剩下狼可排的位置仅剩8、11、14、6；狼与不能与狼相邻，否则无法判断真假，狼排12、15 \\(\\Rightarrow\\) \\(2 \\times 5 \\times 12 \\times 15 = 1800\\)",
       "answer": null,
@@ -868,13 +904,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本块包含题干和解析，解析部分直接出现解答过程，因此存在高风险泄露答案。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json#5#11",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. 有99个自然数的和为 \\(2023^{2023}\\) 。对这99个自然数进行如下变换：找出一个最小数加上1，找出一个最大数减去1，然后再从小到大排列；连续进行这种变换，直至99个数不发生变化为止，最后的99个数中有 \\(\\frac{1}{36}\\) 个偶数。\n\n[思路]该规则的不变量：每次变换，整体的和不变，所以99个自然数\n\n会无限接近，即相同或差！",
       "answer": null,
@@ -906,13 +945,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整的题干、答案和解析，存在高泄露风险，适合作为练习题但不适合考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json#6#13",
           "json_path": "2026年迎春杯数学竞赛/五年级/2023/2023小高组初赛真题答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "13. 右图的字母分别表示1～9中互不相同的数字。\n\n(1) ABC、DEF、GHI、ADG、BEH、CFI这六个三位数总和的最小值是 1962. (5分)\n\n(2) \\(A \\times B \\times C + D \\times E \\times F + G \\times H \\times I + A \\times E \\times I + C \\times E \\times G\\) 的最小值是 237. (10分)\n\n[思路] (1) 考察位置原理，拆开即可；(2) 分位置式数",
       "answer": null,

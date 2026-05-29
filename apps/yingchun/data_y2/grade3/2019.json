@@ -742,13 +742,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含题干和解析，解析中直接给出答案，因此不适合用于正式考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2019年/2019年总决赛三年级二试解析.json#2#4",
           "json_path": "source_pdf/三年级/2019年/2019年总决赛三年级二试解析.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. 把数字1、2、3……400按一定顺序排列成20行20列的数表,从上至下分别是第1行至第20行,从左至右分别是第1列至第20列:\n\n(1)400在第 行第 列.(无需写过程,2分)\n\n(2)第15行第8列的数是几?(5分)\n\n(3)第2列所有数的和是多少?(8分)\n\n7 8 9 10\n\n6 1 2 11\n\n5 4 3 12\n\n: 16 15 14 13",
       "answer": null,
@@ -780,13 +783,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整解析和答案，泄露风险高，但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2019年/2019年总决赛三年级二试解析.json#2#5",
           "json_path": "source_pdf/三年级/2019年/2019年总决赛三年级二试解析.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. 行走速度相同的3个人甲、乙、丙同时从 \\(A\\) 地出发前往 \\(B\\) 地,甲每走5分钟会原地休息2分钟;乙每走130米会原地休息1分钟;丙每走8分钟会原地休息3分钟.在 \\(AB\\) 的中点 \\(C\\) 地发生了很多有趣的事:\n\n\\(①3\\) 人一起在 \\(C\\) 地碰过面;\n\n\\(②3\\) 人到达 \\(C\\) 地之前的最后一处休息地点,与 \\(C\\) 地的距离刚好成一个等差数列;\n\n\\(③\\) 在 \\(C\\) 地之后、 \\(B\\) 地之前,甲和丙再也没有碰过面.\n\n那么,根据上述信息:\n\n(1)从出发到3人在 \\(C\\) 地碰面,经过了多少分钟?(5分)\n\n(2)3个人的速度是每分钟多少米?(5分)\n\n(3)3人到达 \\(B\\) 地时,分别用了多少分钟?(5分)",
       "answer": null,

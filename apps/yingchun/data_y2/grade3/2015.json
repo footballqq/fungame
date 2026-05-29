@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和完整解答，存在高泄漏风险，不适合考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#3#1",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)算式 \\(201\\times 5 + 1220 - 2\\times 3\\times 5\\times 7\\) 的计算结果是_2015_",
       "answer": null,
@@ -201,13 +204,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目文本中直接包含答案和完整解析，因此不适合作为考试题目，但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#4#5",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10 分) 有一种特殊的计算器, 当输入一个数后. 计算器会把这个数乘以 2, 然后将其结果的数字顺序颠倒. 接着再加 2 后显示最后的结果. 如果输入一个两位数, 最后显示的结果是 27, 那么, 最开始输入的是 26.",
       "answer": null,
@@ -242,13 +248,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含了答案'17'，存在高泄露风险，不适合用于考试但可作为练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#4#6",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10 分) 在图中填上 2 条直线, 最多能数出 10 个三角形.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_004/images/1.jpg)",
       "answer": null,
@@ -282,13 +291,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整的题目、解答和答案，直接用于考试会泄露信息。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#5#7",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (10 分) 如图所示, 一个圆形托盘上放着三个相同的盘子, 笑笑只将 7 个相同的苹果放在这一个盘子中, 每个盘子中至少要放一个. 那么笑笑有 5 种放苹果的方法. (托盘旋转后相同的算同一种情况)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_005/images/0.jpg)",
       "answer": null,
@@ -399,13 +411,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案且附有完整解析，导致无法作为独立出题使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#7#11",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)从左上角开始,沿着轨道出现的数字依次是1,2,3,1,2,3,……每行和每列的数字都是1个1,1个2,1个3(另外两个格子不填),那么,第四行的5个数字从左至右组成的五位数是30210(没有数字的格子看作0)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_007/images/0.jpg)",
       "answer": null,
@@ -442,13 +457,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案'7'且附有完整解答，答案泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#4#1",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)如图2中共有_7_个与如图1形状完全一样的月牙.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/images/1.jpg)\n\n<center>图2</center>",
       "answer": null,
@@ -480,13 +498,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含完整题干、答案和解析，泄露风险高，不适用于考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#4#2",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)僵尸正在走来,火龙草负责防卫:\n\n一阶火龙草总是吐红色火焰;\n\n二阶火龙草一半时间吐红色火焰,一半时间吐蓝色火焰;\n\n三阶火龙草总是吐蓝色火焰.\n\n如果二阶火龙草的攻击能力是一阶火龙草的2倍,那么三阶火龙草的攻击能力是一阶火龙草的_3倍.",
       "answer": null,
@@ -556,13 +577,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题目、答案和解析，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#5#4",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. (10分)小明买了4个苹果、6个梨和8个桃,小红买了5个苹果、7个梨和6个桃.在接下去的18天中,他们每人每天吃一个水果,有三天两人都吃苹果;有两天两人都吃梨,还有三天一人吃苹果,另一人吃梨,那么有_4_天两人都吃桃.",
       "answer": null,
@@ -677,13 +701,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本仅描述游戏规则且不完整，无明确提问、答案或解析，不适合作为独立题干。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#6#7",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (15分)某\"趣味游戏\"的游戏规则如下:玩家手中有水、火、风、土四个技能.发动每个技能都需要消耗一定数量的水晶,各技能具体效果如下:\n\n水:消耗4个水晶,同时使敌人的血量减少4点(如敌人血量不足4点则直接击杀);",
       "answer": null,
@@ -717,13 +744,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干、答案和解析，答案在题干和解答中均直接出现，不适合考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#7#8",
           "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (15分)在如图的9宫格中填入9个不同的自然数,满足:每一行中,左边两个数的和等于最右边的数;每一列中,上面两个数的和等于最下面的数,那么右下角的数最小是12.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_007/images/0.jpg)",
       "answer": null,

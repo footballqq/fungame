@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案'1987'，存在答案泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#3#2",
           "json_path": "source_pdf/六年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)某日,小明和哥哥聊天,小明对哥哥说:\"我特别期待2013年的到来,因为,2、0、1、3是四个不同的数字,我长这么大,第一次碰到这样的年份.\"哥哥笑道:\"是呀,我们可以把像这样的年份叫做'幸运年',这样算来,明年恰好是我经历的第2个'幸运年'了.\"那么,哥哥是_1987_年出生的.",
       "answer": null,
@@ -146,13 +149,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干内嵌答案且有完整解析，答案泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#5",
           "json_path": "source_pdf/六年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)小于200且与200互质的所有自然数的和是_8000_",
       "answer": null,
@@ -225,13 +231,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案'990'，且有完整解答过程，不适合用于考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#6#7",
           "json_path": "source_pdf/六年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (12分)四个不同的自然数和为2013,那么这四个自然数的最小公倍数最小是_990_.",
       "answer": null,
@@ -263,13 +272,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干包含完整题目和答案解析，答案直接给出。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#6#8",
           "json_path": "source_pdf/六年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (12分)甲、乙二车分别从 \\(A\\) 、 \\(B\\) 两地同时出发,相向匀速而行,当甲行驶过 \\(AB\\) 中点12千米时,两车相遇.若甲比乙晚出发10分钟,则两车恰好相遇在 \\(AB\\) 中点,且甲到 \\(B\\) 地时,乙距离 \\(A\\) 地还有20千米. \\(AB\\) 两地间的路程是_120_千米.",
       "answer": null,

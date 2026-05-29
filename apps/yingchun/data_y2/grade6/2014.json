@@ -225,13 +225,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干和解答过程，答案直接给出，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#7#6",
           "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)甲、乙、丙、丁四人拿出同样多的钱,一起订购同样规格的若干件新年礼物,礼物买来后,甲、乙、丙分别比丁多拿了3,7,14件礼物,最后结算时,乙付给了丁14元钱,并且乙没有付给甲钱.那么丙应该再付给丁( )元钱.\n\nA.6\nB.28\nC.56\nD.70",
       "answer": null,
@@ -304,13 +307,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干、选项、解答过程和明确答案，不适合用于正式考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#8#8",
           "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (10 分) 算式 \\(2013 \\times \\frac{2015}{2014} +2014 \\times \\frac{2016}{2015} + \\frac{4029}{2014 \\times 2015}\\) 计算结果是( )\n\nA. 4027\nB. 4029\nC. 2013\nD. 2015",
       "answer": null,
@@ -342,13 +348,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干完整，但包含部分解答过程，无明确答案。",
         "scan_leakage_risk": 2,
         "scan_src": {
           "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#8#9",
           "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (10 分) 已知 4 个质数的积是它们和的 11 倍,则它们的和为( )\n\nA. 46\nB. 47\n\nC. 48\nD. 没有符合条件的数",
       "answer": null,
@@ -543,13 +552,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含解答部分，存在信息泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 2,
         "scan_src": {
           "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#11#14",
           "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "14. (12分)在面积为360的正方形ABCD中, \\(E\\) 是 \\(AD\\) 中点, \\(H\\) 是 \\(FG\\) 中点,且 \\(DF = CG\\) 那么三角形 \\(AGH\\) 的面积是( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_011/images/1.jpg)\n\nA.70\nB.72\nC.75\nD.90",
       "answer": null,
@@ -619,13 +631,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中包含解答过程和答案，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#5#1",
           "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)算式 \\(\\frac{25 \\times 8 + 1 \\div \\frac{5}{7}}{2014 - 201.4 \\times 2}\\) 的计算结果是( )\n\nA. \\(\\frac{1}{5}\\) B. \\(\\frac{1}{6}\\) C. \\(\\frac{1}{7}\\) D. \\(\\frac{1}{8}\\)",
       "answer": null,
@@ -814,13 +829,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干完整但包含解答和答案，直接用于考试会泄露信息，适合仅作练习使用。",
         "scan_leakage_risk": 2,
         "scan_src": {
           "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#8#6",
           "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)甲乙丙三人进行一场特殊的真人CS比赛,规定:第一枪由乙射出,射击甲或者丙,以后的射击过程中,若甲被击中一次,则甲可以有6发子弹射击乙或丙,若乙被击中一次,则乙可以有5发子弹射击甲或丙,若丙被击中一次,则丙可以有4发子弹射击甲或乙,比赛结束后,共有16发子弹没有击中任何人?则甲乙丙三人被击中的次数有()种不同的情况.\n\nA.1\nB.2\nC.3\nD.4",
       "answer": null,

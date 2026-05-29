@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案45，并附有完整解析，因此不适合用于考试，但可作为练习材料。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#1",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. （8分）算式999999999-88888888+7777777-666666+55555-4444+333-22+1的计算结果的各位数字之和是_45_.",
       "answer": null,
@@ -70,13 +73,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案160，并附带完整解析，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#2",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. （8分）如图竖式中，使得乘积最小的两个乘数和是_160_.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/images/0.jpg)",
       "answer": null,
@@ -301,13 +307,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解析，有高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#7#8",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (15分)由2013个边长为1的小正三角形拼成的四边形中,周长的最小值是_127_.",
       "answer": null,
@@ -342,13 +351,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案数值'141'，并附有完整解答，导致答案和解析泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#7#9",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (15分)如图,正六边形 \\(ABCDEF\\) 的面积为1222, \\(K\\) 、 \\(M\\) 、 \\(N\\) 分别 \\(AB\\) , \\(CD\\) , \\(EF\\) 的中点,那么三角形 \\(PQR\\) 的边长是_141_.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_007/images/0.jpg)",
       "answer": null,
@@ -380,13 +392,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出了答案441，并且包含完整解答过程，因此不适合用于考试，但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#8#10",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (15分)一个自然数恰有9个互不相同的约数,其中3个约数 \\(A\\) , \\(B\\) , \\(C\\) 满足:\n\n\\(①A + B + C = 79\\)\n\n\\(②A \\times A = B \\times C\\)\n\n那么,这个自然数是 441.",
       "answer": null,
@@ -670,13 +685,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本以问题格式开头但内容混乱且无答案或解析，不适合作为正式考题。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#6",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)算式: \\(\\frac{1}{1}\\times \\frac{1}{2}\\times \\frac{1}{3} +\\frac{1}{2}\\times \\frac{1}{3}\\times \\frac{1}{4}\\times \\frac{1}{3}\\times \\frac{1}{4}\\times \\times \\frac{1}{5} +\\dots +\\frac{1}{9}\\times \\frac{1}{10}\\times \\frac{1}{11}\\) 的计算结果是 \\(\\frac{1}{1}\\times \\frac{1}{2}\\times \\frac{3}{3}\\times \\frac{1}{2}\\times \\frac{1}{3}\\times \\frac{1}{\\times}\\times \\frac{1}{4}\\times \\frac{1}{3}\\times \\times \\frac{1}{5} +\\dots +\\frac{1}{9} \\times \\frac{1}{10} \\times \\frac{1}{11}\\) 是",
       "answer": null,
@@ -708,13 +726,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案30和完整解答，泄露风险高，不适合考试使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#6#7",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (10分)黑板上有1-2013共2013个数,每次可以擦掉其中两个数,并且写上这两数之和的数字和,一直最后黑板上剩下四个数,其乘积为27,那么这四个数的和是_30_",
       "answer": null,
@@ -784,13 +805,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案1120，并有完整解析，不适合用于考试，但可作为练习题。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#7#9",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (10分)将1-16填入 \\(4 \\times 4\\) 的表格中,要求同一行右面的比左面的大;同一列下面的比上面的大.其中4和13已经填好,其余14个整数有_1120_种不同的填法.\n\n<table><tr><td></td><td></td><td></td></tr><tr><td></td><td>4</td><td></td></tr><tr><td></td><td></td><td>13</td></tr><tr><td></td><td></td><td></td></tr></table>",
       "answer": null,
@@ -863,13 +887,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案和解析，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#8#11",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)图中,长方形 \\(ABCD\\) 的面积是2013平方厘米. \\(\\triangle AOD\\) 、 \\(\\triangle BOC\\) 、 \\(\\triangle ABE\\) 、 \\(\\triangle BCF\\) 、 \\(\\triangle CDG\\) 、 \\(\\triangle ADH\\) 都是等边三角形, \\(M\\) 、 \\(N\\) 、 \\(P\\) 、 \\(Q\\) 分别是 \\(\\triangle ABE\\) 、 \\(\\triangle BCF\\) 、 \\(\\triangle CDG\\) 、 \\(\\Delta ADH\\) 的中心.那么阴影部分的面积是_2684_平方厘米.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_008/images/0.jpg)",
       "answer": null,
@@ -901,13 +928,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案5265，并附有完整解析过程，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#9#12",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "12. (12分)甲、乙两人分别从 \\(AB\\) 两地同时出发,相向匀速而行,当甲、乙在途中 \\(C\\) 地相遇时,丙从 \\(B\\) 地出发,匀速去 \\(A\\) 地,当甲与丙在 \\(D\\) 地相遇时,甲立即调头且速度降为原来的 \\(80\\%\\) ,当甲、丙同时从 \\(A\\) 地时,乙离 \\(A\\) 地还有720米,如果 \\(CD\\) 间的路程是900米,那么 \\(AB\\) 间的路程是_5265_米?",
       "answer": null,
@@ -939,13 +969,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解答，泄露风险高，仅适用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#9#13",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "13. (12分)有16名学生,他们做成一个 \\(4 \\times 4\\) 的方阵,某次考试中他们的得分互不相同,得分公布后,每位同学都将自己的成绩与相邻的同学(相邻指前、后、左、右,如坐在角上的同学只有2人与他相邻)进行比较,如果最多只有1名同学的成绩高于他,那么他会认为自己是\"幸福的\".则最多有_12_名同学会认为自己是\"幸福的\".",
       "answer": null,
@@ -980,13 +1013,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案54，并附带了完整解析，因此不适合用于考试，仅适合练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#10#14",
           "json_path": "source_pdf/五年级/2013/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "14. (12 分) 现有一个立方体 \\(ABCD - EFGH\\) , 将其过 \\(B\\) 点的三个表面的正方形染成红色, 现在剪开其中的若干条棱得到它的平面展开图, 若展开图中三个红色正方形都没有公共边, 那么共有_54_种不同的剪法. (剪开的棱相同但剪的顺序不同的算作同一种剪法)\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_010/images/1.jpg)",
       "answer": null,

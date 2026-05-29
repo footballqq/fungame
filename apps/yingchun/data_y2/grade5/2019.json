@@ -1361,13 +1361,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含标准答案，存在高泄露风险，但问题本身可独立出题。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#2",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. 一台手机没有电了，如果关机充电，3小时可以充满电；如果边使用边充电，4小时可以充满电．假设充电和耗电的速度保持不变，这台手机充满电后不再充电，一直使用到没电，可以连续使用 小时.",
       "answer": null,
@@ -1401,13 +1404,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了标准答案，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#3",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. 在右图乘法竖式的每个方框中填入一个数字，使得乘法竖式成立，那么竖式的乘积是\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/images/0.jpg)",
       "answer": null,
@@ -1439,13 +1445,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含标准答案，泄露风险高，但题目本身可作为练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#4",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. 南宋时期杰出的数学家杨辉对中国传统的“垛积术”进行了很好的发展，在其著作《详解九章算法》中对自然数幂问题用数形结合的方式加以分析.\n\n如图所示，由1，3，6，10，15个小球堆成的三角锥称为5层的三角垛，六个这样的三角垛可以切拼合并成长、宽、高分别为5， \\(5 + 1\\) ， \\(5 + 2\\) 的长方体球阵.那么一个10层的三角垛共由 个小球堆成.\n\n## 二. 填空题II（每小题10分，共40分）",
       "answer": null,
@@ -1477,13 +1486,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含了答案【答案】16，存在泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#5",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. 今天是2018年12月8日，蕴含着两个有趣的数2018和1208，这两个数都使用了0、1、2、8这四个数字．由这四个数字组成的数字不重复的四位数中，除了上述两个数外，还有 个.",
       "answer": null,
@@ -1517,13 +1529,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案，存在泄露风险，因此仅适用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#6",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. 在空格内填入数字1\\~6，使得每行、每列、每宫数字不重复，粗线标注的两个 \\(2\\times 2\\) 正方形区域里分别为一组连续的自然数.那么左数第2列从上到下前5个数字依次组成的五位数是\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/images/1.jpg)",
       "answer": null,
@@ -1555,13 +1570,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干完整但直接包含答案，不适合考试使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#7",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. 在一次飞行演习任务中,由于机械故障,油箱开始持续匀速漏油.经测算,若保持400千米/小时的速度飞行8小时,油箱中的油恰好耗尽;若保持600千米/小时的速度飞行6小时,油箱中的油也恰好耗尽(飞机飞行每千米消耗的油量相同).若飞机需要在油箱里的油耗尽前飞到距离为4000千米处的机场进行维修,则至少需要保持平均 千米/时的速度飞行.",
       "answer": null,
@@ -1595,13 +1613,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含标准答案，存在泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#8",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. 右图中包含两个直角梯形ABCD和EFGH,并且两个梯形的上底与下底之和都等于梯形的高,如果 \\(A E = 3\\) , \\(E D = 6\\) , \\(B F = C G\\) ,那么两个梯形面积之差为\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
       "answer": null,
@@ -1635,13 +1656,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含标准答案，泄露风险高，建议仅用于练习而非考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#9",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. 将1至13分别填入如图的方格中(不允许重复),每个\"中填入的5个数之和均为42,那么正中心方框 \\(X\\) 处填的数是\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/images/1.jpg)",
       "answer": null,
@@ -1673,13 +1697,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#10",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. 有一个三位合数 \\(A\\) , \\(A\\) 有质数个因数.老师把组成 \\(A\\) 的三个数字以及 \\(A\\) 的因数个数分别写在4张卡片上,随机发给四个聪明且诚实的同学甲、乙、丙、丁,四人只能看到自己拿到的数.老师问:有人知道 \\(A\\) 是多少吗?甲、乙同时说:我知道.那么三位数 \\(A\\) 是",
       "answer": null,
@@ -1711,13 +1738,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案信息，存在高泄露风险，但题目完整可独立出题，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#11",
           "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. \\(A\\) 、 \\(B\\) 两地相距40千米,上午9点甲从 \\(A\\) 地出发前往 \\(B\\) 地开会,过了一会乙从 \\(A\\) 地,丙从 \\(B\\) 地同时出发相向而行,分别赶往对方的城市开会,上午10点甲丙相遇,与此同时乙恰好抵达 \\(B\\) 地,但此时乙发现自己有一个文件在丙的手上,便立刻回身追丙,拿到文件后再立刻返回到 \\(B\\) 地,结果三人同时抵达目的地.已知三人途中速度均未发生改变,那么乙的速度为每小时 千米.",
       "answer": null,

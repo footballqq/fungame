@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含了答案标记和完整解析，存在高风险答案泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#1",
           "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)今天是2010年12月19日,欢迎同学们参加北京第27届\"数学解题能力展示\"活动.那么, \\(\\frac{2010}{1000} +\\frac{1219}{100} +\\frac{27}{10}\\) 计算结果的整数部分是_16_.",
       "answer": null,
@@ -67,13 +70,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接显示答案，且有完整解析，存在高泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#2",
           "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)某校有2400名学生,每名学生每天上5节课,每位教师每天教4节课,每节课是一位教师给30名学生讲授,那么该校共有教师_100_位.",
       "answer": null,
@@ -105,13 +111,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干包含答案和完整解析，泄露风险高，建议仅作为练习材料。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#3",
           "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)张老师带着一些钱去买签字笔,到商店后发现这种笔降价了 \\(25\\%\\) ,结果他带的钱恰好可以比原来多买25支.那么降价前这些钱可以买签字笔_75_支.",
       "answer": null,
@@ -221,13 +230,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案'18'和解答过程开头，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#6",
           "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)某支球队现在的胜率为 \\(45\\%\\) ,接下来的8场比赛中若有6场获胜,则胜率将提高 \\(50\\%\\) .那么现在这支球队共取得了_18_场比赛的胜利.",
       "answer": null,
@@ -495,13 +507,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案和部分解析，存在泄漏风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#9#13",
           "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "13. (12分)40根长度相同的火柴棍摆成如图,如果将每根火柴棍看作长度为1的线段,那么其中可以数出30个正方形来.拿走5根火柴棍后, \\(A\\) , \\(B\\) , \\(C\\) , \\(D\\) , \\(E\\) 五人分别作了如下的判断:\n\n\\(A\\) : \\(^{\\prime}1\\times 1\\) 的正方形还剩下5个.\"\n\n\\(B\\) : \\(^{\\prime}2\\times 2\\) 的正方形还剩下3个.\"\n\n\\(C\\) : \\(^{\\prime}3\\times 3\\) 的正方形全部保留下来了.\"\n\n\\(D\\) : \"拿走的火柴棍所在直线各不相同.\"\n\n\\(E\\) : \"拿走的火柴棍中有4根在同一直线上.\"\n\n已知这5人中恰有2人的判断错了,那么剩下的图形中还能数出_14_个正方形.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_009/images/0.jpg)",
       "answer": null,
@@ -533,13 +548,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案和解答过程，存在答案泄露，不宜用于考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#10#14",
           "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "14. (12分)甲、乙、丙三人同时从 \\(A\\) 出发去 \\(B\\) ,甲、乙到 \\(B\\) 后调头回 \\(A\\) ,并且调头后速度减少到各自原来速度的一半.甲最先调头,调头后与乙在 \\(C\\) 迎面相遇,此时丙已行2010米;甲又行一段后与丙在 \\(AB\\) 中点 \\(D\\) 迎面相遇;乙调头后也在 \\(C\\) 与丙迎面相遇.那么, \\(AB\\) 间路程是_5360_米.",
       "answer": null,
@@ -571,13 +589,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "heuristic-only",
         "scan_leakage_risk": 2,
         "scan_src": {
           "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#11#15",
           "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "15. (12分)已知算式 \\(\\overrightarrow{A B C} - \\overrightarrow{D E} +\\frac{\\overrightarrow{F}^{2}}{\\overrightarrow{G H}} - \\frac{2010}{I} = 12.19\\) 中的 \\(A\\) , \\(B\\) , \\(C\\) , \\(D\\) , \\(E\\) , \\(F\\) , \\(G\\) , \\(H\\) , \\(I\\) 表示 \\(1\\sim 9\\) 中各不相同的数字.那么,五位数 \\(\\overrightarrow{A B C D E} = \\_ 34179\\) .",
       "answer": null,

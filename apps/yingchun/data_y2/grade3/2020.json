@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目直接包含答案和解析，存在泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json#1#1",
           "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. 奔向未来\n\n今天是2019年11月25日，去掉年、月、日后得到2、0、1、9、1、1、2、5这八个数字．在排成一排的八个数字之间，适当位置添上“十、一、×”三个运算符号各一个可以使算式的结果是2020. 那么，“十”右边所有数字依次组成的多位数是\n\n\\[2 0 1 9 1 1 2 5 = 2020\\]",
       "answer": null,
@@ -69,13 +72,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干完整但答案和解析已泄露，适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json#1#2",
           "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. 斜二的偶数\n\n在空格内填入数字 \\(1\\sim 4\\) 中的一个，使得每行、每列和每个粗线宫内数字都不重复. 箭头上的数字表示箭头方向有几个偶数．最后一行四个数字从左到右组成的四位数是\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_001/images/0.jpg)",
       "answer": null,
@@ -150,13 +156,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干独立可出题，但文本块包含答案和解析，存在泄露风险，仅适用于练习。",
         "scan_leakage_risk": 2,
         "scan_src": {
           "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json#2#4",
           "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. 命题老师而立之年的感慨\n\n下面加法竖式中，相同的汉字代表相同的数字，不同的汉字代表不同的数字。其中，汉字“零”、“二”代表的数字都不是偶数，汉字“一”代表的数字不是奇数。那么这个加法竖式的和是\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_002/images/1.jpg)\n\n## 5. 长方形家族\n\n如图，大长方形ABCD是由8个一模一样的小长方形拼接而成。已知大长方形ABCD的面积是135平方厘米，中间阴影长方形的面积是55平方厘米，那么小长方形的宽是厘米。\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_002/images/2.jpg)",
       "answer": null,
@@ -1647,13 +1656,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和解析，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#1",
           "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. 算式 \\(5 \\times 432 \\times 1 - 98 - 7 \\times 6\\) 的计算结果为",
       "answer": null,
@@ -1685,13 +1697,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含独立题干，但直接给出答案和解析，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#2",
           "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. 一场演出共有10个节目，每个节目长3分钟．如果相邻节目之间相隔1分钟，那么第一个节目开始到最后一个节目结束共需 分钟.",
       "answer": null,
@@ -1725,13 +1740,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含数学竞赛题目、答案和解析，答案直接泄露，风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#3",
           "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. 胡老师将2020年的目标写成右边的数字谜．其中，相同的汉字代表相同的数字，不同的汉字代表不同的数字．那么，“长胖十斤”代表的四位数是\n\n吃 吃 吃 吃 吃 吃 吃 吃 吃 长胖十斤",
       "answer": null,
@@ -1763,13 +1781,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案和完整解析，存在高泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#4",
           "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. 一个由2020个数组成的数列中，任意相邻5个数的和都相等，任意相邻7个数的和也都相等．如果第1个数是6，那么这2020个数的和是\n\n## 二. 填空题II（每小题10分，共40分）",
       "answer": null,
@@ -1803,13 +1824,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干完整但直接包含答案和解析，存在泄露风险，适合仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#5",
           "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. 如图，大正方形中摆放有 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三个阴影正方形．如果空白部分的周长和比阴影部分的周长和多120厘米，那么正方形 \\(B\\) 的面积是 平方厘米.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/0.jpg)",
       "answer": null,

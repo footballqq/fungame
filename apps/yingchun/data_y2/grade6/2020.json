@@ -384,13 +384,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本为数学题干开头但不完整，无答案或解析信息，适合练习但不建议考试使用。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json#4#5",
           "json_path": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. 如图,甲、乙、丙三人分别从 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三地同时出发去 \\(D\\) 地.出发一段时间后,一",
       "answer": null,

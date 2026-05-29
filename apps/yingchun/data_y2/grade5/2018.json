@@ -3992,13 +3992,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出了答案和解析，存在高风险泄漏，但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json#1#1",
           "json_path": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. 算式 \\((1 + 2 + 3 + \\dots +9) \\times 20 \\div 18 + (2 + 4 + 6 + 8 + 10) \\div 20 \\times 18\\) 的计算结果是",
       "answer": null,
@@ -4030,13 +4033,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本块包含完整题干、答案和解析，适合练习但不适合考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json#1#2",
           "json_path": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. 有一个各位数字互不相同的四位数ABCD,AB、BC、CD都是质数,这个四位数最大是",
       "answer": null,
@@ -4108,13 +4114,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含完整题干、答案和解析，答案直接泄露，风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json#1#4",
           "json_path": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. 有几名海盗在神奇大陆挖到一批黑石共210颗,恰好每人分到的黑石颗数相同;这时又来了8名海盗又在附近挖出一批黑石共158颗,两批合在一起恰好让所有人分到的黑石颗数相同;那么原有海盗 名.\n\n## 二. 填空题II(每小题10分,共40分)",
       "answer": null,
@@ -4224,13 +4233,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本是一个完整的数学竞赛题干，但包含答案和解析，因此建议仅用于练习。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json#2#7",
           "json_path": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. 两个聪明而诚实的同学问老师生日是哪天,老师回答:我出生在十月的某一天,这一天的日期是个两位合数,现在我把十位数字告诉甲,个位数字告诉乙,你们不能看对方拿到的数字.\n\n甲:我还不知道老师出生在哪天.\n\n乙:不用你说我也知道你不知道,不过我也不知道.\n\n甲:不用你说我也知道你不知道,不过我还是不知道.\n\n乙:那我现在知道这个数了,这是个奇数.\n\n那么这个两位合数是",
       "answer": null,
@@ -4262,13 +4274,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和解析，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json#2#8",
           "json_path": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. 在每个空格内填入数字2,0,1,8中的一个,要求满足:\n\n\\(①\\) 每行、列、宫都有1个0、1个1、2个2、2个8;\n\n\\(②\\) 相邻格(有公共边的格子)的数字不同;\n\n那么,两条对角线上的十二个数字之和为\n\n<table><tr><td>1</td><td>2</td><td>0</td><td>2</td></tr><tr><td></td><td></td><td></td><td>8</td></tr><tr><td></td><td></td><td>8</td><td>2</td></tr><tr><td>1</td><td>8</td><td></td><td></td></tr><tr><td></td><td>8</td><td></td><td></td></tr><tr><td></td><td>2</td><td>0</td><td>1</td></tr></table>\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
       "answer": null,
@@ -4736,13 +4751,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本不完整，未提供完整题干或答案。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级D卷（详解版）.json#2#9",
           "json_path": "source_pdf/五年级/2018/2018数学花园探秘笔试初赛_5年级D卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. 中国古代《九章算术》有委输算题的算法,委输是转运物资的意\n\n思.这种问题和现代的行程问题有很多相似之处:今有转运物资的车辆,上午8点起运送太仓的粮食去上林,运送过程预计花费4个小时,前三个小时每分钟行60米,11点时车夫发现无法按时到达,于是按每分钟70米的速度赶往上林,到达时正好中午12点.那么他走后一半路程比前一半路程少用了 分钟.",
       "answer": null,

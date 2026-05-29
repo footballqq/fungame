@@ -110,13 +110,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本以编号开头描述索玛立方体问题，但未完整，无答案或解析泄露。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/五年级/2020/2020五年级网赛 （详解版）.json#2#6",
           "json_path": "source_pdf/五年级/2020/2020五年级网赛 （详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. 索玛立方体是指由如下图所示的 1 块三连方和 6 块四连方拼成的 \\(3 \\times 3 \\times 3\\) 正方体。\n\n![](ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/0.jpg)\n\n现在用其中 4 块已经拼成了如下图形:\n\n![](ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/1.jpg)\n\n那么用这个已经拼完的立体图形和其余 3 块拼成索玛立方体,共有 种不同拼法。\n\n## 三. 填空题(每小题 15 分,共 30 分)",
       "answer": null,

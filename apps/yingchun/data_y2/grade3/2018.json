@@ -3320,13 +3320,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干完整可独立出题，但答案和解析直接暴露，存在高风险泄露，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2018年/2018数学花园探秘笔试初赛_3年级C卷（详解版）.json#2#8",
           "json_path": "source_pdf/三年级/2018年/2018数学花园探秘笔试初赛_3年级C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. 甲、乙、丙三人各有一些糖;如果甲的糖变为原来一半,乙给丙18颗,那么三人的糖数一样多;如果丙的糖数变为原来的2倍,甲给乙一些糖,三人的糖数也能一样多,那么甲给了乙 颗糖.\n\n## 三. 填空题III(每小题12分,共48分)",
       "answer": null,
@@ -3360,13 +3363,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中包含完整的答案和解析，因此不适合考试，但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2018年/2018数学花园探秘笔试初赛_3年级C卷（详解版）.json#2#9",
           "json_path": "source_pdf/三年级/2018年/2018数学花园探秘笔试初赛_3年级C卷（详解版）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. 在每个空格内填入1个或2个数,使得每行、每列出现数字1至6各一次.每个格内左上角的数表示格内所有数的和.如果一个格填两个数,小数要写在大数左边,左图是一个示例.那么,在右图中最后一行前三个格内数字按从左到右的顺序组成的多位数是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_3年级C卷（试卷版）/pages/page_002/images/0.jpg)",
       "answer": null,

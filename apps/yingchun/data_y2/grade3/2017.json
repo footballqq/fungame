@@ -1090,13 +1090,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本不完整，但像一个数学竞赛题干，无答案或解析泄漏。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/三年级/2017年/2017年决赛_小中年级A卷_答案.json#1#8",
           "json_path": "source_pdf/三年级/2017年/2017年决赛_小中年级A卷_答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. 蕾蕾买了一些山羊和绵羊.如果她多买2只山羊,那么每只羊的平均价格会增加60元;如果她",
       "answer": null,

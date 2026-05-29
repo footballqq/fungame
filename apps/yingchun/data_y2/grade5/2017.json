@@ -3227,13 +3227,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本描述了一个填数字和棋子移动的问题，符合题干特征，但结尾不完整且无答案或解析泄露。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/五年级/2017/2017年决赛_小高年级C卷_答案.json#1#8",
           "json_path": "source_pdf/五年级/2017/2017年决赛_小高年级C卷_答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. 将 \\(1 \\sim 6\\) 分别填入右图的 \\(2 \\times 3\\) 方格中,每个方格里只能填一个数且不能重复,1和6已经填\n\n出,如右图所示.现将一枚棋子放在左下的方格内,按照游戏规则,棋子每步\n\n<table><tr><td></td><td>6</td></tr><tr><td>1</td><td></td></tr></table>",
       "answer": null,

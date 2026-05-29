@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解析，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#3#1",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)计算: \\(2013 + 201 + 20 - 13 + 3 = 2224\\)",
       "answer": null,
@@ -70,13 +73,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案20并附有完整解析，导致答案泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#3#2",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)图中共有_20_个正方形.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_003/images/0.jpg)",
       "answer": null,
@@ -196,13 +202,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含完整题干、答案和解析，答案直接给出，存在高风险泄露，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#5",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (12分) 根据前三幅图的规律, 将第四幅图中相应的方格涂黑, 涂黑的方格中所填数之和为 90.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/images/0.jpg)",
       "answer": null,
@@ -359,13 +368,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和部分解答过程，存在高泄露风险，仅适用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#6#9",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (12分)一堆糖果有50块,小明和小亮玩游戏.小明每赢一次拿5块糖,然后吃掉4块,将剩下的1块放到自己的口袋里;小亮每赢一次也拿5块糖,然后吃掉3块,将剩下的2块放到自己的口袋里.游戏结束时,糖刚好被拿完,这时小亮口袋里的糖数恰好是小明口袋里的糖数的3倍,那么两人一共吃掉了_34_块糖.",
       "answer": null,
@@ -402,13 +414,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案'32'，且包含完整解析，因此不适合作为考试题目，但可作为练习题。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#7#10",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (12 分) 将 0-5 这 6 个数字中的 4 个数字填入如图 1 的圆圈中, 每条线段数字两端的数字做差, 可以得到 5 个差, 这 5 个差恰好为 1-5, 如图 2 已给出一种填法, 那么符合要求的填法共有 32 种. (图中, 3 和 5 或 0 和 1 交换位置都算新的填法)\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/images/1.jpg)\n\n<center>图2</center>",
       "answer": null,
@@ -440,13 +455,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接显示了答案33和详细解答过程，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#1",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)计算: \\(2013\\div (25\\times 52 - 46\\times 15)\\times 10 = 33\\)",
       "answer": null,
@@ -478,13 +496,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接陈述了答案'第三位是疯子'，导致泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#2",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)小明碰到了三个人,其中一位是牧师、一位是骗子、一位是疯子.牧师只说真话,骗子只说假话,疯子有时说真话,有时说假话.第一位说:\"我是疯子.\"第二位说:\"你胡说,你才不是疯子呢!\"第三位说:\"别说了,我是疯子.\"一那么.这三个人中第_3位是疯子.",
       "answer": null,
@@ -516,13 +537,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解答，泄露风险高，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#3",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)红色礼盒5元1个,内有陀螺3个;黄色礼盒9元1个,内有陀螺5个,蕾蕾用600元买了72礼盒,这些礼盒打开后可以得到_336_个陀螺.",
       "answer": null,
@@ -640,13 +664,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整解答和答案，直接暴露解析，不适合考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#6",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)宴会邀请来了44位嘉宾,会场里有15张相同的正方形桌子,每张每边能坐1人,经适当\"拼桌\"(将几张正方形拼一张长方形或正方形桌子)后,恰好让所有嘉宾全部入座而且没有空位,那么最后会场里最少有_7_张桌子.",
       "answer": null,
@@ -678,13 +705,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整答案和解析过程，有泄露风险，建议仅用于练习而不用于正式考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#7",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (10分)甲乙丙丁都参加了100米短跑决赛,在比赛前,他们如下预测;\n\n甲预测:\"如果丙是第4,那么我就是第2.\"\n\n乙预测:\"如果甲是第2,那我就是第1.\"\n\n丙预测:\"甲乙两人的比赛成绩要么都高于我,要么都低于我.\"\n\n丁预测:\"甲乙两人的比赛成绩肯定一人比我高,而另一人比我低.\"\n\n比赛结束,他们获得了这项比赛的前4名(无并列),且每人都预测正确.\n\n如果甲、乙、内、丁分别获得第 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 名,那么四位数 \\(\\overrightarrow{\\mathrm{ABCD}} = \\_ 4213\\_\\)",
       "answer": null,
@@ -842,13 +872,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案'754'，且有解答过程开始，存在答案和解析泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#7#11",
           "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)欢欢、迎迎和妮妮手中共有卡片2712张,桌子上还有一些卡片.他们3人进行了如下操作:\n\n第一次:欢欢从迎迎和妮妮手中各拿来1张卡片;\n\n第二次:妮妮从桌子上拿了2张卡片,并让欢欢和迎迎中,卡片数较少的人拿走卡片数较多的人一张卡片;\n\n第三次:迎迎从桌子上拿了4张卡片,如果手上卡片数是偶数,则将手中的一半卡片交给欢欢和妮妮中卡片数较少的那个人;如果是奇数,则游戏终止.\n\n我们把上述三次操作称为\"一轮操作\".如果他们顺利地进行了50轮操作,而没有出现游戏终止的情况.此时他们手中卡片数按妮妮、欢欢、迎迎的顺序成等差数列.那么,原来欢欢有754张卡片.",
       "answer": null,

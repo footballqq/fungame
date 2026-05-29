@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案和解析过程，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#3#1",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. （8分）计算： \\(1\\times 15 + 2\\times 14 + 3\\times 13 + 4\\times 12 + 5\\times 11 + 6\\times 10 + 7\\times 9 + 8\\times 8 = 372\\)",
       "answer": null,
@@ -155,13 +158,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干是一个独立的数学问题，但文本块包含完整解答和答案，因此仅适合用于练习。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#4",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. (10分)某校三年级和四年级各有两个班.三年级一班比三年级二班多4人,四年级一班比四年级二班少5人,三年级比四年级少17人,那么三年级一班比四年级二班少9人.",
       "answer": null,
@@ -271,13 +277,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案'3'，并包含解答过程，存在答案泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#5#8",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (12分)把0-9这十个数字填到如图的圆圈内,使得五条线上的数字和构成一个等差数列,而且这个等差数列的各项之和为55,那么这个等差数列的公差有_3_种可能的取值.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_005/images/0.jpg)",
       "answer": null,
@@ -349,13 +358,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案'5'和解答过程，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#7#10",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (12分)在左下表中,在有公共边的两格内的数同时加上1或同时减去1叫做一次操作.经过有限次操作后左下表变为右下表,那么右下表中 \\(A\\) 处的数是_5_.\n\n<table><tr><td>1</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>1</td></tr></table>\n\n<table><tr><td>A</td><td>2010</td><td>2010</td></tr><tr><td>2010</td><td>2010</td><td>2010</td></tr><tr><td>2010</td><td>2010</td><td rowspan=\"2\">2010</td></tr></table>",
       "answer": null,
@@ -387,13 +399,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和详细解答，泄露风险高，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#1",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)计算: \\((28 \\times 9 + 18 \\times 19 + 8 \\times 29) \\div 14 = 59\\) .",
       "answer": null,
@@ -425,13 +440,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和完整解析，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#2",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)张杰从27起写了26个连续奇数,王强从26起写了26个连续自然数,然后他们分别将自己写的26个数求和,那么这两个和的差是_351_元人民币.",
       "answer": null,
@@ -463,13 +481,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干和解答中均直接给出答案120，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#3",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)某校三(1)班举办优秀少先队员评选活动,每位同学如果表现优秀,则可得一枚小红花,5枚小红花可换成一面小红旗,4面小红旗可换成一个奖章,3个小奖章可换成一个小金杯,一学期得2个小金杯,可评为优秀少先队员,那么要评为优秀少先队员,至少需要得_120_个小红花.",
       "answer": null,
@@ -542,13 +563,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和完整解析，泄漏风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#4#5",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)国庆游园会上,有一个100人的方队,方队中每人的左手要么拿红花,要么拿黄花.每人的右手要么拿红气球,要么拿绿气球.已知拿红花的有42人,那红气球的有63人,左手拿黄花、右手拿绿气球的有28人.则左手拿红花,右手拿红气球的有_33人.",
       "answer": null,
@@ -618,13 +642,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干和详细解答，答案直接给出，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#7",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (10分)老师带着佳佳、芳芳和明明做计算练习.老师先分别给他们一个数,然后让他们每人取3张写有数的卡片.佳佳取的是3、6、7,芳芳取的是4、5、6,明明取的是4、5、8.这时老师让他们分别取自己卡片上的两个数相乘,再加上开始老师给他们的数.如果老师开始时给他们的数依次是234、235、236,而且他们计算都正确,那么可能算出_7个不同的数.",
       "answer": null,
@@ -659,13 +686,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案'2'且解答过程完整，存在高风险泄露，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#6#9",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (12分)用4种不同的颜色来涂正四面体(如图,每个面都是完全相同的正三角形)的4个面,使不同的面涂有不同的颜色,共有_2_种不同的涂法.(将正四面体任意旋转后仍然不同的涂色法,才被认为是不同的).\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_006/images/0.jpg)",
       "answer": null,
@@ -697,13 +727,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案填空并附有完整解析，答案和解析已泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#6#10",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (12分)编号是1、2、3、…、36号的36名学生按编号顺序面向里站成一圈.第一次,编号是1的同学向后转,第二次,编号是2、3的同学向后转,第三次,编号是4、5、6的同学向后转,…,第36次,全体同学向后转.这时,面向里的同学还有_26_.",
       "answer": null,
@@ -773,13 +806,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案L=6，且附有完整解答过程，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#7#12",
           "json_path": "source_pdf/三年级/2010年/2010年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "12. (12分)将1、2、3、…、15、16填入表中的16个方格中,并满足下列条件.\n\n<table><tr><td>A</td><td>B</td><td>C</td><td>D</td></tr><tr><td>E</td><td>F</td><td>G</td><td>H</td></tr><tr><td>J</td><td>K</td><td>L</td><td>M</td></tr><tr><td>N</td><td>P</td><td>Q</td><td>R</td></tr></table>\n\n(1) \\(A + C + F = 10\\) ;(2) \\(B + H = R\\) ;\n\n(3) \\(D - C = 13\\) ;(4) \\(E \\times M = 126\\) ;\n\n(5) \\(F + G = 21\\) ;(7) \\(G \\div J = 2\\) ;\n\n(7) \\(H \\times M = 36\\) ;(8) \\(J \\times P = 80\\) ;\n\n(9) \\(K - N = Q\\) .那么 \\(L = \\underline{{6}}\\) .",
       "answer": null,

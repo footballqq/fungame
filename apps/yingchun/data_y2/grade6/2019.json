@@ -187,13 +187,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干包含完整的答案和解析，存在高泄露风险，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json#2#5",
           "json_path": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. 如图,一个空水桶的侧面四等分处依次有 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三个一样大的出水口.如果同时打开进水口和 \\(A\\) 出水口,65 分钟装满水桶;如果同时打开进水口和 \\(C\\) 出水口,75 分钟装满水桶.那么同时打开进水口和三个出水口,则 分钟装满水桶.\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_002/images/0.jpg)",
       "answer": null,
@@ -385,13 +388,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "该文本描述了一个互动游戏问题，题干完整但无答案泄露，适合用于练习。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json#3#10",
           "json_path": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. 如图, 天花板上挂着三串珠子, 玩家和电脑 \\(AI\\) 轮流射击, 每次选择某一个珠子射击, 被击中的珠子及其正下方的所有珠子会掉落. 击落最后一枚珠子的一方获胜. 现在你是玩家, 请进入游戏, 击败电脑 \\(AI\\) , 获取通过密码, 输入横线中 ______.\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_003/images/3.jpg)",
       "answer": null,

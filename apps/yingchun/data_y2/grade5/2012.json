@@ -126,13 +126,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案'144'和完整解答过程，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#3",
           "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)龙腾小学五年级共有四个班,五年级一班有学生42人,五年级二班是一班人数的 \\(\\frac{6}{7}\\) ,五年级三班是二班人数的 \\(\\frac{5}{6}\\) ,五年级四班是三班人数的1.2倍.五年级共有_144人.",
       "answer": null,
@@ -205,13 +208,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含了答案和完整解析，因此仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#4#5",
           "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)一个电子钟表上总把日期显示为八位数,如2011年1月1日显示为20110101,那么2011年最后一个能被101整除的日子是2011ABCD,那么ABCD=1221.",
       "answer": null,
@@ -283,13 +289,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干和解答中直接给出了答案，解析过程完整，因此泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#5#7",
           "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (10分)五支足球队比赛,每两个队之间比赛一场:每场比赛胜者积3分,负者积0分,平局则各积1分,比赛完毕后,发现这五个队的积分恰好是五个连续的自然数.设第1、2、3、4、5名分别平了 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 场,那么五位数 \\(\\overline{\\mathrm{ABCDE}} = \\underline{13213}\\) .",
       "answer": null,
@@ -526,13 +535,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和解答过程，泄露风险高，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#4#1",
           "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. （8分） \\(2012\\times \\frac{3^{3}}{4}\\times 1.3 + 3\\div \\frac{2^{2}}{3}\\) 的计算结果是_24.",
       "answer": null,
@@ -567,13 +579,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目直接给出了答案和完整解析，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#4#2",
           "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. （8分）在如图的乘法竖式中，两个乘数的和是_730_\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/images/0.jpg)",
       "answer": null,
@@ -643,13 +658,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出了答案'435'，且包含完整解答过程，存在答案泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#5#4",
           "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. (8分)有2012个小矮人,他们不是好人,就是坏人,每天他们都要参加一次聚会,每次聚会人数是3或5. 每次参与聚会的小矮人中,若好人占多数,则参加聚会的人全变成好人;若坏人占多数,则参加聚会的人全变成坏人,如果第三天聚会完毕后,全部2012人全变成了好人. 那么第一天聚会前好人的人数的最小值是_435_.",
       "answer": null,
@@ -766,13 +784,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整解答和答案，因此只适合用于练习，不能用于考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#8#9",
           "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (10分)早上8:10,菲菲从家步行去上学.3分钟后,狗狗出发跑去追她,在离家200米的地方追上了她;追上后立刻往家跑去,到家后又立刻回头去追菲菲,在离家400米的地方再次追上了她.追上后又立刻往家跑,到家后又去追菲菲,刚好在学校追上.菲菲到校时间是8点28分.",
       "answer": null,
@@ -986,13 +1007,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干描述完整可出题，但文本块包含答案和解答，适合练习而非考试。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#11#14",
           "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "14. (12分)如图,正十二边形和中心白色的正六边形的边长均为12,图中阴影部分的面积\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_011/images/0.jpg)\n\n是_324_.",
       "answer": null,

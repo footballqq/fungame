@@ -580,13 +580,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干块包含完整的问题、选项和直接给出的答案解析，存在高泄露风险，不适合作为考试题目但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#5#2",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)下面的四个图形中,第( )幅图只有2条对称轴.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/0.jpg)\n\nA.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/1.jpg)\n\n<center>B. </center>\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/2.jpg)\n\n<center>C. </center>\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/3.jpg)\n\n<center>D. </center>",
       "answer": null,
@@ -618,13 +621,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干完整但解答部分直接包含答案和解析，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#6#3",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)一辆大卡车一次可以装煤2.5吨,现在要一次运走48吨煤,那么至少需要( ) 辆这样的大卡车.\n\nA.18\nB.19\nC.20\nD.21",
       "answer": null,
@@ -937,13 +943,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题目、选项、解答和答案，存在答案泄露风险，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#9#11",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (10分)如图所示,将15个点排成三角形点阵或者梯形点阵共有3种不同方法(规定:相邻两行的点数均差1).那么将2014个点排成三角形点阵或者梯形点阵(至少两层)共有()种不同的方法.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_009/images/1.jpg)\n\nA.3\nB.7\nC.4\nD.9",
       "answer": null,
@@ -1054,13 +1063,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整的题目、选项、答案和解析，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#11#14",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "14. (12分)如图,一只蚂蚁从中心 \\(A\\) 点出发,连走5步后又回到 \\(A\\) 点,且中间没有回到过 \\(A\\) 点.有( )种不同的走法.(每一步只能从任意一点走到与它相邻的点,允许走重复路线.)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_011/images/0.jpg)\n\nA.144\nB.156\nC.168\nD.180",
       "answer": null,
@@ -1209,13 +1221,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含完整题干、选项及解答，答案直接泄露，不适合用于考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#5#3",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)过年的时候,康康给客人倒啤酒,一瓶啤酒可以倒满4杯,球球倒酒的时候总是每杯中有半杯泡沫,啤酒倒成泡沫的体积会涨成原来的3倍,那么球球倒啤酒时,一瓶酒可以倒( )杯.\n\nA.5\nB.6\nC.7\nD.8",
       "answer": null,
@@ -1285,13 +1300,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含解答和答案，泄露风险高，但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#6#5",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)算式 \\(826446281 \\times 11 \\times 11\\) 的计算结果是( )\n\nA. \\(9090909091\\) B. \\(909090909091\\)\n\nC. \\(10000000001\\) D. \\(100000000001\\)",
       "answer": null,
@@ -1323,13 +1341,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含完整的题干和解答，答案B直接给出，存在高风险泄漏。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#6#6",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)对于大于零的分数,有如下4个结论: \\(①\\) 两个真分数的和是真分数; \\(②\\) 两个真分数的积是真分数; \\(③\\) 一个真分数与一个假分数的和是一个假分数; \\(④\\) 一个真分数与一个假分数的积是一个假分数.其中正确的有( )个.\n\nA.1\nB.2\nC.3\nD.4",
       "answer": null,
@@ -1363,13 +1384,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干独立且可出题，但解答过程部分存在，可能泄露解题思路，适合练习使用。",
         "scan_leakage_risk": 1,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#6#7",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (10分)如图竖式成立时除数与商的和为( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_006/images/0.jpg)\n\nA.289\nB.351\nC.723\nD.1134",
       "answer": null,
@@ -1480,13 +1504,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干独立完整，但文本块包含完整解答和答案，泄露风险高，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#8#10",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (10分)如图所示,五边形 \\(ABCEF\\) 面积是2014平方厘米, \\(BC\\) 与 \\(CE\\) 垂直于 \\(C\\) 点, \\(EF\\) 与 \\(CE\\) 垂直于 \\(E\\) 点,四边形 \\(ABDF\\) 是正方形, \\(CD\\) : \\(ED = 3\\) :2,那么,三角形 \\(ACE\\) 的面积是( )平方厘米.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_008/images/0.jpg)\n\nA.1325\nB.1400\nC.1475\nD.1500",
       "answer": null,
@@ -1558,13 +1585,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整解答和答案，存在泄露风险，但可作为练习题使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#9#12",
           "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "12. (12分)如图是由15个点组成的三角形点阵,在右图中至少去掉( )个点,就不会再出现以图中的点为顶点的正三角形了.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_009/images/0.jpg)\n\nA.6\nB.7\nC.8\nD.9",
       "answer": null,

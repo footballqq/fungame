@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案'930'，且有完整解答过程，因此风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json#3#1",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)算式 \\((\\frac{1}{3} +\\frac{1}{15} +\\frac{1}{35} +\\frac{1}{63} +\\frac{1}{99} +\\frac{1}{143})\\times 2015\\) 的计算结果是_930_",
       "answer": null,
@@ -70,13 +73,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解析，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json#3#2",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)如图,一道除法竖式中已经填出了\"2015\"和\"0\",那么被除数是_20685_\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）/pages/page_003/images/0.jpg)",
       "answer": null,
@@ -108,13 +114,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目文本中直接给出答案和完整解析，存在答案泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json#4#3",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分) \\(A\\) 电池的广告语是\"一节更比六节强\",意义是 \\(A\\) 电池比其他电池更耐用,我们就假定1节 \\(A\\) 电池的电量是 \\(B\\) 电池的6倍,有两种耗电速度一样的时钟,现在同时在甲钟里装了4节 \\(A\\) 电池,乙钟里装了3节 \\(B\\) 电池.结果乙时钟正常工作了2个月电池就耗尽了.那么甲时钟的正常工作时间比乙时钟多_14个月.",
       "answer": null,
@@ -187,13 +196,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出答案且包含完整解析，泄露风险高，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json#4#5",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)一个正整数 \\(A\\) 除以3!后所得结果的因数个数变为原来因数个数的 \\(\\frac{1}{3}\\) .那么符合条件的 \\(A\\) 最小是_12_.",
       "answer": null,
@@ -225,13 +237,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目直接给出了答案和详细解析，存在高风险泄露，但适合作为练习材料。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json#5#6",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. （10分）有一批机器，共500台，每台使用了同一类型的零件6个，这种一周内报废的零件必须在本周末换新零件，所有新零件第一周末有 \\(10\\%\\) 报废，第二周末有 \\(30\\%\\) 报废，最后的 \\(60\\%\\) 会在第三周末报废，没有零件能使用到第四周期．那么，在第三周末需要换新零件数是1983个.",
       "answer": null,
@@ -352,13 +367,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案数字和解析部分，存在泄露风险，不适合考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json#6#9",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (12分)如图, \\(A\\) 、 \\(B\\) 为圆形轨道一条直径的两个端点,甲、乙、丙三个微型机器人在圆形轨道上同时出发,作匀速圆周运动,甲、乙从 \\(A\\) 出发,丙从 \\(B\\) 出发;乙顺时针运动,甲、丙逆时针运动,出发后12秒钟甲到达 \\(B\\) ,再过9秒钟甲第一次追上丙时恰好也和乙第一次相遇;那么当丙第一次到达 \\(A\\) 后,再过_56_秒钟,乙才第一次到达 \\(B\\) .\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）/pages/page_006/images/1.jpg)",
       "answer": null,
@@ -390,13 +408,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案“15”并包含完整解析，存在高风险泄露，仅适合用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json#7#10",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (12分)希希和姗姗各有若干张积分卡.\n\n姗姗对希希说:\"如果你给我2张,我的张数就是你的2倍.\"\n\n希希对姗姗说:\"如果你给我3张,我的张数就是你的3倍.\"\n\n姗姗对希希说:\"如果你给我4张,我的张数就是你的4倍.\"\n\n希希对姗姗说:\"如果你给我5张,我的张数就是你的5倍.\"\n\n后来发现以上四句话恰有两句正确,两句不正确,最后希希给了珊珊几张积分卡之后她们的张数就相同了.那么,原来希希有_15_张积分卡.",
       "answer": null,
@@ -431,13 +452,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整答案和解析，存在高泄露风险，因此建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json#8#11",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)在空格内填入数字1-6,使得每行每列数字不重复,黑点两边的数是两倍的关系,白点两边的数差为1. 那么第四行所填数字从左往右前5位组成的五位数是21436.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（六年级初赛a卷）/pages/page_008/images/0.jpg)",
       "answer": null,
@@ -469,13 +493,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干包含完整题目、答案和解析，答案泄露明显，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json#3#1",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)如果两个质数的差恰好是2,称这两个数为一对孪生质数.\n\n例如:3和5是一对孪生质数,29和31也是一对孪生质数.在数论研究中,孪生质数是最热门的研究课题之一.华裔数学家张益唐在该课题的研究中取得了令人瞩目的成就,他的事迹激励着更多的青年学子投身数学研究.如果一对孪生质数中的两个质数都不超过200,这两个质数的和最大为_396.",
       "answer": null,
@@ -507,13 +534,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中已包含答案提示且解答过程完整，泄露风险高，因此仅建议用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json#3#2",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)大圆柱的高是小圆柱的2倍,大圆柱的侧面积是小圆柱侧面积的12倍,大圆柱的体积是小圆柱体积的_72倍.",
       "answer": null,
@@ -586,13 +616,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解析，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json#4#4",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. (10分)在1220后写上一个三位数,得到一个七位数;如果这个七位数是2014的倍数,那么这个三位数是_484_.",
       "answer": null,
@@ -627,13 +660,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出答案和完整解析，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json#4#5",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)请在如图的每个方框中填入适当的数字,使得竖式成立(现已填入\"2015\")那么竖式中乘积的最大值是_19864_.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（六年级）/pages/page_004/images/1.jpg)",
       "answer": null,
@@ -665,13 +701,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整答案和解析，存在泄露风险，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json#5#6",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10 分) 近年来网略购物已成为一种主要的购物方式. 王阿姨经营着一家卖洗衣机的网店, 她每月平均可以卖出 50 台洗衣机, 每台成本为 1200 元, 由于售货时是包邮的, 所以每台洗衣机还需要王阿姨支付 20 元的快递费, 除此之外每个月还需要给运营网站交付 1 万元的 \"店面费\", 返修每月需要 5000 元, 那么她经营的洗衣机每台售价至少应定为 1824 元才能使她每月售货的利润率不低于 \\(20\\%\\) .",
       "answer": null,
@@ -705,13 +744,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整题干、答案和详细解析，泄露风险高，适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json#5#7",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (15 分) 如图, 已知正方形 \\(ABCD\\) 面积为 2520; \\(E\\) 、 \\(F\\) 、 \\(G\\) 、 \\(H\\) 为边上的靠近正方形顶点的四等分点, 连 \\(AG\\) 、 \\(EC\\) 、 \\(HB\\) 、 \\(DF\\) . 那么图中 \" \\(X\\) \" 部分的面积是 1155.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（六年级）/pages/page_005/images/0.jpg)",
       "answer": null,
@@ -825,13 +867,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和完整解析，不适合作为考试题目。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json#7#10",
           "json_path": "source_pdf/六年级/2015/2015年“迎春杯”数学花园探秘网试试卷（六年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (18分)在空格里填入数字 \\(1 \\sim 6\\) ,使得每行、每列和每宫数字不重复.盘面外的数字表示斜线方向所有格的和.那么,第四行从左往右的前5个数字组成的五位数是_35126_.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（六年级）/pages/page_007/images/1.jpg)",
       "answer": null,
@@ -863,13 +908,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含题干但同时有答案和解析，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/六年级总决赛一试 答案.json#1#1",
           "json_path": "source_pdf/六年级/2015/六年级总决赛一试 答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. 所有使得 \\(\\left[\\frac{n^{2}}{5}\\right]\\) 为质数的自然数 \\(n\\) 的和为\n\n\\[\\left[\\frac{0^{2}}{5}\\right] = \\left[\\frac{1^{2}}{5}\\right] = \\left[\\frac{2^{2}}{5}\\right] = 0,\\left[\\frac{3^{2}}{5}\\right] = 1,\\left[\\frac{4^{2}}{5}\\right] = 3,\\left[\\frac{5^{2}}{5}\\right] = 5,\\left[\\frac{6^{2}}{5}\\right] = 7,\\left[\\frac{64}{5}\\right] = 12,\\left[\\frac{9^{2}}{5}\\right] = 16\\]\n\n由 \\(A = \\left[\\frac{(5k + r)^{2}}{5}\\right] = \\left[\\frac{25k^{2} + 10kr + r^{2}}{5}\\right] = 5k^{2} + 2kr + \\left[\\frac{r^{2}}{5}\\right]\\) 知:\n\n当 \\(k\\geq 2\\) 时,即 \\(n\\geq 10\\) 时, \\(A\\) 是合数\n\n(1) \\(r = 0,1,2\\) 时, \\(A = k\\left(5k + 2r\\right)\\) 是合数;\n\n(2) \\(r = 3\\) 时, \\(A = 5k^{2} + 6k + 1 = (k + 1)(5k + 1)\\) 是合数;\n\n(3) \\(r = 4\\) 时, \\(A = 5k^{2} + 8k + 3 = (k + 1)(5k + 3)\\) 是合数。\n\n满足条件的 \\(\\mathbf{n}\\) 只有4、5、6三个,其和为15。",
       "answer": null,
@@ -948,13 +996,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整解析和答案推导，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/六年级总决赛一试 答案.json#1#3",
           "json_path": "source_pdf/六年级/2015/六年级总决赛一试 答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. 欢天 \\(\\times\\) 喜地 \\(\\equiv\\) 天喜欢地,喜天 \\(\\times\\) 欢地 \\(\\equiv\\) 欢天喜地,横式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字,且喜、地、欢、天四个数依次减小,那么,欢天喜地 \\(=\\)",
       "answer": null,
@@ -986,13 +1037,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含两个完整的数学竞赛题干，可独立出题，但已附带详细解析，导致答案和解答过程泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/六年级总决赛一试 答案.json#2#4",
           "json_path": "source_pdf/六年级/2015/六年级总决赛一试 答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. 证明：任意4个自然数中一定可以通过算术运算得到24的倍数。\n\n算术运算是指：将给定的数适当排序后，添加“+”、“- ”、“×”、“÷”或者括号后形成一个算式。",
       "answer": null,
@@ -1114,13 +1168,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干可独立出题，但解析部分完整泄露解答过程，不适合作为考试题。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2015/六年级总决赛二试 答案.json#1#3",
           "json_path": "source_pdf/六年级/2015/六年级总决赛二试 答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. 从 \\(A\\) 点出发,一笔画出图中的轿车,不允许走重复路线,共有 种不同的画法。",
       "answer": null,

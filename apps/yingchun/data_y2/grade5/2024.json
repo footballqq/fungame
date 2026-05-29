@@ -2420,13 +2420,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "该文本块仅包含答案，无问题描述，因此不适合作为独立题干使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#52",
           "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "52.",
       "answer": null,
@@ -2504,13 +2507,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本仅包含答案信息，无题干描述，不适合作为独立题目，直接暴露答案存在高风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#67",
           "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "67.",
       "answer": null,
@@ -2772,13 +2778,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本仅包含答案信息，缺乏题干描述，无法独立出题。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#8#89",
           "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "89.",
       "answer": null,
@@ -3056,13 +3065,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块直接包含答案和解析，无法作为独立题干使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#12#110",
           "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "110.",
       "answer": null,

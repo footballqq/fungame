@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出答案2017，并包含完整解析，存在泄露风险，不适合用于考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#4#1",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)算式 \\(\\frac{2015 \\times 2016}{1 + \\frac{1}{2016} + \\frac{2}{2016} + \\frac{3}{2016} + \\dots + \\frac{2015}{2015 + \\frac{2015}{2016}}}\\) 的计算结果是_2017.",
       "answer": null,
@@ -67,13 +70,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本包含完整题干、答案和解答过程，答案直接给出，适用于练习但不能用于考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#4#2",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)销售一种商品,利润率为 \\(25\\%\\) ,如果想把利润率提高到 \\(40\\%\\) ,那么售价应该提高 \\(12\\%\\) .",
       "answer": null,
@@ -105,13 +111,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案2088年，且有解答开头，存在高风险泄露，适合仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#4#3",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)小明发现今年的年份2016是一个非常好的数,它既是6的倍数,又是8的倍数,还是9的倍数,那么下一个既是6的倍数,又是8的倍数,还是9的倍数的年份是_2088年.",
       "answer": null,
@@ -304,13 +313,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含完整题干、答案和解析，答案和解析直接泄露，因此不适合考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#7#8",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (10分)如图,正十二边形的面积是2016平方厘米,那么图中阴影部分的面积是_672平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_007/images/0.jpg)",
       "answer": null,
@@ -383,13 +395,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目中直接包含答案和完整解析，存在高泄露风险，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#9#11",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)如图,直角三角形 \\(ABC\\) 中, \\(AB\\) 的长度是12厘米, \\(AC\\) 的长度是24厘米, \\(D\\) 、 \\(E\\) 分别在 \\(AC\\) 、 \\(BC\\) 上,那么等腰直角三角形 \\(BDE\\) 的面积是_80_平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_009/images/0.jpg)",
       "answer": null,
@@ -421,13 +436,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出S = 1/9，隐含答案，有高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#2#12",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "12. (12分)已知 \\(S = \\frac{1}{9} +\\frac{1}{99} +\\frac{1}{999} +\\dots +\\frac{1}{1000} = \\frac{1}{9}\\) ,那么 \\(S\\) 的小数点后第2016位是",
       "answer": null,
@@ -459,13 +477,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案并附有完整解析，泄露风险高，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#10#13",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "13. (12分) \\(A\\) 、 \\(B\\) 两地间每隔5分钟有一辆班车发出,匀速对开,且所有班车的速度都相同;甲、乙两人同时从 \\(A\\) 、 \\(B\\) 两地出发,相向匀速而行;甲、乙出发后5分钟,两地同时开出第一辆班车;甲乙相遇时,甲被 \\(A\\) 地开出的第9辆班车追上,乙也恰被 \\(B\\) 地开出的第6辆班车追上;乙到 \\(A\\) 地时,恰被 \\(B\\) 地开出的第8辆班车追上,而此时甲离 \\(B\\) 地还有21千米.那么乙的速度是每小时_27_千米.",
       "answer": null,
@@ -538,13 +559,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案1024，且包含完整解答，无法作为独立题干出题，但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#3#1",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (10分)算式: \\(2016 \\times \\frac{1}{1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\frac{1}{16} + \\frac{1}{32}}\\) 的计算结果是_1024.",
       "answer": null,
@@ -740,13 +764,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案'2016'，并且包含完整的解答过程，泄漏风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#5#6",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (15分)对于自然数 \\(N\\) ,如果在 \\(1 \\sim 9\\) 这九个自然数中至少有六个数可是 \\(N\\) 的因数,则称 \\(N\\) 是一个\"六合数\",则在大于2000的自然数中,最小的\"六合数\"是2016.",
       "answer": null,
@@ -780,13 +807,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案'88平方厘米'，因此存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#5#7",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (15分)如图是由9块相同的长方体摆放而成的大长方体,已知大长方体的表面积是360平方厘米,那么一个小长方体的表面积是88平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_005/images/2.jpg)",
       "answer": null,
@@ -821,13 +851,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出了答案64，并附有解析过程，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#6#8",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "8. (15分)跑跑家族七人分别要通过图中7个门完成挑战;第一个人可以任选一个门激活,完成挑战后,将会激活左右相邻的门;下一个人可以在已激活的门中任选一个未被挑战的门挑战,完成挑战后将会激活左右相邻门中未被激活的门;以此类推.结果跑跑家族七人全部都完成了挑战,按照他们挑战的次序将七个门的编号排序将会得到一个七位数,这个七位数一共有_64_种不同可能.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_006/images/1.jpg)",
       "answer": null,
@@ -939,13 +972,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案'4213'，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#7#11",
           "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. 在每个空格中填入数字1-4,使得每行和每列的数字都不重复.表格外的数字表示该方向所在行或列里第一个奇数或者第一个偶数,那么,第三行的四个格从左到右所填的数字组成的四位数是_4213_.",
       "answer": null,
@@ -1533,13 +1569,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "文本不完整，缺少图，不能作为独立题干。",
         "scan_leakage_risk": 0,
         "scan_src": {
           "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#1#5",
           "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. 将下图中的乘法竖式补充完整后,两个乘数的和是",
       "answer": null,

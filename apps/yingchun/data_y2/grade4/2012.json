@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解析，泄露风险高，不适合考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#1",
           "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. (8分)计算: \\(12 + 34 \\times 56 + 7 + 89 = 2012\\)",
       "answer": null,
@@ -67,13 +70,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和解答过程，存在高泄露风险，适合练习但不宜用于考试。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#2",
           "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)骆驼有两种,背上只有一个驼峰的单峰骆驼和背上有两个驼峰的双峰骆驼,单峰骆驼比较高大,四肢较长,在沙漠中可走可跑;双峰骆驼四肢短粗,适合在沙漠和雪地中行走.有一群骆驼有23个驼峰,60只脚,这些骆驼有_15_只.",
       "answer": null,
@@ -193,13 +199,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案'42米'和完整解答，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#5#5",
           "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)30名同学按身高由低到高排成一队,相邻两个同学的身高差相同.前10名同学的身高和是12.5米,前20名同学的身高和是26.5米,那么这30名同学的身高和是_42米.",
       "answer": null,
@@ -234,13 +243,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中以填空形式直接给出答案，且包含解答开头，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#5#6",
           "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)正方形 \\(ABCD\\) 与长方形 \\(BEFG\\) 如图放置, \\(AG = CE = 2\\) 厘米,那么正方形 \\(ABCD\\) 的面积比长方形 \\(BEFG\\) 的面积大_4_平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg)",
       "answer": null,
@@ -272,13 +284,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目包含完整答案和解析，泄露风险高，仅适合练习使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#6#7",
           "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (10分)红、黄、蓝3种颜色的球分别有11、12、17个,每次操作可以将2个不同颜色的球换成2个第三种颜色的球,则在操作过程中,红色球至多有_39_个.",
       "answer": null,
@@ -351,13 +366,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和解答过程，泄露风险高，仅建议用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#7#9",
           "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (12分)甲乙二人相距30米面对面站好,两人玩\"石头、剪子、布\".胜者向前走3米,负者向后退2米,平局两人各向前走1米,玩了15局后,甲距出发点17米,乙距出发点2米.甲胜了_7_次.",
       "answer": null,
@@ -427,13 +445,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案和完整解析，泄露风险高。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#8#11",
           "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. (12分)若三位数abc(其中 \\(a\\) 、 \\(b\\) 、 \\(c\\) 都是非零数字)满足 \\(\\overrightarrow{\\mathrm{ab}} > \\overrightarrow{\\mathrm{bc}} > \\overrightarrow{\\mathrm{ca}}\\) ,则称该三位数为\"龙腾数\",那么共有_120_个\"龙腾数\".",
       "answer": null,

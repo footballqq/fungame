@@ -67,13 +67,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含答案'四'，且解答过程完整，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#2",
           "json_path": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "2. (8分)小张有200支铅笔,小李有20支钢笔.每次小张给小李6支铅笔,小李还给小张1支钢笔.经过_四_次这样的交换后,小张手中铅笔的数量是小李手中钢笔数量的11倍.",
       "answer": null,
@@ -108,13 +111,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案和解析，存在泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#3",
           "json_path": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. (8分)在长方形ABCD中, \\(BE = 5\\) , \\(EC = 4\\) , \\(CF = 4\\) , \\(FD = 1\\) ,如图所示,那么 \\(\\triangle AEF\\) 的面积是_20_;\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/images/0.jpg)",
       "answer": null,
@@ -184,13 +190,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接填入答案'402'且解答完整，存在高风险答案泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#4#5",
           "json_path": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. (10分)一个等差数列的第3项是14,第18项是23,那么这个数列的前2010项中有_402项是整数.",
       "answer": null,
@@ -222,13 +231,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目为完整数学竞赛题，但直接包含答案和详细解析，存在高风险泄漏。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#4#6",
           "json_path": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. (10分)甲、乙两车从 \\(A\\) 城市出发驶向距离300千米远的 \\(B\\) 城市.已知甲车比乙车晚出发1小时,但提前1小时到达 \\(B\\) 城市.那么,甲车在距离 \\(B\\) 城市_150_千米处追上乙车.",
       "answer": null,
@@ -260,13 +272,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案，泄露了答案信息。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#4#7",
           "json_path": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. (10分)已知一个五位回文数等于45与一个四位回文数的乘积(即abcba=45×deed),那么这个五位回文数最大的可能值是_59895_.",
       "answer": null,
@@ -338,13 +353,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含了答案数字'4'，且附有完整解析，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#5#9",
           "json_path": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. (12分)如图,请沿虚线将 \\(7\\times 7\\) 的方格表分割成若干个长方形,使得每个长方形中恰好包含一个数字,并且这个数字就是此长方形的面积.那么第四列的7个小方格分别属于4_个不同的长方形.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/0.jpg)",
       "answer": null,
@@ -379,13 +397,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案和解答过程，存在高泄露风险，仅建议用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#6#10",
           "json_path": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. (12分)九个大小相等的小正方形拼成了如图,现从 \\(A\\) 点走到 \\(B\\) 点,每次只能沿着小正方形的对角线从一个顶点到另一个顶点,不允许走重复路线(如图的虚线就是一种走法),那么从 \\(A\\) 点走到 \\(B\\) 点共有_9_种不同的走法.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_006/images/1.jpg)",
       "answer": null,
@@ -461,13 +482,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目描述完整，但文本中直接包含解答过程和标准答案，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#7#12",
           "json_path": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "12. (12分)如图, \\(C\\) 、 \\(D\\) 为 \\(AB\\) 的三等分点.8点整时甲从 \\(A\\) 出发匀速向 \\(B\\) 行走,8点12分乙从 \\(B\\) 出发匀速向 \\(A\\) 行走,再过几分钟丙从 \\(B\\) 出发匀速向 \\(A\\) 行走;甲、乙在 \\(C\\) 点相遇时丙恰好走到 \\(D\\) 点,甲、丙8:30相遇时乙恰好到 \\(A\\) .那么,丙出发时是_8_点_16分.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_007/images/2.jpg)",
       "answer": null,
@@ -856,13 +880,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含完整解答和答案，直接泄露了问题解决过程。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#8#10",
           "json_path": "source_pdf/五年级/2010/2010年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "10. 如图所示,直线上并排放置着两个紧挨着的圆,它们的面积都等于1680平方厘米.阴影部分是夹在两圆及直线之间的部分.如果要在阴影部分内部放入一个尽可能大的圆,则这个圆的面积等于多少平方厘米?\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_008/images/0.jpg)\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_008/images/1.jpg)",
       "answer": null,
