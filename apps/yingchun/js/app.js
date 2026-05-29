@@ -1834,6 +1834,22 @@ function tryPageFallback(img) {
     controls.style.display = 'flex';
   }
 
+  function openViewerPreferJpg(src) {
+    // For large page images, prefer a pre-compressed .jpg variant if available.
+    // Fall back to original URL on error.
+    if (typeof src === 'string' && src.includes('/images_y2/pages/') && src.endsWith('.png')) {
+      const jpg = src.slice(0, -4) + '.jpg';
+      img.onerror = () => {
+        img.onerror = null;
+        img.src = src;
+      };
+      openViewer(jpg);
+      return;
+    }
+    img.onerror = null;
+    openViewer(src);
+  }
+
   function closeViewer() {
     overlay.classList.remove('open');
     controls.style.display = 'none';
@@ -1843,7 +1859,7 @@ function tryPageFallback(img) {
   document.addEventListener('click', e => {
     if (e.target.matches('.page-ref img') && e.target.src) {
       e.preventDefault();
-      openViewer(e.target.src);
+      openViewerPreferJpg(e.target.src);
     }
   });
 
@@ -1854,7 +1870,7 @@ function tryPageFallback(img) {
     const src = btn.dataset.openPageImage;
     if (!src) return;
     e.preventDefault();
-    openViewer(src);
+    openViewerPreferJpg(src);
   });
 
   // Close on click outside image
