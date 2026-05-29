@@ -127,3 +127,13 @@ export function importData(jsonStr) {
     return true;
   } catch { return false; }
 }
+
+// Forward-compatible storage migrations.
+// Keep it safe: any localStorage access must be guarded.
+export function runMigrations() {
+  try {
+    // Reserved for future schema changes.
+  } catch (e) {
+    console.warn('runMigrations skipped:', e);
+  }
+}
