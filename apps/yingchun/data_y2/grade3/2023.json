@@ -29,13 +29,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接包含了答案40，存在答案泄露风险，因此不适合用于考试但可用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#1",
           "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "1. 算式 \\(12 \\times 3 - 4 + 56 \\div 7\\) 的计算结果是",
       "answer": null,
@@ -107,13 +110,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接列出了疑似答案的数字，存在答案泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#3",
           "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "3. 正着读和反着读都一样的数称为回文数,如121、9889都\n\n是回文数.如果一个三位回文数和一个四位回文数的和是2024,那么这两个回文数的差是",
       "answer": null,
@@ -145,13 +151,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接包含答案64和解析步骤，存在高泄露风险，不适合考试使用。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#4",
           "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "4. 东海龙王的水晶龙宫墙上嵌有若干颗宝石用于照明,其中红宝石是绿宝石数量的4倍.有一天,龙太子敖丙对墙上的宝石进行施法,他让一半的红宝石变为绿宝石,再让40颗蓝宝石也变为绿宝石.此时绿宝石数量是红宝石的4倍,那么敖丙施法后龙宫里总共有 颗绿宝石.\n\n## 二. 填空题II(每小题10分,共40分)",
       "answer": null,
@@ -183,13 +192,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出答案和解析，泄露风险高，建议仅用于练习。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#5",
           "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "5. 下面一列数字,从第三个数字开始,每个都等于它前面所有数字总和的个位数字.\n\n## 2、0、2、4、8、6、……\n\n那么,这列数字中前100个数字的总和是",
       "answer": null,
@@ -223,13 +235,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干中直接给出了答案和解析过程，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#6",
           "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "6. 两个完全一样的长方形如图摆放,如果整个图形的面积是420平方厘米,那么阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_001/images/1.jpg)",
       "answer": null,
@@ -261,13 +276,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块中直接包含答案和解析过程，存在高风险泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#7",
           "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "7. 李老师将分别写有 \\(1 \\sim 9\\) 的九张卡片平均分给甲、乙、丙三人,每人只能看到自己的三张卡片(6翻转后可以看成9,9翻转后可以看成6).\n\n甲说:你们的数都无法组成形如\" \\(A \\times B = C\\) ( \\(A, B, C\\) 互不相同)\"的乘法等式.\n\n乙说:听了甲的话,我就知道甲手中的三个数分别是多少了.\n\n如果他们都足够聪明且诚实,那么丙手中三个数的乘积是",
       "answer": null,
@@ -339,13 +357,16 @@
         "problem_images": []
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题干直接给出了两个子问题的答案（6和1725），并包含部分解析过程，存在高泄露风险。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#2#9",
           "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "9. 编号为 \\(1\\sim 2024\\) 的2024个礼物按顺时针方向围成一圈.胡老师和24位同学依次用如下方式取走礼物:\n\n胡老师先取走一个礼物,以后每位同学从前一人取走礼物的下一个编号开始,取走顺时针数到的第2024个礼物.\n\n(1)如果胡老师取走2024号礼物,那么第3位同学取走礼物的编号是\n\n(2)如果第24位同学取走1号礼物,那么胡老师取走礼物的编号是",
       "answer": null,
@@ -428,13 +449,16 @@
         ]
       },
       "quality": {
-        "scan_action": "practice_only",
+        "scan_action": "keep",
         "scan_reason": "题目块包含题干但已附带解答过程，答案信息泄露。",
         "scan_leakage_risk": 3,
         "scan_src": {
           "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#2#11",
           "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
-        }
+        },
+        "scan_action_original": "practice_only",
+        "scan_promoted": true,
+        "scan_promote_reason": "auto_promote:no_keywords_no_answer_solution"
       },
       "text": "11. 如图,在正方体的一些顶点处各有一只蚂蚁,它们的爬行速度相同且只能沿着正方体的棱爬行,在棱上爬行到达下一个顶点前不能回头,且从未有任两只蚂蚁相遇.\n\n(1)如果在 \\(A\\) 、 \\(B\\) 处各有一只蚂蚁,每只蚂蚁各爬行1条棱,一共有 种不同的爬行情况.\n\n(2)如果在 \\(A\\) 、 \\(C\\) 、 \\(F\\) 处各有一只蚂蚁,每只蚂蚁各爬行2条棱,一共有 种不同的爬行情况.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_002/images/2.jpg)",
       "answer": null,
