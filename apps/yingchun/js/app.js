@@ -1288,47 +1288,22 @@ function bindEvents() {
   document.getElementById('startExam')?.addEventListener('click', startExam);
   document.getElementById('startTraining')?.addEventListener('click', startTraining);
 
-  // Build exam map once
-  if (!window._examMap) {
-    (async () => {
-      const index = await loadIndex();
-      const examMap = {};
-      for (const g of Object.keys(index.grades)) {
-        examMap[g] = {};
-        for (const y of index.grades[g].years) {
-          const problems = await loadProblems(Number(g), y);
-          const stages = new Set(); const variants = new Set(); const stageVariantMap = {};
-          for (const p of problems) {
-            const s = p.exam?.stage || '其他'; const v = p.exam?.variant || '';
-            stages.add(s); if (v) variants.add(v);
-            if (!stageVariantMap[s]) stageVariantMap[s] = new Set();
-            if (v) stageVariantMap[s].add(v);
-          }
-          examMap[g][y] = { stages: [...stages], variants: [...variants], stageVariantMap, count: problems.length };
-        }
-      }
-      window._examMap = examMap;
-      refreshExamUI();
-    })();
-  } else {
-    refreshExamUI();
-  }
+  // Exam setup UI refresh: avoid loading the whole dataset on first entry.
+  // Only load the selected grade+year file when needed.
+  refreshExamUI();
 
-  function refreshExamUI(clickedField) {
-    const m = window._examMap; if (!m) return;
-    
+  async function refreshExamUI(clickedField) {
+    const index = await loadIndex();
+
     // Read the values currently selected in the DOM (after the click toggled them)
     let grade = document.querySelector('[data-field="exam-grade"] .chip.selected')?.dataset.val;
     let year = document.querySelector('[data-field="exam-year"] .chip.selected')?.dataset.val;
     let stage = document.querySelector('[data-field="exam-stage"] .chip.selected')?.dataset.val;
     let variant = document.querySelector('[data-field="exam-variant"] .chip.selected')?.dataset.val;
-    
-    if (!grade) {
-      grade = Object.keys(m)[0] || '5';
-    }
-    
-    const yearInfo = m[grade] || {};
-    const years = Object.keys(yearInfo).map(Number).sort((a,b)=>b-a);
+
+    if (!grade) grade = Object.keys(index.grades)[0] || '5';
+
+    const years = (index.grades[String(grade)]?.years || []).slice().map(Number).sort((a, b) => b - a);
     
     // Cascade reset logic based on what was clicked:
     if (clickedField === 'exam-grade') {
@@ -1347,8 +1322,24 @@ function bindEvents() {
       year = years[0];
     }
     
-    const info = yearInfo[year] || {};
-    const stagesList = (info.stages || []).filter(s => s !== '其他');
+    // Load only this grade+year problems to compute stages/variants.
+    showLoading({ title: '加载考试信息…', text: `正在读取：${grade}年级 ${year}年` });
+    await nextFrame();
+    const problemsForYear = await loadProblems(Number(grade), Number(year));
+    hideLoading();
+
+    const stages = new Set();
+    const variants = new Set();
+    const stageVariantMap = {};
+    for (const p of problemsForYear) {
+      const s = p.exam?.stage || '其他';
+      const v = p.exam?.variant || '';
+      stages.add(s);
+      if (v) variants.add(v);
+      if (!stageVariantMap[s]) stageVariantMap[s] = new Set();
+      if (v) stageVariantMap[s].add(v);
+    }
+    const stagesList = [...stages].filter(s => s !== '其他');
     
     // Normalize stage
     if (stage && !stagesList.includes(stage)) {
@@ -1358,9 +1349,9 @@ function bindEvents() {
     // Get valid variants for this stage
     let validVariants = [];
     if (stage) {
-      validVariants = [...(info.stageVariantMap?.[stage] || [])];
+      validVariants = [...(stageVariantMap?.[stage] || [])];
     } else {
-      validVariants = info.variants || [];
+      validVariants = [...variants];
     }
     validVariants = validVariants.filter(v => v);
     
@@ -1373,8 +1364,7 @@ function bindEvents() {
     const yearEl = document.getElementById('examYearChips');
     if (yearEl) {
       yearEl.innerHTML = years.map(y => {
-        const cnt = yearInfo[y]?.count || 0;
-        return `<span class="chip ${Number(y)===Number(year)?'selected':''}" data-field="exam-year" data-val="${y}">${y}年 (${cnt}题)</span>`;
+        return `<span class="chip ${Number(y)===Number(year)?'selected':''}" data-field="exam-year" data-val="${y}">${y}年</span>`;
       }).join('');
     }
 
@@ -1392,9 +1382,9 @@ function bindEvents() {
         validVariants.map(v => `<span class="chip ${v===variant?'selected':''}" data-field="exam-variant" data-val="${v}">${v}</span>`).join('');
     }
 
-    // Load and filter count asynchronously to display details
-    loadProblems(Number(grade), Number(year)).then(problems => {
-      let filtered = problems;
+    // Filter count to display details
+    {
+      let filtered = problemsForYear;
       if (stage) {
         filtered = filtered.filter(p => (p.exam?.stage || '其他') === stage);
       }
@@ -1412,7 +1402,7 @@ function bindEvents() {
           : `共有 <strong>${filtered.length}</strong> 题，其中 <strong>${strict.length}</strong> 题可用于考试（严格模式：无答案泄露）。其余建议在“练习/浏览”中使用或进一步修复。`;
         infoEl.innerHTML = `当前选择: <strong>${grade}年级 ${year}年</strong>${stage ? ` · <strong>${stage}</strong>` : ''}${variant ? ` · <strong>${variant}</strong>` : ''}。<br/>${strictHint}<br/><span style="color:var(--text-muted); font-size:0.8rem; display:block; margin-top:4px;">💡 提示：点击已选中的年级芯片，可以重置下方的年份、阶段和卷别筛选。</span>`;
       }
-    });
+    }
   }
 
   // Make the latest refresh function available to the one-time listener
