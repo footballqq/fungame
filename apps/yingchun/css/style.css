@@ -156,7 +156,7 @@ input:focus { border-color: var(--accent); }
 
 /* Problem display */
 .problem-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 0.85rem; color: var(--text-muted); }
-.problem-image { width: 100%; max-width: 600px; border-radius: var(--radius-sm); margin-bottom: 12px; border: 1px solid var(--glass-border); }
+.problem-image { width: 100%; max-width: 520px; border-radius: var(--radius-sm); margin-bottom: 12px; border: 1px solid var(--glass-border); }
 .problem-text { font-size: 1.05rem; line-height: 1.8; margin-bottom: 16px; white-space: pre-wrap; }
 .problem-meta { display: flex; gap: 8px; margin-bottom: 12px; }
 .tag { padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }

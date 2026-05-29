@@ -16,6 +16,35 @@ try {
   if (params.get('db') === 'y2') setDataRoot('data_y2');
 } catch {}
 
+// Optional: route heavy images via external gateway (e.g. Cloudflare Worker + R2).
+// Priority: URL ?imgRoot=... > window.IMG_ROOT > auto default (for y2 on circlecal).
+let IMG_ROOT = '';
+try {
+  const params = new URLSearchParams(location.search);
+  IMG_ROOT = (params.get('imgRoot') || '').trim();
+} catch {}
+if (!IMG_ROOT && typeof window !== 'undefined' && typeof window.IMG_ROOT === 'string') {
+  IMG_ROOT = (window.IMG_ROOT || '').trim();
+}
+if (!IMG_ROOT) {
+  try {
+    const params = new URLSearchParams(location.search);
+    const db = params.get('db');
+    const isPages = (location.hostname || '').endsWith('.pages.dev');
+    if (db === 'y2' && isPages) IMG_ROOT = 'https://r2-secure-gateway.qdigest.workers.dev';
+  } catch {}
+}
+if (IMG_ROOT.endsWith('/')) IMG_ROOT = IMG_ROOT.slice(0, -1);
+
+function resolveImgSrc(src) {
+  if (!src) return src;
+  if (src.startsWith('http://') || src.startsWith('https://')) return src;
+  if (!IMG_ROOT) return src;
+  // Only rewrite yingchun2 image paths by default to avoid surprising other datasets.
+  if (src.startsWith('images_y2/')) return `${IMG_ROOT}/${src}`;
+  return src;
+}
+
 // ---- Router ----
 function navigate(page, params = {}) {
   currentPage = page;
@@ -241,7 +270,7 @@ async function renderPractice(params) {
           ${renderProblemTextHtml(problemImages.length ? stripMarkdownImages(p.text) : p.text)}
           ${problemImages.length ? `
             <div style="margin-top:8px;margin-bottom:12px">
-              ${problemImages.map(src => `<img class="problem-image" src="${src}" loading="lazy" onerror="this.style.display='none'">`).join('')}
+              ${problemImages.map(src => `<img class="problem-image" src="${resolveImgSrc(src)}" loading="lazy" onerror="this.style.display='none'">`).join('')}
             </div>
           ` : ''}
           <div class="answer-area">
@@ -264,7 +293,7 @@ async function renderPractice(params) {
       <!-- Right: page image reference -->
       <div class="page-ref card">
         <h3 style="font-size:0.85rem;margin-bottom:8px">原卷页面 (第${p.page || 1}页)</h3>
-        <img src="${pageImgPath}" onerror="tryPageFallback(this)" loading="lazy">
+        <img src="${resolveImgSrc(pageImgPath)}" onerror="tryPageFallback(this)" loading="lazy">
       </div>
     </div>
   `;
@@ -295,7 +324,7 @@ function renderAnswered(p, result) {
         <summary>点击查看答案 / 解析</summary>
         ${p.answer ? `<div style="margin-bottom:8px"><strong>正确答案:</strong> ${escHtml(p.answer)}</div>` : ''}
         ${p.solution ? `<div style="margin-bottom:8px">${escHtml(p.solution)}</div>` : ''}
-        ${p.solution ? `<img src="${solPagePath}" style="max-width:100%;border-radius:8px;cursor:zoom-in" onclick="document.querySelector('.page-ref img')?.click()" onerror="this.style.display='none'">` : ''}
+        ${p.solution ? `<img src="${resolveImgSrc(solPagePath)}" style="max-width:100%;border-radius:8px;cursor:zoom-in" onclick="document.querySelector('.page-ref img')?.click()" onerror="this.style.display='none'">` : ''}
       </details>
     ` : ''}
   `;

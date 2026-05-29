@@ -40,6 +40,10 @@
     </div>
     <canvas id="scratchCanvas"></canvas>
   </div>
+  <!-- Optional: override image host (e.g. Cloudflare Worker + R2). Can also be set via ?imgRoot=... -->
+  <script>
+    window.IMG_ROOT = window.IMG_ROOT || '';
+  </script>
   <script type="module" src="js/app.js?v=1780017702"></script>
 </body>
 </html>
