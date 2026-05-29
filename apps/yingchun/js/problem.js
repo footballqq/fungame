@@ -6,6 +6,24 @@ let indexCache = null;
 const problemCache = {};  // "grade_year" → problems array
 let dataRoot = 'data';
 
+async function mapWithConcurrency(items, limit, worker) {
+  if (!items.length) return [];
+  const results = new Array(items.length);
+  let nextIndex = 0;
+  const workerCount = Math.max(1, Math.min(limit, items.length));
+
+  async function run() {
+    while (true) {
+      const currentIndex = nextIndex++;
+      if (currentIndex >= items.length) return;
+      results[currentIndex] = await worker(items[currentIndex], currentIndex);
+    }
+  }
+
+  await Promise.all(Array.from({ length: workerCount }, () => run()));
+  return results;
+}
+
 export function setDataRoot(root) {
   dataRoot = root || 'data';
   indexCache = null;
@@ -38,12 +56,8 @@ export async function loadAllProblems(grade) {
   const index = await loadIndex();
   const gradeInfo = index.grades[String(grade)];
   if (!gradeInfo) return [];
-  const all = [];
-  for (const year of gradeInfo.years) {
-    const problems = await loadProblems(grade, year);
-    all.push(...problems);
-  }
-  return all;
+  const yearProblems = await mapWithConcurrency(gradeInfo.years, 5, async year => loadProblems(grade, year));
+  return yearProblems.flat();
 }
 
 export async function getProblemImage(problem) {

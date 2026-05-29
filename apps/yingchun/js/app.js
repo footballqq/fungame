@@ -97,14 +97,23 @@ async function loadProblemsForGradesWithProgress(grades, onProgress) {
   }
   const total = tasks.length;
   let done = 0;
-  const all = [];
-  for (const [g, y] of tasks) {
-    const ps = await loadProblems(g, y);
-    all.push(...ps);
-    done++;
-    onProgress?.({ done, total, grade: g, year: y });
+  const concurrency = Math.max(1, Math.min(5, tasks.length));
+  const results = new Array(tasks.length);
+  let nextIndex = 0;
+
+  async function run() {
+    while (true) {
+      const currentIndex = nextIndex++;
+      if (currentIndex >= tasks.length) return;
+      const [g, y] = tasks[currentIndex];
+      results[currentIndex] = await loadProblems(g, y);
+      done++;
+      onProgress?.({ done, total, grade: g, year: y });
+    }
   }
-  return all;
+
+  await Promise.all(Array.from({ length: concurrency }, () => run()));
+  return results.flat();
 }
 
 // ---- Router ----
