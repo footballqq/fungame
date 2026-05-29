@@ -273,6 +273,11 @@ async function renderPractice(params) {
               ${problemImages.map(src => `<img class="problem-image" src="${resolveImgSrc(src)}" loading="lazy" onerror="this.style.display='none'">`).join('')}
             </div>
           ` : ''}
+          ${problemImages.length ? `
+            <div style="margin-top:8px;margin-bottom:8px">
+              <button class="btn btn-secondary btn-sm" data-open-page-image="${resolveImgSrc(pageImgPath)}">查看原卷页面（备份）</button>
+            </div>
+          ` : ''}
           <div class="answer-area">
             ${ans !== undefined ? renderAnswered(p, answers[index]) : renderAnswerInput(p)}
           </div>
@@ -293,7 +298,11 @@ async function renderPractice(params) {
       <!-- Right: page image reference -->
       <div class="page-ref card">
         <h3 style="font-size:0.85rem;margin-bottom:8px">原卷页面 (第${p.page || 1}页)</h3>
-        <img src="${resolveImgSrc(pageImgPath)}" onerror="tryPageFallback(this)" loading="lazy">
+        ${problemImages.length ? `
+          <div style="color:var(--text-muted);font-size:0.8rem">默认不加载（已显示题目裁剪图）。需要时点左侧“查看原卷页面”。</div>
+        ` : `
+          <img src="${resolveImgSrc(pageImgPath)}" onerror="tryPageFallback(this)" loading="lazy">
+        `}
       </div>
     </div>
   `;
@@ -1324,9 +1333,15 @@ function bindEvents() {
         filtered = filtered.filter(p => p.exam?.variant === variant);
       }
       
+      // Strict exam pool: only scan_action=keep (and basic text sanity).
+      const strict = filterProblems(filtered, { requireQuestionText: true, pool: 'exam' });
+
       const infoEl = document.getElementById('examInfo');
       if (infoEl) {
-        infoEl.innerHTML = `当前选择: <strong>${grade}年级 ${year}年</strong>${stage ? ` · <strong>${stage}</strong>` : ''}${variant ? ` · <strong>${variant}</strong>` : ''}, 共有 <strong>${filtered.length}</strong> 道题。<br/><span style="color:var(--text-muted); font-size:0.8rem; display:block; margin-top:4px;">💡 提示：点击已选中的年级芯片，可以重置下方的年份、阶段和卷别筛选。</span>`;
+        const strictHint = strict.length === filtered.length
+          ? `全部 <strong>${filtered.length}</strong> 题都可用于考试。`
+          : `共有 <strong>${filtered.length}</strong> 题，其中 <strong>${strict.length}</strong> 题可用于考试（严格模式：无答案泄露）。其余建议在“练习/浏览”中使用或进一步修复。`;
+        infoEl.innerHTML = `当前选择: <strong>${grade}年级 ${year}年</strong>${stage ? ` · <strong>${stage}</strong>` : ''}${variant ? ` · <strong>${variant}</strong>` : ''}。<br/>${strictHint}<br/><span style="color:var(--text-muted); font-size:0.8rem; display:block; margin-top:4px;">💡 提示：点击已选中的年级芯片，可以重置下方的年份、阶段和卷别筛选。</span>`;
       }
     });
   }
@@ -1761,6 +1776,16 @@ function tryPageFallback(img) {
       e.preventDefault();
       openViewer(e.target.src);
     }
+  });
+
+  // Open page image from button (avoid preloading large page images)
+  document.addEventListener('click', e => {
+    const btn = e.target.closest?.('[data-open-page-image]');
+    if (!btn) return;
+    const src = btn.dataset.openPageImage;
+    if (!src) return;
+    e.preventDefault();
+    openViewer(src);
   });
 
   // Close on click outside image
