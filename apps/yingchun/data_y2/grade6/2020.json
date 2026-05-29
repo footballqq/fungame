@@ -1,0 +1,1256 @@
+{
+  "grade": 6,
+  "year": 2020,
+  "total_problems": 32,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 如果一个自然数的每个数字都是质数,我们称这个数为\"好数\",例如:2、23、223等均为\"好数\".那么,将所有的\"好数\"从小到大排列,第20个是",
+      "answer_text": "77",
+      "solution_text": "法一(枚举法):一位数:2、3、5、7;两位数:22、23、25、27,32、33、35、37,52、53、55、57,72、73、75、77,从小到大第20个恰好是77.\n\n法二(加乘原理):一位数:4个;两位数: \\(4\\times 4 = 16\\) ,即两位数最后一个恰好是第20个,即77.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级一试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级一试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干清晰可独立出题，但文本块直接包含标准答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json#1#1",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json"
+        }
+      },
+      "text": "1. 如果一个自然数的每个数字都是质数,我们称这个数为\"好数\",例如:2、23、223等均为\"好数\".那么,将所有的\"好数\"从小到大排列,第20个是",
+      "answer": "77",
+      "solution": "法一(枚举法):一位数:2、3、5、7;两位数:22、23、25、27,32、33、35、37,52、53、55、57,72、73、75、77,从小到大第20个恰好是77.\n\n法二(加乘原理):一位数:4个;两位数: \\(4\\times 4 = 16\\) ,即两位数最后一个恰好是第20个,即77."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 在《冰雪奇缘》中,公主艾莎和安娜能控制水元素与火元素,她们各自制造了一些水结晶与火结晶.某日艾莎拿自己一半数量的水结晶与安娜一半数量的火结晶交换,结果发现:艾莎的水结晶与火结晶的数量之比为1:2,安娜的水结晶与火结晶的数量之比为3:4. 已知交换前,艾莎的火结晶和安娜的水结晶数量相等.那么交换前,艾莎和安娜的结晶总数之比是:____.(填写最简整数比)",
+      "answer_text": "8:13",
+      "solution_text": "法一:设艾莎原有水结晶 \\(a\\) 块,火结晶 \\(c\\) 块;安娜原有水结晶 \\(c\\) 块,火结晶糖 \\(b\\) 块;\n\n那么交换后得: \\(\\left\\{ \\begin{array}{l}\\frac{a}{2}:\\left(c + \\frac{b}{2}\\right) = 1:2 \\\\ \\displaystyle \\left(c + \\frac{a}{2}\\right):\\frac{b}{2} = 3:4 \\end{array} \\right.,\\)\n\n化简 \\(\\left\\{ \\begin{array}{l}a:(2c + b) = 1:2 = 7:14 \\\\ (2c + a):b = 3:4 = 9:12 \\end{array} \\right.,\\)\n\n所以 \\(a:b:c = 7:12:1\\)\n\n那么原有总结晶数之比为 \\((7 + 1):(1:12) = 8:13\\)\n\n法二:设交换后艾莎有水结晶 \\(x\\) 块,安娜原有火结晶 \\(4y\\) 块,那么艾莎原有水结晶 \\(2x\\) 块,安娜原有火结晶 \\(8y\\) 块,则 \\(2x - 4y = 3y - x\\) ,解得 \\(x:y = 7:3\\) ,",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级一试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级一试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中包含完整的答案和解析，有信息泄露风险，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json#1#2",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json"
+        }
+      },
+      "text": "2. 在《冰雪奇缘》中,公主艾莎和安娜能控制水元素与火元素,她们各自制造了一些水结晶与火结晶.某日艾莎拿自己一半数量的水结晶与安娜一半数量的火结晶交换,结果发现:艾莎的水结晶与火结晶的数量之比为1:2,安娜的水结晶与火结晶的数量之比为3:4. 已知交换前,艾莎的火结晶和安娜的水结晶数量相等.那么交换前,艾莎和安娜的结晶总数之比是:____.(填写最简整数比)",
+      "answer": "8:13",
+      "solution": "法一:设艾莎原有水结晶 \\(a\\) 块,火结晶 \\(c\\) 块;安娜原有水结晶 \\(c\\) 块,火结晶糖 \\(b\\) 块;\n\n那么交换后得: \\(\\left\\{ \\begin{array}{l}\\frac{a}{2}:\\left(c + \\frac{b}{2}\\right) = 1:2 \\\\ \\displaystyle \\left(c + \\frac{a}{2}\\right):\\frac{b}{2} = 3:4 \\end{array} \\right.,\\)\n\n化简 \\(\\left\\{ \\begin{array}{l}a:(2c + b) = 1:2 = 7:14 \\\\ (2c + a):b = 3:4 = 9:12 \\end{array} \\right.,\\)\n\n所以 \\(a:b:c = 7:12:1\\)\n\n那么原有总结晶数之比为 \\((7 + 1):(1:12) = 8:13\\)\n\n法二:设交换后艾莎有水结晶 \\(x\\) 块,安娜原有火结晶 \\(4y\\) 块,那么艾莎原有水结晶 \\(2x\\) 块,安娜原有火结晶 \\(8y\\) 块,则 \\(2x - 4y = 3y - x\\) ,解得 \\(x:y = 7:3\\) ,"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "3. 如图,以 \\(EF\\) 为直径的半圆与长方形 \\(ABCD\\) 的每条边均恰有一个公共点.线段 \\(EF\\) 、 \\(FC\\) 的长度分别为20厘米、2厘米,那么阴影部分面积是 平方厘米. \\((\\pi\\) 取3.14)",
+      "answer_text": "131",
+      "solution_text": "分别作线段 \\(MN / / AD\\) 、 \\(GH / / AB\\) ,会交于 \\(EF\\) 中点.\n\n因为 \\(EF = 20\\) 厘米,所以 \\(OF = OH = NC = 10\\) 厘米;\n\n又因为 \\(CF = 2\\) 厘米,所以 \\(NF = NC - CF = 8\\) 厘米;\n\n在直角三角形 \\(ONF\\) 中,由勾股定理得, \\(ON = 6\\) 厘米;\n\n易得 \\(OG = 8\\) 厘米,所以长方形 \\(ABCD\\) 长是18厘米,宽是16厘米;\n\n所\n\n![](ocr_debug/2020年总决赛六年级一试解析/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2020年总决赛六年级一试解析/pages/page_002/images/1.jpg)\n\n\\[S_{\\mathrm{阴}} = 18\\times 16 - \\pi \\times 10^{2}\\times \\frac{1}{2} = 288 - 157 = 131\\]\n\n## 二.解答题(每小题15分,共30分)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级一试解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级一试解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级一试解析/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级一试解析/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，直接用于考试会泄露答案，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json#2#3",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json"
+        }
+      },
+      "text": "3. 如图,以 \\(EF\\) 为直径的半圆与长方形 \\(ABCD\\) 的每条边均恰有一个公共点.线段 \\(EF\\) 、 \\(FC\\) 的长度分别为20厘米、2厘米,那么阴影部分面积是 平方厘米. \\((\\pi\\) 取3.14)",
+      "answer": "131",
+      "solution": "分别作线段 \\(MN / / AD\\) 、 \\(GH / / AB\\) ,会交于 \\(EF\\) 中点.\n\n因为 \\(EF = 20\\) 厘米,所以 \\(OF = OH = NC = 10\\) 厘米;\n\n又因为 \\(CF = 2\\) 厘米,所以 \\(NF = NC - CF = 8\\) 厘米;\n\n在直角三角形 \\(ONF\\) 中,由勾股定理得, \\(ON = 6\\) 厘米;\n\n易得 \\(OG = 8\\) 厘米,所以长方形 \\(ABCD\\) 长是18厘米,宽是16厘米;\n\n所\n\n![](ocr_debug/2020年总决赛六年级一试解析/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2020年总决赛六年级一试解析/pages/page_002/images/1.jpg)\n\n\\[S_{\\mathrm{阴}} = 18\\times 16 - \\pi \\times 10^{2}\\times \\frac{1}{2} = 288 - 157 = 131\\]\n\n## 二.解答题(每小题15分,共30分)"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 甲、乙、丙三人的糖果颗数都是正整数.\n\n如果甲给乙20颗糖果,乙的糖果数将是甲、丙糖果数之和的2倍;\n\n如果甲给丙30颗糖果,丙的糖果数将是甲、乙糖果数之和的3倍.\n\n请问:甲、乙、丙三人分别有多少颗糖果?",
+      "answer_text": "甲30、乙12、丙6",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级一试解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级一试解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整问题但直接给出了标准答案，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json#2#4",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json"
+        }
+      },
+      "text": "4. 甲、乙、丙三人的糖果颗数都是正整数.\n\n如果甲给乙20颗糖果,乙的糖果数将是甲、丙糖果数之和的2倍;\n\n如果甲给丙30颗糖果,丙的糖果数将是甲、乙糖果数之和的3倍.\n\n请问:甲、乙、丙三人分别有多少颗糖果?",
+      "answer": "甲30、乙12、丙6",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "5. 如图,12个圆圈排在8条直线上,将12个连续的自然数分别填在12个圆圈中,再求出每条直线上所有圆圈所填数的和.\n\n(1)试说明:不存在一种填法使这8个和都相等.\n\n(2)是否存在一种填法,使得这8个和恰有2种不同取值?\n\n如果可以,请给出一种填法,如果不可以,请说明理由.",
+      "answer_text": "详见下方",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级一试解析/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级一试解析/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题目和答案/解析标记，但答案内容不完整，存在潜在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 1,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json#3#5",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级一试解析.json"
+        }
+      },
+      "text": "5. 如图,12个圆圈排在8条直线上,将12个连续的自然数分别填在12个圆圈中,再求出每条直线上所有圆圈所填数的和.\n\n(1)试说明:不存在一种填法使这8个和都相等.\n\n(2)是否存在一种填法,使得这8个和恰有2种不同取值?\n\n如果可以,请给出一种填法,如果不可以,请说明理由.",
+      "answer": "详见下方",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 在阿基米德的墓碑上镌刻着一个等边圆柱体（即：高与底面直径相等的圆柱）。如图，\n\n从一个等边圆柱体中截出一个圆锥，如果剩下部分的表面积与圆锥表面积的差为1256平方厘米，则圆柱的表面积为平方厘米．（ \\(\\pi\\) 取3.14）",
+      "answer_text": "1884",
+      "solution_text": "如图，从图中可以看出，截出的两个几何体表面积之差恰为原圆柱体的侧面积.设原圆柱体的底面半径为 \\(r\\) ，则此圆柱体的高 \\(h = 2r\\) ，于是 \\(S_{\\text{侧面积}} = 2\\pi rh = 2\\pi r\\cdot 2r = 4\\pi r^{2}\\) ，而原圆柱体的表面积 \\(S = S_{\\text{侧面积}} + S_{\\text{底面积}} = 4\\pi r^{2} + 2\\pi r^{2} = 6\\pi r^{2}\\) ，由此可知 \\(S:S_{\\text{侧面积}} = 6\\pi r^{2}:4\\pi r^{2} = 1.5\\) ，又依题意 \\(S_{\\text{侧面积}} = 1256\\) 平方厘米，所以圆柱体的表面积 \\(S = 1.5\\times S_{\\text{侧面积}} = 1.5\\times 1256 = 1884\\) 平方厘米.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级二试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json#1#1",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json"
+        }
+      },
+      "text": "1. 在阿基米德的墓碑上镌刻着一个等边圆柱体（即：高与底面直径相等的圆柱）。如图，\n\n从一个等边圆柱体中截出一个圆锥，如果剩下部分的表面积与圆锥表面积的差为1256平方厘米，则圆柱的表面积为平方厘米．（ \\(\\pi\\) 取3.14）",
+      "answer": "1884",
+      "solution": "如图，从图中可以看出，截出的两个几何体表面积之差恰为原圆柱体的侧面积.设原圆柱体的底面半径为 \\(r\\) ，则此圆柱体的高 \\(h = 2r\\) ，于是 \\(S_{\\text{侧面积}} = 2\\pi rh = 2\\pi r\\cdot 2r = 4\\pi r^{2}\\) ，而原圆柱体的表面积 \\(S = S_{\\text{侧面积}} + S_{\\text{底面积}} = 4\\pi r^{2} + 2\\pi r^{2} = 6\\pi r^{2}\\) ，由此可知 \\(S:S_{\\text{侧面积}} = 6\\pi r^{2}:4\\pi r^{2} = 1.5\\) ，又依题意 \\(S_{\\text{侧面积}} = 1256\\) 平方厘米，所以圆柱体的表面积 \\(S = 1.5\\times S_{\\text{侧面积}} = 1.5\\times 1256 = 1884\\) 平方厘米."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 设将自然数 \\(n\\) 表示为两个非零自然数的平方差有 \\(F(n)\\) 种方法，\n\n例如： \\(15 = 8^{2} - 7^{2} = 4^{2} - 1^{2}\\) ，故 \\(F(15) = 2\\) ；而2不能表示，故 \\(F(2) = 0\\) ．那么，\n\n\\(F(1) + F(2) + F(3) + \\dots +F(100)\\) 的计算结果是",
+      "answer_text": "116",
+      "solution_text": "对于非零自然数 \\(a\\) ，若它能写成两个非零自然数的平方差，设 \\(a = m^{2} - n^{2}\\) （这里 \\(m\\) 、 \\(n\\) 均为非零自然数，且 \\(m > n\\) ），由于 \\(m^{2} - n^{2} = (m - n)(m + n)\\) ，故 \\(m - n\\) 、 \\(m + n\\) 均为自然数 \\(a\\) 的因数．考虑到 \\(m - n\\) 与 \\(m + n\\) 的奇偶性相同，因此对于任何一对奇偶性相同的正整数 \\(p\\) 、 \\(q\\) （ \\(p > q\\) ），其积 \\(pq\\) 就必然能写成两个非零自然数的平方差， \\((\\frac{p + q}{2})^{2} - (\\frac{p - q}{2})^{2}\\) 就是其对应的表示方法．这表明只要能找出有多少对奇偶性相同的正整数 \\((p,q)\\) 使得 \\(p > q\\) 且 \\(1\\leq pq\\leq 100\\) ，其对数就恰好就等于 \\(F(1) + F(2) + F(3) + \\dots +F\\) (100)的值．分类计算：\n\n在 \\(q = 1\\) 时， \\(p\\) 可以取3、5、7、…、99，满足条件的数对 \\((p,q)\\) 有49对；\n\n在 \\(q = 2\\) 时， \\(p\\) 可以取4、6、8、…、50，满足条件的数对 \\((p,q)\\) 有24对；\n\n在 \\(q = 3\\) 时， \\(p\\) 可以取5、7、9、…、33，满足条件的数对 \\((p,q)\\) 有15对；\n\n在 \\(q = 4\\) 时， \\(p\\) 可以取6、8、10、…、24，满足条件的数对 \\((p,q)\\) 有10对；\n\n在 \\(q = 5\\) 时， \\(p\\) 可以取7、9、11、…、19，满足条件的数对 \\((p,q)\\) 有7对；",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级二试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该题目块包含完整题干、答案和解析，适合作为练习题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json#1#2",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json"
+        }
+      },
+      "text": "2. 设将自然数 \\(n\\) 表示为两个非零自然数的平方差有 \\(F(n)\\) 种方法，\n\n例如： \\(15 = 8^{2} - 7^{2} = 4^{2} - 1^{2}\\) ，故 \\(F(15) = 2\\) ；而2不能表示，故 \\(F(2) = 0\\) ．那么，\n\n\\(F(1) + F(2) + F(3) + \\dots +F(100)\\) 的计算结果是",
+      "answer": "116",
+      "solution": "对于非零自然数 \\(a\\) ，若它能写成两个非零自然数的平方差，设 \\(a = m^{2} - n^{2}\\) （这里 \\(m\\) 、 \\(n\\) 均为非零自然数，且 \\(m > n\\) ），由于 \\(m^{2} - n^{2} = (m - n)(m + n)\\) ，故 \\(m - n\\) 、 \\(m + n\\) 均为自然数 \\(a\\) 的因数．考虑到 \\(m - n\\) 与 \\(m + n\\) 的奇偶性相同，因此对于任何一对奇偶性相同的正整数 \\(p\\) 、 \\(q\\) （ \\(p > q\\) ），其积 \\(pq\\) 就必然能写成两个非零自然数的平方差， \\((\\frac{p + q}{2})^{2} - (\\frac{p - q}{2})^{2}\\) 就是其对应的表示方法．这表明只要能找出有多少对奇偶性相同的正整数 \\((p,q)\\) 使得 \\(p > q\\) 且 \\(1\\leq pq\\leq 100\\) ，其对数就恰好就等于 \\(F(1) + F(2) + F(3) + \\dots +F\\) (100)的值．分类计算：\n\n在 \\(q = 1\\) 时， \\(p\\) 可以取3、5、7、…、99，满足条件的数对 \\((p,q)\\) 有49对；\n\n在 \\(q = 2\\) 时， \\(p\\) 可以取4、6、8、…、50，满足条件的数对 \\((p,q)\\) 有24对；\n\n在 \\(q = 3\\) 时， \\(p\\) 可以取5、7、9、…、33，满足条件的数对 \\((p,q)\\) 有15对；\n\n在 \\(q = 4\\) 时， \\(p\\) 可以取6、8、10、…、24，满足条件的数对 \\((p,q)\\) 有10对；\n\n在 \\(q = 5\\) 时， \\(p\\) 可以取7、9、11、…、19，满足条件的数对 \\((p,q)\\) 有7对；"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "3. 在如图 \\(4 \\times 4\\) 的方格表中选出三格, 其中任意两格均没有公共点, 一共有 ______ 种不同的选法.\n\n[答案] 140\n\n[解析] 考虑对 \\(4 \\times 4\\) 方格表中心处的 \\(2 \\times 2\\) 方格, 这 4 个方格中其中至多会选出一个方格, 于是进行分类讨论:\n\n情形 1: 如图 \\(a\\) , 若从这四个方格中选出了一个方格进行染色, 不妨设图中 \"☆\" 所在方格被选出, 则另外两个被选出的\n\n方格必选自图中标 \\(1 \\sim 7\\) 号的这七个方格中, 注意到 3 号方格和\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/0.jpg)\n\n5 号方格不能同时被选中, 因此共有 \\(C_{6}^{2} - 1 = 14\\) 种选法, 这表明这种情形下三个选出的方格共有 \\(4 \\times 14 = 56\\) 种选法;\n\n情形 2: 如图 \\(b1\\) , 若未从这四个方格中选出了方格, 则所有选出的方格均出自 \\(1 \\sim 12\\) 号方格. 将这 12 个方格分成 4 个部分, 可知每个部分中至多只能选出 1 个方格, 从而必有 1 个部分未选出方格, 不妨设 3- 4- 5 号方格中未选出, 下面对 9- 10- 11 号方格中选出的方格进行分类计算:\n\n如果 10 号方格被选出 (如图 \\(b2\\) ), 此时另外两个方格共有 \\(3 \\times 3 = 9\\) 种选法;\n\n如果 11 号 (或 9 号) 方格被选出 (如图 \\(b3\\) ), 此时另外两个方格共有 \\(2 \\times 3 = 6\\) 种选法; 这表明这种情形下选出三个方格共有 \\(4 \\times (9 + 2 \\times 6) = 84\\) 种选法.\n\n综上, 三个方格的选法共有 \\(56 + 84 = 140\\) 种.\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/1.jpg)\n\n<center>图 a</center>\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/2.jpg)\n\n<center>图 b1</center>\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/3.jpg)\n\n<center>图 b2</center>\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/4.jpg)\n\n<center>图 b3</center>\n\n## 二. 解答题 (每小题 15 分, 共 30 分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级二试解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/3.jpg",
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/4.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接附有答案和解析，答案泄露风险高，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json#2#3",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json"
+        }
+      },
+      "text": "3. 在如图 \\(4 \\times 4\\) 的方格表中选出三格, 其中任意两格均没有公共点, 一共有 ______ 种不同的选法.\n\n[答案] 140\n\n[解析] 考虑对 \\(4 \\times 4\\) 方格表中心处的 \\(2 \\times 2\\) 方格, 这 4 个方格中其中至多会选出一个方格, 于是进行分类讨论:\n\n情形 1: 如图 \\(a\\) , 若从这四个方格中选出了一个方格进行染色, 不妨设图中 \"☆\" 所在方格被选出, 则另外两个被选出的\n\n方格必选自图中标 \\(1 \\sim 7\\) 号的这七个方格中, 注意到 3 号方格和\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/0.jpg)\n\n5 号方格不能同时被选中, 因此共有 \\(C_{6}^{2} - 1 = 14\\) 种选法, 这表明这种情形下三个选出的方格共有 \\(4 \\times 14 = 56\\) 种选法;\n\n情形 2: 如图 \\(b1\\) , 若未从这四个方格中选出了方格, 则所有选出的方格均出自 \\(1 \\sim 12\\) 号方格. 将这 12 个方格分成 4 个部分, 可知每个部分中至多只能选出 1 个方格, 从而必有 1 个部分未选出方格, 不妨设 3- 4- 5 号方格中未选出, 下面对 9- 10- 11 号方格中选出的方格进行分类计算:\n\n如果 10 号方格被选出 (如图 \\(b2\\) ), 此时另外两个方格共有 \\(3 \\times 3 = 9\\) 种选法;\n\n如果 11 号 (或 9 号) 方格被选出 (如图 \\(b3\\) ), 此时另外两个方格共有 \\(2 \\times 3 = 6\\) 种选法; 这表明这种情形下选出三个方格共有 \\(4 \\times (9 + 2 \\times 6) = 84\\) 种选法.\n\n综上, 三个方格的选法共有 \\(56 + 84 = 140\\) 种.\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/1.jpg)\n\n<center>图 a</center>\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/2.jpg)\n\n<center>图 b1</center>\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/3.jpg)\n\n<center>图 b2</center>\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_002/images/4.jpg)\n\n<center>图 b3</center>\n\n## 二. 解答题 (每小题 15 分, 共 30 分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "4. 如图, E 是平行四边形 \\(ABCD\\) 的边 \\(BC\\) 上一点, \\(AE\\) 与 \\(BD\\) 交于点 \\(F\\) , \\(CF\\) 与 \\(DE\\) 交于点 \\(G\\) . 已知三角形 \\(BEF\\) 、 \\(ECG\\) 、 \\(AFG\\) 的面积分别为 19、45、48 (即图中阴影部分).\n\n(1) 求三角形 \\(DFG\\) 的面积;\n\n(2) 求平行四边形 \\(ABCD\\) 的面积.\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_003/images/0.jpg)",
+      "answer_text": "(1) 64 (2) 760",
+      "solution_text": "法一:(1)根据一半模型: \\(① + 19 + ③ + 45 = - 1 + ② + ③\\) ,所以 \\(②\\) ,即三角形DFG面积为 \\(19 + 45 = 64\\) 。\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_003/images/1.jpg)\n\n(2) 三角形 \\(DFG\\) 与三角形 \\(AFG\\) 的面积差为 \\(64 - 48 = 16\\) 。\n\n根据一半模型, \\(① + ② + ③ + ④ = ② + ④ + ⑤\\) 。 \\(① = ⑤ - ③\\) ,所以三角形 \\(BFG\\) 的面积为 \\(64 - 48 = 16\\) 。",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级二试解析/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题目、答案和解析，存在答案泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json#3#4",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json"
+        }
+      },
+      "text": "4. 如图, E 是平行四边形 \\(ABCD\\) 的边 \\(BC\\) 上一点, \\(AE\\) 与 \\(BD\\) 交于点 \\(F\\) , \\(CF\\) 与 \\(DE\\) 交于点 \\(G\\) . 已知三角形 \\(BEF\\) 、 \\(ECG\\) 、 \\(AFG\\) 的面积分别为 19、45、48 (即图中阴影部分).\n\n(1) 求三角形 \\(DFG\\) 的面积;\n\n(2) 求平行四边形 \\(ABCD\\) 的面积.\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_003/images/0.jpg)",
+      "answer": "(1) 64 (2) 760",
+      "solution": "法一:(1)根据一半模型: \\(① + 19 + ③ + 45 = - 1 + ② + ③\\) ,所以 \\(②\\) ,即三角形DFG面积为 \\(19 + 45 = 64\\) 。\n\n![](ocr_debug/2020年总决赛六年级二试解析/pages/page_003/images/1.jpg)\n\n(2) 三角形 \\(DFG\\) 与三角形 \\(AFG\\) 的面积差为 \\(64 - 48 = 16\\) 。\n\n根据一半模型, \\(① + ② + ③ + ④ = ② + ④ + ⑤\\) 。 \\(① = ⑤ - ③\\) ,所以三角形 \\(BFG\\) 的面积为 \\(64 - 48 = 16\\) 。"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛六年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "5. 如图,甲、乙、丙三人分别从 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三地同时出发去 \\(D\\) 地.出发一段时间后,一",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年总决赛六年级二试解析/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年总决赛六年级二试解析/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本为数学题干开头但不完整，无答案或解析信息，适合练习但不建议考试使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json#4#5",
+          "json_path": "source_pdf/六年级/2020/2020年总决赛六年级二试解析.json"
+        }
+      },
+      "text": "5. 如图,甲、乙、丙三人分别从 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三地同时出发去 \\(D\\) 地.出发一段时间后,一",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(\\left(\\frac{1}{6} +\\frac{1}{30}\\right)\\div \\left(\\frac{1}{100} -\\frac{1}{101}\\right)\\) 的计算结果是",
+      "answer_text": "2020",
+      "solution_text": "原式 \\(= \\frac{1}{5}\\times 10100 = 2020\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json#1#1",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(\\left(\\frac{1}{6} +\\frac{1}{30}\\right)\\div \\left(\\frac{1}{100} -\\frac{1}{101}\\right)\\) 的计算结果是",
+      "answer": "2020",
+      "solution": "原式 \\(= \\frac{1}{5}\\times 10100 = 2020\\)"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 商场用4800元购进若干盒玩具,加价 \\(20\\%\\) 出售,售出50盒后,由于包装损坏,余下的玩具每盒降价30元出售,全部销售完后,共盈利660元.那么,每盒玩具的进价为 元.",
+      "answer_text": "80",
+      "solution_text": "如果全部售出,利润为: \\(4800\\times 20\\% = 960\\) 元,\n\n实际利润为660元,比计划少了 \\(960 - 660 = 300\\) 元,\n\n所以,降价售出了: \\(300\\div 30 = 10\\) 盒;\n\n每盒进价为: \\(4800\\div (50 + 10) = 80\\) 元.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是完整数学问题，但文本块包含标准答案和详细解析，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json#1#2",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json"
+        }
+      },
+      "text": "2. 商场用4800元购进若干盒玩具,加价 \\(20\\%\\) 出售,售出50盒后,由于包装损坏,余下的玩具每盒降价30元出售,全部销售完后,共盈利660元.那么,每盒玩具的进价为 元.",
+      "answer": "80",
+      "solution": "如果全部售出,利润为: \\(4800\\times 20\\% = 960\\) 元,\n\n实际利润为660元,比计划少了 \\(960 - 660 = 300\\) 元,\n\n所以,降价售出了: \\(300\\div 30 = 10\\) 盒;\n\n每盒进价为: \\(4800\\div (50 + 10) = 80\\) 元."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如左下图,沙漠中的一块正方形区域ABCD,四个角上各装有一个雷达,雷达的扫描半径为50千米,且ABCD的中心 \\(O\\) 恰好在四个雷达的扫描边缘上.那么,这四个雷达所能扫描到的区域面积一共是 平方千米. \\((\\pi\\) 取3.14)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "25700",
+      "solution_text": "总面积为两个圆面积加虚线正方形面积\n\n\\[\\pi \\times 50^{2}\\times 2 + 100^{2} = 25700\\]",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json#1#3",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json"
+        }
+      },
+      "text": "3. 如左下图,沙漠中的一块正方形区域ABCD,四个角上各装有一个雷达,雷达的扫描半径为50千米,且ABCD的中心 \\(O\\) 恰好在四个雷达的扫描边缘上.那么,这四个雷达所能扫描到的区域面积一共是 平方千米. \\((\\pi\\) 取3.14)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "25700",
+      "solution": "总面积为两个圆面积加虚线正方形面积\n\n\\[\\pi \\times 50^{2}\\times 2 + 100^{2} = 25700\\]"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 如右上图,一道除法竖式中已经填出了\"2020\",那么商是\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "144",
+      "solution_text": "(1)看第6、7、8行,第6行一定是100,第7行是90多,\n\n(2)接着看第4、5、6行,第4行一定是102,第5行一定是92,\n\n(3)接着看第3行,一定是23,",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可出题，但文本块直接包含答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json#1#4",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json"
+        }
+      },
+      "text": "4. 如右上图,一道除法竖式中已经填出了\"2020\",那么商是\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "144",
+      "solution": "(1)看第6、7、8行,第6行一定是100,第7行是90多,\n\n(2)接着看第4、5、6行,第4行一定是102,第5行一定是92,\n\n(3)接着看第3行,一定是23,"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 对于任意数 \\(x\\) ,用 \\(x\\) 表示 \\(x\\) 四舍五入到整数后的结果,例如 \\(1.5 = 2\\) , \\(7.23 = 7\\) , \\(9 = 9\\) ,那么,\n\n\\(\\left|\\frac{1}{7}\\right| + \\left|\\frac{2}{7}\\right| + \\left|\\frac{2^2}{7}\\right| + \\dots +\\left|\\frac{2^8}{7}\\right|\\) 的计算结果是",
+      "answer_text": "73",
+      "solution_text": "\\(2^{k}\\) 除以7的余数分别是1、2、4,所以相邻三项之和与不加新定义直接求和相同.一共9项,那么有: \\(\\left|\\frac{1}{7}\\right| + \\left|\\frac{2}{{7}}\\right| + \\left|\\frac{2^{2}}{7}\\right| + \\dots + \\left|\\frac{2^{8}}{7}\\right| = \\frac{1 + 2 + 2^{2} + \\cdots + 2^{8}}{7} = \\frac{512 - 1}{7} = 73.\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，定义了四舍五入符号并提出了求和问题，没有出现答案或解析，因此适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "5. 对于任意数 \\(x\\) ,用 \\(x\\) 表示 \\(x\\) 四舍五入到整数后的结果,例如 \\(1.5 = 2\\) , \\(7.23 = 7\\) , \\(9 = 9\\) ,那么,\n\n\\(\\left|\\frac{1}{7}\\right| + \\left|\\frac{2}{7}\\right| + \\left|\\frac{2^2}{7}\\right| + \\dots +\\left|\\frac{2^8}{7}\\right|\\) 的计算结果是",
+      "answer": "73",
+      "solution": "\\(2^{k}\\) 除以7的余数分别是1、2、4,所以相邻三项之和与不加新定义直接求和相同.一共9项,那么有: \\(\\left|\\frac{1}{7}\\right| + \\left|\\frac{2}{{7}}\\right| + \\left|\\frac{2^{2}}{7}\\right| + \\dots + \\left|\\frac{2^{8}}{7}\\right| = \\frac{1 + 2 + 2^{2} + \\cdots + 2^{8}}{7} = \\frac{512 - 1}{7} = 73.\\)"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 三个不同两位数的最小公倍数能被 \\(1\\sim 16\\) 这16个自然数整除,这三个两位数之和是",
+      "answer_text": "270",
+      "solution_text": "1\\~16的最小公倍数为: \\(2^{4}\\times 3^{2}\\times 5\\times 7\\times 11\\times 13\\) ,这三个数只能是: \\(2^{4}\\times 5 = 80\\) , \\(13\\times 7 = 91\\) , \\(11\\times 3^{2} = 99\\) 和为: \\(80 + 91 + 99 = 270\\) .",
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "6. 三个不同两位数的最小公倍数能被 \\(1\\sim 16\\) 这16个自然数整除,这三个两位数之和是",
+      "answer": "270",
+      "solution": "1\\~16的最小公倍数为: \\(2^{4}\\times 3^{2}\\times 5\\times 7\\times 11\\times 13\\) ,这三个数只能是: \\(2^{4}\\times 5 = 80\\) , \\(13\\times 7 = 91\\) , \\(11\\times 3^{2} = 99\\) 和为: \\(80 + 91 + 99 = 270\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. 如图,将一个边长为6厘米正方形各边的三等分点按图中方式连接,则图中飞镖形阴影部分面积为 平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer_text": "10",
+      "solution_text": "解析:如下图:\n\n正方形EFGH的面积不难求出: \\(6\\times 6 - 2\\times 4\\times 2 = 20\\)\n\n如图,根据平行网格线,不难得出FH被4等分,所以,所\n\n求阴影部分占正方形EFGH的一半,为10平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（解析版）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（解析版）/pages/page_002/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为几何面积计算问题，题干完整，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json#1#7",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "7. 如图,将一个边长为6厘米正方形各边的三等分点按图中方式连接,则图中飞镖形阴影部分面积为 平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer": "10",
+      "solution": "解析:如下图:\n\n正方形EFGH的面积不难求出: \\(6\\times 6 - 2\\times 4\\times 2 = 20\\)\n\n如图,根据平行网格线,不难得出FH被4等分,所以,所\n\n求阴影部分占正方形EFGH的一半,为10平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（解析版）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（解析版）/pages/page_002/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 有一类四位数, 任意相邻的 2 个数字之和都是质数, 所有数字的总和是某个质数的平方. 例如, 四位数 2020 就具有这样的特点. 那么, 所有具有此类特点的四位数一共有 ______ 个.\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer_text": "22",
+      "solution_text": "四位数的数字和范围是1\\~36,因为所有数字的总和是某个质数的平方,所以满足条件四位数数字和是4,9,25,25分成前两位与后两位数字之和,只能是 \\(2 + 23\\) ,不满足题意.\n\n(一)数字之和为4:\n\n前两位与后两位数字之和均为2,符合条件的有:1120、1111、2020,一共3个.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，泄露风险高，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json#2#8",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（解析版）.json"
+        }
+      },
+      "text": "8. 有一类四位数, 任意相邻的 2 个数字之和都是质数, 所有数字的总和是某个质数的平方. 例如, 四位数 2020 就具有这样的特点. 那么, 所有具有此类特点的四位数一共有 ______ 个.\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer": "22",
+      "solution": "四位数的数字和范围是1\\~36,因为所有数字的总和是某个质数的平方,所以满足条件四位数数字和是4,9,25,25分成前两位与后两位数字之和,只能是 \\(2 + 23\\) ,不满足题意.\n\n(一)数字之和为4:\n\n前两位与后两位数字之和均为2,符合条件的有:1120、1111、2020,一共3个."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图所示, 在 \\(3 \\times 3\\) 的方格表中选择 5 格染成黑色, 其余 4 格染成白色, 使得任意 \\(2 \\times 2\\) 的方格中 4 个小方格不全同色, 那么, 总共有 ______ 种不同的染法. (方格表不可翻转或旋转)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "102",
+      "solution_text": "考虑不满足条件的情况,这时要么4个黑色,要么4个白色出现在一个 \\(2 \\times 2\\) 的方格中\n\n(1)4个黑色,共有4个位置可选,不妨设为左上角,如下图.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（解析版）/pages/page_003/images/3.jpg)\n\n剩下5个方格中再染1个黑格即可,共 \\(4 \\times 5 = 20\\) 种染法.\n\n(2)4个白色,也有4个位置可选,不妨设为左上角,如下图.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（解析版）/pages/page_003/images/4.jpg)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整描述了数学问题，无答案或解析信息泄露，可直接用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "9. 如图所示, 在 \\(3 \\times 3\\) 的方格表中选择 5 格染成黑色, 其余 4 格染成白色, 使得任意 \\(2 \\times 2\\) 的方格中 4 个小方格不全同色, 那么, 总共有 ______ 种不同的染法. (方格表不可翻转或旋转)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "102",
+      "solution": "考虑不满足条件的情况,这时要么4个黑色,要么4个白色出现在一个 \\(2 \\times 2\\) 的方格中\n\n(1)4个黑色,共有4个位置可选,不妨设为左上角,如下图.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（解析版）/pages/page_003/images/3.jpg)\n\n剩下5个方格中再染1个黑格即可,共 \\(4 \\times 5 = 20\\) 种染法.\n\n(2)4个白色,也有4个位置可选,不妨设为左上角,如下图.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（解析版）/pages/page_003/images/4.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 甲从 \\(A\\) 地出发匀速去 \\(B\\) 地, 乙从 \\(B\\) 地出发匀速去 \\(A\\) 地. 如果甲提前 1 小时出发, 则两人会在途中 \\(C\\) 地相遇. 如果两人同时出发, 各自到达目的地后立刻调头返回, 调头后也会在 \\(C\\) 地相遇. 如果两人同时出发, 各自到达目的地后停下; 那么, 当一个人到达目的地时, 另一个人还要 ______ 分钟到达.",
+      "answer_text": "30",
+      "solution_text": "假设甲乙第一次相遇的位置距离中点的长度为一份,\n\n那么甲乙第二次相遇的位置距离中点的长度应该为三份,\n\n注意到甲提前出发的时间长短和相遇点的位移成正比,\n\n所以为了让甲乙相遇的位置偏移到中点处,也就是偏移一份长度,\n\n应该让甲提前15分钟出发,\n\n也就是说乙走完全程时甲还差30分钟走完全程.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整的数学题干，描述明确，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "10. 甲从 \\(A\\) 地出发匀速去 \\(B\\) 地, 乙从 \\(B\\) 地出发匀速去 \\(A\\) 地. 如果甲提前 1 小时出发, 则两人会在途中 \\(C\\) 地相遇. 如果两人同时出发, 各自到达目的地后立刻调头返回, 调头后也会在 \\(C\\) 地相遇. 如果两人同时出发, 各自到达目的地后停下; 那么, 当一个人到达目的地时, 另一个人还要 ______ 分钟到达.",
+      "answer": "30",
+      "solution": "假设甲乙第一次相遇的位置距离中点的长度为一份,\n\n那么甲乙第二次相遇的位置距离中点的长度应该为三份,\n\n注意到甲提前出发的时间长短和相遇点的位移成正比,\n\n所以为了让甲乙相遇的位置偏移到中点处,也就是偏移一份长度,\n\n应该让甲提前15分钟出发,\n\n也就是说乙走完全程时甲还差30分钟走完全程."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 甲、乙、丙、丁四人参加一个团建项目, 内容为持接力棒让 4 人都通过桥. 接力棒只有 1 根, 桥上每次最多只允许 2 人同时通过. 每次过桥时必须持有接力棒, 如果两人同时过桥, 则需同时握住接力棒, 过桥时间以慢的人为准.\n\n甲、乙、丙、丁都仅从教练处得知了其余三人单独过一次桥分别所需的时间, 教练还告诉他们, 4 人单独过桥的时间都是整数分钟, 并且有: 甲 \\(< \\angle <\\) 丙 \\(< \\angle\\) .\n\n现有如下两种过桥方案:\n\n(一) 甲持接力棒来回送乙、丙、丁过桥.\n\n(二) 甲、乙先过桥, 甲回来后, 丙、丁再过桥, 乙回来后, 甲、乙再过桥.\n\n然后有如下对话:\n\n甲: \"虽然我不知道我过桥的时间, 但我能肯定方案二比方案一快.\"\n\n乙: \"听了甲的话, 我现在就知道我过桥需要几分钟了.\"\n\n丙: \"我也是在甲说完之后就知道我过桥需要几分钟了.\"\n\n丁: \"如果乙每次过桥比现在多花一分钟, 方案一就比方案二快了.\"\n\n如果他们说的都是正确的, 那么, 甲、乙、丙、丁按照最快方案都通过桥需要 ______ 分钟. (交接棒时间不计)",
+      "answer_text": "17",
+      "solution_text": "设甲、乙、丙、丁过桥时间分别为 \\(a, b, c, d\\) ,按照方案一进行过桥,总时间为 \\(2a + b + c + d\\) ;按照方案二过桥,总时间为: \\(a + 3b + d\\) .\n\n方案一比方案二快说明 \\(a + c< 2b\\) ;方案二比方案一快说明 \\(a + c< 2b\\) .\n\n甲不知道自己的过桥的时间,所以 \\(b \\geq 3\\) ;\n\n甲能保证方案二是比方案一快,所以对于所有的 \\(a\\) ,都有 \\(a + c > 2b\\) ,即 \\(c \\geq 2b\\) ;\n\n由丁的话可以得出结论: \\(a + c< 2(b + 1)\\) ,所以 \\(a = 1\\) 且 \\(c = 2b\\) .",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "11. 甲、乙、丙、丁四人参加一个团建项目, 内容为持接力棒让 4 人都通过桥. 接力棒只有 1 根, 桥上每次最多只允许 2 人同时通过. 每次过桥时必须持有接力棒, 如果两人同时过桥, 则需同时握住接力棒, 过桥时间以慢的人为准.\n\n甲、乙、丙、丁都仅从教练处得知了其余三人单独过一次桥分别所需的时间, 教练还告诉他们, 4 人单独过桥的时间都是整数分钟, 并且有: 甲 \\(< \\angle <\\) 丙 \\(< \\angle\\) .\n\n现有如下两种过桥方案:\n\n(一) 甲持接力棒来回送乙、丙、丁过桥.\n\n(二) 甲、乙先过桥, 甲回来后, 丙、丁再过桥, 乙回来后, 甲、乙再过桥.\n\n然后有如下对话:\n\n甲: \"虽然我不知道我过桥的时间, 但我能肯定方案二比方案一快.\"\n\n乙: \"听了甲的话, 我现在就知道我过桥需要几分钟了.\"\n\n丙: \"我也是在甲说完之后就知道我过桥需要几分钟了.\"\n\n丁: \"如果乙每次过桥比现在多花一分钟, 方案一就比方案二快了.\"\n\n如果他们说的都是正确的, 那么, 甲、乙、丙、丁按照最快方案都通过桥需要 ______ 分钟. (交接棒时间不计)",
+      "answer": "17",
+      "solution": "设甲、乙、丙、丁过桥时间分别为 \\(a, b, c, d\\) ,按照方案一进行过桥,总时间为 \\(2a + b + c + d\\) ;按照方案二过桥,总时间为: \\(a + 3b + d\\) .\n\n方案一比方案二快说明 \\(a + c< 2b\\) ;方案二比方案一快说明 \\(a + c< 2b\\) .\n\n甲不知道自己的过桥的时间,所以 \\(b \\geq 3\\) ;\n\n甲能保证方案二是比方案一快,所以对于所有的 \\(a\\) ,都有 \\(a + c > 2b\\) ,即 \\(c \\geq 2b\\) ;\n\n由丁的话可以得出结论: \\(a + c< 2(b + 1)\\) ,所以 \\(a = 1\\) 且 \\(c = 2b\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2020 \\times \\frac{1}{10 + 10\\%}\\) 的计算结果是",
+      "answer_text": "200",
+      "solution_text": "原式 \\(= 2020 \\times \\frac{1}{10.1} = \\frac{20200}{101} = 200\\) .",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（解析版）.json#1#1",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(2020 \\times \\frac{1}{10 + 10\\%}\\) 的计算结果是",
+      "answer": "200",
+      "solution": "原式 \\(= 2020 \\times \\frac{1}{10.1} = \\frac{20200}{101} = 200\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 在一幅长90厘米,宽40厘米的水彩画四周镶一条宽度为5厘米的银色彩条,则水彩画的面积是整幅画(包括彩条)的 \\(\\%\\) .",
+      "answer_text": "72",
+      "solution_text": "\\(40 \\times 90 \\div [(40 + 5 + 5) \\times (90 + 5 + 5)] \\times 100\\% = 72\\%\\) .",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整可独立出题，但文本块包含答案和解析，有泄露风险，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（解析版）.json#1#2",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（解析版）.json"
+        }
+      },
+      "text": "2. 在一幅长90厘米,宽40厘米的水彩画四周镶一条宽度为5厘米的银色彩条,则水彩画的面积是整幅画(包括彩条)的 \\(\\%\\) .",
+      "answer": "72",
+      "solution": "\\(40 \\times 90 \\div [(40 + 5 + 5) \\times (90 + 5 + 5)] \\times 100\\% = 72\\%\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如左下图,一道乘法竖式中已经填出了2、0、2、0,那么两个乘数的和是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "993",
+      "solution_text": "如解析图,乘积首位为1, \\(A\\) 为9, \\(B\\) 可能是7或8,若 \\(B\\) 为9会与 \\(A\\) 矛盾;\n\n若 \\(B\\) 为7,则第一个乘数是211- 229其中一个数的因数,且有一个倍数为形如 \\(92X\\) ,不存在这样的数;\n\n若 \\(B\\) 为8,则第一个乘数是111- 129其中一个数,且有一个倍数为形如 \\(92X\\) .只可能是 \\(115 \\times 8 = 920\\) .所以两个乘数分别为115和878,乘数的和为993.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（解析版）/pages/page_001/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、答案和解析，答案直接给出，存在高泄露风险，适合仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（解析版）.json#1#3",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（解析版）.json"
+        }
+      },
+      "text": "3. 如左下图,一道乘法竖式中已经填出了2、0、2、0,那么两个乘数的和是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "993",
+      "solution": "如解析图,乘积首位为1, \\(A\\) 为9, \\(B\\) 可能是7或8,若 \\(B\\) 为9会与 \\(A\\) 矛盾;\n\n若 \\(B\\) 为7,则第一个乘数是211- 229其中一个数的因数,且有一个倍数为形如 \\(92X\\) ,不存在这样的数;\n\n若 \\(B\\) 为8,则第一个乘数是111- 129其中一个数,且有一个倍数为形如 \\(92X\\) .只可能是 \\(115 \\times 8 = 920\\) .所以两个乘数分别为115和878,乘数的和为993.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（解析版）/pages/page_001/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 一个长方形的四个角剪掉4个四分之一圆,部分线段长度如右上图所示.那么阴影部分的面积是 \\(\\_\\) 平方厘米. \\((\\pi\\) 取3)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "422",
+      "solution_text": "如下图, \\(AE + DH = AD = 40\\)\n\n\\[AB + CD = AE + BE + DH + CH = 40 + 20 + 16 = 76,\\]\n\n所以 \\(AB = 76\\div 2 = 38\\)\n\n\\[AE = 38 - 20 = 18,\\]\n\n\\[DH = 38 - 16 = 22.\\]\n\n阴影部分面积为长方形减 4 个扇形,\n\n面积为 \\(38\\times 40 - \\frac{1}{4}\\times 3\\times (16\\times 16 + 18\\times 18 + 20\\times 20 + 22\\times 22) = 422\\) (平方厘米)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（解析版）/pages/page_002/images/1.jpg)\n\n## 二. 填空题II(每小题 10 分, 共 40 分)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（解析版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干描述完整但依赖图示，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json#1#4",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "4. 一个长方形的四个角剪掉4个四分之一圆,部分线段长度如右上图所示.那么阴影部分的面积是 \\(\\_\\) 平方厘米. \\((\\pi\\) 取3)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "422",
+      "solution": "如下图, \\(AE + DH = AD = 40\\)\n\n\\[AB + CD = AE + BE + DH + CH = 40 + 20 + 16 = 76,\\]\n\n所以 \\(AB = 76\\div 2 = 38\\)\n\n\\[AE = 38 - 20 = 18,\\]\n\n\\[DH = 38 - 16 = 22.\\]\n\n阴影部分面积为长方形减 4 个扇形,\n\n面积为 \\(38\\times 40 - \\frac{1}{4}\\times 3\\times (16\\times 16 + 18\\times 18 + 20\\times 20 + 22\\times 22) = 422\\) (平方厘米)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（解析版）/pages/page_002/images/1.jpg)\n\n## 二. 填空题II(每小题 10 分, 共 40 分)"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 定义新运算: \\(a \\triangle b\\) 表示 \\(a\\) 的数字和与 \\(b\\) 的数字和的差(大减小),那么算式 \\((1 \\triangle 2) + (2 \\triangle 3) + (3 \\triangle 4) + \\dots + (2018 \\triangle 2019) + (2019 \\triangle 2020)\\) 的计算结果是 \\(\\_\\) .",
+      "answer_text": "3631",
+      "solution_text": "方法一: 如不进位, 则结果为 1,\n\n如果产生 1 次进位, 则结果为 8,\n\n如果产生 2 次进位, 则结果为 17,\n\n如果产生 3 次进位, 则结果为 26,",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个定义新运算的完整数学题干，没有包含答案或解析信息，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "5. 定义新运算: \\(a \\triangle b\\) 表示 \\(a\\) 的数字和与 \\(b\\) 的数字和的差(大减小),那么算式 \\((1 \\triangle 2) + (2 \\triangle 3) + (3 \\triangle 4) + \\dots + (2018 \\triangle 2019) + (2019 \\triangle 2020)\\) 的计算结果是 \\(\\_\\) .",
+      "answer": "3631",
+      "solution": "方法一: 如不进位, 则结果为 1,\n\n如果产生 1 次进位, 则结果为 8,\n\n如果产生 2 次进位, 则结果为 17,\n\n如果产生 3 次进位, 则结果为 26,"
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 有若干名同学围成一圈,从小明开始按1,2,3,……依次报数.如果是顺时针报数,小刚第一次报的数是小红第一次报的数的8倍;如果是逆时针报数,小红第一次报的数\n\n是小刚第一次报的数的27倍.那么至少有 \\(\\_\\) 名同学.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer_text": "213",
+      "solution_text": "两次报数时,小刚、小红报的数的差不变,既是7的倍数,也是26的倍数,所以报数时他们俩之间的人数至少 \\(26 \\times 7 = 182\\) 人.\n\n因此,一共至少有 \\(7 \\times 26 - 1 + 7 + 26 - 1 = 213\\) 人.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有包含答案或解析，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "6. 有若干名同学围成一圈,从小明开始按1,2,3,……依次报数.如果是顺时针报数,小刚第一次报的数是小红第一次报的数的8倍;如果是逆时针报数,小红第一次报的数\n\n是小刚第一次报的数的27倍.那么至少有 \\(\\_\\) 名同学.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer": "213",
+      "solution": "两次报数时,小刚、小红报的数的差不变,既是7的倍数,也是26的倍数,所以报数时他们俩之间的人数至少 \\(26 \\times 7 = 182\\) 人.\n\n因此,一共至少有 \\(7 \\times 26 - 1 + 7 + 26 - 1 = 213\\) 人."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. 如图,有一个固定好的黑白相间格点阵, \\(A\\) 、 \\(B\\) 两点各有一只电子跳蚤同时开始跳动,每步同时沿格线跳到同行或同列的异色格点上,已知两只电子跳蚤各跳了2步,从未同时落到同一格点的跳法共有 \\(\\_\\) 种.",
+      "answer_text": "200",
+      "solution_text": "\\(A\\) 和 \\(B\\) 两只跳蚤第一步分别有4种跳法,即第一步有 \\(4 \\times 4 = 16\\) 种情况,\n\n其中第一步如果同时落在左下角或者右上角,不满足条件,即第一步有14种情况.\n\n在这14种情况中:\n\n若第一步恰在一个 \\(2 \\times 2\\) 正方形的对角顶点处,共有2种情况,每种情况下第二步有16种;\n\n其余12种情况,每种情况下第二步有14种;\n\n所以,共有 \\(12 \\times 14 + 2 \\times 16 = 200\\) 种.",
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json#1#7",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "7. 如图,有一个固定好的黑白相间格点阵, \\(A\\) 、 \\(B\\) 两点各有一只电子跳蚤同时开始跳动,每步同时沿格线跳到同行或同列的异色格点上,已知两只电子跳蚤各跳了2步,从未同时落到同一格点的跳法共有 \\(\\_\\) 种.",
+      "answer": "200",
+      "solution": "\\(A\\) 和 \\(B\\) 两只跳蚤第一步分别有4种跳法,即第一步有 \\(4 \\times 4 = 16\\) 种情况,\n\n其中第一步如果同时落在左下角或者右上角,不满足条件,即第一步有14种情况.\n\n在这14种情况中:\n\n若第一步恰在一个 \\(2 \\times 2\\) 正方形的对角顶点处,共有2种情况,每种情况下第二步有16种;\n\n其余12种情况,每种情况下第二步有14种;\n\n所以,共有 \\(12 \\times 14 + 2 \\times 16 = 200\\) 种."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 陈老师在黑板上写了四个不同的非零数字,有三位聪明诚实的同学分别看到了其中的三个数字.接着他们依次说了如下的话.\n\n甲说,我看到的都是质数;\n\n乙说,我看到的都是奇数;\n\n丙说,我看到的是连续的三个数字;\n\n最后陈老师告诉大家这四个数字能组成一个完全平方数.\n\n此时三位同学不约而同说,我们已经知道这个完全平方数是多少了.\n\n那么,这个完全平方数是\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "3721",
+      "solution_text": "甲看到的一定是2、3、5、7中的3个;\n\n再考虑乙、丙的话,四个数字是能是 \\((1,2,3,5)(1,2,3,7)(3,4,5,7)(3,5,6,7)\\) 中一组.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干描述完整，提出了明确问题且未包含答案或解析内容。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json#2#8",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "8. 陈老师在黑板上写了四个不同的非零数字,有三位聪明诚实的同学分别看到了其中的三个数字.接着他们依次说了如下的话.\n\n甲说,我看到的都是质数;\n\n乙说,我看到的都是奇数;\n\n丙说,我看到的是连续的三个数字;\n\n最后陈老师告诉大家这四个数字能组成一个完全平方数.\n\n此时三位同学不约而同说,我们已经知道这个完全平方数是多少了.\n\n那么,这个完全平方数是\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "3721",
+      "solution": "甲看到的一定是2、3、5、7中的3个;\n\n再考虑乙、丙的话,四个数字是能是 \\((1,2,3,5)(1,2,3,7)(3,4,5,7)(3,5,6,7)\\) 中一组."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图,在正六边形ABCDEF中,点 \\(G\\) 是线段 \\(EF\\) 上一点,线段 \\(BD\\) 与线段 \\(CG\\) 相交于点 \\(O\\) .已知三角形 \\(BCO\\) 的面积是1818,三角形 \\(CDO\\) 的面积是1212,那么三角形 \\(AFG\\) 面积是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "2020",
+      "solution_text": "三角形 \\(BCD\\) 面积为 \\(1818 + 1212 = 3030\\) ,所以三角形 \\(BCG\\) 面积为 \\(3030 \\times 2 = 6060\\) ;\n\n\\(BOG\\) 面积为 \\(6060 - 1818 = 4242\\) ,所以三角形 \\(DOG\\) 面积为 \\(4242 \\times \\frac{1212}{1818} = 2828\\) .\n\n\\(AFG\\) 面积为 \\(6060 - 2828 - 1212 = 2020\\) .",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，无答案泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "9. 如图,在正六边形ABCDEF中,点 \\(G\\) 是线段 \\(EF\\) 上一点,线段 \\(BD\\) 与线段 \\(CG\\) 相交于点 \\(O\\) .已知三角形 \\(BCO\\) 的面积是1818,三角形 \\(CDO\\) 的面积是1212,那么三角形 \\(AFG\\) 面积是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "2020",
+      "solution": "三角形 \\(BCD\\) 面积为 \\(1818 + 1212 = 3030\\) ,所以三角形 \\(BCG\\) 面积为 \\(3030 \\times 2 = 6060\\) ;\n\n\\(BOG\\) 面积为 \\(6060 - 1818 = 4242\\) ,所以三角形 \\(DOG\\) 面积为 \\(4242 \\times \\frac{1212}{1818} = 2828\\) .\n\n\\(AFG\\) 面积为 \\(6060 - 2828 - 1212 = 2020\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 右图是一个 \\(3 \\times 4\\) 的长方形点阵,相邻两行和相邻两列的距离都相等,以这些点中的4个点为顶点的梯形共有 个.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "106",
+      "solution_text": "上下底水平放置的梯形有 \\(C_{3}^{2} \\times \\left(C_{4}^{2} \\times C_{4}^{2} - 3 \\times 3 - 2 \\times 2 - 1 \\times 1\\right) = 66\\) (个),\n\n上下底竖直放置的梯形有 \\(C_{4}^{2} \\times \\left(C_{3}^{2} \\times C_{3}^{2} - 2 \\times 2 - 1 \\times 1\\right) = 24\\) (个),\n\n上下底斜着放置的梯形有16个,因此共有 \\(66 + 24 + 16 = 106\\) 个梯形.",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "10. 右图是一个 \\(3 \\times 4\\) 的长方形点阵,相邻两行和相邻两列的距离都相等,以这些点中的4个点为顶点的梯形共有 个.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "106",
+      "solution": "上下底水平放置的梯形有 \\(C_{3}^{2} \\times \\left(C_{4}^{2} \\times C_{4}^{2} - 3 \\times 3 - 2 \\times 2 - 1 \\times 1\\right) = 66\\) (个),\n\n上下底竖直放置的梯形有 \\(C_{4}^{2} \\times \\left(C_{3}^{2} \\times C_{3}^{2} - 2 \\times 2 - 1 \\times 1\\right) = 24\\) (个),\n\n上下底斜着放置的梯形有16个,因此共有 \\(66 + 24 + 16 = 106\\) 个梯形."
+    },
+    {
+      "grade": 6,
+      "year": 2020,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 如图, \\(ABCD\\) 是一个长方形,面积为10平方千米,在 \\(D\\) 、 \\(E\\) 、 \\(F\\) 三点各有一个公交车站,公交车\n\n沿着 \\(E \\rightarrow A \\rightarrow F \\rightarrow B \\rightarrow C \\rightarrow D\\) 的路线匀速前进, \\(AE\\) 长500米, \\(AF\\) 长1300米,甲、乙、丙三兄弟同时从 \\(A\\) 点出发去 \\(D\\) 点,他们三人分别选择: \\(①\\) 骑单车到 \\(E\\) 点转乘公交车; \\(②\\) 骑单车到 \\(F\\) 点转乘公交车; \\(③\\) 直接沿 \\(A \\rightarrow D\\) 的路线骑单车回家.当丙骑车到达 \\(D\\) 时,甲、乙两人都距离 \\(D\\) 点1625米,已知兄弟三人骑单车速度相同.那么 \\(AD\\) 长为 千米.(三人上下车和等车的时间,公交车停靠站时间均忽略不计)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/六年级/2020/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "11. 如图, \\(ABCD\\) 是一个长方形,面积为10平方千米,在 \\(D\\) 、 \\(E\\) 、 \\(F\\) 三点各有一个公交车站,公交车\n\n沿着 \\(E \\rightarrow A \\rightarrow F \\rightarrow B \\rightarrow C \\rightarrow D\\) 的路线匀速前进, \\(AE\\) 长500米, \\(AF\\) 长1300米,甲、乙、丙三兄弟同时从 \\(A\\) 点出发去 \\(D\\) 点,他们三人分别选择: \\(①\\) 骑单车到 \\(E\\) 点转乘公交车; \\(②\\) 骑单车到 \\(F\\) 点转乘公交车; \\(③\\) 直接沿 \\(A \\rightarrow D\\) 的路线骑单车回家.当丙骑车到达 \\(D\\) 时,甲、乙两人都距离 \\(D\\) 点1625米,已知兄弟三人骑单车速度相同.那么 \\(AD\\) 长为 千米.(三人上下车和等车的时间,公交车停靠站时间均忽略不计)\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

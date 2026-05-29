@@ -1,0 +1,3390 @@
+{
+  "grade": 6,
+  "year": 2018,
+  "total_problems": 86,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级一试_ 解答版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级一试_ 解答版",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 一个半径为5厘米的轮子放置在如图的阴影弓形中．它能沿着弓形的弦 \\(AB\\) 滚动，如果弓形的半径 \\(OA\\) 、 \\(OB\\) 为25厘米， \\(AB\\) 长为48厘米．那么轮子在 \\(AB\\) 上滚动时能扫过区域的面积为平方厘米．（ \\(\\pi\\) 取3）\n\n![](ocr_debug/2018年六年级一试_ 解答版/pages/page_001/images/0.jpg)",
+      "answer_text": "395",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级一试_ 解答版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_ 解答版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_ 解答版/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，存在高泄露风险，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级一试_ 解答版.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018年六年级一试_ 解答版.json"
+        }
+      },
+      "text": "2. 一个半径为5厘米的轮子放置在如图的阴影弓形中．它能沿着弓形的弦 \\(AB\\) 滚动，如果弓形的半径 \\(OA\\) 、 \\(OB\\) 为25厘米， \\(AB\\) 长为48厘米．那么轮子在 \\(AB\\) 上滚动时能扫过区域的面积为平方厘米．（ \\(\\pi\\) 取3）\n\n![](ocr_debug/2018年六年级一试_ 解答版/pages/page_001/images/0.jpg)",
+      "answer": "395",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级一试_ 解答版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级一试_ 解答版",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "3. 下式中相同字母代表相同数字,不同的字母代表不同的数字,那么四位数 \\(\\overline{{a b c d}}\\) 是\n\n\\[\\left(\\overline{{a b}}\\right)^{c}\\times \\overline{{a c d}} = \\overline{{a b c a c d}}\\]",
+      "answer_text": "3125",
+      "solution_text": "原式根据位值原理可以变形成: \\(\\left[\\left(\\overline{{a b}}\\right)^{c} - 1\\right]\\times \\overline{{a c d}} = \\overline{{a b c 000}}.\\)\n\n根据 \\(\\left(\\overline{{a b}}\\right)^{c}\\times \\overline{{a c d}} =\\overline{{a b c a c d}}\\) , \\(\\overline{{a b}}\\) 是两位数,所以每乘一次结果数位至少增加1位,最多增加2位. \\(\\overline{{a c d}}\\) 是三位数, \\(\\overline{{a b c a c d}}\\) 六位数,所以 \\(c\\) 为2或3.\n\n(1)如果 \\(c = 3\\) ,\n\n因为 \\(20^{3}\\times 200 = 1600000\\) ,超过六位数,所以 \\(a = 1\\) ;即: \\(\\left[\\left(\\overline{{1b}}\\right)^{3} - 1\\right]\\times \\overline{{13d}} = \\overline{{1b3}}\\times 1000\\)\n\n因为等式右边有3个因数5,而 \\(\\overline{{13d}}\\) 至多提供1个因数5,所以 \\(\\left(\\overline{{1b}}\\right)^{3} - 1\\) 结果一定是25的倍数,那么 \\(\\left(\\overline{{1b}}\\right)^{3}\\) 末两位为01、26、51、76,通过个位判断, \\(b = 1\\) 或6,末两位均不符合.\n\n(2)如果 \\(c = 2\\) ,那么有: \\(\\left[\\left(\\overline{{a b}}\\right)^{2} - 1\\right]\\times \\overline{{a2d}} = \\overline{{a b2000}}\\)\n\n那么有: \\(\\left(\\overline{{a b}}\\right)^{2} - 1 = 1000\\times \\frac{\\overline{{a b2}}}{a2d}\\) ,因为 \\(0.5< \\frac{\\overline{{a b2}}}{a2d} < 2\\) ,所以 \\(500< \\left(\\overline{{a b}}\\right)^{2} - 1< 2000\\) ,所以 \\(a\\) 可以取2、3或4,这样 \\(\\overline{{a2d}}\\) 不可能是125或者625,所以最多只能提供2个因数5,那么 \\(\\left(\\overline{{a b}}\\right)^{2} - 1\\) 一定是5的倍数,那么 \\(b\\) 可以取1、9、4、或6.\n\n由 \\(\\left[\\left(\\overline{{a b}}\\right)^{2} - 1\\right]\\left.\\times \\overline{{a2d}} = \\overline{{a b2000}}\\right.\\) 得 \\(\\left(\\overline{{a b}} - 1\\right)\\times \\left(\\overline{{a b}} +1\\right)\\times \\overline{{a2d}} = \\overline{{a b2000}}\\) ,那么有:",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级一试_ 解答版/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_ 解答版/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整但包含答案和解析，泄露风险高，适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级一试_ 解答版.json#2#3",
+          "json_path": "source_pdf/六年级/2018/2018年六年级一试_ 解答版.json"
+        }
+      },
+      "text": "3. 下式中相同字母代表相同数字,不同的字母代表不同的数字,那么四位数 \\(\\overline{{a b c d}}\\) 是\n\n\\[\\left(\\overline{{a b}}\\right)^{c}\\times \\overline{{a c d}} = \\overline{{a b c a c d}}\\]",
+      "answer": "3125",
+      "solution": "原式根据位值原理可以变形成: \\(\\left[\\left(\\overline{{a b}}\\right)^{c} - 1\\right]\\times \\overline{{a c d}} = \\overline{{a b c 000}}.\\)\n\n根据 \\(\\left(\\overline{{a b}}\\right)^{c}\\times \\overline{{a c d}} =\\overline{{a b c a c d}}\\) , \\(\\overline{{a b}}\\) 是两位数,所以每乘一次结果数位至少增加1位,最多增加2位. \\(\\overline{{a c d}}\\) 是三位数, \\(\\overline{{a b c a c d}}\\) 六位数,所以 \\(c\\) 为2或3.\n\n(1)如果 \\(c = 3\\) ,\n\n因为 \\(20^{3}\\times 200 = 1600000\\) ,超过六位数,所以 \\(a = 1\\) ;即: \\(\\left[\\left(\\overline{{1b}}\\right)^{3} - 1\\right]\\times \\overline{{13d}} = \\overline{{1b3}}\\times 1000\\)\n\n因为等式右边有3个因数5,而 \\(\\overline{{13d}}\\) 至多提供1个因数5,所以 \\(\\left(\\overline{{1b}}\\right)^{3} - 1\\) 结果一定是25的倍数,那么 \\(\\left(\\overline{{1b}}\\right)^{3}\\) 末两位为01、26、51、76,通过个位判断, \\(b = 1\\) 或6,末两位均不符合.\n\n(2)如果 \\(c = 2\\) ,那么有: \\(\\left[\\left(\\overline{{a b}}\\right)^{2} - 1\\right]\\times \\overline{{a2d}} = \\overline{{a b2000}}\\)\n\n那么有: \\(\\left(\\overline{{a b}}\\right)^{2} - 1 = 1000\\times \\frac{\\overline{{a b2}}}{a2d}\\) ,因为 \\(0.5< \\frac{\\overline{{a b2}}}{a2d} < 2\\) ,所以 \\(500< \\left(\\overline{{a b}}\\right)^{2} - 1< 2000\\) ,所以 \\(a\\) 可以取2、3或4,这样 \\(\\overline{{a2d}}\\) 不可能是125或者625,所以最多只能提供2个因数5,那么 \\(\\left(\\overline{{a b}}\\right)^{2} - 1\\) 一定是5的倍数,那么 \\(b\\) 可以取1、9、4、或6.\n\n由 \\(\\left[\\left(\\overline{{a b}}\\right)^{2} - 1\\right]\\left.\\times \\overline{{a2d}} = \\overline{{a b2000}}\\right.\\) 得 \\(\\left(\\overline{{a b}} - 1\\right)\\times \\left(\\overline{{a b}} +1\\right)\\times \\overline{{a2d}} = \\overline{{a b2000}}\\) ,那么有:"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级一试_ 解答版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级一试_ 解答版",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "4. 老国王要把100座城池划分给自己的7个王子,7个王子按照年龄从大到小分到的城池数量是递减的.\n\n大王子:\"虽然我分到的城池最多,但还是要比五弟、六弟、七弟的总和少.\"\n\n二王子:\"还好我分到的城池数量比六弟、七弟的总和多.\"\n\n三王子:\"真可惜,我分到的城池数量就比六弟、七弟的总和少.\"\n\n四王子:\"我分到的城池数量是5的倍数.\"\n\n如果王子们都没有说谎,并且大王子分到的城池数量是个质数.请问:三王子分到了多少个城池?",
+      "answer_text": "16",
+      "solution_text": "设大王子到七王子分到的城池数依次为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 、 \\(G\\) ,(其中 \\(A\\) 为质数),\n\n那么有: \\(A > B > C > D > E > F > G\\)\n\n由大王子说的话可得: \\(A< E + F + G\\)\n\n由二王子说的话可得: \\(B > F + G\\)\n\n由三王子说的话可得: \\(C< F + G\\)\n\n由四王子说的话可得: \\(D\\) 能被5整除;\n\n(一)先确定 \\(A = 23\\)\n\n(1)若 \\(A = 29\\) ,则 \\(E + F + G\\geq 30\\) ,那么有 \\(B + C + D\\geq E + F + G + 9\\geq 39\\) ,那么总和大于100.\n\n(2)若 \\(A = 19\\) ,则 \\(B\\leq 18\\) , \\(F + G\\leq 17\\) ,那么, \\(C\\leq 16\\) , \\(D\\leq 15\\) , \\(E\\leq 14\\)\n\n则 \\(A\\) 到 \\(F\\) 的总和最大值 \\(19 + 18 + 17 + 16 + 15 + 14 = 99< 100\\) ,所以 \\(A\\) 需要比19大.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级一试_ 解答版/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_ 解答版/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整的题干、答案和解析，因此存在信息泄露风险，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级一试_ 解答版.json#3#4",
+          "json_path": "source_pdf/六年级/2018/2018年六年级一试_ 解答版.json"
+        }
+      },
+      "text": "4. 老国王要把100座城池划分给自己的7个王子,7个王子按照年龄从大到小分到的城池数量是递减的.\n\n大王子:\"虽然我分到的城池最多,但还是要比五弟、六弟、七弟的总和少.\"\n\n二王子:\"还好我分到的城池数量比六弟、七弟的总和多.\"\n\n三王子:\"真可惜,我分到的城池数量就比六弟、七弟的总和少.\"\n\n四王子:\"我分到的城池数量是5的倍数.\"\n\n如果王子们都没有说谎,并且大王子分到的城池数量是个质数.请问:三王子分到了多少个城池?",
+      "answer": "16",
+      "solution": "设大王子到七王子分到的城池数依次为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 、 \\(G\\) ,(其中 \\(A\\) 为质数),\n\n那么有: \\(A > B > C > D > E > F > G\\)\n\n由大王子说的话可得: \\(A< E + F + G\\)\n\n由二王子说的话可得: \\(B > F + G\\)\n\n由三王子说的话可得: \\(C< F + G\\)\n\n由四王子说的话可得: \\(D\\) 能被5整除;\n\n(一)先确定 \\(A = 23\\)\n\n(1)若 \\(A = 29\\) ,则 \\(E + F + G\\geq 30\\) ,那么有 \\(B + C + D\\geq E + F + G + 9\\geq 39\\) ,那么总和大于100.\n\n(2)若 \\(A = 19\\) ,则 \\(B\\leq 18\\) , \\(F + G\\leq 17\\) ,那么, \\(C\\leq 16\\) , \\(D\\leq 15\\) , \\(E\\leq 14\\)\n\n则 \\(A\\) 到 \\(F\\) 的总和最大值 \\(19 + 18 + 17 + 16 + 15 + 14 = 99< 100\\) ,所以 \\(A\\) 需要比19大."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级一试_ 解答版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级一试_ 解答版",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "5. 一个十位数的每个数字均是1或2,任取其中相邻三位可以得到8个不同的三位数.这样的十位数共有多少个?请将其一一列举出来.",
+      "answer_text": "16",
+      "solution_text": "解答1:这样的十位数共有16个.因为若一个十位数满足要求,则将其中的数字1换为2、而2换为1所得到的十位数也满足要求,所以不妨设这个十位数的前三位中1的个数较多,可以得到以下四类:\n\n(1)前三位数字是111,经过检验有两个解1112221211、1112122211,对称的可得到两个解2221112122、2221211122;\n\n(2)前三位数字是112,经过检验有两个解1122212111、1121222111,对称的可得到两个解2211121222、2212111222;\n\n(3)前三位数字是121,经过检验有两个解1212221112、1211122212,对称的可得到两个解2121112221、2122211121;\n\n(4)前三位数字是211,经过检验有两个解2111222121、2111212221,对称的可得到两个解1222111212、1222121112.\n\n解答2:这样的十位数共有16个.\n\n考虑到这个十位数中必有三个连续的1、还有三个连续的2,而且十位数中必不存在四个连续的1、四个连续的2. 根据对称性,不妨设111排在222之前,于是按照这两个三位数之间所隔数的个数可分成以下五种情况:\n\n(1)如果111、222相邻,需要考虑以下三种情况:\n\n\\(①\\) 对于111222_ _,只有1112221211符合要求,类似的数有2212111222,对称的还有2221112122、1121222111,有4个满足条件的数;\n\n\\(②\\) 对于_111222_ _,只有2111222121符合要求,类似的数有2121112221,对称的还有1222111212、1212221112,有4个满足条件的数;\n\n\\(③\\) 对于_111222_ _,只有1211122212符合要求,对称的有2122211121,有2",
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级一试_ 解答版/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_ 解答版/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整数学题干、直接答案和详细解析，答案泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级一试_ 解答版.json#4#5",
+          "json_path": "source_pdf/六年级/2018/2018年六年级一试_ 解答版.json"
+        }
+      },
+      "text": "5. 一个十位数的每个数字均是1或2,任取其中相邻三位可以得到8个不同的三位数.这样的十位数共有多少个?请将其一一列举出来.",
+      "answer": "16",
+      "solution": "解答1:这样的十位数共有16个.因为若一个十位数满足要求,则将其中的数字1换为2、而2换为1所得到的十位数也满足要求,所以不妨设这个十位数的前三位中1的个数较多,可以得到以下四类:\n\n(1)前三位数字是111,经过检验有两个解1112221211、1112122211,对称的可得到两个解2221112122、2221211122;\n\n(2)前三位数字是112,经过检验有两个解1122212111、1121222111,对称的可得到两个解2211121222、2212111222;\n\n(3)前三位数字是121,经过检验有两个解1212221112、1211122212,对称的可得到两个解2121112221、2122211121;\n\n(4)前三位数字是211,经过检验有两个解2111222121、2111212221,对称的可得到两个解1222111212、1222121112.\n\n解答2:这样的十位数共有16个.\n\n考虑到这个十位数中必有三个连续的1、还有三个连续的2,而且十位数中必不存在四个连续的1、四个连续的2. 根据对称性,不妨设111排在222之前,于是按照这两个三位数之间所隔数的个数可分成以下五种情况:\n\n(1)如果111、222相邻,需要考虑以下三种情况:\n\n\\(①\\) 对于111222_ _,只有1112221211符合要求,类似的数有2212111222,对称的还有2221112122、1121222111,有4个满足条件的数;\n\n\\(②\\) 对于_111222_ _,只有2111222121符合要求,类似的数有2121112221,对称的还有1222111212、1212221112,有4个满足条件的数;\n\n\\(③\\) 对于_111222_ _,只有1211122212符合要求,对称的有2122211121,有2"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级一试_试卷版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级一试_试卷版",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 如图，在每个空格内填入 \\(1 \\sim 4\\) 中的一个，使每行、每列以及每个由粗线所围成的区域中的四个数都不重复，且任意相邻两个空格所填数的和都是质数。那么四位数 \\(ABCD =\\) ______。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级一试_试卷版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_试卷版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，无答案或解析信息，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json"
+        }
+      },
+      "text": "1. 如图，在每个空格内填入 \\(1 \\sim 4\\) 中的一个，使每行、每列以及每个由粗线所围成的区域中的四个数都不重复，且任意相邻两个空格所填数的和都是质数。那么四位数 \\(ABCD =\\) ______。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级一试_试卷版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级一试_试卷版",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 一个半径为5厘米的轮子放置在如图的阴影弓形中．它能沿着弓形的弦 \\(AB\\) 滚动，如果弓形的半径 \\(OA\\) 、 \\(OB\\) 为25厘米， \\(AB\\) 长为48厘米．那么轮子在 \\(AB\\) 上滚动时能扫过区域的面积为______平方厘米．（ \\(\\pi\\) 取3）\n\n<table><tr><td>A</td><td>B</td><td>C</td><td>D</td></tr><tr><td></td><td></td><td>1</td><td></td></tr><tr><td></td><td></td><td>2</td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></table>\n\n![](ocr_debug/2018年六年级一试_试卷版/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级一试_试卷版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_试卷版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_试卷版/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题目，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json"
+        }
+      },
+      "text": "2. 一个半径为5厘米的轮子放置在如图的阴影弓形中．它能沿着弓形的弦 \\(AB\\) 滚动，如果弓形的半径 \\(OA\\) 、 \\(OB\\) 为25厘米， \\(AB\\) 长为48厘米．那么轮子在 \\(AB\\) 上滚动时能扫过区域的面积为______平方厘米．（ \\(\\pi\\) 取3）\n\n<table><tr><td>A</td><td>B</td><td>C</td><td>D</td></tr><tr><td></td><td></td><td>1</td><td></td></tr><tr><td></td><td></td><td>2</td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></table>\n\n![](ocr_debug/2018年六年级一试_试卷版/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级一试_试卷版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级一试_试卷版",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 下式中相同字母代表相同数字，不同的字母代表不同的数字，那么四位数 \\(abcd\\) 是 ______。\n\n\\[\\left(\\overline{ab}\\right)^{c} \\times \\overline{acd} = \\overline{abcacd}\\]\n\n## 二. 解答题（每题15分，共30分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级一试_试卷版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_试卷版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个独立的数学题干，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json#1#3",
+          "json_path": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json"
+        }
+      },
+      "text": "3. 下式中相同字母代表相同数字，不同的字母代表不同的数字，那么四位数 \\(abcd\\) 是 ______。\n\n\\[\\left(\\overline{ab}\\right)^{c} \\times \\overline{acd} = \\overline{abcacd}\\]\n\n## 二. 解答题（每题15分，共30分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级一试_试卷版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级一试_试卷版",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 老国王要把100座城池划分给自己的7个王子，7个王子按照年龄从大到小分到的城池数量是递减的.\n\n大王子：“虽然我分到的城池最多，但还是要比五弟、六弟、七弟的总和少.”\n\n二王子：“还好我分到的城池数量比六弟、七弟的总和多.”\n\n三王子：“真可惜，我分到的城池数量就比六弟、七弟的总和少.”\n\n四王子：“我分到的城池数量是5的倍数.”\n\n如果王子们都没有说谎，并且大王子分到的城池数量是个质数．请问：三王子分到了多少个城池？",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级一试_试卷版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_试卷版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个独立的逻辑推理题干，没有包含答案或解析，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json#1#4",
+          "json_path": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json"
+        }
+      },
+      "text": "4. 老国王要把100座城池划分给自己的7个王子，7个王子按照年龄从大到小分到的城池数量是递减的.\n\n大王子：“虽然我分到的城池最多，但还是要比五弟、六弟、七弟的总和少.”\n\n二王子：“还好我分到的城池数量比六弟、七弟的总和多.”\n\n三王子：“真可惜，我分到的城池数量就比六弟、七弟的总和少.”\n\n四王子：“我分到的城池数量是5的倍数.”\n\n如果王子们都没有说谎，并且大王子分到的城池数量是个质数．请问：三王子分到了多少个城池？",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级一试_试卷版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级一试_试卷版",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 一个十位数的每个数字均是 1 或 2, 任取其中相邻三位可以得到 8 个不同的三位数. 这样的十位数共有多少个? 请将其一一列举出来.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级一试_试卷版/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级一试_试卷版/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学问题题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json#2#5",
+          "json_path": "source_pdf/六年级/2018/2018年六年级一试_试卷版.json"
+        }
+      },
+      "text": "5. 一个十位数的每个数字均是 1 或 2, 任取其中相邻三位可以得到 8 个不同的三位数. 这样的十位数共有多少个? 请将其一一列举出来.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级二试_解答版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级二试_解答版",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 某次数学竞赛,原计划只有六年级学生参加,参赛学生男、女人数之比为15:8;现组委会决定增加五年级组,并且要求五年级组参赛的男、女生人数一样多,这样女生总数比男生总数少 \\(28\\%\\) ;后来又决定六年级增加18名女生,这样参赛男生总数将比女生总数多 \\(\\frac{1}{4}\\) 。那么五年级计划共有______人参加。",
+      "answer_text": "180",
+      "solution_text": "增加五年级后,女生比男生少 \\(28\\%\\) ,男、女生人数之比为 \\(100:72 = 25:18\\) ,五年级男女生人数相等,都是10份,\n\n<table><tr><td>年级</td><td>男</td><td>女</td></tr><tr><td>六</td><td>15</td><td>8</td></tr><tr><td>五</td><td>10</td><td>10</td></tr><tr><td>一共</td><td>25</td><td>18</td></tr></table>\n\n最后女生增加18人,男生不变,男生比女生多 \\(\\frac{1}{4}\\) ,女生一共20份,所以:\n\n原计划五年级人数: \\(18 \\div (20 - 18) \\times (10 + 10) = 180\\) 人.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级二试_解答版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_解答版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，泄漏风险高，适合用作练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级二试_解答版.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018年六年级二试_解答版.json"
+        }
+      },
+      "text": "1. 某次数学竞赛,原计划只有六年级学生参加,参赛学生男、女人数之比为15:8;现组委会决定增加五年级组,并且要求五年级组参赛的男、女生人数一样多,这样女生总数比男生总数少 \\(28\\%\\) ;后来又决定六年级增加18名女生,这样参赛男生总数将比女生总数多 \\(\\frac{1}{4}\\) 。那么五年级计划共有______人参加。",
+      "answer": "180",
+      "solution": "增加五年级后,女生比男生少 \\(28\\%\\) ,男、女生人数之比为 \\(100:72 = 25:18\\) ,五年级男女生人数相等,都是10份,\n\n<table><tr><td>年级</td><td>男</td><td>女</td></tr><tr><td>六</td><td>15</td><td>8</td></tr><tr><td>五</td><td>10</td><td>10</td></tr><tr><td>一共</td><td>25</td><td>18</td></tr></table>\n\n最后女生增加18人,男生不变,男生比女生多 \\(\\frac{1}{4}\\) ,女生一共20份,所以:\n\n原计划五年级人数: \\(18 \\div (20 - 18) \\times (10 + 10) = 180\\) 人."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级二试_解答版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级二试_解答版",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 用红色和黑色在下图的虚线网格中涂出一个 \\(5 \\times 5\\) 的正方形,包括18个红色小正方形和7个黑色小正方形,其中4个黑色的方格已经涂好(如下左图所示).如果要求所有黑色方格全都连成一片,所有红色方格也都连成一片.那么,一共有______种不同的涂色方式.",
+      "answer_text": "30",
+      "solution_text": "7个黑格连在一起,一共有两种情况,一种是一个\"U\"(可以朝四种不同方向),一种是\" \\(H\\) \"(可以朝两个不同方向).\n\n1)7个黑格为 \\(U\\) 型, \\(U\\) 型在一个 \\(5 \\times 5\\) 的正方形里面平移,不能在最上面,一共有3 \\(\\times 2 = 6\\) 种位置,4个不同方向,所以一共 \\(6 \\times 4 = 24\\) 种;\n\n2)7个黑格为 \\(H\\) 型, \\(H\\) 型在一个 \\(5 \\times 5\\) 的正方形里平移,不能在最上面,也不能在最下面,一共就3种,两个不同方向, \\(3 \\times 2 = 6\\) 种;",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级二试_解答版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_解答版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案和详细解析，因此存在高风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级二试_解答版.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018年六年级二试_解答版.json"
+        }
+      },
+      "text": "2. 用红色和黑色在下图的虚线网格中涂出一个 \\(5 \\times 5\\) 的正方形,包括18个红色小正方形和7个黑色小正方形,其中4个黑色的方格已经涂好(如下左图所示).如果要求所有黑色方格全都连成一片,所有红色方格也都连成一片.那么,一共有______种不同的涂色方式.",
+      "answer": "30",
+      "solution": "7个黑格连在一起,一共有两种情况,一种是一个\"U\"(可以朝四种不同方向),一种是\" \\(H\\) \"(可以朝两个不同方向).\n\n1)7个黑格为 \\(U\\) 型, \\(U\\) 型在一个 \\(5 \\times 5\\) 的正方形里面平移,不能在最上面,一共有3 \\(\\times 2 = 6\\) 种位置,4个不同方向,所以一共 \\(6 \\times 4 = 24\\) 种;\n\n2)7个黑格为 \\(H\\) 型, \\(H\\) 型在一个 \\(5 \\times 5\\) 的正方形里平移,不能在最上面,也不能在最下面,一共就3种,两个不同方向, \\(3 \\times 2 = 6\\) 种;"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级二试_解答版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级二试_解答版",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "3. 如上右图,由10个边长为1厘米的正六边形拼成的图形,现在从其中某个交点开始不走重复路线,最多一共能走 厘米.(点可以重复到达)",
+      "answer_text": "32",
+      "solution_text": "如图,黑白相间染色.图中的点最多和三条边相连,每个点最多到达两次,同时最多只能有两个点重复(重复的点只能为起点和终点).\n\n图中白点15个,黑点18个,所有路线经过的点一定黑白相间.\n\n(1)如果从白点开始,路线上最多有白点17个,黑点16个,路线最长为32厘米.(下图2为一条符合条件的路径)\n\n![](ocr_debug/2018年六年级二试_解答版/pages/page_002/images/2.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2018年六年级二试_解答版/pages/page_002/images/3.jpg)\n\n<center>图2</center>\n\n(2)如果从黑点开始,路径上最多有16个黑点,16个白点,最多只能31厘米.\n\n## 二.解答题(每题15分,共30分)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级二试_解答版/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_解答版/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_解答版/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_解答版/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_解答版/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_解答版/pages/page_002/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该文本块包含完整题目、答案和解析，因此建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级二试_解答版.json#2#3",
+          "json_path": "source_pdf/六年级/2018/2018年六年级二试_解答版.json"
+        }
+      },
+      "text": "3. 如上右图,由10个边长为1厘米的正六边形拼成的图形,现在从其中某个交点开始不走重复路线,最多一共能走 厘米.(点可以重复到达)",
+      "answer": "32",
+      "solution": "如图,黑白相间染色.图中的点最多和三条边相连,每个点最多到达两次,同时最多只能有两个点重复(重复的点只能为起点和终点).\n\n图中白点15个,黑点18个,所有路线经过的点一定黑白相间.\n\n(1)如果从白点开始,路线上最多有白点17个,黑点16个,路线最长为32厘米.(下图2为一条符合条件的路径)\n\n![](ocr_debug/2018年六年级二试_解答版/pages/page_002/images/2.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2018年六年级二试_解答版/pages/page_002/images/3.jpg)\n\n<center>图2</center>\n\n(2)如果从黑点开始,路径上最多有16个黑点,16个白点,最多只能31厘米.\n\n## 二.解答题(每题15分,共30分)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级二试_解答版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级二试_解答版",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 如图在梯形ABCD中,EF平行于梯形的上下底.已知 \\(X\\) 、 \\(Y\\) 、 \\(Z\\) 为 \\(AB\\) 的四等分点, \\(M\\) 、",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级二试_解答版/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_解答版/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本为题干的一部分，但被截断且不完整，无明确问题陈述或答案解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级二试_解答版.json#2#4",
+          "json_path": "source_pdf/六年级/2018/2018年六年级二试_解答版.json"
+        }
+      },
+      "text": "4. 如图在梯形ABCD中,EF平行于梯形的上下底.已知 \\(X\\) 、 \\(Y\\) 、 \\(Z\\) 为 \\(AB\\) 的四等分点, \\(M\\) 、",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级二试_解答版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级二试_解答版",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "5. 甲、乙两港相距整数千米,有一木筏从甲港出发向乙港顺水漂流;木筏出发 \\(a\\) 小时后,一艘客船从甲港出发,用 \\(b\\) 小时追上了木筏;客船出发的同时,一艘货船从乙港出发,只用 \\(c\\) 小时就与木筏迎面相遇.已知 \\(a > b > c\\) ,且是两两互质的完全平方数;客,货两船在静水中的速度相同,且木筏被客船追上的地点和木筏与货船相遇的地点相距24千米.求甲、乙两港距离的最小值.",
+      "answer_text": "90",
+      "solution_text": "设船的静水速度为 \\(V\\) ,水速为 \\(V^{\\prime}\\) ,那么有: \\(\\left\\{ \\begin{array}{l l}{\\nu \\times b = \\nu^{\\prime}\\times a}\\\\ {\\nu^{\\prime}\\times (b - c) = 24} \\end{array} \\right.\\)\n\n所以, \\(A B\\) 距离 \\(S = \\nu^{\\prime}\\times a + \\nu \\times c = \\nu \\times \\left(b + c\\right) = \\frac{24}{b - c}\\times \\frac{a}{b}\\times \\left(b + c\\right)\\)",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级二试_解答版/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_解答版/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，答案直接泄露，不适合作为考试题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级二试_解答版.json#3#5",
+          "json_path": "source_pdf/六年级/2018/2018年六年级二试_解答版.json"
+        }
+      },
+      "text": "5. 甲、乙两港相距整数千米,有一木筏从甲港出发向乙港顺水漂流;木筏出发 \\(a\\) 小时后,一艘客船从甲港出发,用 \\(b\\) 小时追上了木筏;客船出发的同时,一艘货船从乙港出发,只用 \\(c\\) 小时就与木筏迎面相遇.已知 \\(a > b > c\\) ,且是两两互质的完全平方数;客,货两船在静水中的速度相同,且木筏被客船追上的地点和木筏与货船相遇的地点相距24千米.求甲、乙两港距离的最小值.",
+      "answer": "90",
+      "solution": "设船的静水速度为 \\(V\\) ,水速为 \\(V^{\\prime}\\) ,那么有: \\(\\left\\{ \\begin{array}{l l}{\\nu \\times b = \\nu^{\\prime}\\times a}\\\\ {\\nu^{\\prime}\\times (b - c) = 24} \\end{array} \\right.\\)\n\n所以, \\(A B\\) 距离 \\(S = \\nu^{\\prime}\\times a + \\nu \\times c = \\nu \\times \\left(b + c\\right) = \\frac{24}{b - c}\\times \\frac{a}{b}\\times \\left(b + c\\right)\\)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级二试_试卷版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级二试_试卷版",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 用红色和黑色在下图的虚线网格中涂出一个 \\(5 \\times 5\\) 的正方形，包括18个红色小正方形和7个黑色小正方形，其中4个黑色的方格已经涂好（如下左图所示）。如果要求所有黑色方格全都连成一片，所有红色方格也都连成一片。那么，一共有________种不同的涂色方式。\n\n![](ocr_debug/2018年六年级二试_试卷版/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2018年六年级二试_试卷版/pages/page_001/images/1.jpg)\n\n3．如上右图，由10个边长为1厘米的正六边形拼成的图形，现在从其中某个交点开始不走重复路线，最多一共能走________厘米。（点可以重复到达）\n\n4．如图在梯形ABCD中，EF平行于梯形的上下底．已知X、Y、Z为AB的四等分点，M、",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级二试_试卷版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_试卷版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_试卷版/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_试卷版/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本块包含两个完整的数学问题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级二试_试卷版.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018年六年级二试_试卷版.json"
+        }
+      },
+      "text": "2. 用红色和黑色在下图的虚线网格中涂出一个 \\(5 \\times 5\\) 的正方形，包括18个红色小正方形和7个黑色小正方形，其中4个黑色的方格已经涂好（如下左图所示）。如果要求所有黑色方格全都连成一片，所有红色方格也都连成一片。那么，一共有________种不同的涂色方式。\n\n![](ocr_debug/2018年六年级二试_试卷版/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2018年六年级二试_试卷版/pages/page_001/images/1.jpg)\n\n3．如上右图，由10个边长为1厘米的正六边形拼成的图形，现在从其中某个交点开始不走重复路线，最多一共能走________厘米。（点可以重复到达）\n\n4．如图在梯形ABCD中，EF平行于梯形的上下底．已知X、Y、Z为AB的四等分点，M、",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级二试_试卷版.pdf",
+      "exam": {
+        "exam_key": "2018年六年级二试_试卷版",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 甲、乙两港相距整数千米, 有一木筏从甲港出发向乙港顺水漂流; 木筏出发 \\(a\\) 小时后, 一艘客船从甲港出发, 用 \\(b\\) 小时追上了木筏; 客船出发的同时, 一艘货船从乙港出发, 只用 \\(c\\) 小时就与木筏迎面相遇. 已知 \\(a > b > c\\) , 且是两两互质的完全平方数; 客, 货两船在静水中的速度相同, 且木筏被客船追上的地点和木筏与货船相遇的地点相距 24 千米. 求甲、乙两港距离的最小值.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级二试_试卷版/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级二试_试卷版/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，没有答案或解析泄露，适合保留用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级二试_试卷版.json#2#5",
+          "json_path": "source_pdf/六年级/2018/2018年六年级二试_试卷版.json"
+        }
+      },
+      "text": "5. 甲、乙两港相距整数千米, 有一木筏从甲港出发向乙港顺水漂流; 木筏出发 \\(a\\) 小时后, 一艘客船从甲港出发, 用 \\(b\\) 小时追上了木筏; 客船出发的同时, 一艘货船从乙港出发, 只用 \\(c\\) 小时就与木筏迎面相遇. 已知 \\(a > b > c\\) , 且是两两互质的完全平方数; 客, 货两船在静水中的速度相同, 且木筏被客船追上的地点和木筏与货船相遇的地点相距 24 千米. 求甲、乙两港距离的最小值.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2017 \\times \\frac{2017}{2015 \\times \\frac{2017}{2013 \\times \\frac{2017}{2017 \\times \\frac{2017}{2013 \\times \\frac{2017}{2013 \\times \\frac{2017}{2015}}}} \\div 2017}\\) 的计算结果为\n\n2017 2017 2015 2013 2017 2013 7× 2017 5× 2017 3× 2017 1× 2017 1",
+      "answer_text": "1",
+      "solution_text": "原式\n\n\\(= 2017\\times \\frac{2017}{2015\\times \\frac{2017}{2015\\times \\frac{2017}{2017}\\div 2015}\\div 2015} = 2017\\times \\frac{2017}{2015\\times \\frac{2017}{3\\times \\frac{2017}{1}\\div 3} = 2017\\times \\frac{2017}{2015\\times \\frac{2015}{2017}\\div 2015} = 2017\\times \\frac{2017}{2015}\\div 2015\\) \\(= 2017\\times \\frac{2017}{2015\\times \\frac{2017\\times \\frac{2017}{2017}\\div 2015}{2017}\\div 2015} = 2017\\times \\frac{1}{2017}\\div 2015\\) \\(= 1\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "该题目块包含完整题干、答案和解析，直接泄露答案，不适合作为独立考试题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": false,
+        "review_reason": "heuristic-only",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json"
+        }
+      },
+      "text": "1. 算式 \\(2017 \\times \\frac{2017}{2015 \\times \\frac{2017}{2013 \\times \\frac{2017}{2017 \\times \\frac{2017}{2013 \\times \\frac{2017}{2013 \\times \\frac{2017}{2015}}}} \\div 2017}\\) 的计算结果为\n\n2017 2017 2015 2013 2017 2013 7× 2017 5× 2017 3× 2017 1× 2017 1",
+      "answer": "1",
+      "solution": "原式\n\n\\(= 2017\\times \\frac{2017}{2015\\times \\frac{2017}{2015\\times \\frac{2017}{2017}\\div 2015}\\div 2015} = 2017\\times \\frac{2017}{2015\\times \\frac{2017}{3\\times \\frac{2017}{1}\\div 3} = 2017\\times \\frac{2017}{2015\\times \\frac{2015}{2017}\\div 2015} = 2017\\times \\frac{2017}{2015}\\div 2015\\) \\(= 2017\\times \\frac{2017}{2015\\times \\frac{2017\\times \\frac{2017}{2017}\\div 2015}{2017}\\div 2015} = 2017\\times \\frac{1}{2017}\\div 2015\\) \\(= 1\\)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 大小狗熊一起掰玉米棒子,开始时两人共有132根棒子.大狗熊一边掰一边丢,丢棒子的速度是掰棒子的 \\(\\frac{2}{7}\\) ;小狗熊只捡棒子不掰棒子,捡棒子的速度是大狗熊掰棒子速度的 \\(\\frac{1}{5}\\) ,最后两人共有228根棒子.那么从开始到结束,小狗熊一共捡了____根玉米棒子.",
+      "answer_text": "21",
+      "solution_text": "\\(\\left(228 - 132\\right)\\div \\left(\\frac{5}{7} +\\frac{1}{5}\\right)\\times \\frac{1}{5} = 21\\)",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json"
+        }
+      },
+      "text": "2. 大小狗熊一起掰玉米棒子,开始时两人共有132根棒子.大狗熊一边掰一边丢,丢棒子的速度是掰棒子的 \\(\\frac{2}{7}\\) ;小狗熊只捡棒子不掰棒子,捡棒子的速度是大狗熊掰棒子速度的 \\(\\frac{1}{5}\\) ,最后两人共有228根棒子.那么从开始到结束,小狗熊一共捡了____根玉米棒子.",
+      "answer": "21",
+      "solution": "\\(\\left(228 - 132\\right)\\div \\left(\\frac{5}{7} +\\frac{1}{5}\\right)\\times \\frac{1}{5} = 21\\)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 右图为林林设计的太空仓轮廓图;已知图形中4个圆两两相切(紧挨在一起), \\(O_{1}\\) 、 \\(O_{2}\\) 、 \\(O_{3}\\) 、 \\(O_{4}\\) 分别为4个圆的圆心, \\(AO_{2}O_{4}B\\) 为长方形,且 \\(O_{3}\\) 为 \\(O_{2}O_{4}\\) 中点, \\(EF\\) 长度为80, \\(CD\\) 长度为100;那么图中太空舱面积为____。( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_001/images/0.jpg)\n\n## 二、填空题(每小题10分,共30分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本描述了四个圆相切的几何问题，但题干不完整且无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json#1#3",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷解析）.json"
+        }
+      },
+      "text": "3. 右图为林林设计的太空仓轮廓图;已知图形中4个圆两两相切(紧挨在一起), \\(O_{1}\\) 、 \\(O_{2}\\) 、 \\(O_{3}\\) 、 \\(O_{4}\\) 分别为4个圆的圆心, \\(AO_{2}O_{4}B\\) 为长方形,且 \\(O_{3}\\) 为 \\(O_{2}O_{4}\\) 中点, \\(EF\\) 长度为80, \\(CD\\) 长度为100;那么图中太空舱面积为____。( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_001/images/0.jpg)\n\n## 二、填空题(每小题10分,共30分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 2018除以一个自然数 \\(n\\) ,所得到的商是余数的整数倍,满足条件的 \\(n\\) 一共有____种.",
+      "answer_text": "29",
+      "solution_text": "列式: \\(2018\\div n = k a\\dots \\dots a\\) , \\(2018 = n k a + a = a(n k + 1) = 2\\times 1009\\) , \\(a\\) 只能等于2, \\(n\\) 为1008的因数,分解质因数 \\(1008 = 2^{4}\\times 3^{2}\\times 7\\) ,因数个数 \\(5\\times 3\\times 2 = 30\\) ,其中1、2不成立,共 \\(30 - 2 = 28\\) 种.另外 \\(2018\\div 2017 = 1\\dots \\dots 1\\) ,共 \\(28 + 1 = 29\\) 种.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，无答案或解析泄露，可独立用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json#1#4",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json"
+        }
+      },
+      "text": "4. 2018除以一个自然数 \\(n\\) ,所得到的商是余数的整数倍,满足条件的 \\(n\\) 一共有____种.",
+      "answer": "29",
+      "solution": "列式: \\(2018\\div n = k a\\dots \\dots a\\) , \\(2018 = n k a + a = a(n k + 1) = 2\\times 1009\\) , \\(a\\) 只能等于2, \\(n\\) 为1008的因数,分解质因数 \\(1008 = 2^{4}\\times 3^{2}\\times 7\\) ,因数个数 \\(5\\times 3\\times 2 = 30\\) ,其中1、2不成立,共 \\(30 - 2 = 28\\) 种.另外 \\(2018\\div 2017 = 1\\dots \\dots 1\\) ,共 \\(28 + 1 = 29\\) 种."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 飞船按正常速度直接从那美克星到赛博坦星的航程需要390天,如果改成先到贝吉塔星再到赛博坦星的航线,可以利用贝吉塔星的能量加速功能(经贝吉塔星后速度会提升一倍),航程总时间会缩短60天;返航时,飞船以正常速度出发,如果选择经贝吉塔星的加速的航程(经贝吉塔星后速度会提升一倍)会比直接航程反而多用45天.那么,从那美克星到贝吉塔星的正常航程需要____天.",
+      "answer_text": "150",
+      "solution_text": "\\(\\left[435 - (435 - 330)\\div \\frac{1}{2}\\right]\\div \\frac{3}{2} = 150\\) 天.\n\n或列方程组,设从那美克星到贝吉塔星,从贝吉塔星到赛博坦星不加速的航程时间为 \\(x\\) 天和 \\(y\\) 天,那么有:\n\n\\[\\left\\{ \\begin{array}{l l}{x + \\frac{y}{2} = 330\\] \\[\\frac{x}{2} +y = 435} \\end{array} \\right.\\quad \\left\\{ \\begin{array}{l l}{x = 150\\] \\[y = 360} \\end{array} \\right..\\]\n\n![](ocr_debug/2018年六年级网考（试卷解析）/pages/page_002/images/0.jpg)",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学问题题干，未包含答案或解析信息，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json#1#5",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json"
+        }
+      },
+      "text": "5. 飞船按正常速度直接从那美克星到赛博坦星的航程需要390天,如果改成先到贝吉塔星再到赛博坦星的航线,可以利用贝吉塔星的能量加速功能(经贝吉塔星后速度会提升一倍),航程总时间会缩短60天;返航时,飞船以正常速度出发,如果选择经贝吉塔星的加速的航程(经贝吉塔星后速度会提升一倍)会比直接航程反而多用45天.那么,从那美克星到贝吉塔星的正常航程需要____天.",
+      "answer": "150",
+      "solution": "\\(\\left[435 - (435 - 330)\\div \\frac{1}{2}\\right]\\div \\frac{3}{2} = 150\\) 天.\n\n或列方程组,设从那美克星到贝吉塔星,从贝吉塔星到赛博坦星不加速的航程时间为 \\(x\\) 天和 \\(y\\) 天,那么有:\n\n\\[\\left\\{ \\begin{array}{l l}{x + \\frac{y}{2} = 330\\] \\[\\frac{x}{2} +y = 435} \\end{array} \\right.\\quad \\left\\{ \\begin{array}{l l}{x = 150\\] \\[y = 360} \\end{array} \\right..\\]\n\n![](ocr_debug/2018年六年级网考（试卷解析）/pages/page_002/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 如图,大正六边形中有一个小正六边形,其中六个四边形是一样大的正方形.已知每个正方形的面积都是2018平方厘米.那么,大六边形与小六边形的面积相差____平方厘米.\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_001/images/1.jpg)",
+      "answer_text": "18162",
+      "solution_text": "如下图,三角形 \\(MPG\\) 与三角形 \\(MGL\\) 与三角形 \\(MLQ\\) 完全相同,且与三角形 \\(MAF\\) 面积相同,均为正方形面积的 \\(\\frac{1}{4}\\) ,所以大正六边形与小正六边形面积差为9个正方形, \\(2018\\times 9 = 18162\\) .\n\n![](ocr_debug/2018年六年级网考（试卷解析）/pages/page_002/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的几何题干，无答案或解析泄露，适合出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json#1#6",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json"
+        }
+      },
+      "text": "6. 如图,大正六边形中有一个小正六边形,其中六个四边形是一样大的正方形.已知每个正方形的面积都是2018平方厘米.那么,大六边形与小六边形的面积相差____平方厘米.\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_001/images/1.jpg)",
+      "answer": "18162",
+      "solution": "如下图,三角形 \\(MPG\\) 与三角形 \\(MGL\\) 与三角形 \\(MLQ\\) 完全相同,且与三角形 \\(MAF\\) 面积相同,均为正方形面积的 \\(\\frac{1}{4}\\) ,所以大正六边形与小正六边形面积差为9个正方形, \\(2018\\times 9 = 18162\\) .\n\n![](ocr_debug/2018年六年级网考（试卷解析）/pages/page_002/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 手工课上，老师给同学们发了如图所示的雪花状纸片，要求同学们用剪刀沿格线剪成两块形状完全一样的纸片，并且两块纸片上都有红、黄、蓝、绿的三角形各一个．那么，一共有 种不同的剪开方式．（两块纸片通过旋转或翻转能重合视为形状一样）",
+      "answer_text": "6",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷解析）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json#2#7",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json"
+        }
+      },
+      "text": "7. 手工课上，老师给同学们发了如图所示的雪花状纸片，要求同学们用剪刀沿格线剪成两块形状完全一样的纸片，并且两块纸片上都有红、黄、蓝、绿的三角形各一个．那么，一共有 种不同的剪开方式．（两块纸片通过旋转或翻转能重合视为形状一样）",
+      "answer": "6",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 将下面一些纸板按要求粘贴在图中 \\(4\\times 4\\) 的表格中，每横行从左到右形成一个四位数，则形成的四个四位数的和最大是\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/1.jpg)\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/2.jpg)\n\n规则：\n\n（1）卡片可以旋转、平移，但是旋转过程中，数字不改变．例如，旋转当做以下卡片来使用：\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/3.jpg)\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/4.jpg)\n\n（2）卡片不能翻转，例如卡片 不能当做 使用：\n\n## 四、亲子互动操作题（每小题18分，共36分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/3.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/4.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学竞赛题目，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json#2#8",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json"
+        }
+      },
+      "text": "8. 将下面一些纸板按要求粘贴在图中 \\(4\\times 4\\) 的表格中，每横行从左到右形成一个四位数，则形成的四个四位数的和最大是\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/1.jpg)\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/2.jpg)\n\n规则：\n\n（1）卡片可以旋转、平移，但是旋转过程中，数字不改变．例如，旋转当做以下卡片来使用：\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/3.jpg)\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/4.jpg)\n\n（2）卡片不能翻转，例如卡片 不能当做 使用：\n\n## 四、亲子互动操作题（每小题18分，共36分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 在方格内填入 \\(1\\sim 6\\) 中的某个数字，使得每行、每列、每宫（粗线围成的 \\(2\\times 3\\) 的长方形称为宫）数字不重复．浅色折线上的数字从头到尾组成的多位数是回文数．例如13231、3443就是回文数．那么，第3列从上往下数前5个数字依次组成的5位数是\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/5.jpg)",
+      "answer_text": "52163",
+      "solution_text": "<table><tr><td>1</td><td>6</td><td>5</td><td>3</td><td>2</td><td>4</td></tr><tr><td>3</td><td>4</td><td>2</td><td>5</td><td>1</td><td>6</td></tr><tr><td>5</td><td>2</td><td>1</td><td>4</td><td>6</td><td>3</td></tr><tr><td>4</td><td>3</td><td>6</td><td>1</td><td>5</td><td>2</td></tr><tr><td>6</td><td>1</td><td>3</td><td>2</td><td>4</td><td>5</td></tr><tr><td>2</td><td>5</td><td>4</td><td>6</td><td>3</td><td>1</td></tr></table>\n\n<table><tr><td></td><td></td><td>3</td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td>1</td></tr><tr><td>5</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>2</td></tr><tr><td></td><td>1</td><td></td><td></td><td></td></tr><tr><td>5</td><td></td><td>6</td><td></td><td></td></tr></table>",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/5.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，描述问题条件并提出问题，未包含答案或解析，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json#2#9",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json"
+        }
+      },
+      "text": "9. 在方格内填入 \\(1\\sim 6\\) 中的某个数字，使得每行、每列、每宫（粗线围成的 \\(2\\times 3\\) 的长方形称为宫）数字不重复．浅色折线上的数字从头到尾组成的多位数是回文数．例如13231、3443就是回文数．那么，第3列从上往下数前5个数字依次组成的5位数是\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_002/images/5.jpg)",
+      "answer": "52163",
+      "solution": "<table><tr><td>1</td><td>6</td><td>5</td><td>3</td><td>2</td><td>4</td></tr><tr><td>3</td><td>4</td><td>2</td><td>5</td><td>1</td><td>6</td></tr><tr><td>5</td><td>2</td><td>1</td><td>4</td><td>6</td><td>3</td></tr><tr><td>4</td><td>3</td><td>6</td><td>1</td><td>5</td><td>2</td></tr><tr><td>6</td><td>1</td><td>3</td><td>2</td><td>4</td><td>5</td></tr><tr><td>2</td><td>5</td><td>4</td><td>6</td><td>3</td><td>1</td></tr></table>\n\n<table><tr><td></td><td></td><td>3</td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td>1</td></tr><tr><td>5</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>2</td></tr><tr><td></td><td>1</td><td></td><td></td><td></td></tr><tr><td>5</td><td></td><td>6</td><td></td><td></td></tr></table>"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2018年六年级网考（试卷）.pdf",
+      "exam": {
+        "exam_key": "2018年六年级网考",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "10. 2048 年, 人工智能突飞猛进, 机器人对人类威胁越来越大. 你奉命切断机器人系统的电源, 但是电源开关已经被密码保护, 如果输对了则可以完成任务, 一旦你输入错误, 机器人将会觉醒, 人类恐遭毁灭. 机器人系统工程师设置了一个游戏, 顺利完成游戏才能获得正确密码, 请填入正确密码: ______.\n\n## 游戏规则:\n\n图中 6 只训练有素的白青蛙和黑青蛙学会了一种奇妙的本领. 它们可以像我们在国际象棋中一样, 跳到任意一个相邻的空方格(没有青蛙)中, 也可以越过一只青蛙跳到另一侧的空方格(没有青蛙)中. 如果它们经过若干次跳跃后, 原来是白青蛙的位置换成了黑青蛙, 原来是黑青蛙的位置换成了白青蛙, 而空着的方格仍然空着, 则胜利. 要求必须在 20 步以内(含 20 步)完成游戏.\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_003/images/0.jpg)",
+      "answer_text": "32671",
+      "solution_text": "空白白白黑黑黑 \\(\\rightarrow\\) 白白空白黑黑黑 \\(\\rightarrow\\) 白白黑白空黑黑 \\(\\rightarrow\\) 白白黑白黑空黑 \\(\\rightarrow\\) 白白空白黑白黑 \\(\\rightarrow\\) 空白黑白黑白黑 \\(\\rightarrow\\) 黑白空白黑白黑 \\(\\rightarrow\\) 黑白黑白空白黑 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow \\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 黑白空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow \\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\)\n\n本题配 GIF 图: 示例 4- 青蛙跳解析. gif",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018年六年级网考（试卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018年六年级网考（试卷）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个逻辑谜题题干，要求填入密码，但未提供答案或解析，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json#3#10",
+          "json_path": "source_pdf/六年级/2018/2018年六年级网考（试卷）.json"
+        }
+      },
+      "text": "10. 2048 年, 人工智能突飞猛进, 机器人对人类威胁越来越大. 你奉命切断机器人系统的电源, 但是电源开关已经被密码保护, 如果输对了则可以完成任务, 一旦你输入错误, 机器人将会觉醒, 人类恐遭毁灭. 机器人系统工程师设置了一个游戏, 顺利完成游戏才能获得正确密码, 请填入正确密码: ______.\n\n## 游戏规则:\n\n图中 6 只训练有素的白青蛙和黑青蛙学会了一种奇妙的本领. 它们可以像我们在国际象棋中一样, 跳到任意一个相邻的空方格(没有青蛙)中, 也可以越过一只青蛙跳到另一侧的空方格(没有青蛙)中. 如果它们经过若干次跳跃后, 原来是白青蛙的位置换成了黑青蛙, 原来是黑青蛙的位置换成了白青蛙, 而空着的方格仍然空着, 则胜利. 要求必须在 20 步以内(含 20 步)完成游戏.\n\n![](ocr_debug/2018年六年级网考（试卷）/pages/page_003/images/0.jpg)",
+      "answer": "32671",
+      "solution": "空白白白黑黑黑 \\(\\rightarrow\\) 白白空白黑黑黑 \\(\\rightarrow\\) 白白黑白空黑黑 \\(\\rightarrow\\) 白白黑白黑空黑 \\(\\rightarrow\\) 白白空白黑白黑 \\(\\rightarrow\\) 空白黑白黑白黑 \\(\\rightarrow\\) 黑白空白黑白黑 \\(\\rightarrow\\) 黑白黑白空白黑 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow \\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白空白 \\(\\rightarrow\\) 黑白黑白黑白空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 黑白空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow \\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\) 空白 \\(\\rightarrow\\)\n\n本题配 GIF 图: 示例 4- 青蛙跳解析. gif"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\((\\frac{1}{20 + \\frac{1}{18}} +\\frac{1}{20} +18)\\times (20 + 18)\\) 的计算结果是",
+      "answer_text": "4",
+      "solution_text": "\\((\\frac{1}{20 + \\frac{1}{18}} +\\frac{1}{18})\\times (20 + 18)\\)\n\n\\[= (\\frac{18}{18\\times20 + 1} +\\frac{20}{18\\times20 + 1})\\times (20 + 18)\\] \\[= \\frac{(18 + 20)\\times(20 + 18)}{19^{2} - 1 + 1\\] \\[= \\frac{38^{2}}{19^{2}\\] \\[= 4\\]",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干是一个完整的数学问题，但答案和解析直接显示在同一文本块中，导致高泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "1. 算式 \\((\\frac{1}{20 + \\frac{1}{18}} +\\frac{1}{20} +18)\\times (20 + 18)\\) 的计算结果是",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json"
+        }
+      },
+      "text": "1. 算式 \\((\\frac{1}{20 + \\frac{1}{18}} +\\frac{1}{20} +18)\\times (20 + 18)\\) 的计算结果是",
+      "answer": "4",
+      "solution": "\\((\\frac{1}{20 + \\frac{1}{18}} +\\frac{1}{18})\\times (20 + 18)\\)\n\n\\[= (\\frac{18}{18\\times20 + 1} +\\frac{20}{18\\times20 + 1})\\times (20 + 18)\\] \\[= \\frac{(18 + 20)\\times(20 + 18)}{19^{2} - 1 + 1\\] \\[= \\frac{38^{2}}{19^{2}\\] \\[= 4\\]"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 如图,是某知名画家的作品,扇子打开看作一个圆心角150度的扇形,长度尺寸如图所示(单位:厘米).那么,纸面覆盖面积(纸面之外部分忽略不计)是 平方厘米.( \\(\\pi\\) 取3)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "945",
+      "solution_text": "由扇形面积计算公式可得纸面的面积为 \\(\\frac{150}{360}\\times \\left(30^{2}\\times \\pi - 12^{2}\\times \\pi\\right) = 945\\) 平方厘米.",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整问题，但直接附有答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json"
+        }
+      },
+      "text": "2. 如图,是某知名画家的作品,扇子打开看作一个圆心角150度的扇形,长度尺寸如图所示(单位:厘米).那么,纸面覆盖面积(纸面之外部分忽略不计)是 平方厘米.( \\(\\pi\\) 取3)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "945",
+      "solution": "由扇形面积计算公式可得纸面的面积为 \\(\\frac{150}{360}\\times \\left(30^{2}\\times \\pi - 12^{2}\\times \\pi\\right) = 945\\) 平方厘米."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图,除法竖式中已经填出了\"2018\"和0.那么,这个除法竖式的被除数是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "27209",
+      "solution_text": "考虑 \\(\\times \\square = 8\\square\\) ,一位数只能是9,除数至少为89.\n\n接着考虑 \\(\\times \\square = \\square 1\\) ,如果除数是89,显然这个一位数乘以9的十位为奇数,枚举可得 \\(8\\times 89 = 712\\) ,而 \\(9\\times 89 = 801\\) ,此时 \\(80 + 712 = 792\\) 不等于 \\(\\square 0\\) ;如果除数是9,则由 \\(\\times 9 = \\square 1\\) ,对一位数进行枚举,只有 \\(90\\times 9 = 810\\) 和 \\(91\\times 9 = 819\\) 满足.而由于商的百位乘以除数得到的三位数个位为2,所以除数只能是91,商为299.经检验满足条件.所以该除法竖式的被除数为 \\(91\\times 299 = 27209\\)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（详解版）/pages/page_001/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整的题干、答案和解析，答案泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json#1#3",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json"
+        }
+      },
+      "text": "3. 如图,除法竖式中已经填出了\"2018\"和0.那么,这个除法竖式的被除数是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "27209",
+      "solution": "考虑 \\(\\times \\square = 8\\square\\) ,一位数只能是9,除数至少为89.\n\n接着考虑 \\(\\times \\square = \\square 1\\) ,如果除数是89,显然这个一位数乘以9的十位为奇数,枚举可得 \\(8\\times 89 = 712\\) ,而 \\(9\\times 89 = 801\\) ,此时 \\(80 + 712 = 792\\) 不等于 \\(\\square 0\\) ;如果除数是9,则由 \\(\\times 9 = \\square 1\\) ,对一位数进行枚举,只有 \\(90\\times 9 = 810\\) 和 \\(91\\times 9 = 819\\) 满足.而由于商的百位乘以除数得到的三位数个位为2,所以除数只能是91,商为299.经检验满足条件.所以该除法竖式的被除数为 \\(91\\times 299 = 27209\\)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（详解版）/pages/page_001/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 古代中国是铸剑技术最发达的国家之一,一位铸剑师找到两块含铁量分别为 \\(50\\%\\) 和 \\(40\\%\\) 的铁矿石共40千克,冶炼除去杂质,炼出一把重20千克,含铁量 \\(99\\%\\) 的宝剑.那么,那块含铁量 \\(50\\%\\) 的铁矿石重 千克.(铸造过程中铁没有损失)\n\n## 二.填空题I(每小题10分,共40分)",
+      "answer_text": "38",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是标准数学问题，但答案已直接给出，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json#1#4",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json"
+        }
+      },
+      "text": "4. 古代中国是铸剑技术最发达的国家之一,一位铸剑师找到两块含铁量分别为 \\(50\\%\\) 和 \\(40\\%\\) 的铁矿石共40千克,冶炼除去杂质,炼出一把重20千克,含铁量 \\(99\\%\\) 的宝剑.那么,那块含铁量 \\(50\\%\\) 的铁矿石重 千克.(铸造过程中铁没有损失)\n\n## 二.填空题I(每小题10分,共40分)",
+      "answer": "38",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 右图由一个正三角形和一个正六边形组成.正六边形有三个顶点恰好落在正三角形各边的4等分点上.已知正三角形的面积为960平方厘米,那么,正六边形的面积为 平方厘米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer_text": "840",
+      "solution_text": "连接正六边形落在正三角形三条边上的点, 得到一个新的正三角形, 显然正六边形的面积为该正三角形面积的两倍. 而新的正三角形的面积等于大正三角形的面积减去三个角上三角形的面积. 角上每个三角形的面积为 \\(960 \\times \\frac{1}{4} \\times \\frac{3}{4} = 180\\) 平方厘米.\n\n所以该正六边形的面积为 \\(2 \\times (960 - 180 \\times 3) = 840\\) 平方厘米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（详解版）/pages/page_002/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "5. 右图由一个正三角形和一个正六边形组成.正六边形有三个顶点恰好落在正三角形各边的4等分点上.已知正三角形的面积为960平方厘米,那么,正六边形的面积为 平方厘米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer": "840",
+      "solution": "连接正六边形落在正三角形三条边上的点, 得到一个新的正三角形, 显然正六边形的面积为该正三角形面积的两倍. 而新的正三角形的面积等于大正三角形的面积减去三个角上三角形的面积. 角上每个三角形的面积为 \\(960 \\times \\frac{1}{4} \\times \\frac{3}{4} = 180\\) 平方厘米.\n\n所以该正六边形的面积为 \\(2 \\times (960 - 180 \\times 3) = 840\\) 平方厘米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（详解版）/pages/page_002/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 小明和小暗两兄弟都喜欢吃巧克力豆,小明在有白巧克力豆的时候只吃白巧克力豆,而小暗在有黑巧克力豆的时候只吃黑巧克力豆.现在有三盒数量相同的巧克力豆,一盒全黑,一盒全白,一盒黑白巧克力豆数量各占一半.全黑的巧克力豆,如果两人一起吃要30天吃完,如果给小明一人吃要105天吃完.全白的白巧克力豆,如果俩人一起吃要28天吃完,如果给小暗一人吃要140天吃完.假设同一人吃同一种巧克力豆的速度是不变的,那么,那盒黑白巧克力豆数量各一半的巧克力,给两人一起吃,要 天吃完.",
+      "answer_text": "20",
+      "solution_text": "不妨设每盒巧克力的数目都为1. 则小明和小晴两人每天吃黑巧克力和白巧克力的数目列表如下.\n\n在吃黑白巧克力豆数量各一半的巧克力时, 小明需要17.5天吃\n\n完白巧克力, 小晴需要21天吃完黑巧克力, 所以小明会先吃\n\n完白巧克力. 17.5天后, 还剩下 \\(\\frac{1}{2} - 17.5 \\times \\frac{1}{42} = \\frac{1}{12}\\) 的黑巧克力,\n\n<table><tr><td></td><td>黑巧克力</td><td>白巧克力</td></tr><tr><td>小明</td><td>1/105</td><td>1/35</td></tr><tr><td>小晴</td><td>1/42</td><td>1/140</td></tr></table>\n\n这些黑巧克力还需要 \\(\\frac{1}{12} \\div \\frac{1}{30} = 2.5\\) 天才能吃完. 因此两人吃完这盒巧克力一共需要 \\(17.5 + 2.5 = 20\\) 天.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "6. 小明和小暗两兄弟都喜欢吃巧克力豆,小明在有白巧克力豆的时候只吃白巧克力豆,而小暗在有黑巧克力豆的时候只吃黑巧克力豆.现在有三盒数量相同的巧克力豆,一盒全黑,一盒全白,一盒黑白巧克力豆数量各占一半.全黑的巧克力豆,如果两人一起吃要30天吃完,如果给小明一人吃要105天吃完.全白的白巧克力豆,如果俩人一起吃要28天吃完,如果给小暗一人吃要140天吃完.假设同一人吃同一种巧克力豆的速度是不变的,那么,那盒黑白巧克力豆数量各一半的巧克力,给两人一起吃,要 天吃完.",
+      "answer": "20",
+      "solution": "不妨设每盒巧克力的数目都为1. 则小明和小晴两人每天吃黑巧克力和白巧克力的数目列表如下.\n\n在吃黑白巧克力豆数量各一半的巧克力时, 小明需要17.5天吃\n\n完白巧克力, 小晴需要21天吃完黑巧克力, 所以小明会先吃\n\n完白巧克力. 17.5天后, 还剩下 \\(\\frac{1}{2} - 17.5 \\times \\frac{1}{42} = \\frac{1}{12}\\) 的黑巧克力,\n\n<table><tr><td></td><td>黑巧克力</td><td>白巧克力</td></tr><tr><td>小明</td><td>1/105</td><td>1/35</td></tr><tr><td>小晴</td><td>1/42</td><td>1/140</td></tr></table>\n\n这些黑巧克力还需要 \\(\\frac{1}{12} \\div \\frac{1}{30} = 2.5\\) 天才能吃完. 因此两人吃完这盒巧克力一共需要 \\(17.5 + 2.5 = 20\\) 天."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 右图中一共可以数出 个三角形.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "26",
+      "solution_text": "先不考虑包含六边形边的三角形, 一共有12个. 然后考虑包含六边形边的, 一块的有10个, 由两块构成的三角形有4个. 所以一共有 \\(12 + 10 + 4 = 26\\) 个三角形.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（详解版）/pages/page_002/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含题干、答案和解析，答案直接泄露，高风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json#2#7",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json"
+        }
+      },
+      "text": "7. 右图中一共可以数出 个三角形.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "26",
+      "solution": "先不考虑包含六边形边的三角形, 一共有12个. 然后考虑包含六边形边的, 一块的有10个, 由两块构成的三角形有4个. 所以一共有 \\(12 + 10 + 4 = 26\\) 个三角形.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（详解版）/pages/page_002/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 有一个三位数,老师把这个数除以7、8、9所得的余数分别写在3张纸上,聪明而诚实的甲、乙、丙三人每人从中抽取了一张,三人都只能看到自己纸上的数而不能看到其他人的数.接着三人依次说了如下的话.\n\n甲:这个三位数一定不是3的倍数.\n\n乙:这个三位数一定是个奇数.\n\n丙:我知道这个三位数是多少了,而且它是个合数.\n\n那么,这个三位数是\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学问题题干，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json#2#8",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（详解版）.json"
+        }
+      },
+      "text": "8. 有一个三位数,老师把这个数除以7、8、9所得的余数分别写在3张纸上,聪明而诚实的甲、乙、丙三人每人从中抽取了一张,三人都只能看到自己纸上的数而不能看到其他人的数.接着三人依次说了如下的话.\n\n甲:这个三位数一定不是3的倍数.\n\n乙:这个三位数一定是个奇数.\n\n丙:我知道这个三位数是多少了,而且它是个合数.\n\n那么,这个三位数是\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 贵州天眼接收到来自双子座、猎户座和仙女座的5组不同信号,科学家通过甄别发现来自每个星座的信号都至少有一组,并且已知第3组信号肯定不是双子座发出的.那么,这5组信号的来源共有种可能.",
+      "answer_text": "100",
+      "solution_text": "乘法原理,容斥,排除;\n\n第3组信号有两种选择,其余4组信号每个都有三种选择,然后减去所有信号都来自于2个星座的和都来自于1个星座的.\n\n\\[2\\times \\left(3^{4} - 2\\times \\left(2^{4} - 1^{4}\\right) - 1^{4}\\right) = 100\\]",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学竞赛题干，描述清晰问题且无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "9. 贵州天眼接收到来自双子座、猎户座和仙女座的5组不同信号,科学家通过甄别发现来自每个星座的信号都至少有一组,并且已知第3组信号肯定不是双子座发出的.那么,这5组信号的来源共有种可能.",
+      "answer": "100",
+      "solution": "乘法原理,容斥,排除;\n\n第3组信号有两种选择,其余4组信号每个都有三种选择,然后减去所有信号都来自于2个星座的和都来自于1个星座的.\n\n\\[2\\times \\left(3^{4} - 2\\times \\left(2^{4} - 1^{4}\\right) - 1^{4}\\right) = 100\\]"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 已知 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 、 \\(G\\) 、 \\(H\\) 、 \\(I\\) 是9个互不相同的非零数字,满足: \\(A\\) 除以 \\(B\\) 余 \\(C\\) , \\(D\\) 除以 \\(E\\) 余 \\(F\\) , \\(G\\) 除以 \\(H\\) 余 \\(I\\) ,那么 \\(\\overline{ABC} +\\overline{DEF} +\\overline{GHI}\\) 的结果是",
+      "answer_text": "2547",
+      "solution_text": "容易知道: \\(A > B > C\\) , \\(D > E > F\\) , \\(G > H > I\\)\n\n显然余数 \\(C,F,I< 5\\) ,那么 \\(B,E,H\\) 中有1个数小于5,不妨设 \\(H< 5\\) ,则 \\(B,E\\geq 5\\)\n\n除数不小于5,那么商必为1,因此有: \\(A = B + C,D = E + F,G = H\\times k + I\\) ,三个式子相加,并同时加 \\(A,D,G\\) 可得: \\(2A + 2D + 2G = 45 + H\\times (k - 1)\\)\n\n故 \\(H\\) , \\(k - 1\\) 均为奇数,只能 \\(H = 3\\) ,且 \\(k = 2\\)\n\n那么 \\(A + D + G = (45 + 3\\times 1)\\div 2 = 24 = 7 + 8 + 9\\) ,这3个数是7,8,9的排列。\n\n由于 \\(H = 3\\) ,所以4只能出现在余数中,不妨设 \\(C = 4\\) ,那么 \\(A = 9\\) , \\(B = 5\\)\n\n若 \\(I = 1\\) ,则 \\(G = 3\\times 2 + 1 = 7\\) , \\(\\overline{ABC} +\\overline{DEF} +\\overline{GHI} = 954 + 862 + 731 = 2547\\)\n\n若 \\(I = 2\\) ,则 \\(G = 3\\times 2 + 2 = 8\\) , \\(\\overline{ABC} +\\overline{DEF} +\\overline{GHI} = \\overline{954} +761 + 832 = 2547\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干独立，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "10. 已知 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 、 \\(G\\) 、 \\(H\\) 、 \\(I\\) 是9个互不相同的非零数字,满足: \\(A\\) 除以 \\(B\\) 余 \\(C\\) , \\(D\\) 除以 \\(E\\) 余 \\(F\\) , \\(G\\) 除以 \\(H\\) 余 \\(I\\) ,那么 \\(\\overline{ABC} +\\overline{DEF} +\\overline{GHI}\\) 的结果是",
+      "answer": "2547",
+      "solution": "容易知道: \\(A > B > C\\) , \\(D > E > F\\) , \\(G > H > I\\)\n\n显然余数 \\(C,F,I< 5\\) ,那么 \\(B,E,H\\) 中有1个数小于5,不妨设 \\(H< 5\\) ,则 \\(B,E\\geq 5\\)\n\n除数不小于5,那么商必为1,因此有: \\(A = B + C,D = E + F,G = H\\times k + I\\) ,三个式子相加,并同时加 \\(A,D,G\\) 可得: \\(2A + 2D + 2G = 45 + H\\times (k - 1)\\)\n\n故 \\(H\\) , \\(k - 1\\) 均为奇数,只能 \\(H = 3\\) ,且 \\(k = 2\\)\n\n那么 \\(A + D + G = (45 + 3\\times 1)\\div 2 = 24 = 7 + 8 + 9\\) ,这3个数是7,8,9的排列。\n\n由于 \\(H = 3\\) ,所以4只能出现在余数中,不妨设 \\(C = 4\\) ,那么 \\(A = 9\\) , \\(B = 5\\)\n\n若 \\(I = 1\\) ,则 \\(G = 3\\times 2 + 1 = 7\\) , \\(\\overline{ABC} +\\overline{DEF} +\\overline{GHI} = 954 + 862 + 731 = 2547\\)\n\n若 \\(I = 2\\) ,则 \\(G = 3\\times 2 + 2 = 8\\) , \\(\\overline{ABC} +\\overline{DEF} +\\overline{GHI} = \\overline{954} +761 + 832 = 2547\\)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 甲、乙、丙三人分别从 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三地同时出发,匀速行走; \\(C\\) 是 \\(AB\\) 两地之间的一地, \\(AC\\) 两地之间距离为360米;甲向 \\(B\\) 地行走,乙、丙向 \\(A\\) 行走.当甲、丙相遇时,乙刚好追上丙;乙到达 \\(A\\) 地后立即调头,当乙追上甲时,丙刚好到 \\(A\\) 地.那么 \\(AB\\) 两地之间的距离是 米.",
+      "answer_text": "720",
+      "solution_text": "画图如下:\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（详解版）/pages/page_004/images/0.jpg)\n\n从实线可以得出: \\(\\frac{V_{Z} - V_{\\mathrm{丙}}}{V_{\\mathrm{甲}} + V_{\\mathrm{丙}}} = \\frac{BC}{AC}\\) ;\n\n从虚线可以得出: \\(V_{Z} - V_{\\mathrm{甲}} = 2V_{\\mathrm{丙}}\\) ,即: \\(\\frac{V_{Z} - V_{\\mathrm{丙}}}{V_{\\mathrm{甲}}+V_{\\mathrm{丙}}} = \\frac{1}{1}\\) ;\n\n所以, \\(BC = AC = 360\\) 千米,那么 \\(AB\\) 为 720 千米.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，描述清晰，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级A卷（试卷版）.json"
+        }
+      },
+      "text": "11. 甲、乙、丙三人分别从 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三地同时出发,匀速行走; \\(C\\) 是 \\(AB\\) 两地之间的一地, \\(AC\\) 两地之间距离为360米;甲向 \\(B\\) 地行走,乙、丙向 \\(A\\) 行走.当甲、丙相遇时,乙刚好追上丙;乙到达 \\(A\\) 地后立即调头,当乙追上甲时,丙刚好到 \\(A\\) 地.那么 \\(AB\\) 两地之间的距离是 米.",
+      "answer": "720",
+      "solution": "画图如下:\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级A卷（详解版）/pages/page_004/images/0.jpg)\n\n从实线可以得出: \\(\\frac{V_{Z} - V_{\\mathrm{丙}}}{V_{\\mathrm{甲}} + V_{\\mathrm{丙}}} = \\frac{BC}{AC}\\) ;\n\n从虚线可以得出: \\(V_{Z} - V_{\\mathrm{甲}} = 2V_{\\mathrm{丙}}\\) ,即: \\(\\frac{V_{Z} - V_{\\mathrm{丙}}}{V_{\\mathrm{甲}}+V_{\\mathrm{丙}}} = \\frac{1}{1}\\) ;\n\n所以, \\(BC = AC = 360\\) 千米,那么 \\(AB\\) 为 720 千米."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B1卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B1卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "1. 玩具厂生产如右图所示的一种有12个面的玩具小鼓,其上下两个面是边长为1分米的正五边形,四周十个面是边长为1分米的正三角形.将小鼓的某两个面分别涂上红色和黄色.那么,玩具厂共可以生产 种不同的涂色小鼓.(经过旋转后重合的算同一种).\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/images/0.jpg)\n\n<center>俯视图</center>",
+      "answer_text": "6348",
+      "solution_text": "原式 \\(= \\frac{2017}{6 - 4 + 3 - 2 + 1} +297 = 6051 + 297 = 6348\\) 12",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是独立的，但文本块直接包含答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（解析版）.json#2#1",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（解析版）.json"
+        }
+      },
+      "text": "1. 玩具厂生产如右图所示的一种有12个面的玩具小鼓,其上下两个面是边长为1分米的正五边形,四周十个面是边长为1分米的正三角形.将小鼓的某两个面分别涂上红色和黄色.那么,玩具厂共可以生产 种不同的涂色小鼓.(经过旋转后重合的算同一种).\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/images/0.jpg)\n\n<center>俯视图</center>",
+      "answer": "6348",
+      "solution": "原式 \\(= \\frac{2017}{6 - 4 + 3 - 2 + 1} +297 = 6051 + 297 = 6348\\) 12"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B1卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B1卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "2. 在右侧第一个图的每个方格内填入1\\~4中的某个数字,使得每行、每列、每宫(粗线围成的 \\(2 \\times 2\\) 的正方形)内数字不重复,同时相邻方格内的数字满足之间的大小关系,但这16个符号中有且仅有一个符号是错的(右侧第二个图是给出的一种符合规则的例子).那么,第一个图中第2列所填的数字按照从上到下的顺序组成的四位数是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/images/1.jpg)\n\n## 二. 填空题III(每小题12分,共48分)",
+      "answer_text": "78",
+      "solution_text": "\\(S_{\\text{阴影}} = \\frac{1}{4}\\times (30^{2} - 3\\times 14^{2}) = \\frac{1}{4}\\times (900 - 588) = 78\\)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（解析版）/pages/page_001/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本块包含独立数学题干，但附有明确答案和详细解析，存在泄露风险，适合用于练习而非考试。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（解析版）.json#2#2",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（解析版）.json"
+        }
+      },
+      "text": "2. 在右侧第一个图的每个方格内填入1\\~4中的某个数字,使得每行、每列、每宫(粗线围成的 \\(2 \\times 2\\) 的正方形)内数字不重复,同时相邻方格内的数字满足之间的大小关系,但这16个符号中有且仅有一个符号是错的(右侧第二个图是给出的一种符合规则的例子).那么,第一个图中第2列所填的数字按照从上到下的顺序组成的四位数是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/images/1.jpg)\n\n## 二. 填空题III(每小题12分,共48分)",
+      "answer": "78",
+      "solution": "\\(S_{\\text{阴影}} = \\frac{1}{4}\\times (30^{2} - 3\\times 14^{2}) = \\frac{1}{4}\\times (900 - 588) = 78\\)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（解析版）/pages/page_001/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B1卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B1卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 已知两位数 \\(\\overline{AB} < 30\\) ,且 \\(\\overline{AB}\\) 、 \\(\\overline{AOB}\\) 、 \\(\\overline{A2B}\\) 、 \\(\\overline{A3B}\\) 、 \\(\\overline{A5B}\\) 都是质数,那么,符合条件的两位数 \\(\\overline{AB}\\) 是",
+      "answer_text": "17",
+      "solution_text": "小于30的两位质数有11、13、17、19、23、29共6个.其中121、123、129、203、209都不是质数,所以11、13、19、23、29都不符合题意;而17、107、127、137、157都是质数.符合条件的两位数只有17.",
+      "topic": "number_theory",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干为完整数学问题，但文本块包含答案和解析，题干本身无泄露，适合练习但不宜用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（解析版）.json#1#3",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（解析版）.json"
+        }
+      },
+      "text": "3. 已知两位数 \\(\\overline{AB} < 30\\) ,且 \\(\\overline{AB}\\) 、 \\(\\overline{AOB}\\) 、 \\(\\overline{A2B}\\) 、 \\(\\overline{A3B}\\) 、 \\(\\overline{A5B}\\) 都是质数,那么,符合条件的两位数 \\(\\overline{AB}\\) 是",
+      "answer": "17",
+      "solution": "小于30的两位质数有11、13、17、19、23、29共6个.其中121、123、129、203、209都不是质数,所以11、13、19、23、29都不符合题意;而17、107、127、137、157都是质数.符合条件的两位数只有17."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B1卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B1卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 有足够多的 \\(1 \\times 1\\) 、 \\(2 \\times 2\\) 、 \\(3 \\times 3\\) 、 \\(4 \\times 4\\) 的正方形纸片,要不重不漏的拼接成 \\(10 \\times 10\\) 的正方形,至少需要选用 块纸片.",
+      "answer_text": "120",
+      "solution_text": "机器人数量与毛绒兔数量原来差 \\(3 - 2 = 1\\) 份,后来仍然差 \\(2 - 1 = 1\\) 份,则卖出数量占 \\(3 - 2 = 1\\) 份.机器人原数量为 \\(40\\times 3 = 120\\) 个.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本描述了数学问题设置，无答案或解析信息，适合作为题干。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（解析版）.json#2#4",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（解析版）.json"
+        }
+      },
+      "text": "4. 有足够多的 \\(1 \\times 1\\) 、 \\(2 \\times 2\\) 、 \\(3 \\times 3\\) 、 \\(4 \\times 4\\) 的正方形纸片,要不重不漏的拼接成 \\(10 \\times 10\\) 的正方形,至少需要选用 块纸片.",
+      "answer": "120",
+      "solution": "机器人数量与毛绒兔数量原来差 \\(3 - 2 = 1\\) 份,后来仍然差 \\(2 - 1 = 1\\) 份,则卖出数量占 \\(3 - 2 = 1\\) 份.机器人原数量为 \\(40\\times 3 = 120\\) 个.\n\n## 二. 填空题II(每小题10分,共40分)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B1卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B1卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 三个工人以各自固定的效率加工一批零件,过了2小时后,大家开始讨论:\n\n甲:如果我从开始每小时加工的零件数比原来多10个,我们就能提前1小时完成任务了.\n\n乙:如果你从现在开始每小时加工的零件数比原来多20个,我们也能提前1小时完成任务.\n\n丙:如果从现在开始每小时加工的零件数提高到和我一样,我们就能提前半小时完成任务.\n\n甲:如果再工作2小时后,乙的工作效率提高到和我一样,我们就能提前12分钟完成任务.\n\n那么,如果从开始就只有乙自己加工,他用 小时可以完成任务.",
+      "answer_text": "11",
+      "solution_text": "(1)如果不用 \\(4\\times 4\\) 的正方形,因为 \\(3\\times 3\\) 的面积才9,那么要铺满,那么一定需要11块以上才有可能;\n\n(2)如果不用 \\(3\\times 3\\) 的, \\(4\\times 4\\) 的最多放4个,然后余下部分需要9个 \\(2\\times 2\\) 的正方形,一共至少需要13块;\n\n(3)如果 \\(4\\times 4\\) 和 \\(3\\times 3\\) 的都用, \\(4\\times 4\\) 的最多放3个,此时 \\(3\\times 3\\) 的最多放4个,如图,一共至少要用11块.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（解析版）/pages/page_003/images/0.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）.json#2#5",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B1卷（试卷版）.json"
+        }
+      },
+      "text": "5. 三个工人以各自固定的效率加工一批零件,过了2小时后,大家开始讨论:\n\n甲:如果我从开始每小时加工的零件数比原来多10个,我们就能提前1小时完成任务了.\n\n乙:如果你从现在开始每小时加工的零件数比原来多20个,我们也能提前1小时完成任务.\n\n丙:如果从现在开始每小时加工的零件数提高到和我一样,我们就能提前半小时完成任务.\n\n甲:如果再工作2小时后,乙的工作效率提高到和我一样,我们就能提前12分钟完成任务.\n\n那么,如果从开始就只有乙自己加工,他用 小时可以完成任务.",
+      "answer": "11",
+      "solution": "(1)如果不用 \\(4\\times 4\\) 的正方形,因为 \\(3\\times 3\\) 的面积才9,那么要铺满,那么一定需要11块以上才有可能;\n\n(2)如果不用 \\(3\\times 3\\) 的, \\(4\\times 4\\) 的最多放4个,然后余下部分需要9个 \\(2\\times 2\\) 的正方形,一共至少需要13块;\n\n(3)如果 \\(4\\times 4\\) 和 \\(3\\times 3\\) 的都用, \\(4\\times 4\\) 的最多放3个,此时 \\(3\\times 3\\) 的最多放4个,如图,一共至少要用11块.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B1卷（解析版）/pages/page_003/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2018 \\div \\left(\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{6}\\right)\\) 的计算结果是",
+      "answer_text": "2018",
+      "solution_text": "原式 \\(= 2018\\div 1 = 2018\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含答案和解析，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json"
+        }
+      },
+      "text": "1. 算式 \\(2018 \\div \\left(\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{6}\\right)\\) 的计算结果是",
+      "answer": "2018",
+      "solution": "原式 \\(= 2018\\div 1 = 2018\\)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 如图，圆的半径是14米，正方形的边长是30米，则阴影部分的面积是平方米. \\((\\pi\\) 取 \\(\\frac{22}{7}\\) )\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "450",
+      "solution_text": "易知阴影部分的面积正好占整个正方形面积的一半, \\(30\\times 30\\div 2 = 450\\) 平方米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（详解版）/pages/page_001/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，风险高，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json"
+        }
+      },
+      "text": "2. 如图，圆的半径是14米，正方形的边长是30米，则阴影部分的面积是平方米. \\((\\pi\\) 取 \\(\\frac{22}{7}\\) )\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "450",
+      "solution": "易知阴影部分的面积正好占整个正方形面积的一半, \\(30\\times 30\\div 2 = 450\\) 平方米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（详解版）/pages/page_001/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如果一个整数可以写成两个不同质数的乘积，则称这个整数为“半质数”，比如 \\(10 = 2 \\times 5\\) , \\(91 = 7 \\times 13\\) ，那么10、91就是“半质数”。在小于50的整数中，“半质数”有______个。",
+      "answer_text": "13",
+      "solution_text": "当较小的质数为2时,较大的质数可以是3、5、7、11、13、17、19、23,所得的乘积对应8个\"半质数\";\n\n当较小的质数为3时,较大的质数可以是5、7、11、13,所得的乘积对应4个\"半质数\";\n\n当较小的质数为5时,较大的质数只能是7,所得的乘积对应1个\"半质数\";\n\n当较小的质数为7时,因为此时最小的乘积为 \\(7\\times 11 = 77 > 50\\) ,所以不再存在其它小于50的\"半质数\".\n\n综上,小于50的\"半质数\"共有 \\(8 + 4 + 1 = 13\\) 个.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中包含完整答案和解析，因此有高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json#1#3",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json"
+        }
+      },
+      "text": "3. 如果一个整数可以写成两个不同质数的乘积，则称这个整数为“半质数”，比如 \\(10 = 2 \\times 5\\) , \\(91 = 7 \\times 13\\) ，那么10、91就是“半质数”。在小于50的整数中，“半质数”有______个。",
+      "answer": "13",
+      "solution": "当较小的质数为2时,较大的质数可以是3、5、7、11、13、17、19、23,所得的乘积对应8个\"半质数\";\n\n当较小的质数为3时,较大的质数可以是5、7、11、13,所得的乘积对应4个\"半质数\";\n\n当较小的质数为5时,较大的质数只能是7,所得的乘积对应1个\"半质数\";\n\n当较小的质数为7时,因为此时最小的乘积为 \\(7\\times 11 = 77 > 50\\) ,所以不再存在其它小于50的\"半质数\".\n\n综上,小于50的\"半质数\"共有 \\(8 + 4 + 1 = 13\\) 个."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 服装厂的生产流水线每天可加工70件上衣或80条裤子．已知1件上衣和1条裤子能组成一套成品服装，那么若用这条流水线连续生产30天，所加工的上衣和裤子数量刚好相同，得到的成品服装恰能装满8车．如果每车装的成品服装数量相等，则一车可以装______套服装.\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer_text": "140",
+      "solution_text": "每天生产上衣和裤子的数量之比为7:8,由于每1件上衣和1条裤子能组成一套成品服装,即上衣和裤子的数量相同,所以生产上衣和裤子的天数之比为8:7. 把30天按比分配,易知有16天的时间生产上衣,14天的时间生产裤子,数量均为 \\(70\\times 16 = 80\\times 14 = 1120\\) ,即刚好凑成1120套服装.已知这些服装恰能装满8车,则一车可以装 \\(1120\\div 8 = 140\\) 套服装.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该文本块包含完整的题目、答案和解析，因此作为题干时存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json#1#4",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json"
+        }
+      },
+      "text": "4. 服装厂的生产流水线每天可加工70件上衣或80条裤子．已知1件上衣和1条裤子能组成一套成品服装，那么若用这条流水线连续生产30天，所加工的上衣和裤子数量刚好相同，得到的成品服装恰能装满8车．如果每车装的成品服装数量相等，则一车可以装______套服装.\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer": "140",
+      "solution": "每天生产上衣和裤子的数量之比为7:8,由于每1件上衣和1条裤子能组成一套成品服装,即上衣和裤子的数量相同,所以生产上衣和裤子的天数之比为8:7. 把30天按比分配,易知有16天的时间生产上衣,14天的时间生产裤子,数量均为 \\(70\\times 16 = 80\\times 14 = 1120\\) ,即刚好凑成1120套服装.已知这些服装恰能装满8车,则一车可以装 \\(1120\\div 8 = 140\\) 套服装."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 有一个大于55的两位质数，用它分别减去24、38、55得到三个差，这三个差的数字和也都是质数．那么，这个两位质数是______.",
+      "answer_text": "67",
+      "solution_text": "由于24、38、55除以3的余数分别为0、2、1,所以这个两位质数与这三个数的差,其中必有一个是3的倍数,则这个差值的数字和也是3的倍数.而已知三个差值的数字和都是质数,则这个差值的数字和只能是3,最对应的数可能是3、12、21、30.\n\n显然这个两位质数是奇数,则它与38的差为奇数,与55的差为偶数;而24是3的倍数,所以这个两位数与24的差肯定不是3的倍数.那么这个两位质数:\n\n(1) \\(38 + 3 = 41\\) ,小于55,不符合要求;\n\n(2) \\(55 + 12 = 67\\) ,与24、38、55的差值均能满足要求;\n\n(3) \\(38 + 21 = 59\\) ,与24、55的差值的数字和不是质数,不符合要求;\n\n(4) \\(55 + 30 = 85\\) ,不是质数,不符合要求.\n\n综上,这个两位质数是67.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，没有包含答案或解析，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json"
+        }
+      },
+      "text": "5. 有一个大于55的两位质数，用它分别减去24、38、55得到三个差，这三个差的数字和也都是质数．那么，这个两位质数是______.",
+      "answer": "67",
+      "solution": "由于24、38、55除以3的余数分别为0、2、1,所以这个两位质数与这三个数的差,其中必有一个是3的倍数,则这个差值的数字和也是3的倍数.而已知三个差值的数字和都是质数,则这个差值的数字和只能是3,最对应的数可能是3、12、21、30.\n\n显然这个两位质数是奇数,则它与38的差为奇数,与55的差为偶数;而24是3的倍数,所以这个两位数与24的差肯定不是3的倍数.那么这个两位质数:\n\n(1) \\(38 + 3 = 41\\) ,小于55,不符合要求;\n\n(2) \\(55 + 12 = 67\\) ,与24、38、55的差值均能满足要求;\n\n(3) \\(38 + 21 = 59\\) ,与24、55的差值的数字和不是质数,不符合要求;\n\n(4) \\(55 + 30 = 85\\) ,不是质数,不符合要求.\n\n综上,这个两位质数是67."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 如图所示，在方框中填入适当的数字，使竖式成立，则商是______.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "812",
+      "solution_text": "易知商数的个位数字与除数的乘积为三位数,且个位数字为 \\(8 - 6 = 2\\) ;而商数的十位数字与除数的乘积是两位数,且个位数字为1,易知商数的个位数字是十位数字的2倍,且商数的个位数字与除数的乘积为口2. 显然除数的个位数字是奇数且不是5,那么在1、3、7、9中,只有1和7可以满足上述要求.\n\n尝试可知除数的个位数字为7的情况无法实现,所以除数的个位数字为1,商的末两位数字依次是1和2,此时除数的首位数字只能是9. 继续填满其它方框,可知这个除法竖式为 \\(73898\\div 91 = 812\\dots \\dots 6\\) ,即商为812.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（详解版）/pages/page_002/images/0.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目描述了一个竖式填数问题，要求求商，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json"
+        }
+      },
+      "text": "6. 如图所示，在方框中填入适当的数字，使竖式成立，则商是______.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "812",
+      "solution": "易知商数的个位数字与除数的乘积为三位数,且个位数字为 \\(8 - 6 = 2\\) ;而商数的十位数字与除数的乘积是两位数,且个位数字为1,易知商数的个位数字是十位数字的2倍,且商数的个位数字与除数的乘积为口2. 显然除数的个位数字是奇数且不是5,那么在1、3、7、9中,只有1和7可以满足上述要求.\n\n尝试可知除数的个位数字为7的情况无法实现,所以除数的个位数字为1,商的末两位数字依次是1和2,此时除数的首位数字只能是9. 继续填满其它方框,可知这个除法竖式为 \\(73898\\div 91 = 812\\dots \\dots 6\\) ,即商为812.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（详解版）/pages/page_002/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 如果一个数既含有奇数数字又含有偶数数字,就称这个数为\"花探数\",例如:123、998是\"花探数\",而135、24不是\"花探数\".在小于1000的正整数中一共有____个\"花探数\".",
+      "answer_text": "720",
+      "solution_text": "小于1000的正整数总共有999个,其中:\n\n只含奇数数字的数中,一位数有5个,两位数有 \\(5\\times 5 = 25\\) 个,三位数有 \\(5\\times 5\\times 5 = 125\\) 个,共有 \\(5 + 25 + 125 = 155\\) 个;\n\n只含偶数数字的数中,把不足三位的数视作最高位数字为0的三位数(但不能3个数字均为0),则共有 \\(5\\times 5\\times 5 - 1 = 124\\) 个.\n\n所以,小于1000的正整数中,共有 \\(999 - 155 - 124 = 720\\) 个\"花探数\".",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json#2#7",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json"
+        }
+      },
+      "text": "7. 如果一个数既含有奇数数字又含有偶数数字,就称这个数为\"花探数\",例如:123、998是\"花探数\",而135、24不是\"花探数\".在小于1000的正整数中一共有____个\"花探数\".",
+      "answer": "720",
+      "solution": "小于1000的正整数总共有999个,其中:\n\n只含奇数数字的数中,一位数有5个,两位数有 \\(5\\times 5 = 25\\) 个,三位数有 \\(5\\times 5\\times 5 = 125\\) 个,共有 \\(5 + 25 + 125 = 155\\) 个;\n\n只含偶数数字的数中,把不足三位的数视作最高位数字为0的三位数(但不能3个数字均为0),则共有 \\(5\\times 5\\times 5 - 1 = 124\\) 个.\n\n所以,小于1000的正整数中,共有 \\(999 - 155 - 124 = 720\\) 个\"花探数\"."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 甲乙两车分别从 \\(A\\) 、 \\(B\\) 两地同时出发,相向而行,在距离中点25千米处相遇;相遇后两车继续前行,当甲到达 \\(B\\) 地时,乙离 \\(A\\) 地还有90千米.则 \\(A\\) 、 \\(B\\) 两地相距____千米.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "450",
+      "solution_text": "两车相遇时,甲车比一车多行了 \\(25\\times 2 = 50\\) 千米;而甲行完全程的时候,乙还差90千米行完全程.可知甲车行完全程所用的时间,是两车相遇时间的 \\(90\\div 50 = 1.8\\) 倍,可知两车相遇时,甲车行了全程的 \\(\\frac{1}{1.8} = \\frac{5}{9}\\) ,刚好比全程的一半多25千米.所以 \\(A\\) 、 \\(B\\) 两地相距 \\(25\\div \\left(\\frac{5}{9} -\\frac{1}{2}\\right) = 450\\) 千米.",
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干，但直接给出了答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json#2#8",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（详解版）.json"
+        }
+      },
+      "text": "8. 甲乙两车分别从 \\(A\\) 、 \\(B\\) 两地同时出发,相向而行,在距离中点25千米处相遇;相遇后两车继续前行,当甲到达 \\(B\\) 地时,乙离 \\(A\\) 地还有90千米.则 \\(A\\) 、 \\(B\\) 两地相距____千米.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "450",
+      "solution": "两车相遇时,甲车比一车多行了 \\(25\\times 2 = 50\\) 千米;而甲行完全程的时候,乙还差90千米行完全程.可知甲车行完全程所用的时间,是两车相遇时间的 \\(90\\div 50 = 1.8\\) 倍,可知两车相遇时,甲车行了全程的 \\(\\frac{1}{1.8} = \\frac{5}{9}\\) ,刚好比全程的一半多25千米.所以 \\(A\\) 、 \\(B\\) 两地相距 \\(25\\div \\left(\\frac{5}{9} -\\frac{1}{2}\\right) = 450\\) 千米."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 5个小正方形如图摆放,图中阴影部分面积为2.4平方厘米,则一个小正方形的边长为____厘米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "2",
+      "solution_text": "作如下图辅助线,设每个小正方形的边长为\"1\".由等高模型及等比性质,可知\n\n\\[\\frac{S_{1}}{S_{2}} = \\frac{S_{3}}{S_{4}} = \\frac{S_{1} + S_{3}}{S_{2} + S_{4}} = \\frac{2\\times1\\div2}{3\\times1\\div2} = \\frac{2}{3}. \\quad (1)\\]\n\n刚好是一个小正方形的面积,所以一个小正方形的边长为2.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（详解版）/pages/page_003/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的题干，无答案或解析泄露，可安全用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json"
+        }
+      },
+      "text": "9. 5个小正方形如图摆放,图中阴影部分面积为2.4平方厘米,则一个小正方形的边长为____厘米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "2",
+      "solution": "作如下图辅助线,设每个小正方形的边长为\"1\".由等高模型及等比性质,可知\n\n\\[\\frac{S_{1}}{S_{2}} = \\frac{S_{3}}{S_{4}} = \\frac{S_{1} + S_{3}}{S_{2} + S_{4}} = \\frac{2\\times1\\div2}{3\\times1\\div2} = \\frac{2}{3}. \\quad (1)\\]\n\n刚好是一个小正方形的面积,所以一个小正方形的边长为2.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（详解版）/pages/page_003/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 在下图的圆圈内分别填入数字 \\(1 \\sim 4\\) ,使得每条直线上的四个数字均不重复.则四位数 \\(ABCD\\) 的值为____.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "4312",
+      "solution_text": "如下图,首先观察 \\(E\\) ,它所在的线上分别有2、3、4,所以 \\(E\\) 是1,接下来 \\(D\\) 确定是2;再观察 \\(F\\) 所在的线上分别有1、2、4,可知 \\(F\\) 是3,接下来确定 \\(A\\) 是4;再观察 \\(C\\) ,所在的线上有2、3、4,可以确定 \\(C\\) 是1,则 \\(B\\) 是3. 至此,ABCD的四个数字都已确定,所得到的四位数是4312.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（详解版）/pages/page_003/images/2.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json"
+        }
+      },
+      "text": "10. 在下图的圆圈内分别填入数字 \\(1 \\sim 4\\) ,使得每条直线上的四个数字均不重复.则四位数 \\(ABCD\\) 的值为____.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "4312",
+      "solution": "如下图,首先观察 \\(E\\) ,它所在的线上分别有2、3、4,所以 \\(E\\) 是1,接下来 \\(D\\) 确定是2;再观察 \\(F\\) 所在的线上分别有1、2、4,可知 \\(F\\) 是3,接下来确定 \\(A\\) 是4;再观察 \\(C\\) ,所在的线上有2、3、4,可以确定 \\(C\\) 是1,则 \\(B\\) 是3. 至此,ABCD的四个数字都已确定,所得到的四位数是4312.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（详解版）/pages/page_003/images/2.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B2卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 老师告诉了甲、乙、丙3名同学每人一个不同的质数,每个人都只知道自己的数.老师说:你们的3个数互不相同,并且都不超过45.于是,大家有了如下对话:\n\n甲:咱们3个人的数无法组成一个正确的口十口 \\(\\equiv\\) 口的加法算式.\n\n乙:我虽然不知道你是多少,但我知道如果把我的数减1,那么,我一定和你差7.\n\n丙:如果把我乘以2,我们是不是就可以组成一个正确的加法算式了?\n\n老师:没错,如果把丙的数乘以2,你们三个人的数就可以组成一个加法算式.\n\n如果这三名同学都足够聪明且诚实,那么,这3个质数的和是____.",
+      "answer_text": "71",
+      "solution_text": "由甲的话可知他的质数为奇数,且相邻的奇数一定不是质数.如果三个数均为奇数,则其中两个的和一定是偶数;而如果其中有一个数为2,则甲的数与2的和或差均不为质数.这样可知甲的数为23或37.\n\n此时乙应该已经想到了这一点,而他在无法确定甲的数的情况下,依然肯定自己的数减去1,与甲的差值为7,那么乙的数减去1以后,与23和37均相差7,可知乙的数为31.\n\n此时,丙可以确定乙的数为31,但无法确定甲的数是23还是37. 他提出问题,说明他手里的数乘以2,可以与31、23,或者是31、37组成加法算式,可知他的数是3、4、27或者34. 其中只有3是质数,所以丙的数是3.\n\n老师肯定了丙的2倍可以与甲、乙组成加法算式,可以确定甲的数为37. 三个人的数之和为 \\(37 + 31 + 3 = 71\\) .",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，包含问题条件但无答案泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B2卷（试卷版）.json"
+        }
+      },
+      "text": "11. 老师告诉了甲、乙、丙3名同学每人一个不同的质数,每个人都只知道自己的数.老师说:你们的3个数互不相同,并且都不超过45.于是,大家有了如下对话:\n\n甲:咱们3个人的数无法组成一个正确的口十口 \\(\\equiv\\) 口的加法算式.\n\n乙:我虽然不知道你是多少,但我知道如果把我的数减1,那么,我一定和你差7.\n\n丙:如果把我乘以2,我们是不是就可以组成一个正确的加法算式了?\n\n老师:没错,如果把丙的数乘以2,你们三个人的数就可以组成一个加法算式.\n\n如果这三名同学都足够聪明且诚实,那么,这3个质数的和是____.",
+      "answer": "71",
+      "solution": "由甲的话可知他的质数为奇数,且相邻的奇数一定不是质数.如果三个数均为奇数,则其中两个的和一定是偶数;而如果其中有一个数为2,则甲的数与2的和或差均不为质数.这样可知甲的数为23或37.\n\n此时乙应该已经想到了这一点,而他在无法确定甲的数的情况下,依然肯定自己的数减去1,与甲的差值为7,那么乙的数减去1以后,与23和37均相差7,可知乙的数为31.\n\n此时,丙可以确定乙的数为31,但无法确定甲的数是23还是37. 他提出问题,说明他手里的数乘以2,可以与31、23,或者是31、37组成加法算式,可知他的数是3、4、27或者34. 其中只有3是质数,所以丙的数是3.\n\n老师肯定了丙的2倍可以与甲、乙组成加法算式,可以确定甲的数为37. 三个人的数之和为 \\(37 + 31 + 3 = 71\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 悟空和八戒去摘仙桃,若悟空摘的个数增加 \\(50\\%\\) ,那么总数就会增加 \\(\\frac{1}{4}\\) ;如果八戒多摘 \\(\\frac{1}{5}\\) ,则总数增加 \\(\\%\\) .\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "10",
+      "solution_text": "\\(\\frac{1}{5} \\div 2 = 10\\%\\) 。\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_001/images/0.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可独立出题，但文本块包含标准答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json"
+        }
+      },
+      "text": "1. 悟空和八戒去摘仙桃,若悟空摘的个数增加 \\(50\\%\\) ,那么总数就会增加 \\(\\frac{1}{4}\\) ;如果八戒多摘 \\(\\frac{1}{5}\\) ,则总数增加 \\(\\%\\) .\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "10",
+      "solution": "\\(\\frac{1}{5} \\div 2 = 10\\%\\) 。\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_001/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 右图中一共可以数出 个三角形.",
+      "answer_text": "32",
+      "solution_text": "\\(8 + 8 + 8 + 4 + 4 = 32\\) 。\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_001/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整，但直接包含答案和解析，存在泄露风险，适合用于练习而非考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json"
+        }
+      },
+      "text": "2. 右图中一共可以数出 个三角形.",
+      "answer": "32",
+      "solution": "\\(8 + 8 + 8 + 4 + 4 = 32\\) 。\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_001/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图,除法竖式中已经填出了\"2018\".那么,这个除法竖式的商是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "811",
+      "solution_text": "中间部分只能是 \\(100 - 91 = 9\\) ,除数只有91一种情况,除数为811.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干部分完整，但直接附有答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json#1#3",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json"
+        }
+      },
+      "text": "3. 如图,除法竖式中已经填出了\"2018\".那么,这个除法竖式的商是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "811",
+      "solution": "中间部分只能是 \\(100 - 91 = 9\\) ,除数只有91一种情况,除数为811."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 一个盛水的容器侧视图如下,每一段都是圆柱形且三部分高度相同,其半径之比3:1:5,如果水位分别在 \\(\\frac{1}{3}\\) 高度、一半高度和装满时储水量的最简整数比是 \\(a:b:c\\) .那么 \\(a\\) 、 \\(b\\) 、 \\(c\\) 三数之和是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "171",
+      "solution_text": "分别设半径为3份、1份和5份,总高度为6份; \\(\\frac{1}{3}\\) 高度时的体积: \\(5^{2}\\pi \\times 2 = 50\\pi\\) ;一半高度时的体积: \\(50\\pi +1^{2}\\pi \\times 1 = 51\\pi\\) ;装满时的体积: \\(50\\pi +1^{2}\\pi \\times 2 + 3^{2}\\pi \\times 2 = 70\\pi\\) ; \\(a:b:c = 50:51:70\\) ,那么, \\(50 + 51 + 70 = 171\\) 。",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接附带答案和解析，存在高泄漏风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json#1#4",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json"
+        }
+      },
+      "text": "4. 一个盛水的容器侧视图如下,每一段都是圆柱形且三部分高度相同,其半径之比3:1:5,如果水位分别在 \\(\\frac{1}{3}\\) 高度、一半高度和装满时储水量的最简整数比是 \\(a:b:c\\) .那么 \\(a\\) 、 \\(b\\) 、 \\(c\\) 三数之和是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "171",
+      "solution": "分别设半径为3份、1份和5份,总高度为6份; \\(\\frac{1}{3}\\) 高度时的体积: \\(5^{2}\\pi \\times 2 = 50\\pi\\) ;一半高度时的体积: \\(50\\pi +1^{2}\\pi \\times 1 = 51\\pi\\) ;装满时的体积: \\(50\\pi +1^{2}\\pi \\times 2 + 3^{2}\\pi \\times 2 = 70\\pi\\) ; \\(a:b:c = 50:51:70\\) ,那么, \\(50 + 51 + 70 = 171\\) 。"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 定义 \\(a^{*}\\) 表示 \\(1^{a} \\times 2^{a} \\times 3^{a} \\times 4^{a} \\times 5^{a}\\) 计算结果末尾连续0的个数.那么,2018为",
+      "answer_text": "2018",
+      "solution_text": "只需要看 \\(1^{2018}\\times 2^{2018}\\times 3^{2018}\\times 4^{2018}\\times 5^{2018}\\) 的质因数中2和5的个数,一共6054个2和2018个5,所以末尾2018个0.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本定义了概念并指向具体计算，但未提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "5. 定义 \\(a^{*}\\) 表示 \\(1^{a} \\times 2^{a} \\times 3^{a} \\times 4^{a} \\times 5^{a}\\) 计算结果末尾连续0的个数.那么,2018为",
+      "answer": "2018",
+      "solution": "只需要看 \\(1^{2018}\\times 2^{2018}\\times 3^{2018}\\times 4^{2018}\\times 5^{2018}\\) 的质因数中2和5的个数,一共6054个2和2018个5,所以末尾2018个0."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 三个小于100且互不相同的质数能构成一个等差数列,并且它们的数字和都相同,那么这三个质数的和是",
+      "answer_text": "69",
+      "solution_text": "3个数中间数必为奇数,为保证奇偶性,相邻两数差一定是偶数,另外根据数字和相同,那么它们除以9的余数相同,公差是9的倍数,综上,公差肯定是18的倍数,至少差18. 枚举,容易找到5,23,41三个数.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "6. 三个小于100且互不相同的质数能构成一个等差数列,并且它们的数字和都相同,那么这三个质数的和是",
+      "answer": "69",
+      "solution": "3个数中间数必为奇数,为保证奇偶性,相邻两数差一定是偶数,另外根据数字和相同,那么它们除以9的余数相同,公差是9的倍数,综上,公差肯定是18的倍数,至少差18. 枚举,容易找到5,23,41三个数."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 如图,在大圆内部放置了两个紧挨着的半圆,两个半圆的圆心的连线在大圆的直径上,已知较大半圆面积为20平方厘米,较小半圆面积为12平方厘米,则图中阴影部分面积总和是 平方厘米.",
+      "answer_text": "16",
+      "solution_text": "通过弦图可知 \\(R_{\\mathrm{}^{2}}^{2} + R_{\\mathrm{}^{1}}^{2} = R_{\\mathrm{}^{2}}^{2}\\) ,大半圆面积为 \\(20 + 12 = 32\\) ,阴影面积为 \\(32 - 10 - 6 = 16\\)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_002/images/0.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但包含答案和解析，适合仅用于练习。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json#2#7",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json"
+        }
+      },
+      "text": "7. 如图,在大圆内部放置了两个紧挨着的半圆,两个半圆的圆心的连线在大圆的直径上,已知较大半圆面积为20平方厘米,较小半圆面积为12平方厘米,则图中阴影部分面积总和是 平方厘米.",
+      "answer": "16",
+      "solution": "通过弦图可知 \\(R_{\\mathrm{}^{2}}^{2} + R_{\\mathrm{}^{1}}^{2} = R_{\\mathrm{}^{2}}^{2}\\) ,大半圆面积为 \\(20 + 12 = 32\\) ,阴影面积为 \\(32 - 10 - 6 = 16\\)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_002/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 某次考试每人要考数学、语文、英语、科学四科,每科的分数都是0\\~7的整数,在四科总分都是10分的考生中,至少选出 人,才能保证选出的人中有两人他们各科考试分数全都对应相同.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三.填空题III(每小题12分,共48分)",
+      "answer_text": "247",
+      "solution_text": "考虑所有情况减去有单科10、9、8的三种情况, \\(C_{10 + 4 - 1}^{4 - 1} - C_{4}^{1} - A_{4}^{2} - 2A_{4}^{2} = 246\\) , \\(246 + 1 = 247\\)\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该文本块包含完整题干、答案和解析，答案直接泄露，适合用于练习但不适合正式考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json#2#8",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（详解版）.json"
+        }
+      },
+      "text": "8. 某次考试每人要考数学、语文、英语、科学四科,每科的分数都是0\\~7的整数,在四科总分都是10分的考生中,至少选出 人,才能保证选出的人中有两人他们各科考试分数全都对应相同.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三.填空题III(每小题12分,共48分)",
+      "answer": "247",
+      "solution": "考虑所有情况减去有单科10、9、8的三种情况, \\(C_{10 + 4 - 1}^{4 - 1} - C_{4}^{1} - A_{4}^{2} - 2A_{4}^{2} = 246\\) , \\(246 + 1 = 247\\)\n\n## 三. 填空题Ⅲ(每小题12分,共48分)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 在图中的方格内填入1\\~6中的某个数字,使得每行、每列数字均不重复.每个粗线区域内已有的小写数字表示该区域中所填数字经过相应计算后的结果,粗线区域内数字可以重复.那么,第1列从上到下所填入的前5个数字按顺序组成的五位数是(左图是一个符合条件的填法)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/1.jpg)\n\n<table><tr><td>1-</td><td>5÷</td><td>6+</td><td>3÷</td><td></td><td>11+</td></tr><tr><td></td><td></td><td></td><td>4+</td><td></td><td></td></tr><tr><td>9+</td><td></td><td>15×</td><td></td><td>20×</td><td>6+</td></tr><tr><td>3-</td><td>2-</td><td></td><td>3+</td><td></td><td></td></tr><tr><td></td><td></td><td>30×</td><td></td><td>9×</td><td></td></tr><tr><td>2×</td><td></td><td></td><td>10+</td><td></td><td></td></tr></table>",
+      "answer_text": "34625",
+      "solution_text": "\\(F\\) 行两个数相乘为2只能是 \\(1\\times 2 = 2\\) ,第2\n\n列两个数相除为5只能是 \\(5\\div 1 = 5\\) ,所以 \\(F1\\) 填2, \\(F2\\) 填1. \\(E\\)\n\n\\(F\\) 两行三个数相乘为9,只能是 \\(1\\times 3\\times 3 = 9\\) ,所以 \\(F6\\) 填3;两个数相乘为30,只能为 \\(5\\times 6 = 30\\) . \\(F\\) 行两个数的和为10,\n\n只能为 \\(4 + 6 = 10\\) ,因此 \\(F3\\) 填5, \\(E3\\) 填6.\n\n同样的方法分析其他方格,填表如下.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_002/images/1.jpg)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_002/images/2.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是完整的数学题干，但引用图片可能泄露答案，因此建议仅用于练习。",
+        "scan_leakage_risk": 1,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "9. 在图中的方格内填入1\\~6中的某个数字,使得每行、每列数字均不重复.每个粗线区域内已有的小写数字表示该区域中所填数字经过相应计算后的结果,粗线区域内数字可以重复.那么,第1列从上到下所填入的前5个数字按顺序组成的五位数是(左图是一个符合条件的填法)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/1.jpg)\n\n<table><tr><td>1-</td><td>5÷</td><td>6+</td><td>3÷</td><td></td><td>11+</td></tr><tr><td></td><td></td><td></td><td>4+</td><td></td><td></td></tr><tr><td>9+</td><td></td><td>15×</td><td></td><td>20×</td><td>6+</td></tr><tr><td>3-</td><td>2-</td><td></td><td>3+</td><td></td><td></td></tr><tr><td></td><td></td><td>30×</td><td></td><td>9×</td><td></td></tr><tr><td>2×</td><td></td><td></td><td>10+</td><td></td><td></td></tr></table>",
+      "answer": "34625",
+      "solution": "\\(F\\) 行两个数相乘为2只能是 \\(1\\times 2 = 2\\) ,第2\n\n列两个数相除为5只能是 \\(5\\div 1 = 5\\) ,所以 \\(F1\\) 填2, \\(F2\\) 填1. \\(E\\)\n\n\\(F\\) 两行三个数相乘为9,只能是 \\(1\\times 3\\times 3 = 9\\) ,所以 \\(F6\\) 填3;两个数相乘为30,只能为 \\(5\\times 6 = 30\\) . \\(F\\) 行两个数的和为10,\n\n只能为 \\(4 + 6 = 10\\) ,因此 \\(F3\\) 填5, \\(E3\\) 填6.\n\n同样的方法分析其他方格,填表如下.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_002/images/1.jpg)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_002/images/2.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 教室内5个同学一起玩对战游戏,每场比赛都会重新选一些人(可以为1人)当红队,剩下的人当蓝队;对一场比赛来说,我们定义胜队的每位同学都胜了负队的每位同学;已知红队必定能战胜蓝队,那么至少需要 场比赛,才能使这5人中的任意两人之间均互有胜负.",
+      "answer_text": "4",
+      "solution_text": "想互有胜负至少每人比赛2场,总共需要 \\(C_{5}^{2}\\times 2 = 20\\) 种情况,每次具体有四对一赛(具体4种)和三对二赛(具体6种)两种形式,最少情况为 \\(\\left[\\frac{20}{6}\\right] + 1 = 4\\) .\n\n不难构造:\n\n<table><tr><td>场次<br>队伍</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>红</td><td>A、B、C</td><td>C、D、E</td><td>A、E</td><td>B、D</td></tr><tr><td>蓝</td><td>D、E</td><td>A、B</td><td>B、C、D</td><td>A、C、E</td></tr></table>",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题目，没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "10. 教室内5个同学一起玩对战游戏,每场比赛都会重新选一些人(可以为1人)当红队,剩下的人当蓝队;对一场比赛来说,我们定义胜队的每位同学都胜了负队的每位同学;已知红队必定能战胜蓝队,那么至少需要 场比赛,才能使这5人中的任意两人之间均互有胜负.",
+      "answer": "4",
+      "solution": "想互有胜负至少每人比赛2场,总共需要 \\(C_{5}^{2}\\times 2 = 20\\) 种情况,每次具体有四对一赛(具体4种)和三对二赛(具体6种)两种形式,最少情况为 \\(\\left[\\frac{20}{6}\\right] + 1 = 4\\) .\n\n不难构造:\n\n<table><tr><td>场次<br>队伍</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>红</td><td>A、B、C</td><td>C、D、E</td><td>A、E</td><td>B、D</td></tr><tr><td>蓝</td><td>D、E</td><td>A、B</td><td>B、C、D</td><td>A、C、E</td></tr></table>"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 某商场有长方形通道如右图所示,其中 \\(AB = 190\\) 米, \\(BC = 110\\) 米.有一个小偷在 \\(B\\) 处偷东西被 \\(A\\) 处的警察发现,警察立刻逆时针以每秒8米的速度追赶小偷,小偷以每秒4米的速度沿同样方向逃跑;当小偷与警察处在同一条通道上(即同一条边上)时,小偷的速度会变为原来的1.5倍,直到拐一个弯后看不到警察,小偷又变为原速;在警察开始出发追小偷的同时,见义勇为的小明从 \\(A\\) 地同时出发沿顺时针跑去围堵小偷;若小明与警察同时抓到小偷,小明的速度是每秒 米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": "2",
+      "solution_text": "警察跑了 \\(B\\) 处时,小偷跑了 \\(120\\div 2 = 95\\) 米,距 \\(C\\) 地还有15米,这一段小偷速度为6米每秒,共用2.5秒,警察这段时间跑了 \\(8\\times 2.5 = 20\\) 米,距离 \\(C\\) 还有90米;在警察跑90米的时间内,小偷速度变为4米每秒,小偷跑45米,警察追上小偷跑 \\(45\\div 2\\times 8 = 180\\) 米;小明跑120米,速度比4:1,小明速度为2米每秒.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_003/images/0.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，包含问题描述和条件，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级B卷（试卷版）.json"
+        }
+      },
+      "text": "11. 某商场有长方形通道如右图所示,其中 \\(AB = 190\\) 米, \\(BC = 110\\) 米.有一个小偷在 \\(B\\) 处偷东西被 \\(A\\) 处的警察发现,警察立刻逆时针以每秒8米的速度追赶小偷,小偷以每秒4米的速度沿同样方向逃跑;当小偷与警察处在同一条通道上(即同一条边上)时,小偷的速度会变为原来的1.5倍,直到拐一个弯后看不到警察,小偷又变为原速;在警察开始出发追小偷的同时,见义勇为的小明从 \\(A\\) 地同时出发沿顺时针跑去围堵小偷;若小明与警察同时抓到小偷,小明的速度是每秒 米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer": "2",
+      "solution": "警察跑了 \\(B\\) 处时,小偷跑了 \\(120\\div 2 = 95\\) 米,距 \\(C\\) 地还有15米,这一段小偷速度为6米每秒,共用2.5秒,警察这段时间跑了 \\(8\\times 2.5 = 20\\) 米,距离 \\(C\\) 还有90米;在警察跑90米的时间内,小偷速度变为4米每秒,小偷跑45米,警察追上小偷跑 \\(45\\div 2\\times 8 = 180\\) 米;小明跑120米,速度比4:1,小明速度为2米每秒.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级B卷（详解版）/pages/page_003/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(12 + \\frac{1}{2018} \\times \\left[2 \\div \\left(\\frac{1}{2017} \\times \\frac{1}{2018}\\right)\\right]\\) 的计算结果是",
+      "answer_text": "4046",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干部分独立，但包含标准答案和详细解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        }
+      },
+      "text": "1. 算式 \\(12 + \\frac{1}{2018} \\times \\left[2 \\div \\left(\\frac{1}{2017} \\times \\frac{1}{2018}\\right)\\right]\\) 的计算结果是",
+      "answer": "4046",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 开心小学的30名老师和100名学生在操场上做游戏.路过的张奶奶数了数据场上的人,发现男同学的数量是男老师的3倍,女同学的数量是女老师的4倍.那么男老师一共有 名.",
+      "answer_text": "20",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但包含答案和解析，答案泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        }
+      },
+      "text": "2. 开心小学的30名老师和100名学生在操场上做游戏.路过的张奶奶数了数据场上的人,发现男同学的数量是男老师的3倍,女同学的数量是女老师的4倍.那么男老师一共有 名.",
+      "answer": "20",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图,一个正六边形分成6个相同的三角形,每个三角形又可以分成3个相同的小三角形,已知阴影部分面积是18平方厘米,那么正六边形的面积是 平方厘米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "54",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干本身可出题，但文本块包含答案和解析，仅适合练习使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#1#3",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        }
+      },
+      "text": "3. 如图,一个正六边形分成6个相同的三角形,每个三角形又可以分成3个相同的小三角形,已知阴影部分面积是18平方厘米,那么正六边形的面积是 平方厘米.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "54",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 对于任意两个相邻的正整数,如果它们各自的约数个数可以整除另一个数,我们就称这两个数为一组\"友好数\".例如:3的约数个数能整除4;4的约数个数能整除3,因此3和4就是最小的一组\"友好数\".那么,第二小的一组\"友好数\"两数的乘积是",
+      "answer_text": "240",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但包含答案和解析，高风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#1#4",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        }
+      },
+      "text": "4. 对于任意两个相邻的正整数,如果它们各自的约数个数可以整除另一个数,我们就称这两个数为一组\"友好数\".例如:3的约数个数能整除4;4的约数个数能整除3,因此3和4就是最小的一组\"友好数\".那么,第二小的一组\"友好数\"两数的乘积是",
+      "answer": "240",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 如图,固定于地面的一容器由三段组成,每一段都是圆柱体且高度相同,三个圆柱的半径之比 \\(1:3:5\\) 。如果将水注入容器内,水位分别在 \\(\\frac{1}{3}\\) 高度、 \\(\\frac{2}{3}\\) 高度和装满时的储水量的最简整数比为 \\(a:b:c\\) ,那么 \\(a + b + c =\\) _______.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "94",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干本身可独立出题，但文本块中直接包含了答案和解析，存在高泄露风险，因此建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#2#5",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        }
+      },
+      "text": "5. 如图,固定于地面的一容器由三段组成,每一段都是圆柱体且高度相同,三个圆柱的半径之比 \\(1:3:5\\) 。如果将水注入容器内,水位分别在 \\(\\frac{1}{3}\\) 高度、 \\(\\frac{2}{3}\\) 高度和装满时的储水量的最简整数比为 \\(a:b:c\\) ,那么 \\(a + b + c =\\) _______.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "94",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 一场投篮比赛中小明投了一些三分球和两分球,其中三分球命中率为 \\(40\\%\\) ,两分球命中率为 \\(60\\%\\) ,总命中率为 \\(55\\%\\) . 最后他一共得了48分,那么他投中 ______ 个三分球.",
+      "answer_text": "4",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该文本包含完整的题目、答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#2#6",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        }
+      },
+      "text": "6. 一场投篮比赛中小明投了一些三分球和两分球,其中三分球命中率为 \\(40\\%\\) ,两分球命中率为 \\(60\\%\\) ,总命中率为 \\(55\\%\\) . 最后他一共得了48分,那么他投中 ______ 个三分球.",
+      "answer": "4",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 如图,在每个方框中填入一个数字,使得算式成立. 则乘积为 _______.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "26961",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干清晰但直接包含答案和解答图像，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#2#7",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "7. 如图,在每个方框中填入一个数字,使得算式成立.则乘积为 _______.",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#2#7",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        }
+      },
+      "text": "7. 如图,在每个方框中填入一个数字,使得算式成立. 则乘积为 _______.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "26961",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 有一列长度为90米的火车 \\(A\\) 和一列长度为180米的火车 \\(B\\) ,两车相向而行,有四人分别发布了一条消息.\n\n甲说:我坐在火车 \\(A\\) 上,看到火车 \\(B\\) 经过用时6秒.\n\n乙说:我坐在火车 \\(B\\) 上,看到火车 \\(A\\) 经过用时2秒.\n\n丙说:我在路边站着看风景,火车 \\(B\\) 从我身边经过用时9秒.\n\n丁说:我在路边跑步,先被火车 \\(B\\) 超过,1分钟后火车 \\(A\\) 从我身边经过,用时3秒.\n\n已知四人所说的话中只有一个人的数据是错误的,那么丁的速度是每秒 ______ 米.\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer_text": "5",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本是一个完整的数学题干，但直接包含了答案和解析，存在高泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#2#8",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        }
+      },
+      "text": "8. 有一列长度为90米的火车 \\(A\\) 和一列长度为180米的火车 \\(B\\) ,两车相向而行,有四人分别发布了一条消息.\n\n甲说:我坐在火车 \\(A\\) 上,看到火车 \\(B\\) 经过用时6秒.\n\n乙说:我坐在火车 \\(B\\) 上,看到火车 \\(A\\) 经过用时2秒.\n\n丙说:我在路边站着看风景,火车 \\(B\\) 从我身边经过用时9秒.\n\n丁说:我在路边跑步,先被火车 \\(B\\) 超过,1分钟后火车 \\(A\\) 从我身边经过,用时3秒.\n\n已知四人所说的话中只有一个人的数据是错误的,那么丁的速度是每秒 ______ 米.\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer": "5",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 把一个四面体 \\(A - BCD\\) 的每条棱都染成黑色或白色(四面体不可旋转),那么使得从 \\(A\\) 到 \\(B\\) 至少存在一条全白色路线的染法有 ______ 种.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": "48",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整且无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）.json"
+        }
+      },
+      "text": "9. 把一个四面体 \\(A - BCD\\) 的每条棱都染成黑色或白色(四面体不可旋转),那么使得从 \\(A\\) 到 \\(B\\) 至少存在一条全白色路线的染法有 ______ 种.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer": "48",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 已知 \\(A, B, C, D, E, F, G, H, I\\) 是9个互不相同的非零数字,满足: \\(A\\) 除以 \\(B\\) 余 \\(C\\) , \\(D\\) 除以 \\(E\\) 余 \\(F\\) , \\(G\\) 除以 \\(H\\) 余 \\(I\\) ,那么 \\(\\overline{ABC} + \\overline{DEF} + \\overline{GHI} =\\) _______.",
+      "answer_text": "2547",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）.json"
+        }
+      },
+      "text": "10. 已知 \\(A, B, C, D, E, F, G, H, I\\) 是9个互不相同的非零数字,满足: \\(A\\) 除以 \\(B\\) 余 \\(C\\) , \\(D\\) 除以 \\(E\\) 余 \\(F\\) , \\(G\\) 除以 \\(H\\) 余 \\(I\\) ,那么 \\(\\overline{ABC} + \\overline{DEF} + \\overline{GHI} =\\) _______.",
+      "answer": "2547",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "11. 圆周上有 7 个点, 将这些点两两相连, 最多可以把圆面分成 ______ 部分.",
+      "answer_text": "57",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级C卷（试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，存在泄露风险，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json#3#11",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级C卷（详解版）.json"
+        }
+      },
+      "text": "11. 圆周上有 7 个点, 将这些点两两相连, 最多可以把圆面分成 ______ 部分.",
+      "answer": "57",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(\\frac{18}{5} \\times \\frac{28}{6} \\times \\frac{40}{7} + (20.18 - 0.18) \\times 50\\) 的计算结果是",
+      "answer_text": "1096",
+      "solution_text": "原式 \\(= \\frac{18}{5} \\times \\frac{14}{3} \\times \\frac{40}{7} + 20 \\times 50 = 6 \\times 2 \\times 8 + 1000 = 1096\\) .",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接附有答案和解析，存在泄露风险，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json#1#1",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json"
+        }
+      },
+      "text": "1. 算式 \\(\\frac{18}{5} \\times \\frac{28}{6} \\times \\frac{40}{7} + (20.18 - 0.18) \\times 50\\) 的计算结果是",
+      "answer": "1096",
+      "solution": "原式 \\(= \\frac{18}{5} \\times \\frac{14}{3} \\times \\frac{40}{7} + 20 \\times 50 = 6 \\times 2 \\times 8 + 1000 = 1096\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 今年\"双11\"购物狂欢节期间,某快递公司的全国快递包裹数量从去年同期的5300万个增长到8000万个,其快递包裹数目增长对整个快递行业增长量的贡献率恰为 \\(30\\%\\) .那么整个快递行业今年\"双11\"期间快递包裹的增长量为 万个.",
+      "answer_text": "9000",
+      "solution_text": "该快递公司的包裹增长量为 \\(8000 - 5300 = 2700\\) 万个,按照 \\(30\\%\\) 计算,整个快递行业的增长量为 \\(2700 \\div 30\\% = 9000\\) 万个.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，泄露风险高，不适合考试，仅可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json#1#2",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json"
+        }
+      },
+      "text": "2. 今年\"双11\"购物狂欢节期间,某快递公司的全国快递包裹数量从去年同期的5300万个增长到8000万个,其快递包裹数目增长对整个快递行业增长量的贡献率恰为 \\(30\\%\\) .那么整个快递行业今年\"双11\"期间快递包裹的增长量为 万个.",
+      "answer": "9000",
+      "solution": "该快递公司的包裹增长量为 \\(8000 - 5300 = 2700\\) 万个,按照 \\(30\\%\\) 计算,整个快递行业的增长量为 \\(2700 \\div 30\\% = 9000\\) 万个."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 右图中一共有 个三角形.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "10",
+      "solution_text": "按照构成三角形的块数来分类,1块构成的三角形有5个,2块构成的三角形有2个,3块构成的三角形有2个,5块构成的三角形有1个,总共 \\(5 + 2 + 2 + 1 = 10\\) 个.",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目文本直接包含答案和解析，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json#1#3",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json"
+        }
+      },
+      "text": "3. 右图中一共有 个三角形.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "10",
+      "solution": "按照构成三角形的块数来分类,1块构成的三角形有5个,2块构成的三角形有2个,3块构成的三角形有2个,5块构成的三角形有1个,总共 \\(5 + 2 + 2 + 1 = 10\\) 个."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 海贼王带领6名海盗在神奇大陆挖到一批黑石,恰好7人分到的黑石颗数相同;这时又来了1名海盗加入,海贼王决定让其他6名海盗每人拿出3颗黑石给新伙伴,这时7名海盗黑石颗数恰好相同,那么共挖出黑石 颗.\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer_text": "147",
+      "solution_text": "其他6名海盗每人拿出3颗黑石给新伙伴,7个人的数量刚好相同,可知此时每人分到 \\(3 \\times 6 = 18\\) 颗;而在此之前,海贼王与6名海盗分得的数量相同,数量为 \\(18 + 3 = 21\\) 颗,而海贼王的黑石数量没变,所以共挖出黑石 \\(18 \\times 7 + 21 = 147\\) 颗.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整，但直接包含答案和解析，存在高泄漏风险，不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json#1#4",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json"
+        }
+      },
+      "text": "4. 海贼王带领6名海盗在神奇大陆挖到一批黑石,恰好7人分到的黑石颗数相同;这时又来了1名海盗加入,海贼王决定让其他6名海盗每人拿出3颗黑石给新伙伴,这时7名海盗黑石颗数恰好相同,那么共挖出黑石 颗.\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer": "147",
+      "solution": "其他6名海盗每人拿出3颗黑石给新伙伴,7个人的数量刚好相同,可知此时每人分到 \\(3 \\times 6 = 18\\) 颗;而在此之前,海贼王与6名海盗分得的数量相同,数量为 \\(18 + 3 = 21\\) 颗,而海贼王的黑石数量没变,所以共挖出黑石 \\(18 \\times 7 + 21 = 147\\) 颗.\n\n## 二. 填空题II(每小题10分,共40分)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 一场投篮比赛中小明投了一些三分球和两分球,其中三分球命中率为 \\(40\\%\\) ,两分球命中率为 \\(60\\%\\) ,总命中率为 \\(55\\%\\) .最后他一共得了48分,那么他投中了 个三分球.",
+      "answer_text": "4",
+      "solution_text": "两分球和三分球的投球个数之是 \\((55\\% - 40\\%):(60\\% - 55\\%) = 3:1\\) ,则进球数之比是 \\((3 \\times 60\\%):(1 \\times 40\\%) = 9:2\\) ,则得分数之比为 \\((2 \\times 9):(3 \\times 2) = 3:1\\) . 所以三分球共得到 \\(48 \\div (3 + 1) = 12\\) 分,即小明投中了 \\(12 \\div 3 = 4\\) 个三分球.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目为独立数学题，但文本中直接包含答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json#1#5",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json"
+        }
+      },
+      "text": "5. 一场投篮比赛中小明投了一些三分球和两分球,其中三分球命中率为 \\(40\\%\\) ,两分球命中率为 \\(60\\%\\) ,总命中率为 \\(55\\%\\) .最后他一共得了48分,那么他投中了 个三分球.",
+      "answer": "4",
+      "solution": "两分球和三分球的投球个数之是 \\((55\\% - 40\\%):(60\\% - 55\\%) = 3:1\\) ,则进球数之比是 \\((3 \\times 60\\%):(1 \\times 40\\%) = 9:2\\) ,则得分数之比为 \\((2 \\times 9):(3 \\times 2) = 3:1\\) . 所以三分球共得到 \\(48 \\div (3 + 1) = 12\\) 分,即小明投中了 \\(12 \\div 3 = 4\\) 个三分球."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 从1,2,2,3,9,5,5,25这8个数中,选出2个或2个以上的数相乘,可以得到 个不同的乘积.",
+      "answer_text": "59",
+      "solution_text": "把所有的数都选上,乘积为 \\(2^{2}\\times 3^{3}\\times 5^{4}\\) .而不管选择这8个数中的哪几个相乘,所得到的一定是 \\(2^{2}\\times 3^{3}\\times 5^{4}\\) 的因数.这个数有 \\((2 + 1)\\times (3 + 1)\\times (4 + 1) = 60\\) 个因数,但其中最小的因数1是不能由2个或2个以上的数相乘来得到的,所以不同的乘积共有 \\(60 - 1 = 59\\) 个.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学问题，没有答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）.json"
+        }
+      },
+      "text": "6. 从1,2,2,3,9,5,5,25这8个数中,选出2个或2个以上的数相乘,可以得到 个不同的乘积.",
+      "answer": "59",
+      "solution": "把所有的数都选上,乘积为 \\(2^{2}\\times 3^{3}\\times 5^{4}\\) .而不管选择这8个数中的哪几个相乘,所得到的一定是 \\(2^{2}\\times 3^{3}\\times 5^{4}\\) 的因数.这个数有 \\((2 + 1)\\times (3 + 1)\\times (4 + 1) = 60\\) 个因数,但其中最小的因数1是不能由2个或2个以上的数相乘来得到的,所以不同的乘积共有 \\(60 - 1 = 59\\) 个."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. 如图,四边形ABCD是直角梯形,上底 \\(AD\\) 长为20厘米,下底 \\(BC\\) 长为80厘米,高 \\(AB\\) 长60厘米,分别以 \\(D\\) 和 \\(C\\) 为圆心,上底和下底为半径做扇形,那么图中阴影两部分的面积差是 平方厘米.(π取3.14)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "17",
+      "solution_text": "先观察直角梯形ABCD,下底与上底的差值刚好等于高的长度,所以过 \\(D\\) 点作 \\(BC\\) 边的垂线,可以得到一个以垂足为直角顶点、 \\(CD\\) 为斜边的等腰直角三角形,即底角为 \\(45^{\\circ}\\) .\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（详解版）/pages/page_002/images/0.jpg)\n\n两个阴影部分本身都是不规则图形,如果分别加上上面的空白区域,则面积之差不变.其中,右面阴影部分加上上面空白区域,所得图形即为以 \\(D\\) 为圆心的小扇形,面积为 \\(3.14\\times 20^{2}\\times \\frac{135}{360} = 471\\) 平方厘米;左边阴影部分加上上面空白区域,所得图形面积即为整个梯形与以 \\(C\\) 为顶点的大扇形面积之差,等于 \\((20 + 80)\\times 60\\times \\frac{1}{2} - 3.14\\times 80^{2}\\times \\frac{45}{360} = 488\\) 平方厘米.所以阴影两部分的面积之差为 \\(488 - 471 = 17\\) 平方厘米.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）.json#1#7",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）.json"
+        }
+      },
+      "text": "7. 如图,四边形ABCD是直角梯形,上底 \\(AD\\) 长为20厘米,下底 \\(BC\\) 长为80厘米,高 \\(AB\\) 长60厘米,分别以 \\(D\\) 和 \\(C\\) 为圆心,上底和下底为半径做扇形,那么图中阴影两部分的面积差是 平方厘米.(π取3.14)\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "17",
+      "solution": "先观察直角梯形ABCD,下底与上底的差值刚好等于高的长度,所以过 \\(D\\) 点作 \\(BC\\) 边的垂线,可以得到一个以垂足为直角顶点、 \\(CD\\) 为斜边的等腰直角三角形,即底角为 \\(45^{\\circ}\\) .\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（详解版）/pages/page_002/images/0.jpg)\n\n两个阴影部分本身都是不规则图形,如果分别加上上面的空白区域,则面积之差不变.其中,右面阴影部分加上上面空白区域,所得图形即为以 \\(D\\) 为圆心的小扇形,面积为 \\(3.14\\times 20^{2}\\times \\frac{135}{360} = 471\\) 平方厘米;左边阴影部分加上上面空白区域,所得图形面积即为整个梯形与以 \\(C\\) 为顶点的大扇形面积之差,等于 \\((20 + 80)\\times 60\\times \\frac{1}{2} - 3.14\\times 80^{2}\\times \\frac{45}{360} = 488\\) 平方厘米.所以阴影两部分的面积之差为 \\(488 - 471 = 17\\) 平方厘米."
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 有一列长度为 90 米的火车 \\(A\\) 和一列长度为 180 米的火车 \\(B\\) , 两车相向而行, 有四人分别发布了一条消息.\n\n甲说: 我坐在火车 \\(A\\) 上, 看到火车 \\(B\\) 经过用时 6 秒.\n\n乙说: 我坐在火车 \\(B\\) 上, 看到火车 \\(A\\) 经过用时 2 秒.\n\n丙说: 我在路边站着看风景, 火车 \\(B\\) 从我身边经过用时 9 秒.\n\n丁说: 我在路边跑步, 先被火车 \\(B\\) 超过, 1 分钟后火车 \\(A\\) 从我身边经过, 用时 3 秒.\n\n已知四人所说的话中只有一个人的数据是错误的, 那么丁的速度是每秒 米.\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer_text": "5 【作者】北京矫昕昊",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整的答案和解答，因此不适合用于考试，仅可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json#2#8",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json"
+        }
+      },
+      "text": "8. 有一列长度为 90 米的火车 \\(A\\) 和一列长度为 180 米的火车 \\(B\\) , 两车相向而行, 有四人分别发布了一条消息.\n\n甲说: 我坐在火车 \\(A\\) 上, 看到火车 \\(B\\) 经过用时 6 秒.\n\n乙说: 我坐在火车 \\(B\\) 上, 看到火车 \\(A\\) 经过用时 2 秒.\n\n丙说: 我在路边站着看风景, 火车 \\(B\\) 从我身边经过用时 9 秒.\n\n丁说: 我在路边跑步, 先被火车 \\(B\\) 超过, 1 分钟后火车 \\(A\\) 从我身边经过, 用时 3 秒.\n\n已知四人所说的话中只有一个人的数据是错误的, 那么丁的速度是每秒 米.\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer": "5 【作者】北京矫昕昊",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图所示, 在方框中填入适当的数字, 使竖式成立, 则两个乘数的和是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "906",
+      "solution_text": "观察算式已经给出的数字,下图中的数字可以较易填出:\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（详解版）/pages/page_002/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本块包含独立题干，但直接给出了答案和解析，存在高风险泄露，因此仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json#2#9",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（详解版）.json"
+        }
+      },
+      "text": "9. 如图所示, 在方框中填入适当的数字, 使竖式成立, 则两个乘数的和是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "906",
+      "solution": "观察算式已经给出的数字,下图中的数字可以较易填出:\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（详解版）/pages/page_002/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 将 \\(1 \\sim 6\\) 这六个数字分别填入下面的表格中, 其中数字 6 已填出, 要使每一行与每一列所填数之和均为合数, 共有 种填法.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "6",
+      "solution_text": "为使第三列中两数之和为合数,则6的下面可以填2、3或4.\n\n(1)如果6的下面填2,那么接下来的数中,4与1、3的和均为质数,则4一定与5在同一列,相应地,1与3在同一列.再考虑行,如果4与1在同一行,则最后一个数无论是6还是2,该行的和均为质数,所以4只能与3在同一行,且该行的第三个数字一定是2. 则填法可以确定下来唯一一类,如下:\n\n<table><tr><td>5</td><td>1</td><td>6</td></tr><tr><td>4</td><td>3</td><td>2</td></tr></table>\n\n考虑到第一列和第二列可以互换位置,所以这一类有2种填法.\n\n(2)如果6的下面填3,那么接下来的数中,2与1、5的和均为质数,则2一定与4在同一列,相应地,1和5在同一列.再考虑行,如果2和1在同一行,则无论该行的最后一个数字是6还是3,均",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）.json"
+        }
+      },
+      "text": "10. 将 \\(1 \\sim 6\\) 这六个数字分别填入下面的表格中, 其中数字 6 已填出, 要使每一行与每一列所填数之和均为合数, 共有 种填法.\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "6",
+      "solution": "为使第三列中两数之和为合数,则6的下面可以填2、3或4.\n\n(1)如果6的下面填2,那么接下来的数中,4与1、3的和均为质数,则4一定与5在同一列,相应地,1与3在同一列.再考虑行,如果4与1在同一行,则最后一个数无论是6还是2,该行的和均为质数,所以4只能与3在同一行,且该行的第三个数字一定是2. 则填法可以确定下来唯一一类,如下:\n\n<table><tr><td>5</td><td>1</td><td>6</td></tr><tr><td>4</td><td>3</td><td>2</td></tr></table>\n\n考虑到第一列和第二列可以互换位置,所以这一类有2种填法.\n\n(2)如果6的下面填3,那么接下来的数中,2与1、5的和均为质数,则2一定与4在同一列,相应地,1和5在同一列.再考虑行,如果2和1在同一行,则无论该行的最后一个数字是6还是3,均"
+    },
+    {
+      "grade": 6,
+      "year": 2018,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2018数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2018数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 如图的 \\(6 \\times 6\\) 的表格中, 每行、每列都需要填入 \\(1 \\sim 6\\) 这六个数字, 且整个表格被粗线分成了 8 块, 其中每块的平均数都一样, 那么四位数 \\(ABCD\\) 是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": "5352",
+      "solution_text": "易知每块的平均数等于 \\((1 + 2 + 3 + 4 + 5 + 6) \\times 6 \\div 36 = 3.5\\) 。填法如下图:\n\n<table><tr><td>6</td><td>3</td><td>2</td><td>1</td><td>5</td><td>4</td></tr><tr><td>3</td><td>1</td><td>6</td><td>2</td><td>4</td><td>5</td></tr><tr><td>5</td><td>2</td><td>4</td><td>6</td><td>1</td><td>3</td></tr><tr><td>1</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td></tr><tr><td>2</td><td>4</td><td>3</td><td>5</td><td>6</td><td>1</td></tr><tr><td>4</td><td>5</td><td>1</td><td>3</td><td>2</td><td>6</td></tr></table>\n\n<table><tr><td></td><td>2</td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td>4</td></tr><tr><td>5</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>5</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>B</td><td>C</td><td>1</td></tr><tr><td></td><td>A</td><td></td><td>3</td><td>D</td></tr></table>",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2018/ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/六年级/2018/2018数学花园探秘笔试初赛_6年级D卷（试卷版）.json"
+        }
+      },
+      "text": "11. 如图的 \\(6 \\times 6\\) 的表格中, 每行、每列都需要填入 \\(1 \\sim 6\\) 这六个数字, 且整个表格被粗线分成了 8 块, 其中每块的平均数都一样, 那么四位数 \\(ABCD\\) 是\n\n![](ocr_debug/2018数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer": "5352",
+      "solution": "易知每块的平均数等于 \\((1 + 2 + 3 + 4 + 5 + 6) \\times 6 \\div 36 = 3.5\\) 。填法如下图:\n\n<table><tr><td>6</td><td>3</td><td>2</td><td>1</td><td>5</td><td>4</td></tr><tr><td>3</td><td>1</td><td>6</td><td>2</td><td>4</td><td>5</td></tr><tr><td>5</td><td>2</td><td>4</td><td>6</td><td>1</td><td>3</td></tr><tr><td>1</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td></tr><tr><td>2</td><td>4</td><td>3</td><td>5</td><td>6</td><td>1</td></tr><tr><td>4</td><td>5</td><td>1</td><td>3</td><td>2</td><td>6</td></tr></table>\n\n<table><tr><td></td><td>2</td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td>4</td></tr><tr><td>5</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>5</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>B</td><td>C</td><td>1</td></tr><tr><td></td><td>A</td><td></td><td>3</td><td>D</td></tr></table>"
+    }
+  ]
+}

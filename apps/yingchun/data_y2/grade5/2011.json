@@ -1,0 +1,1201 @@
+{
+  "grade": 5,
+  "year": 2011,
+  "total_problems": 31,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "1. (8分)算式 \\(1\\times 2 + 3\\times 4 + 5\\times 6 + 7\\times 8 + 9\\times 10\\) 的计算结果是_190_",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整解答和答案，存在泄露风险，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#4#1",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "1. (8分)算式 \\(1\\times 2 + 3\\times 4 + 5\\times 6 + 7\\times 8 + 9\\times 10\\) 的计算结果是_190_",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. (8分)十二月份共有31天,如果某年12月1日是星期一,那么该年12月19日是星期_____.(星期一至星期日用数字1至7表示)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛填空题，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#2",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "2. (8分)十二月份共有31天,如果某年12月1日是星期一,那么该年12月19日是星期_____.(星期一至星期日用数字1至7表示)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. (8分)如图的等腰梯形上底长度等于3,下底长度等于9,高等于4,那么这个等腰梯形的周长等于_____.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，描述了等腰梯形的周长问题，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#3",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "3. (8分)如图的等腰梯形上底长度等于3,下底长度等于9,高等于4,那么这个等腰梯形的周长等于_____.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "5. (8分)规定 \\(1 \\times 2 = 0.1 + 0.2 = 0.3\\) , \\(2 \\times 3 = 0.2 + 0.3 + 0.4 = 0.9\\) , \\(5 \\times 4 = 0.5 + 0.6 + 0.7 + 0.8 = 2.6\\) , 如果 \\(a \\times 15 = 16.5\\) , 那么 \\(a\\) 等于 4.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本包含完整题干、明确答案和详细解析，泄露风险高，不适合作为考试题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#5#5",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": false,
+        "review_reason": "heuristic-only",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#5#5",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "5. (8分)规定 \\(1 \\times 2 = 0.1 + 0.2 = 0.3\\) , \\(2 \\times 3 = 0.2 + 0.3 + 0.4 = 0.9\\) , \\(5 \\times 4 = 0.5 + 0.6 + 0.7 + 0.8 = 2.6\\) , 如果 \\(a \\times 15 = 16.5\\) , 那么 \\(a\\) 等于 4.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. (10分)如图,蚂蚁从正方体的顶点 \\(A\\) 沿正方体的棱爬到顶点 \\(B\\) ,要求行走的路线最短,那么蚂蚁一共有____种不同的爬法.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整且独立，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#6",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "6. (10分)如图,蚂蚁从正方体的顶点 \\(A\\) 沿正方体的棱爬到顶点 \\(B\\) ,要求行走的路线最短,那么蚂蚁一共有____种不同的爬法.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. (10分)如图,在每个方框中填入一个数字,使得乘法竖式成立.两个乘数的和是_____.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，描述明确，无答案或解析泄露，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#7",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "7. (10分)如图,在每个方框中填入一个数字,使得乘法竖式成立.两个乘数的和是_____.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "8. (10分)两个正方形如图放置,图中的每个三角形都是等腰直角三角形,若其中较小正方形的边长为12厘米,那么较大正方形的面积是_162_平方厘米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_006/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_006/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案和部分解析，存在高泄露风险，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#6#8",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "8. (10分)两个正方形如图放置,图中的每个三角形都是等腰直角三角形,若其中较小正方形的边长为12厘米,那么较大正方形的面积是_162_平方厘米.",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#6#8",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "8. (10分)两个正方形如图放置,图中的每个三角形都是等腰直角三角形,若其中较小正方形的边长为12厘米,那么较大正方形的面积是_162_平方厘米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_006/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "9. (10分)如图的 \\(5\\times 5\\) 的表格中有6个字母,请沿格线将右图分割为6个面积不同的小长方形(含正方形),使得每个长方形中恰好有一个字母,且每个字母都在小长方形角上的方格中.若这六个字母分别等于它所在小长方形的面积,那么五位数ABCDE=34216.\n\n<table><tr><td>A</td><td></td><td>B</td><td></td></tr><tr><td></td><td>C</td><td>D</td><td></td></tr><tr><td></td><td>E</td><td></td><td>F</td></tr><tr><td></td><td></td><td></td><td></td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案ABCDE=34216，并附有详细解答过程，存在高泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#7#9",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "9. (10分)如图的 \\(5\\times 5\\) 的表格中有6个字母,请沿格线将右图分割为6个面积不同的小长方形(含正方形),使得每个长方形中恰好有一个字母,且每个字母都在小长方形角上的方格中.若这六个字母分别等于它所在小长方形的面积,那么五位数ABCDE=34216.\n\n<table><tr><td>A</td><td></td><td>B</td><td></td></tr><tr><td></td><td>C</td><td>D</td><td></td></tr><tr><td></td><td>E</td><td></td><td>F</td></tr><tr><td></td><td></td><td></td><td></td></tr></table>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. (10分)小人国有2011个小矮人,他们中的每个人不是戴红帽子就是戴蓝帽子.小矮人戴红帽子时说真话,戴蓝帽子时可以说假话;并且他们随时可以更换自己帽子的颜色.某一天,他们恰好每两人都见了一次面,并且都说对方戴蓝帽子.那么一天他们总共最少改变了 次帽子的颜色.\n\n## 三、填空题",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#2#10",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "10. (10分)小人国有2011个小矮人,他们中的每个人不是戴红帽子就是戴蓝帽子.小矮人戴红帽子时说真话,戴蓝帽子时可以说假话;并且他们随时可以更换自己帽子的颜色.某一天,他们恰好每两人都见了一次面,并且都说对方戴蓝帽子.那么一天他们总共最少改变了 次帽子的颜色.\n\n## 三、填空题",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "11. (12分)如图,一个大长方形被分成8个小长方形,其中长方形 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 的周长分别是26厘米、28厘米、30厘米、32厘米、34厘米,那么大长方形的面积最大是_512平方厘米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_008/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_008/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整题干、答案和解析，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#8#11",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "11. (12分)如图,一个大长方形被分成8个小长方形,其中长方形 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 的周长分别是26厘米、28厘米、30厘米、32厘米、34厘米,那么大长方形的面积最大是_512平方厘米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_008/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "12. (12分)如图是一个 \\(6\\times 6\\) 的方格表,将数字 \\(1\\sim 6\\) 填入空白方格中,使得每一行、每一列数字 \\(1\\sim 6\\) 都只恰好出现一次,方格表述被粗线划分成了6块区域,每个区域数字 \\(1\\sim 6\\) 也恰好都只出现一次,那么最下面一行的前4个数字组成的四位数ABCD是_2413_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案2413，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#8#12",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "12. (12分)如图是一个 \\(6\\times 6\\) 的方格表,将数字 \\(1\\sim 6\\) 填入空白方格中,使得每一行、每一列数字 \\(1\\sim 6\\) 都只恰好出现一次,方格表述被粗线划分成了6块区域,每个区域数字 \\(1\\sim 6\\) 也恰好都只出现一次,那么最下面一行的前4个数字组成的四位数ABCD是_2413_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 9,
+      "question_text": "13. (12分)甲、乙两车同时从 \\(A\\) 地出发开往 \\(B\\) 地,出发的时候,甲车的速度比乙车的速度每小时快2.5千米.10分钟后,甲车减速了;再过5分钟后,乙车也减速了,这时乙车比甲车每小时慢0.5千米.又过了25分钟后两车同时到达 \\(B\\) 地,那么甲车当时速度每小时减少了_10_千米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和完整解析，存在高泄露风险，不适合用于考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#9#13",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "13. (12分)甲、乙两车同时从 \\(A\\) 地出发开往 \\(B\\) 地,出发的时候,甲车的速度比乙车的速度每小时快2.5千米.10分钟后,甲车减速了;再过5分钟后,乙车也减速了,这时乙车比甲车每小时慢0.5千米.又过了25分钟后两车同时到达 \\(B\\) 地,那么甲车当时速度每小时减少了_10_千米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "14. (12分)把同时满足下列两个条件的自然数称为\"幸运数\":(1)从左往右数,第三位起,每一位的数字是它前面的两个数字的差(大数减去小数);(2)无重复数字.例如:132、871、54132都是\"幸运数\";但8918(数字\"8\"重复)、990(数字\"9\"重复)都不是\"幸运数\",那么最大\"幸运数\"从左往右的第二位数字是_____.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，定义了'幸运数'并提问最大数的第二位数字，没有泄露答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#14",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "14. (12分)把同时满足下列两个条件的自然数称为\"幸运数\":(1)从左往右数,第三位起,每一位的数字是它前面的两个数字的差(大数减去小数);(2)无重复数字.例如:132、871、54132都是\"幸运数\";但8918(数字\"8\"重复)、990(数字\"9\"重复)都不是\"幸运数\",那么最大\"幸运数\"从左往右的第二位数字是_____.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 15,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 10,
+      "question_text": "15. (12分)一个由某些非零自然数所组成的数组具有以下的性质:\n\n(1)这个数组中的每个数(除了1以外),都可被2、3、5中的至少一个数整除.\n\n(2)对于任意非零自然数 \\(n\\) ,若此数组中包含有 \\(2n\\) 、 \\(3n\\) 、 \\(5n\\) 中的一个,则此数组中必同时包含有 \\(n\\) 、 \\(2n\\) 、 \\(3n\\) 和 \\(5n\\) .\n\n如果此数组中数的个数在300和400之间,那么此数组包含_364_个数.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案364并包含解答过程，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#10#15",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "15. (12分)一个由某些非零自然数所组成的数组具有以下的性质:\n\n(1)这个数组中的每个数(除了1以外),都可被2、3、5中的至少一个数整除.\n\n(2)对于任意非零自然数 \\(n\\) ,若此数组中包含有 \\(2n\\) 、 \\(3n\\) 、 \\(5n\\) 中的一个,则此数组中必同时包含有 \\(n\\) 、 \\(2n\\) 、 \\(3n\\) 和 \\(5n\\) .\n\n如果此数组中数的个数在300和400之间,那么此数组包含_364_个数.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "1. (8分)定义一种新运算 \\(a\\div b\\) 满足: \\(a\\div b = b\\times 10 + a\\times 2\\) ,那么 \\(2011\\div 130 =\\) 5322.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#4#1",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "1. (8分)定义一种新运算 \\(a\\div b\\) 满足: \\(a\\div b = b\\times 10 + a\\times 2\\) ,那么 \\(2011\\div 130 =\\) 5322.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. (8分)从1999年到2010年的12年中,物价涨幅为 \\(150\\%\\) (即1999年用100元能购买的物品,2010年要比原来多花150元才能购买).若某个企业的一线员工这12年来工资都没有变,按购买力计算,相当于工资下降了 \\(\\%\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整无答案解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#2",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "2. (8分)从1999年到2010年的12年中,物价涨幅为 \\(150\\%\\) (即1999年用100元能购买的物品,2010年要比原来多花150元才能购买).若某个企业的一线员工这12年来工资都没有变,按购买力计算,相当于工资下降了 \\(\\%\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "3. (8分)如图中大圆的半径是20厘米,7个小圆的半径都是10厘米.那么阴影图形的面积是_942_平方厘米( \\(\\pi\\) 取3.14).\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案942，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#4#3",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "3. (8分)如图中大圆的半径是20厘米,7个小圆的半径都是10厘米.那么阴影图形的面积是_942_平方厘米( \\(\\pi\\) 取3.14).\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)某届\"数学解题能力展示\"读者评选活动初试共有12000名学生参加,分为初中、小学高年级、小学中年级三个组别、小学的两个组共占总人数的 \\(\\frac{15}{16}\\) ,不是小学高年级组的占总人数的 \\(\\frac{1}{2}\\) .那么小学中年级组参赛人数为 \\(\\frac{1}{2}\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#4",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "4. (8分)某届\"数学解题能力展示\"读者评选活动初试共有12000名学生参加,分为初中、小学高年级、小学中年级三个组别、小学的两个组共占总人数的 \\(\\frac{15}{16}\\) ,不是小学高年级组的占总人数的 \\(\\frac{1}{2}\\) .那么小学中年级组参赛人数为 \\(\\frac{1}{2}\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. (8分)如图是一个除法竖式,这个除法竖式的被除数是多少?\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/1.jpg)\n\n## 二、填空题Ⅱ(每题10分,共50分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本包含一个完整的数学题干，未泄露答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#5",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "5. (8分)如图是一个除法竖式,这个除法竖式的被除数是多少?\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/1.jpg)\n\n## 二、填空题Ⅱ(每题10分,共50分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. (10分)算式 \\(1! \\times 3 - 2! \\times 4 + 3! \\times 5 - 4! \\times 6 + \\dots + 2009! \\times 2011 - 2010! \\times 2012 + 2011!\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的题干，没有答案或解析信息泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#6",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "6. (10分)算式 \\(1! \\times 3 - 2! \\times 4 + 3! \\times 5 - 4! \\times 6 + \\dots + 2009! \\times 2011 - 2010! \\times 2012 + 2011!\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. (10分)春节临近.从2011年1月17日(星期一)起工厂里的工人陆续回家过年,与家人团聚.若每天离厂的工人人数相同,到1月31日,厂里还剩下工人121名,在这15天期间,统计工厂工人的工作量是2011个工作日(一人工作一天为1个工作日,工人离厂当天及以后不需要统计),其中周六、日休息,且无人缺勤,那么截止到1月31日,回家过年的工人共有 \\(\\frac{1}{2}\\) 人.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干末尾直接给出了答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#7",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "7. (10分)春节临近.从2011年1月17日(星期一)起工厂里的工人陆续回家过年,与家人团聚.若每天离厂的工人人数相同,到1月31日,厂里还剩下工人121名,在这15天期间,统计工厂工人的工作量是2011个工作日(一人工作一天为1个工作日,工人离厂当天及以后不需要统计),其中周六、日休息,且无人缺勤,那么截止到1月31日,回家过年的工人共有 \\(\\frac{1}{2}\\) 人.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "8. (10分)有一个整数,它恰好是它的约数个数的2011倍,这个整数的最小值是 \\(\\frac{1}{2}\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了最小值作为答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#8",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "8. (10分)有一个整数,它恰好是它的约数个数的2011倍,这个整数的最小值是 \\(\\frac{1}{2}\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "9. (10分)一个新建5层楼房的一个单元每层有东西2套房:各层房号如图所示,现已看赵、钱、孙、李、周五家入住,一天他们5人在花园中聊天:\n\n赵说:\"我家是第3个入住的,第1个入住的就住我对门.\"\n\n钱说:\"只有我一家住在最高层.\"\n\n孙说:\"我家入住时,我家的同侧的上一层和下一层都已有人入住了.\"\n\n李说:\"我家是五家中最后一个入住的,我家楼下那一层全空着.\"\n\n周说:\"我家住在106号,104号空着,108号也空着.\"\n\n他们说的话全是真话,设第1、2、3、4、5家入住的房号的个位数依次为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) ,那么五位数 \\(\\overline{\\mathrm{ABCDE}} = \\_ 69573\\) .\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_007/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整的题干、解答和答案，有答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#7#9",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "9. (10分)一个新建5层楼房的一个单元每层有东西2套房:各层房号如图所示,现已看赵、钱、孙、李、周五家入住,一天他们5人在花园中聊天:\n\n赵说:\"我家是第3个入住的,第1个入住的就住我对门.\"\n\n钱说:\"只有我一家住在最高层.\"\n\n孙说:\"我家入住时,我家的同侧的上一层和下一层都已有人入住了.\"\n\n李说:\"我家是五家中最后一个入住的,我家楼下那一层全空着.\"\n\n周说:\"我家住在106号,104号空着,108号也空着.\"\n\n他们说的话全是真话,设第1、2、3、4、5家入住的房号的个位数依次为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) ,那么五位数 \\(\\overline{\\mathrm{ABCDE}} = \\_ 69573\\) .\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_007/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. (10分)6支足球队,每两队间至多比赛一场如果每队恰好比赛了2场,那么符合条件的比赛安排共有 种.\n\n## 三、填空题III(每题12分,共60分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#2#10",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "10. (10分)6支足球队,每两队间至多比赛一场如果每队恰好比赛了2场,那么符合条件的比赛安排共有 种.\n\n## 三、填空题III(每题12分,共60分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "11. (12分) \\(0\\sim 9\\) 可以组成两个五位数 \\(A\\) 和 \\(B\\) ,如果 \\(A + B\\) 的和是一个末五位数字相同的六位数,那么 \\(A\\times B\\) 的不同取值共有_384_个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出答案384，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#8#11",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "11. (12分) \\(0\\sim 9\\) 可以组成两个五位数 \\(A\\) 和 \\(B\\) ,如果 \\(A + B\\) 的和是一个末五位数字相同的六位数,那么 \\(A\\times B\\) 的不同取值共有_384_个.",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#8#11",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "11. (12分) \\(0\\sim 9\\) 可以组成两个五位数 \\(A\\) 和 \\(B\\) ,如果 \\(A + B\\) 的和是一个末五位数字相同的六位数,那么 \\(A\\times B\\) 的不同取值共有_384_个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "12. (12分)甲乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时出发,在 \\(A\\) 、 \\(B\\) 往返行走;甲出发的同时,丙也从 \\(A\\) 出发去 \\(B\\) .当甲乙两人第一次迎面相遇在 \\(C\\) 地时,丙还有100米才到 \\(C\\) ;当丙走到 \\(C\\) 时,甲又往前走了108米;当丙到 \\(B\\) 时,甲乙正好第二次迎面相遇.那么 \\(A\\) 、 \\(B\\) 两地间的路程是多少米?",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#2#12",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "12. (12分)甲乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时出发,在 \\(A\\) 、 \\(B\\) 往返行走;甲出发的同时,丙也从 \\(A\\) 出发去 \\(B\\) .当甲乙两人第一次迎面相遇在 \\(C\\) 地时,丙还有100米才到 \\(C\\) ;当丙走到 \\(C\\) 时,甲又往前走了108米;当丙到 \\(B\\) 时,甲乙正好第二次迎面相遇.那么 \\(A\\) 、 \\(B\\) 两地间的路程是多少米?",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "13. (12分)如图,大正方形被分成了面积相等的五块.若 \\(AB\\) 长为3.6厘米,则大正方形\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/images/1.jpg)\n\n的面积为 平方厘米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#2#13",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "13. (12分)如图,大正方形被分成了面积相等的五块.若 \\(AB\\) 长为3.6厘米,则大正方形\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/images/1.jpg)\n\n的面积为 平方厘米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 9,
+      "question_text": "14. (12分)用36个 \\(3 \\times 2 \\times 1\\) 的实心小长方体拼成一个 \\(6 \\times 6 \\times 6\\) 的大正方体,在各种拼法中,从大正方体外的某一点看过去最多能看到_31_个小长方体.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案'31'，且有解答部分，因此不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#9#14",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "14. (12分)用36个 \\(3 \\times 2 \\times 1\\) 的实心小长方体拼成一个 \\(6 \\times 6 \\times 6\\) 的大正方体,在各种拼法中,从大正方体外的某一点看过去最多能看到_31_个小长方体.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 15,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 10,
+      "question_text": "15. (12分)平面中有15个红点,在这些红点间连一些线段,一个红点连出了几条线段,就在这个红点上标几.已知所有标有相同数的红点之间互不连线,那么这15个红点间最多连了_85_条线段.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该文本是一个完整的数学题干，但直接包含答案和解析，不适合用于考试，可作为练习题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#10#15",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "15. (12分)平面中有15个红点,在这些红点间连一些线段,一个红点连出了几条线段,就在这个红点上标几.已知所有标有相同数的红点之间互不连线,那么这15个红点间最多连了_85_条线段.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2011,
+      "number": 17,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "17. 后四个数字和为7的数字两两配对.\n\n把和为7的数字两两配对,首位是9的那个五位数有 \\(8\\times 6\\times 4\\times 2 = 384\\) (种).\n\n根据不同情况下两个五位数的差不同,差小积大,这384个乘积也各不相同.\n\n故答案为:384.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本直接包含答案和解析过程，不适合作为纯净题干用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#8#17",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": false,
+        "review_reason": "heuristic-only",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#8#17",
+          "json_path": "source_pdf/五年级/2011/2011年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "17. 后四个数字和为7的数字两两配对.\n\n把和为7的数字两两配对,首位是9的那个五位数有 \\(8\\times 6\\times 4\\times 2 = 384\\) (种).\n\n根据不同情况下两个五位数的差不同,差小积大,这384个乘积也各不相同.\n\n故答案为:384.",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

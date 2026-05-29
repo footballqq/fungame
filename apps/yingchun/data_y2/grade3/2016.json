@@ -1,0 +1,1238 @@
+{
+  "grade": 3,
+  "year": 2016,
+  "total_problems": 32,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 如图，某路公共汽车共有8站，运行时不一定每站都停。\n\n第一趟从起点站出发时，中途依次在1、2、3、4四个站停靠，直到终点站；然后从终点站返回时，中途依次在4、5、2、6四个站停靠，最后回到起点站；第二趟又从起点站出发，但这次依次在6、1、5、3四个站停靠，最后到达终点站。根据以上的运行，请你推测出各站的顺序，并写出五位数ABCDE。\n\n![](ocr_debug/2016三年级网赛试题/pages/page_001/images/0.jpg)",
+      "answer_text": "61253",
+      "solution_text": "由条件1得，1234是从左至右顺序，由条件3得，6在1左边，所以是61234，只需考虑5的位置，由条件3得，5在3左边，由条件2得，5在2右边，所以顺序是612534，答案61253.",
+      "topic": "combinatorics",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立可出题，但文本块中包含完整答案和解析，不适合考试，仅适合练习。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json#1#1",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json"
+        }
+      },
+      "text": "1. 如图，某路公共汽车共有8站，运行时不一定每站都停。\n\n第一趟从起点站出发时，中途依次在1、2、3、4四个站停靠，直到终点站；然后从终点站返回时，中途依次在4、5、2、6四个站停靠，最后回到起点站；第二趟又从起点站出发，但这次依次在6、1、5、3四个站停靠，最后到达终点站。根据以上的运行，请你推测出各站的顺序，并写出五位数ABCDE。\n\n![](ocr_debug/2016三年级网赛试题/pages/page_001/images/0.jpg)",
+      "answer": "61253",
+      "solution": "由条件1得，1234是从左至右顺序，由条件3得，6在1左边，所以是61234，只需考虑5的位置，由条件3得，5在3左边，由条件2得，5在2右边，所以顺序是612534，答案61253."
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 蕾蕾家和菲菲家各养了一群羊。蕾蕾家的羊比菲菲家羊的一半多18只，那么，菲菲家的羊比蕾蕾家的羊的2倍少 只。",
+      "answer_text": "36",
+      "solution_text": "设菲菲家的羊是2份，那么蕾蕾家的羊是1份多18，蕾蕾家羊的2倍即是2份多36，菲菲家是2份，所以少36只.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，答案泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json#1#2",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json"
+        }
+      },
+      "text": "2. 蕾蕾家和菲菲家各养了一群羊。蕾蕾家的羊比菲菲家羊的一半多18只，那么，菲菲家的羊比蕾蕾家的羊的2倍少 只。",
+      "answer": "36",
+      "solution": "设菲菲家的羊是2份，那么蕾蕾家的羊是1份多18，蕾蕾家羊的2倍即是2份多36，菲菲家是2份，所以少36只."
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 右图中，共有 个等边三角形。\n\n![](ocr_debug/2016三年级网赛试题/pages/page_001/images/1.jpg)",
+      "answer_text": "7",
+      "solution_text": "小的共3个,中的共3个,大的1个,共7个.\n\n## 二. 填空题(每小题10分,共30分)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的题干，询问图中等边三角形数量，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题.json#1#3",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题.json"
+        }
+      },
+      "text": "3. 右图中，共有 个等边三角形。\n\n![](ocr_debug/2016三年级网赛试题/pages/page_001/images/1.jpg)",
+      "answer": "7",
+      "solution": "小的共3个,中的共3个,大的1个,共7个.\n\n## 二. 填空题(每小题10分,共30分)"
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "4. 如图所示这里有一个正六角形的湖,湖的周围有巴士,湖面上有 \\(A\\) 、 \\(B\\) 两地往返的游览船,为游人提供方便.巴士绕湖一周需要6小时,游览船的速度是巴士的一半.那么游览船沿图中虚线从 \\(A\\) 到 \\(B\\) 需要 小时.\n\n![](ocr_debug/2016三年级网赛试题/pages/page_002/images/0.jpg)",
+      "answer_text": "2",
+      "solution_text": "巴士绕湖一周需要走12段,所以巴士走2段需要1小时,\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_002/images/1.jpg)\n\n游览船的速度是巴士的一半,所以游览船走1段需要1小时.沿虚线从A到B需要走2段,即2小时.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是完整的题干，但包含答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json#2#4",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json"
+        }
+      },
+      "text": "4. 如图所示这里有一个正六角形的湖,湖的周围有巴士,湖面上有 \\(A\\) 、 \\(B\\) 两地往返的游览船,为游人提供方便.巴士绕湖一周需要6小时,游览船的速度是巴士的一半.那么游览船沿图中虚线从 \\(A\\) 到 \\(B\\) 需要 小时.\n\n![](ocr_debug/2016三年级网赛试题/pages/page_002/images/0.jpg)",
+      "answer": "2",
+      "solution": "巴士绕湖一周需要走12段,所以巴士走2段需要1小时,\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_002/images/1.jpg)\n\n游览船的速度是巴士的一半,所以游览船走1段需要1小时.沿虚线从A到B需要走2段,即2小时."
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "5. 高老师从 \\(1 \\sim 7\\) 中,选出了3个不同的自然数,并把这3个自然数分别放到了甲、乙、丙三人的头上.高老师对三人说:\"你们每个人都可以看到别人头上的数字,如果你们头上的3个数字恰好成等差数列,那么你们能猜出自己头上的数字吗?\"结果,聪明的甲、乙、丙都立即猜到了自己头上是哪个数字.那么,这3个自然数的和是",
+      "answer_text": "12",
+      "solution_text": "\\(1\\sim 7\\) 中,等差数列共有123、234、345、456、567、135、246、357、147共9种,如果三个人的数字是1、2、3,看到1、2的同学可推断自己是3,但看到1、3的同学无法推断自己是2还是5,看到2、3的同学也无法判断自己是1还是4;以此类推,可排除234、345、456、567、135、246、357,只有1、4、7是可正确的.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，泄漏风险高，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json#2#5",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json"
+        }
+      },
+      "text": "5. 高老师从 \\(1 \\sim 7\\) 中,选出了3个不同的自然数,并把这3个自然数分别放到了甲、乙、丙三人的头上.高老师对三人说:\"你们每个人都可以看到别人头上的数字,如果你们头上的3个数字恰好成等差数列,那么你们能猜出自己头上的数字吗?\"结果,聪明的甲、乙、丙都立即猜到了自己头上是哪个数字.那么,这3个自然数的和是",
+      "answer": "12",
+      "solution": "\\(1\\sim 7\\) 中,等差数列共有123、234、345、456、567、135、246、357、147共9种,如果三个人的数字是1、2、3,看到1、2的同学可推断自己是3,但看到1、3的同学无法推断自己是2还是5,看到2、3的同学也无法判断自己是1还是4;以此类推,可排除234、345、456、567、135、246、357,只有1、4、7是可正确的."
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "6. 有若干只鸡和羊;第一天全在羊圈时,总腿数恰好是鸡的总腿数的3倍;第二天,有一半的羊被赶到山上了,羊圈里剩余鸡和羊的总腿数一共有120条,那么,现在羊圈里一共有 只羊.\n\n## 三. 填空题(每小题15分,共30分)",
+      "answer_text": "15",
+      "solution_text": "第一天,总腿数是鸡腿数的3倍,那么羊腿是鸡腿2倍,即羊和鸡数量相等,则将2羊2鸡分为1组,满足条件;第二天,羊数量变为原来的一半,则变成1羊2鸡变成1组;一组中共 \\(1\\times 4 + 2\\times 2 = 8\\) 条腿,共 \\(120\\div 8 = 15\\) 组,即有 \\(1\\times 15 = 15\\) 只羊.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，答案直接泄露，因此风险高，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json#2#6",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json"
+        }
+      },
+      "text": "6. 有若干只鸡和羊;第一天全在羊圈时,总腿数恰好是鸡的总腿数的3倍;第二天,有一半的羊被赶到山上了,羊圈里剩余鸡和羊的总腿数一共有120条,那么,现在羊圈里一共有 只羊.\n\n## 三. 填空题(每小题15分,共30分)",
+      "answer": "15",
+      "solution": "第一天,总腿数是鸡腿数的3倍,那么羊腿是鸡腿2倍,即羊和鸡数量相等,则将2羊2鸡分为1组,满足条件;第二天,羊数量变为原来的一半,则变成1羊2鸡变成1组;一组中共 \\(1\\times 4 + 2\\times 2 = 8\\) 条腿,共 \\(120\\div 8 = 15\\) 组,即有 \\(1\\times 15 = 15\\) 只羊."
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "7. 已知下面的等式中,不同的字母代表不同数字,相同的字母代表相同的数字:\n\n\\[TWO + ZERO = ONE + SIX\\]\n\n若已知 \\(E = 2\\) ,那么四位数 \\(SNOW\\) 的最小值是",
+      "answer_text": "5790",
+      "solution_text": "易得 \\(Z = 1\\) ,要让 \\(SNOW\\) 最小, \\(S\\) 应该最小,已知 \\(E = 2\\) ,让 \\(T\\) 尽量小, \\(O\\) 尽量大,得到 \\(O = 9\\) ,那么 \\(X\\) 是6,得到 \\(\\overline{TW9} +12R9 = 9N2 + \\overline{SI6}\\) ,剩余数字0、3、4、5、7、8,让 \\(S\\) 小,那么 \\(T\\) 尽量小,但 \\(T\\) 在最高位,所以考虑3,此时 \\(S\\) 最小可以是5(后面可以有进位),得到 \\(\\overline{3W9} +12R9 = 9N2 + \\overline{5I6}\\) ,十位可得 \\(\\mathrm{W} + \\mathrm{R} + 1 = \\mathrm{N} + \\mathrm{I} - 10\\) ,剩余0、4、7、8,不难凑出 \\(0 + 4 + 1 = 7 + 8 - 10\\) ,让N尽量小,得7,W尽量小,可得0,得到答案5790.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题目，没有包含答案或解析信息，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题.json#2#7",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题.json"
+        }
+      },
+      "text": "7. 已知下面的等式中,不同的字母代表不同数字,相同的字母代表相同的数字:\n\n\\[TWO + ZERO = ONE + SIX\\]\n\n若已知 \\(E = 2\\) ,那么四位数 \\(SNOW\\) 的最小值是",
+      "answer": "5790",
+      "solution": "易得 \\(Z = 1\\) ,要让 \\(SNOW\\) 最小, \\(S\\) 应该最小,已知 \\(E = 2\\) ,让 \\(T\\) 尽量小, \\(O\\) 尽量大,得到 \\(O = 9\\) ,那么 \\(X\\) 是6,得到 \\(\\overline{TW9} +12R9 = 9N2 + \\overline{SI6}\\) ,剩余数字0、3、4、5、7、8,让 \\(S\\) 小,那么 \\(T\\) 尽量小,但 \\(T\\) 在最高位,所以考虑3,此时 \\(S\\) 最小可以是5(后面可以有进位),得到 \\(\\overline{3W9} +12R9 = 9N2 + \\overline{5I6}\\) ,十位可得 \\(\\mathrm{W} + \\mathrm{R} + 1 = \\mathrm{N} + \\mathrm{I} - 10\\) ,剩余0、4、7、8,不难凑出 \\(0 + 4 + 1 = 7 + 8 - 10\\) ,让N尽量小,得7,W尽量小,可得0,得到答案5790."
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 在下图中的空白六边形格(不包括 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 这五格)中放入一些棋子,每格最多放一枚,可以不放,接着在 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\)  这五格中分别写上与它相邻(有公共边)的六边形格中棋子的总数,那么使得2,3,4,5,6恰好在 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\)中各出现一次的放法有 种.\n\n![](ocr_debug/2016三年级网赛试题/pages/page_002/images/1.jpg)",
+      "answer_text": "14",
+      "solution_text": "6只能出现在 \\(B\\) 或 \\(D\\) 中, \\(A\\) 与 \\(E\\) 中只能填2或3,由于对称性,先考虑 \\(B = 6\\) 的情形:\n\n1) \\(B = 6,A = 2,E = 3\\) 的情况,只能 \\(C = 4,D = 5\\) ,共两种放法;\n\n2) \\(B = 6,A = 3,E = 2\\) 的情况, \\(①C = 4,D = 5\\) ,共三种放法; \\(②C = 5,D = 4\\) ,共两种放法;总计五种放法.\n\n故 \\(B = 6\\) 共有 \\(2 + 5 = 7\\) 种放法,由于 \\(B\\) 、 \\(D\\) 对称,总计 \\(7\\times 2 = 14\\) 种放法.\n\n## 四.亲子互动操作题(每小题18分,共36分)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，描述清晰，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题.json#2#8",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题.json"
+        }
+      },
+      "text": "8. 在下图中的空白六边形格(不包括 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 这五格)中放入一些棋子,每格最多放一枚,可以不放,接着在 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\)  这五格中分别写上与它相邻(有公共边)的六边形格中棋子的总数,那么使得2,3,4,5,6恰好在 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\)中各出现一次的放法有 种.\n\n![](ocr_debug/2016三年级网赛试题/pages/page_002/images/1.jpg)",
+      "answer": "14",
+      "solution": "6只能出现在 \\(B\\) 或 \\(D\\) 中, \\(A\\) 与 \\(E\\) 中只能填2或3,由于对称性,先考虑 \\(B = 6\\) 的情形:\n\n1) \\(B = 6,A = 2,E = 3\\) 的情况,只能 \\(C = 4,D = 5\\) ,共两种放法;\n\n2) \\(B = 6,A = 3,E = 2\\) 的情况, \\(①C = 4,D = 5\\) ,共三种放法; \\(②C = 5,D = 4\\) ,共两种放法;总计五种放法.\n\n故 \\(B = 6\\) 共有 \\(2 + 5 = 7\\) 种放法,由于 \\(B\\) 、 \\(D\\) 对称,总计 \\(7\\times 2 = 14\\) 种放法.\n\n## 四.亲子互动操作题(每小题18分,共36分)"
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "9. 在空格里填入数字 \\(1 \\sim 6\\) ，使得每行、每列和每宫数字都不重复。两条灰色的斜线，一条所经过的都是奇数，另一条所经过的都是偶数。那么，第三行的前五个数依次是：\n\n![](ocr_debug/2016三年级网赛试题/pages/page_003/images/0.jpg)",
+      "answer_text": "23461",
+      "solution_text": "通过排除法推导出第一宫的4和第六宫的\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_003/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是一个完整的数学题目，但直接给出了答案和部分解析，存在高泄露风险，因此建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json#3#9",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题解析.json"
+        }
+      },
+      "text": "9. 在空格里填入数字 \\(1 \\sim 6\\) ，使得每行、每列和每宫数字都不重复。两条灰色的斜线，一条所经过的都是奇数，另一条所经过的都是偶数。那么，第三行的前五个数依次是：\n\n![](ocr_debug/2016三年级网赛试题/pages/page_003/images/0.jpg)",
+      "answer": "23461",
+      "solution": "通过排除法推导出第一宫的4和第六宫的\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_003/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2016三年级网赛试题.pdf",
+      "exam": {
+        "exam_key": "2016三年级网赛试题",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "10. 有1张足够长的长方形纸条，纸条的一面是黄色，另一面是红色；如果用1张纸条折出红、黄相间的“田”字图案，则折成“田”字图案最少需要折 次．（折纸之间允许叠加，多余部分不用考虑）\n\n![](ocr_debug/2016三年级网赛试题/pages/page_003/images/1.jpg)",
+      "answer_text": "6",
+      "solution_text": "6次折叠完成红、黄相间的\"田\"字图.\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_004/images/1.jpg)\n\n【注】如果允许小正方形上有折痕,且小正方形的边长可以不等于纸带宽度,还可以如下5步完成.\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_004/images/2.jpg)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016三年级网赛试题/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016三年级网赛试题/pages/page_003/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目是完整的折纸问题，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016三年级网赛试题.json#3#10",
+          "json_path": "source_pdf/三年级/2016年/2016三年级网赛试题.json"
+        }
+      },
+      "text": "10. 有1张足够长的长方形纸条，纸条的一面是黄色，另一面是红色；如果用1张纸条折出红、黄相间的“田”字图案，则折成“田”字图案最少需要折 次．（折纸之间允许叠加，多余部分不用考虑）\n\n![](ocr_debug/2016三年级网赛试题/pages/page_003/images/1.jpg)",
+      "answer": "6",
+      "solution": "6次折叠完成红、黄相间的\"田\"字图.\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_004/images/1.jpg)\n\n【注】如果允许小正方形上有折痕,且小正方形的边长可以不等于纸带宽度,还可以如下5步完成.\n\n![](ocr_debug/2016三年级网赛试题解析/pages/page_004/images/2.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 若 \\(AAA + AAA + A + A = 2016\\) ,则数字 \\(A\\) 是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接给出答案，有泄露风险，适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#1#1",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "1. 若 \\(AAA + AAA + A + A = 2016\\) ,则数字 \\(A\\) 是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 沿长方形ABCD中的虚线将长方形剪成两部分,会发现两部分形如汉字\"凹凸\",已知长方形长 \\(AD\\)\n\n\\(= 10\\) 厘米,宽 \\(AB = 6\\) 厘米, \\(EF = GH = 2\\) 厘米;那么剪成的\"凹凸\"两部分的周长和为 厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案信息，存在高泄露风险，因此建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#1#2",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "2. 沿长方形ABCD中的虚线将长方形剪成两部分,会发现两部分形如汉字\"凹凸\",已知长方形长 \\(AD\\)\n\n\\(= 10\\) 厘米,宽 \\(AB = 6\\) 厘米, \\(EF = GH = 2\\) 厘米;那么剪成的\"凹凸\"两部分的周长和为 厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 构成等差数列的16个自然数从小到大排成一列,其中前9个的和与后7个的和都是2016;那么这列自然数中,最大的是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组a卷）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组a卷）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可独立出题，但直接附有答案，导致答案泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#1#3",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "3. 构成等差数列的16个自然数从小到大排成一列,其中前9个的和与后7个的和都是2016;那么这列自然数中,最大的是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 老师给孩子们发水果:苹果数量是梨的2倍多5个,桃子是苹果的3倍,桃子是梨的7倍;那么苹果、梨、桃子共有 个.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接包含答案，泄漏风险高，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#1#4",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "4. 老师给孩子们发水果:苹果数量是梨的2倍多5个,桃子是苹果的3倍,桃子是梨的7倍;那么苹果、梨、桃子共有 个.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 如图,一张A4纸的长为29厘米,宽为21厘米;将四个角如图进行折叠(图中给出的是一个角的折叠,每次折完后都打开),最后四条折痕会围成一个正方形,那么这个正方形的面积是 平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案【答案】32，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#1#5",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "5. 如图,一张A4纸的长为29厘米,宽为21厘米;将四个角如图进行折叠(图中给出的是一个角的折叠,每次折完后都打开),最后四条折痕会围成一个正方形,那么这个正方形的面积是 平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 今天是1月30日,我们先写下130;后面写数的规则是:如果刚写下的数是偶数就把它除以2再加上2写在后面,如果刚写下的数是奇数就把它乘以2再减去2写在后面,于是得到:130、67、132、68……;那么这列数中第2016个数是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接包含了答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#1#6",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "6. 今天是1月30日,我们先写下130;后面写数的规则是:如果刚写下的数是偶数就把它除以2再加上2写在后面,如果刚写下的数是奇数就把它乘以2再减去2写在后面.于是得到:130、67、132、68……;那么这列数中第2016个数是",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#1#6",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "6. 今天是1月30日,我们先写下130;后面写数的规则是:如果刚写下的数是偶数就把它除以2再加上2写在后面,如果刚写下的数是奇数就把它乘以2再减去2写在后面,于是得到:130、67、132、68……;那么这列数中第2016个数是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. 图 \\(③\\) 是由6个图 \\(①\\) 这样的模块拼成的,如果最底层已经给定两块的位置(如图\n\n\\(②\\) ),那么剩下部分一共有 种不同的拼法.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/2.jpg)\n\n<center>图 \\(①\\) </center>\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/3.jpg)\n\n<center>图 \\(③\\) </center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案'2'，导致答案泄露，风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#1#7",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "7. 图 \\(③\\) 是由6个图 \\(①\\) 这样的模块拼成的,如果最底层已经给定两块的位置(如图\n\n\\(②\\) ),那么剩下部分一共有 种不同的拼法.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/2.jpg)\n\n<center>图 \\(①\\) </center>\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_001/images/3.jpg)\n\n<center>图 \\(③\\) </center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 在如图的乘法竖式中, 每一个\"口\"和英文字母都代表一个数字; 其中相同的字母代表相同的数字, 不同的字母代表不同的数字, 而\"口\"中可以填写任意的数字. 已知 \\(P = 6\\) , 那么五位数 \\(HAPPY\\) 是 ______.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，导致答案泄露，不适合作为考试题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#2#8",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "8. 在如图的乘法竖式中, 每一个\"口\"和英文字母都代表一个数字; 其中相同的字母代表相同的数字, 不同的字母代表不同的数字, 而\"口\"中可以填写任意的数字. 已知 \\(P = 6\\) , 那么五位数 \\(HAPPY\\) 是 ______.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 甲、乙、丙、丁四人今年的年龄是互不相同的两位整数, 都不到16岁. 他们每人说了如下的三句话, 老大、老二、老三、老四(按年龄算)依次说了3句、2句、1句、0句真话.\n\n甲:\"丁今年15岁, 丙是老三, 我们四人去年的年龄奇偶性全相同.\"\n\n乙:\"甲今年的年龄是偶数, 我和丙差奇数岁, 明年我们四人的年龄和不到50岁.\"\n\n丙:\"丁是老大, 我是老二, 甲是老三.\"\n\n丁:\"我们四人前年的年龄恰好是2个奇数2个偶数, 乙年龄最小, 甲比丙大\"那么丙今年 ______ 岁.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#2#9",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "9. 甲、乙、丙、丁四人今年的年龄是互不相同的两位整数, 都不到16岁. 他们每人说了如下的三句话, 老大、老二、老三、老四(按年龄算)依次说了3句、2句、1句、0句真话.\n\n甲:\"丁今年15岁, 丙是老三, 我们四人去年的年龄奇偶性全相同.\"\n\n乙:\"甲今年的年龄是偶数, 我和丙差奇数岁, 明年我们四人的年龄和不到50岁.\"\n\n丙:\"丁是老大, 我是老二, 甲是老三.\"\n\n丁:\"我们四人前年的年龄恰好是2个奇数2个偶数, 乙年龄最小, 甲比丙大\"那么丙今年 ______ 岁.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 12个边长为1厘米的等边三角形拼成右图, 从点 \\(A\\) 出发, 到点 \\(B\\) , 不允许走重复路线, 最多能走 ______ 厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接附有答案，存在泄露风险，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#2#10",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "10. 12个边长为1厘米的等边三角形拼成右图, 从点 \\(A\\) 出发, 到点 \\(B\\) , 不允许走重复路线, 最多能走 ______ 厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 在下右图每个格子里填入数字 \\(1 \\sim 4\\) 中的一个, 使得每一行和每一列数字都不重复. 每个\"L\"状大格子跨了两行和两列, 线上圆圈中的数表示相邻两个格子内数字的和(下左图给出了一个填 \\(1 \\sim\\)\n\n3的例子,如下中图第3行从左到右三格依次为2,3,1).那么下右图中\n\n最下面一行的四个数\n\n字按从左到右的顺序\n\n依次组成的四位数\n\n是\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干末尾直接给出了答案，存在答案泄露风险，但题目本身可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json#2#11",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷 答案）.json"
+        }
+      },
+      "text": "11. 在下右图每个格子里填入数字 \\(1 \\sim 4\\) 中的一个, 使得每一行和每一列数字都不重复. 每个\"L\"状大格子跨了两行和两列, 线上圆圈中的数表示相邻两个格子内数字的和(下左图给出了一个填 \\(1 \\sim\\)\n\n3的例子,如下中图第3行从左到右三格依次为2,3,1).那么下右图中\n\n最下面一行的四个数\n\n字按从左到右的顺序\n\n依次组成的四位数\n\n是\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小中组d卷）/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "1. (8分)算式 \\(210 \\times 6 - 52 \\times 5\\) 的计算结果是1000.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和完整解答，存在信息泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级d卷）.json#3#1",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级d卷）.json"
+        }
+      },
+      "text": "1. (8分)算式 \\(210 \\times 6 - 52 \\times 5\\) 的计算结果是1000.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "2. (8分)传说,能在三叶草中找到四叶草的人,都是幸运之人.一天,佳佳在大森林中摘取三叶草,当她摘到第一颗四叶草时,发现摘到的草刚好共有1000片叶子,那么她已经有_332_颗三叶草.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接嵌入答案（_32_），且包含完整解答过程，泄露风险高，不适合作为独立题干出题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json#3#2",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "2. (8分)传说,能在三叶草中找到四叶草的人,都是幸运之人.一天,佳佳在大森林中摘取三叶草,当她摘到第一颗四叶草时,发现摘到的草刚好共有100片叶子,那么,她已经有_32_颗三叶草.",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json#3#2",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json"
+        }
+      },
+      "text": "2. (8分)传说,能在三叶草中找到四叶草的人,都是幸运之人.一天,佳佳在大森林中摘取三叶草,当她摘到第一颗四叶草时,发现摘到的草刚好共有1000片叶子,那么她已经有_332_颗三叶草.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "3. (8分)再过12天就到2016年了,吴昊感慨地说:我到目前只经过2个闰年,并且我出生的年份是9的倍数,那么2016年吴昊是_9_岁.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接显示答案并包含完整解析，答案泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级d卷）.json#3#3",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级d卷）.json"
+        }
+      },
+      "text": "3. (8分)再过12天就到2016年了,吴昊感慨地说:我到目前只经过2个闰年,并且我出生的年份是9的倍数,那么2016年吴昊是_9_岁.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "5. (10分)在下面两个算式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字:\n\n数字花园 \\(^+\\) 探秘 \\(= 2015\\) ,探秘 \\(^{+1 + 2 + 3 + \\dots +10 =}\\) 花园\n\n那么四位数数学花园 \\(= 1985\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案'1985'，导致答案泄露，不适合作为考试题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.json#4#5",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": false,
+        "review_reason": "heuristic-only",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.json#4#5",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.json"
+        }
+      },
+      "text": "5. (10分)在下面两个算式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字:\n\n数字花园 \\(^+\\) 探秘 \\(= 2015\\) ,探秘 \\(^{+1 + 2 + 3 + \\dots +10 =}\\) 花园\n\n那么四位数数学花园 \\(= 1985\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "6. (10分)有一棵神奇的树上长了63个果子,第一天会有1个果子从树上掉落,从第二天起,每天掉落的果子数量比前一天多1个,但如果某天树上的果子数量少于这一天本应该掉落的数量时,那么这一天它又重新从掉落1个果子开始,按原规律进行新的一轮,如此继续,那么第_15_天树上的果子会都掉光.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题干、解答和答案，因此有泄露风险，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.json#5#6",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.json"
+        }
+      },
+      "text": "6. (10分)有一棵神奇的树上长了63个果子,第一天会有1个果子从树上掉落,从第二天起,每天掉落的果子数量比前一天多1个,但如果某天树上的果子数量少于这一天本应该掉落的数量时,那么这一天它又重新从掉落1个果子开始,按原规律进行新的一轮,如此继续,那么第_15_天树上的果子会都掉光.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "7. (10分)库克叔叔的帽子落在大门前,还冒着烟,原来有人从窗户扔出来一根爆竹,掉下来的爆竹把帽子点燃了,事故发生的时候有5个男孩都向外探出了脑袋,当然这5个男孩谁也不愿意承认是自己干的,现在其中4个男孩说的都是真话,有一个人说的都是假话,说谎的人就是扔爆竹的,那么说谎者的房间号是_302_.\n\n巴斯特:\"不是我,库克叔叔大叫的时候我才知道发生了什么.\"\n\n奥克:\"不是我,马尔科可以为我作证,我什么都没扔.\"\n\n马尔科:\"不是奥克,不是从上面扔下去的,我什么也没看见,也没扔东西.\"\n\n科诺比:\"但是我看到了,上面有人扔东西.\"\n\n马尔夫:\"是的,有人从上面扔了东西,从我头顶飞过,紧贴着我的头发.\"\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_005/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案并附有完整解析，存在高风险泄露，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级d卷）.json#5#7",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级d卷）.json"
+        }
+      },
+      "text": "7. (10分)库克叔叔的帽子落在大门前,还冒着烟,原来有人从窗户扔出来一根爆竹,掉下来的爆竹把帽子点燃了,事故发生的时候有5个男孩都向外探出了脑袋,当然这5个男孩谁也不愿意承认是自己干的,现在其中4个男孩说的都是真话,有一个人说的都是假话,说谎的人就是扔爆竹的,那么说谎者的房间号是_302_.\n\n巴斯特:\"不是我,库克叔叔大叫的时候我才知道发生了什么.\"\n\n奥克:\"不是我,马尔科可以为我作证,我什么都没扔.\"\n\n马尔科:\"不是奥克,不是从上面扔下去的,我什么也没看见,也没扔东西.\"\n\n科诺比:\"但是我看到了,上面有人扔东西.\"\n\n马尔夫:\"是的,有人从上面扔了东西,从我头顶飞过,紧贴着我的头发.\"\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_005/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. (10分)在算式 \\(1\\square 2\\square 3\\square 6\\square 12\\) 的□填入\"+\"或\"-\"号,共可得到________不同的自然数结果。\n\n## 三、填空题Ⅲ(每小题12分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，包含编号和分值，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json#2#8",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json"
+        }
+      },
+      "text": "8. (10分)在算式 \\(1\\square 2\\square 3\\square 6\\square 12\\) 的□填入\"+\"或\"-\"号,共可得到________不同的自然数结果。\n\n## 三、填空题Ⅲ(每小题12分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. (12分)在空格里填入数字2、0、1、5,或者空着不填,使得每行和每列都各有一个2、0、1、5,要求相同的数字不能对角相邻,那么第五行前五个位置依次是________(空格用9表示)。\n\n<table><tr><td></td><td></td><td></td><td>2</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>5</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>2</td><td>0</td><td>1</td><td>5</td><td></td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目描述完整，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json#2#9",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json"
+        }
+      },
+      "text": "9. (12分)在空格里填入数字2、0、1、5,或者空着不填,使得每行和每列都各有一个2、0、1、5,要求相同的数字不能对角相邻,那么第五行前五个位置依次是________(空格用9表示)。\n\n<table><tr><td></td><td></td><td></td><td>2</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>5</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>2</td><td>0</td><td>1</td><td>5</td><td></td></tr></table>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. (12分)1千克大豆可以制成3千克豆腐,制成1千克豆油则需要6千克大豆,大豆2元1千克,豆腐3元1千克,豆油15元1千克.一批大豆进价920元,制成豆腐或豆油销售后得到1800元,这批大豆中有________千克被制成了豆油.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学应用题，题干明确且未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json#2#10",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json"
+        }
+      },
+      "text": "10. (12分)1千克大豆可以制成3千克豆腐,制成1千克豆油则需要6千克大豆,大豆2元1千克,豆腐3元1千克,豆油15元1千克.一批大豆进价920元,制成豆腐或豆油销售后得到1800元,这批大豆中有________千克被制成了豆油.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2016,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "11. (12分)俊俊在看一个错误的一位数乘法算式 \\(A\\times B = \\overline{\\mathrm{CD}}\\) (其中 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 所表示的 数字互不相同),聪明的俊俊发现:如果只改动其中的一个数字,有3种方法可以将它改 对,如果只改变 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 的顺序,也可以将它改对.那么, \\(A + B + C + D = 17\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2016年/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（三年级a卷）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整解答，导致答案和解析泄露，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json#7#11",
+          "json_path": "source_pdf/三年级/2016年/2016年“迎春杯”数学花园探秘初赛试卷（三年级c卷）.json"
+        }
+      },
+      "text": "11. (12分)俊俊在看一个错误的一位数乘法算式 \\(A\\times B = \\overline{\\mathrm{CD}}\\) (其中 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 所表示的 数字互不相同),聪明的俊俊发现:如果只改动其中的一个数字,有3种方法可以将它改 对,如果只改变 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 的顺序,也可以将它改对.那么, \\(A + B + C + D = 17\\)",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

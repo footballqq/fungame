@@ -1,0 +1,2051 @@
+{
+  "grade": 3,
+  "year": 2020,
+  "total_problems": 54,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020三年级网赛 （试题版）.pdf",
+      "exam": {
+        "exam_key": "2020三年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 奔向未来\n\n今天是2019年11月25日，去掉年、月、日后得到2、0、1、9、1、1、2、5这八个数字．在排成一排的八个数字之间，适当位置添上“十、一、×”三个运算符号各一个可以使算式的结果是2020. 那么，“十”右边所有数字依次组成的多位数是\n\n\\[2 0 1 9 1 1 2 5 = 2020\\]",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020三年级网赛 （试题版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接包含答案和解析，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json#1#1",
+          "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json"
+        }
+      },
+      "text": "1. 奔向未来\n\n今天是2019年11月25日，去掉年、月、日后得到2、0、1、9、1、1、2、5这八个数字．在排成一排的八个数字之间，适当位置添上“十、一、×”三个运算符号各一个可以使算式的结果是2020. 那么，“十”右边所有数字依次组成的多位数是\n\n\\[2 0 1 9 1 1 2 5 = 2020\\]",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020三年级网赛 （试题版）.pdf",
+      "exam": {
+        "exam_key": "2020三年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 斜二的偶数\n\n在空格内填入数字 \\(1\\sim 4\\) 中的一个，使得每行、每列和每个粗线宫内数字都不重复. 箭头上的数字表示箭头方向有几个偶数．最后一行四个数字从左到右组成的四位数是\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020三年级网赛 （试题版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但答案和解析已泄露，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json#1#2",
+          "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json"
+        }
+      },
+      "text": "2. 斜二的偶数\n\n在空格内填入数字 \\(1\\sim 4\\) 中的一个，使得每行、每列和每个粗线宫内数字都不重复. 箭头上的数字表示箭头方向有几个偶数．最后一行四个数字从左到右组成的四位数是\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020三年级网赛 （试题版）.pdf",
+      "exam": {
+        "exam_key": "2020三年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 休闲娱乐西游行\n\n唐僧师徒三人离开高老庄，来到流沙河边．等待摆渡船时闲来无聊，师徒三人席地而坐，拿出“达芬奇密码”游戏棋牌一起玩.\n\n“达芬奇密码”游戏规则是：“棋牌中点数为0\\~11的各有黑、白两张，共24张．每人抽取几张后，以自己的视角将手中的棋牌摆成一行．点数较小的棋牌放在点数较大的棋牌的左边，点数相同时，黑色棋牌放在白色棋牌的左边．被别人猜到的棋牌要在原位置亮出来.”\n\n如：\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_001/images/1.jpg)\n\n点数为5的棋牌要放在点数为6的棋牌左边，黑色5要放在白色5的左边.\n\n那么，下图唐僧的棋牌中，第二小的点数是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020三年级网赛 （试题版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个独立的数学题干，描述了游戏规则并提出了推理问题，没有包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json#1#3",
+          "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json"
+        }
+      },
+      "text": "3. 休闲娱乐西游行\n\n唐僧师徒三人离开高老庄，来到流沙河边．等待摆渡船时闲来无聊，师徒三人席地而坐，拿出“达芬奇密码”游戏棋牌一起玩.\n\n“达芬奇密码”游戏规则是：“棋牌中点数为0\\~11的各有黑、白两张，共24张．每人抽取几张后，以自己的视角将手中的棋牌摆成一行．点数较小的棋牌放在点数较大的棋牌的左边，点数相同时，黑色棋牌放在白色棋牌的左边．被别人猜到的棋牌要在原位置亮出来.”\n\n如：\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_001/images/1.jpg)\n\n点数为5的棋牌要放在点数为6的棋牌左边，黑色5要放在白色5的左边.\n\n那么，下图唐僧的棋牌中，第二小的点数是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020三年级网赛 （试题版）.pdf",
+      "exam": {
+        "exam_key": "2020三年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "4. 命题老师而立之年的感慨\n\n下面加法竖式中，相同的汉字代表相同的数字，不同的汉字代表不同的数字。其中，汉字“零”、“二”代表的数字都不是偶数，汉字“一”代表的数字不是奇数。那么这个加法竖式的和是\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_002/images/1.jpg)\n\n## 5. 长方形家族\n\n如图，大长方形ABCD是由8个一模一样的小长方形拼接而成。已知大长方形ABCD的面积是135平方厘米，中间阴影长方形的面积是55平方厘米，那么小长方形的宽是厘米。\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020三年级网赛 （试题版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立可出题，但文本块包含答案和解析，存在泄露风险，仅适用于练习。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json#2#4",
+          "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json"
+        }
+      },
+      "text": "4. 命题老师而立之年的感慨\n\n下面加法竖式中，相同的汉字代表相同的数字，不同的汉字代表不同的数字。其中，汉字“零”、“二”代表的数字都不是偶数，汉字“一”代表的数字不是奇数。那么这个加法竖式的和是\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_002/images/1.jpg)\n\n## 5. 长方形家族\n\n如图，大长方形ABCD是由8个一模一样的小长方形拼接而成。已知大长方形ABCD的面积是135平方厘米，中间阴影长方形的面积是55平方厘米，那么小长方形的宽是厘米。\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020三年级网赛 （试题版）.pdf",
+      "exam": {
+        "exam_key": "2020三年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "5. 长方形家族\n\n如图,大长方形ABCD是由8个一模一样的小长方形拼接而成.已知大长方形ABCD的面积是135平方厘米,中间阴影长方形的面积是55平方厘米,那么小长方形的宽是厘米.\n\n![](ocr_debug/2020三年级网赛 （详解版）/pages/page_003/images/0.jpg)",
+      "answer_text": "2",
+      "solution_text": "每一个小长方形的面积为 \\((135 - 55)\\div 8 = 10\\) 平方厘米,那么长方形EFGH的面积为 \\(55 + 10\\times 2 = 75\\) 平方厘米.由下图可知,长方形EFGH是由3个正方形组成的,每个正方形的面积为 \\(75\\div 3 = 25\\) 平方厘米,正方形的边长为5厘米,即小长方形的长为5厘米,所以小长方形的宽为 \\(10\\div 5 = 2\\) 厘米.",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020三年级网赛 （试题版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （详解版）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json#3#5",
+          "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （详解版）.json"
+        }
+      },
+      "text": "5. 长方形家族\n\n如图,大长方形ABCD是由8个一模一样的小长方形拼接而成.已知大长方形ABCD的面积是135平方厘米,中间阴影长方形的面积是55平方厘米,那么小长方形的宽是厘米.\n\n![](ocr_debug/2020三年级网赛 （详解版）/pages/page_003/images/0.jpg)",
+      "answer": "2",
+      "solution": "每一个小长方形的面积为 \\((135 - 55)\\div 8 = 10\\) 平方厘米,那么长方形EFGH的面积为 \\(55 + 10\\times 2 = 75\\) 平方厘米.由下图可知,长方形EFGH是由3个正方形组成的,每个正方形的面积为 \\(75\\div 3 = 25\\) 平方厘米,正方形的边长为5厘米,即小长方形的长为5厘米,所以小长方形的宽为 \\(10\\div 5 = 2\\) 厘米."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020三年级网赛 （试题版）.pdf",
+      "exam": {
+        "exam_key": "2020三年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "7. 考好分数难, 考好名次更难10名学生参加了4次考试, 将每名学生4次考试的成绩相加计作该学生的总成绩. 每次考试中, 得到1分、2分、3分、……、10分的学生恰好各有一人. 如果有小周同学4次考试的成绩都是7分, 那么最多有 ______ 名学生总成绩比小周高.",
+      "answer_text": "5",
+      "solution_text": "这名学生共得了 28 分, 而前 7 名的平均分不超过\n\n\\((4 + 5 + 6 + 7 + 8 + 9 + 10) \\times 4 \\div 7 = 28\\) 分, 所以前七名中如果有比该同学高的, 那么至少有 1 名同学比他低, 所以比这名学生分数高的同学不超过 \\(7 - 1 - 1 = 5\\) 人. 构造 5 人的情况: (10, 10, 5, 5), (5, 5, 10, 10), (9, 9, 6, 6), (6, 6, 9, 9), (8, 8, 8, 8).",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020三年级网赛 （试题版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本为陈述性主题，缺乏具体数学问题元素，不构成可出题的题干。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json#3#7",
+          "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json"
+        },
+        "review_action": "drop_exam",
+        "review_repairable": false,
+        "review_reason": "文本仅为标题或口号，缺乏问题结构或数学内容，无法通过清洗变成可用题干。",
+        "review_fix_hint": "删除整个文本，因为它是一个陈述句，不是可答题的题干。",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json#3#7",
+          "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json"
+        }
+      },
+      "text": "7. 考好分数难, 考好名次更难10名学生参加了4次考试, 将每名学生4次考试的成绩相加计作该学生的总成绩. 每次考试中, 得到1分、2分、3分、……、10分的学生恰好各有一人. 如果有小周同学4次考试的成绩都是7分, 那么最多有 ______ 名学生总成绩比小周高.",
+      "answer": "5",
+      "solution": "这名学生共得了 28 分, 而前 7 名的平均分不超过\n\n\\((4 + 5 + 6 + 7 + 8 + 9 + 10) \\times 4 \\div 7 = 28\\) 分, 所以前七名中如果有比该同学高的, 那么至少有 1 名同学比他低, 所以比这名学生分数高的同学不超过 \\(7 - 1 - 1 = 5\\) 人. 构造 5 人的情况: (10, 10, 5, 5), (5, 5, 10, 10), (9, 9, 6, 6), (6, 6, 9, 9), (8, 8, 8, 8)."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020三年级网赛 （试题版）.pdf",
+      "exam": {
+        "exam_key": "2020三年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "8. 跳蚤跳向2020甲、乙两只跳蚤分别从左上方和右下方的\"2\"同时出发起跳, 且每次只能跳到上下左右相邻位置的数字上. 如果两只跳蚤跳3步都依次经过\"2、0、2、0\"这四个数字, 那么这两只跳蚤跳完3步时能相遇的跳法有 ______ 种.\n\n\\[2 0 2 0\\] \\[0 2 0 2\\] \\[2 0 2 0\\] \\[0 2 0 2\\]\n\n## 四. 亲子互动操作题(每小题18分,共36分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020三年级网赛 （试题版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是数学竞赛题的题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json#3#8",
+          "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json"
+        }
+      },
+      "text": "8. 跳蚤跳向2020甲、乙两只跳蚤分别从左上方和右下方的\"2\"同时出发起跳, 且每次只能跳到上下左右相邻位置的数字上. 如果两只跳蚤跳3步都依次经过\"2、0、2、0\"这四个数字, 那么这两只跳蚤跳完3步时能相遇的跳法有 ______ 种.\n\n\\[2 0 2 0\\] \\[0 2 0 2\\] \\[2 0 2 0\\] \\[0 2 0 2\\]\n\n## 四. 亲子互动操作题(每小题18分,共36分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020三年级网赛 （试题版）.pdf",
+      "exam": {
+        "exam_key": "2020三年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "10. 折纸透视眼\n\n如图,一张正方形\"九宫格\"纸片上分别写着数字 \\(1\\sim 9\\) .现在把这个正方形纸片沿格线折四次(每次折叠时不能将纸张插入重叠纸张之间),会得到一个9层厚的小正方形,原来的9个数字从上到下顺次组成一个九位数,那么,在不同的折叠顺序组成的九位数中,最大的是 (6不能看作9,9不能看作6).\n\n<table><tr><td>8</td><td>1</td><td>6</td></tr><tr><td>3</td><td>5</td><td>7</td></tr><tr><td>4</td><td>9</td><td>2</td></tr></table>\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_004/images/1.jpg)\n\n<center>折叠后</center>\n\n开始",
+      "answer_text": "957261834",
+      "solution_text": "共折4次.\n\n想要最大,首位一定是9,则9一定在最上方;其它数字想要到达9相邻的下方,必须在折叠9所在小方格的边之前来到其相邻的格中.\n\n<table><tr><td></td><td></td><td></td></tr><tr><td></td><td>9</td><td></td></tr></table>\n\n而不折叠9所在的小方格边之前只可能折叠一次,将上方的三个方格折到中间一层,再进行折叠,必然会有一个数与9相邻.\n\n所以第一次折叠9所在小方格的边时,可与9相邻的数有横向的4、2,纵向的5、",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020三年级网赛 （试题版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020三年级网赛 （试题版）/pages/page_004/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是完整的数学问题陈述，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json#4#10",
+          "json_path": "source_pdf/三年级/2020年/2020三年级网赛 （试题版）.json"
+        }
+      },
+      "text": "10. 折纸透视眼\n\n如图,一张正方形\"九宫格\"纸片上分别写着数字 \\(1\\sim 9\\) .现在把这个正方形纸片沿格线折四次(每次折叠时不能将纸张插入重叠纸张之间),会得到一个9层厚的小正方形,原来的9个数字从上到下顺次组成一个九位数,那么,在不同的折叠顺序组成的九位数中,最大的是 (6不能看作9,9不能看作6).\n\n<table><tr><td>8</td><td>1</td><td>6</td></tr><tr><td>3</td><td>5</td><td>7</td></tr><tr><td>4</td><td>9</td><td>2</td></tr></table>\n\n![](ocr_debug/2020三年级网赛 （试题版）/pages/page_004/images/1.jpg)\n\n<center>折叠后</center>\n\n开始",
+      "answer": "957261834",
+      "solution": "共折4次.\n\n想要最大,首位一定是9,则9一定在最上方;其它数字想要到达9相邻的下方,必须在折叠9所在小方格的边之前来到其相邻的格中.\n\n<table><tr><td></td><td></td><td></td></tr><tr><td></td><td>9</td><td></td></tr></table>\n\n而不折叠9所在的小方格边之前只可能折叠一次,将上方的三个方格折到中间一层,再进行折叠,必然会有一个数与9相邻.\n\n所以第一次折叠9所在小方格的边时,可与9相邻的数有横向的4、2,纵向的5、"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2019 + 3\\times (20 + 19)\\) 的计算结果是",
+      "answer_text": "2136",
+      "solution_text": "原式 \\(= 2019 + 3\\times 39 = 2019 + 117 = 2136\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整答案和解析，存在泄露风险，适合仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#1#1",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(2019 + 3\\times (20 + 19)\\) 的计算结果是",
+      "answer": "2136",
+      "solution": "原式 \\(= 2019 + 3\\times 39 = 2019 + 117 = 2136\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 如图，是一个 \\(7\\times 5\\) 的点阵，相邻两个格点的距离是1米．在每个格点上有一只老鼠（大小忽略不计)，现在需要一根绳子将它们全部连接起来，这根绳子至少长 米.",
+      "answer_text": "34",
+      "solution_text": "从第一个老鼠开始,每连接一个是1米,一共 \\(5\\times 7 = 35\\) 只老鼠,即34米.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整问题、答案和解析，答案已明确泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#1#2",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "2. 如图，是一个 \\(7\\times 5\\) 的点阵，相邻两个格点的距离是1米．在每个格点上有一只老鼠（大小忽略不计)，现在需要一根绳子将它们全部连接起来，这根绳子至少长 米.",
+      "answer": "34",
+      "solution": "从第一个老鼠开始,每连接一个是1米,一共 \\(5\\times 7 = 35\\) 只老鼠,即34米."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 2020年东京奥运会是第32届夏季奥林匹克运动会，简称“奥运会”．已知奥运会每4年举办一次，那么2008年中国举办的是第 届奥运会.",
+      "answer_text": "29",
+      "solution_text": "\\(32 - (2020 - 2008)\\div 4 = 29\\) (届)",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干但直接给出了答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#1#3",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "3. 2020年东京奥运会是第32届夏季奥林匹克运动会，简称“奥运会”．已知奥运会每4年举办一次，那么2008年中国举办的是第 届奥运会.",
+      "answer": "29",
+      "solution": "\\(32 - (2020 - 2008)\\div 4 = 29\\) (届)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 小明在看到70周年阅兵的导弹方阵后，在纸上画出了自己创造的“导弹”．那么，图中一共有 个三角形.\n\n## 二.填空题Ⅱ（每小题10分，共40分）\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_001/images/0.jpg)\n\n5．新年快要到了，乐乐想要通过自己的努力攒钱给妈妈买礼物，于是打算每天存2元钱，每攒10天就要休息1天不存钱，并且在休息的这一天花4元钱给自己买一只棒棒糖作为奖励，那么乐乐攒够80元最少需要 天.\n\n6．在下面算式中，相同的汉字代表相同的数字，不同的汉字代表的不同数字，其中“建国” \\(= 49\\) ，“七十” \\(= 70\\) ．那么，“大阅兵”所代表的三位数是\n\n7．电影《哪吒之魔童降世》中殷夫人正陪着哪吒踢子，踢了一些后，夫人便忙着去斩妖除魔，哪吒孤零零的自己踢了一会，这时在一旁练功的敖丙提出陪他一起玩，结果敖丙踢的键子数是殷夫人的2倍，哪吒踢的键子数是他们两人踢的和的2倍还少3个，三人一共踢的键子数是204个．那么殷夫人一共踢了 个.",
+      "answer_text": "13",
+      "solution_text": "图形计数,不妨按块数分类\n\n1块:8个 2块:4个 4块:1个\n\n一共 \\(8 + 4 + 1 = 13\\) 个\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_001/images/1.jpg)\n\n## 二.填空题II(每小题10分,共40分)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "该题目块包含完整题干、答案和解析，答案和解析直接泄露，风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#1#4",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "4. 小明在看到70周年阅兵的导弹方阵后,在纸上画出了自己创造的\"导弹\".那么,图中一共有 个三角形.",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#1#4",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "4. 小明在看到70周年阅兵的导弹方阵后，在纸上画出了自己创造的“导弹”．那么，图中一共有 个三角形.\n\n## 二.填空题Ⅱ（每小题10分，共40分）\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_001/images/0.jpg)\n\n5．新年快要到了，乐乐想要通过自己的努力攒钱给妈妈买礼物，于是打算每天存2元钱，每攒10天就要休息1天不存钱，并且在休息的这一天花4元钱给自己买一只棒棒糖作为奖励，那么乐乐攒够80元最少需要 天.\n\n6．在下面算式中，相同的汉字代表相同的数字，不同的汉字代表的不同数字，其中“建国” \\(= 49\\) ，“七十” \\(= 70\\) ．那么，“大阅兵”所代表的三位数是\n\n7．电影《哪吒之魔童降世》中殷夫人正陪着哪吒踢子，踢了一些后，夫人便忙着去斩妖除魔，哪吒孤零零的自己踢了一会，这时在一旁练功的敖丙提出陪他一起玩，结果敖丙踢的键子数是殷夫人的2倍，哪吒踢的键子数是他们两人踢的和的2倍还少3个，三人一共踢的键子数是204个．那么殷夫人一共踢了 个.",
+      "answer": "13",
+      "solution": "图形计数,不妨按块数分类\n\n1块:8个 2块:4个 4块:1个\n\n一共 \\(8 + 4 + 1 = 13\\) 个\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_001/images/1.jpg)\n\n## 二.填空题II(每小题10分,共40分)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 新年快要到了,乐乐想要通过自己的努力攒钱给妈妈买礼物,于是打算每天存2元钱,每攒10天就要休息1天不存钱,并且在休息的这一天花4元钱给自己买一只棒棒糖作为奖励,那么乐乐攒够80元最少需要 天.",
+      "answer_text": "52",
+      "solution_text": "周期问题,每个周期时间为 \\(20\\div 2 + 1 = 11\\) 天,攒 \\(20 - 4 = 16\\) 元, \\(80\\div 16 = 5\\) 个周期,但实际上,最后一个周期的后3天没有攒钱,所以最少需要, \\(5\\times 11 - 3 = 52\\) 天.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，存在高泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#1#5",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "5. 新年快要到了,乐乐想要通过自己的努力攒钱给妈妈买礼物,于是打算每天存2元钱,每攒10天就要休息1天不存钱,并且在休息的这一天花4元钱给自己买一只棒棒糖作为奖励,那么乐乐攒够80元最少需要 天.",
+      "answer": "52",
+      "solution": "周期问题,每个周期时间为 \\(20\\div 2 + 1 = 11\\) 天,攒 \\(20 - 4 = 16\\) 元, \\(80\\div 16 = 5\\) 个周期,但实际上,最后一个周期的后3天没有攒钱,所以最少需要, \\(5\\times 11 - 3 = 52\\) 天."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 在下面算式中,相同的汉字代表相同的数字,不同的汉字代表的不同数字,其中\"建国\" \\(= 49\\) ,\"七十\" \\(= 70\\) .那么,\"大阅兵\"所代表的三位数是\n\n建国 \\(^+\\) 七十 \\(^+\\) 年 \\(^+\\) 国庆 \\(=\\) 大阅兵",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，未包含答案或解析，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#1#6",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "6. 在下面算式中,相同的汉字代表相同的数字,不同的汉字代表的不同数字,其中\"建国\" \\(= 49\\) ,\"七十\" \\(= 70\\) .那么,\"大阅兵\"所代表的三位数是\n\n建国 \\(^+\\) 七十 \\(^+\\) 年 \\(^+\\) 国庆 \\(=\\) 大阅兵",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "7. 电影《哪吒之魔童降世》中殷夫人正陪着哪吒踢毽子,踢了一\n\n些后,夫人便忙着去斩妖除魔,哪吒孤零零的自己踢了一会,这时在一旁练功的敖丙提出陪他一起玩,结果敖丙踢的毽子数是殷夫人的2倍,哪吒踢的毽子数是他们两人踢的和的2倍还少3个,三人一共踢的毽子数是204个.那么殷夫人一共踢了 个.",
+      "answer_text": "23",
+      "solution_text": "和差倍问题,殷夫人为1份,敖丙为2份,哪吒为6份少3个,所以一份为 \\((204 + 3)\\div (1 + 2 + 6) = 23\\) 个,即殷夫人踢了23个.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整可独立出题，但文本块直接包含答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#2#7",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "7. 电影《哪吒之魔童降世》中殷夫人正陪着哪吒踢毽子,踢了一\n\n些后,夫人便忙着去斩妖除魔,哪吒孤零零的自己踢了一会,这时在一旁练功的敖丙提出陪他一起玩,结果敖丙踢的毽子数是殷夫人的2倍,哪吒踢的毽子数是他们两人踢的和的2倍还少3个,三人一共踢的毽子数是204个.那么殷夫人一共踢了 个.",
+      "answer": "23",
+      "solution": "和差倍问题,殷夫人为1份,敖丙为2份,哪吒为6份少3个,所以一份为 \\((204 + 3)\\div (1 + 2 + 6) = 23\\) 个,即殷夫人踢了23个."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 如图,一笔画出这个图形,有 种不同的画法.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "72",
+      "solution_text": "2个奇点的一笔画,起点有2种(分别是左上以及 \\(D\\) 点),对应的方法数相同;\n\n不妨从左上出发,那么路线即为 \\(A\\rightarrow B\\rightarrow A\\)\n\n\\(\\rightarrow B\\rightarrow C\\rightarrow D\\rightarrow C\\rightarrow D\\) ,依次有3、2、1、3、2、\n\n1 条路线,所以一共有\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_002/images/0.jpg)\n\n\\(2\\times (3\\times 2\\times 1\\times 3\\times 2\\times 1) = 72\\) 条.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_002/images/1.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接附有答案和解析，泄露风险高，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#2#8",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "8. 如图,一笔画出这个图形,有 种不同的画法.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "72",
+      "solution": "2个奇点的一笔画,起点有2种(分别是左上以及 \\(D\\) 点),对应的方法数相同;\n\n不妨从左上出发,那么路线即为 \\(A\\rightarrow B\\rightarrow A\\)\n\n\\(\\rightarrow B\\rightarrow C\\rightarrow D\\rightarrow C\\rightarrow D\\) ,依次有3、2、1、3、2、\n\n1 条路线,所以一共有\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_002/images/0.jpg)\n\n\\(2\\times (3\\times 2\\times 1\\times 3\\times 2\\times 1) = 72\\) 条.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_002/images/1.jpg)\n\n## 三. 填空题III(每小题12分,共48分)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 在右图中的某些空格里画圆圈,使得每行、每列和每个粗线框里都有且只有一个圆圈,并且圆圈所在的方格之间没有公共点.图中 \\(A\\) 、 \\(B\\) 、 \\(C\\) 分别表示所在行中圆圈的位置(从左到右第几个方格),那么 \\(\\overline{ABC}\\) 表示的三位数是\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "351",
+      "solution_text": "答案,如图所示, \\(A = 3\\) , \\(B = 5\\) , \\(C = 1\\)\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_002/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_002/images/3.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整的题干和直接给出的答案解析，泄露风险高，适合练习但不宜用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#2#9",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "9. 在右图中的某些空格里画圆圈,使得每行、每列和每个粗线框里都有且只有一个圆圈,并且圆圈所在的方格之间没有公共点.图中 \\(A\\) 、 \\(B\\) 、 \\(C\\) 分别表示所在行中圆圈的位置(从左到右第几个方格),那么 \\(\\overline{ABC}\\) 表示的三位数是\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "351",
+      "solution": "答案,如图所示, \\(A = 3\\) , \\(B = 5\\) , \\(C = 1\\)\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_002/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（解析版）/pages/page_002/images/3.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 某天,小鱼、小牧、小哼3人分别进行了一场时空旅行,小哼进入的时空隧道时间流速与地球一致,小牧进入的时空隧\n\n道时间流速是地球2倍(即地球上每经过1年,小牧的时空隧道内经过了2年),小鱼进入的时空隧道流速是地球的3倍,若干年后,3人同时回到地球:\n\n小鱼说:\"如果按照咱们各自所在的时空隧道时间计算,今年我们一共105岁啦.\"\n\n小牧说:\"小鱼,出发的时候我比你大5岁,但是如果按照咱们俩各自所在时空隧道时间计算,现在咱们俩一样大.\"\n\n小哼说:\"如果一开始大家都在我的时空隧道旅行,那么当小鱼像小牧出发时那样大的时候,小牧像我出发时那样大.\"\n\n那么按照地球时间流速,今年小鱼 岁.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个数学竞赛题干，描述了时空旅行时间流速差异的场景，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json#2#10",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（解析版）.json"
+        }
+      },
+      "text": "10. 某天,小鱼、小牧、小哼3人分别进行了一场时空旅行,小哼进入的时空隧道时间流速与地球一致,小牧进入的时空隧\n\n道时间流速是地球2倍(即地球上每经过1年,小牧的时空隧道内经过了2年),小鱼进入的时空隧道流速是地球的3倍,若干年后,3人同时回到地球:\n\n小鱼说:\"如果按照咱们各自所在的时空隧道时间计算,今年我们一共105岁啦.\"\n\n小牧说:\"小鱼,出发的时候我比你大5岁,但是如果按照咱们俩各自所在时空隧道时间计算,现在咱们俩一样大.\"\n\n小哼说:\"如果一开始大家都在我的时空隧道旅行,那么当小鱼像小牧出发时那样大的时候,小牧像我出发时那样大.\"\n\n那么按照地球时间流速,今年小鱼 岁.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 将数字1、2、……、 \\(n\\) 围成一个圈,从1开始,每隔2个数划去一个数,直到最终剩下2个数.例如 \\(n = 5\\) 时,依次划掉的数是3、1、5,最终留下了2和4,再例如 \\(n = 2000\\) 时,依次划掉的是3、6、9、……最终留下的是607和1838.那么 \\(n = 2020\\) 时,最终留下的两个数的和是",
+      "answer_text": "2565",
+      "solution_text": "通过已知条件,当剩下2000个数时,最后留下的时第607个和第1838个;\n\n现在有2020个数,首先划去20个数,那么划掉的第20个数是60,此时剩2000个数,其中第1个数是61. 那么第607个和1838个数分别是 \\(61 + 607 - 1 = 667\\) 和 \\(61 + 1838 - 1 = 1898\\) ,和为 \\(667 + 1898 = 2565\\) .",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，包含问题描述和例子，但没有提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级A卷（试卷版）.json"
+        }
+      },
+      "text": "11. 将数字1、2、……、 \\(n\\) 围成一个圈,从1开始,每隔2个数划去一个数,直到最终剩下2个数.例如 \\(n = 5\\) 时,依次划掉的数是3、1、5,最终留下了2和4,再例如 \\(n = 2000\\) 时,依次划掉的是3、6、9、……最终留下的是607和1838.那么 \\(n = 2020\\) 时,最终留下的两个数的和是",
+      "answer": "2565",
+      "solution": "通过已知条件,当剩下2000个数时,最后留下的时第607个和第1838个;\n\n现在有2020个数,首先划去20个数,那么划掉的第20个数是60,此时剩2000个数,其中第1个数是61. 那么第607个和1838个数分别是 \\(61 + 607 - 1 = 667\\) 和 \\(61 + 1838 - 1 = 1898\\) ,和为 \\(667 + 1898 = 2565\\) ."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 1919年,北京爆发了一场以青年学生为主的爱国运动,是中国人民彻底的反对帝国主义、封建主义的爱国运动,被称为五四运动。作为当代学生,应继承五四精神。\n\n请写出计算结果: \\(2020 - 1919 =\\)",
+      "answer_text": "101",
+      "solution_text": "\\(2020 - 1919 = 101\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含历史背景下的数学计算题，但答案和解析直接附后，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（解析版）.json#1#1",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（解析版）.json"
+        }
+      },
+      "text": "1. 1919年,北京爆发了一场以青年学生为主的爱国运动,是中国人民彻底的反对帝国主义、封建主义的爱国运动,被称为五四运动。作为当代学生,应继承五四精神。\n\n请写出计算结果: \\(2020 - 1919 =\\)",
+      "answer": "101",
+      "solution": "\\(2020 - 1919 = 101\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 右图的小鱼中有 个正方形.",
+      "answer_text": "8",
+      "solution_text": "图中无效线段去掉之后,可看出共8个正方形.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_001/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含【答案】和【解析】，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（解析版）.json#1#2",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（解析版）.json"
+        }
+      },
+      "text": "2. 右图的小鱼中有 个正方形.",
+      "answer": "8",
+      "solution": "图中无效线段去掉之后,可看出共8个正方形.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_001/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 森林里住着一群神奇的精灵，3个小精灵会自动合体变成一个中精灵，3个中精灵会自动合体变成一个大精灵.如果森林里一开始有50个小精灵，那么自动合体完成后，小、中、大精灵至少共有个.",
+      "answer_text": "8",
+      "solution_text": "\\(50\\div 3 = 16\\dots 2\\) ,所以会自动合成16个中精灵,还剩2个小精灵. \\(16\\div 3 = 5\\dots 1\\) 所以会自动合成5个大精灵,还剩1个中精灵.总共有5个大精灵,1个中精灵,2个小精灵.共有 \\(5 + 1 + 2 = 8\\) 个精灵.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整，但直接包含答案和解析，存在泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（解析版）.json#1#3",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（解析版）.json"
+        }
+      },
+      "text": "3. 森林里住着一群神奇的精灵，3个小精灵会自动合体变成一个中精灵，3个中精灵会自动合体变成一个大精灵.如果森林里一开始有50个小精灵，那么自动合体完成后，小、中、大精灵至少共有个.",
+      "answer": "8",
+      "solution": "\\(50\\div 3 = 16\\dots 2\\) ,所以会自动合成16个中精灵,还剩2个小精灵. \\(16\\div 3 = 5\\dots 1\\) 所以会自动合成5个大精灵,还剩1个中精灵.总共有5个大精灵,1个中精灵,2个小精灵.共有 \\(5 + 1 + 2 = 8\\) 个精灵."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 在空格内填入数字 \\(1\\sim 4\\) ，使得每行和每列数字都不重复.行外面的数表示该行这两个数字按给出的顺序左右相邻，列外面的数表示该列这两个数字按给出的顺序上下相邻．最后一行四个数字从左到右组成的四位数是\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/images/1.jpg)\n\n## 二.填空题Ⅱ（每小题10分，共40分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学填空题，有明确提问但未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json#1#4",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json"
+        }
+      },
+      "text": "4. 在空格内填入数字 \\(1\\sim 4\\) ，使得每行和每列数字都不重复.行外面的数表示该行这两个数字按给出的顺序左右相邻，列外面的数表示该列这两个数字按给出的顺序上下相邻．最后一行四个数字从左到右组成的四位数是\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/images/1.jpg)\n\n## 二.填空题Ⅱ（每小题10分，共40分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 小明用11个完全一样的白色小长方形排成了下图所示的“20”图案．已知图案“0”中的阴影部分面积比图案“2”中的阴影部分面积大16平方厘米．那么，一个白色小长方形的面积是平方厘米.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/images/2.jpg)\n\n6．1959年9月26日，我国勘探发现了大庆油田，随后掀起了气吞山河、波澜壮阔的石油大会战．今年是新中国成立70周年，也是大庆油田发现的60周年．按照含油量的多少，我们将某矿区的油井分为三类：其中 \\(B\\) 类油井数量是 \\(A\\) 类油井的2倍多1个， \\(C\\) 类油井数量是其他两类总和的3倍， \\(C\\) 类油井数量比 \\(B\\) 类油井多212个，那么， \\(C\\) 类油井数量为 个.",
+      "answer_text": "16",
+      "solution_text": "经切割发现,图2中从上往下第一个阴影部分面积和图1中阴影部分 \\(A\\) 的面积相同.图2中从上往下第3个隐形部分面积与图1中阴影部分 \\(B\\) 的面积相同,所以多出的面积为图2中从上往下第2个阴影部分面积,恰与一个白色小长方形相等.故白色小长方形面积为16平方厘米.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本包含两个独立的数学问题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json"
+        }
+      },
+      "text": "5. 小明用11个完全一样的白色小长方形排成了下图所示的“20”图案．已知图案“0”中的阴影部分面积比图案“2”中的阴影部分面积大16平方厘米．那么，一个白色小长方形的面积是平方厘米.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/images/2.jpg)\n\n6．1959年9月26日，我国勘探发现了大庆油田，随后掀起了气吞山河、波澜壮阔的石油大会战．今年是新中国成立70周年，也是大庆油田发现的60周年．按照含油量的多少，我们将某矿区的油井分为三类：其中 \\(B\\) 类油井数量是 \\(A\\) 类油井的2倍多1个， \\(C\\) 类油井数量是其他两类总和的3倍， \\(C\\) 类油井数量比 \\(B\\) 类油井多212个，那么， \\(C\\) 类油井数量为 个.",
+      "answer": "16",
+      "solution": "经切割发现,图2中从上往下第一个阴影部分面积和图1中阴影部分 \\(A\\) 的面积相同.图2中从上往下第3个隐形部分面积与图1中阴影部分 \\(B\\) 的面积相同,所以多出的面积为图2中从上往下第2个阴影部分面积,恰与一个白色小长方形相等.故白色小长方形面积为16平方厘米."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "6. 1959年9月26日,我国勘探发现了大庆油田,随后掀起了气吞山河、波澜壮阔的石油大会战。今年是新中国成立70周年,也是大庆油田发现的60周年。按照含油量的多少,我们将某矿区的油井分为三类:其中 \\(B\\) 类油井数量是 \\(A\\) 类油井的2倍多1个, \\(C\\) 类油井数量是其他两类总和的3倍, \\(C\\) 类油井数量比 \\(B\\) 类油井多212个,那么, \\(C\\) 类油井数量为 个。",
+      "answer_text": "273",
+      "solution_text": "\\(A\\) 、 \\(B\\) 、 \\(C\\) 三类油井数量的线段图,如下图所示。\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_003/images/1.jpg)\n\n\\(A\\) 类油井: \\((212 - 2)\\div 7 = 30\\) (个) \\(B\\) 类油井: \\(30\\times 2 + 1 = 61\\) (个) \\(C\\) 类油井: \\((30 + 61)\\times 3 = 273\\) (个)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": null,
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_003/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_003/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_003/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案和解析，导致答案泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（解析版）.json#3#6",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（解析版）.json"
+        }
+      },
+      "text": "6. 1959年9月26日,我国勘探发现了大庆油田,随后掀起了气吞山河、波澜壮阔的石油大会战。今年是新中国成立70周年,也是大庆油田发现的60周年。按照含油量的多少,我们将某矿区的油井分为三类:其中 \\(B\\) 类油井数量是 \\(A\\) 类油井的2倍多1个, \\(C\\) 类油井数量是其他两类总和的3倍, \\(C\\) 类油井数量比 \\(B\\) 类油井多212个,那么, \\(C\\) 类油井数量为 个。",
+      "answer": "273",
+      "solution": "\\(A\\) 、 \\(B\\) 、 \\(C\\) 三类油井数量的线段图,如下图所示。\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_003/images/1.jpg)\n\n\\(A\\) 类油井: \\((212 - 2)\\div 7 = 30\\) (个) \\(B\\) 类油井: \\(30\\times 2 + 1 = 61\\) (个) \\(C\\) 类油井: \\((30 + 61)\\times 3 = 273\\) (个)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. 右图中，相同的汉字代表相同的数字，不同的汉字代表不同的数字.那么同心共筑代表的四位数最大是\n\n中国梦+同心共筑2019",
+      "answer_text": "1789",
+      "solution_text": "千位为突破口,可得\"同 \\(= 2\\) \"或\"同 \\(= 1\\) \",当\"同 \\(= 2\\) \"时,百位\" 中 \\(^+\\) 心 \\(= 0\\) \"不符合条件,从而得出\"同 \\(= 1\\) \".接下来确定进位,百位有进位1,由于\"同 \\(= 1\\) \",那么十位\" 国 \\(^+\\) 共 \\(= 1\\) \"也不成立,因此十位也有进位1,个位可轻易得出无进位.下一步确定最值,千位\n\n\" 中 \\(^+\\) 心 \\(= 9\\) \", \"心\"最大为9,但此时\"中 \\(= 0\\) \",不符合首位不为0的要求,如果\"心 \\(= 8\\) \",此时\"中 \\(= 1\\) \"与\"同 \\(= 1\\) \"冲突,所以\"心 \\(= 7\\) \",此时\"中 \\(= 2\\) \";十位\" 国 \\(^+\\) 共 \\(= 11\\) \", \"共\"最大为9,那么\"国 \\(= 2\\) \"与\"中 \\(= 2\\) \"冲突,所以\"共 \\(= 8\\) \",此时\"国 \\(= 3\\) \";个位\" 梦 \\(^+\\) 筑 \\(= 9\\) \", \"筑\"最大为9,\n\n此时\"梦 \\(= 0\\) \".那么同心共筑所代表的四位数最大为1789.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_003/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，未包含答案或解析，可安全用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json#1#7",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json"
+        }
+      },
+      "text": "7. 右图中，相同的汉字代表相同的数字，不同的汉字代表不同的数字.那么同心共筑代表的四位数最大是\n\n中国梦+同心共筑2019",
+      "answer": "1789",
+      "solution": "千位为突破口,可得\"同 \\(= 2\\) \"或\"同 \\(= 1\\) \",当\"同 \\(= 2\\) \"时,百位\" 中 \\(^+\\) 心 \\(= 0\\) \"不符合条件,从而得出\"同 \\(= 1\\) \".接下来确定进位,百位有进位1,由于\"同 \\(= 1\\) \",那么十位\" 国 \\(^+\\) 共 \\(= 1\\) \"也不成立,因此十位也有进位1,个位可轻易得出无进位.下一步确定最值,千位\n\n\" 中 \\(^+\\) 心 \\(= 9\\) \", \"心\"最大为9,但此时\"中 \\(= 0\\) \",不符合首位不为0的要求,如果\"心 \\(= 8\\) \",此时\"中 \\(= 1\\) \"与\"同 \\(= 1\\) \"冲突,所以\"心 \\(= 7\\) \",此时\"中 \\(= 2\\) \";十位\" 国 \\(^+\\) 共 \\(= 11\\) \", \"共\"最大为9,那么\"国 \\(= 2\\) \"与\"中 \\(= 2\\) \"冲突,所以\"共 \\(= 8\\) \",此时\"国 \\(= 3\\) \";个位\" 梦 \\(^+\\) 筑 \\(= 9\\) \", \"筑\"最大为9,\n\n此时\"梦 \\(= 0\\) \".那么同心共筑所代表的四位数最大为1789."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 小鱼同学家里养了一些鸡和兔,鸡的数量比兔子的2倍多3只.一天,小鱼同学把一些变形药水撒到鸡和兔的身上,所有的鸡都变成了2头3腿,所有的兔都变成了1头5腿,小鱼同学数了数后发现,所有动物的总腿数比总头数多93,那么,鸡和兔一共有________只.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "48",
+      "solution_text": "设兔的数量为1份,则鸡的数量为2份再加3. 变完后每只鸡的腿比头多1,每只兔的腿比头多4. 则所有鸡的腿比头多2份加3,所有兔的腿比头多4份. 则6份加上3对应93,可推出1份对应 \\((93 - 3) \\div 6 = 15\\) ,鸡和兔一共有 \\(15 \\times 3 + 3 = 48\\) 只.\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json#2#8",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json"
+        }
+      },
+      "text": "8. 小鱼同学家里养了一些鸡和兔,鸡的数量比兔子的2倍多3只.一天,小鱼同学把一些变形药水撒到鸡和兔的身上,所有的鸡都变成了2头3腿,所有的兔都变成了1头5腿,小鱼同学数了数后发现,所有动物的总腿数比总头数多93,那么,鸡和兔一共有________只.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "48",
+      "solution": "设兔的数量为1份,则鸡的数量为2份再加3. 变完后每只鸡的腿比头多1,每只兔的腿比头多4. 则所有鸡的腿比头多2份加3,所有兔的腿比头多4份. 则6份加上3对应93,可推出1份对应 \\((93 - 3) \\div 6 = 15\\) ,鸡和兔一共有 \\(15 \\times 3 + 3 = 48\\) 只.\n\n## 三. 填空题Ⅲ(每小题12分,共48分)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. \\(A\\) 、 \\(B\\) 、 \\(C\\) 为1到9中的3个不同数字,且 \\(A< B< C\\) .将每条线段两端的数字作差(大减小),可以得到3个差,这3个差恰好构成一个等差数列.那么符合要求的填法共有________种.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "18",
+      "solution_text": "3个差成等差数列,且最大的差等于另外两个差之和,所以三个差互不相等.\n\n又因为最大的差与第二大差相差最小的差,即最小的差就是等差数列的公差.所以这三个差从小到大只能为(1、2、3)或(2、4、6).最大的差一定是 \\((C - A)\\) ,但其他两个差可以交换位置.\n\n\\((B - A)\\) 、 \\((C - B)\\) 、 \\((C - A)\\) 的差分别为(1、2、3)时有6种;分别为(2、1、3)时有6种;分别为(2、4、6)时有3种;分别为(4、2、6)时有3种,共18种.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，描述清晰，没有包含答案或解析信息，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json"
+        }
+      },
+      "text": "9. \\(A\\) 、 \\(B\\) 、 \\(C\\) 为1到9中的3个不同数字,且 \\(A< B< C\\) .将每条线段两端的数字作差(大减小),可以得到3个差,这3个差恰好构成一个等差数列.那么符合要求的填法共有________种.\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "18",
+      "solution": "3个差成等差数列,且最大的差等于另外两个差之和,所以三个差互不相等.\n\n又因为最大的差与第二大差相差最小的差,即最小的差就是等差数列的公差.所以这三个差从小到大只能为(1、2、3)或(2、4、6).最大的差一定是 \\((C - A)\\) ,但其他两个差可以交换位置.\n\n\\((B - A)\\) 、 \\((C - B)\\) 、 \\((C - A)\\) 的差分别为(1、2、3)时有6种;分别为(2、1、3)时有6种;分别为(2、4、6)时有3种;分别为(4、2、6)时有3种,共18种."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 有两个神奇的小岛,真理岛上的人只说真话,魔鬼岛上的人只说假话.有一天,有7个分别来自真理岛上和魔鬼岛的人结伴乘船出游.船夫问:\"你们谁来自真理岛,谁来自魔鬼岛?\"\n\n1号说:\"2、3、4号都是魔鬼岛来的.\"\n\n2号说:\"3号是魔鬼岛的人.\"\n\n3号说:\"2号和我都不是魔鬼岛的人.\"\n\n4号说:\"5号和6号都是真理岛上的人.\"\n\n5号说:\"4号是来自魔鬼岛的.\"\n\n6号说:\"7号不是真理岛上的人.\"\n\n7号说:\"我来自真理岛.\"\n\n那么,所有来自魔鬼岛的人的编号,从小到大依次排列,所组成的数是________.",
+      "answer_text": "1346",
+      "solution_text": "如果1号是真理岛人,那么2、3、4号都是魔鬼岛人,2号与3号不能同假,矛盾. 所以1号是魔鬼岛人;\n\n如果3号是真理岛人,那么2号也是真理岛人,但2号说3号是魔鬼岛人,出现矛盾. 所以3号是魔鬼岛人,2号是真理岛的人;\n\n如果4号是真理岛人,那么5号也是真理岛人,可推出4号是魔鬼岛人,产生矛盾,所以4号",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的逻辑谜题题干，没有直接给出答案或解析，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json"
+        }
+      },
+      "text": "10. 有两个神奇的小岛,真理岛上的人只说真话,魔鬼岛上的人只说假话.有一天,有7个分别来自真理岛上和魔鬼岛的人结伴乘船出游.船夫问:\"你们谁来自真理岛,谁来自魔鬼岛?\"\n\n1号说:\"2、3、4号都是魔鬼岛来的.\"\n\n2号说:\"3号是魔鬼岛的人.\"\n\n3号说:\"2号和我都不是魔鬼岛的人.\"\n\n4号说:\"5号和6号都是真理岛上的人.\"\n\n5号说:\"4号是来自魔鬼岛的.\"\n\n6号说:\"7号不是真理岛上的人.\"\n\n7号说:\"我来自真理岛.\"\n\n那么,所有来自魔鬼岛的人的编号,从小到大依次排列,所组成的数是________.",
+      "answer": "1346",
+      "solution": "如果1号是真理岛人,那么2、3、4号都是魔鬼岛人,2号与3号不能同假,矛盾. 所以1号是魔鬼岛人;\n\n如果3号是真理岛人,那么2号也是真理岛人,但2号说3号是魔鬼岛人,出现矛盾. 所以3号是魔鬼岛人,2号是真理岛的人;\n\n如果4号是真理岛人,那么5号也是真理岛人,可推出4号是魔鬼岛人,产生矛盾,所以4号"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试初赛_3年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试初赛_3年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 老师在黑板上写下了自然数1.甲、乙两人轮流进行如下操作:\n\n甲每次擦去黑板上的数,再写上它的2倍或者3倍;\n\n乙每次擦去黑板上的数,再写上一个和它的差为1的数.\n\n将甲的一次操作与乙的一次操作称为一轮.\n\n甲先操作,至少在第________轮结束时,黑板上的数恰好是2020.",
+      "answer_text": "7",
+      "solution_text": "由题目可知操作分为 4 种: \\(\\times 2 + 1, \\times 2 - 1, \\times 3 + 1, \\times 3 - 1\\) , 由结果倒推如下:\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_005/images/0.jpg)\n\n此时由于结果太多, 继续往下推比较麻烦, 因此选择从 1 出发正推, 1 可以变成 2、3、4, 由 4 可以在下一轮变成 13, 即可以和倒推图中的 13 对接上, 故至少在第 7 轮结束时, 黑板上的数恰好是 2020.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试初赛_3年级B卷（试卷版）.json"
+        }
+      },
+      "text": "11. 老师在黑板上写下了自然数1.甲、乙两人轮流进行如下操作:\n\n甲每次擦去黑板上的数,再写上它的2倍或者3倍;\n\n乙每次擦去黑板上的数,再写上一个和它的差为1的数.\n\n将甲的一次操作与乙的一次操作称为一轮.\n\n甲先操作,至少在第________轮结束时,黑板上的数恰好是2020.",
+      "answer": "7",
+      "solution": "由题目可知操作分为 4 种: \\(\\times 2 + 1, \\times 2 - 1, \\times 3 + 1, \\times 3 - 1\\) , 由结果倒推如下:\n\n![](ocr_debug/2020数学花园探秘笔试初赛_3年级B卷（解析版）/pages/page_005/images/0.jpg)\n\n此时由于结果太多, 继续往下推比较麻烦, 因此选择从 1 出发正推, 1 可以变成 2、3、4, 由 4 可以在下一轮变成 13, 即可以和倒推图中的 13 对接上, 故至少在第 7 轮结束时, 黑板上的数恰好是 2020."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(1234 - 5 \\times 6 + 7 + 8 + 9\\) 的计算结果是",
+      "answer_text": "1228",
+      "solution_text": "\\(1234 - 5 \\times 6 + 7 + 8 + 9 = 1234 - (5 \\times 6 - 7 - 8 - 9) = 1234 - 6 = 1228\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json#1#1",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(1234 - 5 \\times 6 + 7 + 8 + 9\\) 的计算结果是",
+      "answer": "1228",
+      "solution": "\\(1234 - 5 \\times 6 + 7 + 8 + 9 = 1234 - (5 \\times 6 - 7 - 8 - 9) = 1234 - 6 = 1228\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 均均、帅帅同一天开始背单词.均均第一天背10个,计划以后每天比前一天都多背1个;帅帅第一天背5个,计划以后每天比前一天都多背2个.直至某天两人都按计划背完单词后,发现两人背的单词总个数一样多,这时帅帅共背了 个单词.",
+      "answer_text": "165",
+      "solution_text": "考虑每天所背单词,第一天时帅帅落后 \\(10 - 5 = 5\\) 个,每天追回 \\(2 - 1 = 1\\) 个,当再过 \\(5 + 1 = 5\\) 天,在第6天追平;考虑所背单词总个数,以第6天为对称,帅帅前5天落后的部分在后5天恰好追回,共用 \\(5 + 1 + 5 = 11\\) 天,第6天两人各背15个,所以 \\(15 \\times 11 = 165\\) 个.",
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题目但附有答案和解析，因此不建议用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json#1#2",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json"
+        }
+      },
+      "text": "2. 均均、帅帅同一天开始背单词.均均第一天背10个,计划以后每天比前一天都多背1个;帅帅第一天背5个,计划以后每天比前一天都多背2个.直至某天两人都按计划背完单词后,发现两人背的单词总个数一样多,这时帅帅共背了 个单词.",
+      "answer": "165",
+      "solution": "考虑每天所背单词,第一天时帅帅落后 \\(10 - 5 = 5\\) 个,每天追回 \\(2 - 1 = 1\\) 个,当再过 \\(5 + 1 = 5\\) 天,在第6天追平;考虑所背单词总个数,以第6天为对称,帅帅前5天落后的部分在后5天恰好追回,共用 \\(5 + 1 + 5 = 11\\) 天,第6天两人各背15个,所以 \\(15 \\times 11 = 165\\) 个."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 如图,边长为25厘米的大正方形中有 \\(A\\) 、 \\(B\\) 两个大小相同的小正方形.如果图中阴影部分面积为225平方厘米,那么小正方形 \\(A\\) 的面积是 平方厘米.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "64",
+      "solution_text": "如下图, \\(c = 225 \\div 25 = 9(cm)\\) ,小正方形 \\(A\\) 边长为 \\((25 - 9) \\div 2 = 8(cm)\\) ,面积为 \\(8 \\times 8 = 64(cm^2)\\) .\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_001/images/1.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_001/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_001/images/3.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json#1#3",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json"
+        }
+      },
+      "text": "3. 如图,边长为25厘米的大正方形中有 \\(A\\) 、 \\(B\\) 两个大小相同的小正方形.如果图中阴影部分面积为225平方厘米,那么小正方形 \\(A\\) 的面积是 平方厘米.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "64",
+      "solution": "如下图, \\(c = 225 \\div 25 = 9(cm)\\) ,小正方形 \\(A\\) 边长为 \\((25 - 9) \\div 2 = 8(cm)\\) ,面积为 \\(8 \\times 8 = 64(cm^2)\\) .\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_001/images/1.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_001/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_001/images/3.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 有连续101个格子,给每个格子涂上红色或蓝色.任意连续20个格子中,红色\n\n格子的数量都是相同的.任意连续8个格子中,红色格子的数量也是相同的.如果前5个格子里面有4个是红色的,那么一共有 个格子是红色的.\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer_text": "76",
+      "solution_text": "由\"任意连续20个格子中,红色格子的数量都是相同的\",从而第 \\(1 \\sim 20\\) 格所含红色格子数与第 \\(2 \\sim 21\\) 格所含红色格子数相同,所以第1格和第21格同色;\n\n由\"任意连续8个格子中,红色格子的数量都是相同的\",从而第 \\(14 \\sim 21\\) 格所含红色格子数与第 \\(13 \\sim 20\\) 格所含红色格子数相同,所以第21格和第13格同色;同理,第13格和第5格同色;\n\n所以第1格和第5格同色;同理,第2格和第6格同色,第3格和第7格同色;……\n\n所以红色格子出现周期为4. 如果前5个格子有4个红色的,那么前4个格子必有3个是红色的.并且第5个是红色的.前100个有 \\(100 \\div 4 \\times 3 = 75\\) 个红色,第101个和第5个同色,是红色.所以一共76个.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整但包含答案和解析，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json#1#4",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json"
+        }
+      },
+      "text": "4. 有连续101个格子,给每个格子涂上红色或蓝色.任意连续20个格子中,红色\n\n格子的数量都是相同的.任意连续8个格子中,红色格子的数量也是相同的.如果前5个格子里面有4个是红色的,那么一共有 个格子是红色的.\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer": "76",
+      "solution": "由\"任意连续20个格子中,红色格子的数量都是相同的\",从而第 \\(1 \\sim 20\\) 格所含红色格子数与第 \\(2 \\sim 21\\) 格所含红色格子数相同,所以第1格和第21格同色;\n\n由\"任意连续8个格子中,红色格子的数量都是相同的\",从而第 \\(14 \\sim 21\\) 格所含红色格子数与第 \\(13 \\sim 20\\) 格所含红色格子数相同,所以第21格和第13格同色;同理,第13格和第5格同色;\n\n所以第1格和第5格同色;同理,第2格和第6格同色,第3格和第7格同色;……\n\n所以红色格子出现周期为4. 如果前5个格子有4个红色的,那么前4个格子必有3个是红色的.并且第5个是红色的.前100个有 \\(100 \\div 4 \\times 3 = 75\\) 个红色,第101个和第5个同色,是红色.所以一共76个."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 在右图的除法竖式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字.白龙马代表的三位数是\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "358",
+      "solution_text": "\"蹄\"、\"西\"为非零数字,且为余数,所以小于除数\"白\",从而\"白\"不小于3;而\"白 \\(\\times\\) 白 \\(=\\) 明\",从而\"白\"不大于3;所以\"白\" \\(= 3\\) ,\"明\" \\(= 9\\) .\"西\" \\(= 1\\) ,\"蹄\" \\(= 2\\) ,由\"明\" \\(= 9\\) 、\"西\" \\(= 1\\) ,从而\" \\(3\\times\\) 马 \\(= 2\\) 朝\"只能为\" \\(3\\times 8 = 24\\) \"\n\n1、2、3都被占用,\"游\" \\(= 0\\) .从而\"龙\" \\(= 5\\) .所以白龙马 \\(= 358\\)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_002/images/0.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，涉及除法竖式和汉字数字问题，没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json"
+        }
+      },
+      "text": "5. 在右图的除法竖式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字.白龙马代表的三位数是\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "358",
+      "solution": "\"蹄\"、\"西\"为非零数字,且为余数,所以小于除数\"白\",从而\"白\"不小于3;而\"白 \\(\\times\\) 白 \\(=\\) 明\",从而\"白\"不大于3;所以\"白\" \\(= 3\\) ,\"明\" \\(= 9\\) .\"西\" \\(= 1\\) ,\"蹄\" \\(= 2\\) ,由\"明\" \\(= 9\\) 、\"西\" \\(= 1\\) ,从而\" \\(3\\times\\) 马 \\(= 2\\) 朝\"只能为\" \\(3\\times 8 = 24\\) \"\n\n1、2、3都被占用,\"游\" \\(= 0\\) .从而\"龙\" \\(= 5\\) .所以白龙马 \\(= 358\\)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_002/images/0.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 将0、1、10、100这四个自然数按任意顺序排成一行,拼成一个首位不为0的七位数,一共能拼成 个不同的七位数.",
+      "answer_text": "12",
+      "solution_text": "0不在首位,0在1后或10后或100后\n\n(1)0在1后,相当于10、10、100组数,共3种;\n\n(2)0在10后,相当于1、100、100组数,共3种;\n\n(3)0在100后,相当于1、10、1000组数,共 \\(3\\times 2 = 6\\) 种;\n\n综上所述,一共能生成 \\(3 + 3 + 6 = 12\\) 种.",
+      "topic": "combinatorics",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json"
+        }
+      },
+      "text": "6. 将0、1、10、100这四个自然数按任意顺序排成一行,拼成一个首位不为0的七位数,一共能拼成 个不同的七位数.",
+      "answer": "12",
+      "solution": "0不在首位,0在1后或10后或100后\n\n(1)0在1后,相当于10、10、100组数,共3种;\n\n(2)0在10后,相当于1、100、100组数,共3种;\n\n(3)0在100后,相当于1、10、1000组数,共 \\(3\\times 2 = 6\\) 种;\n\n综上所述,一共能生成 \\(3 + 3 + 6 = 12\\) 种."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. 老师将一些苹果和梨平分给全班同学.分完后,苹果剩下2个,梨剩下7个,且每个同学分得的梨的个数是分得的苹果个数的2倍.如果先分给其中11名同学每人两种水果各7个,剩下的平分给余下同学,恰好分完,且余下这些同学每人分得的梨的个数是分得的苹果个数的3倍.那么苹果和梨共有 个.",
+      "answer_text": "474",
+      "solution_text": "梨是苹果的2倍多 \\(7 - 2\\times 2 = 3\\) 个,梨是苹果的3倍少 \\(77\\times 3 - 77 = 154\\) 个;所以苹果是 \\(154 + 3 = 157\\) 个,梨是 \\(157\\times 2 + 3 = 317\\) 个,一共 \\(157 + 317 = 474\\) 个.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json#1#7",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json"
+        }
+      },
+      "text": "7. 老师将一些苹果和梨平分给全班同学.分完后,苹果剩下2个,梨剩下7个,且每个同学分得的梨的个数是分得的苹果个数的2倍.如果先分给其中11名同学每人两种水果各7个,剩下的平分给余下同学,恰好分完,且余下这些同学每人分得的梨的个数是分得的苹果个数的3倍.那么苹果和梨共有 个.",
+      "answer": "474",
+      "solution": "梨是苹果的2倍多 \\(7 - 2\\times 2 = 3\\) 个,梨是苹果的3倍少 \\(77\\times 3 - 77 = 154\\) 个;所以苹果是 \\(154 + 3 = 157\\) 个,梨是 \\(157\\times 2 + 3 = 317\\) 个,一共 \\(157 + 317 = 474\\) 个."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 将 \\(1 \\sim 9\\) 分别填入到右图的 9 个圆圈中, 使得各条直线上圆圈中所填数的和都相等. 现已将 7 填入, 那么圆圈 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 中所填数字依次组成的四位数是 ______.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "6145",
+      "solution_text": "设每条各直线上圆圈中所填数的和为 \\(S\\) , \\(1 + 2 + 3 + \\dots +9 = 45\\)\n\n则 \\(S = (45\\times 2 - 7 - E)\\div 5\\) ,所以 \\(E = 3\\) 或8.\n\n当 \\(E = 8\\) 时, \\(S = (45\\times 2 - 7 - 8)\\div 5 = 15\\) , \\(A + B + C + D = 15\\) , \\(F + G + H = 45 - 7 - 8 - 15 = 15\\)\n\n而 \\(A + F + H = 15\\) ,从而 \\(G = A\\) ,矛盾!所以, \\(E = 3\\) , \\(S = (45\\times 2 - 7 - 3)\\div 5 = 16\\) . \\(C + G = 16 - 3 = 13 = 5 + 8 = 4 + 9\\)\n\n若 \\(C + G = 5 + 8\\) , \\(G = 8\\) 时则9在 \\(A\\sim D\\) 中, \\(A + B + C + D\\) 至少为 \\(9 + 5 + 1 + 2 = 17\\) ,矛盾!\n\n\\(C = 8,G = 5\\) 时则考察 \\(A + B + D = 16 - 8 = 8\\) , \\(1 + 2 + 4< 8\\) , \\(1 + 2 + 6 > 8\\) ,矛盾!\n\n若 \\(C + G = 4 + 9\\) , \\(C = 9,G = 4\\) 时, \\(A + B + C + D\\) 至少为 \\(9 + 1 + 2 + 5 = 17\\) ,矛盾!\n\n所以, \\(C = 4\\) , \\(G = 9\\) .若8在 \\(A\\sim D\\) 中,则 \\(A\\sim D\\) 中另两数和为 \\(16 - 8 - 4 = 1 + 3\\) ,与 \\(E = 3\\) 矛盾!\n\n而 \\(9 + 8 = 17 > 16\\) ,所以 \\(F = 8\\) ,从而 \\(B = 1\\) .这样6与9不能共线,所以 \\(A = 6\\) , \\(D = 16 - 6 - 1 - 4 = 5\\) , \\(H = 16 - 5 - 9 = 2\\)\n\n所以, \\(ABCD = 6145\\)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_002/images/1.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_002/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_002/images/3.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干本身可独立出题，但整个块包含答案和解析，适合练习使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json#2#8",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（解析版）.json"
+        }
+      },
+      "text": "8. 将 \\(1 \\sim 9\\) 分别填入到右图的 9 个圆圈中, 使得各条直线上圆圈中所填数的和都相等. 现已将 7 填入, 那么圆圈 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 中所填数字依次组成的四位数是 ______.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "6145",
+      "solution": "设每条各直线上圆圈中所填数的和为 \\(S\\) , \\(1 + 2 + 3 + \\dots +9 = 45\\)\n\n则 \\(S = (45\\times 2 - 7 - E)\\div 5\\) ,所以 \\(E = 3\\) 或8.\n\n当 \\(E = 8\\) 时, \\(S = (45\\times 2 - 7 - 8)\\div 5 = 15\\) , \\(A + B + C + D = 15\\) , \\(F + G + H = 45 - 7 - 8 - 15 = 15\\)\n\n而 \\(A + F + H = 15\\) ,从而 \\(G = A\\) ,矛盾!所以, \\(E = 3\\) , \\(S = (45\\times 2 - 7 - 3)\\div 5 = 16\\) . \\(C + G = 16 - 3 = 13 = 5 + 8 = 4 + 9\\)\n\n若 \\(C + G = 5 + 8\\) , \\(G = 8\\) 时则9在 \\(A\\sim D\\) 中, \\(A + B + C + D\\) 至少为 \\(9 + 5 + 1 + 2 = 17\\) ,矛盾!\n\n\\(C = 8,G = 5\\) 时则考察 \\(A + B + D = 16 - 8 = 8\\) , \\(1 + 2 + 4< 8\\) , \\(1 + 2 + 6 > 8\\) ,矛盾!\n\n若 \\(C + G = 4 + 9\\) , \\(C = 9,G = 4\\) 时, \\(A + B + C + D\\) 至少为 \\(9 + 1 + 2 + 5 = 17\\) ,矛盾!\n\n所以, \\(C = 4\\) , \\(G = 9\\) .若8在 \\(A\\sim D\\) 中,则 \\(A\\sim D\\) 中另两数和为 \\(16 - 8 - 4 = 1 + 3\\) ,与 \\(E = 3\\) 矛盾!\n\n而 \\(9 + 8 = 17 > 16\\) ,所以 \\(F = 8\\) ,从而 \\(B = 1\\) .这样6与9不能共线,所以 \\(A = 6\\) , \\(D = 16 - 6 - 1 - 4 = 5\\) , \\(H = 16 - 5 - 9 = 2\\)\n\n所以, \\(ABCD = 6145\\)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_002/images/1.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_002/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_002/images/3.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 如图, 在 \\(5 \\times 5\\) 的方格中放置了编号为 \\(1 \\sim 5\\) 的 5 个小球, 没有任何两个小球在同一行或同一列; 如果同时移动其中 3 个小球到相邻格子 (有公共点的格子) 里, 移动完后依然没有任何两个小球在同一行或同一列, 那么共有 ______ 种移动的方法.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "12",
+      "solution_text": "图中1、2、3、4号小球完全对称,可以分为以下3类:\n\n(1)5号小球不动,不妨设同时移动1、2、3号\n\n如下左图,1号不能向左或左下移动,否则要移动4号;同理1号不能向右或右下移动;1号只能向下移动,这样2号必须从所在行移走,移动到3号所在列,又不能移到5号所在行,所以2号只能向左上移动,从而3号向右移动,所以,同时移动1、2、3号只有1种;那么5号不动 \\(1 \\times 4 = 4\\) 种.\n\n(2)移动5号和 \\(1 \\sim 4\\) 号中相邻的2个,不妨设同时移动1、2、5号\n\n如下中两图,2号不能移到3号所在列,于是2号能上移或下移,所以 \\(2 \\times 4 = 8\\) 种.\n\n(3)移动5号和 \\(1 \\sim 4\\) 号中相对的2个,不妨设同时移动1、3、5号\n\n1号只能右移,3号只能左移,第3列至少2个小球,矛盾!\n\n综上所述, \\(4 + 8 = 12\\)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_003/images/0.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_003/images/1.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_003/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_003/images/3.jpg)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json"
+        }
+      },
+      "text": "9. 如图, 在 \\(5 \\times 5\\) 的方格中放置了编号为 \\(1 \\sim 5\\) 的 5 个小球, 没有任何两个小球在同一行或同一列; 如果同时移动其中 3 个小球到相邻格子 (有公共点的格子) 里, 移动完后依然没有任何两个小球在同一行或同一列, 那么共有 ______ 种移动的方法.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "12",
+      "solution": "图中1、2、3、4号小球完全对称,可以分为以下3类:\n\n(1)5号小球不动,不妨设同时移动1、2、3号\n\n如下左图,1号不能向左或左下移动,否则要移动4号;同理1号不能向右或右下移动;1号只能向下移动,这样2号必须从所在行移走,移动到3号所在列,又不能移到5号所在行,所以2号只能向左上移动,从而3号向右移动,所以,同时移动1、2、3号只有1种;那么5号不动 \\(1 \\times 4 = 4\\) 种.\n\n(2)移动5号和 \\(1 \\sim 4\\) 号中相邻的2个,不妨设同时移动1、2、5号\n\n如下中两图,2号不能移到3号所在列,于是2号能上移或下移,所以 \\(2 \\times 4 = 8\\) 种.\n\n(3)移动5号和 \\(1 \\sim 4\\) 号中相对的2个,不妨设同时移动1、3、5号\n\n1号只能右移,3号只能左移,第3列至少2个小球,矛盾!\n\n综上所述, \\(4 + 8 = 12\\)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_003/images/0.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_003/images/1.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_003/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_003/images/3.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 甲班的小迎同学和乙班的小春同学在谈论刚刚过去的初试成绩.\n\n小迎说: \"你知道吗? 这次考试咱们两个班的总分是一样的!\"\n\n小春说: \"当然知道, 而且我还算了下, 如果我是你们班的学生, 两个班的平均分就一样啦!\"\n\n小迎说: \"这么巧? 我也算了下, 如果我是你们班的学生, 两个班的人数就一样啦!\"\n\n这时老师走过来说: \"小迎同学, 你看看你, 比你们 2 个班的总平均分低了整整 12 分; 你看看小春同学, 比你高了整整 54 分!\"\n\n如果他们的话都是正确的, 那么小迎考了 ______ 分.",
+      "answer_text": "30",
+      "solution_text": "设2个班的总平均分为1份;\n\n考察两班总分,小春过甲班前,两班总分一样;小春过甲班后,甲班总分就比乙班多小春分数的2倍;另一方面,小春过甲班后,两班平均分一样,都为1份,而这时甲班比乙班多4人,从而甲班总分就比乙班多4份;所以小春分数为 \\(4 \\div 2 = 2\\) 份,而1份为 \\((54 - 12) \\div (2 - 1) = 42\\) 分,所以小迎考了 \\(42 - 12 = 30\\) 分.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析泄露，适合出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json"
+        }
+      },
+      "text": "10. 甲班的小迎同学和乙班的小春同学在谈论刚刚过去的初试成绩.\n\n小迎说: \"你知道吗? 这次考试咱们两个班的总分是一样的!\"\n\n小春说: \"当然知道, 而且我还算了下, 如果我是你们班的学生, 两个班的平均分就一样啦!\"\n\n小迎说: \"这么巧? 我也算了下, 如果我是你们班的学生, 两个班的人数就一样啦!\"\n\n这时老师走过来说: \"小迎同学, 你看看你, 比你们 2 个班的总平均分低了整整 12 分; 你看看小春同学, 比你高了整整 54 分!\"\n\n如果他们的话都是正确的, 那么小迎考了 ______ 分.",
+      "answer": "30",
+      "solution": "设2个班的总平均分为1份;\n\n考察两班总分,小春过甲班前,两班总分一样;小春过甲班后,甲班总分就比乙班多小春分数的2倍;另一方面,小春过甲班后,两班平均分一样,都为1份,而这时甲班比乙班多4人,从而甲班总分就比乙班多4份;所以小春分数为 \\(4 \\div 2 = 2\\) 份,而1份为 \\((54 - 12) \\div (2 - 1) = 42\\) 分,所以小迎考了 \\(42 - 12 = 30\\) 分."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 如图, 编号为 \\(1 \\sim 9\\) 的 9 位同学顺时针站成一圈, 每位同学持有一张卡片, 卡片上写有一个 \\(1 \\sim 9\\) 的数字且互不相同. 每位同学计算自己以及相邻的两位同学所持的共三张卡片上数字的乘积, 恰有 5 位同学得到乘积的个位数字与自己的编号相同. 如果 6 号同学所持卡片上数字为 5, 且 1、2、3 号同学所持卡片上的数字依次为 \\(A\\) 、 \\(B\\) 、 \\(C\\) , 那么三位数 \\(ABC\\) 是 ______. (卡片不能倒过来看)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": "314",
+      "solution_text": "乘积要是奇数,需自己以及与自己相邻同学的三张卡片上数字全是奇数,由于 \\(1\\sim 9\\) 中奇数只有5个,且图中没有3位编号为奇数的同学相邻,所以编号为奇数的同学中至多有2位乘积的个位数字等于自己的编号;恰有5位同学得到乘积的个位数字与自己的编号相同,所以至少3位编号为偶数的同学得到乘积的个位数字与自己的编号相同;6号卡片为5,则乘积个位为0或5,所以6号乘积个位数字不是6;所以编号为2、4、8的同学乘积个位数字与自己的编号相同;从而5号乘积个位是0,不是5;除了6号所持卡片上数字为5,其它卡片上数字中只有4个奇数,要有2位编号为奇数的同学得到乘积的个位数字与自己的编号相同,只能是1、9号乘积个位数字与编号相同;\n\n所以,编号为1、2、4、8、9的同学所得乘积个位数字与自己的编号相同.\n\n1号乘积个位是1,则1、2、9号卡片是1、3、7,从而8号卡片是9;\n\n9号乘积个位是9,则1、8、9号卡片是3、7、9,从而2号卡片是1;\n\n若1号卡片7,9号卡片3;如下左图,7号卡片4,3号卡片8,那4号乘积 \\(2\\times 6\\times 8\\) 个位6,矛盾.\n\n若1号卡片3,9号卡片7;如下右图,7号卡片6,3号卡片4,那4号乘积 \\(2\\times 4\\times 8\\) 个位4,满足!\n\n满足要求的有下右图中两种方案;但1、2、3号卡片是确定的,三位数 \\(ABC\\) 是314.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_004/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛A卷（试卷版）.json"
+        }
+      },
+      "text": "11. 如图, 编号为 \\(1 \\sim 9\\) 的 9 位同学顺时针站成一圈, 每位同学持有一张卡片, 卡片上写有一个 \\(1 \\sim 9\\) 的数字且互不相同. 每位同学计算自己以及相邻的两位同学所持的共三张卡片上数字的乘积, 恰有 5 位同学得到乘积的个位数字与自己的编号相同. 如果 6 号同学所持卡片上数字为 5, 且 1、2、3 号同学所持卡片上的数字依次为 \\(A\\) 、 \\(B\\) 、 \\(C\\) , 那么三位数 \\(ABC\\) 是 ______. (卡片不能倒过来看)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer": "314",
+      "solution": "乘积要是奇数,需自己以及与自己相邻同学的三张卡片上数字全是奇数,由于 \\(1\\sim 9\\) 中奇数只有5个,且图中没有3位编号为奇数的同学相邻,所以编号为奇数的同学中至多有2位乘积的个位数字等于自己的编号;恰有5位同学得到乘积的个位数字与自己的编号相同,所以至少3位编号为偶数的同学得到乘积的个位数字与自己的编号相同;6号卡片为5,则乘积个位为0或5,所以6号乘积个位数字不是6;所以编号为2、4、8的同学乘积个位数字与自己的编号相同;从而5号乘积个位是0,不是5;除了6号所持卡片上数字为5,其它卡片上数字中只有4个奇数,要有2位编号为奇数的同学得到乘积的个位数字与自己的编号相同,只能是1、9号乘积个位数字与编号相同;\n\n所以,编号为1、2、4、8、9的同学所得乘积个位数字与自己的编号相同.\n\n1号乘积个位是1,则1、2、9号卡片是1、3、7,从而8号卡片是9;\n\n9号乘积个位是9,则1、8、9号卡片是3、7、9,从而2号卡片是1;\n\n若1号卡片7,9号卡片3;如下左图,7号卡片4,3号卡片8,那4号乘积 \\(2\\times 6\\times 8\\) 个位6,矛盾.\n\n若1号卡片3,9号卡片7;如下右图,7号卡片6,3号卡片4,那4号乘积 \\(2\\times 4\\times 8\\) 个位4,满足!\n\n满足要求的有下右图中两种方案;但1、2、3号卡片是确定的,三位数 \\(ABC\\) 是314.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛A卷（解析版）/pages/page_004/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(5 \\times 432 \\times 1 - 98 - 7 \\times 6\\) 的计算结果为",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#1",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
+        }
+      },
+      "text": "1. 算式 \\(5 \\times 432 \\times 1 - 98 - 7 \\times 6\\) 的计算结果为",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 一场演出共有10个节目，每个节目长3分钟．如果相邻节目之间相隔1分钟，那么第一个节目开始到最后一个节目结束共需 分钟.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含独立题干，但直接给出答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#2",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
+        }
+      },
+      "text": "2. 一场演出共有10个节目，每个节目长3分钟．如果相邻节目之间相隔1分钟，那么第一个节目开始到最后一个节目结束共需 分钟.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 胡老师将2020年的目标写成右边的数字谜．其中，相同的汉字代表相同的数字，不同的汉字代表不同的数字．那么，“长胖十斤”代表的四位数是\n\n吃 吃 吃 吃 吃 吃 吃 吃 吃 长胖十斤",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（详解版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含数学竞赛题目、答案和解析，答案直接泄露，风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#3",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
+        }
+      },
+      "text": "3. 胡老师将2020年的目标写成右边的数字谜．其中，相同的汉字代表相同的数字，不同的汉字代表不同的数字．那么，“长胖十斤”代表的四位数是\n\n吃 吃 吃 吃 吃 吃 吃 吃 吃 长胖十斤",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 一个由2020个数组成的数列中，任意相邻5个数的和都相等，任意相邻7个数的和也都相等．如果第1个数是6，那么这2020个数的和是\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案和完整解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#4",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
+        }
+      },
+      "text": "4. 一个由2020个数组成的数列中，任意相邻5个数的和都相等，任意相邻7个数的和也都相等．如果第1个数是6，那么这2020个数的和是\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 如图，大正方形中摆放有 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三个阴影正方形．如果空白部分的周长和比阴影部分的周长和多120厘米，那么正方形 \\(B\\) 的面积是 平方厘米.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但直接包含答案和解析，存在泄露风险，适合仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#1#5",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
+        }
+      },
+      "text": "5. 如图，大正方形中摆放有 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三个阴影正方形．如果空白部分的周长和比阴影部分的周长和多120厘米，那么正方形 \\(B\\) 的面积是 平方厘米.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 某次联欢会有男、女同学共85名参加．第一个到会的女同学与所有男同学都握过手；第二个到会的女同学只差1个男同学没有握过手；第三个到会的女同学只差2个男同学没有握过手......依此类推．结果发现，最后一个到会的女同学握过手的男同学人数是她没握过手的男同学人数的2倍．那么，参加联欢会的男同学共有 名.",
+      "answer_text": "63",
+      "solution_text": "根据最后一个女生的握手情况可知:女生人数 \\(=\\) 没握过的男生人数 \\(+1\\) .将该女生没握过的男生人数看作1倍,则女生人数是1倍多1人,男生的总人数是3倍.所以男生有 \\((85 - 1)\\div (3 + 1)\\times 3 = 63\\) 人.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，没有答案或解析泄露，适合作为独立出题使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "6. 某次联欢会有男、女同学共85名参加．第一个到会的女同学与所有男同学都握过手；第二个到会的女同学只差1个男同学没有握过手；第三个到会的女同学只差2个男同学没有握过手......依此类推．结果发现，最后一个到会的女同学握过手的男同学人数是她没握过手的男同学人数的2倍．那么，参加联欢会的男同学共有 名.",
+      "answer": "63",
+      "solution": "根据最后一个女生的握手情况可知:女生人数 \\(=\\) 没握过的男生人数 \\(+1\\) .将该女生没握过的男生人数看作1倍,则女生人数是1倍多1人,男生的总人数是3倍.所以男生有 \\((85 - 1)\\div (3 + 1)\\times 3 = 63\\) 人."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "7. 陈老师将分别写有 \\(1 \\sim 9\\) 的九张卡片发给甲、乙、丙、丁四个小朋友。每人得到两张, 且四人都只能看见自己手中卡片上的数字。看完各自卡片上的数字后, 甲说: \"我手中的两个数相乘, 积的个位数字是 0.\" 乙说: \"我手中的两个数相减, 差的个位数字是 3.\" 丙说: \"我手中的两个数相加, 和的个位数字是 6.\" 丁说: \"我手中的两个数相除, 商的个位数字是 9.\" 如果四个小朋友聪明且诚实, 那么留在陈老师手中的卡片上所写的数字是 ______.",
+      "answer_text": "7",
+      "solution_text": "依题意知甲手中的数是5与一个偶数;丁手中的数只能是9与1;此时丙手中的两数之和不可能是16,只能是6,所以丙手中的数是2与4;此时剩下3、6、7、8这四个数,乙手中的数只能为6与3;甲手中的偶数只能是8. 所以,陈老师手中的卡片上的数是7.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，不适用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#2#7",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
+        }
+      },
+      "text": "7. 陈老师将分别写有 \\(1 \\sim 9\\) 的九张卡片发给甲、乙、丙、丁四个小朋友。每人得到两张, 且四人都只能看见自己手中卡片上的数字。看完各自卡片上的数字后, 甲说: \"我手中的两个数相乘, 积的个位数字是 0.\" 乙说: \"我手中的两个数相减, 差的个位数字是 3.\" 丙说: \"我手中的两个数相加, 和的个位数字是 6.\" 丁说: \"我手中的两个数相除, 商的个位数字是 9.\" 如果四个小朋友聪明且诚实, 那么留在陈老师手中的卡片上所写的数字是 ______.",
+      "answer": "7",
+      "solution": "依题意知甲手中的数是5与一个偶数;丁手中的数只能是9与1;此时丙手中的两数之和不可能是16,只能是6,所以丙手中的数是2与4;此时剩下3、6、7、8这四个数,乙手中的数只能为6与3;甲手中的偶数只能是8. 所以,陈老师手中的卡片上的数是7."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 如图, 一个 \\(2 \\times 2 \\times 2\\) 的正方体六个面已经被染成了不同的六种颜色。现将其分成 4 个 \\(2 \\times 1 \\times 1\\) 的小长方体, 共有 ______ 种不同分法.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer_text": "9",
+      "solution_text": "考虑前排右上角小正方体,有如下左图3种分法,据对称性,3种一样;而对于下左图第1种分法,其余3个 \\(2\\times 1\\times 1\\) 的小长方体,有下右图3种分法;所以, \\(3\\times 3 = 9\\)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（详解版）/pages/page_002/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（详解版）/pages/page_002/images/3.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目独立完整但包含答案和解析，风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#2#8",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
+        }
+      },
+      "text": "8. 如图, 一个 \\(2 \\times 2 \\times 2\\) 的正方体六个面已经被染成了不同的六种颜色。现将其分成 4 个 \\(2 \\times 1 \\times 1\\) 的小长方体, 共有 ______ 种不同分法.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer": "9",
+      "solution": "考虑前排右上角小正方体,有如下左图3种分法,据对称性,3种一样;而对于下左图第1种分法,其余3个 \\(2\\times 1\\times 1\\) 的小长方体,有下右图3种分法;所以, \\(3\\times 3 = 9\\)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（详解版）/pages/page_002/images/2.jpg)\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（详解版）/pages/page_002/images/3.jpg)\n\n## 三. 填空题III(每小题12分,共48分)"
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 四位数 2020 中只包含 0 和 2 两种不同数字, 我们将这种恰含有 2 种不同数字的四位数称为 \"双喜数\". 那么, 将所有的 \"双喜数\" 从小到大排列, 第 188 个是 ______.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题定义，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json#2#9",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（详解版）.json"
+        }
+      },
+      "text": "9. 四位数 2020 中只包含 0 和 2 两种不同数字, 我们将这种恰含有 2 种不同数字的四位数称为 \"双喜数\". 那么, 将所有的 \"双喜数\" 从小到大排列, 第 188 个是 ______.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 一群三眼巨人、暴龙和冰鲁怪正在大混战. 已知, 三眼巨人有 3 只眼睛, 2 条腿, 没有尾巴; 暴龙有 2 只眼睛, 4 条腿, 1 条尾巴; 冰鲁怪有 2 只眼睛, 2 条腿, 1 条尾巴. 战场上共有 200 只眼睛, 188 条腿, 40 条尾巴. 那么, 战场上有 ______ 个冰鲁怪.",
+      "answer_text": "26",
+      "solution_text": "无论是哪一种生物,眼睛和尾巴相加都是3个.所有眼睛和尾巴相加一共有 \\(200 + 40 = 240\\) 条,所以战场上共有 \\(240 \\div 3 = 80\\) 个生物.\n\n三眼巨人与冰鲁怪都是2条腿,所以暴龙有 \\((188 - 2 \\times 80) \\div (4 - 2) = 14\\) 只.\n\n因为有40条尾巴,所以暴龙与冰鲁怪共有 \\(40 \\div 1 = 40\\) 个,于是冰鲁怪有 \\(40 - 14 = 26\\) 个.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "10. 一群三眼巨人、暴龙和冰鲁怪正在大混战. 已知, 三眼巨人有 3 只眼睛, 2 条腿, 没有尾巴; 暴龙有 2 只眼睛, 4 条腿, 1 条尾巴; 冰鲁怪有 2 只眼睛, 2 条腿, 1 条尾巴. 战场上共有 200 只眼睛, 188 条腿, 40 条尾巴. 那么, 战场上有 ______ 个冰鲁怪.",
+      "answer": "26",
+      "solution": "无论是哪一种生物,眼睛和尾巴相加都是3个.所有眼睛和尾巴相加一共有 \\(200 + 40 = 240\\) 条,所以战场上共有 \\(240 \\div 3 = 80\\) 个生物.\n\n三眼巨人与冰鲁怪都是2条腿,所以暴龙有 \\((188 - 2 \\times 80) \\div (4 - 2) = 14\\) 只.\n\n因为有40条尾巴,所以暴龙与冰鲁怪共有 \\(40 \\div 1 = 40\\) 个,于是冰鲁怪有 \\(40 - 14 = 26\\) 个."
+    },
+    {
+      "grade": 3,
+      "year": 2020,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 如图在 \\(5 \\times 5\\) 的方格中放置了编号为 \\(1 \\sim 5\\) 的 5 个小球, 没有任何两个小球在同一行或同一列; 如果同时移动其中 3 个小球到相邻格子 (有公共点的格子) 里, 移动完后依然没有任何两个小球在同一行或同一列, 那么共有 ______ 种移动的方法.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "13",
+      "solution_text": "无论怎样移动,五个球的行数之和与列数之和都不变,总是15. 所以三个球同时移动时,必有一个斜向移动,另外两个球一个纵向移动,一个水平移动.\n\n又因为2、3、4、5号小球关于点O中心对称,所以我们按是否移动1号小球分类.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（详解版）/pages/page_003/images/1.jpg)\n\n当移动包括1号的三个小球时,有如下情况:\n\n当1号球向右移动一格,则第1列空出,5号球必然斜向移动至第1列,如此才能影响到另一个球移动,于是有如下2种情况:\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（详解版）/pages/page_003/images/2.jpg)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2020年/ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有出现答案或解析信息，适合作为考试题目。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/三年级/2020年/2020数学花园探秘笔试小中年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "11. 如图在 \\(5 \\times 5\\) 的方格中放置了编号为 \\(1 \\sim 5\\) 的 5 个小球, 没有任何两个小球在同一行或同一列; 如果同时移动其中 3 个小球到相邻格子 (有公共点的格子) 里, 移动完后依然没有任何两个小球在同一行或同一列, 那么共有 ______ 种移动的方法.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "13",
+      "solution": "无论怎样移动,五个球的行数之和与列数之和都不变,总是15. 所以三个球同时移动时,必有一个斜向移动,另外两个球一个纵向移动,一个水平移动.\n\n又因为2、3、4、5号小球关于点O中心对称,所以我们按是否移动1号小球分类.\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（详解版）/pages/page_003/images/1.jpg)\n\n当移动包括1号的三个小球时,有如下情况:\n\n当1号球向右移动一格,则第1列空出,5号球必然斜向移动至第1列,如此才能影响到另一个球移动,于是有如下2种情况:\n\n![](ocr_debug/2020数学花园探秘笔试小中年级决赛C卷（详解版）/pages/page_003/images/2.jpg)"
+    }
+  ]
+}

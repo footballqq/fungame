@@ -1,0 +1,587 @@
+{
+  "grade": 6,
+  "year": 2011,
+  "total_problems": 15,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "1. (8分)今天是2010年12月19日,欢迎同学们参加北京第27届\"数学解题能力展示\"活动.那么, \\(\\frac{2010}{1000} +\\frac{1219}{100} +\\frac{27}{10}\\) 计算结果的整数部分是_16_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案标记和完整解析，存在高风险答案泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#1",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "1. (8分)今天是2010年12月19日,欢迎同学们参加北京第27届\"数学解题能力展示\"活动.那么, \\(\\frac{2010}{1000} +\\frac{1219}{100} +\\frac{27}{10}\\) 计算结果的整数部分是_16_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "2. (8分)某校有2400名学生,每名学生每天上5节课,每位教师每天教4节课,每节课是一位教师给30名学生讲授,那么该校共有教师_100_位.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接显示答案，且有完整解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#2",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "2. (8分)某校有2400名学生,每名学生每天上5节课,每位教师每天教4节课,每节课是一位教师给30名学生讲授,那么该校共有教师_100_位.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "3. (8分)张老师带着一些钱去买签字笔,到商店后发现这种笔降价了 \\(25\\%\\) ,结果他带的钱恰好可以比原来多买25支.那么降价前这些钱可以买签字笔_75_支.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含答案和完整解析，泄露风险高，建议仅作为练习材料。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#3",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "3. (8分)张老师带着一些钱去买签字笔,到商店后发现这种笔降价了 \\(25\\%\\) ,结果他带的钱恰好可以比原来多买25支.那么降价前这些钱可以买签字笔_75_支.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)如图为某婴幼儿商品的商标,由两颗心组成,每颗心都是由一个正方形和两个半圆拼成.若两个正方形的边长分别为 \\(40mm\\) , \\(20mm\\) ,那么,阴影图形的面积是 \\(mm^2\\) .(π取3.14)\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，描述清晰，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#4",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "4. (8分)如图为某婴幼儿商品的商标,由两颗心组成,每颗心都是由一个正方形和两个半圆拼成.若两个正方形的边长分别为 \\(40mm\\) , \\(20mm\\) ,那么,阴影图形的面积是 \\(mm^2\\) .(π取3.14)\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. (8分)用4.02乘以一个两位整数,得到的乘积是一个整数,那么这个乘积的10倍是\n\n## 二、填空题(每题10分,共50分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个数学题干，描述了一个乘法问题，没有包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#5",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "5. (8分)用4.02乘以一个两位整数,得到的乘积是一个整数,那么这个乘积的10倍是\n\n## 二、填空题(每题10分,共50分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "6. (10分)某支球队现在的胜率为 \\(45\\%\\) ,接下来的8场比赛中若有6场获胜,则胜率将提高 \\(50\\%\\) .那么现在这支球队共取得了_18_场比赛的胜利.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案'18'和解答过程开头，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#6",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "6. (10分)某支球队现在的胜率为 \\(45\\%\\) ,接下来的8场比赛中若有6场获胜,则胜率将提高 \\(50\\%\\) .那么现在这支球队共取得了_18_场比赛的胜利.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. (10分)定义运算: \\(a\\bullet b = \\frac{a\\times b}{a + b}\\) ,算式 \\(\\frac{2010\\bullet 2010\\bullet 2010\\bullet \\cdots\\bullet 2010\\bullet 2010\\bullet}{2010\\bullet 2010\\bullet 2010\\bullet 2010\\bullet 2010\\bullet}\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个定义新运算的数学题，题干完整但无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#7",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "7. (10分)定义运算: \\(a\\bullet b = \\frac{a\\times b}{a + b}\\) ,算式 \\(\\frac{2010\\bullet 2010\\bullet 2010\\bullet \\cdots\\bullet 2010\\bullet 2010\\bullet}{2010\\bullet 2010\\bullet 2010\\bullet 2010\\bullet 2010\\bullet}\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "8. (10分)在 \\(\\triangle ABC\\) 中, \\(BD = DE = EC\\) , \\(CF\\) : \\(AC = 1\\) :3.若 \\(\\triangle ADH\\) 的面积比 \\(\\triangle HEF\\) 的面积多24平方厘米,求三角形 \\(ABC\\) 的面积是多少平方厘米?\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_006/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的数学竞赛题干，没有答案或解析信息，可独立用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#8",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "8. (10分)在 \\(\\triangle ABC\\) 中, \\(BD = DE = EC\\) , \\(CF\\) : \\(AC = 1\\) :3.若 \\(\\triangle ADH\\) 的面积比 \\(\\triangle HEF\\) 的面积多24平方厘米,求三角形 \\(ABC\\) 的面积是多少平方厘米?\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. (10分)一个正整数,它的2倍的约数恰好比它自己的约数多2个,它的3倍的约数恰好比它自己的约数多3个.那么,这个正整数是________.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析泄露，适合作为考试题目。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#9",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "9. (10分)一个正整数,它的2倍的约数恰好比它自己的约数多2个,它的3倍的约数恰好比它自己的约数多3个.那么,这个正整数是________.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. (10分)如图,一个 \\(6 \\times 6\\) 的方格表,现将数字 \\(1 \\sim 6\\) 填入空白方格中,使得每一行、每一列数字 \\(1 \\sim 6\\) 都恰好出现一次;图中已经填了一些数字.那么剩余空格满足要求的填写方法一共有________种.\n\n<table><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td>5</td></tr><tr><td>3</td><td></td><td></td><td></td><td></td><td>4</td></tr><tr><td>4</td><td></td><td></td><td></td><td></td><td>3</td></tr><tr><td>5</td><td></td><td></td><td></td><td></td><td>2</td></tr><tr><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr></table>\n\n## 三、填空题(每题12分,共60分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目是一个完整的数学竞赛填空题，没有答案或解析泄露，风险低。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#10",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "10. (10分)如图,一个 \\(6 \\times 6\\) 的方格表,现将数字 \\(1 \\sim 6\\) 填入空白方格中,使得每一行、每一列数字 \\(1 \\sim 6\\) 都恰好出现一次;图中已经填了一些数字.那么剩余空格满足要求的填写方法一共有________种.\n\n<table><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td>5</td></tr><tr><td>3</td><td></td><td></td><td></td><td></td><td>4</td></tr><tr><td>4</td><td></td><td></td><td></td><td></td><td>3</td></tr><tr><td>5</td><td></td><td></td><td></td><td></td><td>2</td></tr><tr><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr></table>\n\n## 三、填空题(每题12分,共60分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. (12分)有一个圆柱体,高是底面半径的3倍.将它如图分成大、小两个圆柱体,大圆柱体的表面积是小圆柱体的3倍.那么,大圆柱体的体积是小圆柱体的________倍.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_008/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，无答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#11",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "11. (12分)有一个圆柱体,高是底面半径的3倍.将它如图分成大、小两个圆柱体,大圆柱体的表面积是小圆柱体的3倍.那么,大圆柱体的体积是小圆柱体的________倍.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "12. (12分)某岛国的一家银行每天9:00\\~17:00营业.正常情况下,每天9:00准备现金50万元,假设每小时的提款量都一样,每小时的存款量也都一样,到17:00下班时有现金60万元.如果每小时提款量是正常情况的4倍的话,14:00银行就没现金了.如果每小时提款量是正常情况的10倍,而存款量减少到正常情况的一半的话,要使17:00下班时银行还有现金50万元,那么9:00开始营业时需要准备现金多少万元?",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#12",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "12. (12分)某岛国的一家银行每天9:00\\~17:00营业.正常情况下,每天9:00准备现金50万元,假设每小时的提款量都一样,每小时的存款量也都一样,到17:00下班时有现金60万元.如果每小时提款量是正常情况的4倍的话,14:00银行就没现金了.如果每小时提款量是正常情况的10倍,而存款量减少到正常情况的一半的话,要使17:00下班时银行还有现金50万元,那么9:00开始营业时需要准备现金多少万元?",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 9,
+      "question_text": "13. (12分)40根长度相同的火柴棍摆成如图,如果将每根火柴棍看作长度为1的线段,那么其中可以数出30个正方形来.拿走5根火柴棍后, \\(A\\) , \\(B\\) , \\(C\\) , \\(D\\) , \\(E\\) 五人分别作了如下的判断:\n\n\\(A\\) : \\(^{\\prime}1\\times 1\\) 的正方形还剩下5个.\"\n\n\\(B\\) : \\(^{\\prime}2\\times 2\\) 的正方形还剩下3个.\"\n\n\\(C\\) : \\(^{\\prime}3\\times 3\\) 的正方形全部保留下来了.\"\n\n\\(D\\) : \"拿走的火柴棍所在直线各不相同.\"\n\n\\(E\\) : \"拿走的火柴棍中有4根在同一直线上.\"\n\n已知这5人中恰有2人的判断错了,那么剩下的图形中还能数出_14_个正方形.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_009/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_009/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案和部分解析，存在泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#9#13",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "13. (12分)40根长度相同的火柴棍摆成如图,如果将每根火柴棍看作长度为1的线段,那么其中可以数出30个正方形来.拿走5根火柴棍后, \\(A\\) , \\(B\\) , \\(C\\) , \\(D\\) , \\(E\\) 五人分别作了如下的判断:\n\n\\(A\\) : \\(^{\\prime}1\\times 1\\) 的正方形还剩下5个.\"\n\n\\(B\\) : \\(^{\\prime}2\\times 2\\) 的正方形还剩下3个.\"\n\n\\(C\\) : \\(^{\\prime}3\\times 3\\) 的正方形全部保留下来了.\"\n\n\\(D\\) : \"拿走的火柴棍所在直线各不相同.\"\n\n\\(E\\) : \"拿走的火柴棍中有4根在同一直线上.\"\n\n已知这5人中恰有2人的判断错了,那么剩下的图形中还能数出_14_个正方形.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_009/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 10,
+      "question_text": "14. (12分)甲、乙、丙三人同时从 \\(A\\) 出发去 \\(B\\) ,甲、乙到 \\(B\\) 后调头回 \\(A\\) ,并且调头后速度减少到各自原来速度的一半.甲最先调头,调头后与乙在 \\(C\\) 迎面相遇,此时丙已行2010米;甲又行一段后与丙在 \\(AB\\) 中点 \\(D\\) 迎面相遇;乙调头后也在 \\(C\\) 与丙迎面相遇.那么, \\(AB\\) 间路程是_5360_米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案和解答过程，存在答案泄露，不宜用于考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#10#14",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "14. (12分)甲、乙、丙三人同时从 \\(A\\) 出发去 \\(B\\) ,甲、乙到 \\(B\\) 后调头回 \\(A\\) ,并且调头后速度减少到各自原来速度的一半.甲最先调头,调头后与乙在 \\(C\\) 迎面相遇,此时丙已行2010米;甲又行一段后与丙在 \\(AB\\) 中点 \\(D\\) 迎面相遇;乙调头后也在 \\(C\\) 与丙迎面相遇.那么, \\(AB\\) 间路程是_5360_米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2011,
+      "number": 15,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 11,
+      "question_text": "15. (12分)已知算式 \\(\\overrightarrow{A B C} - \\overrightarrow{D E} +\\frac{\\overrightarrow{F}^{2}}{\\overrightarrow{G H}} - \\frac{2010}{I} = 12.19\\) 中的 \\(A\\) , \\(B\\) , \\(C\\) , \\(D\\) , \\(E\\) , \\(F\\) , \\(G\\) , \\(H\\) , \\(I\\) 表示 \\(1\\sim 9\\) 中各不相同的数字.那么,五位数 \\(\\overrightarrow{A B C D E} = \\_ 34179\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "heuristic-only",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#11#15",
+          "json_path": "source_pdf/六年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "15. (12分)已知算式 \\(\\overrightarrow{A B C} - \\overrightarrow{D E} +\\frac{\\overrightarrow{F}^{2}}{\\overrightarrow{G H}} - \\frac{2010}{I} = 12.19\\) 中的 \\(A\\) , \\(B\\) , \\(C\\) , \\(D\\) , \\(E\\) , \\(F\\) , \\(G\\) , \\(H\\) , \\(I\\) 表示 \\(1\\sim 9\\) 中各不相同的数字.那么,五位数 \\(\\overrightarrow{A B C D E} = \\_ 34179\\) .",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

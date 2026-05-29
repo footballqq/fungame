@@ -1,0 +1,2133 @@
+{
+  "grade": 6,
+  "year": 2016,
+  "total_problems": 55,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "1. (8分)算式 \\(\\frac{2015 \\times 2016}{1 + \\frac{1}{2016} + \\frac{2}{2016} + \\frac{3}{2016} + \\dots + \\frac{2015}{2015 + \\frac{2015}{2016}}}\\) 的计算结果是_2017.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出答案2017，并包含完整解析，存在泄露风险，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#4#1",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "1. (8分)算式 \\(\\frac{2015 \\times 2016}{1 + \\frac{1}{2016} + \\frac{2}{2016} + \\frac{3}{2016} + \\dots + \\frac{2015}{2015 + \\frac{2015}{2016}}}\\) 的计算结果是_2017.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "2. (8分)销售一种商品,利润率为 \\(25\\%\\) ,如果想把利润率提高到 \\(40\\%\\) ,那么售价应该提高 \\(12\\%\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解答过程，答案直接给出，适用于练习但不能用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#4#2",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "2. (8分)销售一种商品,利润率为 \\(25\\%\\) ,如果想把利润率提高到 \\(40\\%\\) ,那么售价应该提高 \\(12\\%\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "3. (8分)小明发现今年的年份2016是一个非常好的数,它既是6的倍数,又是8的倍数,还是9的倍数,那么下一个既是6的倍数,又是8的倍数,还是9的倍数的年份是_2088年.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案2088年，且有解答开头，存在高风险泄露，适合仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#4#3",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "3. (8分)小明发现今年的年份2016是一个非常好的数,它既是6的倍数,又是8的倍数,还是9的倍数,那么下一个既是6的倍数,又是8的倍数,还是9的倍数的年份是_2088年.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)在电影《大圣归来》中,有一幕孙悟空大战山妖,有部分山妖被打倒,打倒的比站着的多三分之一;过了一会了再有2个山妖打倒,但是又站起来了10个山妖,此时站着的比打倒的多四分之一,那么现在站着的山妖有 \\(\\_\\) 个。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整描述数学问题，无答案或解析泄露，适合作为独立考试题目。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#1#4",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "4. (8分)在电影《大圣归来》中,有一幕孙悟空大战山妖,有部分山妖被打倒,打倒的比站着的多三分之一;过了一会了再有2个山妖打倒,但是又站起来了10个山妖,此时站着的比打倒的多四分之一,那么现在站着的山妖有 \\(\\_\\) 个。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. (8分)在空格内填入1-6,使得每行和每列的数字都不重复,图中相同符号所占的两格数字组合相同,数字顺序不确定,那么最后一行前五个数字按从左到右的顺序组成的五位数是 \\(\\_\\) 。\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/images/0.jpg)\n\n## 二、填空题(共5小题,每小题10分,满分50分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为标准数学竞赛填空题，描述完整，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#1#5",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "5. (8分)在空格内填入1-6,使得每行和每列的数字都不重复,图中相同符号所占的两格数字组合相同,数字顺序不确定,那么最后一行前五个数字按从左到右的顺序组成的五位数是 \\(\\_\\) 。\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/images/0.jpg)\n\n## 二、填空题(共5小题,每小题10分,满分50分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. (10分)请将0-9分别填入下面算式的方框中,每个数字恰用一次,或已将\"1\"、\"3\"、\"0\"填入,若等式成立,那么等式中唯一的四位被减数是 \\(\\_\\) 。\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_006/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#1#6",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "6. (10分)请将0-9分别填入下面算式的方框中,每个数字恰用一次,或已将\"1\"、\"3\"、\"0\"填入,若等式成立,那么等式中唯一的四位被减数是 \\(\\_\\) 。\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. (10分)2016名同学排成一排,从左到右依次按照1,2…, \\(n\\) 报数( \\(n \\geq 2\\) ),若第2016名同学所报的数恰是 \\(n\\) ,则给这轮中所有报 \\(n\\) 的同学发放一件新年礼物。那么无论 \\(n\\) 取何值,有 \\(\\_\\) 名同学将不可能得到新年礼物。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个独立的数学竞赛题干，未包含答案或解析信息，无泄露风险，适合保留用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#1#7",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "7. (10分)2016名同学排成一排,从左到右依次按照1,2…, \\(n\\) 报数( \\(n \\geq 2\\) ),若第2016名同学所报的数恰是 \\(n\\) ,则给这轮中所有报 \\(n\\) 的同学发放一件新年礼物。那么无论 \\(n\\) 取何值,有 \\(\\_\\) 名同学将不可能得到新年礼物。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "8. (10分)如图,正十二边形的面积是2016平方厘米,那么图中阴影部分的面积是_672平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_007/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、答案和解析，答案和解析直接泄露，因此不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#7#8",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "8. (10分)如图,正十二边形的面积是2016平方厘米,那么图中阴影部分的面积是_672平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_007/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. (10分)老师用0至9这十个数字组成五个两位数,每个数字恰用一次;然后将这五个两位数分别给了 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 这五名聪明且诚实的同学,每名同学只能看见自己的两位数,并依次发生如下对话:\n\n\\(A\\) 说:\"我的数最小,而且是个质数.\"\n\n\\(B\\) 说:\"我的数是一个完全平方数.\"\n\n\\(C\\) 说:\"我的数第二小,恰有6个因数.\"\n\n\\(D\\) 说:\"我的数不是最大的,我已经知道 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三人手中的其中两个数是多少了.\"\n\n\\(E\\) 说:\"我的数是某人的数的3倍.\"\n\n那么这五个两位数之和是\n\n## 三、填空题(共4小题,每小题12分,满分48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干描述完整，为数学推理问题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#2#10",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "10. (10分)老师用0至9这十个数字组成五个两位数,每个数字恰用一次;然后将这五个两位数分别给了 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 这五名聪明且诚实的同学,每名同学只能看见自己的两位数,并依次发生如下对话:\n\n\\(A\\) 说:\"我的数最小,而且是个质数.\"\n\n\\(B\\) 说:\"我的数是一个完全平方数.\"\n\n\\(C\\) 说:\"我的数第二小,恰有6个因数.\"\n\n\\(D\\) 说:\"我的数不是最大的,我已经知道 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三人手中的其中两个数是多少了.\"\n\n\\(E\\) 说:\"我的数是某人的数的3倍.\"\n\n那么这五个两位数之和是\n\n## 三、填空题(共4小题,每小题12分,满分48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 9,
+      "question_text": "11. (12分)如图,直角三角形 \\(ABC\\) 中, \\(AB\\) 的长度是12厘米, \\(AC\\) 的长度是24厘米, \\(D\\) 、 \\(E\\) 分别在 \\(AC\\) 、 \\(BC\\) 上,那么等腰直角三角形 \\(BDE\\) 的面积是_80_平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_009/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_009/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目中直接包含答案和完整解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#9#11",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "11. (12分)如图,直角三角形 \\(ABC\\) 中, \\(AB\\) 的长度是12厘米, \\(AC\\) 的长度是24厘米, \\(D\\) 、 \\(E\\) 分别在 \\(AC\\) 、 \\(BC\\) 上,那么等腰直角三角形 \\(BDE\\) 的面积是_80_平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_009/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "12. (12分)已知 \\(S = \\frac{1}{9} +\\frac{1}{99} +\\frac{1}{999} +\\dots +\\frac{1}{1000} = \\frac{1}{9}\\) ,那么 \\(S\\) 的小数点后第2016位是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出S = 1/9，隐含答案，有高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#2#12",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "12. (12分)已知 \\(S = \\frac{1}{9} +\\frac{1}{99} +\\frac{1}{999} +\\dots +\\frac{1}{1000} = \\frac{1}{9}\\) ,那么 \\(S\\) 的小数点后第2016位是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 10,
+      "question_text": "13. (12分) \\(A\\) 、 \\(B\\) 两地间每隔5分钟有一辆班车发出,匀速对开,且所有班车的速度都相同;甲、乙两人同时从 \\(A\\) 、 \\(B\\) 两地出发,相向匀速而行;甲、乙出发后5分钟,两地同时开出第一辆班车;甲乙相遇时,甲被 \\(A\\) 地开出的第9辆班车追上,乙也恰被 \\(B\\) 地开出的第6辆班车追上;乙到 \\(A\\) 地时,恰被 \\(B\\) 地开出的第8辆班车追上,而此时甲离 \\(B\\) 地还有21千米.那么乙的速度是每小时_27_千米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案并附有完整解析，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#10#13",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "13. (12分) \\(A\\) 、 \\(B\\) 两地间每隔5分钟有一辆班车发出,匀速对开,且所有班车的速度都相同;甲、乙两人同时从 \\(A\\) 、 \\(B\\) 两地出发,相向匀速而行;甲、乙出发后5分钟,两地同时开出第一辆班车;甲乙相遇时,甲被 \\(A\\) 地开出的第9辆班车追上,乙也恰被 \\(B\\) 地开出的第6辆班车追上;乙到 \\(A\\) 地时,恰被 \\(B\\) 地开出的第8辆班车追上,而此时甲离 \\(B\\) 地还有21千米.那么乙的速度是每小时_27_千米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘决赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "14. （12分）将一个固定好的正方形分割成3个等腰三角形，有如图的4种不同方式：如果将一个固定好的正方形分割成4个等腰三角形，那么共有______种不同方式。\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_003/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_003/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_011/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学竞赛题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json#3#14",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）.json"
+        }
+      },
+      "text": "14. （12分）将一个固定好的正方形分割成3个等腰三角形，有如图的4种不同方式：如果将一个固定好的正方形分割成4个等腰三角形，那么共有______种不同方式。\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘决赛试卷（小高组a卷）/pages/page_003/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "1. (10分)算式: \\(2016 \\times \\frac{1}{1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\frac{1}{16} + \\frac{1}{32}}\\) 的计算结果是_1024.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案1024，且包含完整解答，无法作为独立题干出题，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#3#1",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "1. (10分)算式: \\(2016 \\times \\frac{1}{1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\frac{1}{16} + \\frac{1}{32}}\\) 的计算结果是_1024.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "2. (10分)彤彤和林林分别有若干张卡片:如果彤彤拿6张给林林,林林变为彤彤的3倍;如果林林给彤彤2张,则林林变为彤彤的2倍.那么,林林原有_66张.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干后直接给出答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级c卷）.json#3#2",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级c卷）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "2. (8分)蕾蕾家和菲菲家各养了一群羊.蕾蕾家的羊比菲菲家羊的3倍还多15只;菲菲家的羊比蕾蕾家的羊的 \\(\\frac{1}{3}\\) 要少_5_只.",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级c卷）.json#3#2",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级c卷）.json"
+        }
+      },
+      "text": "2. (10分)彤彤和林林分别有若干张卡片:如果彤彤拿6张给林林,林林变为彤彤的3倍;如果林林给彤彤2张,则林林变为彤彤的2倍.那么,林林原有_66张.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. (10分)如图,一道除法竖式中已经填出了\"2016\"和\"0\",那么被除数是\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，没有包含答案或解析内容。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#1#3",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "3. (10分)如图,一道除法竖式中已经填出了\"2016\"和\"0\",那么被除数是\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (10分)每场篮球比赛都分为四节,在某场比赛中,加西亚在前两节中投篮20次,命中12次,在第三节中,他一共投篮10次,但命中率有所下降,只有前两节总体命中率的 \\(50\\%\\) ,在最后一节中,命中率有所回升,比第三节提高了 \\(\\frac{1}{3}\\) ,最后全场命中率为 \\(46\\%\\) .那么加西亚在第四节一共投中 次.\n\n## 二、填空题(共7小题,每小题15分,满分60分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个独立的数学填空题题干，可出题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#1#4",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "4. (10分)每场篮球比赛都分为四节,在某场比赛中,加西亚在前两节中投篮20次,命中12次,在第三节中,他一共投篮10次,但命中率有所下降,只有前两节总体命中率的 \\(50\\%\\) ,在最后一节中,命中率有所回升,比第三节提高了 \\(\\frac{1}{3}\\) ,最后全场命中率为 \\(46\\%\\) .那么加西亚在第四节一共投中 次.\n\n## 二、填空题(共7小题,每小题15分,满分60分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. (15分)如图,正方形边长为80厘米, \\(O\\) 为正方形中心, \\(A\\) 为 \\(OB\\) 中点,在正方形内以 \\(A\\) 点为圆心, \\(OA\\) 为半径的圆,以 \\(B\\) 点为圆心, \\(OB\\) 为半径的圆与正方形的一边围成了一个特殊的图形.将这个图形绕 \\(O\\) 点顺时针旋转三次能够得到-个风车的形状.那么这个风车(阴影部分)的面积是 平方厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，描述明确，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#1#5",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "5. (15分)如图,正方形边长为80厘米, \\(O\\) 为正方形中心, \\(A\\) 为 \\(OB\\) 中点,在正方形内以 \\(A\\) 点为圆心, \\(OA\\) 为半径的圆,以 \\(B\\) 点为圆心, \\(OB\\) 为半径的圆与正方形的一边围成了一个特殊的图形.将这个图形绕 \\(O\\) 点顺时针旋转三次能够得到-个风车的形状.那么这个风车(阴影部分)的面积是 平方厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "6. (15分)对于自然数 \\(N\\) ,如果在 \\(1 \\sim 9\\) 这九个自然数中至少有六个数可是 \\(N\\) 的因数,则称 \\(N\\) 是一个\"六合数\",则在大于2000的自然数中,最小的\"六合数\"是2016.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案'2016'，并且包含完整的解答过程，泄漏风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#5#6",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "6. (15分)对于自然数 \\(N\\) ,如果在 \\(1 \\sim 9\\) 这九个自然数中至少有六个数可是 \\(N\\) 的因数,则称 \\(N\\) 是一个\"六合数\",则在大于2000的自然数中,最小的\"六合数\"是2016.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "7. (15分)如图是由9块相同的长方体摆放而成的大长方体,已知大长方体的表面积是360平方厘米,那么一个小长方体的表面积是88平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_005/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_005/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案'88平方厘米'，因此存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#5#7",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "7. (15分)如图是由9块相同的长方体摆放而成的大长方体,已知大长方体的表面积是360平方厘米,那么一个小长方体的表面积是88平方厘米.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_005/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "8. (15分)跑跑家族七人分别要通过图中7个门完成挑战;第一个人可以任选一个门激活,完成挑战后,将会激活左右相邻的门;下一个人可以在已激活的门中任选一个未被挑战的门挑战,完成挑战后将会激活左右相邻门中未被激活的门;以此类推.结果跑跑家族七人全部都完成了挑战,按照他们挑战的次序将七个门的编号排序将会得到一个七位数,这个七位数一共有_64_种不同可能.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_006/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_006/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出了答案64，并附有解析过程，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#6#8",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "8. (15分)跑跑家族七人分别要通过图中7个门完成挑战;第一个人可以任选一个门激活,完成挑战后,将会激活左右相邻的门;下一个人可以在已激活的门中任选一个未被挑战的门挑战,完成挑战后将会激活左右相邻门中未被激活的门;以此类推.结果跑跑家族七人全部都完成了挑战,按照他们挑战的次序将七个门的编号排序将会得到一个七位数,这个七位数一共有_64_种不同可能.\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_006/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图，四边形EFCD是平行四边形，如果梯形ABCD的面积是320，四边形ABGH的面积是80，那么三角形OCD的面积是\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，包含图形和问题描述，无答案或解析泄露，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#2#9",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "9. 如图，四边形EFCD是平行四边形，如果梯形ABCD的面积是320，四边形ABGH的面积是80，那么三角形OCD的面积是\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 某城市早7：00到8：00是高峰时段，所有车辆的行驶速度变为原来的一半．每天早上6：50，甲、乙两人从这城市的 \\(A\\) 、 \\(B\\) 两地同时出发，相向而行，在距离 \\(A\\) 地24千米的地方相遇．如果甲晚出发20分钟，两人恰好在 \\(AB\\) 中点相遇；如果乙早出发20分钟，两人将在距离 \\(A\\) 地20千米的地方相遇．那么， \\(AB\\) 两地相距 千米.\n\n11．在每个空格中填入数字1-4，使得每行和每列的数字都不重复．表格外的数字表示该方向所在行或列里第一个奇数或者第一个偶数，那么，第三行的四个格从左到右所填的数字组成的四位数是\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_002/images/3.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_002/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#2#10",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "10. 某城市早7：00到8：00是高峰时段，所有车辆的行驶速度变为原来的一半．每天早上6：50，甲、乙两人从这城市的 \\(A\\) 、 \\(B\\) 两地同时出发，相向而行，在距离 \\(A\\) 地24千米的地方相遇．如果甲晚出发20分钟，两人恰好在 \\(AB\\) 中点相遇；如果乙早出发20分钟，两人将在距离 \\(A\\) 地20千米的地方相遇．那么， \\(AB\\) 两地相距 千米.\n\n11．在每个空格中填入数字1-4，使得每行和每列的数字都不重复．表格外的数字表示该方向所在行或列里第一个奇数或者第一个偶数，那么，第三行的四个格从左到右所填的数字组成的四位数是\n\n![](ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_002/images/3.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.pdf",
+      "exam": {
+        "exam_key": "2016年“迎春杯”数学花园探秘初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "11. 在每个空格中填入数字1-4,使得每行和每列的数字都不重复.表格外的数字表示该方向所在行或列里第一个奇数或者第一个偶数,那么,第三行的四个格从左到右所填的数字组成的四位数是_4213_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案'4213'，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json#7#11",
+          "json_path": "source_pdf/六年级/2016/2016年“迎春杯”数学花园探秘初赛试卷（六年级a卷）.json"
+        }
+      },
+      "text": "11. 在每个空格中填入数字1-4,使得每行和每列的数字都不重复.表格外的数字表示该方向所在行或列里第一个奇数或者第一个偶数,那么,第三行的四个格从左到右所填的数字组成的四位数是_4213_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级一试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 有两个多位数甲和乙满足:\n\n(1)甲 \\(+2016 + 2 + 19 =\\) 乙;\n\n(2)甲、乙两数的各位数字之和均是7的倍数.\n\n那么甲的最小值是",
+      "answer_text": "997969",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级一试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级一试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json"
+        }
+      },
+      "text": "1. 有两个多位数甲和乙满足:\n\n(1)甲 \\(+2016 + 2 + 19 =\\) 乙;\n\n(2)甲、乙两数的各位数字之和均是7的倍数.\n\n那么甲的最小值是",
+      "answer": "997969",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级一试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 一笔画出下图,要求有箭头的线必须沿着剪头方向画,共有种不同的画法.",
+      "answer_text": "96",
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级一试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级一试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级一试（答案）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级一试（答案）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json"
+        }
+      },
+      "text": "2. 一笔画出下图,要求有箭头的线必须沿着剪头方向画,共有种不同的画法.",
+      "answer": "96",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级一试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 设正整数 \\(n\\) 的不同因数个数为 \\(a_{n}\\) .例如24的因数有1,2,3,4,6,8,12,24,所以 \\(a_{24} = 8\\) .若设数列 \\(a_{n}\\) 的前 \\(n\\) 项和为 \\(S_{n}\\) ,即:\n\n\\[S_{1} = a_{1},\\]\n\n\\[S_{2} = a_{1} + a_{2},\\]\n\n\\[S_{3} = a_{1} + a_{2} + a_{3},\\]\n\n......\n\n\\[S_{2016} = a_{1} + a_{2} + a_{3} + \\dots +a_{2016};\\]\n\n则在这2016个和中,共有 个奇数.",
+      "answer_text": "990",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级一试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级一试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json"
+        }
+      },
+      "text": "3. 设正整数 \\(n\\) 的不同因数个数为 \\(a_{n}\\) .例如24的因数有1,2,3,4,6,8,12,24,所以 \\(a_{24} = 8\\) .若设数列 \\(a_{n}\\) 的前 \\(n\\) 项和为 \\(S_{n}\\) ,即:\n\n\\[S_{1} = a_{1},\\]\n\n\\[S_{2} = a_{1} + a_{2},\\]\n\n\\[S_{3} = a_{1} + a_{2} + a_{3},\\]\n\n......\n\n\\[S_{2016} = a_{1} + a_{2} + a_{3} + \\dots +a_{2016};\\]\n\n则在这2016个和中,共有 个奇数.",
+      "answer": "990",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级一试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 甲乙二人进行如下操作:甲选出6个互不相同的非零自然数写成一圈,然后先由乙任意指定一个位置,甲再定顺时针或逆时针,从乙指定的位置开始,依次将这些数标记上1号,2号,……,6号,使得每个数能被其号码整除.为了让乙可以任意指定,甲写的6个数之和最小是多少?",
+      "answer_text": "276",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级一试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级一试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案信息，因此泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json"
+        }
+      },
+      "text": "4. 甲乙二人进行如下操作:甲选出6个互不相同的非零自然数写成一圈,然后先由乙任意指定一个位置,甲再定顺时针或逆时针,从乙指定的位置开始,依次将这些数标记上1号,2号,……,6号,使得每个数能被其号码整除.为了让乙可以任意指定,甲写的6个数之和最小是多少?",
+      "answer": "276",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级一试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 如图, \\(A C\\) 和 \\(D B\\) 垂直, \\(D M{:}M C = 2{:}3\\) , \\(A N{:}N B = 3{:}4\\) ,三角形 \\(A Q D\\) 和三角形 \\(A Q P\\) 的面积分别为1734和726.求:\n\n(1)分别以线段 \\(A Q\\) 和线段 \\(D P\\) 为长和宽的长方形面积是多少?\n\n(2)四边形 \\(B C P Q\\) 的面积是多少?",
+      "answer_text": "(1)2016(2)2016",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级一试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级一试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级一试（答案）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级一试（答案）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案信息，泄露风险高，建议仅作为练习题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级一试（答案）.json"
+        }
+      },
+      "text": "5. 如图, \\(A C\\) 和 \\(D B\\) 垂直, \\(D M{:}M C = 2{:}3\\) , \\(A N{:}N B = 3{:}4\\) ,三角形 \\(A Q D\\) 和三角形 \\(A Q P\\) 的面积分别为1734和726.求:\n\n(1)分别以线段 \\(A Q\\) 和线段 \\(D P\\) 为长和宽的长方形面积是多少?\n\n(2)四边形 \\(B C P Q\\) 的面积是多少?",
+      "answer": "(1)2016(2)2016",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级二试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 请将 \\(1 \\sim 9\\) 分别填入下面算式的方框中,每个数字恰用一次;现已将\"2\"、\"1\"、\"9\"填入;若等式成立,那么三位数 \\(\\overline{ABC} =\\) _______.\n\n![](ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/images/0.jpg)",
+      "answer_text": "475",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级二试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案475，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json"
+        }
+      },
+      "text": "1. 请将 \\(1 \\sim 9\\) 分别填入下面算式的方框中,每个数字恰用一次;现已将\"2\"、\"1\"、\"9\"填入;若等式成立,那么三位数 \\(\\overline{ABC} =\\) _______.\n\n![](ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/images/0.jpg)",
+      "answer": "475",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级二试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 老师拿出3张卡片,每张卡片上写有一个数字,甲用这三个数字组成了一个完全平方数,乙用这三个数字组成了一个完全平方数的3倍,丙用这三个数字组成了一个平方数和立方数的乘积,已知甲乙丙三人组成的三位数各不相同,那么,甲乙丙写的三位数之和是 _______.",
+      "answer_text": "999",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级二试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目描述完整，但直接包含标准答案和部分解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json"
+        }
+      },
+      "text": "2. 老师拿出3张卡片,每张卡片上写有一个数字,甲用这三个数字组成了一个完全平方数,乙用这三个数字组成了一个完全平方数的3倍,丙用这三个数字组成了一个平方数和立方数的乘积,已知甲乙丙三人组成的三位数各不相同,那么,甲乙丙写的三位数之和是 _______.",
+      "answer": "999",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级二试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图,一个五棱柱型的铜鼓,上下表面是正五边形,其余5个侧面都是正方形.现在该铜鼓的每个顶点放置一个白球或者黑球,要求每个侧面正方形的4个顶点不同色,有 ______ 种不同的放置办法.",
+      "answer_text": "572",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级二试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案【答案】572，存在高风险，因此仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json"
+        }
+      },
+      "text": "3. 如图,一个五棱柱型的铜鼓,上下表面是正五边形,其余5个侧面都是正方形.现在该铜鼓的每个顶点放置一个白球或者黑球,要求每个侧面正方形的4个顶点不同色,有 ______ 种不同的放置办法.",
+      "answer": "572",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级二试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 甲、乙两人从 \\(A\\) 地、丙从 \\(B\\) 地同时出发,相向而行.当甲率先和丙相遇时,乙走了720米;此时,甲立即掉头,与乙相遇时,丙距离 \\(A\\) 地还有2016米;当乙、丙相遇时,甲恰好回到 \\(A\\) 地,那么, \\(AB\\) 两地相距多少米?",
+      "answer_text": "4320",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级二试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立完整，但直接给出答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json"
+        }
+      },
+      "text": "4. 甲、乙两人从 \\(A\\) 地、丙从 \\(B\\) 地同时出发,相向而行.当甲率先和丙相遇时,乙走了720米;此时,甲立即掉头,与乙相遇时,丙距离 \\(A\\) 地还有2016米;当乙、丙相遇时,甲恰好回到 \\(A\\) 地,那么, \\(AB\\) 两地相距多少米?",
+      "answer": "4320",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2016年总决赛六年级二试（答案）.pdf",
+      "exam": {
+        "exam_key": "2016年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 平面上有10个点,其中任三点不在同一直线上;以这10个点为三角形的顶点,而且使得任意两个三角形至多只有一个公共顶点;问:最多能连出多少个三角形?",
+      "answer_text": "13",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016年总决赛六年级二试（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016年总决赛六年级二试（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干完整可读，但包含答案，移除后即可作为可用题干。",
+        "review_fix_hint": "删除答案部分【答案】13，仅保留题干。",
+        "review_clean_question_text": "平面上有10个点,其中任三点不在同一直线上;以这10个点为三角形的顶点,而且使得任意两个三角形至多只有一个公共顶点;问:最多能连出多少个三角形?",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2016/2016年总决赛六年级二试（答案）.json"
+        }
+      },
+      "text": "5. 平面上有10个点,其中任三点不在同一直线上;以这10个点为三角形的顶点,而且使得任意两个三角形至多只有一个公共顶点;问:最多能连出多少个三角形?",
+      "answer": "13",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 有三个互不相同的数字,其中任意两个数字组成的两位数都是质数,那么这三个数字的和是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有包含答案或解析信息，因此可以安全用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#1#1",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "1. 有三个互不相同的数字,其中任意两个数字组成的两位数都是质数,那么这三个数字的和是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 甲乙两个圆柱体容器,底面积比为5:3,甲容器水深20厘米,乙容器水深10厘米,再往两个容器注入同样多的水,使两个容器的水深相等,这时水深 厘米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#1#2",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "2. 甲乙两个圆柱体容器,底面积比为5:3,甲容器水深20厘米,乙容器水深10厘米,再往两个容器注入同样多的水,使两个容器的水深相等,这时水深 厘米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 构成如图\"彩虹\"图案的每段弧所在圆的圆心都是点 \\(O\\) 且每种颜色的宽度相同;已知最内两种颜色(紫、蓝)的面积比是10:11,且最外侧颜色(红色)的面积是400平方厘米;那么整个\"彩虹\"图案(彩色部分)的面积是 平方厘米.\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_001/images/0.jpg)\n\n## 二. 填空题(每小题10分,共30分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，描述彩虹图案的面积问题，没有出现答案、解析或非题目内容。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#1#3",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "3. 构成如图\"彩虹\"图案的每段弧所在圆的圆心都是点 \\(O\\) 且每种颜色的宽度相同;已知最内两种颜色(紫、蓝)的面积比是10:11,且最外侧颜色(红色)的面积是400平方厘米;那么整个\"彩虹\"图案(彩色部分)的面积是 平方厘米.\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_001/images/0.jpg)\n\n## 二. 填空题(每小题10分,共30分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 国际刑警接到举报,告知某船上有一箱毒品,并说了一个数 \\(50 \\frac{9}{11}\\) ,船上的箱子依1、2、3、…编号,而且根据事先的约定,这个数是去掉那箱毒品后,其他各箱号的平均数.那么那箱毒品的号码是\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#1#4",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "4. 国际刑警接到举报,告知某船上有一箱毒品,并说了一个数 \\(50 \\frac{9}{11}\\) ,船上的箱子依1、2、3、…编号,而且根据事先的约定,这个数是去掉那箱毒品后,其他各箱号的平均数.那么那箱毒品的号码是\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 将下图中的乘法竖式补充完整后,两个乘数的和是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本不完整，缺少图，不能作为独立题干。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#1#5",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "5. 将下图中的乘法竖式补充完整后,两个乘数的和是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 规定符号\"△\"为选择两个数中较大的数的运算,符号\" \\(\\nabla\\) \"为选择两个数中较小的数的运算,比如: \\(3\\Delta 7 = 7\\) , \\(6\\nabla 9 = 6\\) ,那么,算式 \\(\\left[(3\\nabla 2016)\\Delta 5\\right]\\times \\left[(2015\\Delta 2016)\\nabla 8\\right]\\div \\left[(1.999\\Delta 2) + \\left(\\frac{66}{21}\\nabla 3\\right)\\right]\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，定义运算规则并提问，但未提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#1#6",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "6. 规定符号\"△\"为选择两个数中较大的数的运算,符号\" \\(\\nabla\\) \"为选择两个数中较小的数的运算,比如: \\(3\\Delta 7 = 7\\) , \\(6\\nabla 9 = 6\\) ,那么,算式 \\(\\left[(3\\nabla 2016)\\Delta 5\\right]\\times \\left[(2015\\Delta 2016)\\nabla 8\\right]\\div \\left[(1.999\\Delta 2) + \\left(\\frac{66}{21}\\nabla 3\\right)\\right]\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 右图中,两个边长为8的大正方形如图摆放, \\(A\\) 、 \\(B\\) 为大正方形的中心,那么红色部分的面积是\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的题干，描述了几何问题但无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#2#7",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "7. 右图中,两个边长为8的大正方形如图摆放, \\(A\\) 、 \\(B\\) 为大正方形的中心,那么红色部分的面积是\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 体育课上老师要求练习折返跑,即在 \\(A\\) 、 \\(B\\) 间不断地往返,老师分别在 \\(A\\) 、\n\n\\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 各放了一个标志桶, \\(C\\) 、 \\(D\\) 、 \\(E\\) 恰好把 \\(AB\\) 四等分,已知小鑫和阿楷在练习过程中均保持匀速,且小鑫的速度比阿楷快,一声令下,他们两人同时从 \\(A\\) 起跑,在折返跑的过程中,他们发现:他们两人在每一个有标志桶的地方都遇上过,没有标志桶的地方都没有遇上过(包括迎面相遇和追及).已知阿楷速度是每分钟210米,那么小鑫的速度是每分钟 米.\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_002/images/1.jpg)\n\n## 四. 亲子互动操作题(每小题18分,共36分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#2#8",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "8. 体育课上老师要求练习折返跑,即在 \\(A\\) 、 \\(B\\) 间不断地往返,老师分别在 \\(A\\) 、\n\n\\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 各放了一个标志桶, \\(C\\) 、 \\(D\\) 、 \\(E\\) 恰好把 \\(AB\\) 四等分,已知小鑫和阿楷在练习过程中均保持匀速,且小鑫的速度比阿楷快,一声令下,他们两人同时从 \\(A\\) 起跑,在折返跑的过程中,他们发现:他们两人在每一个有标志桶的地方都遇上过,没有标志桶的地方都没有遇上过(包括迎面相遇和追及).已知阿楷速度是每分钟210米,那么小鑫的速度是每分钟 米.\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_002/images/1.jpg)\n\n## 四. 亲子互动操作题(每小题18分,共36分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 据外媒报道,美国华盛顿大学研究团队近日发现了一种新的不规则五边形,相互组合后可完全铺满平面,不会出现重叠或有任何空隙,是目前发现的第15种能做到此效果的五边形,而在100年前,Karl Rheinhardt发现了5种不同五边形可以完全铺满片面而不会出现重叠或有任何空隙,右图是其中的一种.\n\n现在有右图中五边形形状的瓷砖,最长边长为10厘米,要\n\n想覆盖1米 \\(\\times 1\\) 米的正方形区域,最少需要 块瓷砖.(瓷砖不能切割)\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，提出计算瓷砖覆盖面积的问题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#2#9",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "9. 据外媒报道,美国华盛顿大学研究团队近日发现了一种新的不规则五边形,相互组合后可完全铺满平面,不会出现重叠或有任何空隙,是目前发现的第15种能做到此效果的五边形,而在100年前,Karl Rheinhardt发现了5种不同五边形可以完全铺满片面而不会出现重叠或有任何空隙,右图是其中的一种.\n\n现在有右图中五边形形状的瓷砖,最长边长为10厘米,要\n\n想覆盖1米 \\(\\times 1\\) 米的正方形区域,最少需要 块瓷砖.(瓷砖不能切割)\n\n![](ocr_debug/2016网赛试题_6年级/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 有五堆棋子,个数和为3的倍数,每次操作从其中3堆中各取走一个棋子;如果能通过一系列操作,使得最后各堆棋子都恰好被取完,则称这五堆棋子是\"和谐的\".当五堆棋子的个数分别为以下各组数据时,判断各堆棋子和谱与否.\n\n(1)3、3、3、3、(若和谐则 \\(A = 1\\) ,若不和谱则 \\(A = 0\\) )\n\n(2)9、6、3、2、1 (若和谐则 \\(B = 1\\) ,若不和谱则 \\(B = 0\\) )\n\n(3)2、4、6、8、10 (若和谐则 \\(C = 1\\) ,若不和谱则 \\(C = 0\\) )\n\n(4)2、3、5、7、13 (若和谐则 \\(D = 1\\) ,若不和谱则 \\(D = 0\\) )\n\n(5)9、15、19、21、26 (若和谐则 \\(E = 1\\) ,若不和谱则 \\(E = 0\\) )\n\n那么五位数 \\(ABCDE =\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级.json#2#10",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级.json"
+        }
+      },
+      "text": "10. 有五堆棋子,个数和为3的倍数,每次操作从其中3堆中各取走一个棋子;如果能通过一系列操作,使得最后各堆棋子都恰好被取完,则称这五堆棋子是\"和谐的\".当五堆棋子的个数分别为以下各组数据时,判断各堆棋子和谱与否.\n\n(1)3、3、3、3、(若和谐则 \\(A = 1\\) ,若不和谱则 \\(A = 0\\) )\n\n(2)9、6、3、2、1 (若和谐则 \\(B = 1\\) ,若不和谱则 \\(B = 0\\) )\n\n(3)2、4、6、8、10 (若和谐则 \\(C = 1\\) ,若不和谱则 \\(C = 0\\) )\n\n(4)2、3、5、7、13 (若和谐则 \\(D = 1\\) ,若不和谱则 \\(D = 0\\) )\n\n(5)9、15、19、21、26 (若和谐则 \\(E = 1\\) ,若不和谱则 \\(E = 0\\) )\n\n那么五位数 \\(ABCDE =\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 有三个互不相同的数字,其中任意两个数字组成的两位数都是质数,那么这三个数字的和是\n\n【考点】数论,质数\n\n【难度】☆",
+      "answer_text": "11",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，泄露风险高，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#1#1",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "1. 有三个互不相同的数字,其中任意两个数字组成的两位数都是质数,那么这三个数字的和是\n\n【考点】数论,质数\n\n【难度】☆",
+      "answer": "11",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 甲乙两个圆柱体容器,底面积比为5:3,甲容器水深20厘米,乙容器水深10厘米,再往两个容器注入同样多的水,使两个容器的水深相等,这时水深 厘米.\n\n【考点】应用题,比例应用题\n\n【难度】☆",
+      "answer_text": "35",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，泄露风险高，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#1#2",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "2. 甲乙两个圆柱体容器,底面积比为5:3,甲容器水深20厘米,乙容器水深10厘米,再往两个容器注入同样多的水,使两个容器的水深相等,这时水深 厘米.\n\n【考点】应用题,比例应用题\n\n【难度】☆",
+      "answer": "35",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 构成如图\"彩虹\"图案的每段弧所在圆的圆心都是点 \\(O\\) 且每种颜色的宽度相同;已知最内两种颜色(紫、蓝)的面积比是10:11,且最外侧颜色(红色)的面积是400平方厘米;那么整个\"彩虹\"图案(彩色部分)的面积是平方厘米.\n\n【考点】几何,圆与扇形\n\n【难度】☆☆",
+      "answer_text": "2275",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接包含答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#1#3",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "3. 构成如图\"彩虹\"图案的每段弧所在圆的圆心都是点 \\(O\\) 且每种颜色的宽度相同;已知最内两种颜色(紫、蓝)的面积比是10:11,且最外侧颜色(红色)的面积是400平方厘米;那么整个\"彩虹\"图案(彩色部分)的面积是平方厘米.\n\n【考点】几何,圆与扇形\n\n【难度】☆☆",
+      "answer": "2275",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 国际刑警接到举报,告知某船上有一箱毒品,并说了一个数 \\(50\\frac{9}{11}\\) ,船上的箱子依1、2、3、…编号,而且根据事先的约定,这个数是去掉那箱毒品后,其他各箱号的平均数.那么那箱毒品的号码是\n\n【考点】应用题,平均数",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学问题，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#1#4",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "4. 国际刑警接到举报,告知某船上有一箱毒品,并说了一个数 \\(50\\frac{9}{11}\\) ,船上的箱子依1、2、3、…编号,而且根据事先的约定,这个数是去掉那箱毒品后,其他各箱号的平均数.那么那箱毒品的号码是\n\n【考点】应用题,平均数",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 将下图中的乘法的乘法竖式补充完整后,两个乘数的和是\n\n![](ocr_debug/2016网赛试题_6年级_解析/pages/page_002/images/0.jpg)\n\n【考点】数字谜,竖式数字谜\n\n【难度】☆☆",
+      "answer_text": "935",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题目、答案和解析，因此有高泄露风险，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#2#5",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "5. 将下图中的乘法的乘法竖式补充完整后,两个乘数的和是\n\n![](ocr_debug/2016网赛试题_6年级_解析/pages/page_002/images/0.jpg)\n\n【考点】数字谜,竖式数字谜\n\n【难度】☆☆",
+      "answer": "935",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 规定符号\" \\(\\Delta\\) \"为选择两个数中较大的数的运算,符号\" \\(\\nabla\\) \"为选择两个数中较小的数的运算,比如: \\(3\\Delta 7 = 7\\) , \\(6\\nabla 9 = 6\\) ,那么,算式 \\(\\left[(3\\nabla 2016)\\Delta 5\\right]\\times \\left[(2015\\Delta 2016)\\nabla 8\\right]\\div \\left[(1.999\\Delta 2) + \\left(\\frac{66}{21}\\nabla 3\\right)\\right]\\) 的计算结果是\n\n【考点】计算,定义新运算\n\n【难度】☆",
+      "answer_text": "8",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#2#6",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "6. 规定符号\" \\(\\Delta\\) \"为选择两个数中较大的数的运算,符号\" \\(\\nabla\\) \"为选择两个数中较小的数的运算,比如: \\(3\\Delta 7 = 7\\) , \\(6\\nabla 9 = 6\\) ,那么,算式 \\(\\left[(3\\nabla 2016)\\Delta 5\\right]\\times \\left[(2015\\Delta 2016)\\nabla 8\\right]\\div \\left[(1.999\\Delta 2) + \\left(\\frac{66}{21}\\nabla 3\\right)\\right]\\) 的计算结果是\n\n【考点】计算,定义新运算\n\n【难度】☆",
+      "answer": "8",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "7. 右图中,两个边长为8的大正方形如图摆放, \\(A\\) 、 \\(B\\) 为大正方形的中心.那么红色部分的面积是\n\n![](ocr_debug/2016网赛试题_6年级_解析/pages/page_003/images/0.jpg)\n\n【考点】几何,比例模型\n\n【难度】☆☆☆",
+      "answer_text": "54",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接提供了答案和详细解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#3#7",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "7. 右图中,两个边长为8的大正方形如图摆放, \\(A\\) 、 \\(B\\) 为大正方形的中心.那么红色部分的面积是\n\n![](ocr_debug/2016网赛试题_6年级_解析/pages/page_003/images/0.jpg)\n\n【考点】几何,比例模型\n\n【难度】☆☆☆",
+      "answer": "54",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "8. 体育课上老师要求练习折返跑,即在 \\(A\\) 、 \\(B\\) 间不断地往返.老师分别在 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 各放了一个标志桶, \\(C\\) 、 \\(D\\) 、 \\(E\\) 恰好把 \\(AB\\) 四等分.已知小鑫和阿楷在练习过程中均保持匀速,且小鑫的速度比阿楷快.一声令下,他们两人同时从 \\(A\\) 起跑.在折返跑的过程中,他们发现:他们两人在每一个有标志桶的地方都遇上过,没有标志桶的地方都没有遇上过(包括迎面相遇和追及).已知阿楷速度是每分钟210米,那么小鑫的速度是每分钟 米.\n\n![](ocr_debug/2016网赛试题_6年级_解析/pages/page_003/images/2.jpg)\n\n【考点】行程,多次相遇与追及\n\n【难度】☆☆",
+      "answer_text": "350",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_003/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整但包含答案和解析，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#3#8",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "8. 体育课上老师要求练习折返跑,即在 \\(A\\) 、 \\(B\\) 间不断地往返.老师分别在 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 各放了一个标志桶, \\(C\\) 、 \\(D\\) 、 \\(E\\) 恰好把 \\(AB\\) 四等分.已知小鑫和阿楷在练习过程中均保持匀速,且小鑫的速度比阿楷快.一声令下,他们两人同时从 \\(A\\) 起跑.在折返跑的过程中,他们发现:他们两人在每一个有标志桶的地方都遇上过,没有标志桶的地方都没有遇上过(包括迎面相遇和追及).已知阿楷速度是每分钟210米,那么小鑫的速度是每分钟 米.\n\n![](ocr_debug/2016网赛试题_6年级_解析/pages/page_003/images/2.jpg)\n\n【考点】行程,多次相遇与追及\n\n【难度】☆☆",
+      "answer": "350",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "9. 据外媒报道，美国华盛顿大学研究团队近日发现了一种新的不规则五边形，相互组合后可完全铺满平面，不会出现重叠或有任何空隙，是目前发现的第15种能做到此效果的五边形.而在100年前，Karl Rheinhardt发现了5种不同五边形可以完全铺满片面而不会出现重叠或有任何空隙，右图是其中的一种.\n\n现在有右图中五边形形状的瓷砖，最长边长为10厘米，要想覆盖1米 \\(\\times 1\\) 米的正方形区域，按右图方式最少需要 块瓷砖．（瓷砖不能切割）\n\n![](ocr_debug/2016网赛试题_6年级_解析/pages/page_004/images/0.jpg)\n\n【考点】组合，构造与论证\n\n【难度】☆☆☆☆",
+      "answer_text": "146",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干，但答案和解析直接出现在同一块中，导致泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#4#9",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "9. 据外媒报道，美国华盛顿大学研究团队近日发现了一种新的不规则五边形，相互组合后可完全铺满平面，不会出现重叠或有任何空隙，是目前发现的第15种能做到此效果的五边形.而在100年前，Karl Rheinhardt发现了5种不同五边形可以完全铺满片面而不会出现重叠或有任何空隙，右图是其中的一种.\n\n现在有右图中五边形形状的瓷砖，最长边长为10厘米，要想覆盖1米 \\(\\times 1\\) 米的正方形区域，按右图方式最少需要 块瓷砖．（瓷砖不能切割）\n\n![](ocr_debug/2016网赛试题_6年级_解析/pages/page_004/images/0.jpg)\n\n【考点】组合，构造与论证\n\n【难度】☆☆☆☆",
+      "answer": "146",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2016,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2016网赛试题_6年级_解析.pdf",
+      "exam": {
+        "exam_key": "2016网赛试题_6年级_",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "10. 有五堆棋子,个数和为3的倍数.每次操作从其中3堆中各取走一个棋子;如果能通过一系列操作,使得最后各堆棋子都恰好被取完,则称这五堆棋子是\"和谐的\".当五堆棋子的个数分别为以下各组数据时,判断各堆棋子和谐与否.\n\n(1)3、3、3、3、3 (若和谐则 \\(A = 1\\) ,若不和谐则 \\(A = 0\\) )\n\n(2)9、6、3、2、1 (若和谐则 \\(B = 1\\) ,若不和谐则 \\(B = 0\\) )\n\n(3)2、4、6、8、10 (若和谐则 \\(C = 1\\) ,若不和谐则 \\(C = 0\\) )\n\n(4)2、3、5、7、13 (若和谐则 \\(D = 1\\) ,若不和谐则 \\(D = 0\\) )\n\n(5)9、15、19、21、26 (若和谐则 \\(E = 1\\) ,若不和谐则 \\(E = 0\\) )\n\n那么五位数 \\(ABCDE =\\)\n\n【考点】组合,构造与论证\n\n【难度】☆☆☆☆",
+      "answer_text": "10101",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2016/2016网赛试题_6年级_解析/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2016/ocr_debug/2016网赛试题_6年级_解析/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，存在高泄漏风险，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json#5#10",
+          "json_path": "source_pdf/六年级/2016/2016网赛试题_6年级_解析.json"
+        }
+      },
+      "text": "10. 有五堆棋子,个数和为3的倍数.每次操作从其中3堆中各取走一个棋子;如果能通过一系列操作,使得最后各堆棋子都恰好被取完,则称这五堆棋子是\"和谐的\".当五堆棋子的个数分别为以下各组数据时,判断各堆棋子和谐与否.\n\n(1)3、3、3、3、3 (若和谐则 \\(A = 1\\) ,若不和谐则 \\(A = 0\\) )\n\n(2)9、6、3、2、1 (若和谐则 \\(B = 1\\) ,若不和谐则 \\(B = 0\\) )\n\n(3)2、4、6、8、10 (若和谐则 \\(C = 1\\) ,若不和谐则 \\(C = 0\\) )\n\n(4)2、3、5、7、13 (若和谐则 \\(D = 1\\) ,若不和谐则 \\(D = 0\\) )\n\n(5)9、15、19、21、26 (若和谐则 \\(E = 1\\) ,若不和谐则 \\(E = 0\\) )\n\n那么五位数 \\(ABCDE =\\)\n\n【考点】组合,构造与论证\n\n【难度】☆☆☆☆",
+      "answer": "10101",
+      "solution": null
+    }
+  ]
+}

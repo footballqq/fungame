@@ -1,0 +1,433 @@
+{
+  "grade": 6,
+  "year": 2022,
+  "total_problems": 11,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2022 \\times \\left(1 - \\frac{1}{1 \\times 2} - \\frac{1}{2 \\times 3}\\right)\\) 的计算结果是（ ）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的数学题题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "1. 算式 \\(2022 \\times \\left(1 - \\frac{1}{1 \\times 2} - \\frac{1}{2 \\times 3}\\right)\\) 的计算结果是（ ）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 右图是由一个圆和两个正九边形组成的对称图形．已知圆的半径是30厘米，那么图中三种颜色的阴影部分面积总和为（）平方厘米．（π取3.14）\n\n![](ocr_debug/2022年迎春杯六年级-试卷/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的几何题干，包含图形描述和问题，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "2. 右图是由一个圆和两个正九边形组成的对称图形．已知圆的半径是30厘米，那么图中三种颜色的阴影部分面积总和为（）平方厘米．（π取3.14）\n\n![](ocr_debug/2022年迎春杯六年级-试卷/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 2021年8月8日第32届奥林匹克运动会闭幕，某国选手奋勇拼搏取得了金、银、铜牌共88枚的出色成绩，其中金牌与铜牌数量之和比银牌多 \\(75\\%\\) ，金牌比铜牌多20枚，那么这届奥运会该国选手共获得（）枚铜牌.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，无答案或解析信息，适合保留用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "3. 2021年8月8日第32届奥林匹克运动会闭幕，某国选手奋勇拼搏取得了金、银、铜牌共88枚的出色成绩，其中金牌与铜牌数量之和比银牌多 \\(75\\%\\) ，金牌比铜牌多20枚，那么这届奥运会该国选手共获得（）枚铜牌.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 在每个方格中填入一个数字使得除法竖式成立,那么正确的商是( )\n\n![](ocr_debug/2022年迎春杯六年级-试卷/pages/page_002/images/0.jpg)\n\n## 二. 填空题Ⅱ(每小题10分,共40分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，未包含答案或解析信息，可安全用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#2#4",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "4. 在每个方格中填入一个数字使得除法竖式成立,那么正确的商是( )\n\n![](ocr_debug/2022年迎春杯六年级-试卷/pages/page_002/images/0.jpg)\n\n## 二. 填空题Ⅱ(每小题10分,共40分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 8人进行淘汰赛,第一轮分成4组,两两比赛,4人胜出,这4人再分成两组进行第二轮比赛,2人胜出,这2人再进行第三轮比赛,胜者为冠军,8人按实力从高到低编号为1\\~8,比赛时,如果两人编号不相邻,则一定是编号小的人胜出;如果编号相邻,则两人均可能获胜,那么冠军的编号最大可能为( )",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#2#5",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "5. 8人进行淘汰赛,第一轮分成4组,两两比赛,4人胜出,这4人再分成两组进行第二轮比赛,2人胜出,这2人再进行第三轮比赛,胜者为冠军,8人按实力从高到低编号为1\\~8,比赛时,如果两人编号不相邻,则一定是编号小的人胜出;如果编号相邻,则两人均可能获胜,那么冠军的编号最大可能为( )",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 已知五位数abcde是2022的倍数,则数字 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\) 中至多有( )个相同.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "6. 已知五位数abcde是2022的倍数,则数字 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\) 中至多有( )个相同.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "7. 在右图每个方格中填入 1\\~5 的某个数字, 使得每行、每列的数字都是 1\\~5 不重复. 每个圆圈里的数字等于连接它的线上其余所有数字的和. 那么, 第四行所填数字从左到右组成的五位数是 ( )\n\n![](ocr_debug/2022年迎春杯六年级-试卷/pages/page_003/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#3#7",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "7. 在右图每个方格中填入 1\\~5 的某个数字, 使得每行、每列的数字都是 1\\~5 不重复. 每个圆圈里的数字等于连接它的线上其余所有数字的和. 那么, 第四行所填数字从左到右组成的五位数是 ( )\n\n![](ocr_debug/2022年迎春杯六年级-试卷/pages/page_003/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "8. 甲、乙分别从 \\(A\\) 、 \\(B\\) 两地同时出发, 匀速相向而行, 同时丙从 \\(B\\) 地出发向 \\(A\\) 匀速行走. 当甲、丙相遇时, 乙恰好走到 \\(AB\\) 两地中点 \\(C\\) . 随后丙继续向前, 到达 \\(A\\) 地后立刻调头, 当甲、乙在途中 \\(D\\) 点相遇时, 丙也恰好回到 \\(C\\) 点. 如果 \\(CD\\) 相距 360 米, 那么 \\(AB\\) 相距 米.\n\n## 三. 填空题Ⅲ (每小题 12 分, 共 48 分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#3#8",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "8. 甲、乙分别从 \\(A\\) 、 \\(B\\) 两地同时出发, 匀速相向而行, 同时丙从 \\(B\\) 地出发向 \\(A\\) 匀速行走. 当甲、丙相遇时, 乙恰好走到 \\(AB\\) 两地中点 \\(C\\) . 随后丙继续向前, 到达 \\(A\\) 地后立刻调头, 当甲、乙在途中 \\(D\\) 点相遇时, 丙也恰好回到 \\(C\\) 点. 如果 \\(CD\\) 相距 360 米, 那么 \\(AB\\) 相距 米.\n\n## 三. 填空题Ⅲ (每小题 12 分, 共 48 分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "9. 老师写了一个三位数, 每次盖住其中一位后给甲、乙、丙三人中的一人看, 已知老师三次盖住的数位互不相同. 接下来三人依次说了如下三句话:\n\n甲说: 这个数一定是 4 的倍数.\n\n乙说: 这个数的各位数字之和最大为 17, 最小为 13.\n\n丙说: \"我知道这个数是多少了, 它是 11 的倍数.\"\n\n甲、乙、丙三人聪明且诚实, 那么, 老师写的这个三位数是( )",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目，没有答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#3#9",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "9. 老师写了一个三位数, 每次盖住其中一位后给甲、乙、丙三人中的一人看, 已知老师三次盖住的数位互不相同. 接下来三人依次说了如下三句话:\n\n甲说: 这个数一定是 4 的倍数.\n\n乙说: 这个数的各位数字之和最大为 17, 最小为 13.\n\n丙说: \"我知道这个数是多少了, 它是 11 的倍数.\"\n\n甲、乙、丙三人聪明且诚实, 那么, 老师写的这个三位数是( )",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "10. 如图,在三角形ABC中, \\(P\\) 、 \\(Q\\) 为 \\(AB\\) 的三等分点, \\(M\\) 为 \\(AC\\) 中点, \\(N\\) 为 \\(AM\\) 中点.已知两个阴影三角形面积都是40,那么三角形ABC的面积是()\n\n![](ocr_debug/2022年迎春杯六年级-试卷/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#4#10",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "10. 如图,在三角形ABC中, \\(P\\) 、 \\(Q\\) 为 \\(AB\\) 的三等分点, \\(M\\) 为 \\(AC\\) 中点, \\(N\\) 为 \\(AM\\) 中点.已知两个阴影三角形面积都是40,那么三角形ABC的面积是()\n\n![](ocr_debug/2022年迎春杯六年级-试卷/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2022,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯六年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯六年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "11. 在右边 \\(4 \\times 4\\) 的方格表的每个方格中填入0、1、2、3四个数字之一,使得:\n\n(1)将每一行中的四个数字重排后,从上往下四行依次能组成四位数2020、2021、2022和2023;\n\n(2)将每一列的四个数字重排后,也能使从左往右的四列依次能组成四位数2020、2021、2022、2023.\n\n下面给出了一种符合条件的填法示例,那么这样的填法一共有()种\n\n<table><tr><td>2</td><td>2</td><td>0</td><td>0</td></tr><tr><td>0</td><td>1</td><td>2</td><td>2</td></tr><tr><td>0</td><td>2</td><td>2</td><td>2</td></tr><tr><td>2</td><td>0</td><td>2</td><td>3</td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/六年级/2022/ocr_debug/2022年迎春杯六年级-试卷/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是独立的数学竞赛题干，包含问题描述和示例，但无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json#4#11",
+          "json_path": "2026年迎春杯数学竞赛/六年级/2022/2022年迎春杯六年级-试卷.json"
+        }
+      },
+      "text": "11. 在右边 \\(4 \\times 4\\) 的方格表的每个方格中填入0、1、2、3四个数字之一,使得:\n\n(1)将每一行中的四个数字重排后,从上往下四行依次能组成四位数2020、2021、2022和2023;\n\n(2)将每一列的四个数字重排后,也能使从左往右的四列依次能组成四位数2020、2021、2022、2023.\n\n下面给出了一种符合条件的填法示例,那么这样的填法一共有()种\n\n<table><tr><td>2</td><td>2</td><td>0</td><td>0</td></tr><tr><td>0</td><td>1</td><td>2</td><td>2</td></tr><tr><td>0</td><td>2</td><td>2</td><td>2</td></tr><tr><td>2</td><td>0</td><td>2</td><td>3</td></tr></table>",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

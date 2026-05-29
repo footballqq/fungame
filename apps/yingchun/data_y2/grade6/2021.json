@@ -1,0 +1,1600 @@
+{
+  "grade": 6,
+  "year": 2021,
+  "total_problems": 40,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2021六年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021六年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 小嘉说:\"今天是周日,我发现今天和下个周日的日期数都是质数!\"\n\n小奇说:\"我还发现明天和后天的日期数都是合数呢!\"\n\n那么,今天的月份数和日期数的和是",
+      "answer_text": "25",
+      "solution_text": "通过小嘉的描述可知如果两个周日是同月,\n\n则两个质数相差7,其中必有一个是偶质数2,而9并非质数;\n\n所以两个周日只能是跨月;\n\n所以今天的日期数为不小于22的质数,即23日或者29日.\n\n再考虑小奇的描述,只有23日满足要求.\n\n所以今天为23日,且7天后为2日,因此必须是平年的2月.\n\n即今天的月份数和日期数的和是 \\(2 + 23 = 25\\)",
+      "topic": "number_theory",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021六年级网赛【答案解析】/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021六年级网赛【答案解析】/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，直接泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json#1#1",
+          "json_path": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json"
+        }
+      },
+      "text": "1. 小嘉说:\"今天是周日,我发现今天和下个周日的日期数都是质数!\"\n\n小奇说:\"我还发现明天和后天的日期数都是合数呢!\"\n\n那么,今天的月份数和日期数的和是",
+      "answer": "25",
+      "solution": "通过小嘉的描述可知如果两个周日是同月,\n\n则两个质数相差7,其中必有一个是偶质数2,而9并非质数;\n\n所以两个周日只能是跨月;\n\n所以今天的日期数为不小于22的质数,即23日或者29日.\n\n再考虑小奇的描述,只有23日满足要求.\n\n所以今天为23日,且7天后为2日,因此必须是平年的2月.\n\n即今天的月份数和日期数的和是 \\(2 + 23 = 25\\)"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2021六年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021六年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 如下图所示,将1至9九个数字写在一条纸带上,\n\n<table><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr></table>\n\n现在将该纸带从左往右剪成三段,每段上数字连在一起算一个数,使得这三个数之和能被35整除,那么最右侧一段的数最小是",
+      "answer_text": "89",
+      "solution_text": "因为 \\(35 = 5\\times 7\\) ,为使得最右侧一段最小,\n\n(1)若最右侧一段是9,则中间一段的个位是8,\n\n所以最右侧与中间的和的个位是7,\n\n所以最左侧一段个位必须是3,才能保证三个数之和被5整除;\n\n但 \\(123 + 45678 + 9 = 45810\\) 不是35的倍数,\n\n所以最右侧一段不能为9;\n\n(2)若最右侧一段是89,则中间一段的个位是7,\n\n所以最右侧与中间的和的个位是6,\n\n所以最左侧一段个位是4,才能保证三个数之和被5整除;\n\n\\(1234 + 567 + 89 = 1890 = 35\\times 54\\) 满足题目要求.\n\n综上,最右侧一段最小是89.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021六年级网赛【答案解析】/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021六年级网赛【答案解析】/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含答案和解析，答案明确为89。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json#1#2",
+          "json_path": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json"
+        }
+      },
+      "text": "2. 如下图所示,将1至9九个数字写在一条纸带上,\n\n<table><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr></table>\n\n现在将该纸带从左往右剪成三段,每段上数字连在一起算一个数,使得这三个数之和能被35整除,那么最右侧一段的数最小是",
+      "answer": "89",
+      "solution": "因为 \\(35 = 5\\times 7\\) ,为使得最右侧一段最小,\n\n(1)若最右侧一段是9,则中间一段的个位是8,\n\n所以最右侧与中间的和的个位是7,\n\n所以最左侧一段个位必须是3,才能保证三个数之和被5整除;\n\n但 \\(123 + 45678 + 9 = 45810\\) 不是35的倍数,\n\n所以最右侧一段不能为9;\n\n(2)若最右侧一段是89,则中间一段的个位是7,\n\n所以最右侧与中间的和的个位是6,\n\n所以最左侧一段个位是4,才能保证三个数之和被5整除;\n\n\\(1234 + 567 + 89 = 1890 = 35\\times 54\\) 满足题目要求.\n\n综上,最右侧一段最小是89."
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2021六年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021六年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 黄老师分别给小沃和小伦一些小球,开始时,小沃的小球数比小伦多 \\(a\\) 个,小沃把自己小球的 \\(\\frac{3}{4}\\) 给小伦,然后小伦又把此时自己小球的 \\(40\\%\\) 给小沃,最后小伦的小球数反而比小沃恰好多了 \\(a\\) 个.那么,黄老师最少要准备 个小球.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021六年级网赛【答案解析】/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021六年级网赛【答案解析】/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题陈述，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json#1#3",
+          "json_path": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json"
+        }
+      },
+      "text": "3. 黄老师分别给小沃和小伦一些小球,开始时,小沃的小球数比小伦多 \\(a\\) 个,小沃把自己小球的 \\(\\frac{3}{4}\\) 给小伦,然后小伦又把此时自己小球的 \\(40\\%\\) 给小沃,最后小伦的小球数反而比小沃恰好多了 \\(a\\) 个.那么,黄老师最少要准备 个小球.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2021六年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021六年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "5. 老师从1\\~8中选出了两个数,把这两个数的乘积告诉了甲,把这两个数的和告诉了乙.甲、乙都诚实且聪明,他们依次进行以下对话.\n\n甲:\"我不知道老师选出的这2个数是多少.\"\n\n乙:\"我也不知道.\"\n\n甲:\"那我知道这两个数是多少了.\"\n\n那么老师告诉乙的数是",
+      "answer_text": "7",
+      "solution_text": "从1\\~8中选出了两个数,乘积可能情况如下:\n\n<table><tr><td>2</td><td>6</td><td>12</td><td>20</td><td>30</td><td>42</td><td>56</td></tr><tr><td>3</td><td>8</td><td>15</td><td>24</td><td>35</td><td>48</td><td></td></tr><tr><td>4</td><td>10</td><td>18</td><td>28</td><td>40</td><td></td><td></td></tr><tr><td>5</td><td>12</td><td>21</td><td>32</td><td></td><td></td><td></td></tr><tr><td>6</td><td>14</td><td>24</td><td></td><td></td><td></td><td></td></tr><tr><td>7</td><td>16</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>\n\n所以甲可能拿到的是 \\(1\\times 6 = 3\\times 2 = 6\\) , \\(2\\times 6 = 3\\times 4 = 12\\) , \\(3\\times 8 = 4\\times 6 = 24\\)\n\n即乙听完甲的对话后,\n\n知道这两个数可能是(1,6),(2,3),(2,6),(3,4),(3,8)和(4,6)\n\n但是乙依然无法判断,只有 \\(1 + 6 = 3 + 4 = 7\\)\n\n所以甲知道的乘积如果是6,那么这两个数是(1,6),\n\n乘积如果是12,那么这两个数是(3,4),\n\n即乙说完后,甲均可判断这两个数是多少;\n\n所以乙知道两个数的和是7.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021六年级网赛【答案解析】/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021六年级网赛【答案解析】/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干和问题，但直接给出了答案和解析，因此适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json#3#5",
+          "json_path": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json"
+        }
+      },
+      "text": "5. 老师从1\\~8中选出了两个数,把这两个数的乘积告诉了甲,把这两个数的和告诉了乙.甲、乙都诚实且聪明,他们依次进行以下对话.\n\n甲:\"我不知道老师选出的这2个数是多少.\"\n\n乙:\"我也不知道.\"\n\n甲:\"那我知道这两个数是多少了.\"\n\n那么老师告诉乙的数是",
+      "answer": "7",
+      "solution": "从1\\~8中选出了两个数,乘积可能情况如下:\n\n<table><tr><td>2</td><td>6</td><td>12</td><td>20</td><td>30</td><td>42</td><td>56</td></tr><tr><td>3</td><td>8</td><td>15</td><td>24</td><td>35</td><td>48</td><td></td></tr><tr><td>4</td><td>10</td><td>18</td><td>28</td><td>40</td><td></td><td></td></tr><tr><td>5</td><td>12</td><td>21</td><td>32</td><td></td><td></td><td></td></tr><tr><td>6</td><td>14</td><td>24</td><td></td><td></td><td></td><td></td></tr><tr><td>7</td><td>16</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>\n\n所以甲可能拿到的是 \\(1\\times 6 = 3\\times 2 = 6\\) , \\(2\\times 6 = 3\\times 4 = 12\\) , \\(3\\times 8 = 4\\times 6 = 24\\)\n\n即乙听完甲的对话后,\n\n知道这两个数可能是(1,6),(2,3),(2,6),(3,4),(3,8)和(4,6)\n\n但是乙依然无法判断,只有 \\(1 + 6 = 3 + 4 = 7\\)\n\n所以甲知道的乘积如果是6,那么这两个数是(1,6),\n\n乘积如果是12,那么这两个数是(3,4),\n\n即乙说完后,甲均可判断这两个数是多少;\n\n所以乙知道两个数的和是7."
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2021六年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021六年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "6. 如图,一个 \\(3\\times 4\\) 的方格表,将每格染成红、黄、蓝三种颜色之一,要求对于每一个方格而言,与之有边相邻的所有方格中,另外两种颜色的方格都恰好各有一个.那么,一共有____种不同的染色方式.(方格表不能旋转和翻转)\n\n<table><tr><td>习</td><td>性</td><td>性</td><td>人</td></tr><tr><td>相</td><td>相</td><td>本</td><td>之</td></tr><tr><td>远</td><td>近</td><td>善</td><td>初</td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021六年级网赛【答案解析】/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021六年级网赛【答案解析】/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干描述完整，是一个独立的数学问题，无答案或解析内容。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json#3#6",
+          "json_path": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json"
+        }
+      },
+      "text": "6. 如图,一个 \\(3\\times 4\\) 的方格表,将每格染成红、黄、蓝三种颜色之一,要求对于每一个方格而言,与之有边相邻的所有方格中,另外两种颜色的方格都恰好各有一个.那么,一共有____种不同的染色方式.(方格表不能旋转和翻转)\n\n<table><tr><td>习</td><td>性</td><td>性</td><td>人</td></tr><tr><td>相</td><td>相</td><td>本</td><td>之</td></tr><tr><td>远</td><td>近</td><td>善</td><td>初</td></tr></table>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2021六年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021六年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "7. \\([a]\\) 表示不超过 \\(a\\) 的最大整数,例如: \\([15] = 15\\) , \\([3.14] = 3\\) .那么,在所有不超过 2021 的正整数 \\(n\\) 中,满足算式 \\(\\left[\\frac{2019}{n}\\right] + \\left[\\frac{2020}{n}\\right] + \\left[\\frac{2021}{n}\\right]\\) 的计算结果不能被 3 整除的 \\(n\\) 有 个.",
+      "answer_text": "14",
+      "solution_text": "因为 2019、2020、2021 是三个连续自然数,且两两互质,任何两数都只有公因数 1.\n\n(1)当 \\(n\\) 是1时, \\(\\left[\\frac{2019}{n}\\right] + \\left[\\frac{2021}{n}\\right] + \\left[\\frac{2021}{n}\\right] = 6060\\) 是3的倍数;\n\n(2)当 \\(n\\) 不是1时:\n\n\\(①\\) 当 \\(n\\) 是 2019 的因数时, \\(\\left[\\frac{2019}{n}\\right]\\) 是整数, \\(\\left[\\frac{2019}{n}\\right] \\div \\left[\\frac{2020}{n}\\right]\\) 、 \\(\\left[\\frac{2021}{n}\\right]\\) 相同,则 \\(\\left[\\frac{2019}{n}\\right] + \\left[\\frac{2022}{n}\\right] + \\left[\\frac{2021}{n}\\right]\\) 的和是 3 的倍数;\n\n\\(②\\) 当 \\(n\\) 是 2020 的因数时, \\(\\left[\\frac{2020}{n}\\right]\\) 是整数, \\(\\left[\\frac{2019}{n}\\frac{2019}{n}\\right]\\) 比 \\(\\left[\\frac{2020}{n}\\right]\\) 小 1, \\(\\left[\\frac{2021}{n}\\right]\\) 与 \\(\\left[\\frac{2021}{n}\\right]\\) 相同,则 \\(\\left[\\left[\\frac{2019}{n}\\right] + \\left[\\frac{2020}{\\frac{n}{n}}\\right] + \\left[\\frac{2021}{n}\\right]\\right]\\) 的和不是 3 的倍数;\n\n\\(③\\) 当 \\(n\\) 是 2021 的因数时, \\(\\left[\\frac{2021}{n}\\right]\\) 是整数, \\(\\left[\\frac{2019}{n}\\div \\left[\\frac{2020}{n}\\right]\\right]\\) 相同且比 \\(\\left[\\frac{2021}{n}\\right]\\) 小 1,则 \\(\\left[\\frac{2019}{n}\\right] + \\left[\\frac {2020}{n}\\right] + \\left[\\frac {2021}{n}\\right]\\) 的和不是 3 的倍数;\n\n(4)当 \\(n\\) 不是 2019、2020、2021 中任何一个数的因数时, \\(\\left[\\frac{2019}{n}\\right] \\div \\left[\\frac {2020}{n}\\right]\\) 、 \\(\\left[\\frac {2021}{n}\\right]\\) 相同,则 \\(\\left[\\frac {2019}{n}\\right] + \\left[\\frac {2020}{n}\\right]\\div \\left[\\frac {2021}{n}\\right]\\) 的和不是 3 的倍\n\n(2) \\(n = 2\\) 时,这个四位数分成的前后两个两位数都恰好有 2 个因数,所以前后的两位数都是质数,两位质数一共有 21 个;由乘法原理, \\(n = 2\\) 时,符合条件的四位数一",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021六年级网赛【答案解析】/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021六年级网赛【答案解析】/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、答案和解析，直接可用于练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json#5#7",
+          "json_path": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json"
+        }
+      },
+      "text": "7. \\([a]\\) 表示不超过 \\(a\\) 的最大整数,例如: \\([15] = 15\\) , \\([3.14] = 3\\) .那么,在所有不超过 2021 的正整数 \\(n\\) 中,满足算式 \\(\\left[\\frac{2019}{n}\\right] + \\left[\\frac{2020}{n}\\right] + \\left[\\frac{2021}{n}\\right]\\) 的计算结果不能被 3 整除的 \\(n\\) 有 个.",
+      "answer": "14",
+      "solution": "因为 2019、2020、2021 是三个连续自然数,且两两互质,任何两数都只有公因数 1.\n\n(1)当 \\(n\\) 是1时, \\(\\left[\\frac{2019}{n}\\right] + \\left[\\frac{2021}{n}\\right] + \\left[\\frac{2021}{n}\\right] = 6060\\) 是3的倍数;\n\n(2)当 \\(n\\) 不是1时:\n\n\\(①\\) 当 \\(n\\) 是 2019 的因数时, \\(\\left[\\frac{2019}{n}\\right]\\) 是整数, \\(\\left[\\frac{2019}{n}\\right] \\div \\left[\\frac{2020}{n}\\right]\\) 、 \\(\\left[\\frac{2021}{n}\\right]\\) 相同,则 \\(\\left[\\frac{2019}{n}\\right] + \\left[\\frac{2022}{n}\\right] + \\left[\\frac{2021}{n}\\right]\\) 的和是 3 的倍数;\n\n\\(②\\) 当 \\(n\\) 是 2020 的因数时, \\(\\left[\\frac{2020}{n}\\right]\\) 是整数, \\(\\left[\\frac{2019}{n}\\frac{2019}{n}\\right]\\) 比 \\(\\left[\\frac{2020}{n}\\right]\\) 小 1, \\(\\left[\\frac{2021}{n}\\right]\\) 与 \\(\\left[\\frac{2021}{n}\\right]\\) 相同,则 \\(\\left[\\left[\\frac{2019}{n}\\right] + \\left[\\frac{2020}{\\frac{n}{n}}\\right] + \\left[\\frac{2021}{n}\\right]\\right]\\) 的和不是 3 的倍数;\n\n\\(③\\) 当 \\(n\\) 是 2021 的因数时, \\(\\left[\\frac{2021}{n}\\right]\\) 是整数, \\(\\left[\\frac{2019}{n}\\div \\left[\\frac{2020}{n}\\right]\\right]\\) 相同且比 \\(\\left[\\frac{2021}{n}\\right]\\) 小 1,则 \\(\\left[\\frac{2019}{n}\\right] + \\left[\\frac {2020}{n}\\right] + \\left[\\frac {2021}{n}\\right]\\) 的和不是 3 的倍数;\n\n(4)当 \\(n\\) 不是 2019、2020、2021 中任何一个数的因数时, \\(\\left[\\frac{2019}{n}\\right] \\div \\left[\\frac {2020}{n}\\right]\\) 、 \\(\\left[\\frac {2021}{n}\\right]\\) 相同,则 \\(\\left[\\frac {2019}{n}\\right] + \\left[\\frac {2020}{n}\\right]\\div \\left[\\frac {2021}{n}\\right]\\) 的和不是 3 的倍\n\n(2) \\(n = 2\\) 时,这个四位数分成的前后两个两位数都恰好有 2 个因数,所以前后的两位数都是质数,两位质数一共有 21 个;由乘法原理, \\(n = 2\\) 时,符合条件的四位数一"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2021六年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021六年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "9. 如图,在 \\(4\\times 4\\) 的正方形棋盘上的每格都装有一盏灯和一个按钮,每按一次按钮,与它同一行和同一列方格中的其他灯泡(包括按钮所在这一格的灯泡)都改变一次状态,即由亮变为不亮,或由不亮变为亮,如果图中标有 \\(\\pmb{\\triangle}\\) 的格子灯是亮的,其余格子灯是灭的,那么,最少需要按次按钮才可以使灯全部变亮.",
+      "answer_text": "5",
+      "solution_text": "定义每个格子的特征值:将与这个格子同一行、同一列的亮灯数量称为这个格子的特征值,上图中每一个格子的特征值如图9- 1所示:\n\n<table><tr><td>5</td><td>4</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>3</td><td>3</td></tr><tr><td>4</td><td>4</td><td>4</td><td>3</td></tr><tr><td>5</td><td>5</td><td>5</td><td>3</td></tr></table>\n\n要想改变某一个格子里面所填特征值的奇偶性,只能操作这个格子的开关,操作任何一个开关都不会改变其他格子里\"特征值\"的奇偶性,例如,想要改变第一行第二列所在格子特征值\"2\"的奇偶性,只有操作第一行第二列的开关才能做到,操作其他任何开关,第一行第二列所在位置的特征值都永远还是偶数.\n\n而所有灯全亮时,每个格子的特征值都是奇数,图中一共有5个格子的特征值是偶数,每个格子至少要操作一次来改变这一格特征值的奇偶性,故至少操作5次.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021六年级网赛【答案解析】/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021六年级网赛【答案解析】/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整题干、明确答案和详细解析，答案和解析直接泄露，因此仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json#6#9",
+          "json_path": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json"
+        }
+      },
+      "text": "9. 如图,在 \\(4\\times 4\\) 的正方形棋盘上的每格都装有一盏灯和一个按钮,每按一次按钮,与它同一行和同一列方格中的其他灯泡(包括按钮所在这一格的灯泡)都改变一次状态,即由亮变为不亮,或由不亮变为亮,如果图中标有 \\(\\pmb{\\triangle}\\) 的格子灯是亮的,其余格子灯是灭的,那么,最少需要按次按钮才可以使灯全部变亮.",
+      "answer": "5",
+      "solution": "定义每个格子的特征值:将与这个格子同一行、同一列的亮灯数量称为这个格子的特征值,上图中每一个格子的特征值如图9- 1所示:\n\n<table><tr><td>5</td><td>4</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>3</td><td>3</td></tr><tr><td>4</td><td>4</td><td>4</td><td>3</td></tr><tr><td>5</td><td>5</td><td>5</td><td>3</td></tr></table>\n\n要想改变某一个格子里面所填特征值的奇偶性,只能操作这个格子的开关,操作任何一个开关都不会改变其他格子里\"特征值\"的奇偶性,例如,想要改变第一行第二列所在格子特征值\"2\"的奇偶性,只有操作第一行第二列的开关才能做到,操作其他任何开关,第一行第二列所在位置的特征值都永远还是偶数.\n\n而所有灯全亮时,每个格子的特征值都是奇数,图中一共有5个格子的特征值是偶数,每个格子至少要操作一次来改变这一格特征值的奇偶性,故至少操作5次."
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2021六年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021六年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "10. 将一张 \\(A4\\) 的长方形纸片对折一次算一次操作,现在将一张纸片对折 \\(n\\) 次( \\(n\\) 为不大于7的自然数),然后在对折好的纸片上画7- \\(n\\) 条直线,最后将纸片沿所画的直线剪开,最多能将这张纸片剪成多少块?(对折指沿着对称轴将图形)",
+      "answer_text": "97",
+      "solution_text": "第一,题中要求对折,只能沿着对称轴将图形对折;\n\n第二,对折可以是沿同一个方向重复对折,也可以沿两个不同方向,\n\n规定左右和上下两个方向,(左,指从右向左对折,上指从下向上对折)那么对折情况共有:",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021六年级网赛【答案解析】/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021六年级网赛【答案解析】/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但直接包含答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json#6#10",
+          "json_path": "source_pdf/六年级/2021/2021六年级网赛【答案解析】.json"
+        }
+      },
+      "text": "10. 将一张 \\(A4\\) 的长方形纸片对折一次算一次操作,现在将一张纸片对折 \\(n\\) 次( \\(n\\) 为不大于7的自然数),然后在对折好的纸片上画7- \\(n\\) 条直线,最后将纸片沿所画的直线剪开,最多能将这张纸片剪成多少块?(对折指沿着对称轴将图形)",
+      "answer": "97",
+      "solution": "第一,题中要求对折,只能沿着对称轴将图形对折;\n\n第二,对折可以是沿同一个方向重复对折,也可以沿两个不同方向,\n\n规定左右和上下两个方向,(左,指从右向左对折,上指从下向上对折)那么对折情况共有:"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级一试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\((A + B + C)\\times (D + E) = F\\times (G + H + I)\\) 中,每个字母代表1\\~9中互不相同的数字,并且等号左边的字母代表的都是奇数数字,等号右边的字母代表的都是偶数数字.那么,符合条件的五位数ABCDE最小是",
+      "answer_text": "57913",
+      "solution_text": "解法1:等号右边都是偶数数字为2、4、6、8,和为20,所以只能是 \\(2\\times 18\\) , \\(4\\times 16\\) , \\(6\\times 14\\) , \\(8\\times 12\\) 四种情况,然后逐一将结果分解为奇数 \\(\\times\\) 偶数即可,或者进一步分析左边:\n\n等号左边都是奇数数字,肯定是奇数 \\(\\times\\) 偶数,偶数最大为 \\(7 + 9 = 16\\) ,根据等号两边含有质因数2的数量来看,不难排除掉 \\(4\\times 16\\) 和 \\(8\\times 12\\) 两种情况.\n\n情况一: \\(2\\times 18 = 36 = 9\\times 4\\) ,显然无解;\n\n情况二: \\(6\\times 14 = 84 = 21\\times 4 = (5 + 7 + 9)\\times (1 + 3)\\)\n\n所以,五位数ABCDE最小是57913.\n\n解法2:左边数字和为25,右边数字和为20,同时分拆,\n\n左边根据第二个括号的偶数枚举,可能为: \\(4\\times 21\\) , \\(6\\times 19\\) , \\(8\\times 17\\) , \\(10\\times 15\\) , \\(12\\times 13\\) , \\(14\\times 11\\) , \\(16\\times 9\\) ;\n\n右边可能为: \\(2\\times 18\\) , \\(4\\times 16\\) , \\(6\\times 14\\), \\(8\\times 12\\) ,\n\n只能是 \\(6\\times (2 + 4 + 8) = 6\\times 14 = 21\\times 4 = (5 + 7 + 9)\\times (1+3)\\)\n\n所以,五位数ABCDE最小是57913.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级一试（解析）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整问题和直接答案解析，存在高泄露风险，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json#1#1",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json"
+        }
+      },
+      "text": "1. 算式 \\((A + B + C)\\times (D + E) = F\\times (G + H + I)\\) 中,每个字母代表1\\~9中互不相同的数字,并且等号左边的字母代表的都是奇数数字,等号右边的字母代表的都是偶数数字.那么,符合条件的五位数ABCDE最小是",
+      "answer": "57913",
+      "solution": "解法1:等号右边都是偶数数字为2、4、6、8,和为20,所以只能是 \\(2\\times 18\\) , \\(4\\times 16\\) , \\(6\\times 14\\) , \\(8\\times 12\\) 四种情况,然后逐一将结果分解为奇数 \\(\\times\\) 偶数即可,或者进一步分析左边:\n\n等号左边都是奇数数字,肯定是奇数 \\(\\times\\) 偶数,偶数最大为 \\(7 + 9 = 16\\) ,根据等号两边含有质因数2的数量来看,不难排除掉 \\(4\\times 16\\) 和 \\(8\\times 12\\) 两种情况.\n\n情况一: \\(2\\times 18 = 36 = 9\\times 4\\) ,显然无解;\n\n情况二: \\(6\\times 14 = 84 = 21\\times 4 = (5 + 7 + 9)\\times (1 + 3)\\)\n\n所以,五位数ABCDE最小是57913.\n\n解法2:左边数字和为25,右边数字和为20,同时分拆,\n\n左边根据第二个括号的偶数枚举,可能为: \\(4\\times 21\\) , \\(6\\times 19\\) , \\(8\\times 17\\) , \\(10\\times 15\\) , \\(12\\times 13\\) , \\(14\\times 11\\) , \\(16\\times 9\\) ;\n\n右边可能为: \\(2\\times 18\\) , \\(4\\times 16\\) , \\(6\\times 14\\), \\(8\\times 12\\) ,\n\n只能是 \\(6\\times (2 + 4 + 8) = 6\\times 14 = 21\\times 4 = (5 + 7 + 9)\\times (1+3)\\)\n\n所以,五位数ABCDE最小是57913."
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级一试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 小东、小西、小南、小北四人共有28颗糖果.如果小西把糖果全部给小东,则小北的糖果数将是小东的 \\(\\frac{1}{3}\\) ;如果小北把糖果全部平均分给小东和小西,则小西与小东的糖果数之比为1:2. 已知小南和小北的糖果数相差不超过5. 那么,小东有________颗糖",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级一试（解析）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json#1#2",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json"
+        }
+      },
+      "text": "2. 小东、小西、小南、小北四人共有28颗糖果.如果小西把糖果全部给小东,则小北的糖果数将是小东的 \\(\\frac{1}{3}\\) ;如果小北把糖果全部平均分给小东和小西,则小西与小东的糖果数之比为1:2. 已知小南和小北的糖果数相差不超过5. 那么,小东有________颗糖",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级一试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "3. 如图,长方形ABCD中有一个直角扇形(空白部分),扇形恰好与长方形四边各有一个公共点.如果三角形EFG、长方形ABCD的面积分别是40、280,那么图中阴影面积之和是 .(圆周率 \\(\\pi\\) 取3.14)",
+      "answer_text": "123",
+      "solution_text": "由已知, \\(O F / / A D\\) ,根据一半模型,四边形 \\(E O G F\\) 的面积为: \\(280\\div 2 = 140\\) ,那么,三角形 \\(O E G\\) 的面积为: \\(280\\div 2 - 40 = 100\\) , \\(O E^{2} = 200\\) ,所以扇形面积为: \\(\\frac{1}{4}\\times \\pi \\times O E^{2} = 50\\pi\\) ,所以阴影面积为: \\(280 - 50\\pi = 123\\) .\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_002/images/0.jpg)\n\n## 二.解答题(每小题15分,共30分)\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_002/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级一试（解析）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整的题干、答案和解析，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json#2#3",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json"
+        }
+      },
+      "text": "3. 如图,长方形ABCD中有一个直角扇形(空白部分),扇形恰好与长方形四边各有一个公共点.如果三角形EFG、长方形ABCD的面积分别是40、280,那么图中阴影面积之和是 .(圆周率 \\(\\pi\\) 取3.14)",
+      "answer": "123",
+      "solution": "由已知, \\(O F / / A D\\) ,根据一半模型,四边形 \\(E O G F\\) 的面积为: \\(280\\div 2 = 140\\) ,那么,三角形 \\(O E G\\) 的面积为: \\(280\\div 2 - 40 = 100\\) , \\(O E^{2} = 200\\) ,所以扇形面积为: \\(\\frac{1}{4}\\times \\pi \\times O E^{2} = 50\\pi\\) ,所以阴影面积为: \\(280 - 50\\pi = 123\\) .\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_002/images/0.jpg)\n\n## 二.解答题(每小题15分,共30分)\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_002/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级一试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "4. 如图,甲、乙、丙三个微型机器人从 \\(A\\) 点同时出发,匀速沿正方形导轨 \\(ABCD\\) 顺时针运动;出发一段时间后,以三个微型机器人所在地为顶点的三角形的面积恰好是正方形 \\(ABCD\\) 面积的一半,此时他们停止运动,进行了如下对话:\n\n甲:这是我首次到达我现在所在的位置;\n\n乙:你太慢了,我已经是第8次到达我现在的位置了;\n\n丙:你别得意,我到现在的位置的次数恰好是你到你现在位置的次数的两倍呢!\n\n已知以上三个机器人说的都是真话,且甲乙丙每秒走的厘米数恰好是小于100的质数.求三人的速度.",
+      "answer_text": "2、31、61",
+      "solution_text": "(1)首先,三角形面积为正方形 \\(ABCD\\) 的一半只能是有2人在相邻顶点,第三人在对边上;\n\n证明: \\(①\\) 当三角形有两个点在同一条边上时:易证当且仅当这两点在正方形的两个顶点,第三个顶点在对边上任意一点时,三角形面积最大,为正方形的一半;\n\n\\(②\\) 当情况 \\(①\\) 不存在时,即三角形三个顶点在三条边上,且不存在一条边上两个顶点的情况,如下图所示:\n\n此时, \\(S_{\\triangle HMN} < S_{\\triangle AMN} = \\frac{S_{\\text{正方形} ABCD} - S_{\\text{长方形} AHOR}}{2} < \\frac{S_{\\text{正方形} ABCD}}{2}\\) .\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_003/images/0.jpg)\n\n综上,要使面积为正方形 \\(ABCD\\) 的一半,只能是有2人在相邻顶点,第三人在对边上.\n\n(2)再证在相邻两顶点处的人速度奇偶性不同.\n\n时间相同,路程比等于速度比,而路程比又可以对应成走的边数的比,相邻两个顶点的人,走的边数的奇偶性不同,而速度都是质数,所以,一定有一个机器人的速度为2厘米/秒,那么另外两人的速度都是奇质数.\n\n根据对话,甲是首次到达所在的位置,而乙丙都分别是第8次和第16次到达所在的位置了,所以甲的速度为2厘米/秒,此时甲在 \\(C\\) 点.\n\n根据信息,可以设乙走了 \\(4 \\times 7 + p\\) 条边,丙走了 \\(4 \\times 15 + q\\) 条边,即 \\(V_{\\angle} = (28 + p)\\) 厘米/秒, \\(V_{\\text{丙}} = (60 + q)\\) 厘米/秒, \\(p\\) 、 \\(q\\) 都是不超过4的奇数,而乙丙又",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级一试（解析）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整题干，但直接提供了答案和解析，存在高泄露风险，只建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json#3#4",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json"
+        }
+      },
+      "text": "4. 如图,甲、乙、丙三个微型机器人从 \\(A\\) 点同时出发,匀速沿正方形导轨 \\(ABCD\\) 顺时针运动;出发一段时间后,以三个微型机器人所在地为顶点的三角形的面积恰好是正方形 \\(ABCD\\) 面积的一半,此时他们停止运动,进行了如下对话:\n\n甲:这是我首次到达我现在所在的位置;\n\n乙:你太慢了,我已经是第8次到达我现在的位置了;\n\n丙:你别得意,我到现在的位置的次数恰好是你到你现在位置的次数的两倍呢!\n\n已知以上三个机器人说的都是真话,且甲乙丙每秒走的厘米数恰好是小于100的质数.求三人的速度.",
+      "answer": "2、31、61",
+      "solution": "(1)首先,三角形面积为正方形 \\(ABCD\\) 的一半只能是有2人在相邻顶点,第三人在对边上;\n\n证明: \\(①\\) 当三角形有两个点在同一条边上时:易证当且仅当这两点在正方形的两个顶点,第三个顶点在对边上任意一点时,三角形面积最大,为正方形的一半;\n\n\\(②\\) 当情况 \\(①\\) 不存在时,即三角形三个顶点在三条边上,且不存在一条边上两个顶点的情况,如下图所示:\n\n此时, \\(S_{\\triangle HMN} < S_{\\triangle AMN} = \\frac{S_{\\text{正方形} ABCD} - S_{\\text{长方形} AHOR}}{2} < \\frac{S_{\\text{正方形} ABCD}}{2}\\) .\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_003/images/0.jpg)\n\n综上,要使面积为正方形 \\(ABCD\\) 的一半,只能是有2人在相邻顶点,第三人在对边上.\n\n(2)再证在相邻两顶点处的人速度奇偶性不同.\n\n时间相同,路程比等于速度比,而路程比又可以对应成走的边数的比,相邻两个顶点的人,走的边数的奇偶性不同,而速度都是质数,所以,一定有一个机器人的速度为2厘米/秒,那么另外两人的速度都是奇质数.\n\n根据对话,甲是首次到达所在的位置,而乙丙都分别是第8次和第16次到达所在的位置了,所以甲的速度为2厘米/秒,此时甲在 \\(C\\) 点.\n\n根据信息,可以设乙走了 \\(4 \\times 7 + p\\) 条边,丙走了 \\(4 \\times 15 + q\\) 条边,即 \\(V_{\\angle} = (28 + p)\\) 厘米/秒, \\(V_{\\text{丙}} = (60 + q)\\) 厘米/秒, \\(p\\) 、 \\(q\\) 都是不超过4的奇数,而乙丙又"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级一试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "5. 在图5-1所示的 \\(4 \\times 4\\) 网格中,每格填入数字0或1或2,使得每行、每列四个数字之和都为奇数,第一列的\"2021\"已经填好.\n\n(1)图5-2为其中一种正确的填法,请你在图5-3,图5-4中再填出另外两种不同的正确填法.(每种填法1分,共2分.)\n\n(2)如果余下的12个方格中一共填了9个1,一共有多少种满足要求的填法?(5分)\n\n(3)余下的12个方格一共有多少种满足要求的填法?(8分)\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/0.jpg)\n\n<center>图5-1</center>\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/1.jpg)\n\n<center>图5-2</center>\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/2.jpg)\n\n<center>图5-3</center>\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/3.jpg)\n\n<center>图5-4</center>",
+      "answer_text": "(1)略;(2)80;(3)7568",
+      "solution_text": "解法1:\n\n除第一列已经填好的\"2021\"外,其余空格中:前3行每行有奇数个1;第4行有偶数个1,每列和也是奇数,所以,第4行中1的位置被前三行1的情况所确定.其余不是1的方格,可以是0或2任选.\n\n根据前3行1的情况分类讨论:\n\n1)三行都是3个1,那么第4行固定,一定是0个1(如图1),共 \\(2^{3} = 8\\) 种;\n\n2)有两行是3个1,一行是1个1,第四行一定是两个1且位置固定,如图2所示.共:\n\n\\[C_{3}^{2}\\times C_{3}^{1}\\times 2^{3} = 72\\]\n\n注:以上两种为第(2)问的答案,共80种.\n\n3)有一行是3个1,还有两行各1个1,这两个1分同列和不同列两种.如图3甲,图3乙所示.\n\n图3甲共: \\(C_{3}^{1}\\times C_{3}^{1}\\times 2^{7} = 1152\\) 种,图3乙共: \\(C_{3}^{1}\\times A_{5}^{2}\\times 2^{5} = 576\\) 种;\n\n4)前3行都只有一个1,分全同列(图4甲),有两个同列(图4乙),都不同列(图",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级一试（解析）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目中直接包含了答案和详细解析，存在答案泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json#4#5",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级一试（解析）.json"
+        }
+      },
+      "text": "5. 在图5-1所示的 \\(4 \\times 4\\) 网格中,每格填入数字0或1或2,使得每行、每列四个数字之和都为奇数,第一列的\"2021\"已经填好.\n\n(1)图5-2为其中一种正确的填法,请你在图5-3,图5-4中再填出另外两种不同的正确填法.(每种填法1分,共2分.)\n\n(2)如果余下的12个方格中一共填了9个1,一共有多少种满足要求的填法?(5分)\n\n(3)余下的12个方格一共有多少种满足要求的填法?(8分)\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/0.jpg)\n\n<center>图5-1</center>\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/1.jpg)\n\n<center>图5-2</center>\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/2.jpg)\n\n<center>图5-3</center>\n\n![](ocr_debug/2021年总决赛六年级一试（解析）/pages/page_004/images/3.jpg)\n\n<center>图5-4</center>",
+      "answer": "(1)略;(2)80;(3)7568",
+      "solution": "解法1:\n\n除第一列已经填好的\"2021\"外,其余空格中:前3行每行有奇数个1;第4行有偶数个1,每列和也是奇数,所以,第4行中1的位置被前三行1的情况所确定.其余不是1的方格,可以是0或2任选.\n\n根据前3行1的情况分类讨论:\n\n1)三行都是3个1,那么第4行固定,一定是0个1(如图1),共 \\(2^{3} = 8\\) 种;\n\n2)有两行是3个1,一行是1个1,第四行一定是两个1且位置固定,如图2所示.共:\n\n\\[C_{3}^{2}\\times C_{3}^{1}\\times 2^{3} = 72\\]\n\n注:以上两种为第(2)问的答案,共80种.\n\n3)有一行是3个1,还有两行各1个1,这两个1分同列和不同列两种.如图3甲,图3乙所示.\n\n图3甲共: \\(C_{3}^{1}\\times C_{3}^{1}\\times 2^{7} = 1152\\) 种,图3乙共: \\(C_{3}^{1}\\times A_{5}^{2}\\times 2^{5} = 576\\) 种;\n\n4)前3行都只有一个1,分全同列(图4甲),有两个同列(图4乙),都不同列(图"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级二试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 老师让小航在试卷上写出某个自然数的所有因数,然后分别计算这些因数的个数与总和.小航的计算结果是\"共有10个因数,总和是100.\"老师批改时发现,小航将其中一个因数多写了一遍,导致两个答案都错误了.那么小航多写的因数是________.",
+      "answer_text": "9",
+      "solution_text": "实际上这个自然数共有9个因数,且因数和小于100.\n\n所以这个自然数是 \\(p^{8}\\) 或者 \\(p^{2}q^{2}\\) 的形式的数(其中 \\(p,q\\) 为质数)且小于100.\n\n因此这个自然数是 \\(2^{2} \\times 3^{2} = 36\\) ,多写的因数为 \\(100 - (1 + 2 + 2^{2}) \\times (1 + 3 + 3^{2}) = 9\\) .",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级二试（解析）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级二试（解析）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，存在泄露风险，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json#1#1",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json"
+        }
+      },
+      "text": "1. 老师让小航在试卷上写出某个自然数的所有因数,然后分别计算这些因数的个数与总和.小航的计算结果是\"共有10个因数,总和是100.\"老师批改时发现,小航将其中一个因数多写了一遍,导致两个答案都错误了.那么小航多写的因数是________.",
+      "answer": "9",
+      "solution": "实际上这个自然数共有9个因数,且因数和小于100.\n\n所以这个自然数是 \\(p^{8}\\) 或者 \\(p^{2}q^{2}\\) 的形式的数(其中 \\(p,q\\) 为质数)且小于100.\n\n因此这个自然数是 \\(2^{2} \\times 3^{2} = 36\\) ,多写的因数为 \\(100 - (1 + 2 + 2^{2}) \\times (1 + 3 + 3^{2}) = 9\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级二试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 将三位数123与456不改变各自数字的前后顺序组合到一起,可以得到很多六位数,例如:123456,124536,415263,415623都符合条件,但143526就不符合条件,容易知道符合条件的六位数有20个.那么,如果将四位数1223与4226类似的组合到一起,一共能得到________个不同的八位数.",
+      "answer_text": "32",
+      "solution_text": "得到的八位数首、末数字只能是(1,3),(1,6),(4,6)和(4,3),分类进行讨论:\n\n(1)首、末位数字是(1,3)和(4,6)时,即 \\(1 \\dots 4 \\dots 6 \\dots 3\\) 或 \\(4 \\dots 1 \\dots 3 \\dots 6\\) 时,其计数种类相同,由插板法,每类都是 \\(C_{4 + 2 - 1 - 1}^{3 - 1} = 6\\) 个,共 \\(6 \\times 2 = 12\\) 个;\n\n(2)首、末位数字是(1,6)和(4,3)时,其计数种类相同,\n\n(A)首、末位是1和6时:\n\n\\(①1 \\dots 4 \\dots 3 \\dots 6,4\\) 和6之间也至少2个2;根据4和3之间2的个数从0\\~4进行枚举,之间至少2个2\n\n共9个符合条件的八位数;",
+      "topic": "combinatorics",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级二试（解析）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级二试（解析）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整但包含答案和解析，泄露风险高，不适合考试，仅适合练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json#1#2",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json"
+        }
+      },
+      "text": "2. 将三位数123与456不改变各自数字的前后顺序组合到一起,可以得到很多六位数,例如:123456,124536,415263,415623都符合条件,但143526就不符合条件,容易知道符合条件的六位数有20个.那么,如果将四位数1223与4226类似的组合到一起,一共能得到________个不同的八位数.",
+      "answer": "32",
+      "solution": "得到的八位数首、末数字只能是(1,3),(1,6),(4,6)和(4,3),分类进行讨论:\n\n(1)首、末位数字是(1,3)和(4,6)时,即 \\(1 \\dots 4 \\dots 6 \\dots 3\\) 或 \\(4 \\dots 1 \\dots 3 \\dots 6\\) 时,其计数种类相同,由插板法,每类都是 \\(C_{4 + 2 - 1 - 1}^{3 - 1} = 6\\) 个,共 \\(6 \\times 2 = 12\\) 个;\n\n(2)首、末位数字是(1,6)和(4,3)时,其计数种类相同,\n\n(A)首、末位是1和6时:\n\n\\(①1 \\dots 4 \\dots 3 \\dots 6,4\\) 和6之间也至少2个2;根据4和3之间2的个数从0\\~4进行枚举,之间至少2个2\n\n共9个符合条件的八位数;"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级二试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "3. 如图, \\(E\\) 、 \\(P\\) 、 \\(Q\\) 分别为三角形 \\(ABC\\) 的 \\(AB\\) 、 \\(AC\\) 边上的点,且 \\(EB = 2EA\\) , \\(QC = 2QA\\) , \\(QF = 2QD\\) ,三角形 \\(AEP\\) 的面积为87,三角形 \\(BFC\\) 的面积为282. 那么,三角形 \\(DPQ\\) 的面积为________.\n\n![](ocr_debug/2021年总决赛六年级二试（解析）/pages/page_002/images/0.jpg)",
+      "answer_text": "40",
+      "solution_text": "解法1:\n\n连接 \\(AD\\) 、 \\(EQ\\) ,过点 \\(F\\) 作 \\(BC\\) 的平行线,与 \\(DE\\) 的延长线交于 \\(R\\) ,连接 \\(FR\\) 、 \\(BR\\) .\n\n![](ocr_debug/2021年总决赛六年级二试（解析）/pages/page_002/images/1.jpg)\n\n显然 \\(BCFR\\) 是平行四边形, \\(\\triangle BCF = \\triangle BRF\\) ,所以:",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级二试（解析）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级二试（解析）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级二试（解析）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整的答案和解析，直接泄露，因此不适合考试，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json#2#3",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json"
+        }
+      },
+      "text": "3. 如图, \\(E\\) 、 \\(P\\) 、 \\(Q\\) 分别为三角形 \\(ABC\\) 的 \\(AB\\) 、 \\(AC\\) 边上的点,且 \\(EB = 2EA\\) , \\(QC = 2QA\\) , \\(QF = 2QD\\) ,三角形 \\(AEP\\) 的面积为87,三角形 \\(BFC\\) 的面积为282. 那么,三角形 \\(DPQ\\) 的面积为________.\n\n![](ocr_debug/2021年总决赛六年级二试（解析）/pages/page_002/images/0.jpg)",
+      "answer": "40",
+      "solution": "解法1:\n\n连接 \\(AD\\) 、 \\(EQ\\) ,过点 \\(F\\) 作 \\(BC\\) 的平行线,与 \\(DE\\) 的延长线交于 \\(R\\) ,连接 \\(FR\\) 、 \\(BR\\) .\n\n![](ocr_debug/2021年总决赛六年级二试（解析）/pages/page_002/images/1.jpg)\n\n显然 \\(BCFR\\) 是平行四边形, \\(\\triangle BCF = \\triangle BRF\\) ,所以:"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级二试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "4. 甲、乙、丙容器中分别有浓度为 \\(1\\%\\) 、 \\(5\\%\\) 和 \\(27\\%\\) 的盐水溶液.从乙容器中取出 \\(m\\) 克盐水倒入甲容器,再给乙容器加入一些清水,当甲、乙容器盐水重量相同时,乙容器的浓度恰好是甲容器的2倍;再从丙容器中取 \\(m\\) 克盐水按2:1的比例倒入甲、乙两个容器,然后再向乙、丙容器中加入清水,使三个容器中盐水的重量相等,这时三个容器中盐水浓度恰好也相同.若最初乙容器中的盐水重量比甲容器多60克,那么,原来丙容器的盐水重量是多少克?",
+      "answer_text": "200",
+      "solution_text": "解法1:\n\n由条件易知:若 \\(m\\) 克 \\(5\\%\\) 的盐水中含盐 \\(5x\\) 克,那么 \\(m\\) 克 \\(27\\%\\) 的盐水中含盐 \\(27x\\) 克.我们先只看盐的变化,设原来甲容器含盐 \\(a\\) 克,乙容器含盐 \\(b + 15x\\) 克,丙容器中含盐 \\(c + 27x\\) 克.\n\n<table><tr><td></td><td>最初</td><td>第一次操作后</td><td>第二次操作后</td></tr><tr><td>甲</td><td>a</td><td>a+5x</td><td>a+23x</td></tr><tr><td>乙</td><td>b+15x</td><td>b+10x</td><td>b+19x</td></tr><tr><td>丙</td><td>c+27x</td><td>c+27x</td><td>c</td></tr></table>\n\n第一次操作后,甲、乙容器盐水重量相同时,而乙容器的浓度是甲容器的2倍,说明",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级二试（解析）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级二试（解析）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整但答案和解析已直接给出，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json#4#4",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json"
+        }
+      },
+      "text": "4. 甲、乙、丙容器中分别有浓度为 \\(1\\%\\) 、 \\(5\\%\\) 和 \\(27\\%\\) 的盐水溶液.从乙容器中取出 \\(m\\) 克盐水倒入甲容器,再给乙容器加入一些清水,当甲、乙容器盐水重量相同时,乙容器的浓度恰好是甲容器的2倍;再从丙容器中取 \\(m\\) 克盐水按2:1的比例倒入甲、乙两个容器,然后再向乙、丙容器中加入清水,使三个容器中盐水的重量相等,这时三个容器中盐水浓度恰好也相同.若最初乙容器中的盐水重量比甲容器多60克,那么,原来丙容器的盐水重量是多少克?",
+      "answer": "200",
+      "solution": "解法1:\n\n由条件易知:若 \\(m\\) 克 \\(5\\%\\) 的盐水中含盐 \\(5x\\) 克,那么 \\(m\\) 克 \\(27\\%\\) 的盐水中含盐 \\(27x\\) 克.我们先只看盐的变化,设原来甲容器含盐 \\(a\\) 克,乙容器含盐 \\(b + 15x\\) 克,丙容器中含盐 \\(c + 27x\\) 克.\n\n<table><tr><td></td><td>最初</td><td>第一次操作后</td><td>第二次操作后</td></tr><tr><td>甲</td><td>a</td><td>a+5x</td><td>a+23x</td></tr><tr><td>乙</td><td>b+15x</td><td>b+10x</td><td>b+19x</td></tr><tr><td>丙</td><td>c+27x</td><td>c+27x</td><td>c</td></tr></table>\n\n第一次操作后,甲、乙容器盐水重量相同时,而乙容器的浓度是甲容器的2倍,说明"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2021年总决赛六年级二试（解析）.pdf",
+      "exam": {
+        "exam_key": "2021年总决赛六年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "5. 四年一届的疯狂动物城市长大选进入到最后的计票阶段.树獭\"闪电\"担任计票员,他每清点一张选票,就会立即在大屏幕上更新两位候选人最新的得票数和已经开出的总票数,并以最简分数的形式表示出两位候选人的实时得票率(实时得票率 \\(=\\) 得票数 \\(\\div\\) 已经开出的总票数).兔子警官\"朱迪\"将候选人狮子在屏幕上出现过的每个实时得票率都记录在了自己的笔记本上.他发现,虽然第一张选票没有投给狮子,但最终狮子获得了超过了 \\(97\\%\\) 的选票.\n\n(1)请说明: \\(\\frac{1}{2}\\) 一定出现在所有\"朱迪\"的记事本里.(5分)\n\n(2)一共有多少个大于0的分数一定出现在所有\"朱迪\"的记事本里?(10分)",
+      "answer_text": "32",
+      "solution_text": "(1)考虑已经开出的选票中狮子的得票数 \\(x\\) 与其余所有人的得票数之和 \\(y\\) .开始阶段, \\(x = 0\\) , \\(y > 0\\) ;每开出一张选票, \\(x\\) 与 \\(y\\) 中的一个数不变,一个数加1, \\(x\\) 与 \\(y\\) 的差值变化为1;最后阶段, \\(x\\) 与 \\(y\\) 的比值超过 \\(\\frac{97}{3}\\) , \\(x\\) 大于 \\(y\\) .按照上面的规则,从 \\(x\\) 小于 \\(y\\) 过渡到 \\(x\\) 大于 \\(y\\) 的时候,一定有 \\(x = y\\) 的时刻,对应的得票率为 \\(\\frac{1}{2}\\) .因此, \\(\\frac{1}{2}\\) 一定出现在所有\"朱迪\"的记事本里.\n\n严格证明:假设笔记本上没有出现 \\(\\frac{1}{2}\\) ,由于最初的得票率小于 \\(\\frac{1}{2}\\) ,而最终的得票率大于 \\(\\frac{1}{2}\\) ,故得票率数列中一定存在相邻的两项,前一项小于 \\(\\frac{1}{2}\\) 而后一项大于 \\(\\frac{1}{2}\\) ,即某一时刻的实时得票率小于 \\(\\frac{1}{2}\\) ,而在得到下一票后的实时得票率增加到大于 \\(\\frac{1}{2}\\) .设这一时刻的总票数为 \\(a\\) ,得票数为 \\(b\\) ,则这两个得票率分别为 \\(\\frac{b}{a}\\) 与 \\(\\frac{b + 1}{a + 1}\\) ,即有 \\(\\frac{b}{a} < \\frac{1}{2} < \\frac{b + 1}{a + 1}\\) .化简两边的不等式得到 \\(\\left\\{ \\begin{array}{l}a > 2b \\\\ a < 2b + 1 \\end{array} \\right.\\) ,显然不存在正整数 \\(a\\) 同时满足这两个式子,矛盾.故\"朱迪\"记事",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021年总决赛六年级二试（解析）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021年总决赛六年级二试（解析）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含题目、答案和解析，答案直接给出且解析详细，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json#6#5",
+          "json_path": "source_pdf/六年级/2021/2021年总决赛六年级二试（解析）.json"
+        }
+      },
+      "text": "5. 四年一届的疯狂动物城市长大选进入到最后的计票阶段.树獭\"闪电\"担任计票员,他每清点一张选票,就会立即在大屏幕上更新两位候选人最新的得票数和已经开出的总票数,并以最简分数的形式表示出两位候选人的实时得票率(实时得票率 \\(=\\) 得票数 \\(\\div\\) 已经开出的总票数).兔子警官\"朱迪\"将候选人狮子在屏幕上出现过的每个实时得票率都记录在了自己的笔记本上.他发现,虽然第一张选票没有投给狮子,但最终狮子获得了超过了 \\(97\\%\\) 的选票.\n\n(1)请说明: \\(\\frac{1}{2}\\) 一定出现在所有\"朱迪\"的记事本里.(5分)\n\n(2)一共有多少个大于0的分数一定出现在所有\"朱迪\"的记事本里?(10分)",
+      "answer": "32",
+      "solution": "(1)考虑已经开出的选票中狮子的得票数 \\(x\\) 与其余所有人的得票数之和 \\(y\\) .开始阶段, \\(x = 0\\) , \\(y > 0\\) ;每开出一张选票, \\(x\\) 与 \\(y\\) 中的一个数不变,一个数加1, \\(x\\) 与 \\(y\\) 的差值变化为1;最后阶段, \\(x\\) 与 \\(y\\) 的比值超过 \\(\\frac{97}{3}\\) , \\(x\\) 大于 \\(y\\) .按照上面的规则,从 \\(x\\) 小于 \\(y\\) 过渡到 \\(x\\) 大于 \\(y\\) 的时候,一定有 \\(x = y\\) 的时刻,对应的得票率为 \\(\\frac{1}{2}\\) .因此, \\(\\frac{1}{2}\\) 一定出现在所有\"朱迪\"的记事本里.\n\n严格证明:假设笔记本上没有出现 \\(\\frac{1}{2}\\) ,由于最初的得票率小于 \\(\\frac{1}{2}\\) ,而最终的得票率大于 \\(\\frac{1}{2}\\) ,故得票率数列中一定存在相邻的两项,前一项小于 \\(\\frac{1}{2}\\) 而后一项大于 \\(\\frac{1}{2}\\) ,即某一时刻的实时得票率小于 \\(\\frac{1}{2}\\) ,而在得到下一票后的实时得票率增加到大于 \\(\\frac{1}{2}\\) .设这一时刻的总票数为 \\(a\\) ,得票数为 \\(b\\) ,则这两个得票率分别为 \\(\\frac{b}{a}\\) 与 \\(\\frac{b + 1}{a + 1}\\) ,即有 \\(\\frac{b}{a} < \\frac{1}{2} < \\frac{b + 1}{a + 1}\\) .化简两边的不等式得到 \\(\\left\\{ \\begin{array}{l}a > 2b \\\\ a < 2b + 1 \\end{array} \\right.\\) ,显然不存在正整数 \\(a\\) 同时满足这两个式子,矛盾.故\"朱迪\"记事"
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 定义新运算\" \\(\\otimes\\) \" : \\(a\\otimes b = \\frac{(a + 1)(b - 1)}{a\\times b} -1\\) ,那么算式 \\((43\\otimes 47)\\times 43\\times 47\\) 的计算结果是",
+      "answer_text": "3",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，有泄露风险，但问题完整可作为练习题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "1. 定义新运算\" \\(\\otimes\\) \" : \\(a\\otimes b = \\frac{(a + 1)(b - 1)}{a\\times b} -1\\) ,那么算式 \\((43\\otimes 47)\\times 43\\times 47\\) 的计算结果是",
+      "answer": "3",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 如图,一道除法竖式中已经填出了\"2021\",那么正确算式的除数是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "109",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接给出了答案，有泄露风险，仅适合练习使用。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "2. 如图,一道除法竖式中已经填出了\"2021\",那么正确算式的除数是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "109",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 指纹识别在日常生活中有非常广泛的应用,使用指纹识别之前需要先录入指纹,迎春电子厂研发了一套指纹录入系统,首次按压能录入 \\(\\frac{4}{5}\\) 的图案,之后每次按压能录入余下图案的 \\(\\frac{1}{2}\\) 。如果指纹图案的完整度不小于 \\(99\\%\\) 则算是录入成功,那么,成功录入一个指纹至少需要按压____次。\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "6",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整且可出题，但答案已直接给出，存在高风险泄露，不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "3. 指纹识别在日常生活中有非常广泛的应用,使用指纹识别之前需要先录入指纹,迎春电子厂研发了一套指纹录入系统,首次按压能录入 \\(\\frac{4}{5}\\) 的图案,之后每次按压能录入余下图案的 \\(\\frac{1}{2}\\) 。如果指纹图案的完整度不小于 \\(99\\%\\) 则算是录入成功,那么,成功录入一个指纹至少需要按压____次。\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "6",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 如图,某款\"风车\"玩具由边长为20厘米的正方形和四个直角边为10厘米的等腰直角三角形组成,图中四块空白部分为扇形,则阴影部分面积是____平方厘米。( \\(\\pi = 3.14\\) )\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "286",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "4. 如图,某款\"风车\"玩具由边长为20厘米的正方形和四个直角边为10厘米的等腰直角三角形组成,图中四块空白部分为扇形,则阴影部分面积是____平方厘米。( \\(\\pi = 3.14\\) )\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "286",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 已知刚开采出来的铁矿主要含有的是铁和其他杂质,冶炼过程实际上是剔除其他杂质,现在有一块1000千克的铁矿,含有 \\(5.95\\%\\) 的杂质,经过冶炼,变成了含铁量为 \\(99\\%\\) 的铁块,那么,冶炼过程剔除了____千克杂质。(铁的损耗忽略不计)",
+      "answer_text": "50",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本是完整的数学题干，但直接包含了标准答案，存在高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "5. 已知刚开采出来的铁矿主要含有的是铁和其他杂质,冶炼过程实际上是剔除其他杂质,现在有一块1000千克的铁矿,含有 \\(5.95\\%\\) 的杂质,经过冶炼,变成了含铁量为 \\(99\\%\\) 的铁块,那么,冶炼过程剔除了____千克杂质。(铁的损耗忽略不计)",
+      "answer": "50",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 八人进行单循环赛(即每两人之间比赛一场),每场比赛胜方得2分,负方得0分,平局则各得1分.比赛完毕后,发现:\n\n\\(①\\) 八人的得分互不相同;\n\n\\(②\\) 第二名的得分是第五、六、七、八名4人得分的总和;\n\n\\(③\\) 第一名没有战胜第四名.\n\n根据以上信息,第三名得了 分.",
+      "answer_text": "10",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案【答案】10，存在答案泄露，因此不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#2#6",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "6. 八人进行单循环赛(即每两人之间比赛一场),每场比赛胜方得2分,负方得0分,平局则各得1分.比赛完毕后,发现:\n\n\\(①\\) 八人的得分互不相同;\n\n\\(②\\) 第二名的得分是第五、六、七、八名4人得分的总和;\n\n\\(③\\) 第一名没有战胜第四名.\n\n根据以上信息,第三名得了 分.",
+      "answer": "10",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 我们把具有这种特性的四位数称为\"居中四位数\":将这个四位数的四个数字任意排列顺序,把组\n\n成的所有四位数(至少2个)从小到大排成一排,原四位数正好处于正\n\n中间位置.例如,2021就是一个\"居中四位数\".那么,包含2021在\n\n内的所有\"居中四位数\"一共有 个.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "90",
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#2#7",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "7. 我们把具有这种特性的四位数称为\"居中四位数\":将这个四位数的四个数字任意排列顺序,把组\n\n成的所有四位数(至少2个)从小到大排成一排,原四位数正好处于正\n\n中间位置.例如,2021就是一个\"居中四位数\".那么,包含2021在\n\n内的所有\"居中四位数\"一共有 个.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "90",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 右图是一个由20个大小相等的等腰直角三角形拼成的图案.图中一共可以数出 个梯形.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "64",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（答案）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（答案）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含标准答案，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#2#8",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "8. 右图是一个由20个大小相等的等腰直角三角形拼成的图案.图中一共可以数出 个梯形.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "64",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图,在梯形ABCD中, \\(AD\\) 与 \\(BC\\) 平行,三角形ACE和三角形BDE的面积都为120,三角形BFG面积为60,那么梯形ABCD的面积为",
+      "answer_text": "540",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（答案）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（答案）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案540，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#2#9",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "9. 如图,在梯形ABCD中, \\(AD\\) 与 \\(BC\\) 平行,三角形ACE和三角形BDE的面积都为120,三角形BFG面积为60,那么梯形ABCD的面积为",
+      "answer": "540",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 小周老师写了一个两位质数,并将这个质数个位数字告诉了甲,十位数字告诉了乙,十位数字与个位数字之和告诉了丙,十位数字与个位数字之差(大减小)告诉了丁.\n\n丙说:在我说话之前,甲一定认为乙不知道这个质数是多少.\n\n丙说完之后,乙说:在我说话之前,甲一定认为丁不知道这个质数是多少.\n\n那么,这个质数是 .(甲、乙、丙、丁四位同学诚实且聪明)\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "23",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案23，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#2#10",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "10. 小周老师写了一个两位质数,并将这个质数个位数字告诉了甲,十位数字告诉了乙,十位数字与个位数字之和告诉了丙,十位数字与个位数字之差(大减小)告诉了丁.\n\n丙说:在我说话之前,甲一定认为乙不知道这个质数是多少.\n\n丙说完之后,乙说:在我说话之前,甲一定认为丁不知道这个质数是多少.\n\n那么,这个质数是 .(甲、乙、丙、丁四位同学诚实且聪明)\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "23",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 在河流上游 \\(A\\) 地有一艘巨轮,旁边有一艘巡逻小艇,小艇不停的从巨轮船头划到船尾再从船尾划到船头(小艇不计长度),与此同时在下游 \\(B\\) 地有一艘小船(小船不计长度),巨轮和小船同时出发相向而行,出发时小艇与巨轮的船头都恰好在 \\(A\\) 地.当小艇第1次回到巨轮船头时,恰与小船相遇;当小艇第7次回到巨轮船头时,巨轮船头正好抵达 \\(B\\) 地.如果巨轮出发时水速变为原来的2倍,那么当小艇第6次回到巨轮船头时,巨轮船头正好抵达 \\(B\\) 地,那么,静水中小船的速度是水流原来速度的 倍.",
+      "answer_text": "37",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是一个完整的数学竞赛题干，但直接给出了答案，因此不适合作为考题，仅推荐用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json#2#11",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "11. 在河流上游 \\(A\\) 地有一艘巨轮,旁边有一艘巡逻小艇,小艇不停的从巨轮船头划到船尾再从船尾划到船头(小艇不计长度),与此同时在下游 \\(B\\) 地有一艘小船(小船不计长度),巨轮和小船同时出发相向而行,出发时小艇与巨轮的船头都恰好在 \\(A\\) 地.当小艇第1次回到巨轮船头时,恰与小船相遇;当小艇第7次回到巨轮船头时,巨轮船头正好抵达 \\(B\\) 地.如果巨轮出发时水速变为原来的2倍,那么当小艇第6次回到巨轮船头时,巨轮船头正好抵达 \\(B\\) 地,那么,静水中小船的速度是水流原来速度的 倍.",
+      "answer": "37",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\((22 + 24)\\div \\left(\\frac{1}{43} -\\frac{1}{2021}\\right)\\) 的计算结果是",
+      "answer_text": "2021",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案【答案】2021，导致信息泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "1. 算式 \\((22 + 24)\\div \\left(\\frac{1}{43} -\\frac{1}{2021}\\right)\\) 的计算结果是",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\((22 + 24)\\div \\left(\\frac{1}{43} -\\frac{1}{2021}\\right)\\) 的计算结果是",
+      "answer": "2021",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 帅帅种下一些种子,一周内有369颗发芽.前两天与后五天的种子发芽数之比是2:7,后四天与前三天种子发芽数之比是21:20.那么第三天发芽种子数是",
+      "answer_text": "98",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题目块中直接包含标准答案，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干完整且逻辑清晰，可通过移除答案修复为可用题干。",
+        "review_fix_hint": "删掉答案部分，只保留题干描述和问题。",
+        "review_clean_question_text": "2. 帅帅种下一些种子,一周内有369颗发芽.前两天与后五天的种子发芽数之比是2:7,后四天与前三天种子发芽数之比是21:20. 那么第三天发芽种子数是",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "2. 帅帅种下一些种子,一周内有369颗发芽.前两天与后五天的种子发芽数之比是2:7,后四天与前三天种子发芽数之比是21:20.那么第三天发芽种子数是",
+      "answer": "98",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图, \\(\\triangle ABC\\) 是面积为700平方厘米的正三角形,点 \\(D\\) 、 \\(E\\) 、 \\(F\\) 分别是边 \\(AB\\) 、 \\(BC\\) 、 \\(CA\\) 的中点,依次以 \\(AD\\) 、 \\(BE\\) 、 \\(CF\\) 为直径向内画出3个半圆,依次以 \\(DB\\) 、 \\(EC\\) 、 \\(FA\\) 为直径向外画出3个半圆,那么阴影部分面积是 平方厘米. \\((\\pi = 3.14)\\)\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "700",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案700，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "3. 如图, \\(\\triangle ABC\\) 是面积为700平方厘米的正三角形,点 \\(D\\) 、 \\(E\\) 、 \\(F\\) 分别是边 \\(AB\\) 、 \\(BC\\) 、 \\(CA\\) 的中点,依次以 \\(AD\\) 、 \\(BE\\) 、 \\(CF\\) 为直径向内画出3个半圆,依次以 \\(DB\\) 、 \\(EC\\) 、 \\(FA\\) 为直径向外画出3个半圆,那么阴影部分面积是 平方厘米. \\((\\pi = 3.14)\\)\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "700",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 3位小朋友排队到王老师这里取苹果.第一位小朋友拿了全部的 \\(\\frac{1}{3}\\) ,第二位小朋友拿了剩下的 \\(\\frac{2}{3}\\) ,第三位小朋友拿了剩下的全部苹果.如果每个人都拿到了整数个苹果,那么最后一位小朋友最少拿到了 个苹果.\n\n## 二.填空题Ⅱ(每小题10分,共40分)",
+      "answer_text": "2",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了答案，泄露风险高，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干完整独立，清洗后可作为标准考试题目使用。",
+        "review_fix_hint": "删除答案部分和额外标题，只保留题干。",
+        "review_clean_question_text": "4. 3位小朋友排队到王老师这里取苹果.第一位小朋友拿了全部的 \\(\\frac{1}{3}\\) ,第二位小朋友拿了剩下的 \\(\\frac{2}{3}\\) ,第三位小朋友拿了剩下的全部苹果.如果每个人都拿到了整数个苹果,那么最后一位小朋友最少拿到了 个苹果。",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "4. 3位小朋友排队到王老师这里取苹果.第一位小朋友拿了全部的 \\(\\frac{1}{3}\\) ,第二位小朋友拿了剩下的 \\(\\frac{2}{3}\\) ,第三位小朋友拿了剩下的全部苹果.如果每个人都拿到了整数个苹果,那么最后一位小朋友最少拿到了 个苹果.\n\n## 二.填空题Ⅱ(每小题10分,共40分)",
+      "answer": "2",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 如图,10位同学围成一圈,由小洁开始按顺时针依次编号为1、2、3、、10,然后从小洁开始按1、2、3、…连续报数.第一次按顺时针方向依次报数,当报到13时游戏结束;第二次按逆时针方向依次报数,当报到216时游戏结束;那么,第一次报13的同学和第二次报216的同学编号之和是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "9",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "5. 如图,10位同学围成一圈,由小洁开始按顺时针依次编号为1、2、3、、10,然后从小洁开始按1、2、3、…连续报数.第一次按顺时针方向依次报数,当报到13时游戏结束;第二次按逆时针方向依次报数,当报到216时游戏结束;那么,第一次报13的同学和第二次报216的同学编号之和是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "9",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 一个三位数 \\(N\\) ,它除以11的商和余数相等,除以17的商和余数也相等,那么这个三位数 \\(N\\) 是",
+      "answer_text": "108",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学问题题干，不包含答案或解析，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）.json"
+        }
+      },
+      "text": "6. 一个三位数 \\(N\\) ,它除以11的商和余数相等,除以17的商和余数也相等,那么这个三位数 \\(N\\) 是",
+      "answer": "108",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 如图,一道除法竖式中已经填出了\"2021\",那么除数是",
+      "answer_text": "116",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#2#7",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "7. 如图,一道除法竖式中已经填出了\"2021\",那么除数是",
+      "answer": "116",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 我们将符合如下要求的自然数称为\"四喜数\":\n\n\\(①\\) 本身是四位数;\n\n\\(②\\) 本身恰含有4个因数;\n\n\\(③\\) 与4相加得到的和是一个完全平方数.\n\n一共有 个\"四喜数\"\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "5",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在泄露风险，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#2#8",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "8. 我们将符合如下要求的自然数称为\"四喜数\":\n\n\\(①\\) 本身是四位数;\n\n\\(②\\) 本身恰含有4个因数;\n\n\\(③\\) 与4相加得到的和是一个完全平方数.\n\n一共有 个\"四喜数\"\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "5",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 石老师将5张分别写有1、2、3、4、5的卡片发给甲、乙、丙、丁、戊五人.五个人在确认自己卡片上的数字之前进行了一番盲猜的对话.\n\n甲对乙说:我拿的是1号,你拿的不是2号;\n\n乙对丙说:我拿的是2号,你拿的是3号;\n\n丙对丁说:我拿的是3号,你拿的不是4号;\n\n丁对戊说:我拿的不是4号,你拿的不是5号;\n\n戊对甲说:我拿的是5号,你拿的是1号.\n\n石老师发现这五个人的盲猜满足右图所示的关系,\n\n如果图中存在 \\(A\\rightarrow B\\) ,则:\n\n持有 \\(A\\) 卡片的人对持有 \\(B\\) 卡片的人说的话都是对的,\n\n持有 \\(B\\) 卡片的人对持有 \\(A\\) 卡片的人说的话都是错的.\n\n那么甲、乙、丙、丁、戊所持卡片上的数字顺次连成的五位数是",
+      "answer_text": "42351",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干末尾直接包含了标准答案，存在明显的答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#2#9",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "9. 石老师将5张分别写有1、2、3、4、5的卡片发给甲、乙、丙、丁、戊五人.五个人在确认自己卡片上的数字之前进行了一番盲猜的对话.\n\n甲对乙说:我拿的是1号,你拿的不是2号;\n\n乙对丙说:我拿的是2号,你拿的是3号;\n\n丙对丁说:我拿的是3号,你拿的不是4号;\n\n丁对戊说:我拿的不是4号,你拿的不是5号;\n\n戊对甲说:我拿的是5号,你拿的是1号.\n\n石老师发现这五个人的盲猜满足右图所示的关系,\n\n如果图中存在 \\(A\\rightarrow B\\) ,则:\n\n持有 \\(A\\) 卡片的人对持有 \\(B\\) 卡片的人说的话都是对的,\n\n持有 \\(B\\) 卡片的人对持有 \\(A\\) 卡片的人说的话都是错的.\n\n那么甲、乙、丙、丁、戊所持卡片上的数字顺次连成的五位数是",
+      "answer": "42351",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 九张卡片,分别写有6\\~14(卡片不能倒过来).陈老师将这九张卡片分给甲、乙两名同学,两人各自算出所得卡片上所写数的和后,再求出这两个和的乘积.那么,陈老师有 种分配卡片的方法,使最后的乘积结果恰好是2021.",
+      "answer_text": "24",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目描述完整，但直接给出了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#2#10",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "10. 九张卡片,分别写有6\\~14(卡片不能倒过来).陈老师将这九张卡片分给甲、乙两名同学,两人各自算出所得卡片上所写数的和后,再求出这两个和的乘积.那么,陈老师有 种分配卡片的方法,使最后的乘积结果恰好是2021.",
+      "answer": "24",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2021,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 如图,已知正方形 \\(ABCD\\) 、AEFG 的边长相等,且 \\(BG = 32\\) , \\(CF = 20\\) ,那么阴影部分的面积和是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "100",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2021/ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#2#11",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干完整但依赖图形且包含答案，清洗后可用于练习。",
+        "review_fix_hint": "删除【答案】100和图片链接，保留题干文本，需确保图形可访问。",
+        "review_clean_question_text": "11. 如图,已知正方形 \\(ABCD\\) 、 \\(AEFG\\) 的边长相等,且 \\(BG = 32\\) , \\(CF = 20\\) ,那么阴影部分的面积和是",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json#2#11",
+          "json_path": "source_pdf/六年级/2021/2021数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "11. 如图,已知正方形 \\(ABCD\\) 、AEFG 的边长相等,且 \\(BG = 32\\) , \\(CF = 20\\) ,那么阴影部分的面积和是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "100",
+      "solution": null
+    }
+  ]
+}

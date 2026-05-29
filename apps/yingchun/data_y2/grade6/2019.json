@@ -1,0 +1,1721 @@
+{
+  "grade": 6,
+  "year": 2019,
+  "total_problems": 45,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 计算机中的数字往往是通过二进制形式表达的.对于下面二进制数的运算, \\((11)_{2}\\times (101)_{2}\\times (111)_{2}\\times (1001)_{2}\\) 计算结果的二进制表达中有 个1.",
+      "answer_text": "6",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出了答案和解析过程，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json#1#1",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json"
+        }
+      },
+      "text": "1. 计算机中的数字往往是通过二进制形式表达的.对于下面二进制数的运算, \\((11)_{2}\\times (101)_{2}\\times (111)_{2}\\times (1001)_{2}\\) 计算结果的二进制表达中有 个1.",
+      "answer": "6",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 下图中的6个小正方形边长均为1,以 \\(AB\\) 为半径和以 \\(CD\\) 为直径分别画两段圆弧,则阴影部分面积为 。( \\(\\pi\\) 取3)\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_001/images/0.jpg)",
+      "answer_text": "1",
+      "solution_text": "注意到 \\(\\angle BAD = 45^{\\circ}\\) ,所以阴影部分面积为 \\(\\frac{1}{8}\\times 3\\times (3^{2} + 3^{2}) - \\frac{1}{2}\\times 3\\times 3 - \\frac{1}{2}\\times 1\\times 1 - \\frac{1}{2}\\times 3\\times \\frac{1}{2} = 1\\)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可出题，但包含答案和解析，存在高风险泄露，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json#1#2",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json"
+        }
+      },
+      "text": "2. 下图中的6个小正方形边长均为1,以 \\(AB\\) 为半径和以 \\(CD\\) 为直径分别画两段圆弧,则阴影部分面积为 。( \\(\\pi\\) 取3)\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_001/images/0.jpg)",
+      "answer": "1",
+      "solution": "注意到 \\(\\angle BAD = 45^{\\circ}\\) ,所以阴影部分面积为 \\(\\frac{1}{8}\\times 3\\times (3^{2} + 3^{2}) - \\frac{1}{2}\\times 3\\times 3 - \\frac{1}{2}\\times 1\\times 1 - \\frac{1}{2}\\times 3\\times \\frac{1}{2} = 1\\)"
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 软件开发很讲究开发效率,如果是20名有经验的开发工程师做开发,30天就可以完成任务,如果都是新手工程师,则效率下降 \\(20\\%\\) ,实习工程师比新手工程师效率还会低 \\(25\\%\\) ,一个创业软件开发公司的20名工程师都是新手工程师和实习工程师,结果40天才完成任务,那么实习工程师数量是新手工程师数量的 倍.\n\n## 二、填空题(每小题10分,共30分)",
+      "answer_text": "1/3",
+      "solution_text": "将有经验的工程师的效率看作5,那么新手工程师的效率为4,实习工程师的效率为3. 实际平均效率为 \\(5\\times 30\\div 40 = 3.75\\) ,所以实习工程师是新手工程师的 \\([(4 - 3.75) / (3.75 - 3)] = 1 / 3\\) 倍.\n\n## 二、填空题(每小题10分,共30分)",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在高风险泄露，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json#1#3",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json"
+        }
+      },
+      "text": "3. 软件开发很讲究开发效率,如果是20名有经验的开发工程师做开发,30天就可以完成任务,如果都是新手工程师,则效率下降 \\(20\\%\\) ,实习工程师比新手工程师效率还会低 \\(25\\%\\) ,一个创业软件开发公司的20名工程师都是新手工程师和实习工程师,结果40天才完成任务,那么实习工程师数量是新手工程师数量的 倍.\n\n## 二、填空题(每小题10分,共30分)",
+      "answer": "1/3",
+      "solution": "将有经验的工程师的效率看作5,那么新手工程师的效率为4,实习工程师的效率为3. 实际平均效率为 \\(5\\times 30\\div 40 = 3.75\\) ,所以实习工程师是新手工程师的 \\([(4 - 3.75) / (3.75 - 3)] = 1 / 3\\) 倍.\n\n## 二、填空题(每小题10分,共30分)"
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 小燕最近在学信息学,按照流程图设计了一个程序.输出结果 \\(b,c,d,e\\) 为6,3,3,4,那么输入的四位数 \\(a\\) 最小是\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为一个信息学题目题干，包含问题描述但无答案或解析，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json#1#4",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json"
+        }
+      },
+      "text": "4. 小燕最近在学信息学,按照流程图设计了一个程序.输出结果 \\(b,c,d,e\\) 为6,3,3,4,那么输入的四位数 \\(a\\) 最小是\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 如图,一个空水桶的侧面四等分处依次有 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三个一样大的出水口.如果同时打开进水口和 \\(A\\) 出水口,65 分钟装满水桶;如果同时打开进水口和 \\(C\\) 出水口,75 分钟装满水桶.那么同时打开进水口和三个出水口,则 分钟装满水桶.\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整的答案和解析，存在高泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json#2#5",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（带解析）.json"
+        }
+      },
+      "text": "5. 如图,一个空水桶的侧面四等分处依次有 \\(A\\) 、 \\(B\\) 、 \\(C\\) 三个一样大的出水口.如果同时打开进水口和 \\(A\\) 出水口,65 分钟装满水桶;如果同时打开进水口和 \\(C\\) 出水口,75 分钟装满水桶.那么同时打开进水口和三个出水口,则 分钟装满水桶.\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 小明通过编程实现了一个计算正整数 \\(a\\) 数字和的\"函数\" \\(S(a)\\) .若输入正整数 \\(n\\) 会导致 \\(S(2019n)\\) 是 \\(S(n)\\) 的12倍,则称 \\(n\\) 是一个符合条件的输入.那么不超过20192019的正整数中,符合条件的输入 \\(n\\) 共有 个.\n\n## 三、填空题(每小题15分,共30分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，未包含答案或解析，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json#2#6",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json"
+        }
+      },
+      "text": "6. 小明通过编程实现了一个计算正整数 \\(a\\) 数字和的\"函数\" \\(S(a)\\) .若输入正整数 \\(n\\) 会导致 \\(S(2019n)\\) 是 \\(S(n)\\) 的12倍,则称 \\(n\\) 是一个符合条件的输入.那么不超过20192019的正整数中,符合条件的输入 \\(n\\) 共有 个.\n\n## 三、填空题(每小题15分,共30分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 随着互联网和电子商务的快速发展,网上购物的包装也变得越来越多样.如图所示的一种包装的设计图为正十二边形,其面积为2019,其中将被涂色的的阴影部分由4个正三角形和1个正方形组成,则要被涂色部分的总面积为\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_002/images/1.jpg)",
+      "answer_text": "673",
+      "solution_text": "如图,正十二边形可以分割成12个正三角形和6个小正方形的和.阴影部分由4个正三角形和1个大正方形组成,注意到大正方形的对角线长恰好等于小正方形边长的两倍.所以阴影部分面积恰好是整个图形面积的 \\(\\frac{1}{3}\\) ,即 \\(2019\\times \\frac{1}{3} = 673\\) .\n\n![](ocr_debug/2019年六年级网赛（带解析）/pages/page_003/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，描述了问题要求，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json#2#7",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json"
+        }
+      },
+      "text": "7. 随着互联网和电子商务的快速发展,网上购物的包装也变得越来越多样.如图所示的一种包装的设计图为正十二边形,其面积为2019,其中将被涂色的的阴影部分由4个正三角形和1个正方形组成,则要被涂色部分的总面积为\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_002/images/1.jpg)",
+      "answer": "673",
+      "solution": "如图,正十二边形可以分割成12个正三角形和6个小正方形的和.阴影部分由4个正三角形和1个大正方形组成,注意到大正方形的对角线长恰好等于小正方形边长的两倍.所以阴影部分面积恰好是整个图形面积的 \\(\\frac{1}{3}\\) ,即 \\(2019\\times \\frac{1}{3} = 673\\) .\n\n![](ocr_debug/2019年六年级网赛（带解析）/pages/page_003/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 计算机中的数据一般都以二进制形式表达.一个八位二进制数串(0可以在首位)由4个0和4个1组成,且每个数字相邻的数字不全与自身相同.这种二进制数串共有 种.\n\n## 四、亲子互动操作题(每小题18分,共36分)",
+      "answer_text": "18",
+      "solution_text": "实质上要求不能有3个相同数字连续排列,且首两位不能相同,末两位不能相同.那么首两位和末两位必然都是0、1各一个.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干描述完整且条件明确，无答案或解析泄露，可作为独立题目使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json#2#8",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json"
+        }
+      },
+      "text": "8. 计算机中的数据一般都以二进制形式表达.一个八位二进制数串(0可以在首位)由4个0和4个1组成,且每个数字相邻的数字不全与自身相同.这种二进制数串共有 种.\n\n## 四、亲子互动操作题(每小题18分,共36分)",
+      "answer": "18",
+      "solution": "实质上要求不能有3个相同数字连续排列,且首两位不能相同,末两位不能相同.那么首两位和末两位必然都是0、1各一个."
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图1, \\(4 \\times 4\\) 的正方形纸片被虚线分成了16个一样大的小方格.现按照虚线折叠成一个平面图形(可以不折,也可以折叠多次,但每次必须按照虚线进行折叠),考虑折叠结果中每个小方格的层数,将最大层数记作该折叠结果的\"厚度\".例如,图2中的\"厚度\"为2;图3中的\"厚度\"为4.显然,\"厚度\"最小为1,最大为16.那么所有折叠结果的不同\"厚度\"共有 种.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（带解析）/pages/page_004/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（带解析）/pages/page_004/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（带解析）/pages/page_004/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学问题，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json#2#9",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json"
+        }
+      },
+      "text": "9. 如图1, \\(4 \\times 4\\) 的正方形纸片被虚线分成了16个一样大的小方格.现按照虚线折叠成一个平面图形(可以不折,也可以折叠多次,但每次必须按照虚线进行折叠),考虑折叠结果中每个小方格的层数,将最大层数记作该折叠结果的\"厚度\".例如,图2中的\"厚度\"为2;图3中的\"厚度\"为4.显然,\"厚度\"最小为1,最大为16.那么所有折叠结果的不同\"厚度\"共有 种.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2019年六年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年六年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "10. 如图, 天花板上挂着三串珠子, 玩家和电脑 \\(AI\\) 轮流射击, 每次选择某一个珠子射击, 被击中的珠子及其正下方的所有珠子会掉落. 击落最后一枚珠子的一方获胜. 现在你是玩家, 请进入游戏, 击败电脑 \\(AI\\) , 获取通过密码, 输入横线中 ______.\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_003/images/3.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019年六年级网赛（试卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019年六年级网赛（试卷）/pages/page_003/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该文本描述了一个互动游戏问题，题干完整但无答案泄露，适合用于练习。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json#3#10",
+          "json_path": "source_pdf/六年级/2019/2019年六年级网赛（试卷）.json"
+        }
+      },
+      "text": "10. 如图, 天花板上挂着三串珠子, 玩家和电脑 \\(AI\\) 轮流射击, 每次选择某一个珠子射击, 被击中的珠子及其正下方的所有珠子会掉落. 击落最后一枚珠子的一方获胜. 现在你是玩家, 请进入游戏, 击败电脑 \\(AI\\) , 获取通过密码, 输入横线中 ______.\n\n![](ocr_debug/2019年六年级网赛（试卷）/pages/page_003/images/3.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(673 \\times 0.75 + 20.19 \\times 25 + 201.9 \\times 5\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#1#1",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "1. 算式 \\(673 \\times 0.75 + 20.19 \\times 25 + 201.9 \\times 5\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 盒中有红、黄、蓝、白四种颜色的小球,其中红球个数恰好是其它球个数的总和.如果每种球都增加20个,那么红球个数等于黄球和蓝球个数总和;如果每种球都增加19个,那么红球个数等于蓝球和白球个数总和;如果每种球都增加11个,那么红球个数等于黄球和白球个数总和.那么盒中原有红球 个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#1#2",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "2. 盒中有红、黄、蓝、白四种颜色的小球,其中红球个数恰好是其它球个数的总和.如果每种球都增加20个,那么红球个数等于黄球和蓝球个数总和;如果每种球都增加19个,那么红球个数等于蓝球和白球个数总和;如果每种球都增加11个,那么红球个数等于黄球和白球个数总和.那么盒中原有红球 个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图两个圆的半径分别是10厘米和20厘米两块阴影部分的周长相差68.4厘米,那么周长较小的一块阴影的周长是 厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目，未包含答案或解析信息，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#1#3",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "3. 如图两个圆的半径分别是10厘米和20厘米两块阴影部分的周长相差68.4厘米,那么周长较小的一块阴影的周长是 厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 小红编花篮,上半月她编的大花篮和小花篮的个数比为8:5. 下半月她先编了一些大花篮,结果她该月编的大花篮和小花篮的个数比变成了2:1,接着她又编了一些小花篮,结果她该月编的大花篮和小花篮的个数比又变成了4:3. 已知小红下半月编的大花篮比小花篮少6个,那么她上半月共编了 个大花篮.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本为独立的数学题干，描述了问题条件和求解目标，无答案或解析信息泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#1#4",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "4. 小红编花篮,上半月她编的大花篮和小花篮的个数比为8:5. 下半月她先编了一些大花篮,结果她该月编的大花篮和小花篮的个数比变成了2:1,接着她又编了一些小花篮,结果她该月编的大花篮和小花篮的个数比又变成了4:3. 已知小红下半月编的大花篮比小花篮少6个,那么她上半月共编了 个大花篮.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 在右图中的方格内填入适当的数字,使乘法竖式成立.那么该乘法竖式中的乘积为\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个数学问题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "5. 在右图中的方格内填入适当的数字,使乘法竖式成立.那么该乘法竖式中的乘积为\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 一个长方体,长、宽、高是三个连续自然数(单位:厘米),体积是 \\(2 \\square \\square \\square 66\\) 立方厘米,那么这个长方体的棱长总和是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干独立完整，无答案或解析信息，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "6. 一个长方体,长、宽、高是三个连续自然数(单位:厘米),体积是 \\(2 \\square \\square \\square 66\\) 立方厘米,那么这个长方体的棱长总和是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 有 9 名同学站成一行, 他们的编号顺次为 1\\~9. 其中 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 五名同学对话如下:\n\n\\(A\\) 说: \"我左右两边相邻的同学的编号都是质数.\"\n\n\\(B\\) 说: \"我左右两边相邻的同学的编号都是合数.\"\n\n\\(C\\) 说: \"我们 5 人中, 恰有某两个人相邻.\"\n\n\\(D\\) 说: \"我和 \\(E\\) 的编号之和是质数.\"\n\n\\(E\\) 说: \"我和 \\(C\\) 相邻.\"\n\n如果每个人说的都是正确的, 那么 \\(C\\) 的编号是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，仅包含问题陈述，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#2#7",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "7. 有 9 名同学站成一行, 他们的编号顺次为 1\\~9. 其中 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 五名同学对话如下:\n\n\\(A\\) 说: \"我左右两边相邻的同学的编号都是质数.\"\n\n\\(B\\) 说: \"我左右两边相邻的同学的编号都是合数.\"\n\n\\(C\\) 说: \"我们 5 人中, 恰有某两个人相邻.\"\n\n\\(D\\) 说: \"我和 \\(E\\) 的编号之和是质数.\"\n\n\\(E\\) 说: \"我和 \\(C\\) 相邻.\"\n\n如果每个人说的都是正确的, 那么 \\(C\\) 的编号是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 右图由 6 个相同的等腰三角形和 1 个等腰直角三角形组成. 如果所有等腰三角形的腰长都是 22 厘米, 那么, 右图的总面积为 平方厘米.\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题 12 分, 共 48 分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，包含问题描述和条件，但未涉及答案或解析，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#2#8",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "8. 右图由 6 个相同的等腰三角形和 1 个等腰直角三角形组成. 如果所有等腰三角形的腰长都是 22 厘米, 那么, 右图的总面积为 平方厘米.\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题 12 分, 共 48 分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 算式 \\(\\frac{3 + 5 + 7 + 9 + 11 + \\cdots + 4037}{2} \\times \\frac{3}{1 + \\frac{1}{2018}} \\times \\frac{2}{2 + \\frac{2}{2019}} \\times \\frac{4}{3 + \\frac{3}{2020}} \\times \\cdots \\times \\frac{2020}{2019 + \\frac{2019}{4036}}\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "9. 算式 \\(\\frac{3 + 5 + 7 + 9 + 11 + \\cdots + 4037}{2} \\times \\frac{3}{1 + \\frac{1}{2018}} \\times \\frac{2}{2 + \\frac{2}{2019}} \\times \\frac{4}{3 + \\frac{3}{2020}} \\times \\cdots \\times \\frac{2020}{2019 + \\frac{2019}{4036}}\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 在右图方格表中顺次填入数字 1\\~6, 要求从 2 开始每次填入数字的方格必须和已有数字的方格相邻(相邻是指两个方格有公共边). 不同的填法共有 种.\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学问题题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "10. 在右图方格表中顺次填入数字 1\\~6, 要求从 2 开始每次填入数字的方格必须和已有数字的方格相邻(相邻是指两个方格有公共边). 不同的填法共有 种.\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 如果一个自然数的最小质因数是一位数, 则称这个数是\"好数\". 如果连续九个三位数都是\"好数\", 那么这九个数的平均数最大为",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "11. 如果一个自然数的最小质因数是一位数, 则称这个数是\"好数\". 如果连续九个三位数都是\"好数\", 那么这九个数的平均数最大为",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. 一条公路上有 \\(A\\) 、 \\(B\\) 两个小镇。如果甲、乙两人同时从 \\(A\\) 、 \\(B\\) 两地出发，相向而行，那么甲过中点后 10 分钟与乙相遇。如果甲比乙晚出发 10 分钟，那么甲过中点后 6 分钟与乙相遇。假设两人速度均未改变，要使甲和乙恰好在中点相遇，甲需要比乙晚出发多少分钟？",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的数学竞赛题干，无答案或解析信息泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#3#13",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "13. 一条公路上有 \\(A\\) 、 \\(B\\) 两个小镇。如果甲、乙两人同时从 \\(A\\) 、 \\(B\\) 两地出发，相向而行，那么甲过中点后 10 分钟与乙相遇。如果甲比乙晚出发 10 分钟，那么甲过中点后 6 分钟与乙相遇。假设两人速度均未改变，要使甲和乙恰好在中点相遇，甲需要比乙晚出发多少分钟？",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "14. 8 位老师推荐一些学生参加某项活动。组委会收到推荐信息后发现：每两位老师推荐的学生中都恰好有一名相同。如果每名学生最多被 3 位老师推荐，那么这 8 位老师至少共推荐了多少名学生参加该项活动？",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#4#14",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "14. 8 位老师推荐一些学生参加某项活动。组委会收到推荐信息后发现：每两位老师推荐的学生中都恰好有一名相同。如果每名学生最多被 3 位老师推荐，那么这 8 位老师至少共推荐了多少名学生参加该项活动？",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(20\\div 19\\div \\left(\\frac{1}{19} -\\frac{1}{20}\\right)\\) 的计算结果是",
+      "answer_text": "400",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，不适合考试，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(20\\div 19\\div \\left(\\frac{1}{19} -\\frac{1}{20}\\right)\\) 的计算结果是",
+      "answer": "400",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 某款手机发布新一代产品,相比上一代,待机状态下系统耗电量降低 \\(20\\%\\) ,而电池容量却提升了 \\(20\\%\\) ,那么续航能力(待机状态下电池使用时间)与上一代相比可提升 \\(\\%\\) 。",
+      "answer_text": "50",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "2. 某款手机发布新一代产品,相比上一代,待机状态下系统耗电量降低 \\(20\\%\\) ,而电池容量却提升了 \\(20\\%\\) ,那么续航能力(待机状态下电池使用时间)与上一代相比可提升 \\(\\%\\) 。",
+      "answer": "50",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 优优和才才两个人在一张桌子两边面对面坐下,桌子中央处放着一枚正方体骰子(骰子的每组对面点数之和均为7)。每人都能看到骰子的三个面,优优看到的三个面上点数之和加上才才看到的三个面上点数之和是20。已知优优和才才看到的面中只有一个面是相同的,那么骰子底面上的点数",
+      "answer_text": "4",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "问题完整但答案已泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "3. 优优和才才两个人在一张桌子两边面对面坐下,桌子中央处放着一枚正方体骰子(骰子的每组对面点数之和均为7)。每人都能看到骰子的三个面,优优看到的三个面上点数之和加上才才看到的三个面上点数之和是20。已知优优和才才看到的面中只有一个面是相同的,那么骰子底面上的点数",
+      "answer": "4",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 图中大圆的半径是20,圆周上8个点均为八等分点,则图中阴影部分的面积和是 \\(\\_\\) 。( \\(\\pi\\) 取3.14)",
+      "answer_text": "456",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但包含答案，只能用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "4. 图中大圆的半径是20,圆周上8个点均为八等分点,则图中阴影部分的面积和是 \\(\\_\\) 。( \\(\\pi\\) 取3.14)",
+      "answer": "456",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 在\"双十一\"期间,很多商家都进行了促销活动。甲商家的优惠方案是:所有商品都打七五折销售。乙商家的优惠方案是:每满300元减100元。张老师想买50本相同的书送给班里的同学,这本书在甲、乙两商家的定价均为20元,那么张老师最少需要花 \\(\\_\\) 元。",
+      "answer_text": "675",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接附有答案，泄露风险高，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "5. 在\"双十一\"期间,很多商家都进行了促销活动。甲商家的优惠方案是:所有商品都打七五折销售。乙商家的优惠方案是:每满300元减100元。张老师想买50本相同的书送给班里的同学,这本书在甲、乙两商家的定价均为20元,那么张老师最少需要花 \\(\\_\\) 元。",
+      "answer": "675",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 算式:天行健 \\(\\times\\) 天行健 \\(=\\) 君子自强不息是由1\\~9中的数字组成,不同的汉字表示不同的数字,相同的汉字表示相同的数字,其中\"天\"、\"行\"、\"健\"是递增的等差数列。那么\"天行健\"表示的三位数是 \\(\\_\\) 。",
+      "answer_text": "567",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在高风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#1#6",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "6. 算式:天行健 \\(\\times\\) 天行健 \\(=\\) 君子自强不息是由1\\~9中的数字组成,不同的汉字表示不同的数字,相同的汉字表示相同的数字,其中\"天\"、\"行\"、\"健\"是递增的等差数列。那么\"天行健\"表示的三位数是 \\(\\_\\) 。",
+      "answer": "567",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 狼人杀是时下特别热门的一款桌游,其中有平民、守卫和狼人三种角色牌。现将两张平民牌、三张守卫牌、两张狼人牌排成一行,如果平民与狼人相邻,则平民受到伤害;如果平民与狼人都不相邻,则平民安全。在保证平民安全的前提下,一共有________种不同的排列方法。(同种角色牌之间没有区别)",
+      "answer_text": "42",
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#2#7",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "7. 狼人杀是时下特别热门的一款桌游,其中有平民、守卫和狼人三种角色牌。现将两张平民牌、三张守卫牌、两张狼人牌排成一行,如果平民与狼人相邻,则平民受到伤害;如果平民与狼人都不相邻,则平民安全。在保证平民安全的前提下,一共有________种不同的排列方法。(同种角色牌之间没有区别)",
+      "answer": "42",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 在右图中,三角形共有________个。",
+      "answer_text": "88",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，不适合考试，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#2#9",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "9. 在右图中,三角形共有________个。",
+      "answer": "88",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 甲、乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时相向出发,他们第一次相遇在 \\(C\\) 点,此时丙从 \\(C\\) 点出发向 \\(A\\) 前进;当甲到达 \\(B\\) 地时,丙恰好到达 \\(A\\) 地,两人马上调头继续前行,丙速度保持不变,甲速度提高 \\(\\frac{2}{3}\\) ;当乙、丙第一次相遇在 \\(D\\) 点,此时甲恰好回到 \\(C\\) 点。已知 \\(CD\\) 相距2020米,那么 \\(AB\\) 的距离是________米。",
+      "answer_text": "7575",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整数学题干和直接答案，无解析过程，答案泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#2#10",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "10. 甲、乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时相向出发,他们第一次相遇在 \\(C\\) 点,此时丙从 \\(C\\) 点出发向 \\(A\\) 前进;当甲到达 \\(B\\) 地时,丙恰好到达 \\(A\\) 地,两人马上调头继续前行,丙速度保持不变,甲速度提高 \\(\\frac{2}{3}\\) ;当乙、丙第一次相遇在 \\(D\\) 点,此时甲恰好回到 \\(C\\) 点。已知 \\(CD\\) 相距2020米,那么 \\(AB\\) 的距离是________米。",
+      "answer": "7575",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级C卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 某市流行一种游戏,游戏者先抽取一个整数(不能重复抽取),每次可以花费一元钱进行如下操作中的一种:\n\n(1)将手中的数加1;\n\n(2)将手中的数减1;\n\n(3)将手中的数乘2.\n\n如果手中的数变成老板规定的\"幸运数\",则可以获得大礼包。小明开始时抽到的数是0,而老板规定的\"幸运数\"是2019,那么小明至少需要花________元钱才能获得大礼包。",
+      "answer_text": "15",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级C卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干但直接给出答案，有泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json#2#11",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "11. 某市流行一种游戏,游戏者先抽取一个整数(不能重复抽取),每次可以花费一元钱进行如下操作中的一种:\n\n(1)将手中的数加1;\n\n(2)将手中的数减1;\n\n(3)将手中的数乘2.\n\n如果手中的数变成老板规定的\"幸运数\",则可以获得大礼包。小明开始时抽到的数是0,而老板规定的\"幸运数\"是2019,那么小明至少需要花________元钱才能获得大礼包。",
+      "answer": "15",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(20 \\times \\left(1 \\frac{1}{3} + 2 \\frac{1}{6}\\right) - 19\\) 的计算结果为",
+      "answer_text": "51",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(20 \\times \\left(1 \\frac{1}{3} + 2 \\frac{1}{6}\\right) - 19\\) 的计算结果为",
+      "answer": "51",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 如图,两个半圆的半径均为6厘米,图中空白部分的面积总和为56平方厘米,则阴影部分的面积为 平方厘米. \\((\\pi\\) 取近似值3)",
+      "answer_text": "26",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案信息，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "2. 如图,两个半圆的半径均为6厘米,图中空白部分的面积总和为56平方厘米,则阴影部分的面积为 平方厘米. \\((\\pi\\) 取近似值3)",
+      "answer": "26",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 某款手机发布的新一代产品,相比上一代,待机状态下,耗电速度最多可降低 \\(20\\%\\) ,而电池的总容量提升了 \\(20\\%\\) .那么这款手机的续航能力(电池使用时间)最多可以提升 \\(\\%\\)",
+      "answer_text": "50",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在答案泄露风险，但问题本身完整可独立出题，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "3. 某款手机发布的新一代产品,相比上一代,待机状态下,耗电速度最多可降低 \\(20\\%\\) ,而电池的总容量提升了 \\(20\\%\\) .那么这款手机的续航能力(电池使用时间)最多可以提升 \\(\\%\\)",
+      "answer": "50",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 方方和圆圆各有一些卡片,如果方方给圆圆5张,则方方和圆圆手中卡片的数量比为4:3;如果圆圆给方方10张,则方方和圆圆手中卡片的数量比为13:1.那么原来方方手中有 张卡片.",
+      "answer_text": "29",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出答案，存在答案泄露，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "4. 方方和圆圆各有一些卡片,如果方方给圆圆5张,则方方和圆圆手中卡片的数量比为4:3;如果圆圆给方方10张,则方方和圆圆手中卡片的数量比为13:1.那么原来方方手中有 张卡片.",
+      "answer": "29",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 一次考试,要根据两次笔试和一次口试的成绩计算总成绩.其中第一次笔试成绩的 \\(40\\%\\) ,加上第二次笔试成绩的 \\(60\\%\\) ,作为笔试总成绩;而笔试总成绩的 \\(60\\%\\) ,加上口试成绩的 \\(40\\%\\) 为最终总成绩.东东在这次考试中,第一次笔试成绩为800分,第二次笔试成绩为700分,口试成绩为555分,那么他的最终总成绩是 分.",
+      "answer_text": "666",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题目包含直接答案，泄露风险高，不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "5. 一次考试,要根据两次笔试和一次口试的成绩计算总成绩.其中第一次笔试成绩的 \\(40\\%\\) ,加上第二次笔试成绩的 \\(60\\%\\) ,作为笔试总成绩;而笔试总成绩的 \\(60\\%\\) ,加上口试成绩的 \\(40\\%\\) 为最终总成绩.东东在这次考试中,第一次笔试成绩为800分,第二次笔试成绩为700分,口试成绩为555分,那么他的最终总成绩是 分.",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "5. 一次考试,要根据两次笔试和一次口试的成绩计算总成绩.其中第一次笔试成绩的 \\(40\\%\\) ,加上第二次笔试成绩的 \\(60\\%\\) ,作为笔试总成绩;而笔试总成绩的 \\(60\\%\\) ,加上口试成绩的 \\(40\\%\\) 为最终总成绩.东东在这次考试中,第一次笔试成绩为800分,第二次笔试成绩为700分,口试成绩为555分,那么他的最终总成绩是 分.",
+      "answer": "666",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 开心小学正在进行一年一度的趣题大赛.比赛中,王老师先在黑板上写了1、2、3、4、5五个数.然后每次将黑板上已经存在的所有数的2倍写在黑板上(如果某些数在黑板上已存在,就不需要再写上),称为一次\"操作\".如果王老师总共进行了5次\"操作\",则现在黑板上一共有 个数.",
+      "answer_text": "20",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是标准数学竞赛题干但直接包含答案，存在高泄露风险，适合仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#1#6",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "6. 开心小学正在进行一年一度的趣题大赛.比赛中,王老师先在黑板上写了1、2、3、4、5五个数.然后每次将黑板上已经存在的所有数的2倍写在黑板上(如果某些数在黑板上已存在,就不需要再写上),称为一次\"操作\".如果王老师总共进行了5次\"操作\",则现在黑板上一共有 个数.",
+      "answer": "20",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 如图所示,在格点图中,ABED为梯形,面积为450平方厘米.点 \\(F\\) 、 \\(C\\) 分别是 \\(DE\\) 、 \\(BE\\) 边的中点.连结 \\(AF\\) 、 \\(BF\\) ,分别与 \\(DC\\) 交于 \\(G\\) 、 \\(H\\) 两点.那么三角形 \\(FGH\\) 的面积为 平方厘米.",
+      "answer_text": "25",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干清晰可出题，但文本块中包含答案，存在泄露风险。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#2#7",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "7. 如图所示,在格点图中,ABED为梯形,面积为450平方厘米.点 \\(F\\) 、 \\(C\\) 分别是 \\(DE\\) 、 \\(BE\\) 边的中点.连结 \\(AF\\) 、 \\(BF\\) ,分别与 \\(DC\\) 交于 \\(G\\) 、 \\(H\\) 两点.那么三角形 \\(FGH\\) 的面积为 平方厘米.",
+      "answer": "25",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 小明在计算1到100的最小公倍数的时候,不小心漏掉了其中一个数,结果发现最小公倍数不变.那么漏掉的那个数有 种不同的可能.",
+      "answer_text": "88",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是完整的数学问题，但答案直接显示在文本中，存在高泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#2#8",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "8. 小明在计算1到100的最小公倍数的时候,不小心漏掉了其中一个数,结果发现最小公倍数不变.那么漏掉的那个数有 种不同的可能.",
+      "answer": "88",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 将1至13分别填入如图的方格中(不允许重复),每个\"□\"中填入的5个数之和均为42,那么正中心方框 \\(X\\) 处填的数是",
+      "answer_text": "13",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#2#9",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "9. 将1至13分别填入如图的方格中(不允许重复),每个\"□\"中填入的5个数之和均为42,那么正中心方框 \\(X\\) 处填的数是",
+      "answer": "13",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 二哈、拉布和金毛在一条笔直的赛道上朝同一方向匀速跑步.在某一时刻,二哈在前,金毛在后,拉布刚好在二哈和金毛的正中间.30秒后,拉布追上了二哈;又过了10秒,金毛也追上了二哈.那么还需要 秒,金毛追上拉布.",
+      "answer_text": "20",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#2#10",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "10. 二哈、拉布和金毛在一条笔直的赛道上朝同一方向匀速跑步.在某一时刻,二哈在前,金毛在后,拉布刚好在二哈和金毛的正中间.30秒后,拉布追上了二哈;又过了10秒,金毛也追上了二哈.那么还需要 秒,金毛追上拉布.",
+      "answer": "20",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2019,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_6年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_6年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 将数字 \\(1 \\sim 6\\) 排成一行,使得其中恰好只有一个数字比它左边相邻的数字小(例如132456就是满足条件的一种排列).那么满足题意的排列方式共有 种.",
+      "answer_text": "57",
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2019/ocr_debug/2019数学花园探秘笔试初赛_6年级D卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接给出答案，有泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json#2#11",
+          "json_path": "source_pdf/六年级/2019/2019数学花园探秘笔试初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "11. 将数字 \\(1 \\sim 6\\) 排成一行,使得其中恰好只有一个数字比它左边相邻的数字小(例如132456就是满足条件的一种排列).那么满足题意的排列方式共有 种.",
+      "answer": "57",
+      "solution": null
+    }
+  ]
+}

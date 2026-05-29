@@ -1,0 +1,857 @@
+{
+  "grade": 3,
+  "year": 2022,
+  "total_problems": 22,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2 + 0 \\times 2 + 2\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，无答案或解析泄漏。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "1. 算式 \\(2 + 0 \\times 2 + 2\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 赵老师出的新书有普通版和签名版两种版本，普通版售价9元一本，签名版售价10元一本。有一位顾客花37元买了若干本赵老师的新书，那么其中有 本签名版。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有出现答案或解析信息，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "2. 赵老师出的新书有普通版和签名版两种版本，普通版售价9元一本，签名版售价10元一本。有一位顾客花37元买了若干本赵老师的新书，那么其中有 本签名版。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 下左图是由“开罗五边形”组成的拼接图，图中的每个五边形的形状大小完全相同，观察图形并确定下右图中的图形在下左图中共出现了 次。（右图图形可以旋转观察）\n\n![](ocr_debug/2022年迎春杯三年级-试卷/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的图形计数问题，没有包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "3. 下左图是由“开罗五边形”组成的拼接图，图中的每个五边形的形状大小完全相同，观察图形并确定下右图中的图形在下左图中共出现了 次。（右图图形可以旋转观察）\n\n![](ocr_debug/2022年迎春杯三年级-试卷/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 小明手里有一盒棋子，盒子里开始时全是白子。他先取出1颗白子，然后放入2颗黑子，再取出3颗白子，再放入4颗黑子，此时小明发现盒子里的白子恰好只有黑子颗数的一半。那么最开始盒子里有 颗白子。\n\n## 二. 填空题Ⅱ（每小题10分，共40分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学问题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "4. 小明手里有一盒棋子，盒子里开始时全是白子。他先取出1颗白子，然后放入2颗黑子，再取出3颗白子，再放入4颗黑子，此时小明发现盒子里的白子恰好只有黑子颗数的一半。那么最开始盒子里有 颗白子。\n\n## 二. 填空题Ⅱ（每小题10分，共40分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 12名同学围成一圈。每位同学都发现与自己相邻的两人中，男、女生恰好各有一名。那么12名同学中有 名男生。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学问题题干，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#1#5",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "5. 12名同学围成一圈。每位同学都发现与自己相邻的两人中，男、女生恰好各有一名。那么12名同学中有 名男生。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "6. 在每个圆圈里填入数字 \\(1 \\sim 5\\) , 使得每行、每列和每条线上的数字都是不重复的 5 个数字, 左图就是个满足条件的例子。右图按要求填完后, 最下面一行从左到右 5 个圆圈里的数顺次组成的五位数是 ______。\n\n![](ocr_debug/2022年迎春杯三年级-试卷/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "6. 在每个圆圈里填入数字 \\(1 \\sim 5\\) , 使得每行、每列和每条线上的数字都是不重复的 5 个数字, 左图就是个满足条件的例子。右图按要求填完后, 最下面一行从左到右 5 个圆圈里的数顺次组成的五位数是 ______。\n\n![](ocr_debug/2022年迎春杯三年级-试卷/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "7. 在一个长方形纸片的左下角剪掉一个小长方形, 再切成三块, 这三块恰好可以拼成一个三角形, 若长方形的宽为 12, \\(AB\\) 的长度是 \\(CD\\) 的 5 倍, 那么 \\(EC\\) 的长度为 ______。\n\n![](ocr_debug/2022年迎春杯三年级-试卷/pages/page_002/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，描述几何问题并要求计算长度，无答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#2#7",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "7. 在一个长方形纸片的左下角剪掉一个小长方形, 再切成三块, 这三块恰好可以拼成一个三角形, 若长方形的宽为 12, \\(AB\\) 的长度是 \\(CD\\) 的 5 倍, 那么 \\(EC\\) 的长度为 ______。\n\n![](ocr_debug/2022年迎春杯三年级-试卷/pages/page_002/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 有一些自然数, 如 121 和 2552, 从左到右和从右到左的数字顺序相同, 我们把这样的自然数叫做“回文数”。已知两个回文数的和是 2022, 则这两个回文数的差是 ______。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，定义了概念并提出问题，未包含答案或解析，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#2#8",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "8. 有一些自然数, 如 121 和 2552, 从左到右和从右到左的数字顺序相同, 我们把这样的自然数叫做“回文数”。已知两个回文数的和是 2022, 则这两个回文数的差是 ______。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "9. 丽丽想用大小为 \\(1 \\times 1\\) 、 \\(2 \\times 2\\) 、 \\(3 \\times 3\\) 的三种正方形拼成下图所示的领奖台（图中每个小正方形的边长为1），所用正方形的面积总和为15，且拼接过程中不可重叠，每种正方形数量不限（可以不用）。共有______种不同的拼接方法。（正方形的摆放位置或数量不同都算不同的拼法）\n\n![](ocr_debug/2022年迎春杯三年级-试卷/pages/page_003/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是独立的数学题干，描述完整，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#3#9",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "9. 丽丽想用大小为 \\(1 \\times 1\\) 、 \\(2 \\times 2\\) 、 \\(3 \\times 3\\) 的三种正方形拼成下图所示的领奖台（图中每个小正方形的边长为1），所用正方形的面积总和为15，且拼接过程中不可重叠，每种正方形数量不限（可以不用）。共有______种不同的拼接方法。（正方形的摆放位置或数量不同都算不同的拼法）\n\n![](ocr_debug/2022年迎春杯三年级-试卷/pages/page_003/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "10. 庭院里有一株高为2米的树苗，女巫婆婆可以配制两种不同的药水。每瓶神奇药水能让树苗长高3米，每瓶超级药水能让树苗高度变为原来的2倍，但使用超级药水后会产生副作用，能使下一瓶被使用药水产生相反的效果（如果为神奇药水将会使树苗变矮3米，如果为超级药水将会使树苗变矮一半）。超级药水原料有限最多只能配制2瓶，而神奇药水原料充足可以任意配制。女巫婆婆想要让树苗恰好长到50米，至少要配制______瓶神奇药水。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，问题陈述清晰且无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#3#10",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "10. 庭院里有一株高为2米的树苗，女巫婆婆可以配制两种不同的药水。每瓶神奇药水能让树苗长高3米，每瓶超级药水能让树苗高度变为原来的2倍，但使用超级药水后会产生副作用，能使下一瓶被使用药水产生相反的效果（如果为神奇药水将会使树苗变矮3米，如果为超级药水将会使树苗变矮一半）。超级药水原料有限最多只能配制2瓶，而神奇药水原料充足可以任意配制。女巫婆婆想要让树苗恰好长到50米，至少要配制______瓶神奇药水。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯三年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯三年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "11. 甲、乙、丙、丁四位绝世高手相约于华山之巅比武论剑，争夺“天下第一”的名号。四人抽签两两分组各自决出胜者，两位胜者再次比试决出一二名，两位败者决出三四名。比武结束后四人进行了交流，每人说了两句话：\n\n甲：我在与丙的大战中获得了胜利。但是我输给了丁。\n\n乙：我作为天下第一实至名归。甲的名次比丙靠后。\n\n丙：我被甲的六脉神剑击败了。乙在比试中输给了丁。\n\n丁：好在我的名次没有垫底。丙的名次比乙靠前。\n\n已知每个人在比试中胜了几场就说几句真话，那么甲乙丙丁最终的名次按顺序组成的四位数为一",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2022年/ocr_debug/2022年迎春杯三年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的逻辑谜题题干，未出现答案或解析信息，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json#3#11",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2022年/2022年迎春杯三年级-试卷.json"
+        }
+      },
+      "text": "11. 甲、乙、丙、丁四位绝世高手相约于华山之巅比武论剑，争夺“天下第一”的名号。四人抽签两两分组各自决出胜者，两位胜者再次比试决出一二名，两位败者决出三四名。比武结束后四人进行了交流，每人说了两句话：\n\n甲：我在与丙的大战中获得了胜利。但是我输给了丁。\n\n乙：我作为天下第一实至名归。甲的名次比丙靠后。\n\n丙：我被甲的六脉神剑击败了。乙在比试中输给了丁。\n\n丁：好在我的名次没有垫底。丙的名次比乙靠前。\n\n已知每个人在比试中胜了几场就说几句真话，那么甲乙丙丁最终的名次按顺序组成的四位数为一",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(166 \\times 1 + 167 \\times 2 + 168 \\times 3 + 169 \\times 3 + 170 \\times 2 + 171 \\times 1\\) 的计算结果是",
+      "answer_text": "2022",
+      "solution_text": "原式 \\(= (166 + 171) \\times 1 + (167 + 170) \\times 2 + (169 + 170) \\times 3 = 337 \\times (1 + 2 + 3) = 2022\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干为计算题，但答案和解析直接出现在文本中，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json#1#1",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(166 \\times 1 + 167 \\times 2 + 168 \\times 3 + 169 \\times 3 + 170 \\times 2 + 171 \\times 1\\) 的计算结果是",
+      "answer": "2022",
+      "solution": "原式 \\(= (166 + 171) \\times 1 + (167 + 170) \\times 2 + (169 + 170) \\times 3 = 337 \\times (1 + 2 + 3) = 2022\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 将1、2、3、4、5、6从左至右排成一排,如果最左边的数字是1,最右边的数字是5,任意相邻两个数字的差(大减小)只能是2或3,那么,其余4个数字按从左至右顺序所组成的四位数是",
+      "answer_text": "3642",
+      "solution_text": "考虑中间的2、3、4、6,由于2旁边只能是4,而3旁边只能是6,所以2和3只能在两边,构成2463或3642;而1的旁边不能是2,所以最后的六个数排序只能是136425,那么,中间4个数是3642",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整的题干、答案和解析，答案直接给出，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json#1#2",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "2. 将1、2、3、4、5、6从左至右排成一排,如果最左边的数字是1,最右边的数字是5,任意相邻两个数字的差(大减小)只能是2或3,那么,其余4个数字按从左至右顺序所组成的四位数是",
+      "answer": "3642",
+      "solution": "考虑中间的2、3、4、6,由于2旁边只能是4,而3旁边只能是6,所以2和3只能在两边,构成2463或3642;而1的旁边不能是2,所以最后的六个数排序只能是136425,那么,中间4个数是3642"
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 在某次体育竞赛中,金牌榜的前三名依次是甲、乙、丙三国(无并列)。已知甲国的金牌数比乙国的3倍少40枚,丙国的金牌数比乙国的4倍少66枚,那么,甲国一共获得了______枚金牌。",
+      "answer_text": "23",
+      "solution_text": "设乙国的金牌数是1份,甲国是3份少40,那么,甲国比乙国多2份少40,说明2份比40多,1份多于20;而丙国的金牌数是4份少66,乙国比丙国多66少3份,说明3份比66少,1份比22少;那么,1份只能是21枚金牌,甲国有 \\(3 \\times 21 - 40 = 23\\) 枚金牌",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是独立题干，但直接包含答案和解析，答案为23。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json#1#3",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "3. 在某次体育竞赛中,金牌榜的前三名依次是甲、乙、丙三国(无并列)。已知甲国的金牌数比乙国的3倍少40枚,丙国的金牌数比乙国的4倍少66枚,那么,甲国一共获得了______枚金牌。",
+      "answer": "23",
+      "solution": "设乙国的金牌数是1份,甲国是3份少40,那么,甲国比乙国多2份少40,说明2份比40多,1份多于20;而丙国的金牌数是4份少66,乙国比丙国多66少3份,说明3份比66少,1份比22少;那么,1份只能是21枚金牌,甲国有 \\(3 \\times 21 - 40 = 23\\) 枚金牌"
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 如图,一个大正方形被分成了5个面积相等的长方形, \\(AE\\) 的长度是30, \\(DF\\) 的长度是______。\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/0.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "24",
+      "solution_text": "左侧共4个长方形,得到 \\(AB = 4AE = 4 \\times 30 = 120\\) ;而右侧 \\(DF\\) 只有1个小长方形,总共 \\(ABCD\\) 是5个小长方形,可得 \\(DF = AD \\div 5 = 120 \\div 5 = 24\\)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，不适合用于考试，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json#1#4",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "4. 如图,一个大正方形被分成了5个面积相等的长方形, \\(AE\\) 的长度是30, \\(DF\\) 的长度是______。\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/0.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "24",
+      "solution": "左侧共4个长方形,得到 \\(AB = 4AE = 4 \\times 30 = 120\\) ;而右侧 \\(DF\\) 只有1个小长方形,总共 \\(ABCD\\) 是5个小长方形,可得 \\(DF = AD \\div 5 = 120 \\div 5 = 24\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 小宇想象了一个小宇宙:有17颗恒星,一些恒星没有行星环绕,其余的都恰好被7颗行星环绕。这些行星中,一些没有卫星环绕,其余的都恰好被7颗卫星环绕。如果一颗星球没有被其他星球环绕,我们称它为\"孤星\"(所有的卫星都是孤星)。已知小宇宙中有83颗孤星,那么,共有______颗星球。",
+      "answer_text": "94",
+      "solution_text": "我们设定初始17颗星都是孤星,然后把1颗孤星被7颗星环绕称为一次操作,那么每操作一次,相当于少了1颗孤星,多了7颗孤星,孤星数加6;那么,共操作了 \\((83 - 17)\\div 6 = 11\\) 次,那么,现在有 \\(17 + 11\\times 7 = 94\\) 颗星球.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，描述清晰，无答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "5. 小宇想象了一个小宇宙:有17颗恒星,一些恒星没有行星环绕,其余的都恰好被7颗行星环绕。这些行星中,一些没有卫星环绕,其余的都恰好被7颗卫星环绕。如果一颗星球没有被其他星球环绕,我们称它为\"孤星\"(所有的卫星都是孤星)。已知小宇宙中有83颗孤星,那么,共有______颗星球。",
+      "answer": "94",
+      "solution": "我们设定初始17颗星都是孤星,然后把1颗孤星被7颗星环绕称为一次操作,那么每操作一次,相当于少了1颗孤星,多了7颗孤星,孤星数加6;那么,共操作了 \\((83 - 17)\\div 6 = 11\\) 次,那么,现在有 \\(17 + 11\\times 7 = 94\\) 颗星球."
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 如图,黄色和红色棋子摆成了2个大小一样的实心正方形,在它们的外面有3层白色棋子。如果白色棋子比所有彩色棋子的总数还多36枚,那么,总共有______枚棋子。\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "360",
+      "solution_text": "按下图所示分割,4个角落刚好 \\(3\\times 3\\times 4 = 36\\) 枚;所以剩余白色棋子和剩余彩色棋子相同,剩余上面和下面的部分,白色棋子的长和彩色棋子一样,合起来共6层;左右部分刚好可以合在一起,拼成3层;那么,也就是说除去角上的36枚棋子外白棋子共9层,即彩色棋子的宽是9;那么,彩色棋子共 \\(9\\times 9\\times 2 = 162\\) 枚,白色棋子共 \\(162 + 36 = 198\\) 枚,共 \\(162 + 198 = 360\\) 枚\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_002/images/1.jpg)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析信息泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "6. 如图,黄色和红色棋子摆成了2个大小一样的实心正方形,在它们的外面有3层白色棋子。如果白色棋子比所有彩色棋子的总数还多36枚,那么,总共有______枚棋子。\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "360",
+      "solution": "按下图所示分割,4个角落刚好 \\(3\\times 3\\times 4 = 36\\) 枚;所以剩余白色棋子和剩余彩色棋子相同,剩余上面和下面的部分,白色棋子的长和彩色棋子一样,合起来共6层;左右部分刚好可以合在一起,拼成3层;那么,也就是说除去角上的36枚棋子外白棋子共9层,即彩色棋子的宽是9;那么,彩色棋子共 \\(9\\times 9\\times 2 = 162\\) 枚,白色棋子共 \\(162 + 36 = 198\\) 枚,共 \\(162 + 198 = 360\\) 枚\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_002/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "7. 七名同学背对你排成一行,从左到右编号为 \\(1 \\sim 7\\) ,他们都很诚实,并有如下对话:\n\n\\(A\\) :我在左半边,如果只看男生的话,我是最中间的一个;\n\n\\(B\\) :我左边的男生人数等于右边的女生人数,左边的女生人数等于右边的男生人数;\n\n\\(C\\) :我在 \\(B\\) 右边且我相邻的两名同学都是女生;\n\n\\(D\\) :我们之中没有连续三人同一性别,并且仅有两人,各自相邻的两名同学是一男一女。\n\n那么,所有女生的编号从小到大排列组成的多位数是",
+      "answer_text": "2457",
+      "solution_text": "通过 \\(A\\) 说的话,可得男生的数量是奇数;通过 \\(B\\) 可得, \\(B\\) 左边人数 \\(=\\) 右边人数,除 \\(B\\) 之",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题目和答案解析，适合练习但不适用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json#2#7",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "7. 七名同学背对你排成一行,从左到右编号为 \\(1 \\sim 7\\) ,他们都很诚实,并有如下对话:\n\n\\(A\\) :我在左半边,如果只看男生的话,我是最中间的一个;\n\n\\(B\\) :我左边的男生人数等于右边的女生人数,左边的女生人数等于右边的男生人数;\n\n\\(C\\) :我在 \\(B\\) 右边且我相邻的两名同学都是女生;\n\n\\(D\\) :我们之中没有连续三人同一性别,并且仅有两人,各自相邻的两名同学是一男一女。\n\n那么,所有女生的编号从小到大排列组成的多位数是",
+      "answer": "2457",
+      "solution": "通过 \\(A\\) 说的话,可得男生的数量是奇数;通过 \\(B\\) 可得, \\(B\\) 左边人数 \\(=\\) 右边人数,除 \\(B\\) 之"
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. \"3人剪刀、石头、布\"游戏规则如下:当且仅当恰有2人出的手势相同时,这局称为有效局;有效局可能有2人胜出或仅有1人胜出,例如:当3人分别出石头、剪刀、剪刀,那么,只有出石头的1人胜出. \\(A\\) 、 \\(B\\) 、 \\(C\\) 玩了42局有效局后,发现 \\(A\\) 的胜场数等于 \\(B\\) 的负场数, \\(B\\) 的胜场数是 \\(C\\) 的负场数的2倍, \\(C\\) 的胜场数是 \\(A\\) 的负场数的3倍,那么,这42局中,有 局是2人胜出的.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "36",
+      "solution_text": "每人每局必是胜或负,那么, \\(A\\) 胜 \\(= B\\) 负,说明 \\(A\\) 负 \\(= B\\) 胜,设 \\(C\\) 负场数是1份,那么, \\(B\\) 胜场数是2份,即 \\(A\\) 负场数是2份, \\(C\\) 胜场数是6份,3人总计比赛场数是7份,那么, \\(A\\) 胜场数是 \\(7 - 2 = 5\\) 份, \\(B\\) 负场数是5份;1份是 \\(42\\div 7 = 6\\) 场;那么,3人总计赢了 \\(5 + 2 + 6 = 13\\) 份是 \\(13\\times 6\\) \\(= 78\\) 场,所以,共 \\((78 - 42)\\div (2 - 1) = 36\\) 场是2人胜出的.\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，未包含答案或解析，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json#2#8",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "8. \"3人剪刀、石头、布\"游戏规则如下:当且仅当恰有2人出的手势相同时,这局称为有效局;有效局可能有2人胜出或仅有1人胜出,例如:当3人分别出石头、剪刀、剪刀,那么,只有出石头的1人胜出. \\(A\\) 、 \\(B\\) 、 \\(C\\) 玩了42局有效局后,发现 \\(A\\) 的胜场数等于 \\(B\\) 的负场数, \\(B\\) 的胜场数是 \\(C\\) 的负场数的2倍, \\(C\\) 的胜场数是 \\(A\\) 的负场数的3倍,那么,这42局中,有 局是2人胜出的.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "36",
+      "solution": "每人每局必是胜或负,那么, \\(A\\) 胜 \\(= B\\) 负,说明 \\(A\\) 负 \\(= B\\) 胜,设 \\(C\\) 负场数是1份,那么, \\(B\\) 胜场数是2份,即 \\(A\\) 负场数是2份, \\(C\\) 胜场数是6份,3人总计比赛场数是7份,那么, \\(A\\) 胜场数是 \\(7 - 2 = 5\\) 份, \\(B\\) 负场数是5份;1份是 \\(42\\div 7 = 6\\) 场;那么,3人总计赢了 \\(5 + 2 + 6 = 13\\) 份是 \\(13\\times 6\\) \\(= 78\\) 场,所以,共 \\((78 - 42)\\div (2 - 1) = 36\\) 场是2人胜出的.\n\n## 三. 填空题Ⅲ(每小题12分,共48分)"
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 黑板上有一个数12345,小周同学对这个数进行操作,每一次操作首先选择一个数位(十位、百位或千位),然后选择如下两种操作中的一个执行:\n\n\\(①\\) 将这个数位上的数字增大2,再将两边相邻数位上的数字各减小1;\n\n\\(②\\) 将这个数位上的数字减小2,再将两边相邻数位上的数字各增大1;\n\n并且需要确保执行完毕后得到的结果仍然是一个五位数.那么小周同学经历有限次操作后,能得到的最大的五位数是",
+      "answer_text": "41019",
+      "solution_text": "设这个5位数的5个数字依次是 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) ,每次操作 \\(A + B + C + D + E\\) 和 \\(4A + 3B + 2C + D\\) 都保持不变,所以 \\(A + B + C + D + E = 15\\) , \\(4A + 3B + 2C + D = 4\\times 1 + 3\\times 2 + 2\\times 3 + 1\\times 4 = 20\\) ,可得 \\(A\\) 最大是5,但此时 \\(B\\) 、 \\(C\\) 、 \\(D\\) 都只能是0, \\(E = 15 - 5 - 0 - 0 - 0 = 10\\) ,不符;可得 \\(A\\) 最大是4,此时 \\(3B + 2C + D = 4\\) , \\(B\\) 最大是1, \\(2C + D = 1\\) , \\(C = 0\\) , \\(D = 1\\) , \\(E = 15 - 4 - 1 - 0 - 1 = 9\\) ;此时可能的最大值是41019. 尝试可得,41019 可构造:12345 十位操作2次得12507;百位操作2次得14127;千位操作2次得30327;百位操作1次得31137;十位操作1次得31218;百位操作1次得32028;千位操作1次得40128;十位操作1次得40209;百位操作1次得41019",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个独立的数学题干，描述了操作规则和问题目标，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "9. 黑板上有一个数12345,小周同学对这个数进行操作,每一次操作首先选择一个数位(十位、百位或千位),然后选择如下两种操作中的一个执行:\n\n\\(①\\) 将这个数位上的数字增大2,再将两边相邻数位上的数字各减小1;\n\n\\(②\\) 将这个数位上的数字减小2,再将两边相邻数位上的数字各增大1;\n\n并且需要确保执行完毕后得到的结果仍然是一个五位数.那么小周同学经历有限次操作后,能得到的最大的五位数是",
+      "answer": "41019",
+      "solution": "设这个5位数的5个数字依次是 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) ,每次操作 \\(A + B + C + D + E\\) 和 \\(4A + 3B + 2C + D\\) 都保持不变,所以 \\(A + B + C + D + E = 15\\) , \\(4A + 3B + 2C + D = 4\\times 1 + 3\\times 2 + 2\\times 3 + 1\\times 4 = 20\\) ,可得 \\(A\\) 最大是5,但此时 \\(B\\) 、 \\(C\\) 、 \\(D\\) 都只能是0, \\(E = 15 - 5 - 0 - 0 - 0 = 10\\) ,不符;可得 \\(A\\) 最大是4,此时 \\(3B + 2C + D = 4\\) , \\(B\\) 最大是1, \\(2C + D = 1\\) , \\(C = 0\\) , \\(D = 1\\) , \\(E = 15 - 4 - 1 - 0 - 1 = 9\\) ;此时可能的最大值是41019. 尝试可得,41019 可构造:12345 十位操作2次得12507;百位操作2次得14127;千位操作2次得30327;百位操作1次得31137;十位操作1次得31218;百位操作1次得32028;千位操作1次得40128;十位操作1次得40209;百位操作1次得41019"
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 面积差为8的两个长方形如图摆放.已知如图所示的两个三角形的面积分别为18、5,且点 \\(P\\) 为 \\(AB\\) 的中点,那么图中较小长方形的面积是\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "72",
+      "solution_text": "如图1,连接 \\(BG\\) 、 \\(BH\\) ,则 \\(S_{\\triangle BGH} = S_{\\triangle EFGH}\\div 2\\) .过点 \\(G\\) 作 \\(CB\\) 的平行线、过点 \\(H\\) 作 \\(AB\\) 的平行线将长方形 \\(ABCD\\) 分割成四个小长方形,连接 \\(KB\\) ,根据一半模型可知 \\(S_{\\triangle BGH} = \\left(S_{\\triangle CDKJ} + S_{\\triangle GDHK} + S_{\\triangle KHAI}\\right)\\div 2\\) ,所以 \\(S_{\\triangle EFGH} = S_{\\triangle CDKJ} + S_{\\triangle GDHK} + S_{\\triangle KHI}\\) .那么,长方形 \\(ABCD\\) 比长方形 \\(EFGH\\) 多的面积8即为长方形JKPB的面积.\n\n如图2,因为点 \\(P\\) 为 \\(AB\\) 中点,所以 \\(S_{\\triangle BHP} = S_{\\triangle AHP} = 5\\) ,于是 \\(S_{\\triangle JHA} = (5 + 5)\\times 2 = 20\\) , \\(S_{\\triangle KHAI} = 20 - 8 = 12\\) ,于是图2转化为图3.\n\n因为 \\(36\\div 12 = 3\\) ,即 \\(S_{\\triangle GDHK} = 3S_{\\triangle KHAI}\\) ,所以 \\(S_{\\triangle CGKJ} = 3S_{\\triangle KJB} = 8\\times 3 = 24\\) .\n\n那么, \\(S_{\\triangle EFGH} = S_{\\triangle CDKJ} + S_{\\triangle GDHK} + S_{\\triangle KHAI} = 24 + 36 + 12 = 72\\) .\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_004/images/1.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_004/images/2.jpg)\n\n<center>图2</center>\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_004/images/3.jpg)\n\n<center>图3</center>",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的几何问题题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "10. 面积差为8的两个长方形如图摆放.已知如图所示的两个三角形的面积分别为18、5,且点 \\(P\\) 为 \\(AB\\) 的中点,那么图中较小长方形的面积是\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "72",
+      "solution": "如图1,连接 \\(BG\\) 、 \\(BH\\) ,则 \\(S_{\\triangle BGH} = S_{\\triangle EFGH}\\div 2\\) .过点 \\(G\\) 作 \\(CB\\) 的平行线、过点 \\(H\\) 作 \\(AB\\) 的平行线将长方形 \\(ABCD\\) 分割成四个小长方形,连接 \\(KB\\) ,根据一半模型可知 \\(S_{\\triangle BGH} = \\left(S_{\\triangle CDKJ} + S_{\\triangle GDHK} + S_{\\triangle KHAI}\\right)\\div 2\\) ,所以 \\(S_{\\triangle EFGH} = S_{\\triangle CDKJ} + S_{\\triangle GDHK} + S_{\\triangle KHI}\\) .那么,长方形 \\(ABCD\\) 比长方形 \\(EFGH\\) 多的面积8即为长方形JKPB的面积.\n\n如图2,因为点 \\(P\\) 为 \\(AB\\) 中点,所以 \\(S_{\\triangle BHP} = S_{\\triangle AHP} = 5\\) ,于是 \\(S_{\\triangle JHA} = (5 + 5)\\times 2 = 20\\) , \\(S_{\\triangle KHAI} = 20 - 8 = 12\\) ,于是图2转化为图3.\n\n因为 \\(36\\div 12 = 3\\) ,即 \\(S_{\\triangle GDHK} = 3S_{\\triangle KHAI}\\) ,所以 \\(S_{\\triangle CGKJ} = 3S_{\\triangle KJB} = 8\\times 3 = 24\\) .\n\n那么, \\(S_{\\triangle EFGH} = S_{\\triangle CDKJ} + S_{\\triangle GDHK} + S_{\\triangle KHAI} = 24 + 36 + 12 = 72\\) .\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_004/images/1.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_004/images/2.jpg)\n\n<center>图2</center>\n\n![](ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_004/images/3.jpg)\n\n<center>图3</center>"
+    },
+    {
+      "grade": 3,
+      "year": 2022,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小中年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 有5枚相同的硬币从左到右排成一排,每枚硬币随机正面朝上或朝下放\n\n置.甲、乙两人轮流从左侧连续地取一定数量的硬币,谁取走最后一枚谁获胜.取硬币规则如下:每次取硬币时,若取的第一枚硬币朝上,则所取的硬币中,朝上的硬币数量要为奇数;若取的第一枚硬币朝下,则所取的硬币中,朝下的硬币数量要为奇数.(例如:硬币为\"上上下下\",则可以取前1,4或5枚硬币).如果甲先取,那么,在所有的32种硬币排列方式中,乙有必胜策略的共有 种.",
+      "answer_text": "12",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2022年/ocr_debug/2022数学花园探秘笔试小中年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整且未包含答案或解析，可直接用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/三年级/2022年/2022数学花园探秘笔试小中年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "11. 有5枚相同的硬币从左到右排成一排,每枚硬币随机正面朝上或朝下放\n\n置.甲、乙两人轮流从左侧连续地取一定数量的硬币,谁取走最后一枚谁获胜.取硬币规则如下:每次取硬币时,若取的第一枚硬币朝上,则所取的硬币中,朝上的硬币数量要为奇数;若取的第一枚硬币朝下,则所取的硬币中,朝下的硬币数量要为奇数.(例如:硬币为\"上上下下\",则可以取前1,4或5枚硬币).如果甲先取,那么,在所有的32种硬币排列方式中,乙有必胜策略的共有 种.",
+      "answer": "12",
+      "solution": null
+    }
+  ]
+}

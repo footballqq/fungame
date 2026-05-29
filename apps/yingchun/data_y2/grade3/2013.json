@@ -1,0 +1,858 @@
+{
+  "grade": 3,
+  "year": 2013,
+  "total_problems": 21,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "1. (8分)计算: \\(2013 + 201 + 20 - 13 + 3 = 2224\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和完整解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#3#1",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "1. (8分)计算: \\(2013 + 201 + 20 - 13 + 3 = 2224\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "2. (8分)图中共有_20_个正方形.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_003/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案20并附有完整解析，导致答案泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#3#2",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "2. (8分)图中共有_20_个正方形.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_003/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. （8分）四个海盗杰克、吉米、汤姆和桑吉共分280个金币．杰克说：“我分到的金币比吉米少11个，比汤姆多15个，比桑吉少20个.”那么，桑吉分到了 个金币.\n\n## 二、填空题（共3小题，每小题12分，满分36分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整的填空题题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#1#3",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "3. （8分）四个海盗杰克、吉米、汤姆和桑吉共分280个金币．杰克说：“我分到的金币比吉米少11个，比汤姆多15个，比桑吉少20个.”那么，桑吉分到了 个金币.\n\n## 二、填空题（共3小题，每小题12分，满分36分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "4. (12分) 魔法学校运来很多魔法球, 总重量多达 5 吨, 一颗魔法球重 4 千克, 现在有 10 名学员使用魔法给这些魔法球涂色, 每人每 6 分钟可以给 5 颗魔法球涂色, 那么他们涂完所有魔法球最少要用 150 分钟.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接给出答案'150分钟'，且包含完整解答，属于高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#4",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "原题干包含答案和解析，但裁剪后可作为标准数学应用题。",
+        "review_fix_hint": "删掉【解答】部分，并将题干中的直接答案“150分钟”改为提问形式。",
+        "review_clean_question_text": "4. (12分) 魔法学校运来很多魔法球, 总重量多达 5 吨, 一颗魔法球重 4 千克, 现在有 10 名学员使用魔法给这些魔法球涂色, 每人每 6 分钟可以给 5 颗魔法球涂色, 那么他们涂完所有魔法球最少要用多少分钟?",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#4",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "4. (12分) 魔法学校运来很多魔法球, 总重量多达 5 吨, 一颗魔法球重 4 千克, 现在有 10 名学员使用魔法给这些魔法球涂色, 每人每 6 分钟可以给 5 颗魔法球涂色, 那么他们涂完所有魔法球最少要用 150 分钟.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "5. (12分) 根据前三幅图的规律, 将第四幅图中相应的方格涂黑, 涂黑的方格中所填数之和为 90.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、答案和解析，答案直接给出，存在高风险泄露，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#5",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "5. (12分) 根据前三幅图的规律, 将第四幅图中相应的方格涂黑, 涂黑的方格中所填数之和为 90.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. （12分）在如图的竖式中，不同的汉字代表“0-9”是个不同数字，该竖式成立，则展示活动代表的四位数最小的是\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/images/2.jpg)\n\n## 三、填空题（共4小题，每小题12分，满分48分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整数学题干，包含题号和描述，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#1#6",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "6. （12分）在如图的竖式中，不同的汉字代表“0-9”是个不同数字，该竖式成立，则展示活动代表的四位数最小的是\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/images/2.jpg)\n\n## 三、填空题（共4小题，每小题12分，满分48分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. （12分）如图，在 \\(5 \\times 5\\) 的表格中，每格填入一个数字，使得相同的数字所在的方格都连在一起（相连的两个方格必须有公共边）现在已经给出了1、2、3、4各两个，那么，表格中所有数的和是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，包含题号、分值和问题描述，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#1#7",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "7. （12分）如图，在 \\(5 \\times 5\\) 的表格中，每格填入一个数字，使得相同的数字所在的方格都连在一起（相连的两个方格必须有公共边）现在已经给出了1、2、3、4各两个，那么，表格中所有数的和是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "8. (12分)笼子里有21只蝈蝈和30只蝈蝈.红毛魔术师每变一次,会把其中2只蝈蝈变成1只蝈蝈;绿毛魔术师每变一次会把其中的5只蝈蝈变成2只蝈蝈.两个魔术师一共变了15次后,笼子里只有蝈蝈没有蝈蝈了.这时蝈蝈有_24_只.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了答案和详细解答过程，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#5#8",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "8. (12分)笼子里有21只蝈蝈和30只蝈蝈.红毛魔术师每变一次,会把其中2只蝈蝈变成1只蝈蝈;绿毛魔术师每变一次会把其中的5只蝈蝈变成2只蝈蝈.两个魔术师一共变了15次后,笼子里只有蝈蝈没有蝈蝈了.这时蝈蝈有_24_只.",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#5#8",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "8. (12分)笼子里有21只蝈蝈和30只蝈蝈.红毛魔术师每变一次,会把其中2只蝈蝈变成1只蝈蝈;绿毛魔术师每变一次会把其中的5只蝈蝈变成2只蝈蝈.两个魔术师一共变了15次后,笼子里只有蝈蝈没有蝈蝈了.这时蝈蝈有_24_只.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "9. (12分)一堆糖果有50块,小明和小亮玩游戏.小明每赢一次拿5块糖,然后吃掉4块,将剩下的1块放到自己的口袋里;小亮每赢一次也拿5块糖,然后吃掉3块,将剩下的2块放到自己的口袋里.游戏结束时,糖刚好被拿完,这时小亮口袋里的糖数恰好是小明口袋里的糖数的3倍,那么两人一共吃掉了_34_块糖.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和部分解答过程，存在高泄露风险，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#6#9",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "9. (12分)一堆糖果有50块,小明和小亮玩游戏.小明每赢一次拿5块糖,然后吃掉4块,将剩下的1块放到自己的口袋里;小亮每赢一次也拿5块糖,然后吃掉3块,将剩下的2块放到自己的口袋里.游戏结束时,糖刚好被拿完,这时小亮口袋里的糖数恰好是小明口袋里的糖数的3倍,那么两人一共吃掉了_34_块糖.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "10. (12 分) 将 0-5 这 6 个数字中的 4 个数字填入如图 1 的圆圈中, 每条线段数字两端的数字做差, 可以得到 5 个差, 这 5 个差恰好为 1-5, 如图 2 已给出一种填法, 那么符合要求的填法共有 32 种. (图中, 3 和 5 或 0 和 1 交换位置都算新的填法)\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/images/1.jpg)\n\n<center>图2</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案'32'，且包含完整解析，因此不适合作为考试题目，但可作为练习题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#7#10",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "10. (12 分) 将 0-5 这 6 个数字中的 4 个数字填入如图 1 的圆圈中, 每条线段数字两端的数字做差, 可以得到 5 个差, 这 5 个差恰好为 1-5, 如图 2 已给出一种填法, 那么符合要求的填法共有 32 种. (图中, 3 和 5 或 0 和 1 交换位置都算新的填法)\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/images/1.jpg)\n\n<center>图2</center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "1. (8分)计算: \\(2013\\div (25\\times 52 - 46\\times 15)\\times 10 = 33\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接显示了答案33和详细解答过程，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#1",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "1. (8分)计算: \\(2013\\div (25\\times 52 - 46\\times 15)\\times 10 = 33\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "2. (8分)小明碰到了三个人,其中一位是牧师、一位是骗子、一位是疯子.牧师只说真话,骗子只说假话,疯子有时说真话,有时说假话.第一位说:\"我是疯子.\"第二位说:\"你胡说,你才不是疯子呢!\"第三位说:\"别说了,我是疯子.\"一那么.这三个人中第_3位是疯子.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接陈述了答案'第三位是疯子'，导致泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#2",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "2. (8分)小明碰到了三个人,其中一位是牧师、一位是骗子、一位是疯子.牧师只说真话,骗子只说假话,疯子有时说真话,有时说假话.第一位说:\"我是疯子.\"第二位说:\"你胡说,你才不是疯子呢!\"第三位说:\"别说了,我是疯子.\"一那么.这三个人中第_3位是疯子.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "3. (8分)红色礼盒5元1个,内有陀螺3个;黄色礼盒9元1个,内有陀螺5个,蕾蕾用600元买了72礼盒,这些礼盒打开后可以得到_336_个陀螺.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和完整解答，泄露风险高，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#3",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "3. (8分)红色礼盒5元1个,内有陀螺3个;黄色礼盒9元1个,内有陀螺5个,蕾蕾用600元买了72礼盒,这些礼盒打开后可以得到_336_个陀螺.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. （8分）将1-9填入 \\(3\\times 3\\) 的表格中，要求同一行右面的数字比左面的数大；同一列下面的数比上面的数大，其中1，4，9已经填好，那么其余6个整数有 种不同的填法.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/0.jpg)\n\n## 二、填空题（共4小题，每小题10分，满分40分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#1#4",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "4. （8分）将1-9填入 \\(3\\times 3\\) 的表格中，要求同一行右面的数字比左面的数大；同一列下面的数比上面的数大，其中1，4，9已经填好，那么其余6个整数有 种不同的填法.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/0.jpg)\n\n## 二、填空题（共4小题，每小题10分，满分40分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. （10分）如图1，“ \\(L^{\\prime}\\) ”形的宽度为3厘米．将4个这样的“ \\(L^{\\prime}\\) ”形贴放在九宫格的4个角上，形成的图形如图2．如果4个“ \\(L^{\\prime}\\) ”形的面积之和恰好等于图2中阴影部分的面积，那么，1个“ \\(L^{\\prime}\\) ”形的面积是 平方厘米.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/1.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/2.jpg)\n\n<center>图2</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_004/images/2.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_004/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整题干，无答案或解析泄露，适合考试使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#1#5",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "5. （10分）如图1，“ \\(L^{\\prime}\\) ”形的宽度为3厘米．将4个这样的“ \\(L^{\\prime}\\) ”形贴放在九宫格的4个角上，形成的图形如图2．如果4个“ \\(L^{\\prime}\\) ”形的面积之和恰好等于图2中阴影部分的面积，那么，1个“ \\(L^{\\prime}\\) ”形的面积是 平方厘米.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/1.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/2.jpg)\n\n<center>图2</center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "6. (10分)宴会邀请来了44位嘉宾,会场里有15张相同的正方形桌子,每张每边能坐1人,经适当\"拼桌\"(将几张正方形拼一张长方形或正方形桌子)后,恰好让所有嘉宾全部入座而且没有空位,那么最后会场里最少有_7_张桌子.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整解答和答案，直接暴露解析，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#6",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "6. (10分)宴会邀请来了44位嘉宾,会场里有15张相同的正方形桌子,每张每边能坐1人,经适当\"拼桌\"(将几张正方形拼一张长方形或正方形桌子)后,恰好让所有嘉宾全部入座而且没有空位,那么最后会场里最少有_7_张桌子.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "7. (10分)甲乙丙丁都参加了100米短跑决赛,在比赛前,他们如下预测;\n\n甲预测:\"如果丙是第4,那么我就是第2.\"\n\n乙预测:\"如果甲是第2,那我就是第1.\"\n\n丙预测:\"甲乙两人的比赛成绩要么都高于我,要么都低于我.\"\n\n丁预测:\"甲乙两人的比赛成绩肯定一人比我高,而另一人比我低.\"\n\n比赛结束,他们获得了这项比赛的前4名(无并列),且每人都预测正确.\n\n如果甲、乙、内、丁分别获得第 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 名,那么四位数 \\(\\overrightarrow{\\mathrm{ABCD}} = \\_ 4213\\_\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析过程，有泄露风险，建议仅用于练习而不用于正式考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#7",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "7. (10分)甲乙丙丁都参加了100米短跑决赛,在比赛前,他们如下预测;\n\n甲预测:\"如果丙是第4,那么我就是第2.\"\n\n乙预测:\"如果甲是第2,那我就是第1.\"\n\n丙预测:\"甲乙两人的比赛成绩要么都高于我,要么都低于我.\"\n\n丁预测:\"甲乙两人的比赛成绩肯定一人比我高,而另一人比我低.\"\n\n比赛结束,他们获得了这项比赛的前4名(无并列),且每人都预测正确.\n\n如果甲、乙、内、丁分别获得第 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 名,那么四位数 \\(\\overrightarrow{\\mathrm{ABCD}} = \\_ 4213\\_\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. (10分)《诗》、《书》、《礼》、《易》、《春秋》这5本书的页数各不相同:《诗》和《书》相差24页.《书》和《礼》相差17页.《礼》和《易》相差27页.《易》和《春秋》相差19页.《春秋》和《诗》相差15页.那么,这5本书中,页数最多的和页数最少的相差 页.\n\n## 三、填空题(共3小题,每小题12分,满分36分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学问题题干，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#2#8",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "8. (10分)《诗》、《书》、《礼》、《易》、《春秋》这5本书的页数各不相同:《诗》和《书》相差24页.《书》和《礼》相差17页.《礼》和《易》相差27页.《易》和《春秋》相差19页.《春秋》和《诗》相差15页.那么,这5本书中,页数最多的和页数最少的相差 页.\n\n## 三、填空题(共3小题,每小题12分,满分36分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "9. (12分)甲乙丙丁四人共有251张邮票,已知甲的邮票比乙的2倍多2张,比丙的3倍多6张,比丁得4倍少16张,那么丁有_34_张邮票.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了答案，且解答过程包含答案，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#6#9",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干完整且清晰，去除答案和解析后可作为标准考试题目使用。",
+        "review_fix_hint": "删掉解答部分和填空答案，只保留题干部分，并将填空替换为空白。",
+        "review_clean_question_text": "9. (12分)甲乙丙丁四人共有251张邮票,已知甲的邮票比乙的2倍多2张,比丙的3倍多6张,比丁得4倍少16张,那么丁有____张邮票。",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#6#9",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "9. (12分)甲乙丙丁四人共有251张邮票,已知甲的邮票比乙的2倍多2张,比丙的3倍多6张,比丁得4倍少16张,那么丁有_34_张邮票.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. (12分)图1的 \\(3 \\times 3\\) 表格中已经填好了数,选择一个格为起点,如果对这个黑格和与它相邻的白格中所填数进行加减乘除中的一次运算(计算时大数在前),计算结果是与白格相邻的另一个黑格所填数的整数倍,就能经过这个白格走到下一个黑格,要求每个格子恰好进过一次.(例如图2中,从7经过8可以走到5,并且图2中箭头走向是一种正确走法)请在图1中找出正确的走法.若图1中正确走法的前3个格子所填数依次为 \\(A\\) , \\(B\\) , \\(C\\) ,那么三位数 \\(\\overrightarrow{\\mathrm{ABC}} =\\)\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/1.jpg)\n\n<center>图2</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，描述清晰且无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#2#10",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "10. (12分)图1的 \\(3 \\times 3\\) 表格中已经填好了数,选择一个格为起点,如果对这个黑格和与它相邻的白格中所填数进行加减乘除中的一次运算(计算时大数在前),计算结果是与白格相邻的另一个黑格所填数的整数倍,就能经过这个白格走到下一个黑格,要求每个格子恰好进过一次.(例如图2中,从7经过8可以走到5,并且图2中箭头走向是一种正确走法)请在图1中找出正确的走法.若图1中正确走法的前3个格子所填数依次为 \\(A\\) , \\(B\\) , \\(C\\) ,那么三位数 \\(\\overrightarrow{\\mathrm{ABC}} =\\)\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/1.jpg)\n\n<center>图2</center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2013,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "11. (12分)欢欢、迎迎和妮妮手中共有卡片2712张,桌子上还有一些卡片.他们3人进行了如下操作:\n\n第一次:欢欢从迎迎和妮妮手中各拿来1张卡片;\n\n第二次:妮妮从桌子上拿了2张卡片,并让欢欢和迎迎中,卡片数较少的人拿走卡片数较多的人一张卡片;\n\n第三次:迎迎从桌子上拿了4张卡片,如果手上卡片数是偶数,则将手中的一半卡片交给欢欢和妮妮中卡片数较少的那个人;如果是奇数,则游戏终止.\n\n我们把上述三次操作称为\"一轮操作\".如果他们顺利地进行了50轮操作,而没有出现游戏终止的情况.此时他们手中卡片数按妮妮、欢欢、迎迎的顺序成等差数列.那么,原来欢欢有754张卡片.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2013年/ocr_debug/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案'754'，且有解答过程开始，存在答案和解析泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#7#11",
+          "json_path": "source_pdf/三年级/2013年/2013年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "11. (12分)欢欢、迎迎和妮妮手中共有卡片2712张,桌子上还有一些卡片.他们3人进行了如下操作:\n\n第一次:欢欢从迎迎和妮妮手中各拿来1张卡片;\n\n第二次:妮妮从桌子上拿了2张卡片,并让欢欢和迎迎中,卡片数较少的人拿走卡片数较多的人一张卡片;\n\n第三次:迎迎从桌子上拿了4张卡片,如果手上卡片数是偶数,则将手中的一半卡片交给欢欢和妮妮中卡片数较少的那个人;如果是奇数,则游戏终止.\n\n我们把上述三次操作称为\"一轮操作\".如果他们顺利地进行了50轮操作,而没有出现游戏终止的情况.此时他们手中卡片数按妮妮、欢欢、迎迎的顺序成等差数列.那么,原来欢欢有754张卡片.",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

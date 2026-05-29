@@ -1,0 +1,493 @@
+{
+  "grade": 6,
+  "year": 2012,
+  "total_problems": 12,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "1. (8分)算式 \\((9\\frac{1}{2} +7\\frac{1}{6} +5\\frac{1}{12} +3\\frac{1}{20} +1\\frac{1}{30})\\times 12\\) 的计算结果是_310_",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案数值，并附有完整解答过程，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#3#1",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "1. (8分)算式 \\((9\\frac{1}{2} +7\\frac{1}{6} +5\\frac{1}{12} +3\\frac{1}{20} +1\\frac{1}{30})\\times 12\\) 的计算结果是_310_",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "2. (8分)将棱长为5的大正方体切割成125个棱长为1的小正方体,这些小正方体的表面积总和是原大正方体表面积的_5_倍.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中包含答案填空，解答部分直接给出答案和解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#3#2",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "2. (8分)将棱长为5的大正方体切割成125个棱长为1的小正方体,这些小正方体的表面积总和是原大正方体表面积的_5_倍.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "3. (8分)一辆玩具汽车,第一天按 \\(100\\%\\) 的利润定价,无人来买;第二天降价 \\(10\\%\\) ,还是无人买;第三天再降价360元,终于卖出.已知卖出的价格是进价的1.44倍,那么这辆玩具汽车的进价是_1000_元.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案'1000元'，并附有完整解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#3#3",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "3. (8分)一辆玩具汽车,第一天按 \\(100\\%\\) 的利润定价,无人来买;第二天降价 \\(10\\%\\) ,还是无人买;第三天再降价360元,终于卖出.已知卖出的价格是进价的1.44倍,那么这辆玩具汽车的进价是_1000_元.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)在如图中竖式除法中,被除数为\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg)\n\n## 二、填空题(每小题10分,共40分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本包含数学竞赛问题描述但无答案或解析，像一个独立题干。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#4",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "4. (8分)在如图中竖式除法中,被除数为\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg)\n\n## 二、填空题(每小题10分,共40分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "5. (10分)一个电子钟表上总把日期显示为八位数,如2011年1月1日显示为20110101,那么2011年最后一个能被101整除的日子是2011ABCD,那么 \\(\\overline{\\mathrm{ABCD}} = \\underline{1221}\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和完整解答过程，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#5",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "5. (10分)一个电子钟表上总把日期显示为八位数,如2011年1月1日显示为20110101,那么2011年最后一个能被101整除的日子是2011ABCD,那么 \\(\\overline{\\mathrm{ABCD}} = \\underline{1221}\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "6. (10分)一个 \\(n\\) 位正整数 \\(x\\) ,如果把它补在任意两个正整数的后面,所得两个新数的乘积的末尾还是 \\(x\\) ,那么称 \\(x\\) 是\"吉祥数\".例如:6就是一个\"吉祥数\";但16不是,因为 \\(116 \\times 216 = 25056\\) ,末尾不再是16. 所有位数不超过3位的\"吉祥数\"之和是_1114_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案，且附有完整的解析过程，存在高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#6",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "6. (10分)一个 \\(n\\) 位正整数 \\(x\\) ,如果把它补在任意两个正整数的后面,所得两个新数的乘积的末尾还是 \\(x\\) ,那么称 \\(x\\) 是\"吉祥数\".例如:6就是一个\"吉祥数\";但16不是,因为 \\(116 \\times 216 = 25056\\) ,末尾不再是16. 所有位数不超过3位的\"吉祥数\"之和是_1114_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "7. (10分)有一个足够深的水槽,底面的长为16厘米、宽为12厘米的长方形,原本在水槽里盛有6厘米深的水和6厘米深的油(油在水的上方).如果在水槽中放入一个长、宽、高分别为8厘米、8厘米、12厘米的铁块,那么油层的层高是_7_厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干填空处直接给出答案并附有完整解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#7",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干描述完整，清洗后移除答案和解答即可作为独立题目使用。",
+        "review_fix_hint": "删掉解答部分和图片链接，将题干中的答案数字改为空格。",
+        "review_clean_question_text": "7. (10分)有一个足够深的水槽,底面的长为16厘米、宽为12厘米的长方形,原本在水槽里盛有6厘米深的水和6厘米深的油(油在水的上方).如果在水槽中放入一个长、宽、高分别为8厘米、8厘米、12厘米的铁块,那么油层的层高是___厘米.",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#7",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "7. (10分)有一个足够深的水槽,底面的长为16厘米、宽为12厘米的长方形,原本在水槽里盛有6厘米深的水和6厘米深的油(油在水的上方).如果在水槽中放入一个长、宽、高分别为8厘米、8厘米、12厘米的铁块,那么油层的层高是_7_厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "8. (10分)有一个 \\(6 \\times 6\\) 的正方形,分成36个 \\(1 \\times 1\\) 的正方形.选出其中一些 \\(1 \\times 1\\) 的正方形并画出它们的对角线,使得所画出的任何两条对角线都没有公共点,那么最多可以画",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#8",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "8. (10分)有一个 \\(6 \\times 6\\) 的正方形,分成36个 \\(1 \\times 1\\) 的正方形.选出其中一些 \\(1 \\times 1\\) 的正方形并画出它们的对角线,使得所画出的任何两条对角线都没有公共点,那么最多可以画",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "9. (12分)甲车从 \\(A\\) 地开往 \\(B\\) 地,同时乙车也从 \\(B\\) 地开往 \\(A\\) 地,甲车速度是每小时80千米,乙速度是每小时70千米,甲车在中途 \\(C\\) 地停车,15分钟后乙车到达 \\(C\\) 地,这时甲车继续行驶,如果两车同时到达目的地,那么 \\(A\\) 、 \\(B\\) 两地相距_140_千米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解答过程，存在泄露风险，不适合用于考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#6#9",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "9. (12分)甲车从 \\(A\\) 地开往 \\(B\\) 地,同时乙车也从 \\(B\\) 地开往 \\(A\\) 地,甲车速度是每小时80千米,乙速度是每小时70千米,甲车在中途 \\(C\\) 地停车,15分钟后乙车到达 \\(C\\) 地,这时甲车继续行驶,如果两车同时到达目的地,那么 \\(A\\) 、 \\(B\\) 两地相距_140_千米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "10. (12分)如果自然数 \\(a\\) 的各位数字之和等于5,那么称 \\(a\\) 为\"龙腾数\".将所有的\"龙腾数\"从小到大排成一列,2012排的这一列数中的第_38_个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案'38'，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#6#10",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "10. (12分)如果自然数 \\(a\\) 的各位数字之和等于5,那么称 \\(a\\) 为\"龙腾数\".将所有的\"龙腾数\"从小到大排成一列,2012排的这一列数中的第_38_个.",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#6#10",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "10. (12分)如果自然数 \\(a\\) 的各位数字之和等于5,那么称 \\(a\\) 为\"龙腾数\".将所有的\"龙腾数\"从小到大排成一列,2012排的这一列数中的第_38_个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "11. (12分)在如图中,将一个每边长均为12厘米的正八边形的8个顶点间隔地连线,可以连出两个正方形.图中阴影部分的面积是_288_平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案'288'，且解答过程完整，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#7#11",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "11. (12分)在如图中,将一个每边长均为12厘米的正八边形的8个顶点间隔地连线,可以连出两个正方形.图中阴影部分的面积是_288_平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2012,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "12. (12分)用横向或纵向的线连接所有的黑点和白点并形成自身不想交的回路,这个回路在黑点处必须拐直角弯,且前一格和后一格都必须直行通过;在白点处必须直行通过,且在前一格或者后一格(至少一处)拐直角弯,例如,图2的画法是图1的唯一解,如果按照这个规则在图3中画出回路,那么这条回路一共拐了 次弯.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/2.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/3.jpg)\n\n<center>图2</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/4.jpg)\n\n<center>图3</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/3.jpg",
+          "images_y2/problems/source_pdf/六年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/4.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目描述，包含问题、规则和示例，但未出现答案或解析，因此无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#12",
+          "json_path": "source_pdf/六年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "12. (12分)用横向或纵向的线连接所有的黑点和白点并形成自身不想交的回路,这个回路在黑点处必须拐直角弯,且前一格和后一格都必须直行通过;在白点处必须直行通过,且在前一格或者后一格(至少一处)拐直角弯,例如,图2的画法是图1的唯一解,如果按照这个规则在图3中画出回路,那么这条回路一共拐了 次弯.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/2.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/3.jpg)\n\n<center>图2</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/4.jpg)\n\n<center>图3</center>",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

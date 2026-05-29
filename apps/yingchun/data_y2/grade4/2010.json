@@ -1,0 +1,357 @@
+{
+  "grade": 4,
+  "year": 2010,
+  "total_problems": 10,
+  "problems": [
+    {
+      "grade": 4,
+      "year": 2010,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "1. (8分)计算: \\(64 \\times 46 + 73 \\times 37 + 82 \\times 28 + 91 \\times 19 = 9670\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解答过程，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#3#1",
+          "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "1. (8分)计算: \\(64 \\times 46 + 73 \\times 37 + 82 \\times 28 + 91 \\times 19 = 9670\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2010,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "2. (8分)2010个连续自然数由小到大排成一排,排在奇数位上的各数的平均数是2345,那么排在偶数位上各数的平均数是2346.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在信息泄露，不适合用于考试，但可作为练习题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#3#2",
+          "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "2. (8分)2010个连续自然数由小到大排成一排,排在奇数位上的各数的平均数是2345,那么排在偶数位上各数的平均数是2346.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2010,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. （8分）小红去买水果，如果买5千克苹果则少4元，如果买6千克梨则少3元，已知苹果比梨每500克贵5角5分，那么小红买水果共带了 元.\n\n## 二、填空题Ⅱ（每题10分，共40分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本包含一个完整的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#1#3",
+          "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "3. （8分）小红去买水果，如果买5千克苹果则少4元，如果买6千克梨则少3元，已知苹果比梨每500克贵5角5分，那么小红买水果共带了 元.\n\n## 二、填空题Ⅱ（每题10分，共40分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2010,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "4. （10分）数一数，图中有_6_个平行四边形.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和完整解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#4",
+          "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "4. （10分）数一数，图中有_6_个平行四边形.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2010,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "5. （10分）有8名小朋友，他们每人头上戴着一顶红帽子或蓝帽子．如果一名小朋友看到另外3名或3名以上的小朋友戴着红帽子，就拿一个红气球，否则就拿一个蓝气球．结果这些小朋友中既有拿红气球的，也有小朋友有拿蓝气球的，那么一共有_3_名小朋友戴红帽子.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案，且有完整解答，存在高风险泄漏。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#5",
+          "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "5. （10分）有8名小朋友，他们每人头上戴着一顶红帽子或蓝帽子．如果一名小朋友看到另外3名或3名以上的小朋友戴着红帽子，就拿一个红气球，否则就拿一个蓝气球．结果这些小朋友中既有拿红气球的，也有小朋友有拿蓝气球的，那么一共有_3_名小朋友戴红帽子.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2010,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "6. （10分）六个人传球，每两人之间至多传一次，那么这六个人最多共进行_15_次传球.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干和解答过程，答案直接出现在解答中，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#6",
+          "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "6. （10分）六个人传球，每两人之间至多传一次，那么这六个人最多共进行_15_次传球.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2010,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. （10分）喜羊羊等一群小羊割了一堆青草准备过冬吃．他们算了一下，平均每只小羊割了45千克．如果除了他们自己外，再分给慢羊羊村长一份，那么每只小羊可分得36千克．回到村里，懒羊羊走来，也要分一份．这样一来，每只小羊就只能分得 千克草了.\n\n## 三、填空题（每题12分，共36分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干独立完整，描述清晰，未包含答案、解析或调查元素。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#1#7",
+          "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "7. （10分）喜羊羊等一群小羊割了一堆青草准备过冬吃．他们算了一下，平均每只小羊割了45千克．如果除了他们自己外，再分给慢羊羊村长一份，那么每只小羊可分得36千克．回到村里，懒羊羊走来，也要分一份．这样一来，每只小羊就只能分得 千克草了.\n\n## 三、填空题（每题12分，共36分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2010,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "8. (12分)在左下表中,在有公共边的两格内的数同时加上1或同时减去1叫做一次操作.经过有限次操作后由表1变为右下表,那么表2中 \\(A\\) 处的数是_5_.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/1.jpg)\n\n<center>图2</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案'5'，并包含完整解答过程，导致高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#5#8",
+          "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "8. (12分)在左下表中,在有公共边的两格内的数同时加上1或同时减去1叫做一次操作.经过有限次操作后由表1变为右下表,那么表2中 \\(A\\) 处的数是_5_.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/1.jpg)\n\n<center>图2</center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2010,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. （12分）某校师生共为地震灾区捐款462000元，经统计发现，他们各自所捐的钱数，共有10种不同档次．最低档次共有10人，而每上升一个档次，捐款人数就减少1人；且从第二档次开始，以后各档次的捐款钱数，分别为最低档次的2倍、3倍、4倍…10倍，那么捐款最多的人捐款 元.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#2#9",
+          "json_path": "source_pdf/四年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "9. （12分）某校师生共为地震灾区捐款462000元，经统计发现，他们各自所捐的钱数，共有10种不同档次．最低档次共有10人，而每上升一个档次，捐款人数就减少1人；且从第二档次开始，以后各档次的捐款钱数，分别为最低档次的2倍、3倍、4倍…10倍，那么捐款最多的人捐款 元.",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

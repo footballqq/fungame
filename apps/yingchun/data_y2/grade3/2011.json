@@ -1,0 +1,1089 @@
+{
+  "grade": 3,
+  "year": 2011,
+  "total_problems": 28,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "1. (8分)计算 \\(82 - 38 + 49 - 51 = 42\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案且提供完整解析，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#1",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "1. (8分)计算 \\(82 - 38 + 49 - 51 = 42\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "2. (8分)超市中的某种汉堡每个10元,这种汉堡最近推出了\"买二送一\"的优惠活动,即花钱买两个汉堡,就可以免费获得一个汉堡,已知东东和朋友需要买9个汉堡,那么他们最少需要花_60_元钱.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含下划线答案和完整解答，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#2",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "2. (8分)超市中的某种汉堡每个10元,这种汉堡最近推出了\"买二送一\"的优惠活动,即花钱买两个汉堡,就可以免费获得一个汉堡,已知东东和朋友需要买9个汉堡,那么他们最少需要花_60_元钱.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "3. (8分)小亮家买了72个鸡蛋,他们家还养了一只每天都下一个蛋的母鸡,如果小亮家每天吃4个鸡蛋,那么这些鸡蛋够他们家连续吃_24_天.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整解答和答案，有泄露风险，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#4#3",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "3. (8分)小亮家买了72个鸡蛋,他们家还养了一只每天都下一个蛋的母鸡,如果小亮家每天吃4个鸡蛋,那么这些鸡蛋够他们家连续吃_24_天.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. (8分)5个只由数字8组成的自然数之和为1000,其中最大的数与第二大的数之差是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，未包含答案或解析，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#1#4",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "4. (8分)5个只由数字8组成的自然数之和为1000,其中最大的数与第二大的数之差是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. (8分)已知: \\(1\\times 9 + 2 = 11\\) , \\(12\\times 9 + 3 = 111\\) , \\(123\\times 9 + 4 = 1111\\) , \\(\\dots\\) , \\(\\triangle \\times 9 + \\bigcirc = 111111\\) , 那么 \\(\\triangle +\\bigcirc =\\)\n\n## 二、填空题(共5小题,每小题10分,满分50分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#1#5",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "5. (8分)已知: \\(1\\times 9 + 2 = 11\\) , \\(12\\times 9 + 3 = 111\\) , \\(123\\times 9 + 4 = 1111\\) , \\(\\dots\\) , \\(\\triangle \\times 9 + \\bigcirc = 111111\\) , 那么 \\(\\triangle +\\bigcirc =\\)\n\n## 二、填空题(共5小题,每小题10分,满分50分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "6. (10分)四月份共有30天,如果其中有5个星期六和星期日,那么4月1日是星期六.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、解答过程和答案，泄露风险高，适合仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#5#6",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "6. (10分)四月份共有30天,如果其中有5个星期六和星期日,那么4月1日是星期六.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "7. (10分)小明把三支飞镖掷向如图所示的镖盘上,然后把三支飞镖的得分相加,镖盘上的数字代表这个区域的得分,未中镖盘记0分.那么小明不可能得到的总分最小是22.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_005/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出答案并包含解答过程，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#5#7",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "7. (10分)小明把三支飞镖掷向如图所示的镖盘上,然后把三支飞镖的得分相加,镖盘上的数字代表这个区域的得分,未中镖盘记0分.那么小明不可能得到的总分最小是22.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_005/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "8. （10分）一天中午，孙悟空吃了10个桃子，猪八戒吃了25个包子，孙悟空说猪八戒太能吃了，但猪八戒说自己的包子比桃子小得多，还是孙悟空吃得多．聪明的沙僧用天平得到了如图所示的两种情况（圆圈是桃子，三角是包子长方形表示重量为所标数值的砝码），那么1个桃子和1个包子共重280克.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_006/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_006/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了答案'280克'，并且包含解答过程。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#6#8",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干核心完整，但包含答案和解析，清洗后可作为练习题使用。",
+        "review_fix_hint": "删除解答部分，并将题干中的答案数值替换为空格以隐藏答案。",
+        "review_clean_question_text": "8. （10分）一天中午，孙悟空吃了10个桃子，猪八戒吃了25个包子，孙悟空说猪八戒太能吃了，但猪八戒说自己的包子比桃子小得多，还是孙悟空吃得多．聪明的沙僧用天平得到了如图所示的两种情况（圆圈是桃子，三角是包子长方形表示重量为所标数值的砝码），那么1个桃子和1个包子共重______克.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_006/images/0.jpg)",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#6#8",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "8. （10分）一天中午，孙悟空吃了10个桃子，猪八戒吃了25个包子，孙悟空说猪八戒太能吃了，但猪八戒说自己的包子比桃子小得多，还是孙悟空吃得多．聪明的沙僧用天平得到了如图所示的两种情况（圆圈是桃子，三角是包子长方形表示重量为所标数值的砝码），那么1个桃子和1个包子共重280克.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_006/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "9. (10分)在ABCD+EFG=2010中,不同的字母代表不同的数字,则 \\(A + B + C + D + E + F + G =\\) 30.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案30并附有完整解析，存在高泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#7#9",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "9. (10分)在ABCD+EFG=2010中,不同的字母代表不同的数字,则 \\(A + B + C + D + E + F + G =\\) 30.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. （10分）红星小学组织学生参加演练，一开始只有40个男生参加，后来调整队伍，每次调整减少3个男生，增加2个女生，那么调整 次后男生女生人数就相等了.\n\n## 三、填空题（共5小题，每小题12分，满分60分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整数学题干，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#2#10",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "10. （10分）红星小学组织学生参加演练，一开始只有40个男生参加，后来调整队伍，每次调整减少3个男生，增加2个女生，那么调整 次后男生女生人数就相等了.\n\n## 三、填空题（共5小题，每小题12分，满分60分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. （12分）如图是一个 \\(3\\times 3\\) 的方格表，每个方格（除了最后一个方格）都包含了1-9中某个数字和一个箭头，每一个方格中的箭头都正好指向了下一个数字所在方格的方向，如1号方格的箭头指向右方，代表2号方格在1号方格右方，2号方格指向斜下，代表3号方格在2号斜下方，3号方格指向上方，代表4号方格在三号方格下方，…（指向的方格可以不相邻），这样正好从1到9走完整个方格表，图2是一个只标了箭头和数字1、9的方格表，如果按上述要求也能从1到9走完完整个方格表，那么 \\(A\\) 所在方格应该表示数字\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/images/1.jpg)\n\n<center>图2</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析内容，可安全用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#2#11",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "11. （12分）如图是一个 \\(3\\times 3\\) 的方格表，每个方格（除了最后一个方格）都包含了1-9中某个数字和一个箭头，每一个方格中的箭头都正好指向了下一个数字所在方格的方向，如1号方格的箭头指向右方，代表2号方格在1号方格右方，2号方格指向斜下，代表3号方格在2号斜下方，3号方格指向上方，代表4号方格在三号方格下方，…（指向的方格可以不相邻），这样正好从1到9走完整个方格表，图2是一个只标了箭头和数字1、9的方格表，如果按上述要求也能从1到9走完完整个方格表，那么 \\(A\\) 所在方格应该表示数字\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/images/1.jpg)\n\n<center>图2</center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 8,
+      "question_text": "12. (12 分) 今天是 12 月 19 日, 我们将电子数字 1、2、1、9 放在如图中 \\(8 \\times 5\\) 的长方形中, 每个阴影小格子都是边长为 1 的正方形, 将它旋转 \\(180^{\\circ}\\) , 就变成了 \"6121\", 如果将这两个 \\(8 \\times 5\\) 的长方形重叠放置, 那么重叠的 \\(1 \\times 1\\) 的阴影格子共有 30 个.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_008/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_008/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接陈述了答案'30'，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#8#12",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "12. (12 分) 今天是 12 月 19 日, 我们将电子数字 1、2、1、9 放在如图中 \\(8 \\times 5\\) 的长方形中, 每个阴影小格子都是边长为 1 的正方形, 将它旋转 \\(180^{\\circ}\\) , 就变成了 \"6121\", 如果将这两个 \\(8 \\times 5\\) 的长方形重叠放置, 那么重叠的 \\(1 \\times 1\\) 的阴影格子共有 30 个.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_008/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "13. (12分)羊村小学四年级进行一次数学测验, 测验共有10道题. 如果小喜喜、小沸沸、小关关、小懒懒都是恰好答对了8道题. 那么他们四人都答对的题至少有_2道.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整的答案和解答过程，存在泄露风险，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#9#13",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "13. (12分)羊村小学四年级进行一次数学测验, 测验共有10道题. 如果小喜喜、小沸沸、小关关、小懒懒都是恰好答对了8道题. 那么他们四人都答对的题至少有_2道.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "14. (12分)2014名学生从前往后排成一列,按下面的规则报数:如果某个同学报的数是一位数,后面的同学就要报出这个数与8的和;如果某个同学报的数是两位数,后面的同学就要报出这个数的个位数与7的和.现在让第一个同学报1,那么最后一个同学报的数是_12.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中已直接给出答案，且包含完整解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#9#14",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "14. (12分)2014名学生从前往后排成一列,按下面的规则报数:如果某个同学报的数是一位数,后面的同学就要报出这个数与8的和;如果某个同学报的数是两位数,后面的同学就要报出这个数的个位数与7的和.现在让第一个同学报1,那么最后一个同学报的数是_12.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 15,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "15. (12分)花园里有向日葵、百合花、牡丹三种植物.\n\n(1)在一个星期内只有一天这三种花能同时开放;\n\n(2)没有一种花能连续开放三天;\n\n(3)在一周之内, 任何两种花同时不开的日子不会超过一天;",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本仅包含条件描述，缺少明确问题陈述，不能独立作为题干。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json#9#15",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示初赛试卷（三年级）.json"
+        }
+      },
+      "text": "15. (12分)花园里有向日葵、百合花、牡丹三种植物.\n\n(1)在一个星期内只有一天这三种花能同时开放;\n\n(2)没有一种花能连续开放三天;\n\n(3)在一周之内, 任何两种花同时不开的日子不会超过一天;",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "1. (8分)计算: \\(2011 - (9 \\times 11 \\times 11 + 9 \\times 9 \\times 11 - 9 \\times 11) = 130\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和完整解答，导致答案泄露风险高，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#4#1",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "1. (8分)计算: \\(2011 - (9 \\times 11 \\times 11 + 9 \\times 9 \\times 11 - 9 \\times 11) = 130\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "2. (8分)如图,5个相同的小长方形拼成一个大正方形,已知大正方形的周长比一个小长方形的周长多10厘米,那么小长方形的周长是_15_厘米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和完整解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#4#2",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "2. (8分)如图,5个相同的小长方形拼成一个大正方形,已知大正方形的周长比一个小长方形的周长多10厘米,那么小长方形的周长是_15_厘米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. （8分）一个奥特曼与一群小怪兽在战斗．已知奥特曼有一个头、两条腿，开始时每只小怪兽有两个头、五条腿，在战斗过程中有一部分小怪兽分身了，一个小怪兽分成了两只，分身后的每只小怪兽有一个头、六条腿（不能再次分身），某个时刻战场上有21个头，73条腿，那么这时共有 只小怪兽.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，描述清晰且未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#1#3",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "3. （8分）一个奥特曼与一群小怪兽在战斗．已知奥特曼有一个头、两条腿，开始时每只小怪兽有两个头、五条腿，在战斗过程中有一部分小怪兽分身了，一个小怪兽分成了两只，分身后的每只小怪兽有一个头、六条腿（不能再次分身），某个时刻战场上有21个头，73条腿，那么这时共有 只小怪兽.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "4. (8分)在一个 \\(4 \\times 4\\) 的方格纸内按下面的要求放入糖块:(1)每个格内都要放入糖块;(2)相邻的格子中,左边格比右边格少放1块,上面格比下面格少放2块,(3)右下角的格子里放了20块糖,那么方格纸上共放了_248_块糖.(相邻的格子是指有公共边的格)\n\n<table><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>1</td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了答案'248'，并包含完整解答过程，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#4",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干条件清晰，但包含答案和解析，且依赖图示，轻量清洗后可用于练习。",
+        "review_fix_hint": "移除答案和解答部分，并补充方格纸的图示或数据表格。",
+        "review_clean_question_text": "4. (8分)在一个 \\(4 \\times 4\\) 的方格纸内按下面的要求放入糖块:(1)每个格内都要放入糖块;(2)相邻的格子中,左边格比右边格少放1块,上面格比下面格少放2块,(3)右下角的格子里放了20块糖,那么方格纸上共放了______块糖.(相邻的格子是指有公共边的格)",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#4",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "4. (8分)在一个 \\(4 \\times 4\\) 的方格纸内按下面的要求放入糖块:(1)每个格内都要放入糖块;(2)相邻的格子中,左边格比右边格少放1块,上面格比下面格少放2块,(3)右下角的格子里放了20块糖,那么方格纸上共放了_248_块糖.(相邻的格子是指有公共边的格)\n\n<table><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>1</td></tr></table>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "5. (10分)乐乐把一些小正方形和等腰直角三角形不重叠地放在边长是7厘米的大正方形盒子的底层.如果小正方形的边长都是2厘米,等腰直角三角形的斜边长都是3厘米,那么两种图形他最多可以各放进_7_个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案和解析开头，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#5",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干完整，但包含答案和解析，移除后可用于考试",
+        "review_fix_hint": "删除填空中的数字'7'和【解答】之后的内容",
+        "review_clean_question_text": "5. (10分)乐乐把一些小正方形和等腰直角三角形不重叠地放在边长是7厘米的大正方形盒子的底层.如果小正方形的边长都是2厘米,等腰直角三角形的斜边长都是3厘米,那么两种图形他最多可以各放进____个.",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#5#5",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "5. (10分)乐乐把一些小正方形和等腰直角三角形不重叠地放在边长是7厘米的大正方形盒子的底层.如果小正方形的边长都是2厘米,等腰直角三角形的斜边长都是3厘米,那么两种图形他最多可以各放进_7_个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "6. (10 分)如图,四个三边长度分别为 3 厘米、4 厘米、5 厘米的直角三角形拼成一个大方形.从中去掉一些线段,使得改动后的图形可以一笔画出,那么去掉的线段长度之和最小是_7_厘米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_006/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_006/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，且有完整解析，因此不适合用于考试，仅可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#6#6",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "6. (10 分)如图,四个三边长度分别为 3 厘米、4 厘米、5 厘米的直角三角形拼成一个大方形.从中去掉一些线段,使得改动后的图形可以一笔画出,那么去掉的线段长度之和最小是_7_厘米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_006/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "7. (10 分)有 37 个人排成一行一次报数,第一个人报 1,以后每人报的数都是把前一人报的数加 3,报数过程中有一个人报错了,把前一个人报的数减 3 报了出来,最后这 37 个人报的数加起来恰好等于 2011,那么是第_34_个人报数的人报错了.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案'第34个人'，且包含完整解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#6#7",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "7. (10 分)有 37 个人排成一行一次报数,第一个人报 1,以后每人报的数都是把前一人报的数加 3,报数过程中有一个人报错了,把前一个人报的数减 3 报了出来,最后这 37 个人报的数加起来恰好等于 2011,那么是第_34_个人报数的人报错了.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. (10分)麦斯将9个不同的自然数填入图中的九个空格内,使每行、每列、每条对角线上3个数的和都相等,已知 \\(A\\) 和 \\(B\\) 的差为14, \\(B\\) 和 \\(C\\) 的差也为14,那么 \\(D\\) 和 \\(E\\) 的差是\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/1.jpg)\n\n## 三、填空题(每题12分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目描述完整且独立，无答案或解析信息泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#2#8",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "8. (10分)麦斯将9个不同的自然数填入图中的九个空格内,使每行、每列、每条对角线上3个数的和都相等,已知 \\(A\\) 和 \\(B\\) 的差为14, \\(B\\) 和 \\(C\\) 的差也为14,那么 \\(D\\) 和 \\(E\\) 的差是\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/1.jpg)\n\n## 三、填空题(每题12分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. (12分)如图,有一个 \\(4 \\times 8\\) 的棋盘,现将一枚棋子放在棋盘左下角格子 \\(A\\) 处,要求每一步只能向棋盘右上或右下走一步(如从 \\(C\\) 走一步可走到 \\(D\\) 或 \\(E\\) ),那么将棋子从 \\(A\\) 走到棋盘右上角 \\(B\\) 处共有 种不同的走法.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有出现答案、解析或非题目内容。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#2#9",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "9. (12分)如图,有一个 \\(4 \\times 8\\) 的棋盘,现将一枚棋子放在棋盘左下角格子 \\(A\\) 处,要求每一步只能向棋盘右上或右下走一步(如从 \\(C\\) 走一步可走到 \\(D\\) 或 \\(E\\) ),那么将棋子从 \\(A\\) 走到棋盘右上角 \\(B\\) 处共有 种不同的走法.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 8,
+      "question_text": "10. (12分)大小箱子共62个,小箱子5个一吨,大箱子3个一吨.现要用一辆卡车运走这些箱子.如果先装大箱子,大箱子装完后恰好还可以装15个小箱子.如果先装小箱子,小箱子装完后恰好还可装15个大箱子.那么这些箱子中,大箱子有_27_个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解答过程，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#8#10",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "10. (12分)大小箱子共62个,小箱子5个一吨,大箱子3个一吨.现要用一辆卡车运走这些箱子.如果先装大箱子,大箱子装完后恰好还可以装15个小箱子.如果先装小箱子,小箱子装完后恰好还可装15个大箱子.那么这些箱子中,大箱子有_27_个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "11. (12分)一个新建5层楼房的一个单元每层有东西2套房:各层房号如图所示,现已有赵、钱、孙、李、周五家入住,一天他们5人在花园中聊天:\n\n赵说:\"我家是第3个入住的,第1个入住的就住我对门.\"\n\n钱说:\"只有我一家住在最高层.\"\n\n孙说:\"我家入住时,我家的同侧的上一层和下一层都已有人入住了.\"\n\n李说:\"我家是五家中最后一个入住的,我家楼下那一层全空着.\"\n\n周说:\"我家住在106号,104号空着,108号也空着.\"\n\n他们说的话全是真话,设第1、2、3、4、5家入住的房号的个位数依次为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) ,那么五位数ABCDE=69573.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_009/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_009/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#9#11",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "11. (12分)一个新建5层楼房的一个单元每层有东西2套房:各层房号如图所示,现已有赵、钱、孙、李、周五家入住,一天他们5人在花园中聊天:\n\n赵说:\"我家是第3个入住的,第1个入住的就住我对门.\"\n\n钱说:\"只有我一家住在最高层.\"\n\n孙说:\"我家入住时,我家的同侧的上一层和下一层都已有人入住了.\"\n\n李说:\"我家是五家中最后一个入住的,我家楼下那一层全空着.\"\n\n周说:\"我家住在106号,104号空着,108号也空着.\"\n\n他们说的话全是真话,设第1、2、3、4、5家入住的房号的个位数依次为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) ,那么五位数ABCDE=69573.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_009/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2011,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "12. （12分）在如图的每个圆圈中，各填入一个不为0的数字，使得所有有线段连接的相邻两个圆圈内数的差至少为2，而且每个数字都恰好出现两次．那么 \\(A \\times B\\) 的值是______.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_003/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_003/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2011年/ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_010/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，没有包含答案或解析信息，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json#3#12",
+          "json_path": "source_pdf/三年级/2011年/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）.json"
+        }
+      },
+      "text": "12. （12分）在如图的每个圆圈中，各填入一个不为0的数字，使得所有有线段连接的相邻两个圆圈内数的差至少为2，而且每个数字都恰好出现两次．那么 \\(A \\times B\\) 的值是______.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示复赛试卷（小中组）/pages/page_003/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

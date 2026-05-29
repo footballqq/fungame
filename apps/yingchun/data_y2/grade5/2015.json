@@ -1,0 +1,1213 @@
+{
+  "grade": 5,
+  "year": 2015,
+  "total_problems": 31,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "1. (8分)算式 \\(2015 \\times \\left(\\frac{1}{13} + \\frac{1}{31}\\right)\\) 的计算结果是_220_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案并附带完整解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#3#1",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        }
+      },
+      "text": "1. (8分)算式 \\(2015 \\times \\left(\\frac{1}{13} + \\frac{1}{31}\\right)\\) 的计算结果是_220_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "2. (8分)有一个特殊的计算器,当输入一个数后,计算器先将这个数乘以3,然后将其结果是数字逆序排列,接着再加2后显示最后的结果,小明输入了一个四位数后,显示结果是2015,那么小明输入的四位数是_1034_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析过程，存在高泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#3#2",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        }
+      },
+      "text": "2. (8分)有一个特殊的计算器,当输入一个数后,计算器先将这个数乘以3,然后将其结果是数字逆序排列,接着再加2后显示最后的结果,小明输入了一个四位数后,显示结果是2015,那么小明输入的四位数是_1034_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "3. (8分)一个大于1的正整数加1能被2整除,加2能被3整除,加3能被4整除,加4能被5整除,这个正整数最小是_61_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了答案61和完整解答过程，存在高风险泄露，建议从考试中移除但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#3#3",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "3. (8分)一个大于1的正整数加1能被2整除,加2能被3整除,加3能被4整除,加4能被5整除,这个正整数最小是_61_.",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#3#3",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        }
+      },
+      "text": "3. (8分)一个大于1的正整数加1能被2整除,加2能被3整除,加3能被4整除,加4能被5整除,这个正整数最小是_61_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)在如图每个方框中填入一个数字,使得乘法竖式成立,那么,两个乘数的和是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_001/images/0.jpg)\n\n## 二、填空题",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（小高组决赛a卷）.json#1#4",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（小高组决赛a卷）.json"
+        }
+      },
+      "text": "4. (8分)在如图每个方框中填入一个数字,使得乘法竖式成立,那么,两个乘数的和是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_001/images/0.jpg)\n\n## 二、填空题",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "5. (10分)定义新运算: \\(\\theta_{a} = \\frac{1}{\\mathrm{a}^{2} - 1}\\) ,则 \\((\\theta_{3}) + (\\theta_{5}) + (\\theta_{7}) + (\\theta_{9}) + (\\theta_{11})\\) 的计算结果化成最简真分数后,分子与分母的和是29.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整解答和答案，泄露风险高，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#4#5",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        }
+      },
+      "text": "5. (10分)定义新运算: \\(\\theta_{a} = \\frac{1}{\\mathrm{a}^{2} - 1}\\) ,则 \\((\\theta_{3}) + (\\theta_{5}) + (\\theta_{7}) + (\\theta_{9}) + (\\theta_{11})\\) 的计算结果化成最简真分数后,分子与分母的和是29.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "6. (10分)如图六角星的6个顶点恰好是一个正六边形的6个顶点,那么阴影部分面积是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_004/images/1.jpg)\n\n空白部分面积的_3倍.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_004/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案信息'3倍'并附有解答过程，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#4#6",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        }
+      },
+      "text": "6. (10分)如图六角星的6个顶点恰好是一个正六边形的6个顶点,那么阴影部分面积是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_004/images/1.jpg)\n\n空白部分面积的_3倍.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "7. (10 分) 小明准备和面包饺子, 他在 1.5 千克面粉中加入了 5 千克的水, 发现面和得太稀了, 奶奶告诉他, 包饺子的面需要按照 3 份面, 2 份水和面, 于是小明分三次加入相同分量的面粉, 终于将面按按要求和好了, 那么他每次加入了 2 千克面粉.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出答案'2千克'，且包含完整解答过程，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#5#7",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "7. (10 分) 小明准备和面包饺子, 他在 1.5 千克面粉中加入了 5 千克的水, 发现面和得太稀了, 奶奶告诉他, 包饺子的面需要按照 3 份面, 2 份水和面, 于是小明分三次加入相同分量的面粉, 终于将面按按要求和好了, 那么他每次加入了 2 千克面粉.",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#5#7",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        }
+      },
+      "text": "7. (10 分) 小明准备和面包饺子, 他在 1.5 千克面粉中加入了 5 千克的水, 发现面和得太稀了, 奶奶告诉他, 包饺子的面需要按照 3 份面, 2 份水和面, 于是小明分三次加入相同分量的面粉, 终于将面按按要求和好了, 那么他每次加入了 2 千克面粉.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "8. (10分)甲、乙、丙三户人家打算订阅报纸,共有5种不同的报纸可供选择,已知每户人家都订两份不同的报纸,并且知道这三户人家每两户所订的报纸恰好有一份相同,那么三户人家共有几种不同的订阅方式?\n\n## 三、填空题(共3小题,每小题12分,满分36分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学问题，无答案或解析泄露，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#1#8",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        }
+      },
+      "text": "8. (10分)甲、乙、丙三户人家打算订阅报纸,共有5种不同的报纸可供选择,已知每户人家都订两份不同的报纸,并且知道这三户人家每两户所订的报纸恰好有一份相同,那么三户人家共有几种不同的订阅方式?\n\n## 三、填空题(共3小题,每小题12分,满分36分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. (12分)如图, \\(A\\) 、 \\(B\\) 为圆形轨道一条直径的两个端点,甲、乙、丙三个微型机器人在圆形轨道上同时出发,作匀速圆周运动,甲、乙从 \\(A\\) 出发,丙从 \\(B\\) 出发;乙顺时针运动,甲、丙逆时针运动,出发后12秒钟甲到达 \\(B\\) ,再过9秒钟甲第一次追上丙时恰好也和乙第一次相遇;那么当丙第一次到达 \\(A\\) 后,再过 秒钟,乙才第一次到达 \\(B\\) 。\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（小高组决赛a卷）.json#2#9",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（小高组决赛a卷）.json"
+        }
+      },
+      "text": "9. (12分)如图, \\(A\\) 、 \\(B\\) 为圆形轨道一条直径的两个端点,甲、乙、丙三个微型机器人在圆形轨道上同时出发,作匀速圆周运动,甲、乙从 \\(A\\) 出发,丙从 \\(B\\) 出发;乙顺时针运动,甲、丙逆时针运动,出发后12秒钟甲到达 \\(B\\) ,再过9秒钟甲第一次追上丙时恰好也和乙第一次相遇;那么当丙第一次到达 \\(A\\) 后,再过 秒钟,乙才第一次到达 \\(B\\) 。\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "10. (12分)如图所示,正八边形的每条边长为16厘米,以正八边形的8条边为斜边,向内作8个等腰直角三角形,再将8个等腰直角三角形的顶点首尾相连,在内部构成一个新的正八边形,那么,图中空白部分面积与阴影部分面积差是_512_平方厘米.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_006/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_006/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案512，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#6#10",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        }
+      },
+      "text": "10. (12分)如图所示,正八边形的每条边长为16厘米,以正八边形的8条边为斜边,向内作8个等腰直角三角形,再将8个等腰直角三角形的顶点首尾相连,在内部构成一个新的正八边形,那么,图中空白部分面积与阴影部分面积差是_512_平方厘米.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_006/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "11. (12分)如果一个自然数的数字和与它3倍的数字和相同,却与它2倍的数字和不同,我们称这种数为\"奇妙数\",那么,最小的\"奇妙数\"是_144_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、答案和解析，答案直接出现在题干和解答中，有高泄露风险，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json#7#11",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（五年级初赛b卷）.json"
+        }
+      },
+      "text": "11. (12分)如果一个自然数的数字和与它3倍的数字和相同,却与它2倍的数字和不同,我们称这种数为\"奇妙数\",那么,最小的\"奇妙数\"是_144_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "1. (8分)如果两个质数的差恰好是2,称这两个质数为一对孪生质数.\n\n例如3和5是一对孪生质数,29和31也是一对孪生质数.在数论研究中,孪生质数是最热门的研究课题之一.华裔数学家张益唐在该课题的研究中取得了令人瞩目的成就,他的事迹激励着更多的青年学子投身数学研究.在不超过100的整数中,一共可以找到_8对孪生质数.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含填空和解答部分，答案直接给出，泄露风险高，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#4#1",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
+        }
+      },
+      "text": "1. (8分)如果两个质数的差恰好是2,称这两个质数为一对孪生质数.\n\n例如3和5是一对孪生质数,29和31也是一对孪生质数.在数论研究中,孪生质数是最热门的研究课题之一.华裔数学家张益唐在该课题的研究中取得了令人瞩目的成就,他的事迹激励着更多的青年学子投身数学研究.在不超过100的整数中,一共可以找到_8对孪生质数.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "2. (8分)6个同学约好周六上午8:00-11:30去体育馆打乒乓球,他们租了两个球桌进行单打比赛每段时间都有4个人打球,另外两人当裁判,如此轮换到最后,发现每人都打了相同的时间,请问:每人打了_140_分钟.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解答过程，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#4#2",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
+        }
+      },
+      "text": "2. (8分)6个同学约好周六上午8:00-11:30去体育馆打乒乓球,他们租了两个球桌进行单打比赛每段时间都有4个人打球,另外两人当裁判,如此轮换到最后,发现每人都打了相同的时间,请问:每人打了_140_分钟.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. （8分）图中所示的图形是迎春小学数学兴趣小组的标志，其中，ABCDEF是正六边形，面积为360，那么四边形AGDH的面积是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_001/images/0.jpg)\n\n## 二、填空题II（每题10分，共30分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#1#3",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
+        }
+      },
+      "text": "3. （8分）图中所示的图形是迎春小学数学兴趣小组的标志，其中，ABCDEF是正六边形，面积为360，那么四边形AGDH的面积是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_001/images/0.jpg)\n\n## 二、填空题II（每题10分，共30分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "4. (10分)如图, \\(3 \\times 3\\) 的表面中有16小黑点,一个微型机器人从 \\(A\\) 点出发,沿格线运动,经过其他每个黑点恰好一次,再回到 \\(A\\) 点,共有_12_种不同的走法.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_005/images/1.jpg)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_005/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_005/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_005/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接嵌入了答案（12），存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#5#4",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
+        }
+      },
+      "text": "4. (10分)如图, \\(3 \\times 3\\) 的表面中有16小黑点,一个微型机器人从 \\(A\\) 点出发,沿格线运动,经过其他每个黑点恰好一次,再回到 \\(A\\) 点,共有_12_种不同的走法.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_005/images/1.jpg)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_005/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "6. (10分)如图是挨在一起的大、中、小三个圆,半径分别为 \\(9\\mathrm{cm}\\) , \\(3\\mathrm{cm}\\) , \\(1\\mathrm{cm}\\) ;中圆顺时针向下沿着大圆内侧滚动;小圆逆时针向上沿着中圆内侧滚动,速度都是沿着圆周方向每秒1厘米.如果小圆上固定着一个箭头,那么中圆滚动一周回到出发点的过程中,箭头的旋转角度(小圆绕着自身中心)是_2520_度.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_006/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_006/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接以填空形式给出了答案‘2520度’，且包含解答开始部分，存在明显的答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#6#6",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
+        }
+      },
+      "text": "6. (10分)如图是挨在一起的大、中、小三个圆,半径分别为 \\(9\\mathrm{cm}\\) , \\(3\\mathrm{cm}\\) , \\(1\\mathrm{cm}\\) ;中圆顺时针向下沿着大圆内侧滚动;小圆逆时针向上沿着中圆内侧滚动,速度都是沿着圆周方向每秒1厘米.如果小圆上固定着一个箭头,那么中圆滚动一周回到出发点的过程中,箭头的旋转角度(小圆绕着自身中心)是_2520_度.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_006/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. （15分）如图，从正方形ABCD四条边向外各作一个等边三角形（△ABF、△ADE、△CDH、△BCG），已知正方形ABCD的边长是10，则图中阴影部分面积是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/images/1.jpg)\n\n8．（15分）（如图1） \\(6\\times 6\\) 的方格中，每行每列2、0、1、5四个数字各出现一次，空格把每行每列的数字隔成四位数、三位数、两位数或者一位数．右边和下面的数表示该行或列里的几个数字之和，0不能作为多位数的首位．（图2是一个1、2、3、0四个数字各出现一次的例子）那么，大正方形两条对角线上所有数字之和是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/images/2.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/images/3.jpg)\n\n<center>图2</center>\n\n## 四、亲子互动操作题IV（每题18分，共36分）\n\n9．（18分）手工课上，老师发给学生红、黄、蓝3种颜色的纸带，每种颜色的纸带都有足够多，老师要求选4条纸带有先后顺序地摆放，后面的纸带只能整体放在已摆放纸带的上面；4条纸带都放好之后，从上往下看的轮廓如图，4个交叉点位置的颜色分别是红、蓝、黄、黄（如图）．那么，不同的放置方法有 种．（只要有某一步选的纸带颜色不同，或者有某一步放置的位置不同，就算不同的放置方法.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/images/3.jpg",
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目块包含三个独立的数学竞赛题干，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#2#7",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
+        }
+      },
+      "text": "7. （15分）如图，从正方形ABCD四条边向外各作一个等边三角形（△ABF、△ADE、△CDH、△BCG），已知正方形ABCD的边长是10，则图中阴影部分面积是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/images/1.jpg)\n\n8．（15分）（如图1） \\(6\\times 6\\) 的方格中，每行每列2、0、1、5四个数字各出现一次，空格把每行每列的数字隔成四位数、三位数、两位数或者一位数．右边和下面的数表示该行或列里的几个数字之和，0不能作为多位数的首位．（图2是一个1、2、3、0四个数字各出现一次的例子）那么，大正方形两条对角线上所有数字之和是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/images/2.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_002/images/3.jpg)\n\n<center>图2</center>\n\n## 四、亲子互动操作题IV（每题18分，共36分）\n\n9．（18分）手工课上，老师发给学生红、黄、蓝3种颜色的纸带，每种颜色的纸带都有足够多，老师要求选4条纸带有先后顺序地摆放，后面的纸带只能整体放在已摆放纸带的上面；4条纸带都放好之后，从上往下看的轮廓如图，4个交叉点位置的颜色分别是红、蓝、黄、黄（如图）．那么，不同的放置方法有 种．（只要有某一步选的纸带颜色不同，或者有某一步放置的位置不同，就算不同的放置方法.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "8. (15分)(如图1) \\(6 \\times 6\\) 的方格中,每行每列2、0、1、5四个数字各出现一次,空格把每行每列的数字隔成四位数、三位数、两位数或者一位数.右边和下面的数表示该行或列里的几个数字之和,0不能作为多位数的首位.(图2是一个1、2、3、0四个数字各出",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本描述了数学竞赛题目条件，但未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#7#8",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
+        }
+      },
+      "text": "8. (15分)(如图1) \\(6 \\times 6\\) 的方格中,每行每列2、0、1、5四个数字各出现一次,空格把每行每列的数字隔成四位数、三位数、两位数或者一位数.右边和下面的数表示该行或列里的几个数字之和,0不能作为多位数的首位.(图2是一个1、2、3、0四个数字各出",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "9. (18分)手工课上,老师发给学生红、黄、蓝3种颜色的纸带,每种颜色的纸带都有足够多,老师要求选4条纸带有先后顺序地摆放,后面的纸带只能整体放在已摆放纸带的上面;4条纸带都放好之后,从上往下看的轮廓如图,4个交叉点位置的颜色分别是红、蓝、黄、黄(如图).那么,不同的放置方法有_12_种.(只要有某一步选的纸带颜色不同,或者有某一步放置的位置不同,就算不同的放置方法.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_008/images/3.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_008/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案并开始解答，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#8#9",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
+        }
+      },
+      "text": "9. (18分)手工课上,老师发给学生红、黄、蓝3种颜色的纸带,每种颜色的纸带都有足够多,老师要求选4条纸带有先后顺序地摆放,后面的纸带只能整体放在已摆放纸带的上面;4条纸带都放好之后,从上往下看的轮廓如图,4个交叉点位置的颜色分别是红、蓝、黄、黄(如图).那么,不同的放置方法有_12_种.(只要有某一步选的纸带颜色不同,或者有某一步放置的位置不同,就算不同的放置方法.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_008/images/3.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "10. （18分）如图的9个圆圈间，连有10条直线，每条直线上有3个圆圈，甲先乙后轮流选择一个未被选择的圆圈；如果谁选的圆圈中有3个在同一直线上，谁就获胜．现在，甲选择了“1”，乙接着可选择“5”．甲要获胜，接下来的一步能够选择的编号总乘积是_____.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_003/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_003/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_009/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，提问明确，未包含答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json#3#10",
+          "json_path": "source_pdf/五年级/2015/2015年“迎春杯”数学花园探秘网试试卷（五年级）.json"
+        }
+      },
+      "text": "10. （18分）如图的9个圆圈间，连有10条直线，每条直线上有3个圆圈，甲先乙后轮流选择一个未被选择的圆圈；如果谁选的圆圈中有3个在同一直线上，谁就获胜．现在，甲选择了“1”，乙接着可选择“5”．甲要获胜，接下来的一步能够选择的编号总乘积是_____.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（五年级）/pages/page_003/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛一试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 定义 \\(\\{x\\}\\) 表示数 \\(x\\) 的小数部分,显然 \\(\\{\\pi \\} ,\\{2\\pi \\} ,\\{3\\pi \\} ,\\ldots ,\\{10\\pi \\}\\) 都是小于1的正数,那么把他们从大到小排列后,相邻两数之间有 种不同的差.(只考虑大减小)",
+      "answer_text": "3",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛一试 答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛一试 答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛一试 答案.json#1#1",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛一试 答案.json"
+        }
+      },
+      "text": "1. 定义 \\(\\{x\\}\\) 表示数 \\(x\\) 的小数部分,显然 \\(\\{\\pi \\} ,\\{2\\pi \\} ,\\{3\\pi \\} ,\\ldots ,\\{10\\pi \\}\\) 都是小于1的正数,那么把他们从大到小排列后,相邻两数之间有 种不同的差.(只考虑大减小)",
+      "answer": "3",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛一试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 最简分数 \\(\\frac{n}{m} = 2015 + \\frac{207!}{7^{100}}\\) ,那么 \\(n\\) 的末两位数字是",
+      "answer_text": "45",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛一试 答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛一试 答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含标准答案，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛一试 答案.json#1#2",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛一试 答案.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": false,
+        "review_reason": "heuristic-only",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛一试 答案.json#1#2",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛一试 答案.json"
+        }
+      },
+      "text": "2. 最简分数 \\(\\frac{n}{m} = 2015 + \\frac{207!}{7^{100}}\\) ,那么 \\(n\\) 的末两位数字是",
+      "answer": "45",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛一试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 将1,2,3,4,5排成一排,如果满足任意擦去两个数,使得剩下三个数不构成等差数列(顺序不变),那么称这个排法为\"特别\"的,那么共有 个\"特别\"的排法.",
+      "answer_text": "20",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛一试 答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛一试 答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛一试 答案.json#1#3",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛一试 答案.json"
+        }
+      },
+      "text": "3. 将1,2,3,4,5排成一排,如果满足任意擦去两个数,使得剩下三个数不构成等差数列(顺序不变),那么称这个排法为\"特别\"的,那么共有 个\"特别\"的排法.",
+      "answer": "20",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛一试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 在三角形ABC中,阴影部分是由各边四等分点连接形成,阴影面积为2015,那么三角形ABC的面积为\n\n![](ocr_debug/五年级总决赛一试 答案/pages/page_001/images/0.jpg)",
+      "answer_text": "20150",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛一试 答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛一试 答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/五年级总决赛一试 答案/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立成题但包含完整答案和解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛一试 答案.json#1#4",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛一试 答案.json"
+        }
+      },
+      "text": "4. 在三角形ABC中,阴影部分是由各边四等分点连接形成,阴影面积为2015,那么三角形ABC的面积为\n\n![](ocr_debug/五年级总决赛一试 答案/pages/page_001/images/0.jpg)",
+      "answer": "20150",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛一试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 四位数 \\(abcd\\) 四个数字互不相同,且满足下面的条件:\n\n\\(a \\mid \\overline{bcc}\\) , \\(b \\mid \\overline{cad}\\) , \\(c \\mid \\overline{abb}\\) , \\(d \\mid \\overline{daa}\\) ,那么,求满足条件的四位数 \\(abcd\\) .",
+      "answer_text": "9713",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛一试 答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛一试 答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接包含答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛一试 答案.json#2#5",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛一试 答案.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "5. 四位数 \\(abcd\\) 四个数字互不相同,且满足下面的条件:  \n\n\\(a \\mid \\overline{bcc}\\) , \\(b \\mid \\overline{cad}\\) , \\(c \\mid \\overline{abb}\\) , \\(d \\mid \\overline{daa}\\) ,那么,求满足条件的四位数 \\(abcd\\) .",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛一试 答案.json#2#5",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛一试 答案.json"
+        }
+      },
+      "text": "5. 四位数 \\(abcd\\) 四个数字互不相同,且满足下面的条件:\n\n\\(a \\mid \\overline{bcc}\\) , \\(b \\mid \\overline{cad}\\) , \\(c \\mid \\overline{abb}\\) , \\(d \\mid \\overline{daa}\\) ,那么,求满足条件的四位数 \\(abcd\\) .",
+      "answer": "9713",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛二试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 右面算式中的 \\(A,B,C,D,E,F,G,H,I\\) 分别代表1\\~9中的不同数字.那么五位数 \\(ABCDE =\\)\n\n\\[0.\\dot{A}\\dot{B}\\dot{C} = \\frac{\\overline{{D E}}}{F\\times G\\times H\\times I}\\]",
+      "answer_text": "14856",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛二试 答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛二试 答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可出题，但答案直接附在题后，存在高风险泄露，因此仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛二试 答案.json#1#1",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛二试 答案.json"
+        }
+      },
+      "text": "1. 右面算式中的 \\(A,B,C,D,E,F,G,H,I\\) 分别代表1\\~9中的不同数字.那么五位数 \\(ABCDE =\\)\n\n\\[0.\\dot{A}\\dot{B}\\dot{C} = \\frac{\\overline{{D E}}}{F\\times G\\times H\\times I}\\]",
+      "answer": "14856",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛二试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 如图,梯形ABCD中, \\(A D\\) 平行于 \\(B C\\) , \\(E\\) 为 \\(C D\\) 边上一点,将纸片沿 \\(B E\\) 对折,则 \\(A\\) 点和 \\(C\\) 点重合.已知三角形BCE面积为16,三角形ACE的面积为8,那么原梯形ABCD的面积为\n\n![](ocr_debug/五年级总决赛二试 答案/pages/page_001/images/0.jpg)",
+      "answer_text": "36",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛二试 答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛二试 答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/五年级总决赛二试 答案/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是可出题的几何问题，但直接给出了答案，存在高风险泄露，故建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛二试 答案.json#1#2",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛二试 答案.json"
+        }
+      },
+      "text": "2. 如图,梯形ABCD中, \\(A D\\) 平行于 \\(B C\\) , \\(E\\) 为 \\(C D\\) 边上一点,将纸片沿 \\(B E\\) 对折,则 \\(A\\) 点和 \\(C\\) 点重合.已知三角形BCE面积为16,三角形ACE的面积为8,那么原梯形ABCD的面积为\n\n![](ocr_debug/五年级总决赛二试 答案/pages/page_001/images/0.jpg)",
+      "answer": "36",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛二试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 甲、乙、丙、丁四对夫妇要去参加一个不到100人的聚会,6点一对夫妇到达后,人们正好分成5人一组交谈;7点又一对夫妇到达,改为了4人一组交谈;8点又来了一对夫妇后,改为了3人一组交谈;9点最后一对夫妇到达,就改为了2人一组交谈;四位妻子聚在一起聊天,对聚会情况进行了描述:\n\n甲:从6点开始只有我们四对夫妇陆续到达;\n\n乙:如果那时只有我自己来,将无法平均分成若干组交谈;\n\n丙:我们到来后还可以分成7人一组交谈;\n\n丁:我们到的比甲晚;\n\n那么,甲乙丙丁到达时间组成的四位数为",
+      "answer_text": "6897",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛二试 答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛二试 答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案，存在泄露风险，但问题本身完整可作练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛二试 答案.json#1#3",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛二试 答案.json"
+        }
+      },
+      "text": "3. 甲、乙、丙、丁四对夫妇要去参加一个不到100人的聚会,6点一对夫妇到达后,人们正好分成5人一组交谈;7点又一对夫妇到达,改为了4人一组交谈;8点又来了一对夫妇后,改为了3人一组交谈;9点最后一对夫妇到达,就改为了2人一组交谈;四位妻子聚在一起聊天,对聚会情况进行了描述:\n\n甲:从6点开始只有我们四对夫妇陆续到达;\n\n乙:如果那时只有我自己来,将无法平均分成若干组交谈;\n\n丙:我们到来后还可以分成7人一组交谈;\n\n丁:我们到的比甲晚;\n\n那么,甲乙丙丁到达时间组成的四位数为",
+      "answer": "6897",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛二试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 甲、乙两人从 \\(A\\) 地,丙从 \\(B\\) 地同时出发,相向而行,甲丙在 \\(C\\) 地相遇。相遇后,甲立即掉头,",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛二试 答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛二试 答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本不完整，仅描述场景，未包含明确问题或答案信息，无法独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛二试 答案.json#1#4",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛二试 答案.json"
+        }
+      },
+      "text": "4. 甲、乙两人从 \\(A\\) 地,丙从 \\(B\\) 地同时出发,相向而行,甲丙在 \\(C\\) 地相遇。相遇后,甲立即掉头,",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2015,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "五年级总决赛二试 答案.pdf",
+      "exam": {
+        "exam_key": "五年级总决赛二试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 右图中共有 6 个等边三角形,19 个圆圈。如果将 \\(1 \\sim 19\\) 这 19 个自然数分别填入图中的圆圈中,使得每个等边三角形的每条边上的三个数之和都等于 \\(S\\) ,那么 \\(S\\) 的最小值是多少?请证明你的结论。\n\n![](ocr_debug/五年级总决赛二试 答案/pages/page_002/images/0.jpg)",
+      "answer_text": "22",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2015/五年级总决赛二试 答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2015/ocr_debug/五年级总决赛二试 答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2015/ocr_debug/五年级总决赛二试 答案/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案和解析，因此不适合用于考试，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2015/五年级总决赛二试 答案.json#2#5",
+          "json_path": "source_pdf/五年级/2015/五年级总决赛二试 答案.json"
+        }
+      },
+      "text": "5. 右图中共有 6 个等边三角形,19 个圆圈。如果将 \\(1 \\sim 19\\) 这 19 个自然数分别填入图中的圆圈中,使得每个等边三角形的每条边上的三个数之和都等于 \\(S\\) ,那么 \\(S\\) 的最小值是多少?请证明你的结论。\n\n![](ocr_debug/五年级总决赛二试 答案/pages/page_002/images/0.jpg)",
+      "answer": "22",
+      "solution": null
+    }
+  ]
+}

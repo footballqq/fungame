@@ -1,0 +1,511 @@
+{
+  "grade": 5,
+  "year": 2026,
+  "total_problems": 13,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(20\\times \\left(26^{2} - 13^{2}\\right)\\div \\frac{4^{2} - 3^{2}}{\\frac{1}{3 + \\frac{1}{4}} + \\frac{1}{3 + 4}}\\) 的计算结果是",
+      "answer_text": "780",
+      "solution_text": "\\(= 20\\times 39\\times 13\\div \\frac{7\\times 13}{7}\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，因此不适合考试，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷解析.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷解析.json"
+        }
+      },
+      "text": "1. 算式 \\(20\\times \\left(26^{2} - 13^{2}\\right)\\div \\frac{4^{2} - 3^{2}}{\\frac{1}{3 + \\frac{1}{4}} + \\frac{1}{3 + 4}}\\) 的计算结果是",
+      "answer": "780",
+      "solution": "\\(= 20\\times 39\\times 13\\div \\frac{7\\times 13}{7}\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 在下面的除法竖式中每个方框内填上合适的数字，使得竖式成立．那么竖式中的商是\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "199",
+      "solution_text": "(1)由第四、五行,得 \\(102\\square\\) 、 \\(9\\square 6\\)\n\n(2)第三行,得 \\(10\\square\\) ,进而除数是 \\(10\\square\\)\n\n(3)商的百位为1,十位为9,进而除数是104;\n\n(4)结合第四、五、六行,得商为199;",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题目、答案和解析，直接泄露答案，不适合用于考试，但可作为练习题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷解析.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷解析.json"
+        }
+      },
+      "text": "2. 在下面的除法竖式中每个方框内填上合适的数字，使得竖式成立．那么竖式中的商是\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "199",
+      "solution": "(1)由第四、五行,得 \\(102\\square\\) 、 \\(9\\square 6\\)\n\n(2)第三行,得 \\(10\\square\\) ,进而除数是 \\(10\\square\\)\n\n(3)商的百位为1,十位为9,进而除数是104;\n\n(4)结合第四、五、六行,得商为199;"
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图，在边长为100的正十二边形中，分别以顶点 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 为圆心，以正十二边形边长为半径画圆．那么图中阴影部分的周长是________．（ \\(\\pi\\) 取3.14）",
+      "answer_text": "942",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在答案泄露风险，但问题本身完整可出题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷解析.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷解析.json"
+        }
+      },
+      "text": "3. 如图，在边长为100的正十二边形中，分别以顶点 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 为圆心，以正十二边形边长为半径画圆．那么图中阴影部分的周长是________．（ \\(\\pi\\) 取3.14）",
+      "answer": "942",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 甲、乙两个工程队合作完成某项任务．如果先由甲队人数的 \\(\\frac{1}{9}\\) 和乙队人数的 \\(\\frac{1}{12}\\) 一起工作3天，再由甲队人数的 \\(\\frac{1}{8}\\) 和乙队人数的 \\(\\frac{1}{6}\\) 一起工作2天，恰好共完成全部任务的 \\(\\frac{1}{60}\\) ．如果最开始甲、乙两队全部人员一起同时工作，那么需要________天能完成任务.\n\n## 二．填空题Ⅱ（每小题10分，共40分）",
+      "answer_text": "35",
+      "solution_text": "相当于甲队的 \\(\\frac{1}{9}\\times 3 + \\frac{1}{8}\\times 2 = \\frac{7}{12}\\) 和乙队的 \\(\\frac{1}{12}\\times 3 + \\frac{1}{6}\\times 2 = \\frac{7}{12}\\) 一起工作1天完成全部任务的 \\(\\frac{1}{60}\\) .因此甲、乙全部人员一起工作,需要 \\(\\frac{7}{12} +\\frac{1}{60} = 35\\) 天.\n\n## 二. 填空题Ⅱ(每小题10分,共40分)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，未包含答案或解析信息，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "4. 甲、乙两个工程队合作完成某项任务．如果先由甲队人数的 \\(\\frac{1}{9}\\) 和乙队人数的 \\(\\frac{1}{12}\\) 一起工作3天，再由甲队人数的 \\(\\frac{1}{8}\\) 和乙队人数的 \\(\\frac{1}{6}\\) 一起工作2天，恰好共完成全部任务的 \\(\\frac{1}{60}\\) ．如果最开始甲、乙两队全部人员一起同时工作，那么需要________天能完成任务.\n\n## 二．填空题Ⅱ（每小题10分，共40分）",
+      "answer": "35",
+      "solution": "相当于甲队的 \\(\\frac{1}{9}\\times 3 + \\frac{1}{8}\\times 2 = \\frac{7}{12}\\) 和乙队的 \\(\\frac{1}{12}\\times 3 + \\frac{1}{6}\\times 2 = \\frac{7}{12}\\) 一起工作1天完成全部任务的 \\(\\frac{1}{60}\\) .因此甲、乙全部人员一起工作,需要 \\(\\frac{7}{12} +\\frac{1}{60} = 35\\) 天.\n\n## 二. 填空题Ⅱ(每小题10分,共40分)"
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 末三位数字相同且能被2026整除的五位数是________.",
+      "answer_text": "95222",
+      "solution_text": "设五位数是 \\(2026\\times \\overline{{a b}} = \\overline{{A B C C C}}\\) , \\(A\\) 、 \\(B\\) 、 \\(C\\) 可能相同, \\(a\\) 可能为0,其中 \\(C\\) 可能是0、2、4、6、8,因为2026的百位为0,所以 \\(2026\\times \\overline{{a b}} = 26\\times \\overline{{a b}} (\\mathrm{mod}1000)\\) (即 \\(26\\times \\overline{{a b}}\\) 决定 \\(2026\\times \\overline{{a b}}\\) 的末三位),",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整的填空题，无答案或解析泄露，适合出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#1#5",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "5. 末三位数字相同且能被2026整除的五位数是________.",
+      "answer": "95222",
+      "solution": "设五位数是 \\(2026\\times \\overline{{a b}} = \\overline{{A B C C C}}\\) , \\(A\\) 、 \\(B\\) 、 \\(C\\) 可能相同, \\(a\\) 可能为0,其中 \\(C\\) 可能是0、2、4、6、8,因为2026的百位为0,所以 \\(2026\\times \\overline{{a b}} = 26\\times \\overline{{a b}} (\\mathrm{mod}1000)\\) (即 \\(26\\times \\overline{{a b}}\\) 决定 \\(2026\\times \\overline{{a b}}\\) 的末三位),"
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 算式 \\(357\\times \\left(\\frac{1}{2\\times 5} +\\frac{1}{3\\times 8} +\\frac{1}{5\\times 13} +\\frac{1}{8\\times 21} +\\frac{1}{13\\times 34}\\right)\\) 的计算结果是________.",
+      "answer_text": "59",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的数学填空题，没有包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#1#6",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "6. 算式 \\(357\\times \\left(\\frac{1}{2\\times 5} +\\frac{1}{3\\times 8} +\\frac{1}{5\\times 13} +\\frac{1}{8\\times 21} +\\frac{1}{13\\times 34}\\right)\\) 的计算结果是________.",
+      "answer": "59",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 如图,用7个相同的长方形摆出一个\"房子\".已知\"房子\"的高度是122,那么一个小长方形的面积是________.",
+      "answer_text": "400",
+      "solution_text": "如图, 分别过点 \\(A\\) 、 \\(C\\) 作 \\(EF\\) 的垂线分别交 \\(EF\\) 于点 \\(B\\) 、 \\(D\\) ,\n\n设长方形的长为 \\(a\\) , 宽为 \\(b\\) , 则 \\(EF = a + b\\) , \\(FC = A\\) , \\(CE = a - b\\) ,\n\n(1) 在直角三角形 \\(FCE\\) 中, \\(\\angle FCE = 90^\\circ\\) , 由勾股定理得,\n\n\\[F C^{2} + C E^{2} = F E^{2}, \\mathbb{H} a^{2} + (a - b)^{2} = (a + b)^{2},\\]",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的题干，没有答案或解析泄露，适合出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#2#7",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "7. 如图,用7个相同的长方形摆出一个\"房子\".已知\"房子\"的高度是122,那么一个小长方形的面积是________.",
+      "answer": "400",
+      "solution": "如图, 分别过点 \\(A\\) 、 \\(C\\) 作 \\(EF\\) 的垂线分别交 \\(EF\\) 于点 \\(B\\) 、 \\(D\\) ,\n\n设长方形的长为 \\(a\\) , 宽为 \\(b\\) , 则 \\(EF = a + b\\) , \\(FC = A\\) , \\(CE = a - b\\) ,\n\n(1) 在直角三角形 \\(FCE\\) 中, \\(\\angle FCE = 90^\\circ\\) , 由勾股定理得,\n\n\\[F C^{2} + C E^{2} = F E^{2}, \\mathbb{H} a^{2} + (a - b)^{2} = (a + b)^{2},\\]"
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 老师写了五个连续的两位数,将其中的三个分别给了甲、乙、丙三位同学,三位同学只知道自己拿到的数,而不知道其他同学拿到的数.他们依次对话如下:\n\n师:\"我写的这五个数的和,是一个平方数.\"\n\n甲:\"另外两位同学拿到的数一定有偶数.\"\n\n乙:\"另外两位同学拿到的数一定互质.\"\n\n丙:\"乙拿到的数的有奇数个因数.\"\n\n如果他们都聪明且诚实,那么丙拿到的数是________.\n\n## 三. 填空题III(每小题14分,共42分)",
+      "answer_text": "78",
+      "solution_text": "由老师的话可得, 5个连续的两位数的和为 \\(5 \\times\\) 中间数, 结果是一个平方数,\n\n因此中间数为 \\(5 \\times k^{2}\\) , \\(k\\) 可以取 2、3、4, 得到五个数的情况有 3 种:\n\n(1)18,19,20,21,22;\n\n(2)43,44,45,46,47;\n\n(3)78,79,80,81,82;\n\n由甲的话可得, 五个数为 2 奇 3 偶, 甲拿到的为奇数; 则乙、丙中必有偶数,\n\n因此只能是情况(1)或情况(3);\n\n由乙的话可得, 乙在情况(1)拿到 18 或 21, 在情况(3)中拿到 78 或 81;\n\n由丙的话可得, 乙拿到 81, 丙能知道乙拿到的是 81 而不是 78,\n\n只能是丙拿到了 78;\n\n## 三. 填空题III(每小题14分, 共42分)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析信息，适合保留用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#2#8",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "8. 老师写了五个连续的两位数,将其中的三个分别给了甲、乙、丙三位同学,三位同学只知道自己拿到的数,而不知道其他同学拿到的数.他们依次对话如下:\n\n师:\"我写的这五个数的和,是一个平方数.\"\n\n甲:\"另外两位同学拿到的数一定有偶数.\"\n\n乙:\"另外两位同学拿到的数一定互质.\"\n\n丙:\"乙拿到的数的有奇数个因数.\"\n\n如果他们都聪明且诚实,那么丙拿到的数是________.\n\n## 三. 填空题III(每小题14分,共42分)",
+      "answer": "78",
+      "solution": "由老师的话可得, 5个连续的两位数的和为 \\(5 \\times\\) 中间数, 结果是一个平方数,\n\n因此中间数为 \\(5 \\times k^{2}\\) , \\(k\\) 可以取 2、3、4, 得到五个数的情况有 3 种:\n\n(1)18,19,20,21,22;\n\n(2)43,44,45,46,47;\n\n(3)78,79,80,81,82;\n\n由甲的话可得, 五个数为 2 奇 3 偶, 甲拿到的为奇数; 则乙、丙中必有偶数,\n\n因此只能是情况(1)或情况(3);\n\n由乙的话可得, 乙在情况(1)拿到 18 或 21, 在情况(3)中拿到 78 或 81;\n\n由丙的话可得, 乙拿到 81, 丙能知道乙拿到的是 81 而不是 78,\n\n只能是丙拿到了 78;\n\n## 三. 填空题III(每小题14分, 共42分)"
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 甲、乙两人分别从 \\(A\\) 、 \\(B\\) 两地出发,相向而行.甲先出发,30分钟后乙出发,15分钟后两人在两地中点 \\(C\\) 处相遇.若两人出发时间不变,但出发时甲的速度增加5米/分,乙的速度增加60米/分,那么两人仍然会在 \\(C\\) 点相遇.那么 \\(AB\\) 两地相距________米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露，适合出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#2#9",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "9. 甲、乙两人分别从 \\(A\\) 、 \\(B\\) 两地出发,相向而行.甲先出发,30分钟后乙出发,15分钟后两人在两地中点 \\(C\\) 处相遇.若两人出发时间不变,但出发时甲的速度增加5米/分,乙的速度增加60米/分,那么两人仍然会在 \\(C\\) 点相遇.那么 \\(AB\\) 两地相距________米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 如图,最左边的方格中有一枚棋子,其余方格依次编号为1\\~26,每次只可以向右将棋子移动到最近的编号为2或5的倍数的方格.例如:第一次只能将棋子移动到2号或5号的方格中;如果棋子在8号方格,只能移动到10号方格;如果棋子在15号方格,只能移动到16号或20号方格.那么将棋子移动到26号方格共有________种移动方法.\n\n<table><tr><td>●</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>...</td><td>25</td><td>26</td></tr></table>",
+      "answer_text": "484",
+      "solution_text": "由已知,可标数法如下:\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷解析/pages/page_005/images/1.jpg)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，描述清晰且未包含答案或解析，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#2#10",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "10. 如图,最左边的方格中有一枚棋子,其余方格依次编号为1\\~26,每次只可以向右将棋子移动到最近的编号为2或5的倍数的方格.例如:第一次只能将棋子移动到2号或5号的方格中;如果棋子在8号方格,只能移动到10号方格;如果棋子在15号方格,只能移动到16号或20号方格.那么将棋子移动到26号方格共有________种移动方法.\n\n<table><tr><td>●</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>...</td><td>25</td><td>26</td></tr></table>",
+      "answer": "484",
+      "solution": "由已知,可标数法如下:\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷解析/pages/page_005/images/1.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 如图,圆周上写有5个0和1个正整数 \\(A\\) ,每次进行如下操作:选定某个圆圈,将圆圈中的数减1,同时将相邻两个圆圈中的数各加3.如果若干次操作后能将6个数都变为2026,那么 \\(A\\) 的最小值是________.\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "56",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#2#11",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "11. 如图,圆周上写有5个0和1个正整数 \\(A\\) ,每次进行如下操作:选定某个圆圈,将圆圈中的数减1,同时将相邻两个圆圈中的数各加3.如果若干次操作后能将6个数都变为2026,那么 \\(A\\) 的最小值是________.\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "56",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 12,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "12. 如图,点 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 是由边长为10的小正方形组成的网格中的四个格点,过形内一点 \\(G\\) 的三条线段 \\(AE\\) 、 \\(CF\\) 、 \\(PQ\\) 均平分四边形 \\(ABCD\\) 的面积.\n\n(1)四边形ABCD的面积是多少?(3分)\n\n(2)三角形 \\(CEG\\) 的面积是多少?(6分)\n\n(3)三角形 \\(APQ\\) 的面积是多少?(9分)\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_003/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，包含三个子问题，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#3#12",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "12. 如图,点 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 是由边长为10的小正方形组成的网格中的四个格点,过形内一点 \\(G\\) 的三条线段 \\(AE\\) 、 \\(CF\\) 、 \\(PQ\\) 均平分四边形 \\(ABCD\\) 的面积.\n\n(1)四边形ABCD的面积是多少?(3分)\n\n(2)三角形 \\(CEG\\) 的面积是多少?(6分)\n\n(3)三角形 \\(APQ\\) 的面积是多少?(9分)\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_003/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2026,
+      "number": 13,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小高年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "13. 圆周上等距排列着若干枚棋子, 每次操作会同时在所有相邻的同色棋子之间放入一枚白棋, 在所有相邻的异色棋子之间放入一枚黑棋。例如:\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_004/images/0.jpg)\n\n(1) 所给示例如果再操作 1 次, 圆周上将共有 ______ 枚棋子; (3 分, 请直接给出答案。)\n\n(2) 所给示例如果再操作 2 次, 圆周上将共有 ______ 枚黑棋; (6 分, 请直接给出答案。)\n\n(3) 如果开始时如图放置了 5 枚棋子, 那么操作 9 次后, 圆周上将共有多少枚白棋? (9 分)\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_004/images/1.jpg)",
+      "answer_text": "(1)24;(2)21;(3)1195",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_004/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2026/ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_004/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学竞赛题目，包含问题和子问题，但没有提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json#4#13",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2026/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "13. 圆周上等距排列着若干枚棋子, 每次操作会同时在所有相邻的同色棋子之间放入一枚白棋, 在所有相邻的异色棋子之间放入一枚黑棋。例如:\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_004/images/0.jpg)\n\n(1) 所给示例如果再操作 1 次, 圆周上将共有 ______ 枚棋子; (3 分, 请直接给出答案。)\n\n(2) 所给示例如果再操作 2 次, 圆周上将共有 ______ 枚黑棋; (6 分, 请直接给出答案。)\n\n(3) 如果开始时如图放置了 5 枚棋子, 那么操作 9 次后, 圆周上将共有多少枚白棋? (9 分)\n\n![](ocr_debug/2026数学花园探秘笔试小高年级决赛A卷（ B5试卷版）/pages/page_004/images/1.jpg)",
+      "answer": "(1)24;(2)21;(3)1195",
+      "solution": null
+    }
+  ]
+}

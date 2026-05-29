@@ -1,0 +1,517 @@
+{
+  "grade": 6,
+  "year": 2024,
+  "total_problems": 13,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(1\\frac{2}{3}\\times 45.6 - 78 + 90\\) 的计算结果是",
+      "answer_text": "88",
+      "solution_text": "\\[1\\frac{2}{3}\\times 45.6 - 78 + 90 = 76 - 78 + 90 = 88.\\]",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含独立的数学题干，但附加了答案和解析，适合练习但不宜直接用于考试。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#1#1",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(1\\frac{2}{3}\\times 45.6 - 78 + 90\\) 的计算结果是",
+      "answer": "88",
+      "solution": "\\[1\\frac{2}{3}\\times 45.6 - 78 + 90 = 76 - 78 + 90 = 88.\\]"
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 蚕娘在蚕房养了若干条蚕,一天她发现有 \\(\\frac{1}{3}\\) 的蚕结茧了,于是她取出了 \\(\\frac{1}{3}\\) 的蚕茧用来缫丝,第二天,她发现剩下的蚕中又有 \\(\\frac{1}{3}\\) 结了茧,如果此时蚕房内没结茧的蚕还有400条,那么蚕房中现有蚕茧 颗.",
+      "answer_text": "400",
+      "solution_text": "蚕茧有原来总蚕数的 \\(\\frac{1}{3} - \\frac{1}{3}\\times \\frac{1}{3} +(1 - \\frac{1}{3})\\times \\frac{1}{3} = \\frac{4}{9}\\) ;\n\n未结茧的蚕有原来总蚕数的 \\((1 - \\frac{1}{3})\\times (1 - \\frac{1}{3}) = \\frac{4}{9}\\) ;\n\n所以最后蚕房里未结茧的蚕和蚕茧一样多,因此蚕房里有蚕茧400颗.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整独立，但文本块包含答案和解析，存在信息泄露，建议仅用于练习。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#1#2",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "2. 蚕娘在蚕房养了若干条蚕,一天她发现有 \\(\\frac{1}{3}\\) 的蚕结茧了,于是她取出了 \\(\\frac{1}{3}\\) 的蚕茧用来缫丝,第二天,她发现剩下的蚕中又有 \\(\\frac{1}{3}\\) 结了茧,如果此时蚕房内没结茧的蚕还有400条,那么蚕房中现有蚕茧 颗.",
+      "answer": "400",
+      "solution": "蚕茧有原来总蚕数的 \\(\\frac{1}{3} - \\frac{1}{3}\\times \\frac{1}{3} +(1 - \\frac{1}{3})\\times \\frac{1}{3} = \\frac{4}{9}\\) ;\n\n未结茧的蚕有原来总蚕数的 \\((1 - \\frac{1}{3})\\times (1 - \\frac{1}{3}) = \\frac{4}{9}\\) ;\n\n所以最后蚕房里未结茧的蚕和蚕茧一样多,因此蚕房里有蚕茧400颗."
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 甲、乙在黑板上各写了一个自然数,结果发现这两个数的最小公倍数是甲写的数的3倍,是乙写的数的7倍,但只有这两个数乘积的 \\(\\frac{1}{21}\\) ,那么这两个数的和为",
+      "answer_text": "210",
+      "solution_text": "甲数的3倍是甲、乙乘积的 \\(\\frac{1}{21}\\) ,所以乙数是 \\(3\\div \\frac{1}{21} = 63\\) ;\n\n同理,甲数是 \\(7\\div \\frac{1}{21} = 147\\) ;\n\n两个数的和为 \\(63 + 147 = 210\\) .",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本是一个完整的数学题干，但已附答案和解析，建议仅用于练习。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#1#3",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "3. 甲、乙在黑板上各写了一个自然数,结果发现这两个数的最小公倍数是甲写的数的3倍,是乙写的数的7倍,但只有这两个数乘积的 \\(\\frac{1}{21}\\) ,那么这两个数的和为",
+      "answer": "210",
+      "solution": "甲数的3倍是甲、乙乘积的 \\(\\frac{1}{21}\\) ,所以乙数是 \\(3\\div \\frac{1}{21} = 63\\) ;\n\n同理,甲数是 \\(7\\div \\frac{1}{21} = 147\\) ;\n\n两个数的和为 \\(63 + 147 = 210\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 一个梯形的四条边长恰好构成等差数列, 且它的周长是 2024, 那么这个梯形的两腰长之和是 _______.",
+      "answer_text": "1012",
+      "solution_text": "设梯形的边长为: \\(a_{1}< a_{2}< a_{3}< a_{4}\\) ,公差为 \\(d\\) .\n\n如图,将梯形分割成 \\(\\square A B E D\\) 和 \\(\\triangle B C E\\) ,两底的差与两腰构成 \\(\\triangle\\)\n\n\\(B C E\\) ,从而两腰的差小于两底的差,那么两底的差为 \\(2d\\) 或 \\(3d\\) .\n\n若两底的差为 \\(2d\\) ,两底长 \\(a_{1},a_{3}\\) 或 \\(a_{2},a_{4}\\) ,两腰的差也是 \\(2d\\) ,矛盾.\n\n∴ 两底的差为 \\(3d\\) ,两底长 \\(a_{1},a_{4}\\) ,两腰长 \\(a_{2},a_{3}\\) . \\(a_{2} + a_{3} = a_{1} + a_{4} = 2024 \\div 2 = 1012\\)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/1.jpg)\n\n## 二. 填空题Ⅱ(每小题10分,共40分)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，不适合用于考试但可作为练习题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#2#4",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "4. 一个梯形的四条边长恰好构成等差数列, 且它的周长是 2024, 那么这个梯形的两腰长之和是 _______.",
+      "answer": "1012",
+      "solution": "设梯形的边长为: \\(a_{1}< a_{2}< a_{3}< a_{4}\\) ,公差为 \\(d\\) .\n\n如图,将梯形分割成 \\(\\square A B E D\\) 和 \\(\\triangle B C E\\) ,两底的差与两腰构成 \\(\\triangle\\)\n\n\\(B C E\\) ,从而两腰的差小于两底的差,那么两底的差为 \\(2d\\) 或 \\(3d\\) .\n\n若两底的差为 \\(2d\\) ,两底长 \\(a_{1},a_{3}\\) 或 \\(a_{2},a_{4}\\) ,两腰的差也是 \\(2d\\) ,矛盾.\n\n∴ 两底的差为 \\(3d\\) ,两底长 \\(a_{1},a_{4}\\) ,两腰长 \\(a_{2},a_{3}\\) . \\(a_{2} + a_{3} = a_{1} + a_{4} = 2024 \\div 2 = 1012\\)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/1.jpg)\n\n## 二. 填空题Ⅱ(每小题10分,共40分)"
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 熊大参加为期10天的体能训练营,每天都要做俯卧撑.已知第一天它只做了11个,第2天比第1天多做1个或2个,第3天比第2天多做1个或3个……第10天比第9天多做到1个或10个.在这10天中他一共做了215个俯卧撑,那么,其中它有 ______ 天比前一天仅多做1个.",
+      "answer_text": "5",
+      "solution_text": "如果熊大每天仅比前一天多做一个,则10天他共做了 \\(11 + 12 + 13 + \\dots 20 = 155\\) 个.\n\n若第2天多做2个,则后面每天要多做1个,共多做 \\(1 \\times 9 = 9\\) 个;\n\n若第3天多做3个,则后面每天要多做2个,共多做 \\(2 \\times 8 = 16\\) 个;\n\n依此类推,后面每天改变对总数的影响分别为 \\(9,16,21,24,25,24,21,16,9\\) .\n\n而总共需要多做 \\(215 - 155 = 60\\) 个.\n\n60只能表示为 \\(9 + 21 + 21 + 9\\) ,因此有4天它不止比前一天多做一个,有5天仅比前一天多做1个.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中包含标准答案和详细解析，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#2#5",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "5. 熊大参加为期10天的体能训练营,每天都要做俯卧撑.已知第一天它只做了11个,第2天比第1天多做1个或2个,第3天比第2天多做1个或3个……第10天比第9天多做到1个或10个.在这10天中他一共做了215个俯卧撑,那么,其中它有 ______ 天比前一天仅多做1个.",
+      "answer": "5",
+      "solution": "如果熊大每天仅比前一天多做一个,则10天他共做了 \\(11 + 12 + 13 + \\dots 20 = 155\\) 个.\n\n若第2天多做2个,则后面每天要多做1个,共多做 \\(1 \\times 9 = 9\\) 个;\n\n若第3天多做3个,则后面每天要多做2个,共多做 \\(2 \\times 8 = 16\\) 个;\n\n依此类推,后面每天改变对总数的影响分别为 \\(9,16,21,24,25,24,21,16,9\\) .\n\n而总共需要多做 \\(215 - 155 = 60\\) 个.\n\n60只能表示为 \\(9 + 21 + 21 + 9\\) ,因此有4天它不止比前一天多做一个,有5天仅比前一天多做1个."
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 如果一个个位数字为5的三位数除以2,3,4,5,6,7,8,9的余数互不相等,那么这个数是 ______.",
+      "answer_text": "935",
+      "solution_text": "这个数是个奇数所以只能除以2余1,除以4余3,除以6余5,除以8余7;\n\n这个数的末位是5,所以除以5余0;\n\n这个数除以6余5,所以除以3余2,除以9余8;\n\n因此这个数除以360余215.\n\n余数还剩下4和6,所以这个数除以7余4或者6.\n\n枚举知这个三位数是 \\(360 \\times 2 + 215 = 935\\) .",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干，但答案和解析已直接给出，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#2#6",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "6. 如果一个个位数字为5的三位数除以2,3,4,5,6,7,8,9的余数互不相等,那么这个数是 ______.",
+      "answer": "935",
+      "solution": "这个数是个奇数所以只能除以2余1,除以4余3,除以6余5,除以8余7;\n\n这个数的末位是5,所以除以5余0;\n\n这个数除以6余5,所以除以3余2,除以9余8;\n\n因此这个数除以360余215.\n\n余数还剩下4和6,所以这个数除以7余4或者6.\n\n枚举知这个三位数是 \\(360 \\times 2 + 215 = 935\\) ."
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "7. 在梯形 \\(ABCD\\) 中, \\(E\\) 、 \\(F\\) 分别在对角线 \\(AC\\) 和腰 \\(AD\\) 上, \\(\\triangle BEC\\) 面积为 30, \\(\\triangle DEC\\) 面积为 75, 则平行四边形 \\(BEDF\\) 面积是 ______.",
+      "answer_text": "40",
+      "solution_text": "延长 \\(BE\\) 交 \\(CD\\) 于点 \\(M\\) , 等积变形, \\(S_{\\triangle ABC} = S_{\\triangle ABD}\\) , \\(S_{\\triangle ABE} = S_{\\triangle DBE} = S_{\\triangle BDF}\\) , \\(S_{\\triangle ABF} = S_{\\triangle DEM} = S_{\\triangle BEC} = 30\\) , \\(S_{\\triangle EMC} = 75 - 30 = 45\\) . \\(\\therefore S_{\\triangle BDE} = 30 \\times 30 \\div 45 = 20\\) , 平行四边形 \\(BEDF\\) 的面积为 40.\n\n平行四边形 \\(BEDF\\) 的面积为 40.\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_003/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案和详细解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#3#7",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "7. 在梯形 \\(ABCD\\) 中, \\(E\\) 、 \\(F\\) 分别在对角线 \\(AC\\) 和腰 \\(AD\\) 上, \\(\\triangle BEC\\) 面积为 30, \\(\\triangle DEC\\) 面积为 75, 则平行四边形 \\(BEDF\\) 面积是 ______.",
+      "answer": "40",
+      "solution": "延长 \\(BE\\) 交 \\(CD\\) 于点 \\(M\\) , 等积变形, \\(S_{\\triangle ABC} = S_{\\triangle ABD}\\) , \\(S_{\\triangle ABE} = S_{\\triangle DBE} = S_{\\triangle BDF}\\) , \\(S_{\\triangle ABF} = S_{\\triangle DEM} = S_{\\triangle BEC} = 30\\) , \\(S_{\\triangle EMC} = 75 - 30 = 45\\) . \\(\\therefore S_{\\triangle BDE} = 30 \\times 30 \\div 45 = 20\\) , 平行四边形 \\(BEDF\\) 的面积为 40.\n\n平行四边形 \\(BEDF\\) 的面积为 40.\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_003/images/0.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "8. 如图, 有编号为 \\(1 \\sim 9\\) 的 9 个房间, 有公共点的两个房间中的人可以相互看到, 否则无法相互看到. 老师安排甲、乙、丙、丁四人住在不同的房间中, 并且告诉他们, 甲、乙、\n\n丙、丁的房间号依次从小到大. 四人住进房间后, 甲说: \"虽然乙并不能看到所有人, 但从他的视角看, 丙无法确定丁是否知道我在几号房间.\" 那么甲、乙、丙、丁四人所在的房间号, 按顺序组成的四位数是",
+      "answer_text": "2346",
+      "solution_text": "5 号房间可以看到所有人的位置, 所有人都能看到 5 号房间.\n\n乙并不能看到所有人说明乙不住在 5 号房间.\n\n丙无法确定丁是否知道甲的房间, 所以丙、丁也不住在 5 号房间.\n\n第一层 (1、2、3 号) 和第三层 (7、8、9 号) 的房间互相之间都看不到.\n\n若甲不在第一层, 则丁必在第三层, 必然不知道甲在几号房间, 因此甲只能在第一层.\n\n丙无法确定丁是否知道甲的位置, 所以他无法确定丁是否在第三层, 因此甲、乙、丙的房间号都小于 5.\n\n甲能确定丙不能看到丁, 所以甲必然可以看到丁.\n\n因此甲、乙、丙、丁的房间号分别是 2、3、4、6 号.",
+      "topic": "combinatorics",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案和解析，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#3#8",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "8. 如图, 有编号为 \\(1 \\sim 9\\) 的 9 个房间, 有公共点的两个房间中的人可以相互看到, 否则无法相互看到. 老师安排甲、乙、丙、丁四人住在不同的房间中, 并且告诉他们, 甲、乙、  \n\n丙、丁的房间号依次从小到大. 四人住进房间后, 甲说: \"虽然乙并不能看到所有人, 但从他的视角看, 丙无法确定丁是否知道我在几号房间.\" 那么甲、乙、丙、丁四人所在的房间号, 按顺序组成的四位数是",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#3#8",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "8. 如图, 有编号为 \\(1 \\sim 9\\) 的 9 个房间, 有公共点的两个房间中的人可以相互看到, 否则无法相互看到. 老师安排甲、乙、丙、丁四人住在不同的房间中, 并且告诉他们, 甲、乙、\n\n丙、丁的房间号依次从小到大. 四人住进房间后, 甲说: \"虽然乙并不能看到所有人, 但从他的视角看, 丙无法确定丁是否知道我在几号房间.\" 那么甲、乙、丙、丁四人所在的房间号, 按顺序组成的四位数是",
+      "answer": "2346",
+      "solution": "5 号房间可以看到所有人的位置, 所有人都能看到 5 号房间.\n\n乙并不能看到所有人说明乙不住在 5 号房间.\n\n丙无法确定丁是否知道甲的房间, 所以丙、丁也不住在 5 号房间.\n\n第一层 (1、2、3 号) 和第三层 (7、8、9 号) 的房间互相之间都看不到.\n\n若甲不在第一层, 则丁必在第三层, 必然不知道甲在几号房间, 因此甲只能在第一层.\n\n丙无法确定丁是否知道甲的位置, 所以他无法确定丁是否在第三层, 因此甲、乙、丙的房间号都小于 5.\n\n甲能确定丙不能看到丁, 所以甲必然可以看到丁.\n\n因此甲、乙、丙、丁的房间号分别是 2、3、4、6 号."
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "9. 小李每天准点开车从家出发去上班,总能恰好按时到达公司.因为早高峰影响,在 \\(8:00\\sim\\) \\(8:30\\) 会堵车严重,这个时间段内开车速度会减半.如果小李早10分钟出发,会早到15分钟.如果小李晚20分钟出发,会晚到25分钟.如果小李晚10分钟出发,会晚到分钟.",
+      "answer_text": "20",
+      "solution_text": "小李早出发10分钟,途中少用 \\(10 - 5 = 5\\) 分钟.说明平时速度减半行10分钟的路程,被现在正常行5分钟所替代.平时上班有以下三类情况:\n\n(1)8:00或之前出发,8:10到达公司;\n\n(2)8:00或之前出发,8:35到达公司;\n\n(3) \\(8:00\\sim 8:05\\) 出发,速度减半行10分钟到达公司.\n\n小李晚20分钟出发,途中多用 \\(25 - 20 = 5\\) 分钟.说明平时正常行驶5分钟的路程,被现在速度减半行10分钟所替代.如果是(2)(3)两种情况之一,则晚出发20分钟时,途中所用时间一定不会多于平时所用时间,所以必为情况(1).\n\n由(1)知小李晚20分钟出发时,晚到25分钟,则是8:35到达公司,在拥堵段上的时间是 \\(10 + 10 = 20\\) 分钟,所以晚20分钟出发是8:10出发,平时是7:50出发.\n\n所以如果小李8:00出发,会8:30到达,比平时晚20分钟到达.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和详细解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#4#9",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "9. 小李每天准点开车从家出发去上班,总能恰好按时到达公司.因为早高峰影响,在 \\(8:00\\sim\\) \\(8:30\\) 会堵车严重,这个时间段内开车速度会减半.如果小李早10分钟出发,会早到15分钟.如果小李晚20分钟出发,会晚到25分钟.如果小李晚10分钟出发,会晚到分钟.",
+      "answer": "20",
+      "solution": "小李早出发10分钟,途中少用 \\(10 - 5 = 5\\) 分钟.说明平时速度减半行10分钟的路程,被现在正常行5分钟所替代.平时上班有以下三类情况:\n\n(1)8:00或之前出发,8:10到达公司;\n\n(2)8:00或之前出发,8:35到达公司;\n\n(3) \\(8:00\\sim 8:05\\) 出发,速度减半行10分钟到达公司.\n\n小李晚20分钟出发,途中多用 \\(25 - 20 = 5\\) 分钟.说明平时正常行驶5分钟的路程,被现在速度减半行10分钟所替代.如果是(2)(3)两种情况之一,则晚出发20分钟时,途中所用时间一定不会多于平时所用时间,所以必为情况(1).\n\n由(1)知小李晚20分钟出发时,晚到25分钟,则是8:35到达公司,在拥堵段上的时间是 \\(10 + 10 = 20\\) 分钟,所以晚20分钟出发是8:10出发,平时是7:50出发.\n\n所以如果小李8:00出发,会8:30到达,比平时晚20分钟到达."
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "10. 如图,等腰梯形ABCD中, \\(E\\) 是底边 \\(BC\\) 上一点,将 \\(\\triangle DEC\\) 关于 \\(DE\\) 对折, \\(C\\) 恰好落在 \\(AB\\) 上的 \\(F\\) 点处,然后将 \\(\\triangle BEF\\) 关于 \\(EF\\) 对折, \\(B\\) 恰好落在 \\(DF\\) 上的 \\(G\\) 点处, \\(\\triangle DEG\\) 面积为36平方厘米, \\(\\triangle ADG\\) 面积为24平方厘米,那么梯形 \\(ABCD\\) 的面积为平方厘米.",
+      "answer_text": "162",
+      "solution_text": "由条件有 \\(\\angle B = \\angle C = \\angle 1 = \\angle 2\\) ,所以 \\(\\triangle BEF\\) 为等腰三角形,这样 \\(BE = EF = EC\\) .又 \\(\\angle 3 = \\angle DEF\\) 且 \\(\\angle 3 + \\angle DEF + \\angle 4 = \\angle 2 + \\angle B + \\angle 4\\) ,所以 \\(\\angle 3 = \\angle B = \\angle C\\) .这样 \\(ABED\\) 是一个平行四边形.\n\n所以 \\(S_{\\triangle BEF} + S_{\\triangle ADF} = S_{\\triangle GEF} + S_{\\triangle DGE}\\) ,可得 \\(S_{\\triangle ADF} = S_{\\triangle DGE} = 36\\)\n\n\\(DG:DF = S_{\\triangle ADG}:S_{\\triangle ADF} = 24:36 = 2:3\\) ,所以 \\(AF:AB = 2:3\\)\n\n梯形 \\(ABCD\\) 的面积为 \\(36\\div \\left(\\frac{1}{3}\\times \\frac{2}{3}\\right) = 162\\) 平方厘米.\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/0.jpg)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干部分独立完整且无泄露，但文本块包含标准答案和详细解析，因此仅适合用于练习。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#4#10",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "10. 如图,等腰梯形ABCD中, \\(E\\) 是底边 \\(BC\\) 上一点,将 \\(\\triangle DEC\\) 关于 \\(DE\\) 对折, \\(C\\) 恰好落在 \\(AB\\) 上的 \\(F\\) 点处,然后将 \\(\\triangle BEF\\) 关于 \\(EF\\) 对折, \\(B\\) 恰好落在 \\(DF\\) 上的 \\(G\\) 点处, \\(\\triangle DEG\\) 面积为36平方厘米, \\(\\triangle ADG\\) 面积为24平方厘米,那么梯形 \\(ABCD\\) 的面积为平方厘米.",
+      "answer": "162",
+      "solution": "由条件有 \\(\\angle B = \\angle C = \\angle 1 = \\angle 2\\) ,所以 \\(\\triangle BEF\\) 为等腰三角形,这样 \\(BE = EF = EC\\) .又 \\(\\angle 3 = \\angle DEF\\) 且 \\(\\angle 3 + \\angle DEF + \\angle 4 = \\angle 2 + \\angle B + \\angle 4\\) ,所以 \\(\\angle 3 = \\angle B = \\angle C\\) .这样 \\(ABED\\) 是一个平行四边形.\n\n所以 \\(S_{\\triangle BEF} + S_{\\triangle ADF} = S_{\\triangle GEF} + S_{\\triangle DGE}\\) ,可得 \\(S_{\\triangle ADF} = S_{\\triangle DGE} = 36\\)\n\n\\(DG:DF = S_{\\triangle ADG}:S_{\\triangle ADF} = 24:36 = 2:3\\) ,所以 \\(AF:AB = 2:3\\)\n\n梯形 \\(ABCD\\) 的面积为 \\(36\\div \\left(\\frac{1}{3}\\times \\frac{2}{3}\\right) = 162\\) 平方厘米.\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/0.jpg)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/1.jpg)"
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "11. 在一个 \\(3 \\times 4\\) 的方格表中将 12 个方格分别染上黑色或白色. 对于每个方格, 要求它的相\n\n邻位置(有公共边的两方格视为相邻)上的所有方格不全同色,\n\n那么共有 种不同的染色方法.(方格表不可旋转或翻转)",
+      "answer_text": "64",
+      "solution_text": "法1:\n\n四个角格有 2 个相邻方格, 必为 1 黑 1 白, 因此 \\(B\\) 和 \\(AC\\) 异色, \\(E\\) 和 \\(DF\\) 异色, 按 \\(BE\\) 同色或异色进行分类:\n\n(1) \\(BE\\) 同色, 则 \\(①②\\) 、 \\(②③\\) 、 \\(④⑤\\) 、 \\(⑤⑥\\) 各至少有 1 黑, \\(①②③\\) 、 \\(④⑤⑥\\) 各至少有 1 白即可. 按 \\(②\\) 、 \\(⑤\\) 颜色分类, 共 \\(1 + 2 \\times 3 + 9 = 16\\) 种;\n\n<table><tr><td></td><td>A</td><td>D</td><td></td></tr><tr><td>B</td><td></td><td></td><td>E</td></tr><tr><td></td><td>C</td><td>F</td><td></td></tr></table>\n\n<table><tr><td>①</td><td>A</td><td>D</td><td>④</td></tr><tr><td>B</td><td>②</td><td>⑤</td><td>E</td></tr><tr><td>③</td><td>C</td><td>F</td><td>⑥</td></tr></table>\n\n<table><tr><td>①</td><td>A</td><td>D</td><td>⑥</td></tr><tr><td>B</td><td>②</td><td>⑤</td><td>E</td></tr><tr><td>③&lt;fci&gt;C</td><td>F</td><td>⑥</td><td></td></tr></table>\n\n(2) \\(BE\\) 异色, 则 \\(①②\\) 、 \\(②③\\) 、 \\(④⑤⑥\\) 各至少有 1 白, \\(④⑤\\) 、 \\(⑤⑥\\) 、 \\(①②③\\) 各至少有 1 黑即可. 按 \\(②\\) 、 \\(⑤\\) 颜色分类, 共 \\(3 + 9 + 1 + 3 = 16\\) 种.\n\n综上, 共 \\(2 \\times (16 + 16) = 64\\) 种染色方式.\n\n法2:\n\n对方格表进行黑白间隔染色, 黑色区域与白色区域均有 8 种染法, 因此共 \\(8 \\times 8 = 64\\) 种.",
+      "topic": "combinatorics",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、明确答案和详细解析，答案直接泄露，因此不适合作为考题，但可作为练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#5#11",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "11. 在一个 \\(3 \\times 4\\) 的方格表中将 12 个方格分别染上黑色或白色. 对于每个方格, 要求它的相\n\n邻位置(有公共边的两方格视为相邻)上的所有方格不全同色,\n\n那么共有 种不同的染色方法.(方格表不可旋转或翻转)",
+      "answer": "64",
+      "solution": "法1:\n\n四个角格有 2 个相邻方格, 必为 1 黑 1 白, 因此 \\(B\\) 和 \\(AC\\) 异色, \\(E\\) 和 \\(DF\\) 异色, 按 \\(BE\\) 同色或异色进行分类:\n\n(1) \\(BE\\) 同色, 则 \\(①②\\) 、 \\(②③\\) 、 \\(④⑤\\) 、 \\(⑤⑥\\) 各至少有 1 黑, \\(①②③\\) 、 \\(④⑤⑥\\) 各至少有 1 白即可. 按 \\(②\\) 、 \\(⑤\\) 颜色分类, 共 \\(1 + 2 \\times 3 + 9 = 16\\) 种;\n\n<table><tr><td></td><td>A</td><td>D</td><td></td></tr><tr><td>B</td><td></td><td></td><td>E</td></tr><tr><td></td><td>C</td><td>F</td><td></td></tr></table>\n\n<table><tr><td>①</td><td>A</td><td>D</td><td>④</td></tr><tr><td>B</td><td>②</td><td>⑤</td><td>E</td></tr><tr><td>③</td><td>C</td><td>F</td><td>⑥</td></tr></table>\n\n<table><tr><td>①</td><td>A</td><td>D</td><td>⑥</td></tr><tr><td>B</td><td>②</td><td>⑤</td><td>E</td></tr><tr><td>③&lt;fci&gt;C</td><td>F</td><td>⑥</td><td></td></tr></table>\n\n(2) \\(BE\\) 异色, 则 \\(①②\\) 、 \\(②③\\) 、 \\(④⑤⑥\\) 各至少有 1 白, \\(④⑤\\) 、 \\(⑤⑥\\) 、 \\(①②③\\) 各至少有 1 黑即可. 按 \\(②\\) 、 \\(⑤\\) 颜色分类, 共 \\(3 + 9 + 1 + 3 = 16\\) 种.\n\n综上, 共 \\(2 \\times (16 + 16) = 64\\) 种染色方式.\n\n法2:\n\n对方格表进行黑白间隔染色, 黑色区域与白色区域均有 8 种染法, 因此共 \\(8 \\times 8 = 64\\) 种."
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "12. 一个三位数,考虑它的数字和 \\(A\\) 与它的101倍的数字和 \\(B\\)\n\n(1)(8分)如果 \\(A\\) 和 \\(B\\) 一样大,那么这个三位数是多少?\n\n(2)(10分)能否找到一个三位数使得 \\(A\\) 比 \\(B\\) 大?如果能,有多少个?如果不能,请说明理由.",
+      "answer_text": "(1)999; (3)8个.",
+      "solution_text": "\\(B\\) 和 \\(A\\) 的两倍相差9的倍数(进几位就相差几倍).\n\n(1) \\(A\\) 和 \\(B\\) 一样大,则 \\(A\\) 一定是9的倍数.\n\n若 \\(A = 9\\) ,则无法产生进位,不满足要求;\n\n若 \\(A = 18\\) ,则需要进两位,百位上必须进位,千位上就无法产生进位了,不满足要求;\n\n若 \\(A = 27\\) ,数字和为27的三位数只有一个:999, \\(999\\times 101 = 100899\\) ,满足要求.\n\n(2)若乘积的百位产生进位,则原三位数的百位数字和个位数字之和要大于9, \\(A\\) 至少是10;\n\n若乘积的千位产生进位,则原三位数的十位数字必须为9,且乘积的百位必须进位, \\(A\\) 至少是19;\n\n若乘积的万位产生进位,则原三位数的百位数字必须为9,且乘积的千位必须进位;\n\n若 \\(A< 10\\) ,则无法产生进位, \\(A > B\\) ;\n\n若 \\(10\\leq A< 19\\) ,至多只能产生一次进位, \\(A > B\\) ;\n\n若 \\(A\\geq 19\\) ,且 \\(A > B\\) ,则需产生3次进位且 \\(A< 27\\) ,因此原三位数的百位数字和十位数字必须都是9,\n\n这样的三位数有 \\(991\\sim 998\\) 共8个.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块中直接包含了【答案】和【解析】部分，存在答案和解析泄露的高风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#6#12",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "12. 一个三位数,考虑它的数字和 \\(A\\) 与它的101倍的数字和 \\(B\\)\n\n(1)(8分)如果 \\(A\\) 和 \\(B\\) 一样大,那么这个三位数是多少?\n\n(2)(10分)能否找到一个三位数使得 \\(A\\) 比 \\(B\\) 大?如果能,有多少个?如果不能,请说明理由.",
+      "answer": "(1)999; (3)8个.",
+      "solution": "\\(B\\) 和 \\(A\\) 的两倍相差9的倍数(进几位就相差几倍).\n\n(1) \\(A\\) 和 \\(B\\) 一样大,则 \\(A\\) 一定是9的倍数.\n\n若 \\(A = 9\\) ,则无法产生进位,不满足要求;\n\n若 \\(A = 18\\) ,则需要进两位,百位上必须进位,千位上就无法产生进位了,不满足要求;\n\n若 \\(A = 27\\) ,数字和为27的三位数只有一个:999, \\(999\\times 101 = 100899\\) ,满足要求.\n\n(2)若乘积的百位产生进位,则原三位数的百位数字和个位数字之和要大于9, \\(A\\) 至少是10;\n\n若乘积的千位产生进位,则原三位数的十位数字必须为9,且乘积的百位必须进位, \\(A\\) 至少是19;\n\n若乘积的万位产生进位,则原三位数的百位数字必须为9,且乘积的千位必须进位;\n\n若 \\(A< 10\\) ,则无法产生进位, \\(A > B\\) ;\n\n若 \\(10\\leq A< 19\\) ,至多只能产生一次进位, \\(A > B\\) ;\n\n若 \\(A\\geq 19\\) ,且 \\(A > B\\) ,则需产生3次进位且 \\(A< 27\\) ,因此原三位数的百位数字和十位数字必须都是9,\n\n这样的三位数有 \\(991\\sim 998\\) 共8个."
+    },
+    {
+      "grade": 6,
+      "year": 2024,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（解析版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "13. (1)(6分)将3种颜色的棋子各10枚分给若干名同学,发现任意两人之间都有相同颜色的棋子,那么最多可以分给多少名同学?\n\n(2)(12分)将4种颜色的棋子各10枚分给若干名同学,发现任意两人之间都有相同颜色的子,那么最多可以分给多少名同学?",
+      "answer_text": "(1)15 (2)16",
+      "solution_text": "(1)若有人只有一种颜色的棋子,则所有人都要与他有同色棋子,最多只能分给10个人.若每人都有两色以上的棋子,则任意两人之间都有同色棋子,所以最多可以分给 \\(10\\times 3\\div 2 = 15\\) 人.下面给出15人的构造: \\(1\\sim 5\\) 号拥有(红、黄), \\(6\\sim 10\\) 号拥有(红、蓝), \\(11\\sim 15\\) 号拥有(黄、蓝)\n\n(2)由上一问知至少可以分给15人来满足题目要求,\n\n下面只讨论每人棋子数量不少于2,人数不少于16的情况,\n\n总共有棋子 \\(10\\times 4 = 40\\) 枚,所以至少有 \\(16\\times 3 - 40 = 8\\) 人只有2枚棋子.\n\n不妨将4种颜色记作红、黄、蓝、绿,4种颜色选2种共有6种选择,其中两两不可同取,所以最多只有3种可选,因此至少有3人的2枚棋子颜色分别相同,不妨记作 \\(1\\sim 3\\) 号拥有红色和黄色.\n\n此时还剩红色、黄色棋子各7枚,而其他人必须拥有红色或黄色棋子,因此至多 \\(3 + 7 + 7 = 17\\) 人.\n\n下面证明17人不行,若分给17人,则剩下红、黄棋子分给14个人每人一个,不妨记作 \\(4\\sim 10\\) 号拥有红色, \\(11\\sim 17\\) 号拥有黄色.\n\n还剩蓝、绿棋子各10枚.因此剩下的14人中必有人只有两枚棋子,不妨设4号拥有红色和蓝色棋子,则 \\(11\\sim 17\\) 号拥有蓝色,则 \\(5\\sim 10\\) 号中至少有4人没有蓝色,不妨记作 \\(5\\sim 8\\) 号仅拥有红色和绿色棋子.则 \\(11\\sim 17\\) 号都必须拥有绿色,矛盾.\n\n所以17人不能满足要求.\n\n下面给出16人的构造: \\(1\\sim 3\\) 号拥有(红、黄), \\(4\\sim 6\\) 号拥有(红、蓝), \\(7\\sim 9\\) 号拥有(红、绿), \\(10\\sim 16\\) 号拥有(黄、蓝、绿).\n\n因此,最多分给16位同学,可以满足要求.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2024/2024决赛小高D卷（解析版）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2024/ocr_debug/2024决赛小高D卷（解析版）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本块包含完整的题目、明确答案和详细解析，适合作为练习材料但不宜用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json#7#13",
+          "json_path": "source_pdf/六年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "13. (1)(6分)将3种颜色的棋子各10枚分给若干名同学,发现任意两人之间都有相同颜色的棋子,那么最多可以分给多少名同学?\n\n(2)(12分)将4种颜色的棋子各10枚分给若干名同学,发现任意两人之间都有相同颜色的子,那么最多可以分给多少名同学?",
+      "answer": "(1)15 (2)16",
+      "solution": "(1)若有人只有一种颜色的棋子,则所有人都要与他有同色棋子,最多只能分给10个人.若每人都有两色以上的棋子,则任意两人之间都有同色棋子,所以最多可以分给 \\(10\\times 3\\div 2 = 15\\) 人.下面给出15人的构造: \\(1\\sim 5\\) 号拥有(红、黄), \\(6\\sim 10\\) 号拥有(红、蓝), \\(11\\sim 15\\) 号拥有(黄、蓝)\n\n(2)由上一问知至少可以分给15人来满足题目要求,\n\n下面只讨论每人棋子数量不少于2,人数不少于16的情况,\n\n总共有棋子 \\(10\\times 4 = 40\\) 枚,所以至少有 \\(16\\times 3 - 40 = 8\\) 人只有2枚棋子.\n\n不妨将4种颜色记作红、黄、蓝、绿,4种颜色选2种共有6种选择,其中两两不可同取,所以最多只有3种可选,因此至少有3人的2枚棋子颜色分别相同,不妨记作 \\(1\\sim 3\\) 号拥有红色和黄色.\n\n此时还剩红色、黄色棋子各7枚,而其他人必须拥有红色或黄色棋子,因此至多 \\(3 + 7 + 7 = 17\\) 人.\n\n下面证明17人不行,若分给17人,则剩下红、黄棋子分给14个人每人一个,不妨记作 \\(4\\sim 10\\) 号拥有红色, \\(11\\sim 17\\) 号拥有黄色.\n\n还剩蓝、绿棋子各10枚.因此剩下的14人中必有人只有两枚棋子,不妨设4号拥有红色和蓝色棋子,则 \\(11\\sim 17\\) 号拥有蓝色,则 \\(5\\sim 10\\) 号中至少有4人没有蓝色,不妨记作 \\(5\\sim 8\\) 号仅拥有红色和绿色棋子.则 \\(11\\sim 17\\) 号都必须拥有绿色,矛盾.\n\n所以17人不能满足要求.\n\n下面给出16人的构造: \\(1\\sim 3\\) 号拥有(红、黄), \\(4\\sim 6\\) 号拥有(红、蓝), \\(7\\sim 9\\) 号拥有(红、绿), \\(10\\sim 16\\) 号拥有(黄、蓝、绿).\n\n因此,最多分给16位同学,可以满足要求."
+    }
+  ]
+}

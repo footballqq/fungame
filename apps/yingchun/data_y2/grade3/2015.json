@@ -1,0 +1,813 @@
+{
+  "grade": 3,
+  "year": 2015,
+  "total_problems": 21,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "1. (8分)算式 \\(201\\times 5 + 1220 - 2\\times 3\\times 5\\times 7\\) 的计算结果是_2015_",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和完整解答，存在高泄漏风险，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#3#1",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
+        }
+      },
+      "text": "1. (8分)算式 \\(201\\times 5 + 1220 - 2\\times 3\\times 5\\times 7\\) 的计算结果是_2015_",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "2. (8分)小明家养了三只母鸡,第一只母鸡每天下一个蛋,第二只母鸡两天下一个蛋,第三只母鸡三天下一个蛋,已知一月一日三只母鸡都下了蛋,那么一月的一三十一天内,这三只母鸡一共下了_58_个鸡蛋.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接显示答案数字并包含完整解答过程，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#3#2",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干完整，通过移除解答和答案可转化为可用填空题。",
+        "review_fix_hint": "删除解答部分和答案提示，仅保留题干问题陈述。",
+        "review_clean_question_text": "2. (8分)一群鸭子对一群狗说:\"我们比你们多2只.\"狗对鸭子说:\"我们比你们多10条腿.\"那么鸭子和狗共____只.",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#3#2",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
+        }
+      },
+      "text": "2. (8分)小明家养了三只母鸡,第一只母鸡每天下一个蛋,第二只母鸡两天下一个蛋,第三只母鸡三天下一个蛋,已知一月一日三只母鸡都下了蛋,那么一月的一三十一天内,这三只母鸡一共下了_58_个鸡蛋.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "3. (8分)甲、乙、丙、丁获得了学校的前4名(无并列),他们说:\n\n甲:\"我既不是第一,也不是第二\";乙说:\"我的名次和丙相邻\";\n\n丙:\"我既不是第二,也不是第三\";丁:\"我的名次和乙相邻\",\n\n现知道,甲、乙、丙、丁分别获得第 \\(A\\) , \\(B\\) , \\(C\\) , \\(D\\) 名,并且他们都是不说谎的好学生,\n\n那么四位数ABCD=4213.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了答案‘23’和解答过程，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#3#3",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干清晰完整，但包含直接答案、解析和图片依赖，需清洗后可作为练习题使用。",
+        "review_fix_hint": "删除题干中的答案数字'23'和图片链接，但题目依赖'如图所示'，需确保图片可访问。",
+        "review_clean_question_text": "3. (8分)如图所示,从正三角形的边作一个正方形,再用与正三角形不相邻的正方形一边做一个正五边形,再从与正方形不相邻的正五边形一边作一个正六边形,继续以相同的方式再作一个正七边形,依序再作一个正八边形,这样形成了一个多边形,请问这个多边形有____个边.",
+        "review_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#3#3",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
+        }
+      },
+      "text": "3. (8分)甲、乙、丙、丁获得了学校的前4名(无并列),他们说:\n\n甲:\"我既不是第一,也不是第二\";乙说:\"我的名次和丙相邻\";\n\n丙:\"我既不是第二,也不是第三\";丁:\"我的名次和乙相邻\",\n\n现知道,甲、乙、丙、丁分别获得第 \\(A\\) , \\(B\\) , \\(C\\) , \\(D\\) 名,并且他们都是不说谎的好学生,\n\n那么四位数ABCD=4213.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. （8分）如图，需需家的菜园是一个由4块正方形的菜地和1个小长方形的水池组成的大长方形．如果每块菜地的面积都是20平方米且菜园的长为10米，那么菜园中水池《图中阴影部分）的周长是 米.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_001/images/0.jpg)\n\n## 二、填空题（共4小题，每小题10分，满分40分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为独立的数学题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（小中组决赛a卷）.json#1#4",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（小中组决赛a卷）.json"
+        }
+      },
+      "text": "4. （8分）如图，需需家的菜园是一个由4块正方形的菜地和1个小长方形的水池组成的大长方形．如果每块菜地的面积都是20平方米且菜园的长为10米，那么菜园中水池《图中阴影部分）的周长是 米.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_001/images/0.jpg)\n\n## 二、填空题（共4小题，每小题10分，满分40分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "5. (10 分) 有一种特殊的计算器, 当输入一个数后. 计算器会把这个数乘以 2, 然后将其结果的数字顺序颠倒. 接着再加 2 后显示最后的结果. 如果输入一个两位数, 最后显示的结果是 27, 那么, 最开始输入的是 26.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目文本中直接包含答案和完整解析，因此不适合作为考试题目，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#4#5",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
+        }
+      },
+      "text": "5. (10 分) 有一种特殊的计算器, 当输入一个数后. 计算器会把这个数乘以 2, 然后将其结果的数字顺序颠倒. 接着再加 2 后显示最后的结果. 如果输入一个两位数, 最后显示的结果是 27, 那么, 最开始输入的是 26.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "6. (10 分) 在图中填上 2 条直线, 最多能数出 10 个三角形.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_004/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_004/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案'17'，存在高泄露风险，不适合用于考试但可作为练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#4#6",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
+        }
+      },
+      "text": "6. (10 分) 在图中填上 2 条直线, 最多能数出 10 个三角形.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_004/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "7. (10 分) 如图所示, 一个圆形托盘上放着三个相同的盘子, 笑笑只将 7 个相同的苹果放在这一个盘子中, 每个盘子中至少要放一个. 那么笑笑有 5 种放苹果的方法. (托盘旋转后相同的算同一种情况)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_005/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题目、解答和答案，直接用于考试会泄露信息。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#5#7",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
+        }
+      },
+      "text": "7. (10 分) 如图所示, 一个圆形托盘上放着三个相同的盘子, 笑笑只将 7 个相同的苹果放在这一个盘子中, 每个盘子中至少要放一个. 那么笑笑有 5 种放苹果的方法. (托盘旋转后相同的算同一种情况)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_005/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. (10分)现在我们有若干边长为1的小正方形框架(正方形框架不可拆开),要摆成一个 \\(18 \\times 15\\) 的网格,至少需要 个小正方形框架.\n\n## 三、填空题(共3小题,每小题12分,满分36分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的题干，描述数学问题，没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（小中组决赛a卷）.json#2#8",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（小中组决赛a卷）.json"
+        }
+      },
+      "text": "8. (10分)现在我们有若干边长为1的小正方形框架(正方形框架不可拆开),要摆成一个 \\(18 \\times 15\\) 的网格,至少需要 个小正方形框架.\n\n## 三、填空题(共3小题,每小题12分,满分36分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. (12分)下列算式中,\"迎\"、\"春\"、\"杯\"、\"数\"、\"学\"、\"花\"、\"园\"、\"探\"、\"秘\"代表 \\(1 \\sim 9\\) 中的不同非零数字.那么,\"迎春杯\"所代表三位数的最大值是 (迎春杯\"于1984年创立,本届为2015年\"数学花园探秘\").\n\n1984- 迎春杯 \\(= 2015\\) - 数学- 花园- 探秘.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的数学竞赛题干，没有泄露答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（小中组决赛a卷）.json#2#9",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（小中组决赛a卷）.json"
+        }
+      },
+      "text": "9. (12分)下列算式中,\"迎\"、\"春\"、\"杯\"、\"数\"、\"学\"、\"花\"、\"园\"、\"探\"、\"秘\"代表 \\(1 \\sim 9\\) 中的不同非零数字.那么,\"迎春杯\"所代表三位数的最大值是 (迎春杯\"于1984年创立,本届为2015年\"数学花园探秘\").\n\n1984- 迎春杯 \\(= 2015\\) - 数学- 花园- 探秘.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "11. (12分)从左上角开始,沿着轨道出现的数字依次是1,2,3,1,2,3,……每行和每列的数字都是1个1,1个2,1个3(另外两个格子不填),那么,第四行的5个数字从左至右组成的五位数是30210(没有数字的格子看作0)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_007/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案且附有完整解析，导致无法作为独立出题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json#7#11",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛b卷）.json"
+        }
+      },
+      "text": "11. (12分)从左上角开始,沿着轨道出现的数字依次是1,2,3,1,2,3,……每行和每列的数字都是1个1,1个2,1个3(另外两个格子不填),那么,第四行的5个数字从左至右组成的五位数是30210(没有数字的格子看作0)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（三年级初赛a卷）/pages/page_007/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "1. (8分)如图2中共有_7_个与如图1形状完全一样的月牙.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/images/1.jpg)\n\n<center>图2</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案'7'且附有完整解答，答案泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#4#1",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "1. (8分)如图2中共有_7_个与如图1形状完全一样的月牙.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/images/1.jpg)\n\n<center>图2</center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "2. (8分)僵尸正在走来,火龙草负责防卫:\n\n一阶火龙草总是吐红色火焰;\n\n二阶火龙草一半时间吐红色火焰,一半时间吐蓝色火焰;\n\n三阶火龙草总是吐蓝色火焰.\n\n如果二阶火龙草的攻击能力是一阶火龙草的2倍,那么三阶火龙草的攻击能力是一阶火龙草的_3倍.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、答案和解析，泄露风险高，不适用于考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#4#2",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "2. (8分)僵尸正在走来,火龙草负责防卫:\n\n一阶火龙草总是吐红色火焰;\n\n二阶火龙草一半时间吐红色火焰,一半时间吐蓝色火焰;\n\n三阶火龙草总是吐蓝色火焰.\n\n如果二阶火龙草的攻击能力是一阶火龙草的2倍,那么三阶火龙草的攻击能力是一阶火龙草的_3倍.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. （8分）老师手里有一个计算器，每个同学依次过来输入一个自然数，第一个同学输入1，第二个同学输入2，第三个同学输入3，由于计算器上的按键4和8坏掉了，下一个同学只能输入5，以后的同学依次输入6、7、9、10、11、12、13、 \\(15\\dots\\) ，按照此输入法，小明是第100个同学，小明输入的自然数是\n\n## 二、填空题Ⅱ（每题10分，共30分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学问题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#1#3",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "3. （8分）老师手里有一个计算器，每个同学依次过来输入一个自然数，第一个同学输入1，第二个同学输入2，第三个同学输入3，由于计算器上的按键4和8坏掉了，下一个同学只能输入5，以后的同学依次输入6、7、9、10、11、12、13、 \\(15\\dots\\) ，按照此输入法，小明是第100个同学，小明输入的自然数是\n\n## 二、填空题Ⅱ（每题10分，共30分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "4. (10分)小明买了4个苹果、6个梨和8个桃,小红买了5个苹果、7个梨和6个桃.在接下去的18天中,他们每人每天吃一个水果,有三天两人都吃苹果;有两天两人都吃梨,还有三天一人吃苹果,另一人吃梨,那么有_4_天两人都吃桃.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题目、答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#5#4",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "4. (10分)小明买了4个苹果、6个梨和8个桃,小红买了5个苹果、7个梨和6个桃.在接下去的18天中,他们每人每天吃一个水果,有三天两人都吃苹果;有两天两人都吃梨,还有三天一人吃苹果,另一人吃梨,那么有_4_天两人都吃桃.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. （10分）帅帅在如图的16个房间中玩“秘密逃脱”游戏．任务是从1号房间走到16号房间，密室间的门都是单向门，只有从正确的方向经过门才能打开（如图）．帅帅要完成任务并使得经过的房间尽可能的少，那么他所经过房间（含1号和16号）的编号总和是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_001/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目陈述，描述了问题但没有泄露答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#1#5",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "5. （10分）帅帅在如图的16个房间中玩“秘密逃脱”游戏．任务是从1号房间走到16号房间，密室间的门都是单向门，只有从正确的方向经过门才能打开（如图）．帅帅要完成任务并使得经过的房间尽可能的少，那么他所经过房间（含1号和16号）的编号总和是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_001/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "6. （10分）三个天平的托盘中形状相同的物体重量相等．图中的前两个天平处于平衡状态，要使第3个天平也保持平衡，则需要在它的右盘中放置 个球.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/images/0.jpg)\n\n## 三、填空题Ⅲ（每题15分，共30分）\n\n7．（15分）某“趣味游戏”的游戏规则如下：玩家手中有水、火、风、土四个技能．发动每个技能都需要消耗一定数量的水晶，各技能具体效果如下：\n\n水：消耗4个水晶，同时使敌人的血量减少4点（如敌人血量不足4点则直接击杀）；火：消耗10个水晶，同时使敌人的血量减少11点（如敌人血量不足11点则直接击杀）；风：消耗10个水晶，同时使敌人的血量减少5点（如敌人血量不足5点则直接击杀）并且下一个技能发动消耗水晶数除以2（例如：在风技能后面发动水技能，水技能只消耗两个水晶）；\n\n土：消耗18个水晶，同时使敌人的血量除以2（如敌人血量是奇数，则先加1再除以2）：如果敌人的血量为120点，那么合理选择技能，至少需要 个水晶将敌人击杀（敌人血量减少至0则死亡）.\n\n8．（15分）在如图的9宫格中填入9个不同的自然数，满足：每一行中，左边两个数的和等于最右边的数；每一列中，上面两个数的和等于最下面的数，那么右下角的数最小是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/images/1.jpg)\n\n## 四、亲子互动操作题IV（每小题18分，共36分）\n\n9．（18分）在空格中填入数字1- 5使得每行、每列和每宫（在数独中被粗线分割开的每块称为宫）数字都不重复，斜线相邻的数字也不能相同．那么，第一行从左至右5个数字依次组成的五位数是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_006/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为数学竞赛题干集合，包含多个独立题目，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#2#6",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "6. （10分）三个天平的托盘中形状相同的物体重量相等．图中的前两个天平处于平衡状态，要使第3个天平也保持平衡，则需要在它的右盘中放置 个球.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/images/0.jpg)\n\n## 三、填空题Ⅲ（每题15分，共30分）\n\n7．（15分）某“趣味游戏”的游戏规则如下：玩家手中有水、火、风、土四个技能．发动每个技能都需要消耗一定数量的水晶，各技能具体效果如下：\n\n水：消耗4个水晶，同时使敌人的血量减少4点（如敌人血量不足4点则直接击杀）；火：消耗10个水晶，同时使敌人的血量减少11点（如敌人血量不足11点则直接击杀）；风：消耗10个水晶，同时使敌人的血量减少5点（如敌人血量不足5点则直接击杀）并且下一个技能发动消耗水晶数除以2（例如：在风技能后面发动水技能，水技能只消耗两个水晶）；\n\n土：消耗18个水晶，同时使敌人的血量除以2（如敌人血量是奇数，则先加1再除以2）：如果敌人的血量为120点，那么合理选择技能，至少需要 个水晶将敌人击杀（敌人血量减少至0则死亡）.\n\n8．（15分）在如图的9宫格中填入9个不同的自然数，满足：每一行中，左边两个数的和等于最右边的数；每一列中，上面两个数的和等于最下面的数，那么右下角的数最小是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/images/1.jpg)\n\n## 四、亲子互动操作题IV（每小题18分，共36分）\n\n9．（18分）在空格中填入数字1- 5使得每行、每列和每宫（在数独中被粗线分割开的每块称为宫）数字都不重复，斜线相邻的数字也不能相同．那么，第一行从左至右5个数字依次组成的五位数是\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "7. (15分)某\"趣味游戏\"的游戏规则如下:玩家手中有水、火、风、土四个技能.发动每个技能都需要消耗一定数量的水晶,各技能具体效果如下:\n\n水:消耗4个水晶,同时使敌人的血量减少4点(如敌人血量不足4点则直接击杀);",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本仅描述游戏规则且不完整，无明确提问、答案或解析，不适合作为独立题干。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#6#7",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "7. (15分)某\"趣味游戏\"的游戏规则如下:玩家手中有水、火、风、土四个技能.发动每个技能都需要消耗一定数量的水晶,各技能具体效果如下:\n\n水:消耗4个水晶,同时使敌人的血量减少4点(如敌人血量不足4点则直接击杀);",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "8. (15分)在如图的9宫格中填入9个不同的自然数,满足:每一行中,左边两个数的和等于最右边的数;每一列中,上面两个数的和等于最下面的数,那么右下角的数最小是12.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_007/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，答案在题干和解答中均直接出现，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#7#8",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "8. (15分)在如图的9宫格中填入9个不同的自然数,满足:每一行中,左边两个数的和等于最右边的数;每一列中,上面两个数的和等于最下面的数,那么右下角的数最小是12.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_007/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "9. (18分)在空格中填入数字1-5使得每行、每列和每宫(在数独中被粗线分割开的每块",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数独题目描述，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#7#9",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "9. (18分)在空格中填入数字1-5使得每行、每列和每宫(在数独中被粗线分割开的每块",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2015,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（三年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "10. （18分）试一试：上面是中国结中草花结的简易编法，编好草花结后将它外面的5个环如图剪开，在将所有的结打开，看看绳子被剪成了______段。\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_003/images/0.jpg)\n\n想一想：如图是中国结编制高手小兰花的作品，她用一根绳子编成如此美丽的蝴蝶结，如果将蝴蝶的两支大翅膀各7个环都一刀剪开，再将所有的结打开，那么这根绳子一共被剪成了______段。\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_003/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_003/images/0.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_003/images/1.jpg",
+          "images_y2/problems/source_pdf/三年级/2015年/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_008/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本包含两个独立的数学填空问题，无答案或解析泄露，适合作为考试题目。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json#3#10",
+          "json_path": "source_pdf/三年级/2015年/2015年“迎春杯”数学花园探秘网试试卷（三年级）.json"
+        }
+      },
+      "text": "10. （18分）试一试：上面是中国结中草花结的简易编法，编好草花结后将它外面的5个环如图剪开，在将所有的结打开，看看绳子被剪成了______段。\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_003/images/0.jpg)\n\n想一想：如图是中国结编制高手小兰花的作品，她用一根绳子编成如此美丽的蝴蝶结，如果将蝴蝶的两支大翅膀各7个环都一刀剪开，再将所有的结打开，那么这根绳子一共被剪成了______段。\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（三年级）/pages/page_003/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

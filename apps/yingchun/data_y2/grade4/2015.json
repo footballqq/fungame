@@ -1,0 +1,912 @@
+{
+  "grade": 4,
+  "year": 2015,
+  "total_problems": 23,
+  "problems": [
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "1. （8分）计算 \\((235 - 2\\times 3\\times 5)\\times 7\\div 5 = 287\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在高泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#3#1",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "1. （8分）计算 \\((235 - 2\\times 3\\times 5)\\times 7\\div 5 = 287\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "2. （8分）在下面算式的每个方框中填入一个适当的数字，使得乘法竖式成立，两个乘数之和是96\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_003/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干描述完整可独立出题，但文本块包含解答过程和明确答案，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#3#2",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "2. （8分）在下面算式的每个方框中填入一个适当的数字，使得乘法竖式成立，两个乘数之和是96\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_003/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. （8分）五个人站成一排，每个人戴一顶不同的帽子，编号为1，2，3，4，5．每人只能看到前面的人的帽子．小王一顶都看不到；小孔只看到4号帽子；小田没有看到3号帽子；但看到了1号帽子；小严看到了有3顶帽子，但没有看到3号帽子；小韦看到了3号帽子和2号帽子，小田戴号帽子.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为逻辑推理题，无答案或解析泄露，可独立作为题干使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#1#3",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "3. （8分）五个人站成一排，每个人戴一顶不同的帽子，编号为1，2，3，4，5．每人只能看到前面的人的帽子．小王一顶都看不到；小孔只看到4号帽子；小田没有看到3号帽子；但看到了1号帽子；小严看到了有3顶帽子，但没有看到3号帽子；小韦看到了3号帽子和2号帽子，小田戴号帽子.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. （8分）数一数，如图中共有 个三角形.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/1.jpg)\n\n## 二、填空题（共4小题，每小题10分，满分40分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个独立的填空题，没有包含答案或解析信息，因此可以用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#1#4",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "4. （8分）数一数，如图中共有 个三角形.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/1.jpg)\n\n## 二、填空题（共4小题，每小题10分，满分40分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "5. (10分)王伯伯养了一些鸡、兔和鹅,其中鹅白天双足站立,夜间则单足站立;鸡晚上睡觉时则把头藏起来;细心的悦悦发现:不论白天还是晚上,足数和头数的差都一样,那么,如果白天悦悦可以数出56条腿,晚上会数出_14_个头.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、解答和答案，答案泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#4#5",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "5. (10分)王伯伯养了一些鸡、兔和鹅,其中鹅白天双足站立,夜间则单足站立;鸡晚上睡觉时则把头藏起来;细心的悦悦发现:不论白天还是晚上,足数和头数的差都一样,那么,如果白天悦悦可以数出56条腿,晚上会数出_14_个头.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. （10分）如图中可以取出一个由三个小方格组成的“ \\(L^{\\prime}\\) 形，现在要求取出的都是全白色的，共有 种不同的取法（允许“ \\(L^{\\prime}\\) 形旋转）；\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/2.jpg)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/3.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干为完整的数学问题描述，无答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#1#6",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "6. （10分）如图中可以取出一个由三个小方格组成的“ \\(L^{\\prime}\\) 形，现在要求取出的都是全白色的，共有 种不同的取法（允许“ \\(L^{\\prime}\\) 形旋转）；\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/2.jpg)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_001/images/3.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "7. (10分)在空格内填入数字1-6,使得每个雪花和三个方向上六个格内数字都不重复,如图1是一个完整的例子,请填出如图2空格中的数字,那么图中四个英文字母所代表的四位数ABCD是_2561\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_005/images/2.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_005/images/3.jpg)\n\n<center>图2</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_005/images/2.jpg",
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_005/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案2561，且有完整解答，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#5#7",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "7. (10分)在空格内填入数字1-6,使得每个雪花和三个方向上六个格内数字都不重复,如图1是一个完整的例子,请填出如图2空格中的数字,那么图中四个英文字母所代表的四位数ABCD是_2561\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_005/images/2.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_005/images/3.jpg)\n\n<center>图2</center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. (10分)有11个小朋友围成一圈玩游戏,按照顺时针分别编号为1,2,3,……11号,游戏规则是从1号开始,每个人说一个两位数,要求这个两位数字和不能是6和9,而且后说的小朋友不能说之前说过的数,直到有人说不出新的数,游戏就结束,说不出数的人就作为游戏的输家,那么最后 号是游戏的输家.\n\n## 三、填空题(共3小题,每小题12分,满分36分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本以题号开头，描述了一个完整的数学游戏问题，没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#2#8",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "8. (10分)有11个小朋友围成一圈玩游戏,按照顺时针分别编号为1,2,3,……11号,游戏规则是从1号开始,每个人说一个两位数,要求这个两位数字和不能是6和9,而且后说的小朋友不能说之前说过的数,直到有人说不出新的数,游戏就结束,说不出数的人就作为游戏的输家,那么最后 号是游戏的输家.\n\n## 三、填空题(共3小题,每小题12分,满分36分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "9. (12分)甲、乙、丙三人从 \\(A\\) 地出发前往 \\(B\\) 地.甲8:00出发,乙8:20出发,丙8:30出发.他们行进的速度相同.丙出发10分钟后,甲到 \\(B\\) 地的距离恰好是乙到 \\(B\\) 地距离的一半,这时丙距 \\(B\\) 地2015米,那么 \\(A\\) 、 \\(B\\) 两地相距_2418_米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解答过程，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#6#9",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "9. (12分)甲、乙、丙三人从 \\(A\\) 地出发前往 \\(B\\) 地.甲8:00出发,乙8:20出发,丙8:30出发.他们行进的速度相同.丙出发10分钟后,甲到 \\(B\\) 地的距离恰好是乙到 \\(B\\) 地距离的一半,这时丙距 \\(B\\) 地2015米,那么 \\(A\\) 、 \\(B\\) 两地相距_2418_米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "10. (12分)如图所示,正方形ABCD的边长是18, \\(E\\) 是 \\(CD\\) 中点,且ABFH是长方形,两个阴影三角形面积相等,那么,四边形AEFB的面积是_216_.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_007/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_007/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案216，并包含完整解答过程，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#7#10",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "10. (12分)如图所示,正方形ABCD的边长是18, \\(E\\) 是 \\(CD\\) 中点,且ABFH是长方形,两个阴影三角形面积相等,那么,四边形AEFB的面积是_216_.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_007/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘科普活动试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "11. (12分)图书馆用4500元购进《庄子》、《孔子》、《孟子》、《老子》、《孙子》5种图书供给300本,它们的单价(指一本的价格)分别为10元、20元、15元、28元、12元,其中《庄子》和《孔子》的书本一样多,《孙子》比《老子》的4倍还多15本.这批图书中,《孙子》共有_195_本.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解答过程，因此不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json#7#11",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘科普活动试卷（四年级初赛a卷）.json"
+        }
+      },
+      "text": "11. (12分)图书馆用4500元购进《庄子》、《孔子》、《孟子》、《老子》、《孙子》5种图书供给300本,它们的单价(指一本的价格)分别为10元、20元、15元、28元、12元,其中《庄子》和《孔子》的书本一样多,《孙子》比《老子》的4倍还多15本.这批图书中,《孙子》共有_195_本.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "1. (8分)甲乙丙三人参加比赛,他们得了前3名(无并列)\n\n甲说:\"我是第一\"\n\n乙说:\"我不是第一\"\n\n丙说:\"我不是第三\"\n\n三人中只有一个人说真话.\n\n如果甲、乙、丙三人的名次分别是 \\(A\\) 、 \\(B\\) 、 \\(C\\) ,那么三位数 \\(\\overline{\\mathrm{ABC}} = \\_ 312\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可以独立出题，但解答部分直接包含答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#3#1",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "1. (8分)甲乙丙三人参加比赛,他们得了前3名(无并列)\n\n甲说:\"我是第一\"\n\n乙说:\"我不是第一\"\n\n丙说:\"我不是第三\"\n\n三人中只有一个人说真话.\n\n如果甲、乙、丙三人的名次分别是 \\(A\\) 、 \\(B\\) 、 \\(C\\) ,那么三位数 \\(\\overline{\\mathrm{ABC}} = \\_ 312\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "2. (8分)如图,苹果的重量是_80_克.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_003/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干不完整且包含解答过程，但未直接给出答案，风险中等。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#3#2",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "2. (8分)如图,苹果的重量是_80_克.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_003/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. (8分)最少需要 张正方形的纸片(大小可以不一样,纸片不透明),才能铺成下面的图形.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_001/images/1.jpg)\n\n## 二、填空题Ⅱ(每题10分,共30分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，询问最少需要多少张正方形纸片，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#1#3",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "3. (8分)最少需要 张正方形的纸片(大小可以不一样,纸片不透明),才能铺成下面的图形.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_001/images/1.jpg)\n\n## 二、填空题Ⅱ(每题10分,共30分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "4. (10分)在图中的每个方框中输入适当的数字,使得竖式成立,最后的乘积是_64516_.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_004/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_004/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了乘积答案，并附有解答过程，因此存在答案泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#4#4",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "4. (10分)在图中的每个方框中输入适当的数字,使得竖式成立,最后的乘积是_64516_.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_004/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "5. (10分)现在有一台奇怪的电脑,电脑上有个按键,如果电脑上原来的数是3的倍数,按下键后就会除以3;如果电脑上原来的数不是3的倍数,那么按下键后就会乘以6.小明在按键前没有看屏幕上的数,结果连按6次,最后电脑上显示的数是12,那么电脑上最开始的数据小可能是27.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干和详细解答过程，答案直接给出，有答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#5#5",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "5. (10分)现在有一台奇怪的电脑,电脑上有个按键,如果电脑上原来的数是3的倍数,按下键后就会除以3;如果电脑上原来的数不是3的倍数,那么按下键后就会乘以6.小明在按键前没有看屏幕上的数,结果连按6次,最后电脑上显示的数是12,那么电脑上最开始的数据小可能是27.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "6. (10分)将8个数从左到右排成一行,从第三个数开始,每个数恰好等于它前面2个数之和,如果第5个数和第8个数分别是53和225,那么第1个数是________.\n\n## 三、填空题III(每题15分,共30分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题题干，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#2#6",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "6. (10分)将8个数从左到右排成一行,从第三个数开始,每个数恰好等于它前面2个数之和,如果第5个数和第8个数分别是53和225,那么第1个数是________.\n\n## 三、填空题III(每题15分,共30分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "7. (15分)植物射手有豌豆射手,双重射手、三重射手、寒冰射手、双向射手、豌豆荚6种.种植一株该种射手所需要的阳光依次为100、200、300、150、125、125.菲菲种了10株植物射手共花费2500阳光,她的种法有________种不同的可能.(例如,7株三重射手+1株寒冰射手+1株豌豆荚,是符合要求的一种可能.)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学问题，没有提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#2#7",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "7. (15分)植物射手有豌豆射手,双重射手、三重射手、寒冰射手、双向射手、豌豆荚6种.种植一株该种射手所需要的阳光依次为100、200、300、150、125、125.菲菲种了10株植物射手共花费2500阳光,她的种法有________种不同的可能.(例如,7株三重射手+1株寒冰射手+1株豌豆荚,是符合要求的一种可能.)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. (15分)某小学进行身高统计,身高不超过 \\(130cm\\) 的有99人,平均身高 \\(122cm\\) ,身高不低于 \\(160cm\\) 的有72人,平均身高 \\(163cm\\) ,身高超过 \\(130cm\\) 的平均身高 \\(155cm\\) ,身高低于 \\(160cm\\) 的平均身高 \\(148cm\\) ,那么该学生共有________名.\n\n## 四、亲子互动操作题((每小题18分,满分36分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#2#8",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "8. (15分)某小学进行身高统计,身高不超过 \\(130cm\\) 的有99人,平均身高 \\(122cm\\) ,身高不低于 \\(160cm\\) 的有72人,平均身高 \\(163cm\\) ,身高超过 \\(130cm\\) 的平均身高 \\(155cm\\) ,身高低于 \\(160cm\\) 的平均身高 \\(148cm\\) ,那么该学生共有________名.\n\n## 四、亲子互动操作题((每小题18分,满分36分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. (18分)一张正方形纸片,如果对折2次,折成一个小正方形,在这个小正方形的每条边上剪1个缺口,打开纸片,纸片中间有4个小洞(边上的缺口不算).一张正方形纸片,如果对折6次成一个小正方形,在这个小正方形的每条边上剪1个缺口,再打开纸片,那么这张纸片中间共有________个小洞.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，描述问题并留有空白，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#2#9",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "9. (18分)一张正方形纸片,如果对折2次,折成一个小正方形,在这个小正方形的每条边上剪1个缺口,打开纸片,纸片中间有4个小洞(边上的缺口不算).一张正方形纸片,如果对折6次成一个小正方形,在这个小正方形的每条边上剪1个缺口,再打开纸片,那么这张纸片中间共有________个小洞.\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2015年“迎春杯”数学花园探秘网试试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2015年“迎春杯”数学花园探秘网试试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "10. (18分)如图, \\(6 \\times 6\\) 的正方形表格被粗线分成了9个粗线框,每个粗线框有 \\(N\\) 个格子就在这 \\(N\\) 个格子中分别填入 \\(1 \\sim N\\) 的数字,要求每个数字和其周围相邻(包括对角相邻)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_007/images/1.jpg)\n\n的数字都不相同.那么,四位数 \\(\\overline{\\mathrm{ABCD}} = \\_ 3521\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_007/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目文本包含完整题干和解答部分，直接给出了答案，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json#7#10",
+          "json_path": "source_pdf/四年级/2015/2015年“迎春杯”数学花园探秘网试试卷（四年级）.json"
+        }
+      },
+      "text": "10. (18分)如图, \\(6 \\times 6\\) 的正方形表格被粗线分成了9个粗线框,每个粗线框有 \\(N\\) 个格子就在这 \\(N\\) 个格子中分别填入 \\(1 \\sim N\\) 的数字,要求每个数字和其周围相邻(包括对角相邻)\n\n![](ocr_debug/2015年“迎春杯”数学花园探秘网试试卷（四年级）/pages/page_007/images/1.jpg)\n\n的数字都不相同.那么,四位数 \\(\\overline{\\mathrm{ABCD}} = \\_ 3521\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "四年级总决赛一试 答案.pdf",
+      "exam": {
+        "exam_key": "四年级总决赛一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "4. 如下图所示的\"风车状\"正四角星中,八条边的长度都是27厘米,八个内角中,四个锐角都是 \\(45^{\\circ}\\) ,四个优角都是 \\(225^{\\circ}\\) ,那么,整个正四角星的面积是多少平方厘米?\n\n![](ocr_debug/四年级总决赛一试 答案/pages/page_002/images/0.jpg)",
+      "answer_text": "1458",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/四年级总决赛一试 答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/四年级总决赛一试 答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2015/ocr_debug/四年级总决赛一试 答案/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题目、答案和解析，答案直接给出，因此仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/四年级总决赛一试 答案.json#2#4",
+          "json_path": "source_pdf/四年级/2015/四年级总决赛一试 答案.json"
+        }
+      },
+      "text": "4. 如下图所示的\"风车状\"正四角星中,八条边的长度都是27厘米,八个内角中,四个锐角都是 \\(45^{\\circ}\\) ,四个优角都是 \\(225^{\\circ}\\) ,那么,整个正四角星的面积是多少平方厘米?\n\n![](ocr_debug/四年级总决赛一试 答案/pages/page_002/images/0.jpg)",
+      "answer": "1458",
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2015,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "四年级总决赛一试 答案.pdf",
+      "exam": {
+        "exam_key": "四年级总决赛一试",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "5. 将1,2,3,4,……,18分拆成若干组,每组中的数(至少三个)恰好构成等差数列或等比数列,那么最多能把这18个数分成多少组,使得其中既有等差数列,又有等比数列?",
+      "answer_text": "6",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2015/四年级总决赛一试 答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2015/ocr_debug/四年级总决赛一试 答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在高泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2015/四年级总决赛一试 答案.json#2#5",
+          "json_path": "source_pdf/四年级/2015/四年级总决赛一试 答案.json"
+        }
+      },
+      "text": "5. 将1,2,3,4,……,18分拆成若干组,每组中的数(至少三个)恰好构成等差数列或等比数列,那么最多能把这18个数分成多少组,使得其中既有等差数列,又有等比数列?",
+      "answer": "6",
+      "solution": null
+    }
+  ]
+}

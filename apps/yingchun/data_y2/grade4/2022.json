@@ -1,0 +1,402 @@
+{
+  "grade": 4,
+  "year": 2022,
+  "total_problems": 10,
+  "problems": [
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\((9 \\times 8 \\times 7 + 6 - 5) \\times 4 + 3 - 2 + 1\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学计算题干，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "1. 算式 \\((9 \\times 8 \\times 7 + 6 - 5) \\times 4 + 3 - 2 + 1\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 在算式 \\(A0AA = A \\times B \\times BBA\\) 中， \\(A\\) 、 \\(B\\) 分别代表不同的数字。那么， \\(AB\\) 代表的两位数是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "2. 在算式 \\(A0AA = A \\times B \\times BBA\\) 中， \\(A\\) 、 \\(B\\) 分别代表不同的数字。那么， \\(AB\\) 代表的两位数是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 老师手中有4张牌，按照甲、乙、甲、乙的顺序分发。如果这4张牌的点数分别是1、2、3、4，并且在整个过程中（包括最终），甲手中牌的点数之和一直比乙大，那么，满足要求的分发顺序共有______种。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题目，包含问题和填空，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "3. 老师手中有4张牌，按照甲、乙、甲、乙的顺序分发。如果这4张牌的点数分别是1、2、3、4，并且在整个过程中（包括最终），甲手中牌的点数之和一直比乙大，那么，满足要求的分发顺序共有______种。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 小文今天和朋友约定一起看12:00开场的电影。出门时，发现挂钟电池没电已经停止了，她把挂钟换好电池，但没来得及调整时间，出门前挂钟显示的时间是9:25。小文赶到电影院时，电影刚好开场。电影结束后，小文立刻返回家中，发现挂钟显示的时间是13:55，小文赶紧把它调成正确的时间15:45。如果小文从家到电影院和从电影院返回家中花的时间是一样的，那么，电影的时长是______分钟。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "4. 小文今天和朋友约定一起看12:00开场的电影。出门时，发现挂钟电池没电已经停止了，她把挂钟换好电池，但没来得及调整时间，出门前挂钟显示的时间是9:25。小文赶到电影院时，电影刚好开场。电影结束后，小文立刻返回家中，发现挂钟显示的时间是13:55，小文赶紧把它调成正确的时间15:45。如果小文从家到电影院和从电影院返回家中花的时间是一样的，那么，电影的时长是______分钟。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "5. 如图所示，正五边形的五个顶点位置分别标记为 \\(1 \\sim 5\\) ，甲乙丙戊分别站在了这五个不同的顶点上，发生如下对话：\n\n甲对乙说：我所在位置上的数比你大乙对丙说：我所在位置上的数比你小丙对丁说：我所在位置上的数比你大.丁对戊说：我所在位置上的数比你小戊对甲说：我所在位置上的数比你大.\n\n如果五个人说的都是真话，且任意发生对话的两个人都不相邻那么甲乙丙丁戊所站位置按顺序连成的五位数是\n\n![](ocr_debug/2022年迎春杯四年级-试卷/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，包含问题描述和条件，但没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#2#5",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "5. 如图所示，正五边形的五个顶点位置分别标记为 \\(1 \\sim 5\\) ，甲乙丙戊分别站在了这五个不同的顶点上，发生如下对话：\n\n甲对乙说：我所在位置上的数比你大乙对丙说：我所在位置上的数比你小丙对丁说：我所在位置上的数比你大.丁对戊说：我所在位置上的数比你小戊对甲说：我所在位置上的数比你大.\n\n如果五个人说的都是真话，且任意发生对话的两个人都不相邻那么甲乙丙丁戊所站位置按顺序连成的五位数是\n\n![](ocr_debug/2022年迎春杯四年级-试卷/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "6. 某小学某个年级有5个班，现在要投票选举三好学生，规则是每个班在甲、乙两个候选人中选一个，先统计每个班内的票数（没有弃权），得票较多的人就是该班支持的候选人。5个班中，3个或3个以上班支持的候选人是最终当选者。已知一班有31人，二班有27人，三班有35人，四班有29人，五班有33人，甲最终当选但是总票数比乙少，那么最多可能比乙少票.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，问题陈述清晰，未包含答案或解析信息，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "6. 某小学某个年级有5个班，现在要投票选举三好学生，规则是每个班在甲、乙两个候选人中选一个，先统计每个班内的票数（没有弃权），得票较多的人就是该班支持的候选人。5个班中，3个或3个以上班支持的候选人是最终当选者。已知一班有31人，二班有27人，三班有35人，四班有29人，五班有33人，甲最终当选但是总票数比乙少，那么最多可能比乙少票.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "7. 2000～2099的某一年，小高和爷爷正在聊天，小高说：“爷爷，我发现今年我的年龄正好是我出生年份的末两位。”爷爷想了想说：“巧了，我也是。”如果爷爷的年龄正好是小高的3倍，那么，这一年是年。（默认：年龄 \\(=\\) 这一年年份一出生年份）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学问题，没有泄露答案或解析，适合作为考试题干。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#2#7",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "7. 2000～2099的某一年，小高和爷爷正在聊天，小高说：“爷爷，我发现今年我的年龄正好是我出生年份的末两位。”爷爷想了想说：“巧了，我也是。”如果爷爷的年龄正好是小高的3倍，那么，这一年是年。（默认：年龄 \\(=\\) 这一年年份一出生年份）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "8. 如图,ABCD是一个平行四边形,E、F、G分别是边AB、CD、AD的中点,如果直角梯形BHO的面积是11,直角梯形DGOF的面积是7,那么,阴影部分面积(即直角梯形AEOG和直角梯形CFOH的面积之和)是____.\n\n![](ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/images/0.jpg)\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的几何题干，描述了平行四边形和中点条件，要求计算阴影面积，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#3#8",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "8. 如图,ABCD是一个平行四边形,E、F、G分别是边AB、CD、AD的中点,如果直角梯形BHO的面积是11,直角梯形DGOF的面积是7,那么,阴影部分面积(即直角梯形AEOG和直角梯形CFOH的面积之和)是____.\n\n![](ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/images/0.jpg)\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "9. 如下图,用左图给出数字色块填满右图的灰格,使得每行和每列的数字及颜色都不相同,并且3行和中间3列中,每行和每列所有数字的和都是4的倍数,那么,ABCDE代表的五位数是____。(3行分别代表ABC、DE7、4FG,3列分别代表BD、CE4、7F,单独的A和G不算做列)\n\n![](ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/images/1.jpg)\n\n![](ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "问题描述依赖于外部图片，文本不完整，无法独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#3#9",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        },
+        "review_action": "drop_exam",
+        "review_repairable": false,
+        "review_reason": "问题需图片上下文才能解答，无法通过文本清洗修复为独立题干",
+        "review_fix_hint": "题干依赖外部图片，需提供完整图形或转为练习题",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#3#9",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "9. 如下图,用左图给出数字色块填满右图的灰格,使得每行和每列的数字及颜色都不相同,并且3行和中间3列中,每行和每列所有数字的和都是4的倍数,那么,ABCDE代表的五位数是____。(3行分别代表ABC、DE7、4FG,3列分别代表BD、CE4、7F,单独的A和G不算做列)\n\n![](ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/images/1.jpg)\n\n![](ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2022,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯四年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯四年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "10. 某天,甲、乙两人分别从A、B两地同时出发相向而行,两人在C点相遇,第二天甲、乙两人分别从B、A两地出发相向而行,甲比乙提前20分钟出发,两人又在C点相遇,如果甲、乙两人第三天分别从A、B两地出发相向而行,甲行了360米后乙才出发,结果两人在A、B两地中点相遇,那么,甲的速度是每分钟____米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/四年级/2022/ocr_debug/2022年迎春杯四年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为纯题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json#3#10",
+          "json_path": "2026年迎春杯数学竞赛/四年级/2022/2022年迎春杯四年级-试卷.json"
+        }
+      },
+      "text": "10. 某天,甲、乙两人分别从A、B两地同时出发相向而行,两人在C点相遇,第二天甲、乙两人分别从B、A两地出发相向而行,甲比乙提前20分钟出发,两人又在C点相遇,如果甲、乙两人第三天分别从A、B两地出发相向而行,甲行了360米后乙才出发,结果两人在A、B两地中点相遇,那么,甲的速度是每分钟____米.",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

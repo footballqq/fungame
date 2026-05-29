@@ -1,0 +1,1175 @@
+{
+  "grade": 6,
+  "year": 2014,
+  "total_problems": 30,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. (8分)在算式 \\(2014 \\times \\left(\\frac{1}{19} - \\frac{1}{53}\\right)\\) 的计算结果是( )\n\nA.34\nB.68\nC.144\nD.72",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目完整，无答案或解析泄露，可作为独立题干出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#1",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "1. (8分)在算式 \\(2014 \\times \\left(\\frac{1}{19} - \\frac{1}{53}\\right)\\) 的计算结果是( )\n\nA.34\nB.68\nC.144\nD.72",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. (8分)一个半径为20厘米的蛋糕可以让4个人吃饱,如果半径增加了 \\(150\\%\\) ,同样高的蛋糕可以让( )个人吃饱.\n\nA.9\nB.15\nC.16\nD.25",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#2",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "2. (8分)一个半径为20厘米的蛋糕可以让4个人吃饱,如果半径增加了 \\(150\\%\\) ,同样高的蛋糕可以让( )个人吃饱.\n\nA.9\nB.15\nC.16\nD.25",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. (8分)如图所示,有两个大小相等的正方形,它们的边平行,并且覆盖在一个半径为3厘米的圆上.阴影的总面积是( )平方厘米. \\((\\pi\\) 取3)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg)\n\nA.9\nB.10\nC.15\nD.18",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，包含数学问题和选项，但未提供标准答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#3",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "3. (8分)如图所示,有两个大小相等的正方形,它们的边平行,并且覆盖在一个半径为3厘米的圆上.阴影的总面积是( )平方厘米. \\((\\pi\\) 取3)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg)\n\nA.9\nB.10\nC.15\nD.18",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)如图,圆锥形容器中装有水50升,水面高度是圆锥高度的一半,这个容器的一半,这个容器最多能装水( )升.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg)\n\nA.100\nB.200\nC.400\nD.800\n\n## 二、选择题(每小题10分,共70分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_006/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整选择题，无答案和解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#4",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "4. (8分)如图,圆锥形容器中装有水50升,水面高度是圆锥高度的一半,这个容器的一半,这个容器最多能装水( )升.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg)\n\nA.100\nB.200\nC.400\nD.800\n\n## 二、选择题(每小题10分,共70分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. (10分)式子 \\(\\frac{2014}{x + 1}\\) 为整数,则正整数 \\(x\\) 有( )种取值.\n\nA.6\nB.7\nC.8\nD.9",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的选择题题干，没有答案或解析泄露，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#5",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "5. (10分)式子 \\(\\frac{2014}{x + 1}\\) 为整数,则正整数 \\(x\\) 有( )种取值.\n\nA.6\nB.7\nC.8\nD.9",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "6. (10分)甲、乙、丙、丁四人拿出同样多的钱,一起订购同样规格的若干件新年礼物,礼物买来后,甲、乙、丙分别比丁多拿了3,7,14件礼物,最后结算时,乙付给了丁14元钱,并且乙没有付给甲钱.那么丙应该再付给丁( )元钱.\n\nA.6\nB.28\nC.56\nD.70",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干和解答过程，答案直接给出，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#7#6",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "6. (10分)甲、乙、丙、丁四人拿出同样多的钱,一起订购同样规格的若干件新年礼物,礼物买来后,甲、乙、丙分别比丁多拿了3,7,14件礼物,最后结算时,乙付给了丁14元钱,并且乙没有付给甲钱.那么丙应该再付给丁( )元钱.\n\nA.6\nB.28\nC.56\nD.70",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. (10分)如图算式的有( )种不同的情况.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/0.jpg)\n\nA. 2\nB. 3\nC. 4\nD. 5",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准数学竞赛题干，包含问题和选项，但无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#7",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "7. (10分)如图算式的有( )种不同的情况.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/0.jpg)\n\nA. 2\nB. 3\nC. 4\nD. 5",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "8. (10 分) 算式 \\(2013 \\times \\frac{2015}{2014} +2014 \\times \\frac{2016}{2015} + \\frac{4029}{2014 \\times 2015}\\) 计算结果是( )\n\nA. 4027\nB. 4029\nC. 2013\nD. 2015",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、选项、解答过程和明确答案，不适合用于正式考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#8#8",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "8. (10 分) 算式 \\(2013 \\times \\frac{2015}{2014} +2014 \\times \\frac{2016}{2015} + \\frac{4029}{2014 \\times 2015}\\) 计算结果是( )\n\nA. 4027\nB. 4029\nC. 2013\nD. 2015",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "9. (10 分) 已知 4 个质数的积是它们和的 11 倍,则它们的和为( )\n\nA. 46\nB. 47\n\nC. 48\nD. 没有符合条件的数",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整，但包含部分解答过程，无明确答案。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#8#9",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "9. (10 分) 已知 4 个质数的积是它们和的 11 倍,则它们的和为( )\n\nA. 46\nB. 47\n\nC. 48\nD. 没有符合条件的数",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. (10分)把11块相同的长方体砖如图拼成一个大长方体,已知每块砖的体积是288立方厘米,大长方体的表面积是( )平方厘米.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/1.jpg)\n\nA. 1944\nB. 1974\nC. 2014\nD. 1368",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_009/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目包含完整题干和选项，但无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#10",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "10. (10分)把11块相同的长方体砖如图拼成一个大长方体,已知每块砖的体积是288立方厘米,大长方体的表面积是( )平方厘米.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/1.jpg)\n\nA. 1944\nB. 1974\nC. 2014\nD. 1368",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. (10分)4个选项之中各有4个碎片,用碎片将如图铺满选项( )是不能将下图恰好不重不漏地铺满的(碎片可以旋转、翻转)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整描述了一个选择题，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#11",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "11. (10分)4个选项之中各有4个碎片,用碎片将如图铺满选项( )是不能将下图恰好不重不漏地铺满的(碎片可以旋转、翻转)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "12. (12分)17个圆如图相切排列,一只青蛙从中央大圆出发,每次只能跳到相邻圆上,五次后回到中央大圆的情况有( )种.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_003/images/1.jpg)\n\nA.20\nB.24\nC.28\nD.32",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_003/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_010/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，包含问题和选项，但未指定答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#3#12",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "12. (12分)17个圆如图相切排列,一只青蛙从中央大圆出发,每次只能跳到相邻圆上,五次后回到中央大圆的情况有( )种.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_003/images/1.jpg)\n\nA.20\nB.24\nC.28\nD.32",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. (12分) \\(A\\) 在 \\(B\\) 地西边60千米处.甲乙从 \\(A\\) 地,丙丁从 \\(B\\) 地同时出发.甲、乙、丁都向东行驶,丙向西行驶.已知甲乙丙丁的速度依次成为一个等差数列,甲的速度最快.出发后经过 \\(n\\) 小时乙丙相遇,再过 \\(n\\) 小时甲在 \\(C\\) 地追上丁.则 \\(B\\) 、 \\(C\\) 两地相距( )千米.\n\nA.15\nB.30\nC.60\nD.90",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛选择题题干，包含问题描述和选项，但没有提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#3#13",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "13. (12分) \\(A\\) 在 \\(B\\) 地西边60千米处.甲乙从 \\(A\\) 地,丙丁从 \\(B\\) 地同时出发.甲、乙、丁都向东行驶,丙向西行驶.已知甲乙丙丁的速度依次成为一个等差数列,甲的速度最快.出发后经过 \\(n\\) 小时乙丙相遇,再过 \\(n\\) 小时甲在 \\(C\\) 地追上丁.则 \\(B\\) 、 \\(C\\) 两地相距( )千米.\n\nA.15\nB.30\nC.60\nD.90",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 11,
+      "question_text": "14. (12分)在面积为360的正方形ABCD中, \\(E\\) 是 \\(AD\\) 中点, \\(H\\) 是 \\(FG\\) 中点,且 \\(DF = CG\\) 那么三角形 \\(AGH\\) 的面积是( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_011/images/1.jpg)\n\nA.70\nB.72\nC.75\nD.90",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_003/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_011/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含解答部分，存在信息泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#11#14",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "14. (12分)在面积为360的正方形ABCD中, \\(E\\) 是 \\(AD\\) 中点, \\(H\\) 是 \\(FG\\) 中点,且 \\(DF = CG\\) 那么三角形 \\(AGH\\) 的面积是( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_011/images/1.jpg)\n\nA.70\nB.72\nC.75\nD.90",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 15,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "15. (12分)老师把一个三位完全平方数的百位告诉了甲,十位告诉了乙,个位告诉了丙,并且告诉三人他们的数字互不相同.三人都不知道其他两人的数是多少,他们展开了如下对话:甲:我不知道这个完全平方数是多少.乙:不用你说,我也知道你一定不知道.丙:我已经知道这个数是多少了.甲:听了丙的话,我也知道这个数是多少了.乙:听了甲的话,我也知道这个数是多少了.请问这个数是( )的平方.\n\nA. 14\nB. 17\nC. 28\nD. 29",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛逻辑推理题，题干清晰且无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#15",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "15. (12分)老师把一个三位完全平方数的百位告诉了甲,十位告诉了乙,个位告诉了丙,并且告诉三人他们的数字互不相同.三人都不知道其他两人的数是多少,他们展开了如下对话:甲:我不知道这个完全平方数是多少.乙:不用你说,我也知道你一定不知道.丙:我已经知道这个数是多少了.甲:听了丙的话,我也知道这个数是多少了.乙:听了甲的话,我也知道这个数是多少了.请问这个数是( )的平方.\n\nA. 14\nB. 17\nC. 28\nD. 29",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "1. (8分)算式 \\(\\frac{25 \\times 8 + 1 \\div \\frac{5}{7}}{2014 - 201.4 \\times 2}\\) 的计算结果是( )\n\nA. \\(\\frac{1}{5}\\) B. \\(\\frac{1}{6}\\) C. \\(\\frac{1}{7}\\) D. \\(\\frac{1}{8}\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中包含解答过程和答案，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#5#1",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "1. (8分)算式 \\(\\frac{25 \\times 8 + 1 \\div \\frac{5}{7}}{2014 - 201.4 \\times 2}\\) 的计算结果是( )\n\nA. \\(\\frac{1}{5}\\) B. \\(\\frac{1}{6}\\) C. \\(\\frac{1}{7}\\) D. \\(\\frac{1}{8}\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. (8分)对于任何自然数,定义 \\(ni = 1 \\times 2 \\times 3 \\times \\dots \\times n\\) 。那么算式 \\(2014i - 3i\\) 的计算结果的个位数字是( )\n\nA.2\nB.4\nC.6\nD.8",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，有明确问题和选项，但没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#1#2",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "2. (8分)对于任何自然数,定义 \\(ni = 1 \\times 2 \\times 3 \\times \\dots \\times n\\) 。那么算式 \\(2014i - 3i\\) 的计算结果的个位数字是( )\n\nA.2\nB.4\nC.6\nD.8",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. (8分)童童在计算有余数的除法时,把被除数472错看成了427,结果商比原来小5,但余数恰好相同,那么这个余数是( )\n\nA.4\nB.5\nC.6\nD.7",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露，适合用于考试出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#1#3",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "3. (8分)童童在计算有余数的除法时,把被除数472错看成了427,结果商比原来小5,但余数恰好相同,那么这个余数是( )\n\nA.4\nB.5\nC.6\nD.7",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)如图中,正八边形ABCDEFGH的面积为1,其中有两个正方形ACEG和PQRS。那么正八边形中阴影部分的面积( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/images/0.jpg)\n\nA. \\(\\frac{1}{2}\\) B. \\(\\frac{2}{3}\\) C. \\(\\frac{3}{5}\\) D. \\(\\frac{5}{8}\\)\n\n## 二、选择题(每题10分,共70分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_006/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的选择题题干，包含问题和选项，但未提供答案或解析，因此可安全用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#1#4",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "4. (8分)如图中,正八边形ABCDEFGH的面积为1,其中有两个正方形ACEG和PQRS。那么正八边形中阴影部分的面积( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/images/0.jpg)\n\nA. \\(\\frac{1}{2}\\) B. \\(\\frac{2}{3}\\) C. \\(\\frac{3}{5}\\) D. \\(\\frac{5}{8}\\)\n\n## 二、选择题(每题10分,共70分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. (10分)如图所示竖式成立时的除数与商的和为( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/images/1.jpg)\n\nA.589\nB.653\nC.723\nD.733",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目完整，包含题干和选项，但无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#1#5",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "5. (10分)如图所示竖式成立时的除数与商的和为( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_001/images/1.jpg)\n\nA.589\nB.653\nC.723\nD.733",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "6. (10分)甲乙丙三人进行一场特殊的真人CS比赛,规定:第一枪由乙射出,射击甲或者丙,以后的射击过程中,若甲被击中一次,则甲可以有6发子弹射击乙或丙,若乙被击中一次,则乙可以有5发子弹射击甲或丙,若丙被击中一次,则丙可以有4发子弹射击甲或乙,比赛结束后,共有16发子弹没有击中任何人?则甲乙丙三人被击中的次数有()种不同的情况.\n\nA.1\nB.2\nC.3\nD.4",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但包含解答和答案，直接用于考试会泄露信息，适合仅作练习使用。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#8#6",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "6. (10分)甲乙丙三人进行一场特殊的真人CS比赛,规定:第一枪由乙射出,射击甲或者丙,以后的射击过程中,若甲被击中一次,则甲可以有6发子弹射击乙或丙,若乙被击中一次,则乙可以有5发子弹射击甲或丙,若丙被击中一次,则丙可以有4发子弹射击甲或乙,比赛结束后,共有16发子弹没有击中任何人?则甲乙丙三人被击中的次数有()种不同的情况.\n\nA.1\nB.2\nC.3\nD.4",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. (10分)甲乙二人进行下面的游戏.二人先约定一个整数 \\(N\\) ,然后由甲开始,轮流把1,2,3,4,5,6,7,8,9这九个数字之一填入下面任一方格中:□□□□□□,每一方格只填入一个数字,形成一个数字可以重复的六位数.若这个六位数能被 \\(N\\) 整除,乙胜;否则甲胜.当 \\(N\\) 小于15时,使得乙有必胜策略的 \\(N\\) 有( )\n\nA.5\nB.6\nC.7\nD.8",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#2#7",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "7. (10分)甲乙二人进行下面的游戏.二人先约定一个整数 \\(N\\) ,然后由甲开始,轮流把1,2,3,4,5,6,7,8,9这九个数字之一填入下面任一方格中:□□□□□□,每一方格只填入一个数字,形成一个数字可以重复的六位数.若这个六位数能被 \\(N\\) 整除,乙胜;否则甲胜.当 \\(N\\) 小于15时,使得乙有必胜策略的 \\(N\\) 有( )\n\nA.5\nB.6\nC.7\nD.8",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. (10分)在纸上任意写一个自然数,把这张纸旋转180度,数值不变,如0、11、96、888等,我们把这样的数称为\"神马数\".在所有五位数中共有( )个不同的\"神马数\".\n\nA.12\nB.36\nC.48\nD.60",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为标准题干，包含问题和选项，但未提供答案或解析，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#2#8",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "8. (10分)在纸上任意写一个自然数,把这张纸旋转180度,数值不变,如0、11、96、888等,我们把这样的数称为\"神马数\".在所有五位数中共有( )个不同的\"神马数\".\n\nA.12\nB.36\nC.48\nD.60",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. (10分)如图,第(1)个多边形由正三角形\"扩展\"而来,边数记为 \\(a_{3}\\) ,第(2)个多边形由正方形\"扩展\"而来,边数记为 \\(a_{4}\\) ,…,依此类推,由正 \\(n\\) 边形\"扩展\"而来的多边形的边数记为 \\(a_{n}\\) ( \\(n \\geq 3\\) ),则 \\(\\frac{1}{a_{3}} + \\frac{1}{a_{4}} + \\frac{1}{a_{5}} + \\dots + \\frac{1}{a_{n}} = \\frac{2014}{6051}\\) ,那么 \\(n =\\) ( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_002/images/0.jpg)\n\nA.2014\nB.2015\nC.2016\nD.2017",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_009/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，包含问题描述和选项，但未泄露答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#2#9",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "9. (10分)如图,第(1)个多边形由正三角形\"扩展\"而来,边数记为 \\(a_{3}\\) ,第(2)个多边形由正方形\"扩展\"而来,边数记为 \\(a_{4}\\) ,…,依此类推,由正 \\(n\\) 边形\"扩展\"而来的多边形的边数记为 \\(a_{n}\\) ( \\(n \\geq 3\\) ),则 \\(\\frac{1}{a_{3}} + \\frac{1}{a_{4}} + \\frac{1}{a_{5}} + \\dots + \\frac{1}{a_{n}} = \\frac{2014}{6051}\\) ,那么 \\(n =\\) ( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_002/images/0.jpg)\n\nA.2014\nB.2015\nC.2016\nD.2017",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 9,
+      "question_text": "10. (10分)如图所示,五边形 \\(ABCEF\\) 面积是2014平方厘米, \\(BC\\) 与 \\(CE\\) 垂直于 \\(C\\) 点, \\(EF\\) 与 \\(CE\\) 垂直于 \\(E\\) 点,四边形 \\(ABDF\\) 是正方形, \\(CD\\) : \\(ED = 3\\) : 2,那么,三角形 \\(ACE\\) 的面积是( )平方厘米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为数学竞赛题干，描述几何问题并提问三角形面积，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#9#10",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "10. (10分)如图所示,五边形 \\(ABCEF\\) 面积是2014平方厘米, \\(BC\\) 与 \\(CE\\) 垂直于 \\(C\\) 点, \\(EF\\) 与 \\(CE\\) 垂直于 \\(E\\) 点,四边形 \\(ABDF\\) 是正方形, \\(CD\\) : \\(ED = 3\\) : 2,那么,三角形 \\(ACE\\) 的面积是( )平方厘米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "11. (10分)甲乙两车分别从 \\(A\\) 、 \\(B\\) 两地同时出发,相向而行,甲车的速度大于乙车.甲行驶了60千米后和乙车在 \\(C\\) 点相遇.此后甲车继续向前行驶,乙车掉头与甲车同向行驶.那么当甲车到达 \\(B\\) 地时,甲乙两车最远相距( )千米.\n\nA.10\nB.15\nC.25\nD.30\n\n## 三、选择题(每题12分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学选择题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#3#11",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "11. (10分)甲乙两车分别从 \\(A\\) 、 \\(B\\) 两地同时出发,相向而行,甲车的速度大于乙车.甲行驶了60千米后和乙车在 \\(C\\) 点相遇.此后甲车继续向前行驶,乙车掉头与甲车同向行驶.那么当甲车到达 \\(B\\) 地时,甲乙两车最远相距( )千米.\n\nA.10\nB.15\nC.25\nD.30\n\n## 三、选择题(每题12分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "12. (12分)在\"爸爸去哪儿\"的节目中有一个任务,五个参加任务的孩子(天天、石头、Kimi、Cindy、Angela)需要换爸爸(每个小朋友可以选择除了自己爸爸之外其他四位父亲中的任何一位),那么最终五人有( )种不同的选择结果.\n\nA.40\nB.44\nC.48\nD.52",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，有选项但无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#3#12",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "12. (12分)在\"爸爸去哪儿\"的节目中有一个任务,五个参加任务的孩子(天天、石头、Kimi、Cindy、Angela)需要换爸爸(每个小朋友可以选择除了自己爸爸之外其他四位父亲中的任何一位),那么最终五人有( )种不同的选择结果.\n\nA.40\nB.44\nC.48\nD.52",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. (12分)老师在黑板上从1开始将奇数连续地写下去,写了一长串数后,擦去了其中的两个数,将这些奇数隔成了3串,已知第二串比第一串多1个数,第三串比第二串多1个数,且第三串奇数和为4147,那么被划去的两个奇数的和是( )\n\nA.188\nB.178\nC.168\nD.158",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛选择题，无答案或解析泄露，适合出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#3#13",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "13. (12分)老师在黑板上从1开始将奇数连续地写下去,写了一长串数后,擦去了其中的两个数,将这些奇数隔成了3串,已知第二串比第一串多1个数,第三串比第二串多1个数,且第三串奇数和为4147,那么被划去的两个奇数的和是( )\n\nA.188\nB.178\nC.168\nD.158",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "14. (12分)从一张大方格纸上剪下5个相连的方格(只有一个公共顶点的两个方格不算相连),要使剪下的图形可折叠为一个无盖的正方体,则共可以剪出( )种不同的图形(经过旋转或翻转相同的图形视为同一种).\n\nA.8\nB.9\nC.10\nD.11",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的题目，包含题干和选项，但没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#3#14",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "14. (12分)从一张大方格纸上剪下5个相连的方格(只有一个公共顶点的两个方格不算相连),要使剪下的图形可折叠为一个无盖的正方体,则共可以剪出( )种不同的图形(经过旋转或翻转相同的图形视为同一种).\n\nA.8\nB.9\nC.10\nD.11",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2014,
+      "number": 15,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 12,
+      "question_text": "15. (12分)老师把某两位数的六个不同因数分别告诉了 \\(A \\sim F\\) 六个聪明诚实的同学.\n\n\\(A\\) 和 \\(B\\) 同时说:我知道这个数是多少了.\n\n\\(C\\) 和 \\(D\\) 同时说:听了他们的话,我也知道这个数是多少了.\n\n\\(E\\) :听了他们的话,我知道我的数一定比 \\(F\\) 的大.\n\n\\(F\\) :我拿的数的大小在 \\(C\\) 和 \\(D\\) 之间.\n\n那么六个人拿的数之和是( )\n\nA.141\nB.152\nC.171\nD.175",
+      "answer_text": "A",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/page_012.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）/pages/page_012/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解答过程，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json#12#15",
+          "json_path": "source_pdf/六年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（六年级）.json"
+        }
+      },
+      "text": "15. (12分)老师把某两位数的六个不同因数分别告诉了 \\(A \\sim F\\) 六个聪明诚实的同学.\n\n\\(A\\) 和 \\(B\\) 同时说:我知道这个数是多少了.\n\n\\(C\\) 和 \\(D\\) 同时说:听了他们的话,我也知道这个数是多少了.\n\n\\(E\\) :听了他们的话,我知道我的数一定比 \\(F\\) 的大.\n\n\\(F\\) :我拿的数的大小在 \\(C\\) 和 \\(D\\) 之间.\n\n那么六个人拿的数之和是( )\n\nA.141\nB.152\nC.171\nD.175",
+      "answer": "A",
+      "solution": null
+    }
+  ]
+}

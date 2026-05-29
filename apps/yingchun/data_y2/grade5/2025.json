@@ -1,0 +1,521 @@
+{
+  "grade": 5,
+  "year": 2025,
+  "total_problems": 13,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\((20\\times 2 - 5)\\div \\frac{1}{11}\\) 的计算结果是",
+      "answer_text": "385",
+      "solution_text": "原式 \\(= (40 - 5) \\times 11 = 35 \\times 11 = 385\\) ;",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整的题干、答案和解析，答案直接泄露，因此不适合作为考试题，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\((20\\times 2 - 5)\\div \\frac{1}{11}\\) 的计算结果是",
+      "answer": "385",
+      "solution": "原式 \\(= (40 - 5) \\times 11 = 35 \\times 11 = 385\\) ;"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 哈利波特拥有一瓶聪明药．在准备第一场考试时，他喝了药水的 \\(\\frac{1}{4}\\) ，此时药水和瓶子的总重量为110克；在准备二场考试前，他又喝了剩下的 \\(\\frac{2}{3}\\) ，此时药水和瓶子的总重量为50克．那么，原来这瓶聪明药水共有 克.",
+      "answer_text": "120",
+      "solution_text": "第二场考试前喝了这瓶聪明药水的 \\(\\left(1 - \\frac{1}{4}\\right) \\times \\frac{2}{3} = \\frac{1}{2}\\) ,\n\n原来这瓶聪明药水共有： \\((110 - 50) \\div \\frac{1}{2} = 60 \\times 2 = 120\\) 克;",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本块包含完整题干、答案和解析，有高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "2. 哈利波特拥有一瓶聪明药．在准备第一场考试时，他喝了药水的 \\(\\frac{1}{4}\\) ，此时药水和瓶子的总重量为110克；在准备二场考试前，他又喝了剩下的 \\(\\frac{2}{3}\\) ，此时药水和瓶子的总重量为50克．那么，原来这瓶聪明药水共有 克.",
+      "answer": "120",
+      "solution": "第二场考试前喝了这瓶聪明药水的 \\(\\left(1 - \\frac{1}{4}\\right) \\times \\frac{2}{3} = \\frac{1}{2}\\) ,\n\n原来这瓶聪明药水共有： \\((110 - 50) \\div \\frac{1}{2} = 60 \\times 2 = 120\\) 克;"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 小明计划绘制一个具有小太阳笑脸特征的图案．为此，他首先绘制了一个边长为10的正十二边形，再以该正十二边形的每个顶点为圆心，边长的一半为半径，画12个扇形，这些扇形共同构成如右图所示的“太阳”轮廓．那么，这个“太阳”轮廓的总长度是 .（ \\(\\pi\\) 取3.14）\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "157",
+      "solution_text": "扇形的直径为10,\n\n扇形的圆心角和： \\((12 - 2) \\times 180^{\\circ} = 1800^{\\circ}\\) ,\n\n这个“太阳”轮廓的总长度： \\(\\pi d \\times \\frac{1800^{\\circ}}{360^{\\circ}} = 3.14 \\times 10 \\times 5 = 157\\) ;",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接包含【答案】和【解析】，存在答案泄露风险，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干完整可出题，但附带答案解析和图片引用，清洗后仅适合练习使用。",
+        "review_fix_hint": "移除答案和解析部分；题干中图片引用需确保可访问或补充描述以避免依赖图片。",
+        "review_clean_question_text": "3. 小明计划绘制一个具有小太阳笑脸特征的图案．为此，他首先绘制了一个边长为10的正十二边形，再以该正十二边形的每个顶点为圆心，边长的一半为半径，画12个扇形，这些扇形共同构成如右图所示的“太阳”轮廓．那么，这个“太阳”轮廓的总长度是 ______. （ \\(\\pi\\) 取3.14）",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "3. 小明计划绘制一个具有小太阳笑脸特征的图案．为此，他首先绘制了一个边长为10的正十二边形，再以该正十二边形的每个顶点为圆心，边长的一半为半径，画12个扇形，这些扇形共同构成如右图所示的“太阳”轮廓．那么，这个“太阳”轮廓的总长度是 .（ \\(\\pi\\) 取3.14）\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "157",
+      "solution": "扇形的直径为10,\n\n扇形的圆心角和： \\((12 - 2) \\times 180^{\\circ} = 1800^{\\circ}\\) ,\n\n这个“太阳”轮廓的总长度： \\(\\pi d \\times \\frac{1800^{\\circ}}{360^{\\circ}} = 3.14 \\times 10 \\times 5 = 157\\) ;"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 有四个互不相同的质数 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) ，满足 \\((a + b)\\times (a + c)\\times (a + d) = 2025\\) ，那么 \\(a + b + c + d =\\)\n\n## 二．填空题Ⅱ（每小题10分，共40分）",
+      "answer_text": "55",
+      "solution_text": "因为 \\(2025 = 3^{4} \\times 5^{2}\\) , 所以 \\((a + b)\\) 、 \\((a + c)\\) 、 \\((a + d)\\) 均为奇数,\n\n已知 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 为四个互不相同的质数,\n\n所以 \\(a = 2\\) , 不妨设 \\(b < c < d\\) , 则 \\(a + b \\geq 2 + 3 = 5\\) ,\n\n又因为2025分解成三个大于等于5的不同因数相乘有两种: \\(5 \\times 9 \\times 45\\) , \\(5 \\times 15 \\times 27\\) ,\n\n因为 \\(27 = 2 + 25\\) , 且25不是质数,\n\n所以 \\(a + b = 5\\) 、 \\(a + c = 9\\) 、 \\(a + d = 45\\) ,\n\n即 \\(a + b + c + d = 2 + 3 + 7 + 43 = 55\\) ;\n\n## 二. 填空题II(每小题10分,共40分)",
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "4. 有四个互不相同的质数 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) ，满足 \\((a + b)\\times (a + c)\\times (a + d) = 2025\\) ，那么 \\(a + b + c + d =\\)\n\n## 二．填空题Ⅱ（每小题10分，共40分）",
+      "answer": "55",
+      "solution": "因为 \\(2025 = 3^{4} \\times 5^{2}\\) , 所以 \\((a + b)\\) 、 \\((a + c)\\) 、 \\((a + d)\\) 均为奇数,\n\n已知 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 为四个互不相同的质数,\n\n所以 \\(a = 2\\) , 不妨设 \\(b < c < d\\) , 则 \\(a + b \\geq 2 + 3 = 5\\) ,\n\n又因为2025分解成三个大于等于5的不同因数相乘有两种: \\(5 \\times 9 \\times 45\\) , \\(5 \\times 15 \\times 27\\) ,\n\n因为 \\(27 = 2 + 25\\) , 且25不是质数,\n\n所以 \\(a + b = 5\\) 、 \\(a + c = 9\\) 、 \\(a + d = 45\\) ,\n\n即 \\(a + b + c + d = 2 + 3 + 7 + 43 = 55\\) ;\n\n## 二. 填空题II(每小题10分,共40分)"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 在一个 \\(10\\times 10\\) 的初始全为白色的棋盘上，甲和乙两人进行染色游戏．首先，甲选择 \\(n\\) 个格子染成红色；接着，乙选择4行4列染黑色．如果游戏结束时，棋盘上至少还剩下一个红色格子，则判定甲胜利，否则判定乙胜利.那么，当 \\(n\\) 最小值为时，甲能确保有必胜策略.",
+      "answer_text": "9",
+      "solution_text": "甲在对角线取9个格子, 则乙无论如何染色, 至少还剩下一个红色格子;\n\n当 \\(n\\) 为8时, 因为 \\(8 \\div 4 = 2\\) , 所以最多可以在4列, 每列1个, 在4行, 每行1个,\n\n且任意2个不同行也不同列,\n\n所以 \\(n\\) 为8时, 乙一定能全部覆盖全部红色格子;",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题，没有提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json#1#5",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "5. 在一个 \\(10\\times 10\\) 的初始全为白色的棋盘上，甲和乙两人进行染色游戏．首先，甲选择 \\(n\\) 个格子染成红色；接着，乙选择4行4列染黑色．如果游戏结束时，棋盘上至少还剩下一个红色格子，则判定甲胜利，否则判定乙胜利.那么，当 \\(n\\) 最小值为时，甲能确保有必胜策略.",
+      "answer": "9",
+      "solution": "甲在对角线取9个格子, 则乙无论如何染色, 至少还剩下一个红色格子;\n\n当 \\(n\\) 为8时, 因为 \\(8 \\div 4 = 2\\) , 所以最多可以在4列, 每列1个, 在4行, 每行1个,\n\n且任意2个不同行也不同列,\n\n所以 \\(n\\) 为8时, 乙一定能全部覆盖全部红色格子;"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 如图,在平行四边形ABCD中,分别在 \\(OA\\) 、 \\(OB\\) 、 \\(OC\\) 、 \\(OD\\) 以及 \\(AB\\) 、 \\(CD\\) 上取三等分点并连接,那么图中一共可以构成 个平行四边形.\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "33",
+      "solution_text": "(1) 在三角形 \\(OAB\\) 内, 共 \\(C_{4 + 1}^{4} \\times 3 = 15\\) 个,\n\n(2) 包含点 \\(O\\) , 共3个,\n\n所以共可构成 \\(15 \\times 2 + 3 = 33\\) 个;",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可出题，但文本块中直接包含答案和解析，泄漏风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "6. 如图,在平行四边形ABCD中,分别在 \\(OA\\) 、 \\(OB\\) 、 \\(OC\\) 、 \\(OD\\) 以及 \\(AB\\) 、 \\(CD\\) 上取三等分点并连接,那么图中一共可以构成 个平行四边形.\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "33",
+      "solution": "(1) 在三角形 \\(OAB\\) 内, 共 \\(C_{4 + 1}^{4} \\times 3 = 15\\) 个,\n\n(2) 包含点 \\(O\\) , 共3个,\n\n所以共可构成 \\(15 \\times 2 + 3 = 33\\) 个;"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 一个三位数除以63、84、145所得的三个余数之和恰好等于该数本身,那么这个三位数是",
+      "answer_text": "251",
+      "solution_text": "因为 \\([63,84,145] = 36540\\) ,\n\n所以这个数不大于 \\((63 - 1) + (84 - 1) + (145 - 1) = 62 + 83 + 144 = 289\\) ,\n\n因为 289 除以 145 商 1,\n\n所以这个数除以 63 和 84 的余数之和为 145,\n\n所以除以 63 余 62, 除以 84 余 83,\n\n即 \\([63,84] - 1 = 251\\) ;",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学问题题干，没有答案或解析泄露，可以安全保留用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json#2#7",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "7. 一个三位数除以63、84、145所得的三个余数之和恰好等于该数本身,那么这个三位数是",
+      "answer": "251",
+      "solution": "因为 \\([63,84,145] = 36540\\) ,\n\n所以这个数不大于 \\((63 - 1) + (84 - 1) + (145 - 1) = 62 + 83 + 144 = 289\\) ,\n\n因为 289 除以 145 商 1,\n\n所以这个数除以 63 和 84 的余数之和为 145,\n\n所以除以 63 余 62, 除以 84 余 83,\n\n即 \\([63,84] - 1 = 251\\) ;"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 老师与甲、乙两名同学共同进行一场游戏,游戏规则如下:老师先在黑板上写一个小于2025的正整数;甲先将这个数擦掉,然后将这个数的2倍写在黑板上;乙接着将甲写的数擦掉,再将甲写的数与100的和写在黑板上,游戏按照\"甲-乙-甲-乙-…\"的顺序轮流进行,直到某位同学首次在黑板上写出一个大于2025的数,则该同学获胜,如果最终乙同学获胜,那么,老师在黑板上最初书写的数最小可能是\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "33",
+      "solution_text": "倒推分析: 若乙获胜, 甲最后写的数在 \\(1926 \\sim 2025\\) 之间,\n\n之前乙写的数在 \\(963 \\sim 1012\\) 之间, 之前甲写的数在 \\(863 \\sim 912\\) 之间,\n\n之前乙写的数在 \\(432 \\sim 456\\) 之间, 之前甲写的数在 \\(332 \\sim 356\\) 之间,\n\n之前乙写的数在 \\(166 \\sim 178\\) 之间, 之前甲写的数在 \\(66 \\sim 78\\) 之间,\n\n之前乙写的数在 \\(33 \\sim 39\\) 之间, 之前甲无法写数,\n\n所以甲第一次在黑板上写的数应在 \\(66 \\sim 78\\) 之间,\n\n老师在黑板上写的数在 \\(33 \\sim 39\\) 之间,\n\n所以最小值是 33;\n\n## 三. 填空题III (每小题 12 分, 共 48 分)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json#2#8",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "8. 老师与甲、乙两名同学共同进行一场游戏,游戏规则如下:老师先在黑板上写一个小于2025的正整数;甲先将这个数擦掉,然后将这个数的2倍写在黑板上;乙接着将甲写的数擦掉,再将甲写的数与100的和写在黑板上,游戏按照\"甲-乙-甲-乙-…\"的顺序轮流进行,直到某位同学首次在黑板上写出一个大于2025的数,则该同学获胜,如果最终乙同学获胜,那么,老师在黑板上最初书写的数最小可能是\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "33",
+      "solution": "倒推分析: 若乙获胜, 甲最后写的数在 \\(1926 \\sim 2025\\) 之间,\n\n之前乙写的数在 \\(963 \\sim 1012\\) 之间, 之前甲写的数在 \\(863 \\sim 912\\) 之间,\n\n之前乙写的数在 \\(432 \\sim 456\\) 之间, 之前甲写的数在 \\(332 \\sim 356\\) 之间,\n\n之前乙写的数在 \\(166 \\sim 178\\) 之间, 之前甲写的数在 \\(66 \\sim 78\\) 之间,\n\n之前乙写的数在 \\(33 \\sim 39\\) 之间, 之前甲无法写数,\n\n所以甲第一次在黑板上写的数应在 \\(66 \\sim 78\\) 之间,\n\n老师在黑板上写的数在 \\(33 \\sim 39\\) 之间,\n\n所以最小值是 33;\n\n## 三. 填空题III (每小题 12 分, 共 48 分)"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图,正六边形中两个阴影部分面积分别是20和25,那么正六边形的面积是\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "78",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，无答案或解析泄漏。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json#2#9",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "9. 如图,正六边形中两个阴影部分面积分别是20和25,那么正六边形的面积是\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "78",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 早上8:00,甲车从 \\(A\\) 地出发前往 \\(B\\) 地,同时乙车、丙车从 \\(B\\) 地出发前往 \\(A\\) 地, \\(C\\) 地是 \\(AB\\) 两地的中点,已知10:00时,甲、乙两车相遇;11:00时,甲车未到达 \\(B\\) 地且在 \\(BC\\) 两地之间,丙车恰好处于甲车和 \\(C\\) 地的中点;乙车到达 \\(A\\) 地后调头与丙车相遇时,乙车一共走了300千米,那么 \\(AB\\) 两地之间的距离是千米.(不考虑车身长度)",
+      "answer_text": "225",
+      "solution_text": "甲、乙在10:00相遇,所以 \\(2(\\nu_{\\mathrm{甲}} + \\nu_{\\mathrm{Z}}) = S\\) ;\n\n11:00时,丙恰好在甲和 \\(C\\) 地的中点,\n\n此时甲没到 \\(B\\) 地,所以 \\(3(\\nu_{\\mathrm{甲}} + \\nu_{\\mathrm{丙}}) - S = \\frac{1}{2} S - 3\\nu_{\\mathrm{丙}}\\) ;\n\n即 \\(2\\nu_{\\mathrm{甲}} + 4\\nu_{\\mathrm{丙}} = S\\) ,故 \\(\\nu_{\\mathrm{Z}} = 2\\nu_{\\mathrm{丙}}\\) ;\n\n乙、丙相遇时乙走了300千米,此时丙走了150千米,\n\n故 \\(AB\\) 全程225千米;",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛问题题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json#2#10",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "10. 早上8:00,甲车从 \\(A\\) 地出发前往 \\(B\\) 地,同时乙车、丙车从 \\(B\\) 地出发前往 \\(A\\) 地, \\(C\\) 地是 \\(AB\\) 两地的中点,已知10:00时,甲、乙两车相遇;11:00时,甲车未到达 \\(B\\) 地且在 \\(BC\\) 两地之间,丙车恰好处于甲车和 \\(C\\) 地的中点;乙车到达 \\(A\\) 地后调头与丙车相遇时,乙车一共走了300千米,那么 \\(AB\\) 两地之间的距离是千米.(不考虑车身长度)",
+      "answer": "225",
+      "solution": "甲、乙在10:00相遇,所以 \\(2(\\nu_{\\mathrm{甲}} + \\nu_{\\mathrm{Z}}) = S\\) ;\n\n11:00时,丙恰好在甲和 \\(C\\) 地的中点,\n\n此时甲没到 \\(B\\) 地,所以 \\(3(\\nu_{\\mathrm{甲}} + \\nu_{\\mathrm{丙}}) - S = \\frac{1}{2} S - 3\\nu_{\\mathrm{丙}}\\) ;\n\n即 \\(2\\nu_{\\mathrm{甲}} + 4\\nu_{\\mathrm{丙}} = S\\) ,故 \\(\\nu_{\\mathrm{Z}} = 2\\nu_{\\mathrm{丙}}\\) ;\n\n乙、丙相遇时乙走了300千米,此时丙走了150千米,\n\n故 \\(AB\\) 全程225千米;"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 甲、乙、丙、丁、戊五人面前分别放置了浓度分别为 \\(10\\%\\) 、 \\(20\\%\\) 、 \\(30\\%\\) 、 \\(40\\%\\) 、 \\(50\\%\\) 的五瓶酒精溶液,同时旁边还有一瓶重25克的清水,这五人依次从各自正面前的酒精溶液中取出 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\) 充满入清水瓶中,最终,清水瓶中的酒精浓度变为了 \\(15\\%\\) .已知 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\)  都是一位数奇数,且互不相同;乙取出的酒精溶液既不是最多的,也不是最少的,但比甲取出的要少,那么五位数 \\(abcde\\) 是",
+      "answer_text": "75319",
+      "solution_text": "由已知, \\(a + b + c + d + e = 25\\) ,如果5人取出的酒精溶液直接混合而不放入清水瓶,得到的混合浓度为 \\(15\\% \\times 2 = 30\\%\\) ,这样丙取多少都不影响最终浓度;",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目描述完整，无答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json#2#11",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "11. 甲、乙、丙、丁、戊五人面前分别放置了浓度分别为 \\(10\\%\\) 、 \\(20\\%\\) 、 \\(30\\%\\) 、 \\(40\\%\\) 、 \\(50\\%\\) 的五瓶酒精溶液,同时旁边还有一瓶重25克的清水,这五人依次从各自正面前的酒精溶液中取出 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\) 充满入清水瓶中,最终,清水瓶中的酒精浓度变为了 \\(15\\%\\) .已知 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\)  都是一位数奇数,且互不相同;乙取出的酒精溶液既不是最多的,也不是最少的,但比甲取出的要少,那么五位数 \\(abcde\\) 是",
+      "answer": "75319",
+      "solution": "由已知, \\(a + b + c + d + e = 25\\) ,如果5人取出的酒精溶液直接混合而不放入清水瓶,得到的混合浓度为 \\(15\\% \\times 2 = 30\\%\\) ,这样丙取多少都不影响最终浓度;"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 13,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. 如图,长方形ABFE和长方形CDEF拼接成了正方形ABCD,点 \\(P\\) 是 \\(DF\\) 的中点, \\(AP\\) 与 \\(EF\\) 交于 \\(M\\) , \\(DM\\) 与 \\(BC\\) 交于 \\(N\\) . 已知 \\(EM = FN\\) ,三角形AEM的面积是2025.\n\n(1) 请求出 \\(\\triangle ABN\\) 的面积;(6分)\n\n(2) 请求出 \\(\\triangle AMN\\) 的面积.(9分)\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_003/images/0.jpg)",
+      "answer_text": "(1)2025;(2)4050",
+      "solution_text": "(1)分别连接 \\(CE\\) 、 \\(CM\\) 、 \\(CA\\) ,\n\n在正方形 \\(ABCD\\) 中, \\(CA\\) 是对角线,则 \\(CF = FR\\) ,\n\n因为 \\(EM = FN\\) ,所以 \\(MR = BN\\) ,\n\n故 \\(S_{\\triangle MAC} = S_{\\triangle BNA}\\) ,\n\n在长方形 \\(DFCD\\) 中,点 \\(P\\) 是 \\(CE\\) 的中点,\n\n则 \\(EP = PC\\) ,\n\n所以 \\(S_{\\triangle BNA} = S_{\\triangle MAC} = S_{\\triangle EMA} = 2025\\) ;",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的数学竞赛题干，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json#3#13",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "13. 如图,长方形ABFE和长方形CDEF拼接成了正方形ABCD,点 \\(P\\) 是 \\(DF\\) 的中点, \\(AP\\) 与 \\(EF\\) 交于 \\(M\\) , \\(DM\\) 与 \\(BC\\) 交于 \\(N\\) . 已知 \\(EM = FN\\) ,三角形AEM的面积是2025.\n\n(1) 请求出 \\(\\triangle ABN\\) 的面积;(6分)\n\n(2) 请求出 \\(\\triangle AMN\\) 的面积.(9分)\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_003/images/0.jpg)",
+      "answer": "(1)2025;(2)4050",
+      "solution": "(1)分别连接 \\(CE\\) 、 \\(CM\\) 、 \\(CA\\) ,\n\n在正方形 \\(ABCD\\) 中, \\(CA\\) 是对角线,则 \\(CF = FR\\) ,\n\n因为 \\(EM = FN\\) ,所以 \\(MR = BN\\) ,\n\n故 \\(S_{\\triangle MAC} = S_{\\triangle BNA}\\) ,\n\n在长方形 \\(DFCD\\) 中,点 \\(P\\) 是 \\(CE\\) 的中点,\n\n则 \\(EP = PC\\) ,\n\n所以 \\(S_{\\triangle BNA} = S_{\\triangle MAC} = S_{\\triangle EMA} = 2025\\) ;"
+    },
+    {
+      "grade": 5,
+      "year": 2025,
+      "number": 14,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "14. 对于一个给定的的方格表, 每次操作可以选择以下图中四种模式之一, 将所选模式中的三个格子内的数同时加 1.\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_004/images/0.jpg)\n\n（1）如图 1，至少需要操作 次，才能使每个格子内的数的奇偶性都相同，请直接给出答案；（3分）\n\n（2）如图 2，至少需要操作多少次，才能使每个格子内的数都变成奇数？请描述具体的操作方法；（6分）\n\n（3）如图 3，能否通过若干次操作，使所有格子内的数变成相同的数？请说明理由。（6分）\n\n<table><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr></table>\n\n<table><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td></td></tr></table>\n\n<table><tr><td>1</td><td>2</td><td>3</td></tr></table>\n\n图3\n\n<table><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5&lt;fce&gt;</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2025/ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整的竞赛题干，包含多个子问题，但未出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json#4#14",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2025/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "14. 对于一个给定的的方格表, 每次操作可以选择以下图中四种模式之一, 将所选模式中的三个格子内的数同时加 1.\n\n![](ocr_debug/2025数学花园探秘笔试小高年级决赛C卷（B5试卷版）/pages/page_004/images/0.jpg)\n\n（1）如图 1，至少需要操作 次，才能使每个格子内的数的奇偶性都相同，请直接给出答案；（3分）\n\n（2）如图 2，至少需要操作多少次，才能使每个格子内的数都变成奇数？请描述具体的操作方法；（6分）\n\n（3）如图 3，能否通过若干次操作，使所有格子内的数变成相同的数？请说明理由。（6分）\n\n<table><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr></table>\n\n<table><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>0</td><td></td></tr></table>\n\n<table><tr><td>1</td><td>2</td><td>3</td></tr></table>\n\n图3\n\n<table><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5&lt;fce&gt;</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr></table>",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

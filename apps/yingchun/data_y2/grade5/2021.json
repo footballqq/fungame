@@ -1,0 +1,1540 @@
+{
+  "grade": 5,
+  "year": 2021,
+  "total_problems": 39,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2021五年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021五年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "1. \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 是 1、1、4、4, 两个 1 与两个 4 分别处于对角位置, 有 2 种填法;\n\n\\(e\\) 、 \\(f\\) 分别是 2、3, 位置任选, 有 2 种填法;\n\n当 \\(e\\) 、 \\(f\\) 确定后, 其余位置全部固定不变, 共 \\(2 \\times 2 = 4\\) 种填法;",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021五年级网赛【答案解析】/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021五年级网赛【答案解析】/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含解答过程和直接答案，不是独立题干。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json#3#1",
+          "json_path": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json"
+        }
+      },
+      "text": "1. \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 是 1、1、4、4, 两个 1 与两个 4 分别处于对角位置, 有 2 种填法;\n\n\\(e\\) 、 \\(f\\) 分别是 2、3, 位置任选, 有 2 种填法;\n\n当 \\(e\\) 、 \\(f\\) 确定后, 其余位置全部固定不变, 共 \\(2 \\times 2 = 4\\) 种填法;",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2021五年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021五年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "2. \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 是 2、2、3、3, 情况与 1、1、4、4 相同, 共有 4 种填法;",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021五年级网赛【答案解析】/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021五年级网赛【答案解析】/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本直接给出了答案数量，缺乏独立提问，且包含答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json#3#2",
+          "json_path": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "文本直接包含答案，裁剪后可得到题干，但题干可能依赖上下文，不适合考试，建议用于练习。",
+        "review_fix_hint": "删除答案部分'共有 4 种填法'，仅保留题干描述。",
+        "review_clean_question_text": "2. \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 是 2、2、3、3, 情况与 1、1、4、4 相同,",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json#3#2",
+          "json_path": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json"
+        }
+      },
+      "text": "2. \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 是 2、2、3、3, 情况与 1、1、4、4 相同, 共有 4 种填法;",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2021五年级网赛【答案解析】.pdf",
+      "exam": {
+        "exam_key": "2021五年级网赛",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "3. \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 是 4、2、3、4, 共有 \\(4 \\times 3 \\times 2 \\times 1 = 24\\) 种, 当这 4 个位置确定后, 其余位置的填法是唯一的, 所以共有 24 种填法;\n\n所以, 满足要求的填法一共有 \\(4 + 4 + 24 = 32\\) 种.\n\n<table><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><td></td></td></tr></table>\n\n<table><tr><td></td><td>e</td><td>f</td><td></td></tr><tr><td></td><td>a</td><td>b</td><td></td></tr><tr><td></td><td>c</td><td>d</td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></table>\n\n7、下图中的正方形中, 以上下两边中点为顶点画出四个完全一样的等边三角形, 图中白色菱形的面积是 2020. 那么, 四周的绿色阴影面积之和为 ______.\n\n![](ocr_debug/2021五年级网赛【答案解析】/pages/page_003/images/0.jpg)",
+      "answer_text": "6060",
+      "solution_text": "如图, 连接正方形的对边中点, 作 \\(DP \\perp AB\\) .\n\n易知: \\(\\triangle AEF\\) 、 \\(\\triangle AML\\) 、 \\(\\triangle CKL\\) 、 \\(\\triangle CGH\\) 与 \\(\\triangle ABO\\) 完全一样,\n\n\\[\\angle EAF = \\angle BAO = \\angle MAL = \\angle DAO = 15^{\\circ} \\Rightarrow \\angle BAD = 30^{\\circ}.\\]\n\n\\(\\angle BFG = \\angle BGF = 45^{\\circ}\\) , \\(\\therefore \\triangle BFG\\) 与 \\(\\triangle DML\\) 为等腰直角三角形.\n\n设 \\(AB = m\\) , 则 \\(DP = \\frac{1}{2} m\\) ,\n\n那么, \\(S_{ABCD} = \\frac{1}{2} m \\times m \\div 2 \\times 2 = \\frac{1}{2} m^{2} = 2020\\) .\n\n\\[\\therefore S_{\\triangle BFG} = S_{\\triangle DML} = \\frac{1}{2} m^{2} = 2020.\\]",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021五年级网赛【答案解析】/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021五年级网赛【答案解析】/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021五年级网赛【答案解析】/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含问题题干，但直接给出了答案和解析，因此有高泄露风险，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json#3#3",
+          "json_path": "source_pdf/五年级/2021/2021五年级网赛【答案解析】.json"
+        }
+      },
+      "text": "3. \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 是 4、2、3、4, 共有 \\(4 \\times 3 \\times 2 \\times 1 = 24\\) 种, 当这 4 个位置确定后, 其余位置的填法是唯一的, 所以共有 24 种填法;\n\n所以, 满足要求的填法一共有 \\(4 + 4 + 24 = 32\\) 种.\n\n<table><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><td></td></td></tr></table>\n\n<table><tr><td></td><td>e</td><td>f</td><td></td></tr><tr><td></td><td>a</td><td>b</td><td></td></tr><tr><td></td><td>c</td><td>d</td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></table>\n\n7、下图中的正方形中, 以上下两边中点为顶点画出四个完全一样的等边三角形, 图中白色菱形的面积是 2020. 那么, 四周的绿色阴影面积之和为 ______.\n\n![](ocr_debug/2021五年级网赛【答案解析】/pages/page_003/images/0.jpg)",
+      "answer": "6060",
+      "solution": "如图, 连接正方形的对边中点, 作 \\(DP \\perp AB\\) .\n\n易知: \\(\\triangle AEF\\) 、 \\(\\triangle AML\\) 、 \\(\\triangle CKL\\) 、 \\(\\triangle CGH\\) 与 \\(\\triangle ABO\\) 完全一样,\n\n\\[\\angle EAF = \\angle BAO = \\angle MAL = \\angle DAO = 15^{\\circ} \\Rightarrow \\angle BAD = 30^{\\circ}.\\]\n\n\\(\\angle BFG = \\angle BGF = 45^{\\circ}\\) , \\(\\therefore \\triangle BFG\\) 与 \\(\\triangle DML\\) 为等腰直角三角形.\n\n设 \\(AB = m\\) , 则 \\(DP = \\frac{1}{2} m\\) ,\n\n那么, \\(S_{ABCD} = \\frac{1}{2} m \\times m \\div 2 \\times 2 = \\frac{1}{2} m^{2} = 2020\\) .\n\n\\[\\therefore S_{\\triangle BFG} = S_{\\triangle DML} = \\frac{1}{2} m^{2} = 2020.\\]"
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13、 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 分别表示四个不同的数字．且 \\(ABCD\\) 恰好是三个两位数 \\(AB, BC, CD\\) 最小公倍数的 3 倍，求这个四位数．",
+      "answer_text": "2346",
+      "solution_text": "\\(\\overline{AB} \\mid \\overline{CD}\\) , \\(\\overline{CD} \\mid \\overline{AB} 00\\) ,所以 \\(\\overline{CD} = \\overline{AB} \\times 2\\) 或者 \\(\\overline{CD} = \\overline{AB} \\times 4\\) .\n\n注意到104不是3的倍数.所以只能是 \\(\\overline{CD} = \\overline{AB} \\times 2\\) ,且 \\([\\overline{BC}, \\overline{CD}] = \\overline{CD} \\times 17\\) ,因此 \\(\\overline{BC}\\) 是17的倍数.枚举知 \\(\\overline{ABCD} = 2346\\) .\n\n14、如图, \\(4 \\times 4 \\times 4\\) 正方体方格柜子中,每个单位方格内放有一个球.三台相机分别记录柜子的三视图(如右下所示).侠盗罗宾准备一次性取走其中若干个球,但不能被发现(即需保证三视图的结果不变).\n\n![](ocr_debug/2021数学花园探秘决赛小高A卷（解析版）/pages/page_004/images/0.jpg)\n\n![](ocr_debug/2021数学花园探秘决赛小高A卷（解析版）/pages/page_004/images/1.jpg)\n\n<center>正视图</center>\n\n![](ocr_debug/2021数学花园探秘决赛小高A卷（解析版）/pages/page_004/images/2.jpg)\n\n<center>左视图</center>\n\n![](ocr_debug/2021数学花园探秘决赛小高A卷（解析版）/pages/page_004/images/3.jpg)\n\n<center>俯视图</center>\n\n(1)至多能取走多少个球?\n\n(2)当取走球的数量最多时,有多少种不同的拿法?\n\n【答案】48;576\n\n【解析】\n\n(1)至少需要留下 \\(4 \\times 4 = 16\\) 个球,所以至多能取走 \\(4 \\times 4 \\times 4 - 4 \\times 4 = 48\\) 个球.\n\n(2)将剩余球所在的层数标在俯视图中,即在 \\(4 \\times 4\\) 的方格表中填入1、2、3、4使得每格中填入一个数,且每行每列中恰好含有四种数字各1个.\n\n考虑对称性,不妨设第一行与第一列恰好顺序均为1、2、3、4(如下图):\n\n<table><tr><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>2</td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td></tr><tr><td>4</td><td></td><td></td><td></td></tr></table>\n\n经枚举知有下列4种填法:",
+      "topic": "number_theory",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高A卷（试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高A卷（试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高A卷（试卷版）.json#3#13",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高A卷（试卷版）.json"
+        }
+      },
+      "text": "13、 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 分别表示四个不同的数字．且 \\(ABCD\\) 恰好是三个两位数 \\(AB, BC, CD\\) 最小公倍数的 3 倍，求这个四位数．",
+      "answer": "2346",
+      "solution": "\\(\\overline{AB} \\mid \\overline{CD}\\) , \\(\\overline{CD} \\mid \\overline{AB} 00\\) ,所以 \\(\\overline{CD} = \\overline{AB} \\times 2\\) 或者 \\(\\overline{CD} = \\overline{AB} \\times 4\\) .\n\n注意到104不是3的倍数.所以只能是 \\(\\overline{CD} = \\overline{AB} \\times 2\\) ,且 \\([\\overline{BC}, \\overline{CD}] = \\overline{CD} \\times 17\\) ,因此 \\(\\overline{BC}\\) 是17的倍数.枚举知 \\(\\overline{ABCD} = 2346\\) .\n\n14、如图, \\(4 \\times 4 \\times 4\\) 正方体方格柜子中,每个单位方格内放有一个球.三台相机分别记录柜子的三视图(如右下所示).侠盗罗宾准备一次性取走其中若干个球,但不能被发现(即需保证三视图的结果不变).\n\n![](ocr_debug/2021数学花园探秘决赛小高A卷（解析版）/pages/page_004/images/0.jpg)\n\n![](ocr_debug/2021数学花园探秘决赛小高A卷（解析版）/pages/page_004/images/1.jpg)\n\n<center>正视图</center>\n\n![](ocr_debug/2021数学花园探秘决赛小高A卷（解析版）/pages/page_004/images/2.jpg)\n\n<center>左视图</center>\n\n![](ocr_debug/2021数学花园探秘决赛小高A卷（解析版）/pages/page_004/images/3.jpg)\n\n<center>俯视图</center>\n\n(1)至多能取走多少个球?\n\n(2)当取走球的数量最多时,有多少种不同的拿法?\n\n【答案】48;576\n\n【解析】\n\n(1)至少需要留下 \\(4 \\times 4 = 16\\) 个球,所以至多能取走 \\(4 \\times 4 \\times 4 - 4 \\times 4 = 48\\) 个球.\n\n(2)将剩余球所在的层数标在俯视图中,即在 \\(4 \\times 4\\) 的方格表中填入1、2、3、4使得每格中填入一个数,且每行每列中恰好含有四种数字各1个.\n\n考虑对称性,不妨设第一行与第一列恰好顺序均为1、2、3、4(如下图):\n\n<table><tr><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>2</td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td></tr><tr><td>4</td><td></td><td></td><td></td></tr></table>\n\n经枚举知有下列4种填法:"
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\((4.5 + 0.2)\\times (4.5 - 0.2) - (1 + 2 + 3 + 4 + 5 + 6)\\div 100\\) 的计算结果是",
+      "answer_text": "20",
+      "solution_text": "\\[(4.5 + 0.2)\\times (4.5 - 0.2)\\div (1 + 2 + 3 + 4 + 5 + 6)\\div \\mathrm{100} = 4.7\\times 4.3 - 21\\div 100 = 20.21 - 0.21 = 20\\]",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干为数学计算问题，但文本块直接包含答案和解析，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json#1#1",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json"
+        }
+      },
+      "text": "1. 算式 \\((4.5 + 0.2)\\times (4.5 - 0.2) - (1 + 2 + 3 + 4 + 5 + 6)\\div 100\\) 的计算结果是",
+      "answer": "20",
+      "solution": "\\[(4.5 + 0.2)\\times (4.5 - 0.2)\\div (1 + 2 + 3 + 4 + 5 + 6)\\div \\mathrm{100} = 4.7\\times 4.3 - 21\\div 100 = 20.21 - 0.21 = 20\\]"
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 右图中的\"数\"、\"学\"、\"花\"、\"园\"、\"探\"、\"秘\"表示1\\~6中的不同数字,那么数学花园表示的四位数是\n\n数学 \\(\\times\\) (花园- 探秘) \\(= 2021\\)",
+      "answer_text": "4362",
+      "solution_text": "\\(2021 = 43\\times 47\\) ,数学 \\(= 43\\) ,花园- 探秘 \\(= 47\\) ;看个位,\"园\"和\"秘\"差7或3,余下数字1,2,5,6中,只有2、5差3,所以\"园\" \\(= 2\\) ,\"秘\" \\(= 5\\) ,从而\"花\" \\(= 6\\) ,\"探\" \\(= 1\\) .所以,算式为 \\(43\\times (62 - 15) = 2021\\) ,本题答案为4362.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本块包含完整的题干、答案和解析，答案泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json#1#2",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json"
+        }
+      },
+      "text": "2. 右图中的\"数\"、\"学\"、\"花\"、\"园\"、\"探\"、\"秘\"表示1\\~6中的不同数字,那么数学花园表示的四位数是\n\n数学 \\(\\times\\) (花园- 探秘) \\(= 2021\\)",
+      "answer": "4362",
+      "solution": "\\(2021 = 43\\times 47\\) ,数学 \\(= 43\\) ,花园- 探秘 \\(= 47\\) ;看个位,\"园\"和\"秘\"差7或3,余下数字1,2,5,6中,只有2、5差3,所以\"园\" \\(= 2\\) ,\"秘\" \\(= 5\\) ,从而\"花\" \\(= 6\\) ,\"探\" \\(= 1\\) .所以,算式为 \\(43\\times (62 - 15) = 2021\\) ,本题答案为4362."
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 豆豆和康康在\"金银岛\"探险时,每人都找到了\"金魔法卷轴\"、\"银魔法卷轴\"各一个.\"金魔法卷轴\"使用后,使用者身上的金子会变成原来的 \\(\\frac{4}{3}\\) ;\"银魔法卷轴\"使用后,使用者身上的金子会增加 \\(20\\%\\) . 豆豆先用了\"金魔法卷轴\",后用了\"银魔法卷轴\";康康先用了\"银魔法卷轴\",后用了\"金魔法卷轴\". 如果最后两人共有金子288克,那么两人原有金子共______克.",
+      "answer_text": "180",
+      "solution_text": "依次使用魔法卷轴后,豆豆的金子克数变为原来的 \\(\\frac{4}{3}\\times (1 + 20\\%) = \\frac{8}{5}\\) 康康的金子克数原来的 \\((1 + 20\\%) \\times \\frac{4}{3} = \\frac{8}{5}\\) ,所以 \\(288 \\div \\frac{8}{5} = 180\\) (克)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，答案直接给出，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json#1#3",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json"
+        }
+      },
+      "text": "3. 豆豆和康康在\"金银岛\"探险时,每人都找到了\"金魔法卷轴\"、\"银魔法卷轴\"各一个.\"金魔法卷轴\"使用后,使用者身上的金子会变成原来的 \\(\\frac{4}{3}\\) ;\"银魔法卷轴\"使用后,使用者身上的金子会增加 \\(20\\%\\) . 豆豆先用了\"金魔法卷轴\",后用了\"银魔法卷轴\";康康先用了\"银魔法卷轴\",后用了\"金魔法卷轴\". 如果最后两人共有金子288克,那么两人原有金子共______克.",
+      "answer": "180",
+      "solution": "依次使用魔法卷轴后,豆豆的金子克数变为原来的 \\(\\frac{4}{3}\\times (1 + 20\\%) = \\frac{8}{5}\\) 康康的金子克数原来的 \\((1 + 20\\%) \\times \\frac{4}{3} = \\frac{8}{5}\\) ,所以 \\(288 \\div \\frac{8}{5} = 180\\) (克)"
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 如图, \\(\\triangle ABC\\) 是等边三角形,以 \\(AB\\) 为直径作半圆,分别以 \\(A\\) 、 \\(B\\) 为圆心作了两条相同的弧. 如果上部阴影面积是42平方厘米,那么下部阴影面积是______平方厘米.\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_001/images/0.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "84",
+      "solution_text": "图中的小三角形都是一样的等边三角形,设每个小等边三角形面积为 \\(a\\) ;弓形 \\(DE\\) 、弓形 \\(OE\\) 、弓形 \\(OF\\) 、弓形 \\(OG\\) 完全相同,设每个弓形的面积为 \\(b\\) .\n\n上部阴影面积为 \\(a - b\\) ,下部阴影面积为 \\(2a - 2b\\)\n\n所以,下部阴影面积是 \\(42\\times 2 = 84\\) (平方厘米).\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（详解版）/pages/page_001/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json#1#4",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json"
+        }
+      },
+      "text": "4. 如图, \\(\\triangle ABC\\) 是等边三角形,以 \\(AB\\) 为直径作半圆,分别以 \\(A\\) 、 \\(B\\) 为圆心作了两条相同的弧. 如果上部阴影面积是42平方厘米,那么下部阴影面积是______平方厘米.\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_001/images/0.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "84",
+      "solution": "图中的小三角形都是一样的等边三角形,设每个小等边三角形面积为 \\(a\\) ;弓形 \\(DE\\) 、弓形 \\(OE\\) 、弓形 \\(OF\\) 、弓形 \\(OG\\) 完全相同,设每个弓形的面积为 \\(b\\) .\n\n上部阴影面积为 \\(a - b\\) ,下部阴影面积为 \\(2a - 2b\\)\n\n所以,下部阴影面积是 \\(42\\times 2 = 84\\) (平方厘米).\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（详解版）/pages/page_001/images/0.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 算式 \\(\\frac{25 \\times 15 \\times 5 + 20 \\times 12 \\times 4 + 15 \\times 9 \\times 3 + 10 \\times 6 \\times 2 + 5 \\times 3 \\times 1}{25 \\times 15 \\times 5 - 20 \\times 12 \\times 4 + 15 \\times 9 \\times - 10 \\times 6 \\times 2 + 5 \\times 3 \\times - 1} \\times 99\\) 的计算结果是______.",
+      "answer_text": "275",
+      "solution_text": "\\[25\\times 15\\times 5 + 20\\times 12\\times 4 + 15\\times 9\\times 3 + 10\\times 6\\times 2 + 5\\times 3\\times 1\\] \\[25\\times 15\\times 5 - 20\\times 12\\times 4 + 15\\times 9\\times 3 - 10\\times 6\\times 2 + 5\\times 3\\times 1\\] \\[= \\frac{\\left(5^{3} + 4^{3} + 3^{3} + 2^{3} + 1^{3}\\right)\\times 5\\times 3\\times 1}{\\left(5^{3} - 4^{3} + 3^{3} - 2^{3} + 1^{3}\\right)\\times 5\\times 3 \\times 1}\\times 99 = \\frac{\\left(1 + 2 + 3 + 4 + 5\\right)^{2}}{125 - 64 + 27 - 8 + 1}\\times 99 = \\frac{225}{81}\\times 99 = 275\\]",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，无答案或解析泄露，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "5. 算式 \\(\\frac{25 \\times 15 \\times 5 + 20 \\times 12 \\times 4 + 15 \\times 9 \\times 3 + 10 \\times 6 \\times 2 + 5 \\times 3 \\times 1}{25 \\times 15 \\times 5 - 20 \\times 12 \\times 4 + 15 \\times 9 \\times - 10 \\times 6 \\times 2 + 5 \\times 3 \\times - 1} \\times 99\\) 的计算结果是______.",
+      "answer": "275",
+      "solution": "\\[25\\times 15\\times 5 + 20\\times 12\\times 4 + 15\\times 9\\times 3 + 10\\times 6\\times 2 + 5\\times 3\\times 1\\] \\[25\\times 15\\times 5 - 20\\times 12\\times 4 + 15\\times 9\\times 3 - 10\\times 6\\times 2 + 5\\times 3\\times 1\\] \\[= \\frac{\\left(5^{3} + 4^{3} + 3^{3} + 2^{3} + 1^{3}\\right)\\times 5\\times 3\\times 1}{\\left(5^{3} - 4^{3} + 3^{3} - 2^{3} + 1^{3}\\right)\\times 5\\times 3 \\times 1}\\times 99 = \\frac{\\left(1 + 2 + 3 + 4 + 5\\right)^{2}}{125 - 64 + 27 - 8 + 1}\\times 99 = \\frac{225}{81}\\times 99 = 275\\]"
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 小喜将\"20\"拼在\"21\"的左边,就组成了四位数\"2021\". 现在他要用若干个\"20\"、\"21\"(\"20\"、\"21\"都有)拼成一个多位数,使得这个多位数是20和21的公倍数. 那么这个多位数至少有______位.",
+      "answer_text": "8",
+      "solution_text": "要使多位数是21的倍数,首先要使多位数是3的倍数,而20、21的数字和分别是2、3,所以所用20的个数是3的倍数,从而至少用3个20,1个21,所以这个多位数至少8位.\n\n另一方面,有20|21202020,21|21202020.\n\n综上所述,本题答案为8.",
+      "topic": "number_theory",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干为完整数学问题，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "6. 小喜将\"20\"拼在\"21\"的左边,就组成了四位数\"2021\". 现在他要用若干个\"20\"、\"21\"(\"20\"、\"21\"都有)拼成一个多位数,使得这个多位数是20和21的公倍数. 那么这个多位数至少有______位.",
+      "answer": "8",
+      "solution": "要使多位数是21的倍数,首先要使多位数是3的倍数,而20、21的数字和分别是2、3,所以所用20的个数是3的倍数,从而至少用3个20,1个21,所以这个多位数至少8位.\n\n另一方面,有20|21202020,21|21202020.\n\n综上所述,本题答案为8."
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 甲、乙、丙、丁各戴了一顶帽子,帽子上写了一个1\\~9中的自然数,且互不相同,每人能看到别人帽子上的数,但看不到自己的,他们有如下对话:\n\n甲说:\"我看到的三个数两两互质.\"\n\n乙、丙同时说:\"那我知道我帽子上的数了.\"\n\n如果他们都聪明且诚实,那么丁帽子上的数是",
+      "answer_text": "6",
+      "solution_text": "据甲说的话,知乙、丙、丁三人的数中任两数没有共同的原因数;\n\n乙能够判断出自己的数,是因为他见到的三个数中,必有1,其它两数所含质因数必须有2、3、5、7这4个不同的质因数中的3个,所以乙看到的数中必有一个含有2个不同质因数,而1\\~9中含有2个不同质因数的只有6,所以乙看到的数中有6且6在丙或丁的帽子上.同理,丙也看到了6且6在乙或丁的帽子上.所以丁帽子上的数是6.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，存在高泄露风险，不宜用于正式考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json#2#7",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json"
+        }
+      },
+      "text": "7. 甲、乙、丙、丁各戴了一顶帽子,帽子上写了一个1\\~9中的自然数,且互不相同,每人能看到别人帽子上的数,但看不到自己的,他们有如下对话:\n\n甲说:\"我看到的三个数两两互质.\"\n\n乙、丙同时说:\"那我知道我帽子上的数了.\"\n\n如果他们都聪明且诚实,那么丁帽子上的数是",
+      "answer": "6",
+      "solution": "据甲说的话,知乙、丙、丁三人的数中任两数没有共同的原因数;\n\n乙能够判断出自己的数,是因为他见到的三个数中,必有1,其它两数所含质因数必须有2、3、5、7这4个不同的质因数中的3个,所以乙看到的数中必有一个含有2个不同质因数,而1\\~9中含有2个不同质因数的只有6,所以乙看到的数中有6且6在丙或丁的帽子上.同理,丙也看到了6且6在乙或丁的帽子上.所以丁帽子上的数是6."
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 某班有9个不同的兴趣小组(每组至少两人),各个小组的人数互不相同,如果任何两个兴趣小组至多只有一名同学同时参加,那么这个班最少有 名同学.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "30",
+      "solution_text": "这 9 个组最少分别是 2、3、4、5、6、7、8、9、10 人,10 人组和 9 人组至多有 1 个重复的人,所以这 2 组至少有 \\(10 + 9 - 1 = 18\\) 人;依次类推,8 人组和前 2 组至多有 2 人重复,所以这 3 组至少有 \\(18 + 8 - 2 = 24\\) 人;10、9、8、7、6 这 5 组至少有 \\(10 + 9 - 1 + 8 - 2 + 7 - 3 + 6 - 4 = 30\\) 人;至 5 人组时,人数可以不再增加,所以至少有 30 人.\n\n构造:\n\n10 人组:(1、2、3、4、5、6、7、8、9、10)\n\n9 人组:(2、11、12、13、14、15、16、17、18)\n\n8 人组:(3、12、19、20、21、22、23、24)\n\n7 人组:(4、13、20、25、26、27、28)\n\n6 人组:(5、14、21、26、29、30)\n\n5 人组:(6、15、22、27、30)\n\n4 人组:(7、16、23、28)\n\n3 人组:(8、17、24)\n\n2 人组:(9、18)\n\n综上所述,本题答案为 30.\n\n## 三. 填空题Ⅲ(每小题 12 分,共 48 分)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，未包含答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json#2#8",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "8. 某班有9个不同的兴趣小组(每组至少两人),各个小组的人数互不相同,如果任何两个兴趣小组至多只有一名同学同时参加,那么这个班最少有 名同学.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "30",
+      "solution": "这 9 个组最少分别是 2、3、4、5、6、7、8、9、10 人,10 人组和 9 人组至多有 1 个重复的人,所以这 2 组至少有 \\(10 + 9 - 1 = 18\\) 人;依次类推,8 人组和前 2 组至多有 2 人重复,所以这 3 组至少有 \\(18 + 8 - 2 = 24\\) 人;10、9、8、7、6 这 5 组至少有 \\(10 + 9 - 1 + 8 - 2 + 7 - 3 + 6 - 4 = 30\\) 人;至 5 人组时,人数可以不再增加,所以至少有 30 人.\n\n构造:\n\n10 人组:(1、2、3、4、5、6、7、8、9、10)\n\n9 人组:(2、11、12、13、14、15、16、17、18)\n\n8 人组:(3、12、19、20、21、22、23、24)\n\n7 人组:(4、13、20、25、26、27、28)\n\n6 人组:(5、14、21、26、29、30)\n\n5 人组:(6、15、22、27、30)\n\n4 人组:(7、16、23、28)\n\n3 人组:(8、17、24)\n\n2 人组:(9、18)\n\n综上所述,本题答案为 30.\n\n## 三. 填空题Ⅲ(每小题 12 分,共 48 分)"
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 2021含有1个数字0、1个数字1、2个数字2,而2021不是完全平方数.那么至少含有1个数字0、1个数字1、2个数字2的完全平方数中,最小的一个是",
+      "answer_text": "21025",
+      "solution_text": "设所求数 \\(N\\) 为四位数,则 \\(N = 0 + 1 + 2 + 2 = 5\\) (mod 9),而完全平方数 \\(\\equiv 0\\) 或 1 或 4 或 7 (mod 9).\n\n所以, \\(N\\) 至少是五位数.如果 \\(N\\) 是五位数,除了给定的 4 个数字,第 5 个数字可以为 2,4,5,8.\n\n第 5 个数字是 2,最小 \\(22201 = 149^{2}\\) ; 第 5 个数字是 4,无解;\n\n第 5 个数字是 5,最小 \\(21025 = 145^{2}\\) ; 第 5 个数字是 8,最小 \\(22801 = 151^{2}\\) ;\n\n所以,本题答案为 21025.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "9. 2021含有1个数字0、1个数字1、2个数字2,而2021不是完全平方数.那么至少含有1个数字0、1个数字1、2个数字2的完全平方数中,最小的一个是",
+      "answer": "21025",
+      "solution": "设所求数 \\(N\\) 为四位数,则 \\(N = 0 + 1 + 2 + 2 = 5\\) (mod 9),而完全平方数 \\(\\equiv 0\\) 或 1 或 4 或 7 (mod 9).\n\n所以, \\(N\\) 至少是五位数.如果 \\(N\\) 是五位数,除了给定的 4 个数字,第 5 个数字可以为 2,4,5,8.\n\n第 5 个数字是 2,最小 \\(22201 = 149^{2}\\) ; 第 5 个数字是 4,无解;\n\n第 5 个数字是 5,最小 \\(21025 = 145^{2}\\) ; 第 5 个数字是 8,最小 \\(22801 = 151^{2}\\) ;\n\n所以,本题答案为 21025."
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 甲从 \\(A\\) 地出发匀速前往 \\(B\\) 地,与此同时乙、丙从 \\(B\\) 地出发匀速前往 \\(A\\) 地.甲行3分钟与乙相遇,再行2分钟与丙相遇.如果甲、乙出发时将速度减少到原来的一半,则甲与乙相遇后1分钟与丙相遇,此时乙离 \\(A\\) 地还有98米.那么, \\(A\\) 、 \\(B\\) 两地间相距 米.",
+      "answer_text": "420",
+      "solution_text": "甲原速时,甲、丙 \\(3 + 2 = 5\\) 分钟相遇;甲减速后,甲、丙 \\(3 \\times 2 + 1 = 7\\) 分钟相遇.\n\n两次时间比为 5:7,则速度和的比为 7:5,所以甲、丙速度比为 \\([(7 - 5) \\times 2] : [5 - (7 - 5)] = 4:3\\) .\n\n从而,甲、乙速度比为 \\((4 \\times 3) : (4 \\times 2 + 3 \\times 5) = 12:23\\) ,所以甲、乙、丙速度比为 \\(12:23:9\\) .\n\n所以, \\(A\\) 、 \\(B\\) 两地间相距 \\(98 \\div (12 + 9 \\times 2 - 23) \\times (12 + 9 \\times 2) = 420\\) (米).",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题，未出现答案或解析，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "10. 甲从 \\(A\\) 地出发匀速前往 \\(B\\) 地,与此同时乙、丙从 \\(B\\) 地出发匀速前往 \\(A\\) 地.甲行3分钟与乙相遇,再行2分钟与丙相遇.如果甲、乙出发时将速度减少到原来的一半,则甲与乙相遇后1分钟与丙相遇,此时乙离 \\(A\\) 地还有98米.那么, \\(A\\) 、 \\(B\\) 两地间相距 米.",
+      "answer": "420",
+      "solution": "甲原速时,甲、丙 \\(3 + 2 = 5\\) 分钟相遇;甲减速后,甲、丙 \\(3 \\times 2 + 1 = 7\\) 分钟相遇.\n\n两次时间比为 5:7,则速度和的比为 7:5,所以甲、丙速度比为 \\([(7 - 5) \\times 2] : [5 - (7 - 5)] = 4:3\\) .\n\n从而,甲、乙速度比为 \\((4 \\times 3) : (4 \\times 2 + 3 \\times 5) = 12:23\\) ,所以甲、乙、丙速度比为 \\(12:23:9\\) .\n\n所以, \\(A\\) 、 \\(B\\) 两地间相距 \\(98 \\div (12 + 9 \\times 2 - 23) \\times (12 + 9 \\times 2) = 420\\) (米)."
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 右图的正方体已经固定,在每个顶点的圆圈中填入1,2,3,4,5中的一个,使得正方体每个面上四个圆圈中所填的数互不相同,那么满足条件的填法共有 种.\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "600",
+      "solution_text": "如图,填上底面四个数,共 \\(A_{5}^{4}\\) 种.不妨设为1、2、3、4如图1填入.\n\n(1)如下底面填入数中没有5\n\n相同的数只能填在正方体对角线的两个顶点处,所以只有如图2的1种填法.\n\n(2)如下底面填入数中有5\n\n据题意,下底面所填数中只能有1个5,\n\n5替换图2下底面中1、2、3、4中的1个,\n\n共有4种填法(图3给出了其中1种).\n\n综上所述,本题答案为: \\(A_{5}^{4} \\times (1 + 4) = 600\\) .\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（详解版）/pages/page_004/images/0.jpg)\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（详解版）/pages/page_004/images/1.jpg)\n\n<center>图1</center>",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个独立的数学问题，条件明确且无答案或解析泄露，适合直接出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "11. 右图的正方体已经固定,在每个顶点的圆圈中填入1,2,3,4,5中的一个,使得正方体每个面上四个圆圈中所填的数互不相同,那么满足条件的填法共有 种.\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "600",
+      "solution": "如图,填上底面四个数,共 \\(A_{5}^{4}\\) 种.不妨设为1、2、3、4如图1填入.\n\n(1)如下底面填入数中没有5\n\n相同的数只能填在正方体对角线的两个顶点处,所以只有如图2的1种填法.\n\n(2)如下底面填入数中有5\n\n据题意,下底面所填数中只能有1个5,\n\n5替换图2下底面中1、2、3、4中的1个,\n\n共有4种填法(图3给出了其中1种).\n\n综上所述,本题答案为: \\(A_{5}^{4} \\times (1 + 4) = 600\\) .\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（详解版）/pages/page_004/images/0.jpg)\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（详解版）/pages/page_004/images/1.jpg)\n\n<center>图1</center>"
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. 如图,四边形ABCD中, \\(E\\) 是 \\(BC\\) 中点.已知 \\(\\triangle AOB\\) 、 \\(\\triangle COD\\) 的面积分别为30、72,求图中阴影部分的面积.\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_003/images/0.jpg)",
+      "answer_text": "51",
+      "solution_text": "![](ocr_debug/2021数学花园探秘决赛小高C卷（详解版）/pages/page_004/images/2.jpg)\n\n\\[\\mathrm{S}_{\\triangle A C E} = \\mathrm{S}_{\\triangle A B C}\\div 2 = (\\mathrm{S}_{\\triangle A O B} + \\mathrm{S}_{\\triangle B O C})\\div 2 = (30 + \\mathrm{S}_{\\triangle B O C})\\div 2 = 15 + 0.5\\times \\mathrm{S}_{\\triangle B O C},\\] \\[\\mathrm{S}_{\\triangle B D E} = \\mathrm{S}_{\\triangle B C D}\\div 2 = (\\mathrm{S}_{\\triangle C O D} + \\mathrm{S}_{\\triangle B O C})\\div 2 = (72 + \\mathrm{S}_{\\triangle B O C})\\div 2 = 36 + 0.5\\times \\mathrm{S}_{\\triangle B O C},\\] \\[\\mathrm{S}_{\\mathrm{阴影}} = \\mathrm{S}_{\\triangle A C E} + \\mathrm{S}_{\\triangle B D E} - \\mathrm{S}_{\\triangle B O C} = 15 + 0.5\\times \\mathrm{S}_{\\triangle B O C} + 36 + 0.5\\times \\mathrm{S}_{\\triangle B O C} - \\mathrm{S}_{\\triangle B O C} = 51.\\]",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json#3#13",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "13. 如图,四边形ABCD中, \\(E\\) 是 \\(BC\\) 中点.已知 \\(\\triangle AOB\\) 、 \\(\\triangle COD\\) 的面积分别为30、72,求图中阴影部分的面积.\n\n![](ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_003/images/0.jpg)",
+      "answer": "51",
+      "solution": "![](ocr_debug/2021数学花园探秘决赛小高C卷（详解版）/pages/page_004/images/2.jpg)\n\n\\[\\mathrm{S}_{\\triangle A C E} = \\mathrm{S}_{\\triangle A B C}\\div 2 = (\\mathrm{S}_{\\triangle A O B} + \\mathrm{S}_{\\triangle B O C})\\div 2 = (30 + \\mathrm{S}_{\\triangle B O C})\\div 2 = 15 + 0.5\\times \\mathrm{S}_{\\triangle B O C},\\] \\[\\mathrm{S}_{\\triangle B D E} = \\mathrm{S}_{\\triangle B C D}\\div 2 = (\\mathrm{S}_{\\triangle C O D} + \\mathrm{S}_{\\triangle B O C})\\div 2 = (72 + \\mathrm{S}_{\\triangle B O C})\\div 2 = 36 + 0.5\\times \\mathrm{S}_{\\triangle B O C},\\] \\[\\mathrm{S}_{\\mathrm{阴影}} = \\mathrm{S}_{\\triangle A C E} + \\mathrm{S}_{\\triangle B D E} - \\mathrm{S}_{\\triangle B O C} = 15 + 0.5\\times \\mathrm{S}_{\\triangle B O C} + 36 + 0.5\\times \\mathrm{S}_{\\triangle B O C} - \\mathrm{S}_{\\triangle B O C} = 51.\\]"
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "14. 桌上有 8 堆棋子, 分别有 1 枚、2 枚、3 枚、…、8 枚. 甲先乙后轮流操作, 每次操作都选定一堆取走一些棋子, 要求取走棋子的枚数是这堆棋子当前枚数的约数, 取走桌上最后一枚棋子者获胜. 甲、乙两人中, 谁有必胜策略? 为什么?",
+      "answer_text": "甲",
+      "solution_text": "甲有必胜策略.\n\n甲从8枚堆中取走4枚棋子,将剩下的8堆如下分成4组:\n\nA组(1,3)、B组(5、7)、C组(4,4)、D组(2,6)\n\n甲之后的策略:\n\n(1)若乙取完某一堆,甲就将同组的另一堆取完;\n\n(2)若乙在A组或B组某堆取1枚且该堆还未取完,甲就在同一堆中再取1枚,仍保持该组两堆棋子数都是奇数;\n\n(3)若乙在C组某堆中取几枚,甲就在同组另一堆中取几枚.\n\n(4)若乙在D组某堆中取奇数枚,甲就在同组另一堆中取1枚,下同A组、B组;\n\n若乙在D组某堆中取2枚变为(2,4),甲就在同一堆中再取2枚变为(2,2),下同C组.",
+      "topic": "number_theory",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（试卷版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘决赛小高C卷（试卷版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案和完整解析，属于高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json#4#14",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘决赛小高C卷（详解版）.json"
+        }
+      },
+      "text": "14. 桌上有 8 堆棋子, 分别有 1 枚、2 枚、3 枚、…、8 枚. 甲先乙后轮流操作, 每次操作都选定一堆取走一些棋子, 要求取走棋子的枚数是这堆棋子当前枚数的约数, 取走桌上最后一枚棋子者获胜. 甲、乙两人中, 谁有必胜策略? 为什么?",
+      "answer": "甲",
+      "solution": "甲有必胜策略.\n\n甲从8枚堆中取走4枚棋子,将剩下的8堆如下分成4组:\n\nA组(1,3)、B组(5、7)、C组(4,4)、D组(2,6)\n\n甲之后的策略:\n\n(1)若乙取完某一堆,甲就将同组的另一堆取完;\n\n(2)若乙在A组或B组某堆取1枚且该堆还未取完,甲就在同一堆中再取1枚,仍保持该组两堆棋子数都是奇数;\n\n(3)若乙在C组某堆中取几枚,甲就在同组另一堆中取几枚.\n\n(4)若乙在D组某堆中取奇数枚,甲就在同组另一堆中取1枚,下同A组、B组;\n\n若乙在D组某堆中取2枚变为(2,4),甲就在同一堆中再取2枚变为(2,2),下同C组."
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\((420 + 2.1 \\times 2.1) \\div 0.21\\) 的计算结果是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "2021",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在泄露风险，但可作为练习题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#1#1",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\((420 + 2.1 \\times 2.1) \\div 0.21\\) 的计算结果是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "2021",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 如图,一道乘法竖式中已经填出了2、0、2、1,那么算式的乘积是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "3451",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#1#2",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "2. 如图,一道乘法竖式中已经填出了2、0、2、1,那么算式的乘积是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "3451",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 花花用签字笔给园园写信,当第3根笔芯用完时,她正在写第4封信;当她写\n\n完第5封信时,第4根笔芯还未用完;如果花花写每封信用掉的笔芯一样多,那么花花要写完16封信,至少需要准备 根笔芯.",
+      "answer_text": "13",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#1#3",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "3. 花花用签字笔给园园写信,当第3根笔芯用完时,她正在写第4封信;当她写\n\n完第5封信时,第4根笔芯还未用完;如果花花写每封信用掉的笔芯一样多,那么花花要写完16封信,至少需要准备 根笔芯.",
+      "answer": "13",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 用1,2,3,4,5,6组成没有重复数字的六位数,任意截取其中相邻两位可以得到5个不同的两位数,那么这5个两位数的和最大是\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "219",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，存在泄露风险，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#1#4",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "4. 用1,2,3,4,5,6组成没有重复数字的六位数,任意截取其中相邻两位可以得到5个不同的两位数,那么这5个两位数的和最大是\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "219",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 自然数 \\(A\\) 的所有因数中能被2整除的有4个,能被3整除的有3个,那么 \\(A\\) 的值为",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，未包含答案或解析，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）.json"
+        }
+      },
+      "text": "5. 自然数 \\(A\\) 的所有因数中能被2整除的有4个,能被3整除的有3个,那么 \\(A\\) 的值为",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 有4种颜色的糖果,其中红色2颗,黄色2颗,蓝色2颗,白色4颗;如果把这些糖果分给5位小朋友,要求每人分到两颗颜色不同的糖果,那么共有 种不同分法.",
+      "answer_text": "180",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在高风险泄漏。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#1#6",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "6. 有4种颜色的糖果,其中红色2颗,黄色2颗,蓝色2颗,白色4颗;如果把这些糖果分给5位小朋友,要求每人分到两颗颜色不同的糖果,那么共有 种不同分法.",
+      "answer": "180",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. 如图,在三角形ABC中, \\(BE = ED = DC\\) ,连接 \\(AD\\) 、 \\(AE\\) .在 \\(AD\\) 上取一点 \\(F\\) ,连接 \\(CF\\) 、 \\(BF\\) ,如果三角形 \\(ACF\\) 和三角形 \\(EFG\\) 的面积分别是28和12,那么三角形 \\(ABC\\) 的面积是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer_text": "210",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案【答案】210，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#1#7",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "7. 如图,在三角形ABC中, \\(BE = ED = DC\\) ,连接 \\(AD\\) 、 \\(AE\\) .在 \\(AD\\) 上取一点 \\(F\\) ,连接 \\(CF\\) 、 \\(BF\\) ,如果三角形 \\(ACF\\) 和三角形 \\(EFG\\) 的面积分别是28和12,那么三角形 \\(ABC\\) 的面积是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer": "210",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 老师把斐波那契数列中的七个数: 1、2、3、5、8、13、21 写在了七张卡片上, 然后从中挑出三张卡片分别贴到了甲、乙、丙的头上, 每人能看到其他人的数, 却无法看到自己的数. 甲、乙、丙都是非常聪明且诚实的人. 三人有如下对话:甲: \"我们三个人的数中, 一定没有两个数的和等于第三个数.\"乙: \"听了甲的话, 我知道自己的数了.\"丙: \"我也知道自己的数了, 而且你们两个人头上的数加起来也没我大.\"那么, 甲、乙、丙头上的三张卡片上的数之和是 _______.\n\n甲: \"我们三个人的数中, 一定没有两个数的和等于第三个数.\"\n\n乙: \"听了甲的话, 我知道自己的数了.\"\n\n丙: \"我也知道自己的数了, 而且你们两个人头上的数加起来也没我大。\"\n\n那么, 甲、乙、丙头上的三张卡片上的数之和是 _______.\n\n## 三. 填空题III (每小题12分, 共48分)",
+      "answer_text": "11",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，因此不适合作为考试题目，但可以用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#2#8",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "8. 老师把斐波那契数列中的七个数: 1、2、3、5、8、13、21 写在了七张卡片上, 然后从中挑出三张卡片分别贴到了甲、乙、丙的头上, 每人能看到其他人的数, 却无法看到自己的数. 甲、乙、丙都是非常聪明且诚实的人. 三人有如下对话:甲: \"我们三个人的数中, 一定没有两个数的和等于第三个数.\"乙: \"听了甲的话, 我知道自己的数了.\"丙: \"我也知道自己的数了, 而且你们两个人头上的数加起来也没我大.\"那么, 甲、乙、丙头上的三张卡片上的数之和是 _______.\n\n甲: \"我们三个人的数中, 一定没有两个数的和等于第三个数.\"\n\n乙: \"听了甲的话, 我知道自己的数了.\"\n\n丙: \"我也知道自己的数了, 而且你们两个人头上的数加起来也没我大。\"\n\n那么, 甲、乙、丙头上的三张卡片上的数之和是 _______.\n\n## 三. 填空题III (每小题12分, 共48分)",
+      "answer": "11",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如果一个数从左边读和从右边读是一模一样的, 就称这个数为回文数 (如: 121, 2002). 那么能被99整除的九位回文数共有 ______ 个.",
+      "answer_text": "910",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，导致答案泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#2#9",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "9. 如果一个数从左边读和从右边读是一模一样的, 就称这个数为回文数 (如: 121, 2002). 那么能被99整除的九位回文数共有 ______ 个.",
+      "answer": "910",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 四个正方形如图摆放, 如果较小的两个正方形面积分别为15和60, 那么较大的两个正方形面积差为 _______.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "27",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#2#10",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "10. 四个正方形如图摆放, 如果较小的两个正方形面积分别为15和60, 那么较大的两个正方形面积差为 _______.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "27",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 甲、乙两人同时从 \\(A\\) 港出发开船逆流匀速行驶. 当两船相距72千米时, 甲船扔下了一个浮于水面的箱子并调头返回. 当乙遇到箱子时, 甲恰好回到了 \\(A\\) 港. 那么甲扔箱子的位置距离 \\(A\\) 港 ______ 千米.",
+      "answer_text": "144",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含直接答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json#2#11",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级A卷（答案）.json"
+        }
+      },
+      "text": "11. 甲、乙两人同时从 \\(A\\) 港出发开船逆流匀速行驶. 当两船相距72千米时, 甲船扔下了一个浮于水面的箱子并调头返回. 当乙遇到箱子时, 甲恰好回到了 \\(A\\) 港. 那么甲扔箱子的位置距离 \\(A\\) 港 ______ 千米.",
+      "answer": "144",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\((1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)^2 - 2^2\\) 的计算结果是",
+      "answer_text": "2021",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是一个独立的数学计算题，但直接包含了标准答案，因此泄露风险高，适合仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#1#1",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\((1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)^2 - 2^2\\) 的计算结果是",
+      "answer": "2021",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 小高在计算两个相邻自然数相乘时,错误地将某个乘数的个位数字8看成了3,得到乘积为2021,则正确的乘积应该是",
+      "answer_text": "2256",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干为完整数学问题，但直接包含答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#1#2",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "2. 小高在计算两个相邻自然数相乘时,错误地将某个乘数的个位数字8看成了3,得到乘积为2021,则正确的乘积应该是",
+      "answer": "2256",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 在方框内填入适当的数字,使乘法竖式成立.那么竖式中的积是",
+      "answer_text": "4221",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#1#3",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "3. 在方框内填入适当的数字,使乘法竖式成立.那么竖式中的积是",
+      "answer": "4221",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 便利店大促销,可乐买2赠1(单瓶不卖),牛奶买5赠1(单瓶不卖).龙龙买牛奶和可乐共花了202元,比平时省了68元.那么龙龙买可乐花了元.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/images/0.jpg)\n\n## 二.填空题Ⅱ(每小题10分,共40分)",
+      "answer_text": "92",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案【答案】92，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#1#4",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "4. 便利店大促销,可乐买2赠1(单瓶不卖),牛奶买5赠1(单瓶不卖).龙龙买牛奶和可乐共花了202元,比平时省了68元.那么龙龙买可乐花了元.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/images/0.jpg)\n\n## 二.填空题Ⅱ(每小题10分,共40分)",
+      "answer": "92",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 有一个正整数,将它的因数从大到小排列,最大的因数是它本身,第三大的因数是6,这个正整数是",
+      "answer_text": "18",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干描述完整可独立出题，但直接包含答案泄露风险高，仅适合练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#1#5",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "5. 有一个正整数,将它的因数从大到小排列,最大的因数是它本身,第三大的因数是6,这个正整数是",
+      "answer": "18",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 如图,梯形ABCD中, \\(AB / / CD\\) , \\(E\\) 、 \\(F\\) 分别是两腰上靠近 \\(A\\) 点和 \\(C\\) 点的三等分点.已知三角形BEF的面积为24,三角形DFC的面积为18,那么梯形ABCD的面积是",
+      "answer_text": "81",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但直接给出答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#1#6",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "6. 如图,梯形ABCD中, \\(AB / / CD\\) , \\(E\\) 、 \\(F\\) 分别是两腰上靠近 \\(A\\) 点和 \\(C\\) 点的三等分点.已知三角形BEF的面积为24,三角形DFC的面积为18,那么梯形ABCD的面积是",
+      "answer": "81",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. 孙老师画了一个边长为整数的等腰三角形,把两腰之和告诉小雨,把一底一腰之和告诉小海,并且告诉小雨和小海三角形的腰比底短.小雨和小海都是聪明且诚实的孩子,有对话如下:\n\n小雨:\"我不知道这个三角形的周长是多少.\"\n\n小海:\"我拿的是个奇数,但我也不知道周长是多少.\"\n\n小雨:\"那我知道了.\"\n\n小海:\"我也知道了.\"\n\n那么孙老师画的等腰三角形的周长是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "15",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案信息，存在答案泄露风险，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#1#7",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干逻辑完整但包含答案，需裁剪后可用于练习。",
+        "review_fix_hint": "删除答案部分和图片链接，仅保留题干和对话。",
+        "review_clean_question_text": "7. 孙老师画了一个边长为整数的等腰三角形,把两腰之和告诉小雨,把一底一腰之和告诉小海,并且告诉小雨和小海三角形的腰比底短.小雨和小海都是聪明且诚实的孩子,有对话如下:  \n小雨:\"我不知道这个三角形的周长是多少.\"  \n小海:\"我拿的是个奇数,但我也不知道周长是多少.\"  \n小雨:\"那我知道了.\"  \n小海:\"我也知道了.\"  \n那么孙老师画的等腰三角形的周长是",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#1#7",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "7. 孙老师画了一个边长为整数的等腰三角形,把两腰之和告诉小雨,把一底一腰之和告诉小海,并且告诉小雨和小海三角形的腰比底短.小雨和小海都是聪明且诚实的孩子,有对话如下:\n\n小雨:\"我不知道这个三角形的周长是多少.\"\n\n小海:\"我拿的是个奇数,但我也不知道周长是多少.\"\n\n小雨:\"那我知道了.\"\n\n小海:\"我也知道了.\"\n\n那么孙老师画的等腰三角形的周长是\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "15",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 右图是由16个小球组成的 \\(4 \\times 4\\) 方阵. 如果从中取走6个小球, 使每行和每列剩余的小球数均为偶数, 则共有________种不同的取法.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer_text": "96",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接包含标准答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#2#8",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干完整，通过移除干扰信息可修复为可用题干。",
+        "review_fix_hint": "删除答案和试卷标题，仅保留题干文本。",
+        "review_clean_question_text": "8. 右图是由16个小球组成的 \\(4 \\times 4\\) 方阵. 如果从中取走6个小球, 使每行和每列剩余的小球数均为偶数, 则共有________种不同的取法.",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#2#8",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "8. 右图是由16个小球组成的 \\(4 \\times 4\\) 方阵. 如果从中取走6个小球, 使每行和每列剩余的小球数均为偶数, 则共有________种不同的取法.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer": "96",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图, ABCD 和 HCEG 是边长分别为6和12的正方形, 那么长方形 \\(ICFJ\\) 的面积是________.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "48",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了标准答案，导致答案泄露风险高，但题目结构完整可独立出题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#2#9",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "9. 如图, ABCD 和 HCEG 是边长分别为6和12的正方形, 那么长方形 \\(ICFJ\\) 的面积是________.\n\n![](ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "48",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 将自然数 \\(1 \\sim 2021\\) 依次写成一排, 得到一个多位数 \\(1234567891011 \\dots 20202021\\) . 现在对这个多位数进行如下操作: 将首位数字乘以2加上下一位数字, 得到的和再乘以2后加上下一位的数字, ……一直操作到个位数字为止, 得到一个新的多位数, 称为一轮操作; 对得到的新多位数仍按此规律操作……\n\n操作若干轮后会得到一个一位数. 这个一位数是________.\n\n(例如: 123456第一轮操作依次为: \\(1 \\times 2 + 2 = 4\\) , \\(4 \\times 2 + 3 = 11\\) , \\(11 \\times 2 + 4 = 26\\) , \\(26 \\times 2 + 5 = 57\\) , \\(57 \\times 2 + 6 = 120\\) ; 第二轮操作依次为: \\(1 \\times 2 + 2 = 4\\) , \\(1 \\times 2 + 0 = 8\\) ; 最后结果是8. )",
+      "answer_text": "5",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干末尾直接给出了标准答案，存在答案泄露风险，但题目本身完整，可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#2#10",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "10. 将自然数 \\(1 \\sim 2021\\) 依次写成一排, 得到一个多位数 \\(1234567891011 \\dots 20202021\\) . 现在对这个多位数进行如下操作: 将首位数字乘以2加上下一位数字, 得到的和再乘以2后加上下一位的数字, ……一直操作到个位数字为止, 得到一个新的多位数, 称为一轮操作; 对得到的新多位数仍按此规律操作……\n\n操作若干轮后会得到一个一位数. 这个一位数是________.\n\n(例如: 123456第一轮操作依次为: \\(1 \\times 2 + 2 = 4\\) , \\(4 \\times 2 + 3 = 11\\) , \\(11 \\times 2 + 4 = 26\\) , \\(26 \\times 2 + 5 = 57\\) , \\(57 \\times 2 + 6 = 120\\) ; 第二轮操作依次为: \\(1 \\times 2 + 2 = 4\\) , \\(1 \\times 2 + 0 = 8\\) ; 最后结果是8. )",
+      "answer": "5",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2021,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2021数学花园探秘笔试初赛_5年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2021数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 甲、乙两人同时从A地出发向B地骑行.甲到达途中C地时,立刻调头返回,速度变为原速度的三倍,此时丙也从C地出发向A地骑行.甲抵达A地后立刻再次调头,速度不变,此时乙、丙恰好相遇于距离B地48千米处.最后甲、丙同时分别抵达B、A两地,此时乙距离B地________千米.",
+      "answer_text": "36",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2021/ocr_debug/2021数学花园探秘笔试初赛_5年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整但答案直接出现在文本中，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json#2#11",
+          "json_path": "source_pdf/五年级/2021/2021数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "11. 甲、乙两人同时从A地出发向B地骑行.甲到达途中C地时,立刻调头返回,速度变为原速度的三倍,此时丙也从C地出发向A地骑行.甲抵达A地后立刻再次调头,速度不变,此时乙、丙恰好相遇于距离B地48千米处.最后甲、丙同时分别抵达B、A两地,此时乙距离B地________千米.",
+      "answer": "36",
+      "solution": null
+    }
+  ]
+}

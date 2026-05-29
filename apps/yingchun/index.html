@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>迎春杯题目练习</title>
+  <link rel="stylesheet" href="css/style.css?v=1780017702">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>迎春杯题目练习</h1>
+      <nav></nav>
+    </header>
+    <div id="app">
+      <div class="card"><p>加载中...</p></div>
+    </div>
+  </div>
+  <!-- Image viewer modal -->
+  <div class="img-viewer-overlay" id="imgViewer">
+    <img id="imgViewerImg" src="" alt="原卷页面">
+  </div>
+  <div class="img-viewer-controls" id="imgViewerControls" style="display:none">
+    <button id="imgZoomIn" title="放大">+</button>
+    <button id="imgZoomOut" title="缩小">−</button>
+    <button id="imgReset" title="重置">⟲</button>
+    <button id="imgClose" title="关闭">✕</button>
+  </div>
+  <!-- Canvas scratchpad -->
+  <div class="scratchpad" id="scratchpad">
+    <div class="scratchpad-bar">
+      <span>🖊️ 草稿纸</span>
+      <div>
+        <button id="clearScratch" class="btn btn-secondary btn-sm">清除</button>
+        <button id="closeScratch" class="btn btn-secondary btn-sm">关闭</button>
+      </div>
+    </div>
+    <canvas id="scratchCanvas"></canvas>
+  </div>
+  <script type="module" src="js/app.js?v=1780017702"></script>
+</body>
+</html>

@@ -1,0 +1,945 @@
+{
+  "grade": 5,
+  "year": 2022,
+  "total_problems": 24,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2021 \\div (2 \\times 0.21 + 2 \\times 0.22)\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "1. 算式 \\(2021 \\div (2 \\times 0.21 + 2 \\times 0.22)\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 如图，在每个方格中填入1个数字，使得乘法竖式成立，那么算式的乘积是（）\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个独立的数学问题，描述清晰，无答案或解析泄露，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "2. 如图，在每个方格中填入1个数字，使得乘法竖式成立，那么算式的乘积是（）\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 一个无重复数字的三位数，它的百位数字是个位数字和十位数字的乘积，十位数字是三个数字的最大公因数，那么这个三位数为（）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "3. 一个无重复数字的三位数，它的百位数字是个位数字和十位数字的乘积，十位数字是三个数字的最大公因数，那么这个三位数为（）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 龙龙很喜欢便利店的一种饮料, 每周会买一箱 (一箱有偶数瓶). 这周恰逢便利店举办活动: 同一种饮料每满两瓶, 第二瓶半价 (例如买了 8 瓶, 可享受 4 瓶半价). 如果龙龙花和平时一样的钱, 就能多买 8 瓶: 如果龙龙还是买一箱, 就能少花 48 元. 那么一瓶饮料 ( ) 元钱.\n\n## 二. 填空题Ⅱ (每小题 10 分, 共 40 分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学竞赛题干，无答案或解析信息，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#2#4",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "4. 龙龙很喜欢便利店的一种饮料, 每周会买一箱 (一箱有偶数瓶). 这周恰逢便利店举办活动: 同一种饮料每满两瓶, 第二瓶半价 (例如买了 8 瓶, 可享受 4 瓶半价). 如果龙龙花和平时一样的钱, 就能多买 8 瓶: 如果龙龙还是买一箱, 就能少花 48 元. 那么一瓶饮料 ( ) 元钱.\n\n## 二. 填空题Ⅱ (每小题 10 分, 共 40 分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 如图, 大六边形由两个边长为 12 的正六边形叠放而成, 且图中三个部分的面积相等, 那么大六边形的周长是____.\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#2#5",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "5. 如图, 大六边形由两个边长为 12 的正六边形叠放而成, 且图中三个部分的面积相等, 那么大六边形的周长是____.\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "6. 能被 2022 整除且无重复数字的五位数中, 最小的一个是 ( )",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题，没有泄露答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#3#6",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "6. 能被 2022 整除且无重复数字的五位数中, 最小的一个是 ( )",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "7. 如图, 在空格内填入数字 1\\~5, 使得每行、每列的数字都不重复. 虚线框里从左到右顺次组成的多位数是虚线框左上角数字的倍数, 那么第四行数字从左到右顺次组成的五位数是 ( )\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_003/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目，包含条件和问题，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#3#7",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "7. 如图, 在空格内填入数字 1\\~5, 使得每行、每列的数字都不重复. 虚线框里从左到右顺次组成的多位数是虚线框左上角数字的倍数, 那么第四行数字从左到右顺次组成的五位数是 ( )\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_003/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "8. 如果一个多位数(至少两位)的任意两位数字之差都是偶数,那么称这个多位数为\"迎春数\",例如2022就是一个\"迎春数\",那么,比2022小的\"迎春数\"有( )个.\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本包含一个完整的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#4#8",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "8. 如果一个多位数(至少两位)的任意两位数字之差都是偶数,那么称这个多位数为\"迎春数\",例如2022就是一个\"迎春数\",那么,比2022小的\"迎春数\"有( )个.\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "9. 如图,正方形ABCD的边长为60,E点在边AB上,如果正方形EFGC的面积比正方形EDHI的面积大G240,那么AE的长度为( ).\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#4#9",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "9. 如图,正方形ABCD的边长为60,E点在边AB上,如果正方形EFGC的面积比正方形EDHI的面积大G240,那么AE的长度为( ).\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "10. 老师心里想了一个三位数，恰好可以写成三个不同的质数相乘的形式。老师将这三个质数分别告诉了聪明且诚实的甲、乙、丙三个同学，每人都只知道自己的数，然后发生了下面的对话：\n\n甲：“我拿到的数肯定不是三个数中最小的。”\n\n乙：“我知道甲手里的数是多少了，我还不知道丙的数。”\n\n丙：“我知道这个三位数是多少了，组成它的三个数字恰好是三个连续自然数。”那么老师想的这个三位数是（）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整且独立，无答案或解析信息，可安全用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#5#10",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "10. 老师心里想了一个三位数，恰好可以写成三个不同的质数相乘的形式。老师将这三个质数分别告诉了聪明且诚实的甲、乙、丙三个同学，每人都只知道自己的数，然后发生了下面的对话：\n\n甲：“我拿到的数肯定不是三个数中最小的。”\n\n乙：“我知道甲手里的数是多少了，我还不知道丙的数。”\n\n丙：“我知道这个三位数是多少了，组成它的三个数字恰好是三个连续自然数。”那么老师想的这个三位数是（）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2022年迎春杯五年级-试卷.pdf",
+      "exam": {
+        "exam_key": "2022年迎春杯五年级-试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "11. 如图，AB是圆形跑道的直径，甲、乙两人同时从A点出发背向匀速而行，当甲到达B点时，丙从B点出发与甲一起同向前行，当丙走了2021米后与乙第一次迎面相遇，此时甲恰好首次回到了A点；甲继续前行，当甲第一次追上丙时，乙首次经过B点又走了2022米，那么圆形跑道一周的长度是（）米。\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_005/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2022/ocr_debug/2022年迎春杯五年级-试卷/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json#5#11",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2022/2022年迎春杯五年级-试卷.json"
+        }
+      },
+      "text": "11. 如图，AB是圆形跑道的直径，甲、乙两人同时从A点出发背向匀速而行，当甲到达B点时，丙从B点出发与甲一起同向前行，当丙走了2021米后与乙第一次迎面相遇，此时甲恰好首次回到了A点；甲继续前行，当甲第一次追上丙时，乙首次经过B点又走了2022米，那么圆形跑道一周的长度是（）米。\n\n![](ocr_debug/2022年迎春杯五年级-试卷/pages/page_005/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\((20 + 4.5 \\times 4.5) \\div (22 - 4.5 \\times 4.5)\\) 的计算结果是",
+      "answer_text": "23",
+      "solution_text": "\\[(20 + 4.5\\times 4.5)\\div (22 - 4.6\\times 4.5) = (20\\times 4 + 9\\times 9)\\div (22\\times 4 - 9\\times 9) = 161\\div 7 = 23\\]",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含完整答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（解析版）.json#1#1",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\((20 + 4.5 \\times 4.5) \\div (22 - 4.5 \\times 4.5)\\) 的计算结果是",
+      "answer": "23",
+      "solution": "\\[(20 + 4.5\\times 4.5)\\div (22 - 4.6\\times 4.5) = (20\\times 4 + 9\\times 9)\\div (22\\times 4 - 9\\times 9) = 161\\div 7 = 23\\]"
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 右图中,有一个以 \\(AB\\) 为直径的半圆,和一个以 \\(C\\) 为圆心的扇形.如果 \\(AB\\) 长20厘米,那么整个图形的面积是 平方厘米.(π取3.14)\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "214",
+      "solution_text": "\\[S = S_{\\text{半圆}} + S_{\\text{扇形}} - S_{\\triangle ABC} = \\pi \\times 10^{2} \\div 2 + \\pi \\times (20^{2} \\div 2) \\div 4 - 20^{2} \\div 4\\] \\[= 50 \\pi + 50 \\pi - 100 = 100 \\pi - 100 \\approx 214 (\\text{平方厘米})\\]\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_001/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含标准答案和详细解析，泄露风险高，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（解析版）.json#1#2",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "2. 右图中,有一个以 \\(AB\\) 为直径的半圆,和一个以 \\(C\\) 为圆心的扇形.如果 \\(AB\\) 长20厘米,那么整个图形的面积是 平方厘米.(π取3.14)\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "214",
+      "solution": "\\[S = S_{\\text{半圆}} + S_{\\text{扇形}} - S_{\\triangle ABC} = \\pi \\times 10^{2} \\div 2 + \\pi \\times (20^{2} \\div 2) \\div 4 - 20^{2} \\div 4\\] \\[= 50 \\pi + 50 \\pi - 100 = 100 \\pi - 100 \\approx 214 (\\text{平方厘米})\\]\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_001/images/0.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 在2021年8月8日闭幕的东京奥运会上,中国获金、银、铜牌共88枚.其中金牌、铜牌枚数和比银牌枚数多 \\(75\\%\\) ,金牌枚数是银牌、铜牌枚数和的 \\(76\\%\\) .那么,中国在这届奥运会上共获铜牌枚.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "18",
+      "solution_text": "银牌枚数 \\(= 88\\div (1 + 75\\% +1) = 32\\) ;金牌枚数 \\(= 88\\div (1 + 76\\%) \\times 76\\% = 38\\)\n\n:铜牌枚数 \\(= 88 - 32 - 38 = 18\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整的答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（解析版）.json#1#3",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "3. 在2021年8月8日闭幕的东京奥运会上,中国获金、银、铜牌共88枚.其中金牌、铜牌枚数和比银牌枚数多 \\(75\\%\\) ,金牌枚数是银牌、铜牌枚数和的 \\(76\\%\\) .那么,中国在这届奥运会上共获铜牌枚.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "18",
+      "solution": "银牌枚数 \\(= 88\\div (1 + 75\\% +1) = 32\\) ;金牌枚数 \\(= 88\\div (1 + 76\\%) \\times 76\\% = 38\\)\n\n:铜牌枚数 \\(= 88 - 32 - 38 = 18\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 如图,乘法算式中已经填出了\"2022\"和\"9\",那么算式的乘积是\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "87957",
+      "solution_text": "\\(2022 = 2\\times 3\\times 337\\) ,故竖式中做加法时的两个三位数只能选自337或674.337或674中最大数字为7,从而做加法时十位向百位不进位.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_001/images/1.jpg)\n\n再看做加法时的百位, \\(\\square +2 + \\square = 9\\) ,两个方块对应337或674中的个位或百位,只有337的百位3与674的个位4满足.从而第一个乘数为337,第2个乘数为261, \\(337\\times 261 = 87957\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案和解析，存在高泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（解析版）.json#1#4",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "4. 如图,乘法算式中已经填出了\"2022\"和\"9\",那么算式的乘积是\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "87957",
+      "solution": "\\(2022 = 2\\times 3\\times 337\\) ,故竖式中做加法时的两个三位数只能选自337或674.337或674中最大数字为7,从而做加法时十位向百位不进位.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_001/images/1.jpg)\n\n再看做加法时的百位, \\(\\square +2 + \\square = 9\\) ,两个方块对应337或674中的个位或百位,只有337的百位3与674的个位4满足.从而第一个乘数为337,第2个乘数为261, \\(337\\times 261 = 87957\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 甲,乙,丙,丁,戊五人在参加数学测评前,预测如下:\n\n甲说:\"如果戊进了前三名,那我就能得第二.\"\n\n乙说:\"如果甲得了第二,那我就能得第一.\"\n\n丙说:\"第一名肯定是我.\"\n\n丁说:\"估计戊的名次高于我.\"\n\n戊说:\"我想这次测评应能如期进行.\"\n\n结果这五人恰好获得了这次测评的前五名(无并列),且他们的预测全都正确.如果甲,乙,丙,丁,戊获得的名次依次是 \\(A, B, C, D, E\\) ,那么五位数 \\(ABCDE\\) 是",
+      "answer_text": "32154",
+      "solution_text": "据丙所说知丙第1,结合乙所说知甲不是第2,再结合甲所说知戊没进了前三,从而戊得第4或第5,又据丁所说知戊第4且丁第5. 甲不是第2,那甲只能是第3,余下乙只能为第2.\n\n:五位数 \\(ABCDE = 32154\\)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的逻辑推理题干，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "5. 甲,乙,丙,丁,戊五人在参加数学测评前,预测如下:\n\n甲说:\"如果戊进了前三名,那我就能得第二.\"\n\n乙说:\"如果甲得了第二,那我就能得第一.\"\n\n丙说:\"第一名肯定是我.\"\n\n丁说:\"估计戊的名次高于我.\"\n\n戊说:\"我想这次测评应能如期进行.\"\n\n结果这五人恰好获得了这次测评的前五名(无并列),且他们的预测全都正确.如果甲,乙,丙,丁,戊获得的名次依次是 \\(A, B, C, D, E\\) ,那么五位数 \\(ABCDE\\) 是",
+      "answer": "32154",
+      "solution": "据丙所说知丙第1,结合乙所说知甲不是第2,再结合甲所说知戊没进了前三,从而戊得第4或第5,又据丁所说知戊第4且丁第5. 甲不是第2,那甲只能是第3,余下乙只能为第2.\n\n:五位数 \\(ABCDE = 32154\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 将 \\(0 \\sim 9\\) 分别填入到右图的10个圆圈中,使得各条直线上圆圈中所填数的和都相等.现已将1填入,那么圆圈 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 中所填数字依次组成的四位数是\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer_text": "2480",
+      "solution_text": "共6条直线,除了 \\(F\\) 只在1条直线上,其余圆圈都恰好在2条直线上.\n\n设每条直线上圆圈中所填数的和为 \\(S\\) ,则 \\(6S = (0 + 1 + 2 + \\dots +9) \\times 2 - F\\) .\n\n由 \\(6|F\\) 得 \\(F\\) 为0或6. 若 \\(F = 0\\) ,则 \\(S = 15\\) , \\(E = 14\\) ,矛盾!\n\n: \\(F = 6\\) ,从而 \\(S = 14\\) , \\(E = 7\\)\n\n若9在 \\(A \\sim D\\) 中,则 \\(14 = 9 + 5 = 9 + 0 + 2 + 3\\) ,而 \\(C \\geq 14 - 1 - 9 = 4\\) ,只能 \\(C = 9\\) ,从而 \\(I = 4\\) , \\(H \\leq 14 - 7 - 2 = 5\\) ,8只能在 \\(G\\) , \\(D = 14 - 8 - 4 = 2\\) ,余下5在 \\(H\\) , \\(B = 14 - 7 - 5 = 2\\) ,矛盾!\n\n:9不在 \\(A \\sim D\\) 中, \\(G = 9\\) 或 \\(I = 9\\)\n\n若 \\(I = 9\\) ,8不能与7或9同直线,只能 \\(A = 8\\) ,从而 \\(B + D = 14 - 8 - 4 = 2 = 2 + 0\\) , \\(B = 2\\) , \\(D = 0\\) ,得 \\(H = 14 - 7 - 2 = 5\\) , \\(G = 14 - 9 - 0 = 5\\) ,矛盾! \\(I \\neq 9\\)\n\n: \\(G = 9\\) .8不能与7或9同直线,只能 \\(C = 8\\)\n\n从而 \\(I = 14 - 1 - 8 = 5\\) , \\(D = 14 - 9 - 5 = 0\\) , \\(A = 45 - 14 \\times 2 - 6 - 9 - 0 = 2\\) ,\n\n\\(B = 14 - 2 - 8 - 0 = 4\\) , \\(H = 14 - 7 - 4 = 3\\) ,如右图.\n\n:圆圈 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 中所填数字依次组成的四位数是2480.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_002/images/0.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干描述完整且为数学问题，但依赖图像且无答案解析泄露，适合练习使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "6. 将 \\(0 \\sim 9\\) 分别填入到右图的10个圆圈中,使得各条直线上圆圈中所填数的和都相等.现已将1填入,那么圆圈 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 中所填数字依次组成的四位数是\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer": "2480",
+      "solution": "共6条直线,除了 \\(F\\) 只在1条直线上,其余圆圈都恰好在2条直线上.\n\n设每条直线上圆圈中所填数的和为 \\(S\\) ,则 \\(6S = (0 + 1 + 2 + \\dots +9) \\times 2 - F\\) .\n\n由 \\(6|F\\) 得 \\(F\\) 为0或6. 若 \\(F = 0\\) ,则 \\(S = 15\\) , \\(E = 14\\) ,矛盾!\n\n: \\(F = 6\\) ,从而 \\(S = 14\\) , \\(E = 7\\)\n\n若9在 \\(A \\sim D\\) 中,则 \\(14 = 9 + 5 = 9 + 0 + 2 + 3\\) ,而 \\(C \\geq 14 - 1 - 9 = 4\\) ,只能 \\(C = 9\\) ,从而 \\(I = 4\\) , \\(H \\leq 14 - 7 - 2 = 5\\) ,8只能在 \\(G\\) , \\(D = 14 - 8 - 4 = 2\\) ,余下5在 \\(H\\) , \\(B = 14 - 7 - 5 = 2\\) ,矛盾!\n\n:9不在 \\(A \\sim D\\) 中, \\(G = 9\\) 或 \\(I = 9\\)\n\n若 \\(I = 9\\) ,8不能与7或9同直线,只能 \\(A = 8\\) ,从而 \\(B + D = 14 - 8 - 4 = 2 = 2 + 0\\) , \\(B = 2\\) , \\(D = 0\\) ,得 \\(H = 14 - 7 - 2 = 5\\) , \\(G = 14 - 9 - 0 = 5\\) ,矛盾! \\(I \\neq 9\\)\n\n: \\(G = 9\\) .8不能与7或9同直线,只能 \\(C = 8\\)\n\n从而 \\(I = 14 - 1 - 8 = 5\\) , \\(D = 14 - 9 - 5 = 0\\) , \\(A = 45 - 14 \\times 2 - 6 - 9 - 0 = 2\\) ,\n\n\\(B = 14 - 2 - 8 - 0 = 4\\) , \\(H = 14 - 7 - 4 = 3\\) ,如右图.\n\n:圆圈 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 中所填数字依次组成的四位数是2480.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_002/images/0.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 圣诞老人的袋子里有一百多块糖,有 10 个小朋友排着队等待圣诞老人依次发糖,圣诞老人给每个小朋友发糖之前都会问:\"你猜我现在袋子里糖的块数是质数还是合数?如果猜对了就给你 3 块糖,如果猜错了就只能给 1 块糖咯!\"结果 10 个小朋友全都猜\"是合数\",那么这 10 个小朋友得到的糖果块数总和至少是________.",
+      "answer_text": "26",
+      "solution_text": "假设开始时袋子里糖数为 \\(N\\)\n\n如果 \\(N\\) 是3的倍数,那么10个人都猜对了.\n\n如果 \\(N\\) 除以3余1,那么有1个小朋友猜错后,糖数就会变为3的倍数,剩余的小朋友都能猜对.如果 \\(N\\) 除以3余2,那么有2个小朋友猜错后,糖数就会变为3的倍数,剩余的小朋友都能猜对,\n\n:10个小朋友中最多只有2个人猜错了,至少得到 \\(2\\times 1 + 8\\times 3 = 26\\) 块糖.\n\n下面举例说明存在2个小朋友猜错的情况:\n\n比如 \\(N = 140\\) ,那么 \\(①140\\vee\\) , \\(②137\\times\\) , \\(③136\\vee\\) , \\(④133\\vee\\) , \\(⑤130\\vee\\) , \\(⑥127\\times\\) , \\(⑦126\\vee\\) ,从第7个小朋友开始,糖数均为3的倍数,都能猜对.\n\n:综上所述,本题答案为26.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json#2#7",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "7. 圣诞老人的袋子里有一百多块糖,有 10 个小朋友排着队等待圣诞老人依次发糖,圣诞老人给每个小朋友发糖之前都会问:\"你猜我现在袋子里糖的块数是质数还是合数?如果猜对了就给你 3 块糖,如果猜错了就只能给 1 块糖咯!\"结果 10 个小朋友全都猜\"是合数\",那么这 10 个小朋友得到的糖果块数总和至少是________.",
+      "answer": "26",
+      "solution": "假设开始时袋子里糖数为 \\(N\\)\n\n如果 \\(N\\) 是3的倍数,那么10个人都猜对了.\n\n如果 \\(N\\) 除以3余1,那么有1个小朋友猜错后,糖数就会变为3的倍数,剩余的小朋友都能猜对.如果 \\(N\\) 除以3余2,那么有2个小朋友猜错后,糖数就会变为3的倍数,剩余的小朋友都能猜对,\n\n:10个小朋友中最多只有2个人猜错了,至少得到 \\(2\\times 1 + 8\\times 3 = 26\\) 块糖.\n\n下面举例说明存在2个小朋友猜错的情况:\n\n比如 \\(N = 140\\) ,那么 \\(①140\\vee\\) , \\(②137\\times\\) , \\(③136\\vee\\) , \\(④133\\vee\\) , \\(⑤130\\vee\\) , \\(⑥127\\times\\) , \\(⑦126\\vee\\) ,从第7个小朋友开始,糖数均为3的倍数,都能猜对.\n\n:综上所述,本题答案为26."
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 2022 除了自身以外,最大的 3 个约数分别是 1011、674、337,这三个数之和恰好是 2022 本身;那么像 2022 这样,除了自身以外最大 3 个约数之和等于自身的数,叫做\"和谐数\"。那么,小于 2022 的\"和谐数\"共有________个.\n\n## 三. 填空题Ⅲ(每小题 12 分,共 48 分)",
+      "answer_text": "134",
+      "solution_text": "设 \\(N\\) 除了自身以外,最大的三个约数是 \\(A > B > C\\)\n\n那么 \\(D = N\\div A\\) , \\(E = N\\div B\\) , \\(F = N\\div C\\) 全是 \\(N\\) 的约数,且 \\(D< E< F\\)\n\n由 \\(A + B + C = N\\) ,有 \\(\\frac{A}{N} +\\frac{B}{N} +\\frac{C}{N} = 1\\) 即 \\(\\frac{1}{D} +\\frac{1}{E} +\\frac{1}{F} = 1\\) ,有唯一解: \\(D = 2\\) , \\(E = 3\\) 、 \\(F = 6\\)\n\n: \\(N\\) 是\"和谐数\"即 \\(2\\vert N\\) 且 \\(3\\vert N\\) 但 \\(N\\) 不能是4的倍数或5的倍数\n\n\\(1\\sim 2021\\) 中6的倍数有 \\(\\left[\\frac{2021}{6}\\right] = 336\\) 个;其中,4的倍数有 \\(\\left[\\frac{2021}{12}\\right] = 168\\) 个,5的倍数有 \\(\\left[\\frac{2021}{30}\\right] =\\)\n\n67个,既是4的倍数又是5的倍数有 \\(\\left[\\frac{2021}{60}\\right] = 33\\) 个.\n\n:小于2022的\"和谐数\"共有 \\(336 - 168 - 67 + 33 = 134\\) 个.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整独立的题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json#2#8",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "8. 2022 除了自身以外,最大的 3 个约数分别是 1011、674、337,这三个数之和恰好是 2022 本身;那么像 2022 这样,除了自身以外最大 3 个约数之和等于自身的数,叫做\"和谐数\"。那么,小于 2022 的\"和谐数\"共有________个.\n\n## 三. 填空题Ⅲ(每小题 12 分,共 48 分)",
+      "answer": "134",
+      "solution": "设 \\(N\\) 除了自身以外,最大的三个约数是 \\(A > B > C\\)\n\n那么 \\(D = N\\div A\\) , \\(E = N\\div B\\) , \\(F = N\\div C\\) 全是 \\(N\\) 的约数,且 \\(D< E< F\\)\n\n由 \\(A + B + C = N\\) ,有 \\(\\frac{A}{N} +\\frac{B}{N} +\\frac{C}{N} = 1\\) 即 \\(\\frac{1}{D} +\\frac{1}{E} +\\frac{1}{F} = 1\\) ,有唯一解: \\(D = 2\\) , \\(E = 3\\) 、 \\(F = 6\\)\n\n: \\(N\\) 是\"和谐数\"即 \\(2\\vert N\\) 且 \\(3\\vert N\\) 但 \\(N\\) 不能是4的倍数或5的倍数\n\n\\(1\\sim 2021\\) 中6的倍数有 \\(\\left[\\frac{2021}{6}\\right] = 336\\) 个;其中,4的倍数有 \\(\\left[\\frac{2021}{12}\\right] = 168\\) 个,5的倍数有 \\(\\left[\\frac{2021}{30}\\right] =\\)\n\n67个,既是4的倍数又是5的倍数有 \\(\\left[\\frac{2021}{60}\\right] = 33\\) 个.\n\n:小于2022的\"和谐数\"共有 \\(336 - 168 - 67 + 33 = 134\\) 个."
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. \\(A\\) 、 \\(B\\) 两地之间有四段山路,其中 \\(AC\\) 段和 \\(DE\\) 段路程相等, \\(CD\\) 段与 \\(EB\\) 段路程相等.甲、乙两人\n\n分别从 \\(A\\) 、 \\(B\\) 两地同时出发相向而行,两人上山速度相\n\n同,下山速度也相同,并且下山速度均为上山速度的 1.5\n\n倍.当甲到 \\(C\\) 点时,乙已经到 \\(E\\) 点并向下走了 180 米;\n\n乙比甲早 1 分钟到达 \\(D\\) 点;甲比乙早 10 分钟到达 \\(C\\) 点;\n\n那么 \\(A\\) 、 \\(B\\) 两地之间的路程为________米.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "1296",
+      "solution_text": "\\(AC\\) 段比 \\(BE\\) 段多 \\(180\\div 1.5 = 120\\) 米;从而当乙到达 \\(D\\) 时,甲差 \\(180 - 120 = 60\\) 米到 \\(D\\) ,则下山速度为60米/分,上山速度40米/分;当甲到 \\(C\\) 时,乙在 \\(E\\) 下行180米处(设为 \\(F\\) 点),乙 \\(F\\rightarrow D\\) \\(\\rightarrow C\\) 共用10分钟, \\(FD\\) 段比 \\(DC\\) 段短60米,那么 \\(C\\rightarrow D\\rightarrow C\\) 共用 \\(10 + 60\\div 60 = 11\\) 分钟,时间比为 \\(1:1.5 = 2:3\\) ,从而 \\(C\\rightarrow D\\) 用 \\(11\\div (2 + 3)\\times 2 = 4.4\\) 分钟. \\(\\therefore CD\\) 段长 \\(60\\times 4.4 = 264\\) 米.\n\n\\(\\therefore A\\) 、 \\(B\\) 两地之间的路程为 \\((264\\times 2 + 120)\\times 2 = 1296\\) 米.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，未包含答案或解析信息，可安全用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "9. \\(A\\) 、 \\(B\\) 两地之间有四段山路,其中 \\(AC\\) 段和 \\(DE\\) 段路程相等, \\(CD\\) 段与 \\(EB\\) 段路程相等.甲、乙两人\n\n分别从 \\(A\\) 、 \\(B\\) 两地同时出发相向而行,两人上山速度相\n\n同,下山速度也相同,并且下山速度均为上山速度的 1.5\n\n倍.当甲到 \\(C\\) 点时,乙已经到 \\(E\\) 点并向下走了 180 米;\n\n乙比甲早 1 分钟到达 \\(D\\) 点;甲比乙早 10 分钟到达 \\(C\\) 点;\n\n那么 \\(A\\) 、 \\(B\\) 两地之间的路程为________米.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "1296",
+      "solution": "\\(AC\\) 段比 \\(BE\\) 段多 \\(180\\div 1.5 = 120\\) 米;从而当乙到达 \\(D\\) 时,甲差 \\(180 - 120 = 60\\) 米到 \\(D\\) ,则下山速度为60米/分,上山速度40米/分;当甲到 \\(C\\) 时,乙在 \\(E\\) 下行180米处(设为 \\(F\\) 点),乙 \\(F\\rightarrow D\\) \\(\\rightarrow C\\) 共用10分钟, \\(FD\\) 段比 \\(DC\\) 段短60米,那么 \\(C\\rightarrow D\\rightarrow C\\) 共用 \\(10 + 60\\div 60 = 11\\) 分钟,时间比为 \\(1:1.5 = 2:3\\) ,从而 \\(C\\rightarrow D\\) 用 \\(11\\div (2 + 3)\\times 2 = 4.4\\) 分钟. \\(\\therefore CD\\) 段长 \\(60\\times 4.4 = 264\\) 米.\n\n\\(\\therefore A\\) 、 \\(B\\) 两地之间的路程为 \\((264\\times 2 + 120)\\times 2 = 1296\\) 米."
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 一个自然数共有 18 个因数,其中恰好有 6 个一位数,6 个两位数,6 个三位数;那么这个自然数是________.",
+      "answer_text": "972",
+      "solution_text": "设这个自然数为 \\(M\\) ,则 \\(M\\) 必定为三位数.\n\n\\(18 = 2\\times 3\\times 3\\) ,故 \\(M\\) 分解质因数后有3类可能: \\(A^{2}\\times B^{2}\\times C^{1}\\) 、 \\(A^{8}\\times B^{1}\\) 、 \\(A^{5}\\times B^{2}\\)\n\n(1)若 \\(M = A^{2}\\times B^{2}\\times C^{1}\\) ,由于因数中不存在3次方,故8不是 \\(M\\) 的因数,2和3必定是 \\(M\\) 的因数.\n\n如果 \\(A = 2\\) , \\(B = 3\\) ,此时 \\(M\\) 已经有了6个一位因数(1、2、3、4、6、9)和3个两位因数(12、18、36);如果要有6个两位因数, \\(C\\) 必须满足 \\(4C\\geq 100\\) ,而 \\(M\\) 是个三位数,所以有 \\(36C< 1000\\) ,因为不存在同时满足两个条件的质数,所以 \\(A = 2\\) , \\(B = 3\\) 不成立.\n\n如果 \\(B = 3\\) , \\(C = 2\\) ,此时 \\(M\\) 已有了5个一位因数(1、2、3、6、9)和一个两位因数(18);如果要有6个一位因数, \\(A\\) 必须等于5或者7,此时两位因数已有7个(18、24、\n\n\\(3A\\) 、6A、9A、 \\(A^{2}\\) 、 \\(2A^{2}\\) ),矛盾!所以 \\(B = 3\\) , \\(C = 2\\) 不成立;\n\n同理 \\(B = 2\\) , \\(C = 3\\) 也不成立.\n\n(2)若 \\(M = A^{8}\\times B^{1}\\) ,为了确保 \\(M\\) 是三位数,必定有 \\(A = 2\\) , \\(B = 3\\) ,容易发现此时 \\(M\\) 有7个两位因数(12、16、24、32、48、64、96),故此种情况不成立.\n\n(3)若 \\(M = A^{5}\\times B^{2}\\) ,为了确保 \\(M\\) 是三位数,只能 \\(A = 2\\) , \\(B = 3\\) 或 \\(A = 3\\) , \\(B = 2\\)\n\n当 \\(A = 2\\) , \\(B = 3\\) 时 \\(M\\) 有7个一位因数(1、2、3、4、6、8、9),矛盾!\n\n当 \\(A = 3\\) , \\(B = 2\\) 时 \\(M = 972\\) 恰好有6个一位因数(1、2、3、4、6、9),6个两位因数\n\n(12、18、27、36、54、81),6个三位因数(108、162、243、324、486、972)\n\n:综上所述, \\(M = 972\\)",
+      "topic": "number_theory",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本为纯数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "10. 一个自然数共有 18 个因数,其中恰好有 6 个一位数,6 个两位数,6 个三位数;那么这个自然数是________.",
+      "answer": "972",
+      "solution": "设这个自然数为 \\(M\\) ,则 \\(M\\) 必定为三位数.\n\n\\(18 = 2\\times 3\\times 3\\) ,故 \\(M\\) 分解质因数后有3类可能: \\(A^{2}\\times B^{2}\\times C^{1}\\) 、 \\(A^{8}\\times B^{1}\\) 、 \\(A^{5}\\times B^{2}\\)\n\n(1)若 \\(M = A^{2}\\times B^{2}\\times C^{1}\\) ,由于因数中不存在3次方,故8不是 \\(M\\) 的因数,2和3必定是 \\(M\\) 的因数.\n\n如果 \\(A = 2\\) , \\(B = 3\\) ,此时 \\(M\\) 已经有了6个一位因数(1、2、3、4、6、9)和3个两位因数(12、18、36);如果要有6个两位因数, \\(C\\) 必须满足 \\(4C\\geq 100\\) ,而 \\(M\\) 是个三位数,所以有 \\(36C< 1000\\) ,因为不存在同时满足两个条件的质数,所以 \\(A = 2\\) , \\(B = 3\\) 不成立.\n\n如果 \\(B = 3\\) , \\(C = 2\\) ,此时 \\(M\\) 已有了5个一位因数(1、2、3、6、9)和一个两位因数(18);如果要有6个一位因数, \\(A\\) 必须等于5或者7,此时两位因数已有7个(18、24、\n\n\\(3A\\) 、6A、9A、 \\(A^{2}\\) 、 \\(2A^{2}\\) ),矛盾!所以 \\(B = 3\\) , \\(C = 2\\) 不成立;\n\n同理 \\(B = 2\\) , \\(C = 3\\) 也不成立.\n\n(2)若 \\(M = A^{8}\\times B^{1}\\) ,为了确保 \\(M\\) 是三位数,必定有 \\(A = 2\\) , \\(B = 3\\) ,容易发现此时 \\(M\\) 有7个两位因数(12、16、24、32、48、64、96),故此种情况不成立.\n\n(3)若 \\(M = A^{5}\\times B^{2}\\) ,为了确保 \\(M\\) 是三位数,只能 \\(A = 2\\) , \\(B = 3\\) 或 \\(A = 3\\) , \\(B = 2\\)\n\n当 \\(A = 2\\) , \\(B = 3\\) 时 \\(M\\) 有7个一位因数(1、2、3、4、6、8、9),矛盾!\n\n当 \\(A = 3\\) , \\(B = 2\\) 时 \\(M = 972\\) 恰好有6个一位因数(1、2、3、4、6、9),6个两位因数\n\n(12、18、27、36、54、81),6个三位因数(108、162、243、324、486、972)\n\n:综上所述, \\(M = 972\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 5 对兄弟,分成 5 组,每组 2 人,要求每人都不与自己的兄弟同组,共有________种不同的分组方式.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学问题题干，无答案或解析泄露，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "11. 5 对兄弟,分成 5 组,每组 2 人,要求每人都不与自己的兄弟同组,共有________种不同的分组方式.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. 如图,每个正六边形都有三个顶点在长方形ABCD的边上;大正六边形的顶点 \\(O\\) 恰为 \\(AB\\) 中点,小正六边形的面积为60.\n\n(1) \\(\\frac{CD}{DE}\\) 的值是 _______. (6分)\n\n(2) 长方形ABCD的面积是 _______. (9分)\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_003/images/0.jpg)",
+      "answer_text": "(1)9 (2)315",
+      "solution_text": "(1)设大,小正六边形的边长分别为 \\(a,b\\) ,据右图的分割知:\n\n\\[A O = 1.5b + 0.5a,B O = 1.5a,\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{\\quad \\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{}\\]\n\n\\[C D = A B = 1.5a\\times 2 = 3a = 4.5b,D E = 0.5b.\\]\n\n\\[\\therefore C D\\div D E = 4.5b\\div 0.5b = 9.\\]\n\n(2)设 \\(E F = c\\) ,则 \\(O G = 1.5c\\) ,则\n\n\\[B C = O G + 2c = 1.5c + 2c = 3.5c,\\]\n\n:长方形面积为 \\(4.5b\\times 3.5c = 15.75bc\\)\n\n而小正六边形的面积为 \\(b\\times c\\div 2\\times 6 = 3bc\\)\n\n:小正六边形和长方形的面积比是 \\(3bc:15.75bc = 4:21\\)\n\n:长方形的面积是 \\(60\\div 4\\times 21 = 315\\)\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_005/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，包含两个子问题，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json#3#13",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "13. 如图,每个正六边形都有三个顶点在长方形ABCD的边上;大正六边形的顶点 \\(O\\) 恰为 \\(AB\\) 中点,小正六边形的面积为60.\n\n(1) \\(\\frac{CD}{DE}\\) 的值是 _______. (6分)\n\n(2) 长方形ABCD的面积是 _______. (9分)\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_003/images/0.jpg)",
+      "answer": "(1)9 (2)315",
+      "solution": "(1)设大,小正六边形的边长分别为 \\(a,b\\) ,据右图的分割知:\n\n\\[A O = 1.5b + 0.5a,B O = 1.5a,\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{\\quad \\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{~}\\mathrm{}\\]\n\n\\[C D = A B = 1.5a\\times 2 = 3a = 4.5b,D E = 0.5b.\\]\n\n\\[\\therefore C D\\div D E = 4.5b\\div 0.5b = 9.\\]\n\n(2)设 \\(E F = c\\) ,则 \\(O G = 1.5c\\) ,则\n\n\\[B C = O G + 2c = 1.5c + 2c = 3.5c,\\]\n\n:长方形面积为 \\(4.5b\\times 3.5c = 15.75bc\\)\n\n而小正六边形的面积为 \\(b\\times c\\div 2\\times 6 = 3bc\\)\n\n:小正六边形和长方形的面积比是 \\(3bc:15.75bc = 4:21\\)\n\n:长方形的面积是 \\(60\\div 4\\times 21 = 315\\)\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_005/images/1.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2022,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2022数学花园探秘笔试小高年级决赛C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2022数学花园探秘笔试小高年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "14. 在右图 \\(5 \\times 5\\) 的表格中,微型机器人任选一小格为出发格,任选上、下、左、右中的一个方向为出发方向,走到前方相邻的小格;新到小格编号若为奇数则往左拐,为偶数则往右拐,再\n\n走到前方相邻的小格;若前方走到了 \\(5 \\times 5\\) 表格外面或前方相邻小格已经到过则停止,如选择编号为17的小格出发向右,则只能如图17 \\(\\rightarrow 18\\) (右拐) \\(\\rightarrow 23\\) (左拐) \\(\\rightarrow 24\\) (右拐,出界,停止).\n\n(1)如果每个小格编号如右图,那么微型机器人到过的小格(含出发格)编号总和的最大值为 .(5分)\n\n(2)如果对图中25个小格任意编号为1\\~25,那么微型机器人到过的小格(含出发格)编号总和的最大值为 .(10分)\n\n<table><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr><tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr><tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr></table>\n\n<table><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td rowspan=\"2\"></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>25</td></tr></table>\n\n备用图1\n\n<table><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td>&lt;ecel&gt;</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td rowspan='2'></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table>\n\n备用图2",
+      "answer_text": "(1)129 (2)304",
+      "solution_text": "(1)任意相邻两格编号的奇偶性不同,从而微型机器人前进构成中,左拐、右拐相间,机器人行进路线(或旋转翻转后)必为图中阶梯箭\n\n人行进路线(或旋转翻转后)必为图中阶梯箭头状,最多能到9格.对角线上的最大数为 \\(13 \\times 5 = 65\\) ,另4数选 \\(10 + 14 + 18 + 22 = 64\\) 最大,9数和为 \\(65 + 64 = 129\\) ,如右图.而选7格时最大为 \\(64 + 15 + 19 + 23 = 121 < 129\\)\n\n:小格编号如右图时,微型机器人到过的小格编号总和的最大值为129.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_006/images/0.jpg)\n\n(2)如图,对 \\(5 \\times 5\\) 的表格中每个小格标上1、2、3、4中的1个,微型机器人连续经过的4个\n\n小格必是标有1、2、3、4的各1个;而标4的有4个,从而机器人至多经过 \\(4 \\times 4 + 3 = 19\\) 格, \\(1 \\sim 25\\) 中最大的19个不同数的和是: \\(7 + 8 + 9 + \\ldots + 25 = 304\\) .而右图中机器人依次经过标有25,24,23,...,7的小格.\n\n:综上所述,对小格任意编号为 \\(1 \\sim 25\\) 时,机器人到过的小格编号总和的最大值为304.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_006/images/1.jpg)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2022/ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（试卷版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整的数学竞赛题目，包含题干、规则和子问题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json#4#14",
+          "json_path": "source_pdf/五年级/2022/2022数学花园探秘笔试小高年级决赛C卷（试卷版）.json"
+        }
+      },
+      "text": "14. 在右图 \\(5 \\times 5\\) 的表格中,微型机器人任选一小格为出发格,任选上、下、左、右中的一个方向为出发方向,走到前方相邻的小格;新到小格编号若为奇数则往左拐,为偶数则往右拐,再\n\n走到前方相邻的小格;若前方走到了 \\(5 \\times 5\\) 表格外面或前方相邻小格已经到过则停止,如选择编号为17的小格出发向右,则只能如图17 \\(\\rightarrow 18\\) (右拐) \\(\\rightarrow 23\\) (左拐) \\(\\rightarrow 24\\) (右拐,出界,停止).\n\n(1)如果每个小格编号如右图,那么微型机器人到过的小格(含出发格)编号总和的最大值为 .(5分)\n\n(2)如果对图中25个小格任意编号为1\\~25,那么微型机器人到过的小格(含出发格)编号总和的最大值为 .(10分)\n\n<table><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr><tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr><tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr></table>\n\n<table><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td rowspan=\"2\"></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>25</td></tr></table>\n\n备用图1\n\n<table><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td>&lt;ecel&gt;</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td rowspan='2'></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table>\n\n备用图2",
+      "answer": "(1)129 (2)304",
+      "solution": "(1)任意相邻两格编号的奇偶性不同,从而微型机器人前进构成中,左拐、右拐相间,机器人行进路线(或旋转翻转后)必为图中阶梯箭\n\n人行进路线(或旋转翻转后)必为图中阶梯箭头状,最多能到9格.对角线上的最大数为 \\(13 \\times 5 = 65\\) ,另4数选 \\(10 + 14 + 18 + 22 = 64\\) 最大,9数和为 \\(65 + 64 = 129\\) ,如右图.而选7格时最大为 \\(64 + 15 + 19 + 23 = 121 < 129\\)\n\n:小格编号如右图时,微型机器人到过的小格编号总和的最大值为129.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_006/images/0.jpg)\n\n(2)如图,对 \\(5 \\times 5\\) 的表格中每个小格标上1、2、3、4中的1个,微型机器人连续经过的4个\n\n小格必是标有1、2、3、4的各1个;而标4的有4个,从而机器人至多经过 \\(4 \\times 4 + 3 = 19\\) 格, \\(1 \\sim 25\\) 中最大的19个不同数的和是: \\(7 + 8 + 9 + \\ldots + 25 = 304\\) .而右图中机器人依次经过标有25,24,23,...,7的小格.\n\n:综上所述,对小格任意编号为 \\(1 \\sim 25\\) 时,机器人到过的小格编号总和的最大值为304.\n\n![](ocr_debug/2022数学花园探秘笔试小高年级决赛C卷（解析版）/pages/page_006/images/1.jpg)"
+    }
+  ]
+}

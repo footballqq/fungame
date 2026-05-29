@@ -1,0 +1,874 @@
+{
+  "grade": 3,
+  "year": 2023,
+  "total_problems": 22,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(12 \\times 3 - 4 + 56 \\div 7\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案40，存在答案泄露风险，因此不适合用于考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "1. 算式 \\(12 \\times 3 - 4 + 56 \\div 7\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 右图中共能数出 个三角形.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷.json"
+        }
+      },
+      "text": "2. 右图中共能数出 个三角形.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 正着读和反着读都一样的数称为回文数,如121、9889都\n\n是回文数.如果一个三位回文数和一个四位回文数的和是2024,那么这两个回文数的差是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接列出了疑似答案的数字，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "3. 正着读和反着读都一样的数称为回文数,如121、9889都\n\n是回文数.如果一个三位回文数和一个四位回文数的和是2024,那么这两个回文数的差是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 东海龙王的水晶龙宫墙上嵌有若干颗宝石用于照明,其中红宝石是绿宝石数量的4倍.有一天,龙太子敖丙对墙上的宝石进行施法,他让一半的红宝石变为绿宝石,再让40颗蓝宝石也变为绿宝石.此时绿宝石数量是红宝石的4倍,那么敖丙施法后龙宫里总共有 颗绿宝石.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案64和解析步骤，存在高泄露风险，不适合考试使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "4. 东海龙王的水晶龙宫墙上嵌有若干颗宝石用于照明,其中红宝石是绿宝石数量的4倍.有一天,龙太子敖丙对墙上的宝石进行施法,他让一半的红宝石变为绿宝石,再让40颗蓝宝石也变为绿宝石.此时绿宝石数量是红宝石的4倍,那么敖丙施法后龙宫里总共有 颗绿宝石.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 下面一列数字,从第三个数字开始,每个都等于它前面所有数字总和的个位数字.\n\n## 2、0、2、4、8、6、……\n\n那么,这列数字中前100个数字的总和是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#5",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "5. 下面一列数字,从第三个数字开始,每个都等于它前面所有数字总和的个位数字.\n\n## 2、0、2、4、8、6、……\n\n那么,这列数字中前100个数字的总和是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 两个完全一样的长方形如图摆放,如果整个图形的面积是420平方厘米,那么阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案和解析过程，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#6",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "6. 两个完全一样的长方形如图摆放,如果整个图形的面积是420平方厘米,那么阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. 李老师将分别写有 \\(1 \\sim 9\\) 的九张卡片平均分给甲、乙、丙三人,每人只能看到自己的三张卡片(6翻转后可以看成9,9翻转后可以看成6).\n\n甲说:你们的数都无法组成形如\" \\(A \\times B = C\\) ( \\(A, B, C\\) 互不相同)\"的乘法等式.\n\n乙说:听了甲的话,我就知道甲手中的三个数分别是多少了.\n\n如果他们都足够聪明且诚实,那么丙手中三个数的乘积是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块中直接包含答案和解析过程，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#1#7",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "7. 李老师将分别写有 \\(1 \\sim 9\\) 的九张卡片平均分给甲、乙、丙三人,每人只能看到自己的三张卡片(6翻转后可以看成9,9翻转后可以看成6).\n\n甲说:你们的数都无法组成形如\" \\(A \\times B = C\\) ( \\(A, B, C\\) 互不相同)\"的乘法等式.\n\n乙说:听了甲的话,我就知道甲手中的三个数分别是多少了.\n\n如果他们都足够聪明且诚实,那么丙手中三个数的乘积是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 如图,圆环上有9个小球,小球可在圆环上滑动,圆环可翻转.一次操作是指将其中\n\n一个小球取下并放置到圆环上的另外一个位置.现在小球的编号依次是1,1,2,3,4,5,5,6,9,要使得小球的编号变成依次是3,1,4,1,5,9,2,6,5,那么至少要操作次.(右下图给出了操作一次将\n\n的例子,滑动、翻转不计操作次数)\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_002/images/0.jpg)\n\n## 三.填空题III(每小题第1空5分,第2空11分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是数学竞赛题干描述，但未包含答案、解析或调查内容。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#2#8",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "8. 如图,圆环上有9个小球,小球可在圆环上滑动,圆环可翻转.一次操作是指将其中\n\n一个小球取下并放置到圆环上的另外一个位置.现在小球的编号依次是1,1,2,3,4,5,5,6,9,要使得小球的编号变成依次是3,1,4,1,5,9,2,6,5,那么至少要操作次.(右下图给出了操作一次将\n\n的例子,滑动、翻转不计操作次数)\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_002/images/0.jpg)\n\n## 三.填空题III(每小题第1空5分,第2空11分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 编号为 \\(1\\sim 2024\\) 的2024个礼物按顺时针方向围成一圈.胡老师和24位同学依次用如下方式取走礼物:\n\n胡老师先取走一个礼物,以后每位同学从前一人取走礼物的下一个编号开始,取走顺时针数到的第2024个礼物.\n\n(1)如果胡老师取走2024号礼物,那么第3位同学取走礼物的编号是\n\n(2)如果第24位同学取走1号礼物,那么胡老师取走礼物的编号是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出了两个子问题的答案（6和1725），并包含部分解析过程，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#2#9",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "9. 编号为 \\(1\\sim 2024\\) 的2024个礼物按顺时针方向围成一圈.胡老师和24位同学依次用如下方式取走礼物:\n\n胡老师先取走一个礼物,以后每位同学从前一人取走礼物的下一个编号开始,取走顺时针数到的第2024个礼物.\n\n(1)如果胡老师取走2024号礼物,那么第3位同学取走礼物的编号是\n\n(2)如果第24位同学取走1号礼物,那么胡老师取走礼物的编号是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 如图,正方形ABCD被分割成了四部分,其中两个三角形、两个梯形,它们的面积都是整数且恰好构成一个等差数列.已知正方形边长为60厘米,EF长为9厘米.\n\n(1)两个三角形的面积和为 平方厘米.\n\n(2)这四部分中面积最大部分的面积为 平方厘米.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_002/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了面积答案和解题步骤，存在高泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#2#10",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "核心题干清晰但含答案和解析，清洗后可用于练习，但原题依赖图片。",
+        "review_fix_hint": "删除'5x60÷2'和解析文本，保留题干和条件，但需注意题依赖图片。",
+        "review_clean_question_text": "10. 如图, 正方形ABCD被分割成了四部分, 其中两个三角形、两个梯形, 它们的面积都是整数且恰好构成一个等差数列. 已知正方形边长为60厘米, EF长为9厘米. (1) 两个三角形的面积和为 1530 平方厘米. (2) 这四部分中面积最大部分的面积为 1305 平方厘米.",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#2#10",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "10. 如图,正方形ABCD被分割成了四部分,其中两个三角形、两个梯形,它们的面积都是整数且恰好构成一个等差数列.已知正方形边长为60厘米,EF长为9厘米.\n\n(1)两个三角形的面积和为 平方厘米.\n\n(2)这四部分中面积最大部分的面积为 平方厘米.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_002/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组决赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组决赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 如图,在正方体的一些顶点处各有一只蚂蚁,它们的爬行速度相同且只能沿着正方体的棱爬行,在棱上爬行到达下一个顶点前不能回头,且从未有任两只蚂蚁相遇.\n\n(1)如果在 \\(A\\) 、 \\(B\\) 处各有一只蚂蚁,每只蚂蚁各爬行1条棱,一共有 种不同的爬行情况.\n\n(2)如果在 \\(A\\) 、 \\(C\\) 、 \\(F\\) 处各有一只蚂蚁,每只蚂蚁各爬行2条棱,一共有 种不同的爬行情况.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组决赛试卷/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含题干但已附带解答过程，答案信息泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json#2#11",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组决赛试卷答案.json"
+        }
+      },
+      "text": "11. 如图,在正方体的一些顶点处各有一只蚂蚁,它们的爬行速度相同且只能沿着正方体的棱爬行,在棱上爬行到达下一个顶点前不能回头,且从未有任两只蚂蚁相遇.\n\n(1)如果在 \\(A\\) 、 \\(B\\) 处各有一只蚂蚁,每只蚂蚁各爬行1条棱,一共有 种不同的爬行情况.\n\n(2)如果在 \\(A\\) 、 \\(C\\) 、 \\(F\\) 处各有一只蚂蚁,每只蚂蚁各爬行2条棱,一共有 种不同的爬行情况.\n\n![](ocr_debug/2023年小中组决赛试卷/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(12 \\div 3 + 45 \\times 6 - 78\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个清晰的数学计算题，没有提供答案或解析，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "1. 算式 \\(12 \\div 3 + 45 \\times 6 - 78\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 右图中,三角形共有 个.\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "2. 右图中,三角形共有 个.\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 2022年卡塔尔世界杯是国际足联第22次举办的世界杯足球比赛;已知足球世界杯每4年举行一次,因战争原因有两次该举办的年份没有举行,那么第一届世界杯在乌拉圭举行的时间是公元 年.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，要求计算第一届世界杯年份，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "3. 2022年卡塔尔世界杯是国际足联第22次举办的世界杯足球比赛;已知足球世界杯每4年举行一次,因战争原因有两次该举办的年份没有举行,那么第一届世界杯在乌拉圭举行的时间是公元 年.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 如图,一个大正方形被分割成了周长依次为70、80、90、100的四个小长方形;那么,其中最小的小长方形的面积是\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_001/images/1.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": ":34",
+      "solution_text": ":假设1000件瓷器都是完好运送,则应得: \\(1000\\times 5 = 5000\\) (元)实际差额: \\(5000 - 4500 = 500\\) (元)\n\n由于一件被损坏的产品被假设成完好运送会多加: \\(120 + 5 = 125\\) (元),所以损坏的为: \\(500\\div 125 = 4\\) (件)\n\n【答案】:4件\n\n6、将 \\(1\\sim 9\\) 分别填入到右图的方框中,每个数字用一次,使得竖式成立;现在数字6、7、8已经被填入,那么竖式的和是________。\n\n【考点提炼】:加法数字谜\n\n【解析】:可以从和的最高位8开始入手,由于 \\(8 = 1 + 7\\) ; \\(2 + 6\\) ; \\(3 + 5\\) ; \\(4 + 4\\) ;\n\n由于1\\~9每个数字只能用一次,所以 \\(4 + 4\\) 排除;题目中已经有7和6,所以优先尝试百位两数为\n\n3和5,这样后面的数字填写就不可以进位,但满足不进位的1和2均会造成重复,所以排除此类情况得到十位一定进位;即百位两个数字相加为7; \\(7 = 1 + 6\\) (排除)、 \\(2 + 5\\) 、 \\(3 + 4\\) ;又因为第二个数个位只能从3开始填,所以尝试从3开始:和为:819\n\n【答案】:819\n\n![](ocr_debug/2023年小中组初赛试卷答案解析/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2023年小中组初赛试卷答案解析/pages/page_002/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "4. 如图,一个大正方形被分割成了周长依次为70、80、90、100的四个小长方形;那么,其中最小的小长方形的面积是\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_001/images/1.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": ":34",
+      "solution": ":假设1000件瓷器都是完好运送,则应得: \\(1000\\times 5 = 5000\\) (元)实际差额: \\(5000 - 4500 = 500\\) (元)\n\n由于一件被损坏的产品被假设成完好运送会多加: \\(120 + 5 = 125\\) (元),所以损坏的为: \\(500\\div 125 = 4\\) (件)\n\n【答案】:4件\n\n6、将 \\(1\\sim 9\\) 分别填入到右图的方框中,每个数字用一次,使得竖式成立;现在数字6、7、8已经被填入,那么竖式的和是________。\n\n【考点提炼】:加法数字谜\n\n【解析】:可以从和的最高位8开始入手,由于 \\(8 = 1 + 7\\) ; \\(2 + 6\\) ; \\(3 + 5\\) ; \\(4 + 4\\) ;\n\n由于1\\~9每个数字只能用一次,所以 \\(4 + 4\\) 排除;题目中已经有7和6,所以优先尝试百位两数为\n\n3和5,这样后面的数字填写就不可以进位,但满足不进位的1和2均会造成重复,所以排除此类情况得到十位一定进位;即百位两个数字相加为7; \\(7 = 1 + 6\\) (排除)、 \\(2 + 5\\) 、 \\(3 + 4\\) ;又因为第二个数个位只能从3开始填,所以尝试从3开始:和为:819\n\n【答案】:819\n\n![](ocr_debug/2023年小中组初赛试卷答案解析/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2023年小中组初赛试卷答案解析/pages/page_002/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 工人运瓷器1000件,规定完整运到目的地一件给运费5元,损坏一件倒赔120元.运完这批瓷器后,工人共得4500元,那么损坏了 件.\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_001/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#1#5",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "5. 工人运瓷器1000件,规定完整运到目的地一件给运费5元,损坏一件倒赔120元.运完这批瓷器后,工人共得4500元,那么损坏了 件.\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_001/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 将 \\(1 \\sim 9\\) 分别填入到右图的方框中,每个数字用一次,使得竖式成立;现在数字6、7、8已经被填入,那么竖式的和是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，描述问题条件但未提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#1#6",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "6. 将 \\(1 \\sim 9\\) 分别填入到右图的方框中,每个数字用一次,使得竖式成立;现在数字6、7、8已经被填入,那么竖式的和是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. 老虎、狐狸、猴子各3只分别入住右图的9个房间中,每个房间一只,结果每只动物都说\"有老虎与我相邻\"(有公共边的两个房间相邻);如果老虎都说真话,狐狸都说假话,猴子说的话不知真假,那么说真话的猴子所在房间编号的和是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的逻辑谜题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#1#7",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "7. 老虎、狐狸、猴子各3只分别入住右图的9个房间中,每个房间一只,结果每只动物都说\"有老虎与我相邻\"(有公共边的两个房间相邻);如果老虎都说真话,狐狸都说假话,猴子说的话不知真假,那么说真话的猴子所在房间编号的和是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 如图,九个小三角形拼成了一个大三角形,十个小圆圈中分别填有 \\(1 \\sim 10\\) ;每次操作,指当一个小三角形三个顶点上的数都是正整数时,可对这三个数同时加1或同时减1. 当大三角形边上九个小圆圈中的数都变成0时,中心小圆圈中的数变成________.\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，描述了几何操作问题，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#2#8",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "8. 如图,九个小三角形拼成了一个大三角形,十个小圆圈中分别填有 \\(1 \\sim 10\\) ;每次操作,指当一个小三角形三个顶点上的数都是正整数时,可对这三个数同时加1或同时减1. 当大三角形边上九个小圆圈中的数都变成0时,中心小圆圈中的数变成________.\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 右图已固定,请将1、2、3、4各两个分别填入八个圆圈中,使得阴影圆圈中的数比它两边相邻的白色圆圈中的数都大;那么,不同的填法共有________种.\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_002/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的数学竞赛题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#2#9",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "9. 右图已固定,请将1、2、3、4各两个分别填入八个圆圈中,使得阴影圆圈中的数比它两边相邻的白色圆圈中的数都大;那么,不同的填法共有________种.\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_002/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 箱子里有一些红球和一些白球;如果每次同时拿1个红球和1个白球,当红球拿完时白球还余下30个;如果每次同时拿1个红球和3个白球,当白球余下2个不够拿一次时红球还余下30个.箱子里的白球有________个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准数学问题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#2#10",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "10. 箱子里有一些红球和一些白球;如果每次同时拿1个红球和1个白球,当红球拿完时白球还余下30个;如果每次同时拿1个红球和3个白球,当白球余下2个不够拿一次时红球还余下30个.箱子里的白球有________个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2023,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2023年小中组初赛试卷.pdf",
+      "exam": {
+        "exam_key": "2023年小中组初赛试卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 右图的迷宫中,从入口进入,最后从出口走出,只能从和为奇数的两个数字间通过,经过后获得的积分是这两个数字的和,每条道路至多经过一次.如图 \\(①\\) ,可得积分:\n\n\\((1 + 12) + (15 + 6) + (6 + 7) + (10 + 11) + (11 + 2) + (5 + 16)\\)\n\n将 \\(1 \\sim 16\\) 这16个自然数填入图 \\(②\\) 的小正方形中,每个\n\n数用一次;按照上述迷宫规则,获得的积分最多是\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_002/images/2.jpg)\n\n<center>图 \\(①\\) </center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2023年/ocr_debug/2023年小中组初赛试卷/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题目，描述迷宫规则并要求最大化积分，没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json#2#11",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2023年/2023年小中组初赛试卷.json"
+        }
+      },
+      "text": "11. 右图的迷宫中,从入口进入,最后从出口走出,只能从和为奇数的两个数字间通过,经过后获得的积分是这两个数字的和,每条道路至多经过一次.如图 \\(①\\) ,可得积分:\n\n\\((1 + 12) + (15 + 6) + (6 + 7) + (10 + 11) + (11 + 2) + (5 + 16)\\)\n\n将 \\(1 \\sim 16\\) 这16个自然数填入图 \\(②\\) 的小正方形中,每个\n\n数用一次;按照上述迷宫规则,获得的积分最多是\n\n![](ocr_debug/2023年小中组初赛试卷/pages/page_002/images/2.jpg)\n\n<center>图 \\(①\\) </center>",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

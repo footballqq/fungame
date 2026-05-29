@@ -1,0 +1,485 @@
+{
+  "grade": 4,
+  "year": 2012,
+  "total_problems": 12,
+  "problems": [
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "1. (8分)计算: \\(12 + 34 \\times 56 + 7 + 89 = 2012\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和完整解析，泄露风险高，不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#1",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "1. (8分)计算: \\(12 + 34 \\times 56 + 7 + 89 = 2012\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "2. (8分)骆驼有两种,背上只有一个驼峰的单峰骆驼和背上有两个驼峰的双峰骆驼,单峰骆驼比较高大,四肢较长,在沙漠中可走可跑;双峰骆驼四肢短粗,适合在沙漠和雪地中行走.有一群骆驼有23个驼峰,60只脚,这些骆驼有_15_只.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解答过程，存在高泄露风险，适合练习但不宜用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#2",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "2. (8分)骆驼有两种,背上只有一个驼峰的单峰骆驼和背上有两个驼峰的双峰骆驼,单峰骆驼比较高大,四肢较长,在沙漠中可走可跑;双峰骆驼四肢短粗,适合在沙漠和雪地中行走.有一群骆驼有23个驼峰,60只脚,这些骆驼有_15_只.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "3. (8分)在如图的每个方框中填入一个数字,使得乘法竖式成立.那么,这个算式的乘积是_837_.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接包含答案'837'并附有完整解析，答案泄露风险极高，不适合作为考试题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#3",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干直接包含答案且依赖图片，清洗后可作为练习题但不适合考试。",
+        "review_fix_hint": "删除题干中的答案数字'837'和解答部分，保留图片链接作为问题依赖。",
+        "review_clean_question_text": "3. (8分)在如图的每个方框中填入一个数字,使得乘法竖式成立.那么,这个算式的乘积是______",
+        "review_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#3",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "3. (8分)在如图的每个方框中填入一个数字,使得乘法竖式成立.那么,这个算式的乘积是_837_.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. (8分) \\(A\\) 、 \\(B\\) 、 \\(C\\) 三人采西瓜.\n\n\\(A\\) 与 \\(B\\) 所采西瓜的个数之和比 \\(C\\) 少6个;\n\n\\(B\\) 与 \\(C\\) 所采西瓜的个数之和比 \\(A\\) 多16个;\n\n\\(C\\) 与 \\(A\\) 所采西瓜的个数之和比 \\(B\\) 多8个;\n\n请问他们共采西瓜 个.\n\n## 二、填空题",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干是一个完整的数学问题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#1#4",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "4. (8分) \\(A\\) 、 \\(B\\) 、 \\(C\\) 三人采西瓜.\n\n\\(A\\) 与 \\(B\\) 所采西瓜的个数之和比 \\(C\\) 少6个;\n\n\\(B\\) 与 \\(C\\) 所采西瓜的个数之和比 \\(A\\) 多16个;\n\n\\(C\\) 与 \\(A\\) 所采西瓜的个数之和比 \\(B\\) 多8个;\n\n请问他们共采西瓜 个.\n\n## 二、填空题",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "5. (10分)30名同学按身高由低到高排成一队,相邻两个同学的身高差相同.前10名同学的身高和是12.5米,前20名同学的身高和是26.5米,那么这30名同学的身高和是_42米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案'42米'和完整解答，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#5#5",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "5. (10分)30名同学按身高由低到高排成一队,相邻两个同学的身高差相同.前10名同学的身高和是12.5米,前20名同学的身高和是26.5米,那么这30名同学的身高和是_42米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "6. (10分)正方形 \\(ABCD\\) 与长方形 \\(BEFG\\) 如图放置, \\(AG = CE = 2\\) 厘米,那么正方形 \\(ABCD\\) 的面积比长方形 \\(BEFG\\) 的面积大_4_平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中以填空形式直接给出答案，且包含解答开头，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#5#6",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "6. (10分)正方形 \\(ABCD\\) 与长方形 \\(BEFG\\) 如图放置, \\(AG = CE = 2\\) 厘米,那么正方形 \\(ABCD\\) 的面积比长方形 \\(BEFG\\) 的面积大_4_平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "7. (10分)红、黄、蓝3种颜色的球分别有11、12、17个,每次操作可以将2个不同颜色的球换成2个第三种颜色的球,则在操作过程中,红色球至多有_39_个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#6#7",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "7. (10分)红、黄、蓝3种颜色的球分别有11、12、17个,每次操作可以将2个不同颜色的球换成2个第三种颜色的球,则在操作过程中,红色球至多有_39_个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. （10分）宁宁、蕾蕾和凡凡三人合租一辆轿车从学校回家（如图），他们约定：共同乘坐的部分所产生的车费由乘坐者平均分摊；单独乘坐的部分所产生的车费，由乘坐者单独承担．结果，三人承担的车费分别为10元、25元、85元，宁宁家距离学校12公里，凡凡家距离学校 公里.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/images/0.jpg)\n\n## 三、填空题",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_006/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，无答案或解析泄露，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#2#8",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "8. （10分）宁宁、蕾蕾和凡凡三人合租一辆轿车从学校回家（如图），他们约定：共同乘坐的部分所产生的车费由乘坐者平均分摊；单独乘坐的部分所产生的车费，由乘坐者单独承担．结果，三人承担的车费分别为10元、25元、85元，宁宁家距离学校12公里，凡凡家距离学校 公里.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/images/0.jpg)\n\n## 三、填空题",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "9. (12分)甲乙二人相距30米面对面站好,两人玩\"石头、剪子、布\".胜者向前走3米,负者向后退2米,平局两人各向前走1米,玩了15局后,甲距出发点17米,乙距出发点2米.甲胜了_7_次.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解答过程，泄露风险高，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#7#9",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "9. (12分)甲乙二人相距30米面对面站好,两人玩\"石头、剪子、布\".胜者向前走3米,负者向后退2米,平局两人各向前走1米,玩了15局后,甲距出发点17米,乙距出发点2米.甲胜了_7_次.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. （12分）在羊羊运动会上，喜羊羊、沸羊羊、懒羊羊、暖羊羊和灰太郎进行了400米赛跑，赛完结束后，五人谈论比赛结果.\n\n第一名说：“喜羊羊跑得比懒羊羊快.”\n\n第二名说：“我比暖羊羊跑得快.”\n\n第三名说：“我比灰太郎跑得快.”\n\n第四名说：“喜羊羊比沸羊羊跑得快.”\n\n第五名说：“暖羊羊比灰太郎跑得快.”\n\n如果五人中只有灰太郎说了假话，那么喜羊羊得了第 名.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的逻辑推理题干，没有答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#2#10",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "10. （12分）在羊羊运动会上，喜羊羊、沸羊羊、懒羊羊、暖羊羊和灰太郎进行了400米赛跑，赛完结束后，五人谈论比赛结果.\n\n第一名说：“喜羊羊跑得比懒羊羊快.”\n\n第二名说：“我比暖羊羊跑得快.”\n\n第三名说：“我比灰太郎跑得快.”\n\n第四名说：“喜羊羊比沸羊羊跑得快.”\n\n第五名说：“暖羊羊比灰太郎跑得快.”\n\n如果五人中只有灰太郎说了假话，那么喜羊羊得了第 名.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 8,
+      "question_text": "11. (12分)若三位数abc(其中 \\(a\\) 、 \\(b\\) 、 \\(c\\) 都是非零数字)满足 \\(\\overrightarrow{\\mathrm{ab}} > \\overrightarrow{\\mathrm{bc}} > \\overrightarrow{\\mathrm{ca}}\\) ,则称该三位数为\"龙腾数\",那么共有_120_个\"龙腾数\".",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和完整解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#8#11",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "11. (12分)若三位数abc(其中 \\(a\\) 、 \\(b\\) 、 \\(c\\) 都是非零数字)满足 \\(\\overrightarrow{\\mathrm{ab}} > \\overrightarrow{\\mathrm{bc}} > \\overrightarrow{\\mathrm{ca}}\\) ,则称该三位数为\"龙腾数\",那么共有_120_个\"龙腾数\".",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2012,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 8,
+      "question_text": "12. (12分)在边缘的每个空白格内都填入一个箭头,方格中的数字表示指向该数字的箭头个数,箭头的方向可以是上、下、左、右、左上、左下、右上、右下,但每个箭头必须指向一个数字,例如,图2的填法是图1的答案,请按照此规律在图3中填入箭头,那么指向右下方方向的箭头共有_2_个.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/1.jpg)\n\n<center>图2</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/2.jpg)\n\n<center>图3</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/1.jpg",
+          "images_y2/problems/source_pdf/四年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本为完整题目并包含解答和答案，存在泄漏风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#8#12",
+          "json_path": "source_pdf/四年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "12. (12分)在边缘的每个空白格内都填入一个箭头,方格中的数字表示指向该数字的箭头个数,箭头的方向可以是上、下、左、右、左上、左下、右上、右下,但每个箭头必须指向一个数字,例如,图2的填法是图1的答案,请按照此规律在图3中填入箭头,那么指向右下方方向的箭头共有_2_个.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/0.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/1.jpg)\n\n<center>图2</center>\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/2.jpg)\n\n<center>图3</center>",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

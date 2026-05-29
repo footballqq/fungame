@@ -1,0 +1,1982 @@
+{
+  "grade": 5,
+  "year": 2020,
+  "total_problems": 52,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020五年级网赛（试题版）.pdf",
+      "exam": {
+        "exam_key": "2020五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 老师将3个不同的质数分别给甲、乙、丙三个同学.甲、乙、丙三个人都非常聪明,每人只知道自己的数.\n\n老师说:\"你们手中的三个数都是比30小的质数,且互不相同.\"\n\n甲说:\"那我们一定不能组成一个加法等式.\"\n\n乙说:\"不用你说,我也知道它们不能组成加法等式.\"\n\n丙说:\"我们三个数刚好构成一个等差数列.\"\n\n那么甲、乙、丙三人手中的数之和是",
+      "answer_text": "69",
+      "solution_text": "列出30以内的所有质数,分别是2,3,5,7,11,13,17,19,23,29,可以组成加法等式的有(2,3,5),(2,5,7),(2,11,13)和(2,17,19),由此可知甲、乙手中的数只能是23或29,根据丙说的\"等差数列\"条件可以推测知丙手中的数为17,其和为 \\(17 + 23 + 29 = 69\\) .",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020五年级网赛（试题版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020五年级网赛（试题版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020五年级网赛 （详解版）.json#2#4",
+          "json_path": "source_pdf/五年级/2020/2020五年级网赛 （详解版）.json"
+        }
+      },
+      "text": "4. 老师将3个不同的质数分别给甲、乙、丙三个同学.甲、乙、丙三个人都非常聪明,每人只知道自己的数.\n\n老师说:\"你们手中的三个数都是比30小的质数,且互不相同.\"\n\n甲说:\"那我们一定不能组成一个加法等式.\"\n\n乙说:\"不用你说,我也知道它们不能组成加法等式.\"\n\n丙说:\"我们三个数刚好构成一个等差数列.\"\n\n那么甲、乙、丙三人手中的数之和是",
+      "answer": "69",
+      "solution": "列出30以内的所有质数,分别是2,3,5,7,11,13,17,19,23,29,可以组成加法等式的有(2,3,5),(2,5,7),(2,11,13)和(2,17,19),由此可知甲、乙手中的数只能是23或29,根据丙说的\"等差数列\"条件可以推测知丙手中的数为17,其和为 \\(17 + 23 + 29 = 69\\) ."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020五年级网赛（试题版）.pdf",
+      "exam": {
+        "exam_key": "2020五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 如图,甲、乙二人都从 \\(A\\) 地走向 \\(B\\) 地,只能沿 \\(6 \\times 6\\) 方格的格线向上或者向右走.如果两人走的路线除了点 \\(A\\) 和点 \\(B\\) 外没有公共点,且两条路线围成的封闭图形面积是11,那么两人的行走路线共有种不同的可能.\n\n![](ocr_debug/2020五年级网赛 （详解版）/pages/page_002/images/0.jpg)\n\n<table><tr><td>1</td><td>6</td><td>11</td><td>16</td><td>26</td><td>52</td></tr><tr><td>1</td><td>5</td><td>5</td><td>5</td><td>10</td><td>26</td></tr><tr><td>1</td><td>4</td><td></td><td></td><td>5</td><td>16</td></tr><tr><td>1</td><td>3</td><td></td><td></td><td>5</td><td>11</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr></table>",
+      "answer_text": "104",
+      "solution_text": "因为路线组成的封闭图形面积是11,所以其中有11个小格,恰为 \\(A\\) 到 \\(B\\) 的格内最短路线,如图用标数法得到52,考虑到两人的行走路线可交换,所以两人的行走路线共有 \\(52 \\times 2 = 104\\) 种不同的可能.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020五年级网赛（试题版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020五年级网赛（试题版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020五年级网赛 （详解版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整题干、答案和解析，答案直接给出，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020五年级网赛 （详解版）.json#2#5",
+          "json_path": "source_pdf/五年级/2020/2020五年级网赛 （详解版）.json"
+        }
+      },
+      "text": "5. 如图,甲、乙二人都从 \\(A\\) 地走向 \\(B\\) 地,只能沿 \\(6 \\times 6\\) 方格的格线向上或者向右走.如果两人走的路线除了点 \\(A\\) 和点 \\(B\\) 外没有公共点,且两条路线围成的封闭图形面积是11,那么两人的行走路线共有种不同的可能.\n\n![](ocr_debug/2020五年级网赛 （详解版）/pages/page_002/images/0.jpg)\n\n<table><tr><td>1</td><td>6</td><td>11</td><td>16</td><td>26</td><td>52</td></tr><tr><td>1</td><td>5</td><td>5</td><td>5</td><td>10</td><td>26</td></tr><tr><td>1</td><td>4</td><td></td><td></td><td>5</td><td>16</td></tr><tr><td>1</td><td>3</td><td></td><td></td><td>5</td><td>11</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr></table>",
+      "answer": "104",
+      "solution": "因为路线组成的封闭图形面积是11,所以其中有11个小格,恰为 \\(A\\) 到 \\(B\\) 的格内最短路线,如图用标数法得到52,考虑到两人的行走路线可交换,所以两人的行走路线共有 \\(52 \\times 2 = 104\\) 种不同的可能."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020五年级网赛（试题版）.pdf",
+      "exam": {
+        "exam_key": "2020五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 索玛立方体是指由如下图所示的 1 块三连方和 6 块四连方拼成的 \\(3 \\times 3 \\times 3\\) 正方体。\n\n![](ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/0.jpg)\n\n现在用其中 4 块已经拼成了如下图形:\n\n![](ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/1.jpg)\n\n那么用这个已经拼完的立体图形和其余 3 块拼成索玛立方体,共有 种不同拼法。\n\n## 三. 填空题(每小题 15 分,共 30 分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020五年级网赛（试题版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020五年级网赛（试题版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本以编号开头描述索玛立方体问题，但未完整，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020五年级网赛 （详解版）.json#2#6",
+          "json_path": "source_pdf/五年级/2020/2020五年级网赛 （详解版）.json"
+        }
+      },
+      "text": "6. 索玛立方体是指由如下图所示的 1 块三连方和 6 块四连方拼成的 \\(3 \\times 3 \\times 3\\) 正方体。\n\n![](ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/0.jpg)\n\n现在用其中 4 块已经拼成了如下图形:\n\n![](ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/1.jpg)\n\n那么用这个已经拼完的立体图形和其余 3 块拼成索玛立方体,共有 种不同拼法。\n\n## 三. 填空题(每小题 15 分,共 30 分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020五年级网赛（试题版）.pdf",
+      "exam": {
+        "exam_key": "2020五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 在小于 2020 的四位数中至少取出 个两两互质的数,才能保证其中至少有 20 个是质数。",
+      "answer_text": "34",
+      "solution_text": "因为 \\(43^{2}< 2020\\) ,而在不超过43的正整数中仅有2、3、5、7、11、13、17、19、23、29、31、37、41和43这14个质数,这说明在四位数中最多能找到14个合数两两互质,否则,若存在15个合数两两互质,考虑它们的质因数必须互不相同,从而这15个数中必存在至少一个数的最小质因数大于43,这样,这个合数一定会大于2020,矛盾.\n\n由此可知为了保证从中取出两两互质的数中至少有20个质数,那么至少应该取出 \\(14 + 20 = 34\\) 个数.",
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020五年级网赛（试题版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020五年级网赛（试题版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的题干，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020五年级网赛（试题版）.json#2#7",
+          "json_path": "source_pdf/五年级/2020/2020五年级网赛（试题版）.json"
+        }
+      },
+      "text": "7. 在小于 2020 的四位数中至少取出 个两两互质的数,才能保证其中至少有 20 个是质数。",
+      "answer": "34",
+      "solution": "因为 \\(43^{2}< 2020\\) ,而在不超过43的正整数中仅有2、3、5、7、11、13、17、19、23、29、31、37、41和43这14个质数,这说明在四位数中最多能找到14个合数两两互质,否则,若存在15个合数两两互质,考虑它们的质因数必须互不相同,从而这15个数中必存在至少一个数的最小质因数大于43,这样,这个合数一定会大于2020,矛盾.\n\n由此可知为了保证从中取出两两互质的数中至少有20个质数,那么至少应该取出 \\(14 + 20 = 34\\) 个数."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020五年级网赛（试题版）.pdf",
+      "exam": {
+        "exam_key": "2020五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 在空格里填入数字 \\(1 \\sim 6\\) ,使得每行、每列和每宫的数字都不重复。每个宫里四个圆圈里的数分别表示两边数字的和、差、积、商。那么最后一行前五个数字从左到右组成的五位数是\n\n![](ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/2.jpg)",
+      "answer_text": "23516",
+      "solution_text": "答案如下图.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020五年级网赛（试题版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020五年级网赛（试题版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的题目描述，无答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020五年级网赛（试题版）.json#2#8",
+          "json_path": "source_pdf/五年级/2020/2020五年级网赛（试题版）.json"
+        }
+      },
+      "text": "8. 在空格里填入数字 \\(1 \\sim 6\\) ,使得每行、每列和每宫的数字都不重复。每个宫里四个圆圈里的数分别表示两边数字的和、差、积、商。那么最后一行前五个数字从左到右组成的五位数是\n\n![](ocr_debug/2020五年级网赛（试题版）/pages/page_002/images/2.jpg)",
+      "answer": "23516",
+      "solution": "答案如下图."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020五年级网赛（试题版）.pdf",
+      "exam": {
+        "exam_key": "2020五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "9. 从下面图形的四个阴影方格中选择一个去掉后，沿着格线将其分割成形状不尽相同的7部分，使得每一部分的数的总和相同。满足条件的选法共有 种。\n\n<table><tr><td>10</td><td>20</td><td>10</td><td>60</td><td>10</td></tr><tr><td>20</td><td>50</td><td>30</td><td>20</td><td>10</td></tr><tr><td>10</td><td>30</td><td>10</td><td>30</td><td>20</td></tr><tr><td>80</td><td>20</td><td>90</td><td>10</td><td>40</td></tr><tr><td>10</td><td>70</td><td>10</td><td>30</td><td>10</td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020五年级网赛（试题版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020五年级网赛（试题版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，包含问题和表格，但未提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020五年级网赛（试题版）.json#3#9",
+          "json_path": "source_pdf/五年级/2020/2020五年级网赛（试题版）.json"
+        }
+      },
+      "text": "9. 从下面图形的四个阴影方格中选择一个去掉后，沿着格线将其分割成形状不尽相同的7部分，使得每一部分的数的总和相同。满足条件的选法共有 种。\n\n<table><tr><td>10</td><td>20</td><td>10</td><td>60</td><td>10</td></tr><tr><td>20</td><td>50</td><td>30</td><td>20</td><td>10</td></tr><tr><td>10</td><td>30</td><td>10</td><td>30</td><td>20</td></tr><tr><td>80</td><td>20</td><td>90</td><td>10</td><td>40</td></tr><tr><td>10</td><td>70</td><td>10</td><td>30</td><td>10</td></tr></table>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 在右面的等式中， \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 代表互不相同的偶数数字，那么四位数 \\(ABCD\\) 是",
+      "answer_text": "2468",
+      "solution_text": "首先 \\(C\\) 、 \\(D\\) 一定不为0，若 \\(B\\) 为0，则由 \\(\\overline{A0}\\times C = 18\\times D\\) 可知 \\(D\\) 为0或5，不符合题意．因此 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 是2、4、6、8.\n\n由于 \\(\\overline{AB}\\times C\\) 是18的倍数，所以是9的倍数，由于 \\(\\overline{AB}\\) 的数字和是6到14中的偶数，所以 \\(\\overline{AB}\\) 不是9的倍数，而 \\(C\\) 也不是9的倍数，那么只能 \\(\\overline{AB}\\) 和 \\(C\\) 都是3的倍数，于是 \\(C = 6\\) ，且 \\(\\overline{AB}\\) 没有2和3以外的质因数． \\(\\overline{AB} = 24\\) 或48，经试验， \\(\\overline{AB} = 24\\) 时， \\(24\\times 6 = 18\\times 8\\) .所以 \\(\\overline{ABCD} = 2468\\)",
+      "topic": "algebra",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级一试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级一试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但包含明确答案和解析，存在高风险泄露，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json#1#1",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "1. 在右面的等式中， \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 代表互不相同的偶数数字，那么四位数 \\(ABCD\\) 是",
+      "answer": "2468",
+      "solution": "首先 \\(C\\) 、 \\(D\\) 一定不为0，若 \\(B\\) 为0，则由 \\(\\overline{A0}\\times C = 18\\times D\\) 可知 \\(D\\) 为0或5，不符合题意．因此 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 是2、4、6、8.\n\n由于 \\(\\overline{AB}\\times C\\) 是18的倍数，所以是9的倍数，由于 \\(\\overline{AB}\\) 的数字和是6到14中的偶数，所以 \\(\\overline{AB}\\) 不是9的倍数，而 \\(C\\) 也不是9的倍数，那么只能 \\(\\overline{AB}\\) 和 \\(C\\) 都是3的倍数，于是 \\(C = 6\\) ，且 \\(\\overline{AB}\\) 没有2和3以外的质因数． \\(\\overline{AB} = 24\\) 或48，经试验， \\(\\overline{AB} = 24\\) 时， \\(24\\times 6 = 18\\times 8\\) .所以 \\(\\overline{ABCD} = 2468\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 下面是一个 \\(3\\times 10\\) 的方格表．将数字0\\~9不重复的填在第一行的方格中，将第一行每个数前面比它大的数的个数填在第二行同列位置，将第一行每个数后面比它小的数的个数填在第三行同列位置（例如：左下图是一种正确的填法）．某同学填写了右下图后，第二行10个数的和为20，那么第三行10个数的和是\n\n<table><tr><td>3</td><td>2</td><td>1</td><td>7</td><td>9</td><td>8</td><td>6</td><td>0</td><td>5</td><td>4</td></tr><tr><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>1</td><td>3</td><td>7</td><td>4</td><td>5</td></tr><tr><td>3</td><td>2</td><td>1</td><td>4</td><td>5</td><td>4</td><td>3</td><td>0</td><td>1</td><td>0</td></tr></table>\n\n![](ocr_debug/2020年总决赛五年级一试解析/pages/page_001/images/0.jpg)",
+      "answer_text": "20",
+      "solution_text": "在第一行中任取两个方格，设里面的数字为 \\(a\\) 和 \\(b\\) ，且 \\(a\\) 在 \\(b\\) 前，考虑 \\(a\\) 、 \\(b\\) 组成的“数对”对第二行和第三行的和的贡献.\n\n如果 \\(a< b\\) ，那么在计算 \\(a\\) 后面比 \\(b\\) 小的数字个数时， \\(b\\) 没有贡献；同样，在计算 \\(b\\) 前面比 \\(b\\) 大的数字个数时， \\(a\\) 同样没有贡献，所以此时 \\(a\\) 、 \\(b\\) 这个“数对”对第二行的和的贡献与对第三行的和的贡献都为0.\n\n如果 \\(a > b\\) ，那么在计算 \\(a\\) 后面比 \\(b\\) 小的数字个数时, \\(b\\) 贡献了1；同样，在计算 \\(b\\) 前面比 \\(b\\) 大的数字个数时, \\(a\\) 同样贡献了1，所以此时 \\(a\\) 、 \\(b\\) 这个“数对”对第二行的和贡献与对第三行的和的贡献都为1.\n\n综上可知，每个“数对”对后两行的和的贡献相同，那么后两行的数之和也就相同．根据题意，第二行的和是20，那么第三行的和也是20.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级一试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级一试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级一试解析/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是完整数学竞赛题干，但直接包含答案和解析，因此仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json#1#2",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "2. 下面是一个 \\(3\\times 10\\) 的方格表．将数字0\\~9不重复的填在第一行的方格中，将第一行每个数前面比它大的数的个数填在第二行同列位置，将第一行每个数后面比它小的数的个数填在第三行同列位置（例如：左下图是一种正确的填法）．某同学填写了右下图后，第二行10个数的和为20，那么第三行10个数的和是\n\n<table><tr><td>3</td><td>2</td><td>1</td><td>7</td><td>9</td><td>8</td><td>6</td><td>0</td><td>5</td><td>4</td></tr><tr><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>1</td><td>3</td><td>7</td><td>4</td><td>5</td></tr><tr><td>3</td><td>2</td><td>1</td><td>4</td><td>5</td><td>4</td><td>3</td><td>0</td><td>1</td><td>0</td></tr></table>\n\n![](ocr_debug/2020年总决赛五年级一试解析/pages/page_001/images/0.jpg)",
+      "answer": "20",
+      "solution": "在第一行中任取两个方格，设里面的数字为 \\(a\\) 和 \\(b\\) ，且 \\(a\\) 在 \\(b\\) 前，考虑 \\(a\\) 、 \\(b\\) 组成的“数对”对第二行和第三行的和的贡献.\n\n如果 \\(a< b\\) ，那么在计算 \\(a\\) 后面比 \\(b\\) 小的数字个数时， \\(b\\) 没有贡献；同样，在计算 \\(b\\) 前面比 \\(b\\) 大的数字个数时， \\(a\\) 同样没有贡献，所以此时 \\(a\\) 、 \\(b\\) 这个“数对”对第二行的和的贡献与对第三行的和的贡献都为0.\n\n如果 \\(a > b\\) ，那么在计算 \\(a\\) 后面比 \\(b\\) 小的数字个数时, \\(b\\) 贡献了1；同样，在计算 \\(b\\) 前面比 \\(b\\) 大的数字个数时, \\(a\\) 同样贡献了1，所以此时 \\(a\\) 、 \\(b\\) 这个“数对”对第二行的和贡献与对第三行的和的贡献都为1.\n\n综上可知，每个“数对”对后两行的和的贡献相同，那么后两行的数之和也就相同．根据题意，第二行的和是20，那么第三行的和也是20."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 下图为某街区平面图，相邻两点间连线的长度均为1．甲从 \\(A\\) 出发去 \\(B\\) 地，乙从 \\(B\\) 出发去 \\(A\\) 地，两人同时出发，沿格线走最短路径到达目的地．如果乙的速度为甲的2倍，那么两人会在途中相遇的路线共有 种可能.\n\n![](ocr_debug/2020年总决赛五年级一试解析/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级一试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级一试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级一试解析/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，未包含答案或解析，适合作为独立题目。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json#1#3",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "3. 下图为某街区平面图，相邻两点间连线的长度均为1．甲从 \\(A\\) 出发去 \\(B\\) 地，乙从 \\(B\\) 出发去 \\(A\\) 地，两人同时出发，沿格线走最短路径到达目的地．如果乙的速度为甲的2倍，那么两人会在途中相遇的路线共有 种可能.\n\n![](ocr_debug/2020年总决赛五年级一试解析/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 小明带200元钱去买文具.按照以往的经验,小明买若干支钢笔和铅笔,钱正好用完.到了文具店,发现店内做活动:钢笔买3支送1支,铅笔买1支送1支.\n\n小明发现,花140元恰好可以买到和原来数量相同的钢笔和铅笔.\n\n已知钢笔单价比铅笔贵4元,小明购买的钢笔数量是铅笔数量的2倍.\n\n请问,小明买了多少支铅笔?",
+      "answer_text": "10",
+      "solution_text": "假设买了4份钢笔,2份铅笔,则4份钢笔和2份铅笔共要花200元.\n\n做活动时,4份钢笔只需要花3份的钱,2份铅笔只需要花1份的钱.\n\n所以,3份钢笔与1份铅笔共花140元,1份钢笔和1份铅笔共要花60元\n\n于是2份钢笔花 \\(140 - 60 = 80\\) 元,2份铅笔共花 \\(200 - 80\\times 2 = 40\\) 元.\n\n2份钢笔比2份铅笔贵40元,而1支钢笔比1支铅笔贵4元,",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级一试解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级一试解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目有独立题干，但答案和解析直接给出，泄露风险高，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json#2#4",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "4. 小明带200元钱去买文具.按照以往的经验,小明买若干支钢笔和铅笔,钱正好用完.到了文具店,发现店内做活动:钢笔买3支送1支,铅笔买1支送1支.\n\n小明发现,花140元恰好可以买到和原来数量相同的钢笔和铅笔.\n\n已知钢笔单价比铅笔贵4元,小明购买的钢笔数量是铅笔数量的2倍.\n\n请问,小明买了多少支铅笔?",
+      "answer": "10",
+      "solution": "假设买了4份钢笔,2份铅笔,则4份钢笔和2份铅笔共要花200元.\n\n做活动时,4份钢笔只需要花3份的钱,2份铅笔只需要花1份的钱.\n\n所以,3份钢笔与1份铅笔共花140元,1份钢笔和1份铅笔共要花60元\n\n于是2份钢笔花 \\(140 - 60 = 80\\) 元,2份铅笔共花 \\(200 - 80\\times 2 = 40\\) 元.\n\n2份钢笔比2份铅笔贵40元,而1支钢笔比1支铅笔贵4元,"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "5. 有一类七位数,由数字1\\~7各一个组成,且4和5之间的数字之和为6,3和6之间的数字之和为12. 请问:\n\n(1)这样的七位数中,最小的数是多少?\n\n(2)这样的七位数中,最大的数是多少?\n\n(3)所有满足要求的七位数共有多少个?",
+      "answer_text": "(1)1237564(2)6753214(3)26",
+      "solution_text": "(1)最小时,前几位要尽量小,如果前三位是123,则七位数为 \\(123\\dots 6\\dots\\) ,由于3和6之间的数和是12,只能是5和7,只能是1235764或1237564,前者不符合4和5之间和为6,所以最小是1237564.\n\n(2)最大时,如果首位是7,则3和6之间只能是 \\(1 + 2 + 4 + 5 = 12\\) ,变为 \\(73\\square \\square \\square \\square 6\\) 或 \\(76\\square \\square \\square 3\\) ,无论哪种情况,4和5之间的数字之和都不可能是6,所以首位不能是7.\n\n首位是6时,前三位最大是675,因为 \\(7 + 5 = 12\\) ,所以千位必须是3,那么4和5之间就是 \\(1 + 2 + 3 = 6\\) ,于是4在个位,最大是6753214.\n\n(3)4和5之间的数字之和是6,可以是6或 \\(1 + 2 + 3\\)\n\n\\(①\\) 如果是4和5之间是6,则这三个数可以是465或564\n\n对465,由于3和6之间和数之和是12,\n\n(i)当3在6之前时,只能是317465或371465,此时2可以在最前或最后,共4种;\n\n(ii)当3在6之后时,只能是46573,考虑1和2,可以是46573或46573或46573,各2种,共6种.\n\n所以共10种.\n\n对564与上同理,也是10种.\n\n所以共20种.\n\n\\(②\\) 如果4和5之间是 \\(1 + 2 + 3\\) ,考虑6的位置:\n\n(i)6在这5个数之前时,由于3和6之间只有4、5中的一个数,只能是 \\(5 + 7\\) 或 \\(1 + 4 + 5\\)\n\n所以是6753或6741324,共 \\(2 + 1 = 3\\) 种;\n\n(ii)6在这5个数之后时,与上同理,也是3种.共6种.\n\n综上,所有满足条件的7位数共有 \\(20 + 6 = 26\\) 个.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级一试解析/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级一试解析/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，不适合用于考试，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json#3#5",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "5. 有一类七位数,由数字1\\~7各一个组成,且4和5之间的数字之和为6,3和6之间的数字之和为12. 请问:\n\n(1)这样的七位数中,最小的数是多少?\n\n(2)这样的七位数中,最大的数是多少?\n\n(3)所有满足要求的七位数共有多少个?",
+      "answer": "(1)1237564(2)6753214(3)26",
+      "solution": "(1)最小时,前几位要尽量小,如果前三位是123,则七位数为 \\(123\\dots 6\\dots\\) ,由于3和6之间的数和是12,只能是5和7,只能是1235764或1237564,前者不符合4和5之间和为6,所以最小是1237564.\n\n(2)最大时,如果首位是7,则3和6之间只能是 \\(1 + 2 + 4 + 5 = 12\\) ,变为 \\(73\\square \\square \\square \\square 6\\) 或 \\(76\\square \\square \\square 3\\) ,无论哪种情况,4和5之间的数字之和都不可能是6,所以首位不能是7.\n\n首位是6时,前三位最大是675,因为 \\(7 + 5 = 12\\) ,所以千位必须是3,那么4和5之间就是 \\(1 + 2 + 3 = 6\\) ,于是4在个位,最大是6753214.\n\n(3)4和5之间的数字之和是6,可以是6或 \\(1 + 2 + 3\\)\n\n\\(①\\) 如果是4和5之间是6,则这三个数可以是465或564\n\n对465,由于3和6之间和数之和是12,\n\n(i)当3在6之前时,只能是317465或371465,此时2可以在最前或最后,共4种;\n\n(ii)当3在6之后时,只能是46573,考虑1和2,可以是46573或46573或46573,各2种,共6种.\n\n所以共10种.\n\n对564与上同理,也是10种.\n\n所以共20种.\n\n\\(②\\) 如果4和5之间是 \\(1 + 2 + 3\\) ,考虑6的位置:\n\n(i)6在这5个数之前时,由于3和6之间只有4、5中的一个数,只能是 \\(5 + 7\\) 或 \\(1 + 4 + 5\\)\n\n所以是6753或6741324,共 \\(2 + 1 = 3\\) 种;\n\n(ii)6在这5个数之后时,与上同理,也是3种.共6种.\n\n综上,所有满足条件的7位数共有 \\(20 + 6 = 26\\) 个."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 小明和父母去游玩,拍摄了单人照、合照共23张.不含有小明的照片中,妈妈出现的次数是爸爸出现次数的2倍;含有小明的照片中,单人照比合照少一张;且小明的单人照占所有单人照张数的一半.那么,小明出现的照片共有________张.",
+      "answer_text": "15",
+      "solution_text": "设爸爸的单人照有 \\(x\\) 张,爸爸妈妈双人合照有 \\(y\\) 张;\n\n由题意,妈妈的单人照有 \\(2(x + y) - y = 2x + y\\) 张,\n\n小明的单人照有 \\(x + (2x + y) = 3x + y\\) 张,\n\n含有小明的合照有 \\(3x + y + 1\\) 张,\n\n照片总数为 \\((3x + y) + (3x + y + 1) + (2x + y) + (x + y) = 9x + 4y + 1\\)\n\n所以, \\(9x + 4y + 1 = 23\\)\n\n方程只有一组自然数解: \\(x = 2\\) , \\(y = 1\\)\n\n所以,小明的单人照有 \\(2\\times 3 + 1 = 7\\) 张,含有小明的合照有 \\(2\\times 3 + 1 + 1 = 8\\) 张,\n\n因此,小明出现的照片共有 \\(7 + 8 = 15\\) 张.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级二试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级二试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可独立出题，但直接包含答案和解析，存在高风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json#1#1",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json"
+        }
+      },
+      "text": "1. 小明和父母去游玩,拍摄了单人照、合照共23张.不含有小明的照片中,妈妈出现的次数是爸爸出现次数的2倍;含有小明的照片中,单人照比合照少一张;且小明的单人照占所有单人照张数的一半.那么,小明出现的照片共有________张.",
+      "answer": "15",
+      "solution": "设爸爸的单人照有 \\(x\\) 张,爸爸妈妈双人合照有 \\(y\\) 张;\n\n由题意,妈妈的单人照有 \\(2(x + y) - y = 2x + y\\) 张,\n\n小明的单人照有 \\(x + (2x + y) = 3x + y\\) 张,\n\n含有小明的合照有 \\(3x + y + 1\\) 张,\n\n照片总数为 \\((3x + y) + (3x + y + 1) + (2x + y) + (x + y) = 9x + 4y + 1\\)\n\n所以, \\(9x + 4y + 1 = 23\\)\n\n方程只有一组自然数解: \\(x = 2\\) , \\(y = 1\\)\n\n所以,小明的单人照有 \\(2\\times 3 + 1 = 7\\) 张,含有小明的合照有 \\(2\\times 3 + 1 + 1 = 8\\) 张,\n\n因此,小明出现的照片共有 \\(7 + 8 = 15\\) 张."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 有一类十位数,它的每位数字不是2就是0,且这类十位数都是2020的倍数,那么这类十位数共有________个.",
+      "answer_text": "24",
+      "solution_text": "设这个十位数为 \\(abcdefghij\\) ,注意到 \\(2020 = 2^{2}\\times 5\\times 101\\)\n\n因为十位数的每位数字是2或者0,且是2020的倍数,所以 \\(a = 2\\) , \\(j = 0\\)\n\n\\(101|\\overline{{a b + e f}} +\\overline{{i j}} -\\overline{{c d}} -\\overline{{g h}};\\)\n\n又 \\(\\overline{{a b + e f}} +\\overline{{i j}} -\\overline{{c d}}-\\overline{{g h}}\\leqslant 66\\) ,所以必有 \\(2\\overline{{b}} +\\overline{{e f}} +\\overline{{i0}} = \\overline{{c d}} +\\overline{{g h}}\\)\n\n那么 \\(2 + e + i = c + g\\) , \\(b + f = d + h\\) 且每个字母都是代表0或者2;\n\n所以这样的十位数共有: \\((1\\times 2 + 2\\times 1)\\times (1\\times 1 + 2\\times 2 + 1\\times 1) = 24\\) 个.",
+      "topic": "number_theory",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级二试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级二试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但直接包含答案和解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json#1#2",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json"
+        }
+      },
+      "text": "2. 有一类十位数,它的每位数字不是2就是0,且这类十位数都是2020的倍数,那么这类十位数共有________个.",
+      "answer": "24",
+      "solution": "设这个十位数为 \\(abcdefghij\\) ,注意到 \\(2020 = 2^{2}\\times 5\\times 101\\)\n\n因为十位数的每位数字是2或者0,且是2020的倍数,所以 \\(a = 2\\) , \\(j = 0\\)\n\n\\(101|\\overline{{a b + e f}} +\\overline{{i j}} -\\overline{{c d}} -\\overline{{g h}};\\)\n\n又 \\(\\overline{{a b + e f}} +\\overline{{i j}} -\\overline{{c d}}-\\overline{{g h}}\\leqslant 66\\) ,所以必有 \\(2\\overline{{b}} +\\overline{{e f}} +\\overline{{i0}} = \\overline{{c d}} +\\overline{{g h}}\\)\n\n那么 \\(2 + e + i = c + g\\) , \\(b + f = d + h\\) 且每个字母都是代表0或者2;\n\n所以这样的十位数共有: \\((1\\times 2 + 2\\times 1)\\times (1\\times 1 + 2\\times 2 + 1\\times 1) = 24\\) 个."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 在如图所示的 \\(8\\times 8\\) 方格表中选择16个单位方格染为黑色,使得每条平行于边或者对角线且与方格表相交(即不少于两个公共点)的直线一定与某个黑色方格相交(不少于两个公共点),共有________种不同的选择方式.(方格表不可翻转或旋转)",
+      "answer_text": "8",
+      "solution_text": "(1)图a中16条虚线上都有黑格,只能每条虚线上恰好1个黑格,可得以下2点:\n\n\\(①\\) 4个角上恰好各1个黑格.\n\n<table><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan=\\\"2\\\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1 1</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td><td rowspan=\"2\"></td><td rowspan=\"2\"></td><td rowspan=\"3\"></td><td rowspan=\"3\"></td><td rowspan=\"3\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td colspan=\\\"2\\\"></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td><td rowspan=\"3\"></td><td rowspan=\"2\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td valign=\\\"top\\\"></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan=\\\"2\\\" colspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"><br></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td row-span=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\">&lt;fcel&gt;</td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspacel&gt;</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspace=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></fcel&gt;</td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"><br></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td colspan=\"2\" rowspan=\"2\"></td><td rowspan=\"2\"></td><td rowspan=\"2\">1</td><td rowspan=\"2\"></td><td rowspan=\"2\"></td><td rowspan=\"4\"></td><td rowspan=\"4\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td&gt;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\">1</td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowgspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"&gt;</td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td colspan&gt;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\">1</td><td colspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"<br></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"<br></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></table>",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级二试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级二试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json#1#3",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json"
+        }
+      },
+      "text": "3. 在如图所示的 \\(8\\times 8\\) 方格表中选择16个单位方格染为黑色,使得每条平行于边或者对角线且与方格表相交(即不少于两个公共点)的直线一定与某个黑色方格相交(不少于两个公共点),共有________种不同的选择方式.(方格表不可翻转或旋转)",
+      "answer": "8",
+      "solution": "(1)图a中16条虚线上都有黑格,只能每条虚线上恰好1个黑格,可得以下2点:\n\n\\(①\\) 4个角上恰好各1个黑格.\n\n<table><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\"></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan=\\\"2\\\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1 1</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td><td rowspan=\"2\"></td><td rowspan=\"2\"></td><td rowspan=\"3\"></td><td rowspan=\"3\"></td><td rowspan=\"3\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td colspan=\\\"2\\\"></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td rowspan=\"2\"></td><td rowspan=\"3\"></td><td rowspan=\"2\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td valign=\\\"top\\\"></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td rowspan=\\\"2\\\" colspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"><br></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td row-span=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\">&lt;fcel&gt;</td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspacel&gt;</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspace=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></fcel&gt;</td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"><br></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td colspan=\"2\" rowspan=\"2\"></td><td rowspan=\"2\"></td><td rowspan=\"2\">1</td><td rowspan=\"2\"></td><td rowspan=\"2\"></td><td rowspan=\"4\"></td><td rowspan=\"4\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td&gt;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\">1</td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowgspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"&gt;</td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td colspan&gt;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\">1</td><td colspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"<br></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td rowspan=\\\"2\\\"></td><td rowspan=\\\"2\\\"<br></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></table>"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "4. 甲从 \\(A\\) 地出发步行去往 \\(B\\) 地,乙骑车带着丙同时从 \\(B\\) 地出发去往 \\(A\\) 地.三人在途中相遇后,乙、丙立刻下车,乙步行前往 \\(A\\) 地,丙步行返回 \\(B\\) 地,甲骑车到达 \\(B\\) 地后立刻返回,丙走了6千米后与甲迎面相遇,甲立刻下车步行前往 \\(A\\) 地.当乙到达 \\(A\\) 地时,甲还差4千米才到 \\(A\\) 地,已知乙、丙的步行速度相同,且甲、乙骑车的速度均为各自步行速度的3倍,那么 \\(AB\\) 之间的距离是多少千米?",
+      "answer_text": "35",
+      "solution_text": "如图,因为 \\(DC = 6km\\) ,若甲在 \\(DC\\) 段上由步行改为骑车,则可节省 \\(\\frac{2}{3}\\) 的时间,恰好可以多步行 \\(6 \\times \\frac{2}{3} = 4\\) 千米,即可以与乙同时到达 \\(A\\) 地.\n\n![](ocr_debug/2020年总决赛五年级二试解析/pages/page_003/images/0.jpg)\n\n这种情况下,甲步行和骑行的距离恰好分别是乙距离的2倍,\n\n因此甲步行速度是乙步行速度的2倍,\n\n甲的骑行速度是丙步行速度的6倍,\n\n甲的步行速度是乙骑车速度的 \\(\\frac{2}{3}\\)\n\n\\(\\therefore AC:CB = 2:3\\)\n\n\\(\\therefore CD:CB = 1: \\frac{1 + 6}{2} = 2: 7\\)\n\n\\(AB\\) 全长为 \\(6 \\times \\frac{7}{2} \\times \\frac{2 + 3}{3} = 35 \\mathrm{~km}\\)",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级二试解析/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级二试解析/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级二试解析/pages/page_003/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级二试解析/pages/page_003/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但答案和解析直接包含在文本中，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json#3#4",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json"
+        }
+      },
+      "text": "4. 甲从 \\(A\\) 地出发步行去往 \\(B\\) 地,乙骑车带着丙同时从 \\(B\\) 地出发去往 \\(A\\) 地.三人在途中相遇后,乙、丙立刻下车,乙步行前往 \\(A\\) 地,丙步行返回 \\(B\\) 地,甲骑车到达 \\(B\\) 地后立刻返回,丙走了6千米后与甲迎面相遇,甲立刻下车步行前往 \\(A\\) 地.当乙到达 \\(A\\) 地时,甲还差4千米才到 \\(A\\) 地,已知乙、丙的步行速度相同,且甲、乙骑车的速度均为各自步行速度的3倍,那么 \\(AB\\) 之间的距离是多少千米?",
+      "answer": "35",
+      "solution": "如图,因为 \\(DC = 6km\\) ,若甲在 \\(DC\\) 段上由步行改为骑车,则可节省 \\(\\frac{2}{3}\\) 的时间,恰好可以多步行 \\(6 \\times \\frac{2}{3} = 4\\) 千米,即可以与乙同时到达 \\(A\\) 地.\n\n![](ocr_debug/2020年总决赛五年级二试解析/pages/page_003/images/0.jpg)\n\n这种情况下,甲步行和骑行的距离恰好分别是乙距离的2倍,\n\n因此甲步行速度是乙步行速度的2倍,\n\n甲的骑行速度是丙步行速度的6倍,\n\n甲的步行速度是乙骑车速度的 \\(\\frac{2}{3}\\)\n\n\\(\\therefore AC:CB = 2:3\\)\n\n\\(\\therefore CD:CB = 1: \\frac{1 + 6}{2} = 2: 7\\)\n\n\\(AB\\) 全长为 \\(6 \\times \\frac{7}{2} \\times \\frac{2 + 3}{3} = 35 \\mathrm{~km}\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020年总决赛五年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2020年总决赛五年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "5. 如图, \\(P\\) 是正六边形 \\(ABCDEF\\) 边 \\(AF\\) 上一点, \\(PC\\) 与 \\(BE\\) 交于 \\(M\\) , \\(AM\\) 与 \\(BP\\) 交于 \\(N\\) ,已知三角形 \\(APN\\) 和三角形 \\(PMF\\) 的面积分别为4和24.那么:\n\n(1)求三角形 \\(BMN\\) 的面积.\n\n(2)求三角形MED的面积.",
+      "answer_text": "(1)16;(2)48.",
+      "solution_text": "(1)连接 \\(CF\\) 交 \\(BE\\) 于点 \\(O\\) ,那么 \\(O\\) 是 \\(CF\\) 中点, \\(M\\) 是 \\(PC\\) 中点,所以 \\(S_{\\triangle FCM} = 24, S_{\\triangle FOM} = 12\\) .\n\n又三角形 \\(AFM\\) 的面积是平行四边形 \\(ABOF\\) 面积的一半,所以 \\(S_{\\triangle FPM} + S_{\\triangle APN} + S_{\\triangle PMN} = S_{\\triangle FOM} + S_{\\triangle BMN} + S_{\\triangle ANB}\\) ,\n\n![](ocr_debug/2020年总决赛五年级二试解析/pages/page_003/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年总决赛五年级二试解析/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级二试解析/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级二试解析/pages/page_003/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年总决赛五年级二试解析/pages/page_003/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，存在高风险泄露，仅适合作为练习材料。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json#3#5",
+          "json_path": "source_pdf/五年级/2020/2020年总决赛五年级二试解析.json"
+        }
+      },
+      "text": "5. 如图, \\(P\\) 是正六边形 \\(ABCDEF\\) 边 \\(AF\\) 上一点, \\(PC\\) 与 \\(BE\\) 交于 \\(M\\) , \\(AM\\) 与 \\(BP\\) 交于 \\(N\\) ,已知三角形 \\(APN\\) 和三角形 \\(PMF\\) 的面积分别为4和24.那么:\n\n(1)求三角形 \\(BMN\\) 的面积.\n\n(2)求三角形MED的面积.",
+      "answer": "(1)16;(2)48.",
+      "solution": "(1)连接 \\(CF\\) 交 \\(BE\\) 于点 \\(O\\) ,那么 \\(O\\) 是 \\(CF\\) 中点, \\(M\\) 是 \\(PC\\) 中点,所以 \\(S_{\\triangle FCM} = 24, S_{\\triangle FOM} = 12\\) .\n\n又三角形 \\(AFM\\) 的面积是平行四边形 \\(ABOF\\) 面积的一半,所以 \\(S_{\\triangle FPM} + S_{\\triangle APN} + S_{\\triangle PMN} = S_{\\triangle FOM} + S_{\\triangle BMN} + S_{\\triangle ANB}\\) ,\n\n![](ocr_debug/2020年总决赛五年级二试解析/pages/page_003/images/1.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2020\\div (10 + 1\\div 10)\\) 的计算结果是",
+      "answer_text": "200",
+      "solution_text": "\\(2020\\div (10 + 1\\div 10) = 2020\\div 10.1 = 200\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干为独立数学计算题，但文本块包含答案和解析，存在中等泄漏风险。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json#1#1",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(2020\\div (10 + 1\\div 10)\\) 的计算结果是",
+      "answer": "200",
+      "solution": "\\(2020\\div (10 + 1\\div 10) = 2020\\div 10.1 = 200\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 某宠物店中有小猫和小兔共33只,小兔分为白兔和黑兔两类.如果小猫数量是白兔数量的2倍,同时恰好是黑兔数量的3倍.那么这家宠物店有 只小兔.",
+      "answer_text": "15",
+      "solution_text": "将小猫数量设为6份,则白兔、黑兔分别为3份、2份,故小猫为 \\(33\\div (6 + 3 + 2)\\times 6 = 18\\) 只,小兔为 \\(33 - 18 = 15\\) 只.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目为标准数学竞赛题，但直接包含答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json#1#2",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json"
+        }
+      },
+      "text": "2. 某宠物店中有小猫和小兔共33只,小兔分为白兔和黑兔两类.如果小猫数量是白兔数量的2倍,同时恰好是黑兔数量的3倍.那么这家宠物店有 只小兔.",
+      "answer": "15",
+      "solution": "将小猫数量设为6份,则白兔、黑兔分别为3份、2份,故小猫为 \\(33\\div (6 + 3 + 2)\\times 6 = 18\\) 只,小兔为 \\(33 - 18 = 15\\) 只."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 将0到8这九个数字不重复地填入下面算式的方框中,使等式成立.其中数字\"0\"、\"2\"、\"4\"、\"6\"已被填入,那么算式中的四位被减数是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "4180",
+      "solution_text": "将数字谜转换为字母表示,即为 \\(4AB0 - 6CD\\times \\overline{{E.2}} = 2020\\) .由于 \\(1980< 6CD\\times \\overline{{E.2}} < 3000\\) 可知 \\(E = 3\\) 或4,而 \\(E\\neq 4\\) ,只能 \\(E = 3\\) .再由结果为整数且个位为0,可知 \\(6CD\\) 为25的倍数,进而得到 \\(D = 5\\) , \\(C = 7\\) ,所以 \\(4AB0 = 675\\times 3.2 + 2020 = 4180\\) ,即四位被减数为4180.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目文本包含完整答案和解析，存在高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json#1#3",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json"
+        }
+      },
+      "text": "3. 将0到8这九个数字不重复地填入下面算式的方框中,使等式成立.其中数字\"0\"、\"2\"、\"4\"、\"6\"已被填入,那么算式中的四位被减数是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "4180",
+      "solution": "将数字谜转换为字母表示,即为 \\(4AB0 - 6CD\\times \\overline{{E.2}} = 2020\\) .由于 \\(1980< 6CD\\times \\overline{{E.2}} < 3000\\) 可知 \\(E = 3\\) 或4,而 \\(E\\neq 4\\) ,只能 \\(E = 3\\) .再由结果为整数且个位为0,可知 \\(6CD\\) 为25的倍数,进而得到 \\(D = 5\\) , \\(C = 7\\) ,所以 \\(4AB0 = 675\\times 3.2 + 2020 = 4180\\) ,即四位被减数为4180."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 如图,三角形ABC是等边三角形,三角形BCD是等腰直角三角形,如果 \\(BC = 18\\) ,那么三角形ACD的面积是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/1.jpg)\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer_text": "81",
+      "solution_text": "过 \\(A\\) 作三角形 \\(ACD\\) 、三角形 \\(ABC\\) 的高 \\(AE\\) 、 \\(AF\\) ,则 \\(AECF\\) 是一个长方形,由于 \\(CF\\) 长是 \\(BC\\) 的一半,所以 \\(AE = CF = 18\\times \\frac{1}{2} = 9\\) , \\(S_{\\Delta ACD} = 18\\times 9\\div 2 = 81\\)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解析，存在高风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json#1#4",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json"
+        }
+      },
+      "text": "4. 如图,三角形ABC是等边三角形,三角形BCD是等腰直角三角形,如果 \\(BC = 18\\) ,那么三角形ACD的面积是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/1.jpg)\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer": "81",
+      "solution": "过 \\(A\\) 作三角形 \\(ACD\\) 、三角形 \\(ABC\\) 的高 \\(AE\\) 、 \\(AF\\) ,则 \\(AECF\\) 是一个长方形,由于 \\(CF\\) 长是 \\(BC\\) 的一半,所以 \\(AE = CF = 18\\times \\frac{1}{2} = 9\\) , \\(S_{\\Delta ACD} = 18\\times 9\\div 2 = 81\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 一个四位完全平方数,其前两位数字顺次组成的两位数比后两位数字顺次组成的两位数大4,那么这个四位数是",
+      "answer_text": "6561",
+      "solution_text": "设这个四位数为 \\(n^{2}\\) ,它的后两位为 \\(x\\) ,则前两位为 \\(x + 4\\) ,依题意有 \\(100(x + 4) + x = n^{2}\\) ,于是得到 \\(101x = (n - 20)(n + 20)\\) .这表明 \\(n - 20\\) 、 \\(n + 20\\) 中至少有一个是101的倍数,考虑到 \\(31< n< 100\\) ,只能有 \\(n + 20 = 101\\) ,得到 \\(n = 81\\) ,所以这个四位数为 \\(81^{2} = 6561\\) .",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学问题描述，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json"
+        }
+      },
+      "text": "5. 一个四位完全平方数,其前两位数字顺次组成的两位数比后两位数字顺次组成的两位数大4,那么这个四位数是",
+      "answer": "6561",
+      "solution": "设这个四位数为 \\(n^{2}\\) ,它的后两位为 \\(x\\) ,则前两位为 \\(x + 4\\) ,依题意有 \\(100(x + 4) + x = n^{2}\\) ,于是得到 \\(101x = (n - 20)(n + 20)\\) .这表明 \\(n - 20\\) 、 \\(n + 20\\) 中至少有一个是101的倍数,考虑到 \\(31< n< 100\\) ,只能有 \\(n + 20 = 101\\) ,得到 \\(n = 81\\) ,所以这个四位数为 \\(81^{2} = 6561\\) ."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 在空格里填入数字1一6,使得每行、每列和每宫的数字都不重复.每一条箭头上经过的数字之和等于箭头尾圆圈里的数,那么,最后一行前五个数字从左到右组成的五位数是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer_text": "43615",
+      "solution_text": "如图.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json"
+        }
+      },
+      "text": "6. 在空格里填入数字1一6,使得每行、每列和每宫的数字都不重复.每一条箭头上经过的数字之和等于箭头尾圆圈里的数,那么,最后一行前五个数字从左到右组成的五位数是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer": "43615",
+      "solution": "如图."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 用 1、2、3、4、5 组成数字不重复的五位数共有 120 个,将这 120 个五位数按从大到小的顺序排成一列,相邻两个数作差,得到的 119 个差中有 个大于 100.",
+      "answer_text": "35",
+      "solution_text": "根据相邻的两个数百位数字的差进行分类:\n\n(1)百位差为0,则两个数前三位相同,共有 \\(5\\times 4\\times 3 = 60\\) 种情况,即有60个差;\n\n(2)百位差为1,则百位上有2-1、3-2、4-3、5-4共4种情况,此时还剩3个数字,前两位数字有 \\(3\\times 2 = 6\\) 种情况,共有 \\(6\\times 4 = 24\\) 个差;\n\n(3)百位差不是0或1,共有 \\(119 - 60 - 24 = 35\\) 个差.\n\n对于相邻的两个数,若它们的百位差为0或1,则两数差会小于100;而当它们的百位差不等于0或1时,两数差大于100.综上,这119个差中会有35个差大于100.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整题干、答案和解析，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json#2#7",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json"
+        }
+      },
+      "text": "7. 用 1、2、3、4、5 组成数字不重复的五位数共有 120 个,将这 120 个五位数按从大到小的顺序排成一列,相邻两个数作差,得到的 119 个差中有 个大于 100.",
+      "answer": "35",
+      "solution": "根据相邻的两个数百位数字的差进行分类:\n\n(1)百位差为0,则两个数前三位相同,共有 \\(5\\times 4\\times 3 = 60\\) 种情况,即有60个差;\n\n(2)百位差为1,则百位上有2-1、3-2、4-3、5-4共4种情况,此时还剩3个数字,前两位数字有 \\(3\\times 2 = 6\\) 种情况,共有 \\(6\\times 4 = 24\\) 个差;\n\n(3)百位差不是0或1,共有 \\(119 - 60 - 24 = 35\\) 个差.\n\n对于相邻的两个数,若它们的百位差为0或1,则两数差会小于100;而当它们的百位差不等于0或1时,两数差大于100.综上,这119个差中会有35个差大于100."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 如图,已知正十边形的面积是 2020,那么,图中阴影部分的面积是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题 12 分,共 48 分)",
+      "answer_text": "505",
+      "solution_text": "如图,通过连接正十边形的对角线可将阴影部分分成了五个形状大小完全相同的直角三角形(形如 \\(\\Delta ABC\\) ),而再通过图中的长方形过渡,可知其中 \\(\\Delta ABC\\) 的面积为 \\(\\Delta ACD\\) 面积的一半, \\(\\Delta ACD\\) 面积恰为正十边形面积的 \\(\\frac{1}{10}\\) ,于是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（解析版）/pages/page_002/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本块包含题干、答案和解析，答案直接泄露，不适合作为考试题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json#2#8",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（解析版）.json"
+        }
+      },
+      "text": "8. 如图,已知正十边形的面积是 2020,那么,图中阴影部分的面积是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题 12 分,共 48 分)",
+      "answer": "505",
+      "solution": "如图,通过连接正十边形的对角线可将阴影部分分成了五个形状大小完全相同的直角三角形(形如 \\(\\Delta ABC\\) ),而再通过图中的长方形过渡,可知其中 \\(\\Delta ABC\\) 的面积为 \\(\\Delta ACD\\) 面积的一半, \\(\\Delta ACD\\) 面积恰为正十边形面积的 \\(\\frac{1}{10}\\) ,于是\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（解析版）/pages/page_002/images/1.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 从 1 到 20 这 20 个自然数中,最多能选出 个数,使得任意一个选出的数都不是另一个选出的数的 2 倍或 3 倍.",
+      "answer_text": "12",
+      "solution_text": "对任何一个正整数,都可以经过分解质因数写成如下形式: \\(A \\times 2^{a} \\times 3^{b}\\) ,其中 \\(A\\) 与2和3都互质, \\(a\\) 和 \\(b\\) 都是自然数.如果两个自然数写成以上形式后, \\(A\\) 不相同,那么它们就不可能存在2倍或3倍关系.因此我们把自然数写成 \\(A \\times 2^{a} \\times 3^{b}\\) 后,按 \\(A\\) 的取值进行分组,再来分析每组至多取多少个.\n\n(1)对于 \\(A = 1\\) ,可以把20以内的形如 \\(1 \\times 2^{a} \\times 3^{b} = 2^{a} \\times 3^{b}\\) 按照 \\(a\\) 、 \\(b\\) 的取值排成下表:\n\n<table><tr><td>16 = 2a×3b</td><td></td><td></td></tr><tr><td>8 = 2a×3b</td><td></td><td></td></tr><tr><td>4 = 2a×3b</td><td>12 = 2a×3b</td><td></td></tr><tr><td>2 = 2a×3b</td><td>6 = 2a×3b</td><td>18 = 2a×3b</td></tr><tr><td>1</td><td>3 = 2a×3b</td><td>9 = 2a×3b</td></tr></table>\n\n存在2倍、3倍关系的两数必是同一行或同一列中相邻的两个数,所以不相邻的数最多取5个,例如1,4,16,6,9;\n\n(2)对 \\(A = 5\\) 时,在5、10、15、20中最多取2个数;\n\n(3)对 \\(A = 7\\) 时,7、14中最多取1个数;\n\n(4)剩下的11、13、17和19四个数都可以取.\n\n综上,最多取 \\(5 + 2 + 1 + 4 = 12\\) 个数,比如1,4,5,6,7,9,11,13,16,17,19,20就符合要求.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json"
+        }
+      },
+      "text": "9. 从 1 到 20 这 20 个自然数中,最多能选出 个数,使得任意一个选出的数都不是另一个选出的数的 2 倍或 3 倍.",
+      "answer": "12",
+      "solution": "对任何一个正整数,都可以经过分解质因数写成如下形式: \\(A \\times 2^{a} \\times 3^{b}\\) ,其中 \\(A\\) 与2和3都互质, \\(a\\) 和 \\(b\\) 都是自然数.如果两个自然数写成以上形式后, \\(A\\) 不相同,那么它们就不可能存在2倍或3倍关系.因此我们把自然数写成 \\(A \\times 2^{a} \\times 3^{b}\\) 后,按 \\(A\\) 的取值进行分组,再来分析每组至多取多少个.\n\n(1)对于 \\(A = 1\\) ,可以把20以内的形如 \\(1 \\times 2^{a} \\times 3^{b} = 2^{a} \\times 3^{b}\\) 按照 \\(a\\) 、 \\(b\\) 的取值排成下表:\n\n<table><tr><td>16 = 2a×3b</td><td></td><td></td></tr><tr><td>8 = 2a×3b</td><td></td><td></td></tr><tr><td>4 = 2a×3b</td><td>12 = 2a×3b</td><td></td></tr><tr><td>2 = 2a×3b</td><td>6 = 2a×3b</td><td>18 = 2a×3b</td></tr><tr><td>1</td><td>3 = 2a×3b</td><td>9 = 2a×3b</td></tr></table>\n\n存在2倍、3倍关系的两数必是同一行或同一列中相邻的两个数,所以不相邻的数最多取5个,例如1,4,16,6,9;\n\n(2)对 \\(A = 5\\) 时,在5、10、15、20中最多取2个数;\n\n(3)对 \\(A = 7\\) 时,7、14中最多取1个数;\n\n(4)剩下的11、13、17和19四个数都可以取.\n\n综上,最多取 \\(5 + 2 + 1 + 4 = 12\\) 个数,比如1,4,5,6,7,9,11,13,16,17,19,20就符合要求."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 五个同学之中要选出一个组长,每个人心里都已经有了一个排名,在推出的候选人中,一定会投票给自己心里排名最高的候选人.例:假设 \\(A\\) 心里的排名由高到底是 ADEBC,如果候选人是 \\(C\\) 和 \\(D\\) ,那么 \\(A\\) 就会投票给 \\(D\\) .某位候选人的得票数最高(不能并列)就会当选,现有以下情况:\n\n\\(①\\) 每个人心中自己排名最高;\n\n\\(②\\) 每个人在不同人心中的名次都互不相同(比如 \\(A\\) 在 \\(B\\) 心中排第 2, \\(A\\) 在别人心中就不是第 2);\n\n\\(③\\) 如果候选人是 \\(B\\) 、 \\(C\\) 、 \\(D\\) ,那么 \\(C\\) 会当选;\n\n\\(④\\) 如果候选人是 \\(A\\) 、 \\(D\\) 、 \\(E\\) ,那么 \\(D\\) 会当选;\n\n\\(⑤\\) 如果候选人是 \\(B\\) 、 \\(C\\) 、 \\(E\\) ,那么 \\(E\\) 会当选;\n\n\\(⑥\\) 在 \\(A\\) 心中, \\(D\\) 比 \\(B\\) 更适合当组长.\n\n如果 \\(E\\) 在 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(C\\) 心中的排名依次是 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\) ,那么 \\(\\overline{abcde} =\\)",
+      "answer_text": "25431",
+      "solution_text": "因为每个人心中自己都排第一,所以在有3个候选人时,这个三个候选人都会投自己,最终能有人当选,必然是剩下两个人都投了那个当选之人,由这个逻辑,分别可得:\n\n由 \\(③\\) 得, \\(A\\) 、 \\(E\\) 都投了 \\(C\\) ,即在 \\(A\\) 、 \\(E\\) 心中, \\(C\\) 的排名高于 \\(B\\) 和 \\(D\\) ;\n\n由 \\(④\\) 得,在 \\(B\\) 、 \\(C\\) 心中, \\(D\\) 的排名高于 \\(A\\) 和 \\(E\\) ;",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整数学竞赛题干，包含问题和条件，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json"
+        }
+      },
+      "text": "10. \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 五个同学之中要选出一个组长,每个人心里都已经有了一个排名,在推出的候选人中,一定会投票给自己心里排名最高的候选人.例:假设 \\(A\\) 心里的排名由高到底是 ADEBC,如果候选人是 \\(C\\) 和 \\(D\\) ,那么 \\(A\\) 就会投票给 \\(D\\) .某位候选人的得票数最高(不能并列)就会当选,现有以下情况:\n\n\\(①\\) 每个人心中自己排名最高;\n\n\\(②\\) 每个人在不同人心中的名次都互不相同(比如 \\(A\\) 在 \\(B\\) 心中排第 2, \\(A\\) 在别人心中就不是第 2);\n\n\\(③\\) 如果候选人是 \\(B\\) 、 \\(C\\) 、 \\(D\\) ,那么 \\(C\\) 会当选;\n\n\\(④\\) 如果候选人是 \\(A\\) 、 \\(D\\) 、 \\(E\\) ,那么 \\(D\\) 会当选;\n\n\\(⑤\\) 如果候选人是 \\(B\\) 、 \\(C\\) 、 \\(E\\) ,那么 \\(E\\) 会当选;\n\n\\(⑥\\) 在 \\(A\\) 心中, \\(D\\) 比 \\(B\\) 更适合当组长.\n\n如果 \\(E\\) 在 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(C\\) 心中的排名依次是 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\) ,那么 \\(\\overline{abcde} =\\)",
+      "answer": "25431",
+      "solution": "因为每个人心中自己都排第一,所以在有3个候选人时,这个三个候选人都会投自己,最终能有人当选,必然是剩下两个人都投了那个当选之人,由这个逻辑,分别可得:\n\n由 \\(③\\) 得, \\(A\\) 、 \\(E\\) 都投了 \\(C\\) ,即在 \\(A\\) 、 \\(E\\) 心中, \\(C\\) 的排名高于 \\(B\\) 和 \\(D\\) ;\n\n由 \\(④\\) 得,在 \\(B\\) 、 \\(C\\) 心中, \\(D\\) 的排名高于 \\(A\\) 和 \\(E\\) ;"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 在一条河流的上、下游分别有 \\(A\\) 、 \\(B\\) 两个港口,国国和庆庆开船分别从 \\(A\\) 、 \\(B\\) 这两个港口出发相向而行.国国出发时掉落了一个漂浮于水面上的箱子,而当他抵达 \\(B\\) 港的时候,庆庆刚好遇到了这个箱子,此时两船立刻调头返回.庆庆抵达 \\(B\\) 港后立刻再调头返回,并在再次遇到箱子时追上了国国,此地距离 \\(A\\) 港 90 千米.那么 \\(AB\\) 两个港口相距 千米.",
+      "answer_text": "135",
+      "solution_text": "设当国国到达 \\(B\\) 港时,箱子与庆庆相遇在图中 \\(C\\) 点,之前的这个时间段为 \\(①\\) 时段;而之后庆庆从调头到回到 \\(B\\) 点这个时间段为 \\(②\\) 时段,最后庆庆从 \\(B\\) 点出发到再次与箱子相遇在 \\(D\\) 点这个时间段设为 \\(③\\) 时段.做出线段图,如下图:\n\n首先分析箱子和国国,可以知道:在 \\(①\\) 时段里,国国和箱子的速度差为国国在静水中的速度,就是 \\(\\nu_{\\mathrm{静}}\\times t_{1} = BC\\) ;而在 \\(② + ③\\) 时段里,国国和箱子的速度和也是国国在静水中的速度,于是也就可以得到 \\(\\nu_{\\mathrm{静}}\\times (t_{2} + t_{3}) = BC\\) ,故 \\(t_{1} = t_{2} + t_{3}\\) 且 \\(C\\) 为 \\(AD\\) 的中点.\n\n再分析箱子和庆庆,可与上同理得到: \\(t_{2} = t_{3}\\) ,即 \\(t_{1} = 2t_{2} = 2t_{3}\\) ·\n\n最后分析庆庆可得:由于 \\(t_{1} = 2t_{3}\\) ,故而他在 \\(①\\) 时段里走的距离是 \\(③\\) 时段里走的距离的两倍,即 \\(D\\) 是 \\(BC\\) 的中点,也是 \\(AB\\) 的三等分点,所以 \\(AB\\) 是 \\(AD\\) 的1.5倍即135公里.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，描述了河流中的相遇问题，未包含答案或解析，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级A卷（试卷版）.json"
+        }
+      },
+      "text": "11. 在一条河流的上、下游分别有 \\(A\\) 、 \\(B\\) 两个港口,国国和庆庆开船分别从 \\(A\\) 、 \\(B\\) 这两个港口出发相向而行.国国出发时掉落了一个漂浮于水面上的箱子,而当他抵达 \\(B\\) 港的时候,庆庆刚好遇到了这个箱子,此时两船立刻调头返回.庆庆抵达 \\(B\\) 港后立刻再调头返回,并在再次遇到箱子时追上了国国,此地距离 \\(A\\) 港 90 千米.那么 \\(AB\\) 两个港口相距 千米.",
+      "answer": "135",
+      "solution": "设当国国到达 \\(B\\) 港时,箱子与庆庆相遇在图中 \\(C\\) 点,之前的这个时间段为 \\(①\\) 时段;而之后庆庆从调头到回到 \\(B\\) 点这个时间段为 \\(②\\) 时段,最后庆庆从 \\(B\\) 点出发到再次与箱子相遇在 \\(D\\) 点这个时间段设为 \\(③\\) 时段.做出线段图,如下图:\n\n首先分析箱子和国国,可以知道:在 \\(①\\) 时段里,国国和箱子的速度差为国国在静水中的速度,就是 \\(\\nu_{\\mathrm{静}}\\times t_{1} = BC\\) ;而在 \\(② + ③\\) 时段里,国国和箱子的速度和也是国国在静水中的速度,于是也就可以得到 \\(\\nu_{\\mathrm{静}}\\times (t_{2} + t_{3}) = BC\\) ,故 \\(t_{1} = t_{2} + t_{3}\\) 且 \\(C\\) 为 \\(AD\\) 的中点.\n\n再分析箱子和庆庆,可与上同理得到: \\(t_{2} = t_{3}\\) ,即 \\(t_{1} = 2t_{2} = 2t_{3}\\) ·\n\n最后分析庆庆可得:由于 \\(t_{1} = 2t_{3}\\) ,故而他在 \\(①\\) 时段里走的距离是 \\(③\\) 时段里走的距离的两倍,即 \\(D\\) 是 \\(BC\\) 的中点,也是 \\(AB\\) 的三等分点,所以 \\(AB\\) 是 \\(AD\\) 的1.5倍即135公里."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(\\left(\\frac{1}{20} -\\frac{1}{101}\\right) \\times 2020\\) 的计算结果为",
+      "answer_text": "81",
+      "solution_text": "原式 \\(= \\frac{101 - 20}{2020} \\times 2020 = 81\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含独立题干但直接给出答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json#1#1",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(\\left(\\frac{1}{20} -\\frac{1}{101}\\right) \\times 2020\\) 的计算结果为",
+      "answer": "81",
+      "solution": "原式 \\(= \\frac{101 - 20}{2020} \\times 2020 = 81\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 我国在10月1日阅兵式中展示的\"DF41\"型导弹的最大航程比俄罗斯的\"白杨 \\(M^{\\prime}\\) \"型导弹多 \\(\\frac{1}{6}\\) 而美国的\"民兵3\"型导弹比\"DF41\"型导弹的最大航程少 \\(\\frac{1}{6}\\) . 现已知\"白杨 \\(M^{\\prime}\\) \"型导弹比\"民兵3\"型导弹的航程多350千米,那么\"DF41\"型导弹的最大航程是 千米.",
+      "answer_text": "14700",
+      "solution_text": "易知\" \\(DF41\\) \"型导弹与\"白杨 \\(M^{\\prime \\prime}\\) 型导弹的最大射程之比为7:6,与\"民兵3\"型导弹的最大射程之比为6:5,则\" \\(DF41\\) \"型导弹、\"白杨 \\(M^{\\prime \\prime}\\) 型导弹、\"民兵3\"型导弹的最大射程之比为42:36:35. 所以\" \\(DF41\\) \"型导弹的最大射程为 \\(350 \\div (36 - 35) \\times 42 = 14700\\) 千米.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含独立题干但附有完整答案和解析，答案已泄露，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json#1#2",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json"
+        }
+      },
+      "text": "2. 我国在10月1日阅兵式中展示的\"DF41\"型导弹的最大航程比俄罗斯的\"白杨 \\(M^{\\prime}\\) \"型导弹多 \\(\\frac{1}{6}\\) 而美国的\"民兵3\"型导弹比\"DF41\"型导弹的最大航程少 \\(\\frac{1}{6}\\) . 现已知\"白杨 \\(M^{\\prime}\\) \"型导弹比\"民兵3\"型导弹的航程多350千米,那么\"DF41\"型导弹的最大航程是 千米.",
+      "answer": "14700",
+      "solution": "易知\" \\(DF41\\) \"型导弹与\"白杨 \\(M^{\\prime \\prime}\\) 型导弹的最大射程之比为7:6,与\"民兵3\"型导弹的最大射程之比为6:5,则\" \\(DF41\\) \"型导弹、\"白杨 \\(M^{\\prime \\prime}\\) 型导弹、\"民兵3\"型导弹的最大射程之比为42:36:35. 所以\" \\(DF41\\) \"型导弹的最大射程为 \\(350 \\div (36 - 35) \\times 42 = 14700\\) 千米."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图所示,线段 \\(DE\\) 、 \\(MN\\) 、 \\(PQ\\) 将等腰直角三角形 \\(ABC\\) 分成了1个等腰直角三角形和3个直角梯形,阴影部分的面积和与空白部分的面积和相等,线段 \\(DM\\) 、 \\(MP\\) 、 \\(PB\\) 的长度均为2厘米.则等腰直角三角形 \\(ADE\\) 的面积为 平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "18",
+      "solution_text": "如图所示,易知 \\(e\\) 区域的面积比 \\(d\\) 区域多 \\(2 \\times 2 = 4\\) 平方厘米,同样 \\(c\\) 区域的面积比 \\(b\\) 区域多4平方厘米.又知阴影部分与空白部分面积相等,所以 \\(a\\) 区域的面积为8平方厘米,从而作为一个等腰直角三角形,其直角边长为4厘米.由此可知,等腰直角三角形 \\(ADE\\) 的面积为 \\((4 + 2)^{2} \\div 2 = 18\\) 平方厘米.",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是完整的数学题干，但文本中直接包含答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json#1#3",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json"
+        }
+      },
+      "text": "3. 如图所示,线段 \\(DE\\) 、 \\(MN\\) 、 \\(PQ\\) 将等腰直角三角形 \\(ABC\\) 分成了1个等腰直角三角形和3个直角梯形,阴影部分的面积和与空白部分的面积和相等,线段 \\(DM\\) 、 \\(MP\\) 、 \\(PB\\) 的长度均为2厘米.则等腰直角三角形 \\(ADE\\) 的面积为 平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "18",
+      "solution": "如图所示,易知 \\(e\\) 区域的面积比 \\(d\\) 区域多 \\(2 \\times 2 = 4\\) 平方厘米,同样 \\(c\\) 区域的面积比 \\(b\\) 区域多4平方厘米.又知阴影部分与空白部分面积相等,所以 \\(a\\) 区域的面积为8平方厘米,从而作为一个等腰直角三角形,其直角边长为4厘米.由此可知,等腰直角三角形 \\(ADE\\) 的面积为 \\((4 + 2)^{2} \\div 2 = 18\\) 平方厘米."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 已知一个五位数密码恰包含1、5、7、9这四个数字,那么这个密码有种不同的可能.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "240",
+      "solution_text": "五位密码由4个数字组成,则必有其中一个数字出现了2次,这个数字有4种可能.所以这样的五位密码共有 \\(4 \\times (5 \\times 4 \\times 3) = 240\\) 种不同的可能.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题干和答案解析，适合用于练习但不宜直接用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json#1#4",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json"
+        }
+      },
+      "text": "4. 已知一个五位数密码恰包含1、5、7、9这四个数字,那么这个密码有种不同的可能.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "240",
+      "solution": "五位密码由4个数字组成,则必有其中一个数字出现了2次,这个数字有4种可能.所以这样的五位密码共有 \\(4 \\times (5 \\times 4 \\times 3) = 240\\) 种不同的可能."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 在右图的空格里填入数字 \\(1 \\sim 6\\) ,使得每行、每列和每宫的数字都不重复.黑点表示两边的数字之和为奇数.那么第四行前五个数字从左到右所组成的五位数是",
+      "answer_text": "15632",
+      "solution_text": "如图所示:\n\n<table><tr><td>5</td><td>2</td><td>3</td><td>4</td><td>1</td><td>6</td></tr><tr><td>6</td><td>1</td><td>4</td><td>2</td><td>5</td><td>3</td></tr><tr><td>4</td><td>3</td><td>2</td><td>1</td><td>6</td><td>5</td></tr><tr><td>1</td><td>5</td><td>6</td><td>3</td><td>2</td><td>4</td></tr><tr><td>3</td><td>6</td><td>1</td><td>5</td><td>4</td><td>2</td></tr><tr><td>2</td><td>4</td><td>5</td><td>6</td><td>3</td><td>1</td></tr></table>\n\n<table><tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td>6</td></tr><tr><td></td><td>1</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>4</td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td>1</td><td></td></tr></table>",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的题干，描述了数字填入问题，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json#1#5",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json"
+        }
+      },
+      "text": "5. 在右图的空格里填入数字 \\(1 \\sim 6\\) ,使得每行、每列和每宫的数字都不重复.黑点表示两边的数字之和为奇数.那么第四行前五个数字从左到右所组成的五位数是",
+      "answer": "15632",
+      "solution": "如图所示:\n\n<table><tr><td>5</td><td>2</td><td>3</td><td>4</td><td>1</td><td>6</td></tr><tr><td>6</td><td>1</td><td>4</td><td>2</td><td>5</td><td>3</td></tr><tr><td>4</td><td>3</td><td>2</td><td>1</td><td>6</td><td>5</td></tr><tr><td>1</td><td>5</td><td>6</td><td>3</td><td>2</td><td>4</td></tr><tr><td>3</td><td>6</td><td>1</td><td>5</td><td>4</td><td>2</td></tr><tr><td>2</td><td>4</td><td>5</td><td>6</td><td>3</td><td>1</td></tr></table>\n\n<table><tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td>6</td></tr><tr><td></td><td>1</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>4</td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td>1</td><td></td></tr></table>"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 如果一个两位数的所有偶因数之和恰好是它的所有奇因数之和的6倍,那么这个两位数最大是\n\n<table><tr><td>5</td><td></td><td></td><td></td><td></td><td>6</td></tr><tr><td></td><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>2</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>3</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>4</td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td>1</td><td></td></tr></table>",
+      "answer_text": "92",
+      "solution_text": "如果一个数的所有偶因数之和恰好是所有奇因数之和的6倍,那么将这个数分解质因数,质因数2的指数一定刚好是2. \\(92 = 2^{2} \\times 23\\) ,是满足条件的最大两位数.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，未包含答案或解析内容。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json"
+        }
+      },
+      "text": "6. 如果一个两位数的所有偶因数之和恰好是它的所有奇因数之和的6倍,那么这个两位数最大是\n\n<table><tr><td>5</td><td></td><td></td><td></td><td></td><td>6</td></tr><tr><td></td><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>2</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>3</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>4</td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td>1</td><td></td></tr></table>",
+      "answer": "92",
+      "solution": "如果一个数的所有偶因数之和恰好是所有奇因数之和的6倍,那么将这个数分解质因数,质因数2的指数一定刚好是2. \\(92 = 2^{2} \\times 23\\) ,是满足条件的最大两位数."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 已知 \\(n\\) 为正整数, 在大于 \\(n^{2}\\) 且小于 \\(n^{2} + \\frac{2019}{n^{2}}\\) 的正整数中存在 4 的倍数, 则 \\(n\\) 最大是 _______.",
+      "answer_text": "25",
+      "solution_text": "正整数 \\(n\\) 的值越大,则 \\(n^{2}\\) 与 \\(n^{2} + \\frac{2019}{n^{2}}\\) 越接近.如果 \\(n\\) 为偶数,则 \\(n^{2}\\) 一定是4的倍数,此时 \\(\\frac{2019}{n^{2}}\\) 必须大于4, \\(n^{2} < 2019 \\div 4 = 504 \\frac{3}{4}\\) , \\(n\\) 最大不超过22;如果 \\(n\\) 为奇数,则 \\(n^{2}\\) 除以4的余数一定是1,此时 \\(\\frac{2019}{n^{2}}\\) 必须大于3, \\(n^{2} < 2019 \\div 3 = 673\\) , \\(n\\) 最大不超过25. 综上, \\(n\\) 的最大值为25.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接附有答案和解析，存在高泄露风险，但可作为练习题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json#2#7",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json"
+        }
+      },
+      "text": "7. 已知 \\(n\\) 为正整数, 在大于 \\(n^{2}\\) 且小于 \\(n^{2} + \\frac{2019}{n^{2}}\\) 的正整数中存在 4 的倍数, 则 \\(n\\) 最大是 _______.",
+      "answer": "25",
+      "solution": "正整数 \\(n\\) 的值越大,则 \\(n^{2}\\) 与 \\(n^{2} + \\frac{2019}{n^{2}}\\) 越接近.如果 \\(n\\) 为偶数,则 \\(n^{2}\\) 一定是4的倍数,此时 \\(\\frac{2019}{n^{2}}\\) 必须大于4, \\(n^{2} < 2019 \\div 4 = 504 \\frac{3}{4}\\) , \\(n\\) 最大不超过22;如果 \\(n\\) 为奇数,则 \\(n^{2}\\) 除以4的余数一定是1,此时 \\(\\frac{2019}{n^{2}}\\) 必须大于3, \\(n^{2} < 2019 \\div 3 = 673\\) , \\(n\\) 最大不超过25. 综上, \\(n\\) 的最大值为25."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 在如图的乘法竖式中, 相同汉字代表相同数字, 不同汉字代表不同数字. 则\"月映满江\"所对应的四位数为 _______.\n\n江映月 × 映满江月 悬江月 江映月 满天月悬 满月江中映月\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer_text": "5217",
+      "solution_text": "易知\"满\"一定是1,由于\"月\"与\"江\"的乘积末位依然是\"月\",有如下两种可能:\n\n(1)\"江\"为6,\"月\"为偶数,此时\"悬\"为偶数;\n\n由于6映月 \\(\\times 6 =\\) 月悬6月,由取值范围估算,\"月\"只能是4,\"悬\"只能为0,\"映\"字没有可以取的值;\n\n(2)\"月\"为5,\"江\"为奇数,由于江映 \\(5 \\times\\) 江 \\(= 5\\) 悬江5,按取值范围估算,可以确定\"江\"的值为7. 继续计算,原算式为 \\(725 \\times 217 = 157325\\) ,\"月映满江\"所对应的四位数为5217.\n\n江映月 × 映满江 月悬江月 江映月 满天月悬 满月江中映月",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含标准题干，但直接附有答案和解析，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json#2#8",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（解析版）.json"
+        }
+      },
+      "text": "8. 在如图的乘法竖式中, 相同汉字代表相同数字, 不同汉字代表不同数字. 则\"月映满江\"所对应的四位数为 _______.\n\n江映月 × 映满江月 悬江月 江映月 满天月悬 满月江中映月\n\n## 三. 填空题III(每小题12分, 共48分)",
+      "answer": "5217",
+      "solution": "易知\"满\"一定是1,由于\"月\"与\"江\"的乘积末位依然是\"月\",有如下两种可能:\n\n(1)\"江\"为6,\"月\"为偶数,此时\"悬\"为偶数;\n\n由于6映月 \\(\\times 6 =\\) 月悬6月,由取值范围估算,\"月\"只能是4,\"悬\"只能为0,\"映\"字没有可以取的值;\n\n(2)\"月\"为5,\"江\"为奇数,由于江映 \\(5 \\times\\) 江 \\(= 5\\) 悬江5,按取值范围估算,可以确定\"江\"的值为7. 继续计算,原算式为 \\(725 \\times 217 = 157325\\) ,\"月映满江\"所对应的四位数为5217.\n\n江映月 × 映满江 月悬江月 江映月 满天月悬 满月江中映月"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图所示, 正方形 \\(ABCD\\) 的对角线 \\(BD\\) 与梯形 \\(BCED\\) 的对角线 \\(BE\\) 成 \\(30^{\\circ}\\) 角, 如果 \\(BE = 60\\) 厘米, 那么正方形 \\(ABCD\\) 的面积是 ______ 平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "1800",
+      "solution_text": "如下图,分别从 \\(C\\) 、 \\(E\\) 两点作 \\(BD\\) 上的垂线 \\(OC\\) 、 \\(EF\\) ,\n\n由于 \\(BCED\\) 为梯形,所以 \\(OC = EF\\) .由 \\(BD\\) 、 \\(BE\\) 的夹角为 \\(30^{\\circ}\\) ,\n\n可知 \\(EF = \\frac{1}{2} BE = 30\\) 厘米,所以 \\(OC\\) 的长度为30厘米,即正方形\n\n对角线长度的一半.所以正方形 \\(ABCD\\) 的面积为 \\((30 \\times 2)^{2} \\div 2 = 1800\\) 平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（解析版）/pages/page_003/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析信息，可以独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json"
+        }
+      },
+      "text": "9. 如图所示, 正方形 \\(ABCD\\) 的对角线 \\(BD\\) 与梯形 \\(BCED\\) 的对角线 \\(BE\\) 成 \\(30^{\\circ}\\) 角, 如果 \\(BE = 60\\) 厘米, 那么正方形 \\(ABCD\\) 的面积是 ______ 平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "1800",
+      "solution": "如下图,分别从 \\(C\\) 、 \\(E\\) 两点作 \\(BD\\) 上的垂线 \\(OC\\) 、 \\(EF\\) ,\n\n由于 \\(BCED\\) 为梯形,所以 \\(OC = EF\\) .由 \\(BD\\) 、 \\(BE\\) 的夹角为 \\(30^{\\circ}\\) ,\n\n可知 \\(EF = \\frac{1}{2} BE = 30\\) 厘米,所以 \\(OC\\) 的长度为30厘米,即正方形\n\n对角线长度的一半.所以正方形 \\(ABCD\\) 的面积为 \\((30 \\times 2)^{2} \\div 2 = 1800\\) 平方厘米.\n\n![](ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（解析版）/pages/page_003/images/0.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 如果一个自然数比另一个自然数的2倍大1, 我们就称这两个自然数构成\"机灵数对\". 那么1到21这21个自然数中, 最多可以取出 ______ 个数, 使得其中任两个数都不构成\"机灵数对\".",
+      "answer_text": "14",
+      "solution_text": "本题考查抽屉原理,可将1到21这21个自然数按\"机灵数对\"规则分为以下11组:\n\n第一组:1、3、7、15;第二组:2、5、11;第三组:4、9、19;第四组:6、13;\n\n第五组:8、17; 第六组:10、21; 第七组:12; 第八组:14;\n\n第九组:16; 第十组:18; 第十一组:20.\n\n要使取出的数中不含有\"机灵数对\",则取出的所有数应不同组,或者同组但位置不相邻.从而第一、二、三组每组至多可以取出2个数,其它各组每组最多可以取出1个数,这样最多只能取出 \\(2 \\times 3 + 1 \\times 8 = 14\\) 个数,例如可以这样取数:1、7、2、11、4、19、6、8、10、12、14、16、18、20.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有包含答案或解析，适合用于考试出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json"
+        }
+      },
+      "text": "10. 如果一个自然数比另一个自然数的2倍大1, 我们就称这两个自然数构成\"机灵数对\". 那么1到21这21个自然数中, 最多可以取出 ______ 个数, 使得其中任两个数都不构成\"机灵数对\".",
+      "answer": "14",
+      "solution": "本题考查抽屉原理,可将1到21这21个自然数按\"机灵数对\"规则分为以下11组:\n\n第一组:1、3、7、15;第二组:2、5、11;第三组:4、9、19;第四组:6、13;\n\n第五组:8、17; 第六组:10、21; 第七组:12; 第八组:14;\n\n第九组:16; 第十组:18; 第十一组:20.\n\n要使取出的数中不含有\"机灵数对\",则取出的所有数应不同组,或者同组但位置不相邻.从而第一、二、三组每组至多可以取出2个数,其它各组每组最多可以取出1个数,这样最多只能取出 \\(2 \\times 3 + 1 \\times 8 = 14\\) 个数,例如可以这样取数:1、7、2、11、4、19、6、8、10、12、14、16、18、20."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020年数学花园探秘笔试初赛_5年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 甲、乙两车分别从 \\(A\\) 、 \\(B\\) 两地同时出发, 相向而行, 在途中的 \\(C\\) 地相遇. 相遇后两车继续前进, 分别抵达 \\(B\\) 、 \\(A\\) 两地后立即调头返回, 相遇在 \\(D\\) 地. 如果出发时甲每小时多行22千米, 乙速度不变, 则两车出发后5小时刚好在 \\(D\\) 地相遇. 已知 \\(C\\) 、 \\(D\\) 两地的距离为60千米, 则 \\(A\\) 、 \\(B\\) 两地相距 ______ 千米.",
+      "answer_text": "330",
+      "solution_text": "考虑初始情况,当甲、乙走了5个小时的时候,他们间距为 \\(22 \\times 5 = 110\\) 千米,而后相遇于 \\(C\\) 地,与 \\(D\\) 地相距60千米,所以甲、乙速度比为 \\((110 - 60):60 = 5:6\\) .由此可知, \\(C\\) 地与 \\(A\\) 地的距离占全程的 \\(\\frac{5}{11}\\) , \\(D\\) 地与 \\(A\\) 地的距离占全程的 \\(1 - \\left(\\frac{5}{11} \\times 3 - 1\\right) = \\frac{7}{11}\\) ,根据 \\(C\\) 、 \\(D\\) 两地的距离为60千米,可知 \\(A\\) 、 \\(B\\) 两地相距 \\(60 \\div \\left(\\frac{7}{11} - \\frac{5}{11}\\right) = 330\\) 千米.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有包含答案或解析信息，无泄露风险，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/五年级/2020/2020年数学花园探秘笔试初赛_5年级B卷（试卷版）.json"
+        }
+      },
+      "text": "11. 甲、乙两车分别从 \\(A\\) 、 \\(B\\) 两地同时出发, 相向而行, 在途中的 \\(C\\) 地相遇. 相遇后两车继续前进, 分别抵达 \\(B\\) 、 \\(A\\) 两地后立即调头返回, 相遇在 \\(D\\) 地. 如果出发时甲每小时多行22千米, 乙速度不变, 则两车出发后5小时刚好在 \\(D\\) 地相遇. 已知 \\(C\\) 、 \\(D\\) 两地的距离为60千米, 则 \\(A\\) 、 \\(B\\) 两地相距 ______ 千米.",
+      "answer": "330",
+      "solution": "考虑初始情况,当甲、乙走了5个小时的时候,他们间距为 \\(22 \\times 5 = 110\\) 千米,而后相遇于 \\(C\\) 地,与 \\(D\\) 地相距60千米,所以甲、乙速度比为 \\((110 - 60):60 = 5:6\\) .由此可知, \\(C\\) 地与 \\(A\\) 地的距离占全程的 \\(\\frac{5}{11}\\) , \\(D\\) 地与 \\(A\\) 地的距离占全程的 \\(1 - \\left(\\frac{5}{11} \\times 3 - 1\\right) = \\frac{7}{11}\\) ,根据 \\(C\\) 、 \\(D\\) 两地的距离为60千米,可知 \\(A\\) 、 \\(B\\) 两地相距 \\(60 \\div \\left(\\frac{7}{11} - \\frac{5}{11}\\right) = 330\\) 千米."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(34 \\times 3 + 19 \\times 101 - 1\\) 的计算结果是",
+      "answer_text": "2020",
+      "solution_text": "原式 \\(= 102 - 1 + 19\\times 101 = 101 + 19\\times 101 = 20\\times 101 = 2020\\) ·",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接包含答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json#1#1",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(34 \\times 3 + 19 \\times 101 - 1\\) 的计算结果是",
+      "answer": "2020",
+      "solution": "原式 \\(= 102 - 1 + 19\\times 101 = 101 + 19\\times 101 = 20\\times 101 = 2020\\) ·"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 甲班的男生比乙班的男生多 \\(\\frac{1}{5}\\) ,乙班的女生比甲班的女生少 \\(\\frac{1}{6}\\) .如果甲班学生共有30名,那么乙班学生共有 名.",
+      "answer_text": "25",
+      "solution_text": "甲班男生人数:甲班男生人数 \\(= 6:5\\) ;甲班的女生人数:乙班女生人数 \\(= 6:5\\)\n\n所以甲班人数:乙班人数 \\(= 6:5\\) .甲班有30人,乙班有25人.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中包含明确答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json#1#2",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json"
+        }
+      },
+      "text": "2. 甲班的男生比乙班的男生多 \\(\\frac{1}{5}\\) ,乙班的女生比甲班的女生少 \\(\\frac{1}{6}\\) .如果甲班学生共有30名,那么乙班学生共有 名.",
+      "answer": "25",
+      "solution": "甲班男生人数:甲班男生人数 \\(= 6:5\\) ;甲班的女生人数:乙班女生人数 \\(= 6:5\\)\n\n所以甲班人数:乙班人数 \\(= 6:5\\) .甲班有30人,乙班有25人."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图,阴影圆和空白圆大小相同.空白圆是固定的,如果将阴影圆绕空白圆滚动一周,那么阴影圆扫过的面积是空白圆的面积的 倍.\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "8",
+      "solution_text": "阴影圆扫过的部分是一个环形.\n\n假设空白圆半径是1,那么阴影扫过的环形的外径是3.\n\n外径圆的面积是内径圆(也就是空白圆)的面积的9倍.\n\n环形面积是空白圆的8倍.\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（解析版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（解析版）/pages/page_001/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含答案和解析，直接泄露答案信息，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json#1#3",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json"
+        }
+      },
+      "text": "3. 如图,阴影圆和空白圆大小相同.空白圆是固定的,如果将阴影圆绕空白圆滚动一周,那么阴影圆扫过的面积是空白圆的面积的 倍.\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "8",
+      "solution": "阴影圆扫过的部分是一个环形.\n\n假设空白圆半径是1,那么阴影扫过的环形的外径是3.\n\n外径圆的面积是内径圆(也就是空白圆)的面积的9倍.\n\n环形面积是空白圆的8倍.\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（解析版）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（解析版）/pages/page_001/images/1.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 有一满杯浓度为 \\(32\\%\\) 的酒精溶液.第一次倒掉 \\(\\frac{1}{2}\\) ,用水加满;第二次倒掉 \\(\\frac{1}{3}\\) ,\n\n用纯酒精加满;第三次倒掉 \\(\\frac{1}{4}\\) ,用水加满.最后得到的酒精溶液的浓度是 \\(\\%\\)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "33",
+      "solution_text": "假设这杯酒精共有100份.\n\n开始时:酒精32份,水68份.\n\n第一次:倒掉 \\(\\frac{1}{2}\\) ,酒精剩 \\(32\\times \\frac{1}{2} = 16\\) 份,用水加满后,酒精仍是16份,水有 \\(100 - 16 = 84\\) 份.\n\n第二次:倒掉 \\(\\frac{1}{3}\\) ,水剩 \\(84\\times \\frac{2}{3} = 56\\) 份,用酒精加满后,水仍然是56份,水有 \\(100 - 56 = 44\\) 份.\n\n第三次:倒掉 \\(\\frac{1}{4}\\) ,酒精剩 \\(44\\times \\frac{3}{4} = 33\\) 份,用水加满后,酒精仍然是33份.\n\n## 二.填空题II(每小题10分,共40分)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目文本直接包含答案和解析，存在高泄露风险，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json#1#4",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json"
+        }
+      },
+      "text": "4. 有一满杯浓度为 \\(32\\%\\) 的酒精溶液.第一次倒掉 \\(\\frac{1}{2}\\) ,用水加满;第二次倒掉 \\(\\frac{1}{3}\\) ,\n\n用纯酒精加满;第三次倒掉 \\(\\frac{1}{4}\\) ,用水加满.最后得到的酒精溶液的浓度是 \\(\\%\\)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "33",
+      "solution": "假设这杯酒精共有100份.\n\n开始时:酒精32份,水68份.\n\n第一次:倒掉 \\(\\frac{1}{2}\\) ,酒精剩 \\(32\\times \\frac{1}{2} = 16\\) 份,用水加满后,酒精仍是16份,水有 \\(100 - 16 = 84\\) 份.\n\n第二次:倒掉 \\(\\frac{1}{3}\\) ,水剩 \\(84\\times \\frac{2}{3} = 56\\) 份,用酒精加满后,水仍然是56份,水有 \\(100 - 56 = 44\\) 份.\n\n第三次:倒掉 \\(\\frac{1}{4}\\) ,酒精剩 \\(44\\times \\frac{3}{4} = 33\\) 份,用水加满后,酒精仍然是33份.\n\n## 二.填空题II(每小题10分,共40分)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 定义 \\(a * b = \\frac{a \\times b}{a + b}\\) ,那么 \\((4 * 4) * (3 * 6)\\) 的计算结果是",
+      "answer_text": "1",
+      "solution_text": "\\(4*4 = \\frac{4\\times 4}{4 + 4} = 2\\) , \\(3*6 = \\frac{3\\times 6}{3 + 6} = 2\\) ,原式 \\(= \\frac{2\\times 2}{2 + 2} = 1\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含直接答案和详细解析，泄露风险高，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json#1#5",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json"
+        }
+      },
+      "text": "5. 定义 \\(a * b = \\frac{a \\times b}{a + b}\\) ,那么 \\((4 * 4) * (3 * 6)\\) 的计算结果是",
+      "answer": "1",
+      "solution": "\\(4*4 = \\frac{4\\times 4}{4 + 4} = 2\\) , \\(3*6 = \\frac{3\\times 6}{3 + 6} = 2\\) ,原式 \\(= \\frac{2\\times 2}{2 + 2} = 1\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 在下面的横式算式中,不同的汉字表示不同的数字,如果\"雨\"表示数字2,那么\"杨柳岸\"表示的三位数是\n\n\\[\\frac{\\text{雨}}{\\text{霖} + \\text{铃}} \\times \\text{杨柳岸} \\times \\left(\\text{晓风} + \\text{残月}\\right) = 2020\\]",
+      "answer_text": "160",
+      "solution_text": "\\(2020 = 2^{2} \\times 5 \\times 101\\) ,原数字谜等号左侧必有质因数101,杨柳岸不可能是101的倍数,只能(晓风 \\(+\\) 残月)是101的倍数,而晓风 \\(+\\) 残月 \\(< 200\\) ,所以:晓风 \\(+\\) 残月 \\(= 101\\) .\n\n所以:杨柳岸 \\(= (\\text{霖} + \\text{铃}) \\times 10\\) ,从而,杨 \\(= 1\\) ,岸 \\(= 0\\) ,所以: \\(10 + \\text{柳} = \\text{霖} + \\text{铃} ①\\) .\n\n综合以上信息:雨 \\(= 2\\) ,风 \\(+\\) 月 \\(= 11\\) ,晓 \\(+\\) 残 \\(= 9\\) ,杨 \\(= 1\\) ,岸 \\(= 0\\) ,知:柳 \\(+\\) 霖 \\(+\\) 铃 \\(= 22\\) ②.\n\n由 \\(①②\\) 知 柳 \\(= 6\\)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，未包含答案或解析信息，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json#1#6",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "6. 在下面的横式算式中,不同的汉字表示不同的数字,如果\"雨\"表示数字2,那么\"杨柳岸\"表示的三位数是\n\n\\[\\frac{\\text{雨}}{\\text{霖} + \\text{铃}} \\times \\text{杨柳岸} \\times \\left(\\text{晓风} + \\text{残月}\\right) = 2020\\]",
+      "answer": "160",
+      "solution": "\\(2020 = 2^{2} \\times 5 \\times 101\\) ,原数字谜等号左侧必有质因数101,杨柳岸不可能是101的倍数,只能(晓风 \\(+\\) 残月)是101的倍数,而晓风 \\(+\\) 残月 \\(< 200\\) ,所以:晓风 \\(+\\) 残月 \\(= 101\\) .\n\n所以:杨柳岸 \\(= (\\text{霖} + \\text{铃}) \\times 10\\) ,从而,杨 \\(= 1\\) ,岸 \\(= 0\\) ,所以: \\(10 + \\text{柳} = \\text{霖} + \\text{铃} ①\\) .\n\n综合以上信息:雨 \\(= 2\\) ,风 \\(+\\) 月 \\(= 11\\) ,晓 \\(+\\) 残 \\(= 9\\) ,杨 \\(= 1\\) ,岸 \\(= 0\\) ,知:柳 \\(+\\) 霖 \\(+\\) 铃 \\(= 22\\) ②.\n\n由 \\(①②\\) 知 柳 \\(= 6\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 老师将写有 1\\~5 的 5 张卡片分别交给 1\\~5 号同学,每位同学聪明且诚实,拿到的卡片上的数字和自己的编号不同.如果 A 同学告诉 B 同学自己的卡片数字后,B 能够推出所有人的卡片数字,则称 A 是 B 的\"线人\".老师悄悄告诉 1 号同学谁拿了 1 号卡片后,5 位同学进行了如下交谈:\n\n1号同学说:\"现在2号同学是我唯一的线人.\"\n\n2号同学说:\"这样说来,现在3号同学是我唯一的线人.\"\n\n3号和4号同学异口同声地说:\"那我不需要线人已经知道你们所有人的数了.\"\n\n那么,1\\~5号同学拿到的卡片数字顺次组成的五位数是",
+      "answer_text": "23514",
+      "solution_text": "如果1号偷看的是2号的卡片,2号不能成为1号的线人.\n\n由于2号是1号唯一的线人,所以1号的卡片数字必为2;\n\n同样的,2号的卡片数字必为3;\n\n此时如果4号的卡片数字不是1,他无法判断3号和5号谁的卡片数字为1,所以4号的卡片数字为1. 继而推出3号的卡片数字为5,5号的卡片数字为4.\n\n所以五位同学拿到的卡片数字顺次组成的五位数是23514.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整的题干、答案和解析，答案已泄露，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json#2#7",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json"
+        }
+      },
+      "text": "7. 老师将写有 1\\~5 的 5 张卡片分别交给 1\\~5 号同学,每位同学聪明且诚实,拿到的卡片上的数字和自己的编号不同.如果 A 同学告诉 B 同学自己的卡片数字后,B 能够推出所有人的卡片数字,则称 A 是 B 的\"线人\".老师悄悄告诉 1 号同学谁拿了 1 号卡片后,5 位同学进行了如下交谈:\n\n1号同学说:\"现在2号同学是我唯一的线人.\"\n\n2号同学说:\"这样说来,现在3号同学是我唯一的线人.\"\n\n3号和4号同学异口同声地说:\"那我不需要线人已经知道你们所有人的数了.\"\n\n那么,1\\~5号同学拿到的卡片数字顺次组成的五位数是",
+      "answer": "23514",
+      "solution": "如果1号偷看的是2号的卡片,2号不能成为1号的线人.\n\n由于2号是1号唯一的线人,所以1号的卡片数字必为2;\n\n同样的,2号的卡片数字必为3;\n\n此时如果4号的卡片数字不是1,他无法判断3号和5号谁的卡片数字为1,所以4号的卡片数字为1. 继而推出3号的卡片数字为5,5号的卡片数字为4.\n\n所以五位同学拿到的卡片数字顺次组成的五位数是23514."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 如图,一个 \\(3 \\times 3 \\times 3\\) 正方体,它的 6 个面已经被染成了 6 种不同的颜色,现将其分成 9 个 \\(3 \\times 1 \\times 1\\) 的小长方体,共有______种不同的分法.\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "21",
+      "solution_text": "(1)如果是 \\(3 \\times 3 \\times 1\\) 的长方体,将其分成3个相同的 \\(3 \\times 3 \\times 1\\) 的长方体,有2种不同的分法.\n\n(2)如图a,取走涂有阴影的立方块所在的 \\(3 \\times 3 \\times 1\\) 的长方体有3种不同取法.这3种取法都是对称的.不妨认为取走该立方体后剩余的立方体如图a1.\n\n图b中,取走涂有阴影的立方块所在的 \\(3 \\times 3 \\times 2\\) 的长方体,有2种不同的取法.如图b1和b2.\n\n图c中,取走涂有阴影的立方块所在的 \\(3 \\times 3 \\times \\frac{1}{2}\\) 的长方体,有2种不同取法.如图c1和图c2.\n\n(3)图c1有1种分法,图c2有 \\(2 \\times 2\\) 种分法.所以图b2有 \\(1 + 4 = 5\\) 种分法.图b1有1种分法,所以图a1有7种分法.本题答案 \\(7 \\times 3 = 21\\) 种.",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接给出答案和详细解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json#2#8",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json"
+        }
+      },
+      "text": "8. 如图,一个 \\(3 \\times 3 \\times 3\\) 正方体,它的 6 个面已经被染成了 6 种不同的颜色,现将其分成 9 个 \\(3 \\times 1 \\times 1\\) 的小长方体,共有______种不同的分法.\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "21",
+      "solution": "(1)如果是 \\(3 \\times 3 \\times 1\\) 的长方体,将其分成3个相同的 \\(3 \\times 3 \\times 1\\) 的长方体,有2种不同的分法.\n\n(2)如图a,取走涂有阴影的立方块所在的 \\(3 \\times 3 \\times 1\\) 的长方体有3种不同取法.这3种取法都是对称的.不妨认为取走该立方体后剩余的立方体如图a1.\n\n图b中,取走涂有阴影的立方块所在的 \\(3 \\times 3 \\times 2\\) 的长方体,有2种不同的取法.如图b1和b2.\n\n图c中,取走涂有阴影的立方块所在的 \\(3 \\times 3 \\times \\frac{1}{2}\\) 的长方体,有2种不同取法.如图c1和图c2.\n\n(3)图c1有1种分法,图c2有 \\(2 \\times 2\\) 种分法.所以图b2有 \\(1 + 4 = 5\\) 种分法.图b1有1种分法,所以图a1有7种分法.本题答案 \\(7 \\times 3 = 21\\) 种."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 甲、乙二人同时出发从 \\(A\\) 地前往 \\(B\\) 地,同时,丙从 \\(B\\) 地出发前往 \\(A\\) 地.已知甲、乙、丙的速度分别为4米/秒、6米/秒和5米/秒.途中三次出现某人正好在另外两人中点处的情况.如果第一次出现与第二次出现相隔14秒,那么第三次出现与第二次出现相隔______秒.",
+      "answer_text": "26",
+      "solution_text": "甲乙丙的速度比为4:6:5,甲走4份,乙走6份,丙走5份.\n\n第一次为乙在甲丙中间,丙走全程的 \\(\\frac{5}{13}\\) ;第二次为丙在甲乙中间,丙走了全程的 \\(\\frac{5}{10} = \\frac{1}{2}\\) ;第三次为甲在乙丙中间,丙走了全程的 \\(\\frac{5}{7}\\) .\n\n过程1:第一次出现到第二次出现,丙走了全程的 \\(\\frac{1}{2} - \\frac{5}{13} = \\frac{3}{26}\\) ;过程2:第二次出现到第三次出现,丙走了全程的 \\(\\frac{5}{7} - \\frac{1}{2} = \\frac{3}{14}\\) .两个过程用时比为 \\(\\frac{3}{26}:\\frac{3}{14} = 14:26\\) ,过程1用时14秒,过程2用时26秒.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json#2#9",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "9. 甲、乙二人同时出发从 \\(A\\) 地前往 \\(B\\) 地,同时,丙从 \\(B\\) 地出发前往 \\(A\\) 地.已知甲、乙、丙的速度分别为4米/秒、6米/秒和5米/秒.途中三次出现某人正好在另外两人中点处的情况.如果第一次出现与第二次出现相隔14秒,那么第三次出现与第二次出现相隔______秒.",
+      "answer": "26",
+      "solution": "甲乙丙的速度比为4:6:5,甲走4份,乙走6份,丙走5份.\n\n第一次为乙在甲丙中间,丙走全程的 \\(\\frac{5}{13}\\) ;第二次为丙在甲乙中间,丙走了全程的 \\(\\frac{5}{10} = \\frac{1}{2}\\) ;第三次为甲在乙丙中间,丙走了全程的 \\(\\frac{5}{7}\\) .\n\n过程1:第一次出现到第二次出现,丙走了全程的 \\(\\frac{1}{2} - \\frac{5}{13} = \\frac{3}{26}\\) ;过程2:第二次出现到第三次出现,丙走了全程的 \\(\\frac{5}{7} - \\frac{1}{2} = \\frac{3}{14}\\) .两个过程用时比为 \\(\\frac{3}{26}:\\frac{3}{14} = 14:26\\) ,过程1用时14秒,过程2用时26秒."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 如图,将三个正方形和一个长方形组合成一个左右对称的图形.如果长方形的面积是180,中间斜置的正方形的面积是54,那么左右两个正方形的面积和是______.\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "96",
+      "solution_text": "长方形的面积 \\(= \\mathrm{DC}\\times \\mathrm{DA} = 180\\)\n\n斜置正方形的面积 \\(=\\) 对角线平方 \\(\\div 2 = \\mathrm{DA}^{2}\\div 2 = 54\\)\n\n所以: \\(\\mathrm{DC:DA} = 180:108 = 5:3\\) .从而, \\(\\mathrm{DE:DA} = 5:6\\)\n\n又由于 \\(\\mathrm{DE} = \\mathrm{DG}\\) ,所以 \\(\\mathrm{DG:GA} = 5:1\\)\n\n从而 \\(\\mathrm{DF:FG:GA} = 1:4:1\\)\n\n中间斜置正方形的面积 \\(= \\mathrm{DA}^{2} = 18\\) 份 \\(= 54\\)\n\n左右两个正方形的面积和 \\(= \\mathrm{FG}^{2}\\times 2 = 32\\) 份 \\(= 96\\)\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（解析版）/pages/page_003/images/1.jpg)\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（解析版）/pages/page_003/images/2.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，没有出现答案或解析内容。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json#2#10",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "10. 如图,将三个正方形和一个长方形组合成一个左右对称的图形.如果长方形的面积是180,中间斜置的正方形的面积是54,那么左右两个正方形的面积和是______.\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "96",
+      "solution": "长方形的面积 \\(= \\mathrm{DC}\\times \\mathrm{DA} = 180\\)\n\n斜置正方形的面积 \\(=\\) 对角线平方 \\(\\div 2 = \\mathrm{DA}^{2}\\div 2 = 54\\)\n\n所以: \\(\\mathrm{DC:DA} = 180:108 = 5:3\\) .从而, \\(\\mathrm{DE:DA} = 5:6\\)\n\n又由于 \\(\\mathrm{DE} = \\mathrm{DG}\\) ,所以 \\(\\mathrm{DG:GA} = 5:1\\)\n\n从而 \\(\\mathrm{DF:FG:GA} = 1:4:1\\)\n\n中间斜置正方形的面积 \\(= \\mathrm{DA}^{2} = 18\\) 份 \\(= 54\\)\n\n左右两个正方形的面积和 \\(= \\mathrm{FG}^{2}\\times 2 = 32\\) 份 \\(= 96\\)\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（解析版）/pages/page_003/images/1.jpg)\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（解析版）/pages/page_003/images/2.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 已知五个数字 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\) 满足 \\(a < b < c < d < e\\) ,且五位数 \\(adbec\\) 、 \\(becad\\) 均为完全平方数,则 \\(abcde =\\) ______.",
+      "answer_text": "13468",
+      "solution_text": "(1) \\(c\\) 和 \\(d\\) 只能在 0、1、4、5、6、9 中取值. 由 \\(1 \\leq a < b < c\\) , 知 \\(c \\geq 3\\) .\n\n如果 \\(c\\) 是 5, 那么 \\(e = 2\\) , 矛盾.\n\n如果 \\(c\\) 是 6, 那么 \\(d\\) 只能是 9, \\(e\\) 无法取值.\n\n所以 \\(c\\) 只能是 4, 此时 \\(d = 5\\) 或者 6.\n\n(2)如果 \\(d = 5\\) ,那么 \\(a = 2\\) ,从而 \\(b = 3\\) . \\(adbec = 253e4\\) ,由 \\(160^{2} = 25600\\) , \\(159^{2} < 25600 - 300 = 25300\\) , 知, 没有形如 \\(253e4\\) 的平方数.\n\n(3)如果 \\(d = 6\\) ,那么 \\(\\overline{ad}\\) 是平方数的末两位, 知 \\(a\\) 为奇数, 结合 \\(a < b < c = 4\\) 知 \\(a\\) 只能是 1. 此时 \\(adbec = 16be4\\) . 结合 \\(130^{2} = 16900, 120^{2} = 14400\\) , 容易找到, 形如 \\(16be4\\) 的平方数只有 \\(128^{2} = 16384\\) .",
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的数学竞赛题干，问题描述完整，未包含答案或解析信息，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json#2#11",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "11. 已知五个数字 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 、 \\(e\\) 满足 \\(a < b < c < d < e\\) ,且五位数 \\(adbec\\) 、 \\(becad\\) 均为完全平方数,则 \\(abcde =\\) ______.",
+      "answer": "13468",
+      "solution": "(1) \\(c\\) 和 \\(d\\) 只能在 0、1、4、5、6、9 中取值. 由 \\(1 \\leq a < b < c\\) , 知 \\(c \\geq 3\\) .\n\n如果 \\(c\\) 是 5, 那么 \\(e = 2\\) , 矛盾.\n\n如果 \\(c\\) 是 6, 那么 \\(d\\) 只能是 9, \\(e\\) 无法取值.\n\n所以 \\(c\\) 只能是 4, 此时 \\(d = 5\\) 或者 6.\n\n(2)如果 \\(d = 5\\) ,那么 \\(a = 2\\) ,从而 \\(b = 3\\) . \\(adbec = 253e4\\) ,由 \\(160^{2} = 25600\\) , \\(159^{2} < 25600 - 300 = 25300\\) , 知, 没有形如 \\(253e4\\) 的平方数.\n\n(3)如果 \\(d = 6\\) ,那么 \\(\\overline{ad}\\) 是平方数的末两位, 知 \\(a\\) 为奇数, 结合 \\(a < b < c = 4\\) 知 \\(a\\) 只能是 1. 此时 \\(adbec = 16be4\\) . 结合 \\(130^{2} = 16900, 120^{2} = 14400\\) , 容易找到, 形如 \\(16be4\\) 的平方数只有 \\(128^{2} = 16384\\) ."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. 用 1\\~8 这 8 个数字组成各位数字互不相同的八位数，且任意相邻的两个数字组成的两位数都不能被 3 整除，那么共有多少种不同的组成方式？",
+      "answer_text": "1152",
+      "solution_text": "用[0]、[1]、[2]表示除以3余0、1、2的数.1\\~8中有3个[1],3个[2],2个[0].\n\n[1]和[2]不能相邻, [0]和[0]不能相邻.\n\n先将3个[1]和3个[2],再将[0]插入.\n\n将若干个相邻的[1]或者相邻的[2]称为1段.\n\n因为[1]和[2]不能相邻, 相邻的[1]和[2]之间必须插入[0], 所以6个[1]或[2]至多被分成3段.\n\n假设这6个数排好后开头是[1], 分类枚举如下:\n\n[1][1][1]+[2][2][2]型: 两个[0]共有6种插入办法;\n\n[1]+[2][2][2]+[1][1]型: 两个[0]只有1种插入办法;\n\n[1][1]+[2][2][2]+[1]型: 两个[0]只有1种插入办法.\n\n以上3类, 3个[1]、3个[2]、2个[0]共有 \\(6 + 1 + 1 = 8\\) 种排法.\n\n[2]开头的与[1]开头的是对称的.\n\n3个[1], 3个[2], 2个[0]共有 \\(8 \\times 2 = 16\\) 种排法\n\n3个[1]赋值1、4、7有3!种可能可能; 3个[2]赋值2、5、8有3!种可能; 2个[0]可以赋值3和6有2!种可能.\n\n本题答案为: \\(16 \\times 3! \\times 3! \\times 2! = 1152\\) 种.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，描述了一个数学问题，无答案或解析泄露，可作为独立题目使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json#3#13",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）.json"
+        }
+      },
+      "text": "13. 用 1\\~8 这 8 个数字组成各位数字互不相同的八位数，且任意相邻的两个数字组成的两位数都不能被 3 整除，那么共有多少种不同的组成方式？",
+      "answer": "1152",
+      "solution": "用[0]、[1]、[2]表示除以3余0、1、2的数.1\\~8中有3个[1],3个[2],2个[0].\n\n[1]和[2]不能相邻, [0]和[0]不能相邻.\n\n先将3个[1]和3个[2],再将[0]插入.\n\n将若干个相邻的[1]或者相邻的[2]称为1段.\n\n因为[1]和[2]不能相邻, 相邻的[1]和[2]之间必须插入[0], 所以6个[1]或[2]至多被分成3段.\n\n假设这6个数排好后开头是[1], 分类枚举如下:\n\n[1][1][1]+[2][2][2]型: 两个[0]共有6种插入办法;\n\n[1]+[2][2][2]+[1][1]型: 两个[0]只有1种插入办法;\n\n[1][1]+[2][2][2]+[1]型: 两个[0]只有1种插入办法.\n\n以上3类, 3个[1]、3个[2]、2个[0]共有 \\(6 + 1 + 1 = 8\\) 种排法.\n\n[2]开头的与[1]开头的是对称的.\n\n3个[1], 3个[2], 2个[0]共有 \\(8 \\times 2 = 16\\) 种排法\n\n3个[1]赋值1、4、7有3!种可能可能; 3个[2]赋值2、5、8有3!种可能; 2个[0]可以赋值3和6有2!种可能.\n\n本题答案为: \\(16 \\times 3! \\times 3! \\times 2! = 1152\\) 种."
+    },
+    {
+      "grade": 5,
+      "year": 2020,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2020数学花园探秘决赛小高C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2020数学花园探秘决赛小高C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "14. 图中共有 10 条直线,每条直线上有 3 个圆圈。在每个圆圈内填入一个不是 0 的自然数,计算出每条直线上 3 个圆圈内所填自然数的和。如果所得的 10 个和互不相同,那么填入的 9 个自然数总和最小是多少?\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（试卷版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2020/ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，未出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json#4#14",
+          "json_path": "source_pdf/五年级/2020/2020数学花园探秘决赛小高C卷（解析版）.json"
+        }
+      },
+      "text": "14. 图中共有 10 条直线,每条直线上有 3 个圆圈。在每个圆圈内填入一个不是 0 的自然数,计算出每条直线上 3 个圆圈内所填自然数的和。如果所得的 10 个和互不相同,那么填入的 9 个自然数总和最小是多少?\n\n![](ocr_debug/2020数学花园探秘决赛小高C卷（试卷版）/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

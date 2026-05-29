@@ -1,0 +1,606 @@
+{
+  "grade": 4,
+  "year": 2011,
+  "total_problems": 15,
+  "problems": [
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "1. (8分)计算: \\(80 \\times 37 + 47 \\times 63 = 5921\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解答，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#1",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "1. (8分)计算: \\(80 \\times 37 + 47 \\times 63 = 5921\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "2. (8分)如图所示的竖式中,相同图形表示相同数字,不同图形表示不同数字,则 \\(\\triangle +\\bigcirc +\\) \\(\\square = \\_ 10\\) .\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含独立的题目题干，但同时有明确的答案和完整解析，存在答案泄露风险，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#2",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "2. (8分)如图所示的竖式中,相同图形表示相同数字,不同图形表示不同数字,则 \\(\\triangle +\\bigcirc +\\) \\(\\square = \\_ 10\\) .\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "3. (8分)大果粒酸奶每盒4元,某超市最近推出了\"买二送一\"的优惠活动,即花钱买两盒酸奶,就可以免费获得一盒酸奶,如果东东要买10盒大果粒酸奶,那么他最少需要花28元钱.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题目块包含独立题干、完整解答过程及明确答案，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#3",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干完整但包含答案信息，轻量清洗后可作为可出题题干。",
+        "review_fix_hint": "删除解答和答案部分，将答案陈述转换为疑问句。",
+        "review_clean_question_text": "3. (8分)大果粒酸奶每盒4元,某超市最近推出了'买二送一'的优惠活动,即花钱买两盒酸奶,就可以免费获得一盒酸奶,如果东东要买10盒大果粒酸奶,那么他最少需要花多少钱？",
+        "review_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#3",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "3. (8分)大果粒酸奶每盒4元,某超市最近推出了\"买二送一\"的优惠活动,即花钱买两盒酸奶,就可以免费获得一盒酸奶,如果东东要买10盒大果粒酸奶,那么他最少需要花28元钱.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. (8分)学校校园里有一块长方形的地长18米,宽12米,想种上红花、黄花和绿草,一种设计方案如图,那么其中红花的面积是 平方米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立完整的数学竞赛题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#1#4",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "4. (8分)学校校园里有一块长方形的地长18米,宽12米,想种上红花、黄花和绿草,一种设计方案如图,那么其中红花的面积是 平方米.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. (8分)某校学生总人数比四年级人数的6倍少78人,并且除了四年级外其他各年级的学生人数总和为2222人,那么该校共有学生 人.\n\n## 二、填空题",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本为独立数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#1#5",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "5. (8分)某校学生总人数比四年级人数的6倍少78人,并且除了四年级外其他各年级的学生人数总和为2222人,那么该校共有学生 人.\n\n## 二、填空题",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "6. (10分)规定 \\(1 \\times 2 = 1 + 2 = 3\\) , \\(2 \\times 3 = 2 + 3 + 4 = 9\\) , \\(5 \\times 4 = 5 + 6 + 7 + 8 = 26\\) , 如果 \\(a \\times 15 = 165\\) , 那么 \\(a = \\underline{4}\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案4且开始出现解答过程，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#5#6",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干完整且逻辑清晰，移除答案和解析后可变为可用填空题。",
+        "review_fix_hint": "删掉【解答】部分和答案下划线数字，只保留问题描述至填空处。",
+        "review_clean_question_text": "规定 \\(1 \\times 2 = 1 + 2 = 3\\) , \\(2 \\times 3 = 2 + 3 + 4 = 9\\) , \\(5 \\times 4 = 5 + 6 + 7 + 8 = 26\\) , 如果 \\(a \\times 15 = 165\\) , 那么 \\(a = \\underline{\\quad}\\) 。",
+        "review_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#5#6",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "6. (10分)规定 \\(1 \\times 2 = 1 + 2 = 3\\) , \\(2 \\times 3 = 2 + 3 + 4 = 9\\) , \\(5 \\times 4 = 5 + 6 + 7 + 8 = 26\\) , 如果 \\(a \\times 15 = 165\\) , 那么 \\(a = \\underline{4}\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. (10分)教室里所有人的平均年龄是11岁,如果不算其中1个30岁的老师,其余人的平均年龄是10岁,那么教室里有多少人?",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#1#7",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "7. (10分)教室里所有人的平均年龄是11岁,如果不算其中1个30岁的老师,其余人的平均年龄是10岁,那么教室里有多少人?",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "8. (10分)在算式中, \\(\\overline{\\mathrm{ABCD}} +\\overline{\\mathrm{EFG}} = 2020\\) 中,不同的字母代表不同的数字,那么 \\(A + B + C + D + E + F + G = 31\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整解答和答案，泄露风险高，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#6#8",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "8. (10分)在算式中, \\(\\overline{\\mathrm{ABCD}} +\\overline{\\mathrm{EFG}} = 2020\\) 中,不同的字母代表不同的数字,那么 \\(A + B + C + D + E + F + G = 31\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "9. (10分)已知7个红球5个白球共重43克,5个红球7个白球共重47克,那么4个红球8个白球共重_49_克.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接填入了答案49，并包含完整解答过程，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#6#9",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "9. (10分)已知7个红球5个白球共重43克,5个红球7个白球共重47克,那么4个红球8个白球共重_49_克.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "10. (10分)羊村小学四年级进行一次数学测验,测验共有15道题,如果小喜喜、小沸沸、小美美、小懒懒都答对的题目分别是11道、12道、13道、14道,那么他们四人都答对的题目最少有_5道.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中包含完整的解答过程和答案，存在答案泄露风险，不适合作为考试题目，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#7#10",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "10. (10分)羊村小学四年级进行一次数学测验,测验共有15道题,如果小喜喜、小沸沸、小美美、小懒懒都答对的题目分别是11道、12道、13道、14道,那么他们四人都答对的题目最少有_5道.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "11. (12分)今天是12月19日,我们将由边长为1的阴影小正方形组成的数字1、2、1、9放在 \\(8 \\times 5\\) 的大长方形中,将大长方形旋转 \\(180^{\\circ}\\) ,就变成了\"6121\",如果将这两个 \\(8 \\times 5\\) 的大长方形重叠放置,那么重叠的阴影格子共有_30_个.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_007/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案'30'，且有完整解析，存在高风险泄露，因此仅适合作为练习材料。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#7#11",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "11. (12分)今天是12月19日,我们将由边长为1的阴影小正方形组成的数字1、2、1、9放在 \\(8 \\times 5\\) 的大长方形中,将大长方形旋转 \\(180^{\\circ}\\) ,就变成了\"6121\",如果将这两个 \\(8 \\times 5\\) 的大长方形重叠放置,那么重叠的阴影格子共有_30_个.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_007/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "12. （12分）花园里有向日葵、百合花、牡丹三种植物，\n\n（1）在一个星期内只有一天这三种花能同时开放；\n\n（2）没有一种花能连续开放三天；\n\n（3）在一周之内，任何两种花同时不开的日子不会超过一天；\n\n（4）向日葵在周2、周4、周日不开放；\n\n（5）百合花在周4、周6不开放；\n\n（6）牡丹在周日不开放；\n\n那么三种花在星期 同时绽放.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准的逻辑推理题干，没有包含答案或解析，适合作为独立出题使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#2#12",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "12. （12分）花园里有向日葵、百合花、牡丹三种植物，\n\n（1）在一个星期内只有一天这三种花能同时开放；\n\n（2）没有一种花能连续开放三天；\n\n（3）在一周之内，任何两种花同时不开的日子不会超过一天；\n\n（4）向日葵在周2、周4、周日不开放；\n\n（5）百合花在周4、周6不开放；\n\n（6）牡丹在周日不开放；\n\n那么三种花在星期 同时绽放.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 8,
+      "question_text": "13. （12分）镖盘上的数字代表投中这个区域的积分，未中镖盘记0分，小明把三支飞镖掷向如图所示的镖盘上，然后把三支飞镖的得分相加．那么小明不可能得到的总分最小是22.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干部分独立完整，但块内包含解答过程，有解析泄露风险，适合练习使用。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#8#13",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "13. （12分）镖盘上的数字代表投中这个区域的积分，未中镖盘记0分，小明把三支飞镖掷向如图所示的镖盘上，然后把三支飞镖的得分相加．那么小明不可能得到的总分最小是22.\n\n![](ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_008/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "14. (12分)如图,一个长方形被分成4个小长方形,其中长方形 \\(A\\) 、 \\(B\\) 、 \\(C\\) 的周长分别是10厘米、12厘米、14厘米,那么长方形 \\(D\\) 的面积最大是_16_平方厘米.\n\n<table><tr><td>A</td><td>C</td></tr><tr><td>B</td><td>D</td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案'16'并附有完整解析，泄露风险高，适合仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#9#14",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "14. (12分)如图,一个长方形被分成4个小长方形,其中长方形 \\(A\\) 、 \\(B\\) 、 \\(C\\) 的周长分别是10厘米、12厘米、14厘米,那么长方形 \\(D\\) 的面积最大是_16_平方厘米.\n\n<table><tr><td>A</td><td>C</td></tr><tr><td>B</td><td>D</td></tr></table>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2011,
+      "number": 15,
+      "source_dir": "source_pdf",
+      "source_file": "2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2011年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "15. （12分）美国篮球职业联赛（NBA）总决赛在洛杉矶湖人队和波士顿凯尔特人队之间进行，比赛采用7场4胜制，即先获得4场胜利的球队将得到总冠军，比赛分为主场和客场，由于洛杉矶湖人队常规赛战绩较好，所以第1，第2，第6，第7场均在洛杉矶进行，第3-5场在波士顿进行，最后湖人队在自己的主场获得总冠军，那么比赛过程中的胜负结果共有______种可能。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2011/ocr_debug/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整的数学竞赛题干，描述清晰且可独立出题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#3#15",
+          "json_path": "source_pdf/四年级/2011/2011年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "15. （12分）美国篮球职业联赛（NBA）总决赛在洛杉矶湖人队和波士顿凯尔特人队之间进行，比赛采用7场4胜制，即先获得4场胜利的球队将得到总冠军，比赛分为主场和客场，由于洛杉矶湖人队常规赛战绩较好，所以第1，第2，第6，第7场均在洛杉矶进行，第3-5场在波士顿进行，最后湖人队在自己的主场获得总冠军，那么比赛过程中的胜负结果共有______种可能。",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

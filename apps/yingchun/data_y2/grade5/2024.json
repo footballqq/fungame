@@ -1,0 +1,3072 @@
+{
+  "grade": 5,
+  "year": 2024,
+  "total_problems": 120,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(\\frac{2}{3} \\times 45.6 - 78 + 90\\) 的计算结果是",
+      "answer_text": "88",
+      "solution_text": "\\[1\\frac{2}{3}\\times 45.6 - 78 + 90 = 76 - 78 + 90 = 88.\\]",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整的数学计算题，但直接给出了答案和解析，存在泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（解析版）.json#1#1",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(\\frac{2}{3} \\times 45.6 - 78 + 90\\) 的计算结果是",
+      "answer": "88",
+      "solution": "\\[1\\frac{2}{3}\\times 45.6 - 78 + 90 = 76 - 78 + 90 = 88.\\]"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 蚕娘在蚕房养了若干条蚕，一天她发现有 \\(\\frac{1}{3}\\) 的蚕结茧了，于是她取出了 \\(\\frac{1}{3}\\) 的蚕茧用来缫丝．第二天，她发现剩下的蚕中又有 \\(\\frac{1}{3}\\) 结了茧．如果此时蚕房内没结茧的蚕还有400条，那么蚕房中现有蚕茧 颗.",
+      "answer_text": "400",
+      "solution_text": "蚕茧有原来总蚕数的 \\(\\frac{1}{3} - \\frac{1}{3}\\times \\frac{1}{3} +(1 - \\frac{1}{3})\\times \\frac{1}{3} = \\frac{4}{9}\\) ;\n\n未结茧的蚕有原来总蚕数的 \\((1 - \\frac{1}{3})\\times (1 - \\frac{1}{3}) = \\frac{4}{9}\\) ;\n\n所以最后蚕房里未结茧的蚕和蚕茧一样多,因此蚕房里有蚕茧400颗.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本块包含完整题目、标准答案及解析过程，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（解析版）.json#1#2",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "2. 蚕娘在蚕房养了若干条蚕，一天她发现有 \\(\\frac{1}{3}\\) 的蚕结茧了，于是她取出了 \\(\\frac{1}{3}\\) 的蚕茧用来缫丝．第二天，她发现剩下的蚕中又有 \\(\\frac{1}{3}\\) 结了茧．如果此时蚕房内没结茧的蚕还有400条，那么蚕房中现有蚕茧 颗.",
+      "answer": "400",
+      "solution": "蚕茧有原来总蚕数的 \\(\\frac{1}{3} - \\frac{1}{3}\\times \\frac{1}{3} +(1 - \\frac{1}{3})\\times \\frac{1}{3} = \\frac{4}{9}\\) ;\n\n未结茧的蚕有原来总蚕数的 \\((1 - \\frac{1}{3})\\times (1 - \\frac{1}{3}) = \\frac{4}{9}\\) ;\n\n所以最后蚕房里未结茧的蚕和蚕茧一样多,因此蚕房里有蚕茧400颗."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 甲、乙在黑板上各写了一个自然数，结果发现这两个数的最小公倍数是甲写的数的3倍，是乙写的数的7倍，但只有这两个数乘积的 \\(\\frac{1}{21}\\) ，那么这两个数的和为",
+      "answer_text": "210",
+      "solution_text": "甲数的3倍是甲、乙乘积的 \\(\\frac{1}{21}\\) ,所以乙数是 \\(3\\div \\frac{1}{21} = 63\\) ;\n\n同理,甲数是 \\(7\\div \\frac{1}{21} = 147\\) ;\n\n两个数的和为 \\(63 + 147 = 210\\) .",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目为完整题干，但文本块包含明确答案和解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（解析版）.json#1#3",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（解析版）.json"
+        }
+      },
+      "text": "3. 甲、乙在黑板上各写了一个自然数，结果发现这两个数的最小公倍数是甲写的数的3倍，是乙写的数的7倍，但只有这两个数乘积的 \\(\\frac{1}{21}\\) ，那么这两个数的和为",
+      "answer": "210",
+      "solution": "甲数的3倍是甲、乙乘积的 \\(\\frac{1}{21}\\) ,所以乙数是 \\(3\\div \\frac{1}{21} = 63\\) ;\n\n同理,甲数是 \\(7\\div \\frac{1}{21} = 147\\) ;\n\n两个数的和为 \\(63 + 147 = 210\\) ."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 一个梯形的四条边长恰好构成等差数列，且它的周长是2024，那么这个梯形的两腰长之和是\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_001/images/0.jpg)\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer_text": "1012",
+      "solution_text": "设梯形的边长为: \\(a_{1}< a_{2}< a_{3}< a_{4}\\) ,公差为 \\(d\\) .\n\n如图,将梯形分割成 \\(\\square A B E D\\) 和 \\(\\triangle B C E\\) ,两底的差与两腰构成 \\(\\triangle\\)\n\n\\(B C E\\) ,从而两腰的差小于两底的差,那么两底的差为 \\(2d\\) 或 \\(3d\\) .\n\n若两底的差为 \\(2d\\) ,两底长 \\(a_{1},a_{3}\\) 或 \\(a_{2},a_{4}\\) ,两腰的差也是 \\(2d\\) ,矛盾.\n\n∴ 两底的差为 \\(3d\\) ,两底长 \\(a_{1},a_{4}\\) ,两腰长 \\(a_{2},a_{3}\\) . \\(a_{2} + a_{3} = a_{1} + a_{4} = 2024 \\div 2 = 1012\\)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/1.jpg)\n\n## 二. 填空题Ⅱ(每小题10分,共40分)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整的数学题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#1#4",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "4. 一个梯形的四条边长恰好构成等差数列，且它的周长是2024，那么这个梯形的两腰长之和是\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_001/images/0.jpg)\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer": "1012",
+      "solution": "设梯形的边长为: \\(a_{1}< a_{2}< a_{3}< a_{4}\\) ,公差为 \\(d\\) .\n\n如图,将梯形分割成 \\(\\square A B E D\\) 和 \\(\\triangle B C E\\) ,两底的差与两腰构成 \\(\\triangle\\)\n\n\\(B C E\\) ,从而两腰的差小于两底的差,那么两底的差为 \\(2d\\) 或 \\(3d\\) .\n\n若两底的差为 \\(2d\\) ,两底长 \\(a_{1},a_{3}\\) 或 \\(a_{2},a_{4}\\) ,两腰的差也是 \\(2d\\) ,矛盾.\n\n∴ 两底的差为 \\(3d\\) ,两底长 \\(a_{1},a_{4}\\) ,两腰长 \\(a_{2},a_{3}\\) . \\(a_{2} + a_{3} = a_{1} + a_{4} = 2024 \\div 2 = 1012\\)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_002/images/1.jpg)\n\n## 二. 填空题Ⅱ(每小题10分,共40分)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 熊大参加为期10天的体能训练营，每天都要做俯卧撑．已知第一天它只做了11个，第2天比第1天多做1个或2个，第3天比第2天多做1个或3个……第10天比第9天多做到1个或10个．在这10天中他一共做了215个俯卧撑，那么，其中它有一天比前一天仅多做1个.",
+      "answer_text": "5",
+      "solution_text": "如果熊大每天仅比前一天多做一个,则10天他共做了 \\(11 + 12 + 13 + \\dots 20 = 155\\) 个.\n\n若第2天多做2个,则后面每天要多做1个,共多做 \\(1 \\times 9 = 9\\) 个;\n\n若第3天多做3个,则后面每天要多做2个,共多做 \\(2 \\times 8 = 16\\) 个;\n\n依此类推,后面每天改变对总数的影响分别为 \\(9,16,21,24,25,24,21,16,9\\) .\n\n而总共需要多做 \\(215 - 155 = 60\\) 个.\n\n60只能表示为 \\(9 + 21 + 21 + 9\\) ,因此有4天它不止比前一天多做一个,有5天仅比前一天多做1个.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，未包含答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#1#5",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "5. 熊大参加为期10天的体能训练营，每天都要做俯卧撑．已知第一天它只做了11个，第2天比第1天多做1个或2个，第3天比第2天多做1个或3个……第10天比第9天多做到1个或10个．在这10天中他一共做了215个俯卧撑，那么，其中它有一天比前一天仅多做1个.",
+      "answer": "5",
+      "solution": "如果熊大每天仅比前一天多做一个,则10天他共做了 \\(11 + 12 + 13 + \\dots 20 = 155\\) 个.\n\n若第2天多做2个,则后面每天要多做1个,共多做 \\(1 \\times 9 = 9\\) 个;\n\n若第3天多做3个,则后面每天要多做2个,共多做 \\(2 \\times 8 = 16\\) 个;\n\n依此类推,后面每天改变对总数的影响分别为 \\(9,16,21,24,25,24,21,16,9\\) .\n\n而总共需要多做 \\(215 - 155 = 60\\) 个.\n\n60只能表示为 \\(9 + 21 + 21 + 9\\) ,因此有4天它不止比前一天多做一个,有5天仅比前一天多做1个."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 如果一个个位数字为5的三位数除以2,3,4,5,6,7,8,9的余数互不相等，那么这个数是",
+      "answer_text": "935",
+      "solution_text": "这个数是个奇数所以只能除以2余1,除以4余3,除以6余5,除以8余7;\n\n这个数的末位是5,所以除以5余0;\n\n这个数除以6余5,所以除以3余2,除以9余8;\n\n因此这个数除以360余215.\n\n余数还剩下4和6,所以这个数除以7余4或者6.\n\n枚举知这个三位数是 \\(360 \\times 2 + 215 = 935\\) .",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，未包含答案或解析，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#1#6",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "6. 如果一个个位数字为5的三位数除以2,3,4,5,6,7,8,9的余数互不相等，那么这个数是",
+      "answer": "935",
+      "solution": "这个数是个奇数所以只能除以2余1,除以4余3,除以6余5,除以8余7;\n\n这个数的末位是5,所以除以5余0;\n\n这个数除以6余5,所以除以3余2,除以9余8;\n\n因此这个数除以360余215.\n\n余数还剩下4和6,所以这个数除以7余4或者6.\n\n枚举知这个三位数是 \\(360 \\times 2 + 215 = 935\\) ."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 在梯形 \\(ABCD\\) 中, \\(E\\) 、 \\(F\\) 分别在对角线 \\(AC\\) 和腰 \\(AD\\) 上, \\(\\triangle BEC\\) 面积为 30, \\(\\triangle DEC\\) 面积为 75, 则平行四边形 \\(BEDF\\) 面积是 ______.\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "40",
+      "solution_text": "延长 \\(BE\\) 交 \\(CD\\) 于点 \\(M\\) , 等积变形, \\(S_{\\triangle ABC} = S_{\\triangle ABD}\\) , \\(S_{\\triangle ABE} = S_{\\triangle DBE} = S_{\\triangle BDF}\\) , \\(S_{\\triangle ABF} = S_{\\triangle DEM} = S_{\\triangle BEC} = 30\\) , \\(S_{\\triangle EMC} = 75 - 30 = 45\\) . \\(\\therefore S_{\\triangle BDE} = 30 \\times 30 \\div 45 = 20\\) , 平行四边形 \\(BEDF\\) 的面积为 40.\n\n平行四边形 \\(BEDF\\) 的面积为 40.\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_003/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的几何题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#2#7",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "7. 在梯形 \\(ABCD\\) 中, \\(E\\) 、 \\(F\\) 分别在对角线 \\(AC\\) 和腰 \\(AD\\) 上, \\(\\triangle BEC\\) 面积为 30, \\(\\triangle DEC\\) 面积为 75, 则平行四边形 \\(BEDF\\) 面积是 ______.\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "40",
+      "solution": "延长 \\(BE\\) 交 \\(CD\\) 于点 \\(M\\) , 等积变形, \\(S_{\\triangle ABC} = S_{\\triangle ABD}\\) , \\(S_{\\triangle ABE} = S_{\\triangle DBE} = S_{\\triangle BDF}\\) , \\(S_{\\triangle ABF} = S_{\\triangle DEM} = S_{\\triangle BEC} = 30\\) , \\(S_{\\triangle EMC} = 75 - 30 = 45\\) . \\(\\therefore S_{\\triangle BDE} = 30 \\times 30 \\div 45 = 20\\) , 平行四边形 \\(BEDF\\) 的面积为 40.\n\n平行四边形 \\(BEDF\\) 的面积为 40.\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_003/images/0.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 如图, 有编号为 \\(1 \\sim 9\\) 的 9 个房间, 有公共点的两个房间中的人可以相互看到, 否则无法相互看到. 老师安排甲、乙、丙、丁四人住在不同的房间中, 并且告诉他们, 甲、\n\n乙、丙、丁的房间号依次从小到大. 四人住进房间后, 甲说: \"虽然乙并不能看到所有人, 但从他的视角看, 丙无法确定丁是否知道我在几号房间.\" 那么甲、乙、丙、丁四人所在的房间号, 按顺序组成的四位数是 ______.\n\n<table><tr><td>7</td><td>8</td><td>9</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>1</td><td>2</td><td>3</td></tr></table>\n\n## 三. 填空题Ⅲ (每小题 14 分, 共 42 分)",
+      "answer_text": "2346",
+      "solution_text": "5 号房间可以看到所有人的位置, 所有人都能看到 5 号房间.\n\n乙并不能看到所有人说明乙不住在 5 号房间.\n\n丙无法确定丁是否知道甲的房间, 所以丙、丁也不住在 5 号房间.\n\n第一层 (1、2、3 号) 和第三层 (7、8、9 号) 的房间互相之间都看不到.\n\n若甲不在第一层, 则丁必在第三层, 必然不知道甲在几号房间, 因此甲只能在第一层.\n\n丙无法确定丁是否知道甲的位置, 所以他无法确定丁是否在第三层, 因此甲、乙、丙的房间号都小于 5.\n\n甲能确定丙不能看到丁, 所以甲必然可以看到丁.\n\n因此甲、乙、丙、丁的房间号分别是 2、3、4、6 号.",
+      "topic": "combinatorics",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学填空题题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#2#8",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "8. 如图, 有编号为 \\(1 \\sim 9\\) 的 9 个房间, 有公共点的两个房间中的人可以相互看到, 否则无法相互看到. 老师安排甲、乙、丙、丁四人住在不同的房间中, 并且告诉他们, 甲、\n\n乙、丙、丁的房间号依次从小到大. 四人住进房间后, 甲说: \"虽然乙并不能看到所有人, 但从他的视角看, 丙无法确定丁是否知道我在几号房间.\" 那么甲、乙、丙、丁四人所在的房间号, 按顺序组成的四位数是 ______.\n\n<table><tr><td>7</td><td>8</td><td>9</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>1</td><td>2</td><td>3</td></tr></table>\n\n## 三. 填空题Ⅲ (每小题 14 分, 共 42 分)",
+      "answer": "2346",
+      "solution": "5 号房间可以看到所有人的位置, 所有人都能看到 5 号房间.\n\n乙并不能看到所有人说明乙不住在 5 号房间.\n\n丙无法确定丁是否知道甲的房间, 所以丙、丁也不住在 5 号房间.\n\n第一层 (1、2、3 号) 和第三层 (7、8、9 号) 的房间互相之间都看不到.\n\n若甲不在第一层, 则丁必在第三层, 必然不知道甲在几号房间, 因此甲只能在第一层.\n\n丙无法确定丁是否知道甲的位置, 所以他无法确定丁是否在第三层, 因此甲、乙、丙的房间号都小于 5.\n\n甲能确定丙不能看到丁, 所以甲必然可以看到丁.\n\n因此甲、乙、丙、丁的房间号分别是 2、3、4、6 号."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 小李每天准点开车从家出发去上班, 总能恰好按时到达公司. 因为早高峰影响, 在 \\(8:00 \\sim 8:30\\) 会堵车严重, 这个时间段内开车速度会减半. 如果小李早 10 分钟出发, 会早到 15 分钟. 如果小李晚 20 分钟出发, 会晚到 25 分钟. 如果小李晚 10 分钟出发, 会晚到 ______ 分钟.",
+      "answer_text": "20",
+      "solution_text": "小李早出发10分钟,途中少用 \\(10 - 5 = 5\\) 分钟.说明平时速度减半行10分钟的路程,被现在正常行5分钟所替代.平时上班有以下三类情况:\n\n(1)8:00或之前出发,8:10到达公司;\n\n(2)8:00或之前出发,8:35到达公司;\n\n(3) \\(8:00\\sim 8:05\\) 出发,速度减半行10分钟到达公司.\n\n小李晚20分钟出发,途中多用 \\(25 - 20 = 5\\) 分钟.说明平时正常行驶5分钟的路程,被现在速度减半行10分钟所替代.如果是(2)(3)两种情况之一,则晚出发20分钟时,途中所用时间一定不会多于平时所用时间,所以必为情况(1).\n\n由(1)知小李晚20分钟出发时,晚到25分钟,则是8:35到达公司,在拥堵段上的时间是 \\(10 + 10 = 20\\) 分钟,所以晚20分钟出发是8:10出发,平时是7:50出发.\n\n所以如果小李8:00出发,会8:30到达,比平时晚20分钟到达.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干描述完整，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#2#9",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "9. 小李每天准点开车从家出发去上班, 总能恰好按时到达公司. 因为早高峰影响, 在 \\(8:00 \\sim 8:30\\) 会堵车严重, 这个时间段内开车速度会减半. 如果小李早 10 分钟出发, 会早到 15 分钟. 如果小李晚 20 分钟出发, 会晚到 25 分钟. 如果小李晚 10 分钟出发, 会晚到 ______ 分钟.",
+      "answer": "20",
+      "solution": "小李早出发10分钟,途中少用 \\(10 - 5 = 5\\) 分钟.说明平时速度减半行10分钟的路程,被现在正常行5分钟所替代.平时上班有以下三类情况:\n\n(1)8:00或之前出发,8:10到达公司;\n\n(2)8:00或之前出发,8:35到达公司;\n\n(3) \\(8:00\\sim 8:05\\) 出发,速度减半行10分钟到达公司.\n\n小李晚20分钟出发,途中多用 \\(25 - 20 = 5\\) 分钟.说明平时正常行驶5分钟的路程,被现在速度减半行10分钟所替代.如果是(2)(3)两种情况之一,则晚出发20分钟时,途中所用时间一定不会多于平时所用时间,所以必为情况(1).\n\n由(1)知小李晚20分钟出发时,晚到25分钟,则是8:35到达公司,在拥堵段上的时间是 \\(10 + 10 = 20\\) 分钟,所以晚20分钟出发是8:10出发,平时是7:50出发.\n\n所以如果小李8:00出发,会8:30到达,比平时晚20分钟到达."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 如图, 等腰梯形 \\(ABCD\\) 中, \\(E\\) 是底边 \\(BC\\) 上一点, 将 \\(\\triangle DEC\\) 关于 \\(DE\\) 对折, \\(C\\) 恰好落在 \\(AB\\) 上的 \\(F\\) 点处, 然后将 \\(\\triangle BEF\\) 关于 \\(EF\\) 对折, \\(B\\) 恰好落在 \\(DF\\) 上的 \\(G\\) 点处, \\(\\triangle DEG\\) 面积为 36 平方厘米, \\(\\triangle ADG\\) 面积为 24 平方厘米, 那么梯形 \\(ABCD\\) 的面积为 ______ 平方厘米.\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "162",
+      "solution_text": "由条件有 \\(\\angle B = \\angle C = \\angle 1 = \\angle 2\\) ,所以 \\(\\triangle BEF\\) 为等腰三角形,这样 \\(BE = EF = EC\\) .又 \\(\\angle 3 = \\angle DEF\\) 且 \\(\\angle 3 + \\angle DEF + \\angle 4 = \\angle 2 + \\angle B + \\angle 4\\) ,所以 \\(\\angle 3 = \\angle B = \\angle C\\) .这样 \\(ABED\\) 是一个平行四边形.\n\n所以 \\(S_{\\triangle BEF} + S_{\\triangle ADF} = S_{\\triangle GEF} + S_{\\triangle DGE}\\) ,可得 \\(S_{\\triangle ADF} = S_{\\triangle DGE} = 36\\)\n\n\\(DG:DF = S_{\\triangle ADG}:S_{\\triangle ADF} = 24:36 = 2:3\\) ,所以 \\(AF:AB = 2:3\\)\n\n梯形 \\(ABCD\\) 的面积为 \\(36\\div \\left(\\frac{1}{3}\\times \\frac{2}{3}\\right) = 162\\) 平方厘米.\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/0.jpg)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，描述了几何折叠问题，没有答案或解析信息泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#2#10",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "10. 如图, 等腰梯形 \\(ABCD\\) 中, \\(E\\) 是底边 \\(BC\\) 上一点, 将 \\(\\triangle DEC\\) 关于 \\(DE\\) 对折, \\(C\\) 恰好落在 \\(AB\\) 上的 \\(F\\) 点处, 然后将 \\(\\triangle BEF\\) 关于 \\(EF\\) 对折, \\(B\\) 恰好落在 \\(DF\\) 上的 \\(G\\) 点处, \\(\\triangle DEG\\) 面积为 36 平方厘米, \\(\\triangle ADG\\) 面积为 24 平方厘米, 那么梯形 \\(ABCD\\) 的面积为 ______ 平方厘米.\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "162",
+      "solution": "由条件有 \\(\\angle B = \\angle C = \\angle 1 = \\angle 2\\) ,所以 \\(\\triangle BEF\\) 为等腰三角形,这样 \\(BE = EF = EC\\) .又 \\(\\angle 3 = \\angle DEF\\) 且 \\(\\angle 3 + \\angle DEF + \\angle 4 = \\angle 2 + \\angle B + \\angle 4\\) ,所以 \\(\\angle 3 = \\angle B = \\angle C\\) .这样 \\(ABED\\) 是一个平行四边形.\n\n所以 \\(S_{\\triangle BEF} + S_{\\triangle ADF} = S_{\\triangle GEF} + S_{\\triangle DGE}\\) ,可得 \\(S_{\\triangle ADF} = S_{\\triangle DGE} = 36\\)\n\n\\(DG:DF = S_{\\triangle ADG}:S_{\\triangle ADF} = 24:36 = 2:3\\) ,所以 \\(AF:AB = 2:3\\)\n\n梯形 \\(ABCD\\) 的面积为 \\(36\\div \\left(\\frac{1}{3}\\times \\frac{2}{3}\\right) = 162\\) 平方厘米.\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/0.jpg)\n\n![](ocr_debug/2024决赛小高D卷（解析版）/pages/page_004/images/1.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 在一个 \\(3 \\times 4\\) 的方格表中将 12 个方格分别染上黑色或白色. 对于每个方格, 要求它的\n\n相邻位置 (有公共边的两方格视为相邻) 上的所有方格不全同色, 那么共有 ______ 种不同的染色方法. (方格表不可旋转或翻转)\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/2.jpg)\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/3.jpg)",
+      "answer_text": "64",
+      "solution_text": "法1:\n\n四个角格有 2 个相邻方格, 必为 1 黑 1 白, 因此 \\(B\\) 和 \\(AC\\) 异色, \\(E\\) 和 \\(DF\\) 异色, 按 \\(BE\\) 同色或异色进行分类:\n\n(1) \\(BE\\) 同色, 则 \\(①②\\) 、 \\(②③\\) 、 \\(④⑤\\) 、 \\(⑤⑥\\) 各至少有 1 黑, \\(①②③\\) 、 \\(④⑤⑥\\) 各至少有 1 白即可. 按 \\(②\\) 、 \\(⑤\\) 颜色分类, 共 \\(1 + 2 \\times 3 + 9 = 16\\) 种;\n\n<table><tr><td></td><td>A</td><td>D</td><td></td></tr><tr><td>B</td><td></td><td></td><td>E</td></tr><tr><td></td><td>C</td><td>F</td><td></td></tr></table>\n\n<table><tr><td>①</td><td>A</td><td>D</td><td>④</td></tr><tr><td>B</td><td>②</td><td>⑤</td><td>E</td></tr><tr><td>③</td><td>C</td><td>F</td><td>⑥</td></tr></table>\n\n<table><tr><td>①</td><td>A</td><td>D</td><td>⑥</td></tr><tr><td>B</td><td>②</td><td>⑤</td><td>E</td></tr><tr><td>③&lt;fci&gt;C</td><td>F</td><td>⑥</td><td></td></tr></table>\n\n(2) \\(BE\\) 异色, 则 \\(①②\\) 、 \\(②③\\) 、 \\(④⑤⑥\\) 各至少有 1 白, \\(④⑤\\) 、 \\(⑤⑥\\) 、 \\(①②③\\) 各至少有 1 黑即可. 按 \\(②\\) 、 \\(⑤\\) 颜色分类, 共 \\(3 + 9 + 1 + 3 = 16\\) 种.\n\n综上, 共 \\(2 \\times (16 + 16) = 64\\) 种染色方式.\n\n法2:\n\n对方格表进行黑白间隔染色, 黑色区域与白色区域均有 8 种染法, 因此共 \\(8 \\times 8 = 64\\) 种.",
+      "topic": "combinatorics",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为独立题干，描述染色问题，无答案或解析信息，适合保留。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#2#11",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "11. 在一个 \\(3 \\times 4\\) 的方格表中将 12 个方格分别染上黑色或白色. 对于每个方格, 要求它的\n\n相邻位置 (有公共边的两方格视为相邻) 上的所有方格不全同色, 那么共有 ______ 种不同的染色方法. (方格表不可旋转或翻转)\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/2.jpg)\n\n![](ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_002/images/3.jpg)",
+      "answer": "64",
+      "solution": "法1:\n\n四个角格有 2 个相邻方格, 必为 1 黑 1 白, 因此 \\(B\\) 和 \\(AC\\) 异色, \\(E\\) 和 \\(DF\\) 异色, 按 \\(BE\\) 同色或异色进行分类:\n\n(1) \\(BE\\) 同色, 则 \\(①②\\) 、 \\(②③\\) 、 \\(④⑤\\) 、 \\(⑤⑥\\) 各至少有 1 黑, \\(①②③\\) 、 \\(④⑤⑥\\) 各至少有 1 白即可. 按 \\(②\\) 、 \\(⑤\\) 颜色分类, 共 \\(1 + 2 \\times 3 + 9 = 16\\) 种;\n\n<table><tr><td></td><td>A</td><td>D</td><td></td></tr><tr><td>B</td><td></td><td></td><td>E</td></tr><tr><td></td><td>C</td><td>F</td><td></td></tr></table>\n\n<table><tr><td>①</td><td>A</td><td>D</td><td>④</td></tr><tr><td>B</td><td>②</td><td>⑤</td><td>E</td></tr><tr><td>③</td><td>C</td><td>F</td><td>⑥</td></tr></table>\n\n<table><tr><td>①</td><td>A</td><td>D</td><td>⑥</td></tr><tr><td>B</td><td>②</td><td>⑤</td><td>E</td></tr><tr><td>③&lt;fci&gt;C</td><td>F</td><td>⑥</td><td></td></tr></table>\n\n(2) \\(BE\\) 异色, 则 \\(①②\\) 、 \\(②③\\) 、 \\(④⑤⑥\\) 各至少有 1 白, \\(④⑤\\) 、 \\(⑤⑥\\) 、 \\(①②③\\) 各至少有 1 黑即可. 按 \\(②\\) 、 \\(⑤\\) 颜色分类, 共 \\(3 + 9 + 1 + 3 = 16\\) 种.\n\n综上, 共 \\(2 \\times (16 + 16) = 64\\) 种染色方式.\n\n法2:\n\n对方格表进行黑白间隔染色, 黑色区域与白色区域均有 8 种染法, 因此共 \\(8 \\times 8 = 64\\) 种."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "12. 一个三位数，考虑它的数字和 \\(A\\) 与它的 101 倍的数字和 \\(B\\) 。\n\n（1）（8 分）如果 \\(A\\) 和 \\(B\\) 一样大，那么这个三位数是多少？\n\n（2）（10 分）能否找到一个三位数使得 \\(A\\) 比 \\(B\\) 大？如果能，有多少个？如果不能，请说明理由。",
+      "answer_text": "(1)999; (3)8个.",
+      "solution_text": "\\(B\\) 和 \\(A\\) 的两倍相差9的倍数(进几位就相差几倍).\n\n(1) \\(A\\) 和 \\(B\\) 一样大,则 \\(A\\) 一定是9的倍数.\n\n若 \\(A = 9\\) ,则无法产生进位,不满足要求;\n\n若 \\(A = 18\\) ,则需要进两位,百位上必须进位,千位上就无法产生进位了,不满足要求;\n\n若 \\(A = 27\\) ,数字和为27的三位数只有一个:999, \\(999\\times 101 = 100899\\) ,满足要求.\n\n(2)若乘积的百位产生进位,则原三位数的百位数字和个位数字之和要大于9, \\(A\\) 至少是10;\n\n若乘积的千位产生进位,则原三位数的十位数字必须为9,且乘积的百位必须进位, \\(A\\) 至少是19;\n\n若乘积的万位产生进位,则原三位数的百位数字必须为9,且乘积的千位必须进位;\n\n若 \\(A< 10\\) ,则无法产生进位, \\(A > B\\) ;\n\n若 \\(10\\leq A< 19\\) ,至多只能产生一次进位, \\(A > B\\) ;\n\n若 \\(A\\geq 19\\) ,且 \\(A > B\\) ,则需产生3次进位且 \\(A< 27\\) ,因此原三位数的百位数字和十位数字必须都是9,\n\n这样的三位数有 \\(991\\sim 998\\) 共8个.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#3#12",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "12. 一个三位数，考虑它的数字和 \\(A\\) 与它的 101 倍的数字和 \\(B\\) 。\n\n（1）（8 分）如果 \\(A\\) 和 \\(B\\) 一样大，那么这个三位数是多少？\n\n（2）（10 分）能否找到一个三位数使得 \\(A\\) 比 \\(B\\) 大？如果能，有多少个？如果不能，请说明理由。",
+      "answer": "(1)999; (3)8个.",
+      "solution": "\\(B\\) 和 \\(A\\) 的两倍相差9的倍数(进几位就相差几倍).\n\n(1) \\(A\\) 和 \\(B\\) 一样大,则 \\(A\\) 一定是9的倍数.\n\n若 \\(A = 9\\) ,则无法产生进位,不满足要求;\n\n若 \\(A = 18\\) ,则需要进两位,百位上必须进位,千位上就无法产生进位了,不满足要求;\n\n若 \\(A = 27\\) ,数字和为27的三位数只有一个:999, \\(999\\times 101 = 100899\\) ,满足要求.\n\n(2)若乘积的百位产生进位,则原三位数的百位数字和个位数字之和要大于9, \\(A\\) 至少是10;\n\n若乘积的千位产生进位,则原三位数的十位数字必须为9,且乘积的百位必须进位, \\(A\\) 至少是19;\n\n若乘积的万位产生进位,则原三位数的百位数字必须为9,且乘积的千位必须进位;\n\n若 \\(A< 10\\) ,则无法产生进位, \\(A > B\\) ;\n\n若 \\(10\\leq A< 19\\) ,至多只能产生一次进位, \\(A > B\\) ;\n\n若 \\(A\\geq 19\\) ,且 \\(A > B\\) ,则需产生3次进位且 \\(A< 27\\) ,因此原三位数的百位数字和十位数字必须都是9,\n\n这样的三位数有 \\(991\\sim 998\\) 共8个."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小高D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "13. （1）（6分）将3种颜色的棋子各10枚分给若干名同学，发现任意两人之间都有相同颜色的棋子，那么最多可以分给多少名同学？\n\n（2）（12分）将4种颜色的棋子各10枚分给若干名同学，发现任意两人之间都有相同颜色的 棋子，那么最多可以分给多少名同学？",
+      "answer_text": "(1)15 (2)16",
+      "solution_text": "(1)若有人只有一种颜色的棋子,则所有人都要与他有同色棋子,最多只能分给10个人.若每人都有两色以上的棋子,则任意两人之间都有同色棋子,所以最多可以分给 \\(10\\times 3\\div 2 = 15\\) 人.下面给出15人的构造: \\(1\\sim 5\\) 号拥有(红、黄), \\(6\\sim 10\\) 号拥有(红、蓝), \\(11\\sim 15\\) 号拥有(黄、蓝)\n\n(2)由上一问知至少可以分给15人来满足题目要求,\n\n下面只讨论每人棋子数量不少于2,人数不少于16的情况,\n\n总共有棋子 \\(10\\times 4 = 40\\) 枚,所以至少有 \\(16\\times 3 - 40 = 8\\) 人只有2枚棋子.\n\n不妨将4种颜色记作红、黄、蓝、绿,4种颜色选2种共有6种选择,其中两两不可同取,所以最多只有3种可选,因此至少有3人的2枚棋子颜色分别相同,不妨记作 \\(1\\sim 3\\) 号拥有红色和黄色.\n\n此时还剩红色、黄色棋子各7枚,而其他人必须拥有红色或黄色棋子,因此至多 \\(3 + 7 + 7 = 17\\) 人.\n\n下面证明17人不行,若分给17人,则剩下红、黄棋子分给14个人每人一个,不妨记作 \\(4\\sim 10\\) 号拥有红色, \\(11\\sim 17\\) 号拥有黄色.\n\n还剩蓝、绿棋子各10枚.因此剩下的14人中必有人只有两枚棋子,不妨设4号拥有红色和蓝色棋子,则 \\(11\\sim 17\\) 号拥有蓝色,则 \\(5\\sim 10\\) 号中至少有4人没有蓝色,不妨记作 \\(5\\sim 8\\) 号仅拥有红色和绿色棋子.则 \\(11\\sim 17\\) 号都必须拥有绿色,矛盾.\n\n所以17人不能满足要求.\n\n下面给出16人的构造: \\(1\\sim 3\\) 号拥有(红、黄), \\(4\\sim 6\\) 号拥有(红、蓝), \\(7\\sim 9\\) 号拥有(红、绿), \\(10\\sim 16\\) 号拥有(黄、蓝、绿).\n\n因此,最多分给16位同学,可以满足要求.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2024/ocr_debug/2024决赛小高D卷（B5试卷版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是完整的数学竞赛题干，包含两个子问题，无答案或解析信息泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json#4#13",
+          "json_path": "source_pdf/五年级/2024/2024决赛小高D卷（B5试卷版）.json"
+        }
+      },
+      "text": "13. （1）（6分）将3种颜色的棋子各10枚分给若干名同学，发现任意两人之间都有相同颜色的棋子，那么最多可以分给多少名同学？\n\n（2）（12分）将4种颜色的棋子各10枚分给若干名同学，发现任意两人之间都有相同颜色的 棋子，那么最多可以分给多少名同学？",
+      "answer": "(1)15 (2)16",
+      "solution": "(1)若有人只有一种颜色的棋子,则所有人都要与他有同色棋子,最多只能分给10个人.若每人都有两色以上的棋子,则任意两人之间都有同色棋子,所以最多可以分给 \\(10\\times 3\\div 2 = 15\\) 人.下面给出15人的构造: \\(1\\sim 5\\) 号拥有(红、黄), \\(6\\sim 10\\) 号拥有(红、蓝), \\(11\\sim 15\\) 号拥有(黄、蓝)\n\n(2)由上一问知至少可以分给15人来满足题目要求,\n\n下面只讨论每人棋子数量不少于2,人数不少于16的情况,\n\n总共有棋子 \\(10\\times 4 = 40\\) 枚,所以至少有 \\(16\\times 3 - 40 = 8\\) 人只有2枚棋子.\n\n不妨将4种颜色记作红、黄、蓝、绿,4种颜色选2种共有6种选择,其中两两不可同取,所以最多只有3种可选,因此至少有3人的2枚棋子颜色分别相同,不妨记作 \\(1\\sim 3\\) 号拥有红色和黄色.\n\n此时还剩红色、黄色棋子各7枚,而其他人必须拥有红色或黄色棋子,因此至多 \\(3 + 7 + 7 = 17\\) 人.\n\n下面证明17人不行,若分给17人,则剩下红、黄棋子分给14个人每人一个,不妨记作 \\(4\\sim 10\\) 号拥有红色, \\(11\\sim 17\\) 号拥有黄色.\n\n还剩蓝、绿棋子各10枚.因此剩下的14人中必有人只有两枚棋子,不妨设4号拥有红色和蓝色棋子,则 \\(11\\sim 17\\) 号拥有蓝色,则 \\(5\\sim 10\\) 号中至少有4人没有蓝色,不妨记作 \\(5\\sim 8\\) 号仅拥有红色和绿色棋子.则 \\(11\\sim 17\\) 号都必须拥有绿色,矛盾.\n\n所以17人不能满足要求.\n\n下面给出16人的构造: \\(1\\sim 3\\) 号拥有(红、黄), \\(4\\sim 6\\) 号拥有(红、蓝), \\(7\\sim 9\\) 号拥有(红、绿), \\(10\\sim 16\\) 号拥有(黄、蓝、绿).\n\n因此,最多分给16位同学,可以满足要求."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2024 \\div \\left(\\frac{1}{20} - \\frac{1}{24}\\right) \\div (2 + 0 + 2 + 4)\\) 的计算结果是",
+      "answer_text": "30360 【作者】饶海波",
+      "solution_text": "原式 \\(= 2024 \\div \\frac{24 - 20}{20 \\times 24} \\div 8 = 2024 \\times \\frac{20 \\times 24}{4} \\times \\frac{1}{8} = 2024 \\times 5 \\times 3 = 30360\\) .",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "该题目块包含完整的题干、答案和解析，泄漏风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干清晰完整，去除答案和解析后可用于考试。",
+        "review_fix_hint": "删掉【答案】和【解析】部分，仅保留题干文本。",
+        "review_clean_question_text": "1. 算式 \\(2024 \\div \\left(\\frac{1}{20} - \\frac{1}{24}\\right) \\div (2 + 0 + 2 + 4)\\) 的计算结果是",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "1. 算式 \\(2024 \\div \\left(\\frac{1}{20} - \\frac{1}{24}\\right) \\div (2 + 0 + 2 + 4)\\) 的计算结果是",
+      "answer": "30360 【作者】饶海波",
+      "solution": "原式 \\(= 2024 \\div \\frac{24 - 20}{20 \\times 24} \\div 8 = 2024 \\times \\frac{20 \\times 24}{4} \\times \\frac{1}{8} = 2024 \\times 5 \\times 3 = 30360\\) ."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 在下面的乘法竖式中,不同的汉字代表不同的数字,其中\"为\"代表的数字是最小自然数,那么书山有路代表的四位数是\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_001/images/0.jpg)",
+      "answer_text": "2743 【作者】田洁娜",
+      "solution_text": "(1)由第3行\"径\"与第4行\"径\"相加,\"为\"是0,可得\"勤\"是1;\n\n(2)由第四行,勤为径可能是105、106或108,且书山 \\(\\times\\) 有 \\(=\\) 勤为径;\n\n(3)由书山 \\(\\times\\) 路 \\(=\\) 径1,则径1可能是51、61或81,经检验,\n\n勤为径是108,书山是27,\"有\"是4,\"路\"是3;\n\n所以,书山有路是2743.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整的答案和解析，存在高泄露风险，只能用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "2. 在下面的乘法竖式中,不同的汉字代表不同的数字,其中\"为\"代表的数字是最小自然数,那么书山有路代表的四位数是\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_001/images/0.jpg)",
+      "answer": "2743 【作者】田洁娜",
+      "solution": "(1)由第3行\"径\"与第4行\"径\"相加,\"为\"是0,可得\"勤\"是1;\n\n(2)由第四行,勤为径可能是105、106或108,且书山 \\(\\times\\) 有 \\(=\\) 勤为径;\n\n(3)由书山 \\(\\times\\) 路 \\(=\\) 径1,则径1可能是51、61或81,经检验,\n\n勤为径是108,书山是27,\"有\"是4,\"路\"是3;\n\n所以,书山有路是2743."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图所示的信号标志是由同心的圆和扇环组成,圆的半径为10厘米,扇环之间的宽度也均为10厘米,圆心角度数均为 \\(60^{\\circ}\\) ,那么一个信号标志(阴影部分)的面积是 平方厘米. \\((\\pi = 3.14)\\)\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_001/images/1.jpg)",
+      "answer_text": "1727 【作者】杜小燕",
+      "solution_text": "圆的面积: \\(S_{1} = \\pi \\times 10^{2} = 100\\pi\\) ;\n\n扇环面积: \\(S_{2} = \\frac{60}{360} \\times \\pi \\times \\left[ (30^{2} - 20^{2}) + (50^{2} - 40^{2}) + (70^{2} - 60^{2}) \\right] = 450\\pi\\) ;\n\n信号标示面积: \\(S = S_{1} + S_{2} = 550\\pi = 550 \\times 3.14 = 1727\\) .",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整问题和图形，但直接附加了答案和解析，因此不适合考试，仅可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "3. 如图所示的信号标志是由同心的圆和扇环组成,圆的半径为10厘米,扇环之间的宽度也均为10厘米,圆心角度数均为 \\(60^{\\circ}\\) ,那么一个信号标志(阴影部分)的面积是 平方厘米. \\((\\pi = 3.14)\\)\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_001/images/1.jpg)",
+      "answer": "1727 【作者】杜小燕",
+      "solution": "圆的面积: \\(S_{1} = \\pi \\times 10^{2} = 100\\pi\\) ;\n\n扇环面积: \\(S_{2} = \\frac{60}{360} \\times \\pi \\times \\left[ (30^{2} - 20^{2}) + (50^{2} - 40^{2}) + (70^{2} - 60^{2}) \\right] = 450\\pi\\) ;\n\n信号标示面积: \\(S = S_{1} + S_{2} = 550\\pi = 550 \\times 3.14 = 1727\\) ."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 购物节到了,商场进行促销活动.已知 \\(B\\) 商品的原价比 \\(A\\) 商品便宜 \\(10\\%\\) ,现将 \\(A\\) 商品降价20元, \\(B\\) 商品打9折出售, \\(B\\) 商品的售价反而比 \\(A\\) 商品贵 \\(1.25\\%\\) .那么, \\(A\\) 商品的原价是 元.",
+      "answer_text": "100 【作者】王威",
+      "solution_text": "设 \\(A\\) 商品原价 \\(x\\) 元,则 \\(B\\) 商品原价是 \\((1 - 10\\%)x = 0.9x\\) 元,\n\n\\[0.9x\\times 90\\% -(x - 20) = (x - 20)\\times 1.25\\% ,\\mathrm{~}x = 100.\\]\n\n## 二. 填空题II(每小题10分,共40分)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含答案和解析，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#2#4",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "4. 购物节到了,商场进行促销活动.已知 \\(B\\) 商品的原价比 \\(A\\) 商品便宜 \\(10\\%\\) ,现将 \\(A\\) 商品降价20元, \\(B\\) 商品打9折出售, \\(B\\) 商品的售价反而比 \\(A\\) 商品贵 \\(1.25\\%\\) .那么, \\(A\\) 商品的原价是 元.",
+      "answer": "100 【作者】王威",
+      "solution": "设 \\(A\\) 商品原价 \\(x\\) 元,则 \\(B\\) 商品原价是 \\((1 - 10\\%)x = 0.9x\\) 元,\n\n\\[0.9x\\times 90\\% -(x - 20) = (x - 20)\\times 1.25\\% ,\\mathrm{~}x = 100.\\]\n\n## 二. 填空题II(每小题10分,共40分)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 小白和小黑从同一格子开始猜拳.每次猜拳:小白赢了就前进2格,输了原地不动;小黑赢了就前进4格,输了后退1格;平局两人都不动.已知第1次是小黑赢了,那么两人至少还要猜 次才能又站在同一个格子上.",
+      "answer_text": "6 【作者】古瑞香",
+      "solution_text": "只要小白赢两人的距离就会缩小3格,小黑赢两人的距离就会拉开4格;\n\n一开始两人的距离是4格,要使得两人站在同一个格子,则距离为0;\n\n因为 \\([4,3] = 12\\) ,所以小白赢3次,小黑赢4次,即 \\(4 + 4 + 4 - 3 - 3 - 3 = 0\\)\n\n因此总共需要猜拳7次,不算第1次,至少还需要6次.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块直接包含答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#2#5",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "5. 小白和小黑从同一格子开始猜拳.每次猜拳:小白赢了就前进2格,输了原地不动;小黑赢了就前进4格,输了后退1格;平局两人都不动.已知第1次是小黑赢了,那么两人至少还要猜 次才能又站在同一个格子上.",
+      "answer": "6 【作者】古瑞香",
+      "solution": "只要小白赢两人的距离就会缩小3格,小黑赢两人的距离就会拉开4格;\n\n一开始两人的距离是4格,要使得两人站在同一个格子,则距离为0;\n\n因为 \\([4,3] = 12\\) ,所以小白赢3次,小黑赢4次,即 \\(4 + 4 + 4 - 3 - 3 - 3 = 0\\)\n\n因此总共需要猜拳7次,不算第1次,至少还需要6次."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 三个不同自然数 \\(a\\) 、 \\(b\\) 、 \\(c\\) 满足: \\((a + b - c)\\times (b + c - a)\\times (c + a - b) = 2024\\) ,那么 \\(a\\times b\\times c =\\)",
+      "answer_text": "9792 【作者】胡浩",
+      "solution_text": "三个括号奇偶性相同,所以有:\n\n(1) \\(2024 = 2\\times 2\\times 506\\) ,此时三个数中有两个相同,舍去;\n\n(2) \\(2024 = 2\\times 22\\times 46\\) ,解得三个数为12、24、34,有 \\(a\\times b\\times c = 12\\times 24\\times 34 = 9792\\)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接附有答案和解析，答案已泄露，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "6. 三个不同自然数 \\(a\\) 、 \\(b\\) 、 \\(c\\) 满足: \\((a + b - c)\\times (b + c - a)\\times (c + a - b) = 2024\\) ,那么 \\(a\\times b\\times c =\\)",
+      "answer": "9792 【作者】胡浩",
+      "solution": "三个括号奇偶性相同,所以有:\n\n(1) \\(2024 = 2\\times 2\\times 506\\) ,此时三个数中有两个相同,舍去;\n\n(2) \\(2024 = 2\\times 22\\times 46\\) ,解得三个数为12、24、34,有 \\(a\\times b\\times c = 12\\times 24\\times 34 = 9792\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 有20位剑客,他们任意两人之间,要么是朋友,要么是敌人,而且满足下面两个条件:\n\n\\(①\\) 朋友的朋友还是朋友;\n\n\\(②\\) 敌人的敌人也是朋友.\n\n那么现在这20人之间,任意两名敌人都比一场剑术,那么最多要比 场剑术.",
+      "answer_text": "100 【作者】林牧",
+      "solution_text": "由条件 \\(①\\) 可知,互为朋友的一群人可以看作一组,同组为朋友,异组为敌人,由条件 \\(②\\) 可知,最多有2组,因此转化为20拆成两个数,乘积最大的问题,所以最大是 \\(10\\times 10 = 100\\)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整数学题干，但答案和解析直接给出，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#2#7",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "7. 有20位剑客,他们任意两人之间,要么是朋友,要么是敌人,而且满足下面两个条件:\n\n\\(①\\) 朋友的朋友还是朋友;\n\n\\(②\\) 敌人的敌人也是朋友.\n\n那么现在这20人之间,任意两名敌人都比一场剑术,那么最多要比 场剑术.",
+      "answer": "100 【作者】林牧",
+      "solution": "由条件 \\(①\\) 可知,互为朋友的一群人可以看作一组,同组为朋友,异组为敌人,由条件 \\(②\\) 可知,最多有2组,因此转化为20拆成两个数,乘积最大的问题,所以最大是 \\(10\\times 10 = 100\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "8. 下图由 9 个小正方形组成, 将其中 1 格染成红色, 2 格染成黄色, 6 格染成绿色, 一共有种不同的染色方式. (旋转后相同的视为同一种染色方式)\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_003/images/0.jpg)",
+      "answer_text": "128 【作者】李兆伟",
+      "solution_text": "若不考虑旋转, 先染红色, 再染黄色, 染法为 \\(9 \\times C_{8}^{2} = 252\\) ;\n\n不中心对称的会重复计算两次, 中心对称的情况只计算一次,\n\n中心对称的染色方法必须红色在中间, 两个黄色有 4 种染法,\n\n所以 \\((252 + 4) \\div 2 = 128\\) .\n\n## 三. 填空题III(每小题14分, 共42分)",
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、答案和解析，但答案和解析直接附在题干后，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#3#8",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "8. 下图由 9 个小正方形组成, 将其中 1 格染成红色, 2 格染成黄色, 6 格染成绿色, 一共有种不同的染色方式. (旋转后相同的视为同一种染色方式)\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_003/images/0.jpg)",
+      "answer": "128 【作者】李兆伟",
+      "solution": "若不考虑旋转, 先染红色, 再染黄色, 染法为 \\(9 \\times C_{8}^{2} = 252\\) ;\n\n不中心对称的会重复计算两次, 中心对称的情况只计算一次,\n\n中心对称的染色方法必须红色在中间, 两个黄色有 4 种染法,\n\n所以 \\((252 + 4) \\div 2 = 128\\) .\n\n## 三. 填空题III(每小题14分, 共42分)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "9. 一个正整数的 2024 倍和 2025 倍因数个数相同, 这个正整数的最小值是",
+      "answer_text": "10 【作者】周炬坤",
+      "solution_text": "\\(2024 = 2^{3} \\times 11^{1} \\times 23^{1}\\) , \\(2025 = 3^{4} \\times 5^{2}\\) , 不难得出 2024 有 16 个因数, 2025 有 15 个因数,\n\n所以这个正整数与 2024 一定有大于 1 的公因数,\n\n否则这个数的 2024 倍因数个数一定比 2025 倍因数个数多.\n\n要求这个正整数的最小值, 根据 2024, 不妨设这个数不含质因数 11 和 23,\n\n设这个数的质因数分解形式为 \\(A = 2^{a} \\times 3^{b} \\times 5^{c}\\) ,\n\n\\[2024A = 2^{a + 3} \\times 3^{b} \\times 5^{c} \\times 11^{1} \\times 23^{1}, 2025A = 2^{a} \\times 3^{b + 4} \\times 5^{c + 2},\\]\n\n根据因数个数相等, 那么有: \\((a + 4) \\times (b + 1) \\times (c + 1) \\times (1 + 1) \\times (1 + 1) = (a + 1) \\times (b + 5) \\times (c + 3)\\) ,\n\n即有: \\(4 = \\frac{a + 1}{a + 4} \\times \\frac{b + 5}{b + 1} \\times \\frac{c + 3}{c + 1}\\) , 当 \\(a = c = 1\\) , \\(b = 0\\) 时符合条件, 此时 \\(A\\) 最小, 为 10. 如果有质\n\n因数 11 和 23, 肯定大于 10, 所以 \\(A\\) 的最小值为 10.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整的题干、答案和解析，存在泄露风险，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#3#9",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "9. 一个正整数的 2024 倍和 2025 倍因数个数相同, 这个正整数的最小值是",
+      "answer": "10 【作者】周炬坤",
+      "solution": "\\(2024 = 2^{3} \\times 11^{1} \\times 23^{1}\\) , \\(2025 = 3^{4} \\times 5^{2}\\) , 不难得出 2024 有 16 个因数, 2025 有 15 个因数,\n\n所以这个正整数与 2024 一定有大于 1 的公因数,\n\n否则这个数的 2024 倍因数个数一定比 2025 倍因数个数多.\n\n要求这个正整数的最小值, 根据 2024, 不妨设这个数不含质因数 11 和 23,\n\n设这个数的质因数分解形式为 \\(A = 2^{a} \\times 3^{b} \\times 5^{c}\\) ,\n\n\\[2024A = 2^{a + 3} \\times 3^{b} \\times 5^{c} \\times 11^{1} \\times 23^{1}, 2025A = 2^{a} \\times 3^{b + 4} \\times 5^{c + 2},\\]\n\n根据因数个数相等, 那么有: \\((a + 4) \\times (b + 1) \\times (c + 1) \\times (1 + 1) \\times (1 + 1) = (a + 1) \\times (b + 5) \\times (c + 3)\\) ,\n\n即有: \\(4 = \\frac{a + 1}{a + 4} \\times \\frac{b + 5}{b + 1} \\times \\frac{c + 3}{c + 1}\\) , 当 \\(a = c = 1\\) , \\(b = 0\\) 时符合条件, 此时 \\(A\\) 最小, 为 10. 如果有质\n\n因数 11 和 23, 肯定大于 10, 所以 \\(A\\) 的最小值为 10."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "10. 如图, 从 \\(A\\) 地到 \\(B\\) 地, \\(AC\\) 段为上坡路, \\(CB\\) 段为下坡路. 甲、乙两人以同样的初始速度分别从 \\(A\\) 、 \\(B\\) 两地同时出发, 相向而行, 将在 \\(D\\) 点相遇. 若出发时甲提速 \\(20\\%\\) , 则在距 \\(D\\) 点 55.5 米处相遇; 若出发时乙提速 \\(20\\%\\) , 则在距 \\(D\\) 点 54 米处相遇. 已知每人下坡速度是自己上坡速度的 1.5 倍. 那么 \\(A\\) 、 \\(C\\) 两地相距 米.\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_003/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_003/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，描述问题场景和条件，无答案或解析泄露，可独立用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#3#10",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "10. 如图, 从 \\(A\\) 地到 \\(B\\) 地, \\(AC\\) 段为上坡路, \\(CB\\) 段为下坡路. 甲、乙两人以同样的初始速度分别从 \\(A\\) 、 \\(B\\) 两地同时出发, 相向而行, 将在 \\(D\\) 点相遇. 若出发时甲提速 \\(20\\%\\) , 则在距 \\(D\\) 点 55.5 米处相遇; 若出发时乙提速 \\(20\\%\\) , 则在距 \\(D\\) 点 54 米处相遇. 已知每人下坡速度是自己上坡速度的 1.5 倍. 那么 \\(A\\) 、 \\(C\\) 两地相距 米.\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_003/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "11. 老师和聪明且诚实的甲、乙、丙三位同学玩推理游戏:老师先想好三个不同的数字,并用这三个数字各一次组成了若干不同的三位数,选中其中的三个分别告诉了甲、乙、丙,三人都只知道自己的数而不知道其他人拿到的数,三人依次展开了如下对话:\n\n甲:我能确定你俩拿到的数至少有一个是4的倍数;\n\n乙:我能确定你俩拿到的数至少有一个是27的倍数;\n\n丙:虽然我现在还不确定你俩拿到的数分别是多少,但我知道甲拿到的数是我们三个中最小的.\n\n那么丙拿到的三位数为",
+      "answer_text": "540 【作者】陈景发",
+      "solution_text": "记三个数字为 \\(a< b< c\\) ,由甲的话知三个数字组成的所有三位数中非4的倍数最多有2个.(他自己最多拿一个非4的倍数,另两人至少有1人有一个是4的倍数)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#4#11",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "11. 老师和聪明且诚实的甲、乙、丙三位同学玩推理游戏:老师先想好三个不同的数字,并用这三个数字各一次组成了若干不同的三位数,选中其中的三个分别告诉了甲、乙、丙,三人都只知道自己的数而不知道其他人拿到的数,三人依次展开了如下对话:\n\n甲:我能确定你俩拿到的数至少有一个是4的倍数;\n\n乙:我能确定你俩拿到的数至少有一个是27的倍数;\n\n丙:虽然我现在还不确定你俩拿到的数分别是多少,但我知道甲拿到的数是我们三个中最小的.\n\n那么丙拿到的三位数为",
+      "answer": "540 【作者】陈景发",
+      "solution": "记三个数字为 \\(a< b< c\\) ,由甲的话知三个数字组成的所有三位数中非4的倍数最多有2个.(他自己最多拿一个非4的倍数,另两人至少有1人有一个是4的倍数)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 12,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "12. 如图所示,已知 \\(G\\) 是正六边形 \\(ABCDEF\\) 外一点, \\(GB\\) 垂直 \\(AB\\) ,连接 \\(GE\\) 交 \\(AB\\) 于 \\(H\\) . \\(\\triangle GBH\\) 的面积为24平方厘米, \\(\\triangle GBC\\) 的面积为20平方厘米.那么:\n\n(1)求 \\(AH:HB\\) 的最简整数比是多少?(9分)\n\n(2)正六边形 \\(ABCDEF\\) 的面积是多少平方厘米?(9分)\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_005/images/0.jpg)\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_005/images/1.jpg)",
+      "answer_text": "(1)2:3 (2)80 【作者】黄达鹏",
+      "solution_text": "分别连接 \\(BE\\) 、 \\(BD\\) 、 \\(AE\\) ,过点 \\(C\\) 作 \\(CM \\perp BD\\) 交 \\(BD\\) 于点 \\(M\\) ,\n\n因为 \\(CM:HB = S_{\\triangle CBG}:S_{\\triangle HBG} = 20:24 = 5:6\\) ,",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_005/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_005/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目题干完整，但文本块中直接包含答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#5#12",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "12. 如图所示,已知 \\(G\\) 是正六边形 \\(ABCDEF\\) 外一点, \\(GB\\) 垂直 \\(AB\\) ,连接 \\(GE\\) 交 \\(AB\\) 于 \\(H\\) . \\(\\triangle GBH\\) 的面积为24平方厘米, \\(\\triangle GBC\\) 的面积为20平方厘米.那么:\n\n(1)求 \\(AH:HB\\) 的最简整数比是多少?(9分)\n\n(2)正六边形 \\(ABCDEF\\) 的面积是多少平方厘米?(9分)\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_005/images/0.jpg)\n\n![](ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_005/images/1.jpg)",
+      "answer": "(1)2:3 (2)80 【作者】黄达鹏",
+      "solution": "分别连接 \\(BE\\) 、 \\(BD\\) 、 \\(AE\\) ,过点 \\(C\\) 作 \\(CM \\perp BD\\) 交 \\(BD\\) 于点 \\(M\\) ,\n\n因为 \\(CM:HB = S_{\\triangle CBG}:S_{\\triangle HBG} = 20:24 = 5:6\\) ,"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 13,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小高组答案解析版.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小高组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "13. 实验室有一台天平和足够多完全相同的小球,甲放了一些小球在天平左侧,放置球的个数不超过 \\(m\\) 个,乙看不到天平左侧的情况,但是他可以在天平右侧放球也可以观察到天平是否平衡,最初天平右侧是空的,乙每次可以选择以下中的一项进行操作:\n\n\\(①\\) 在天平右侧一次性放置一些球;\n\n\\(②\\) 在天平右侧一次性取走一些球.\n\n(1)如果 \\(m = 3\\) ,乙至少操作多少次就一定能知道天平左侧球的数量?(3分)\n\n(2)如果 \\(m = 100\\) ,乙至少操作多少次就一定能知道天平左侧球的数量?(6分)\n\n(3)如果乙最多只能执行1次操作 \\(②\\) ,当 \\(m = 100\\) 时,乙至少操作多少次就一定能知道天平左侧球的数量?(9分)",
+      "answer_text": "(1)1次;(2)6次;(3)10次; 【作者】周炬坤",
+      "solution_text": "(1)每一次操作会出现三种可能的情况:天平左侧重,天平右侧重,天平平衡;\n\n若总球数不超过3,那么1次操作即可确定球数:在天平右侧放2个球,若左侧重则左侧有3球,若左侧轻则左侧只有1球,若平衡则左侧有2球;\n\n(2)若总球数不超过 \\(k\\) 时,操作 \\(n\\) 次操作可确定球数,那么总球数不超过 \\(2k + 1\\) 时,先在天平右侧放 \\(k + 1\\) 个球,若平衡则左侧有 \\(k + 1\\) 个球,若不平衡则根据左右的轻重情况,再经过 \\(n\\) 次操作即可确定球数;递推可得:\n\n<table><tr><td>球上限</td><td>3</td><td>7</td><td>15</td><td>31</td><td>63</td><td>127</td></tr><tr><td>次数</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr></table>\n\n即6次可确定左侧球数量.\n\n(2)如果不能执行操作 \\(②\\) ,显然球总数不超过 \\(2n + 1\\) 时可由 \\(n\\) 次操作确定球数,如果可以执行一次操作 \\(②\\) ,第1次操作之后,若平衡则已经测出左侧球数量,若左侧重则可以在右侧继续放球且保留使用操作 \\(②\\) 的机会,若右侧重则需要执行操作 \\(②\\) ,之后再按照不能执行操作 \\(②\\) 的方式进行测量,递推可得:\n\n<table><tr><td>次数</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td colspan=\"2\">6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><td>不能进行②球上限</td><td>3</td><td>5</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td><td>17</td><td>19</td><td></td><td></td></tr><tr><td>可做1次②球上限</td><td>3</td><td>7</td><td>13</td><td>21</td><td>31</td><td>43</td><td>57</td><td>73</td><td>91</td><td>111</td><td></td></tr></table>\n\n即10次可确定左侧球数量.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年7月27日迎春杯小高组答案解析版/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本为完整数学竞赛题目，包含题干、答案和解析，题干本身无泄露，但整体不宜直接用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json#6#13",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年7月27日迎春杯小高组答案解析版.json"
+        }
+      },
+      "text": "13. 实验室有一台天平和足够多完全相同的小球,甲放了一些小球在天平左侧,放置球的个数不超过 \\(m\\) 个,乙看不到天平左侧的情况,但是他可以在天平右侧放球也可以观察到天平是否平衡,最初天平右侧是空的,乙每次可以选择以下中的一项进行操作:\n\n\\(①\\) 在天平右侧一次性放置一些球;\n\n\\(②\\) 在天平右侧一次性取走一些球.\n\n(1)如果 \\(m = 3\\) ,乙至少操作多少次就一定能知道天平左侧球的数量?(3分)\n\n(2)如果 \\(m = 100\\) ,乙至少操作多少次就一定能知道天平左侧球的数量?(6分)\n\n(3)如果乙最多只能执行1次操作 \\(②\\) ,当 \\(m = 100\\) 时,乙至少操作多少次就一定能知道天平左侧球的数量?(9分)",
+      "answer": "(1)1次;(2)6次;(3)10次; 【作者】周炬坤",
+      "solution": "(1)每一次操作会出现三种可能的情况:天平左侧重,天平右侧重,天平平衡;\n\n若总球数不超过3,那么1次操作即可确定球数:在天平右侧放2个球,若左侧重则左侧有3球,若左侧轻则左侧只有1球,若平衡则左侧有2球;\n\n(2)若总球数不超过 \\(k\\) 时,操作 \\(n\\) 次操作可确定球数,那么总球数不超过 \\(2k + 1\\) 时,先在天平右侧放 \\(k + 1\\) 个球,若平衡则左侧有 \\(k + 1\\) 个球,若不平衡则根据左右的轻重情况,再经过 \\(n\\) 次操作即可确定球数;递推可得:\n\n<table><tr><td>球上限</td><td>3</td><td>7</td><td>15</td><td>31</td><td>63</td><td>127</td></tr><tr><td>次数</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr></table>\n\n即6次可确定左侧球数量.\n\n(2)如果不能执行操作 \\(②\\) ,显然球总数不超过 \\(2n + 1\\) 时可由 \\(n\\) 次操作确定球数,如果可以执行一次操作 \\(②\\) ,第1次操作之后,若平衡则已经测出左侧球数量,若左侧重则可以在右侧继续放球且保留使用操作 \\(②\\) 的机会,若右侧重则需要执行操作 \\(②\\) ,之后再按照不能执行操作 \\(②\\) 的方式进行测量,递推可得:\n\n<table><tr><td>次数</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td colspan=\"2\">6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><td>不能进行②球上限</td><td>3</td><td>5</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td><td>17</td><td>19</td><td></td><td></td></tr><tr><td>可做1次②球上限</td><td>3</td><td>7</td><td>13</td><td>21</td><td>31</td><td>43</td><td>57</td><td>73</td><td>91</td><td>111</td><td></td></tr></table>\n\n即10次可确定左侧球数量."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(\\frac{1}{3} \\times 45.6 - 78 + 90\\) 的计算结果是",
+      "answer_text": "88",
+      "solution_text": "\\[\\frac{1}{3} \\times 45.6 - 78 + 90 = 76 - 78 + 90 = 88.\\]",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整的题干、答案和解析，答案直接给出，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(\\frac{1}{3} \\times 45.6 - 78 + 90\\) 的计算结果是",
+      "answer": "88",
+      "solution": "\\[\\frac{1}{3} \\times 45.6 - 78 + 90 = 76 - 78 + 90 = 88.\\]"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 蚕娘在蚕房养了若干条蚕,一天她发现有 \\(\\frac{1}{3}\\) 的蚕结茧了,于是她取出了 \\(\\frac{1}{3}\\) 的蚕茧用来缫丝,第二天,她发现剩下的蚕中又有 \\(\\frac{1}{3}\\) 结了茧,如果此时蚕房内没结茧的蚕还有400条,那么蚕房中现有蚕茧 颗.",
+      "answer_text": "400",
+      "solution_text": "蚕茧有原来总套数的 \\(\\frac{1}{3} - \\frac{1}{3} \\times \\frac{1}{3} + (1 - \\frac{1}{3}) \\times \\frac{1}{3} = \\frac{4}{9}\\) ; 未结茧的蚕有原来总套数的 \\((1 - \\frac{1}{3}) \\times (1 - \\frac{1}{3}) = \\frac{4}{9}\\) ; 所以最后蚕房里未结茧的蚕和蚕茧一样多,因此蚕房里有蚕茧400颗.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立可出题，但文本块直接包含答案和解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "2. 蚕娘在蚕房养了若干条蚕,一天她发现有 \\(\\frac{1}{3}\\) 的蚕结茧了,于是她取出了 \\(\\frac{1}{3}\\) 的蚕茧用来缫丝,第二天,她发现剩下的蚕中又有 \\(\\frac{1}{3}\\) 结了茧,如果此时蚕房内没结茧的蚕还有400条,那么蚕房中现有蚕茧 颗.",
+      "answer": "400",
+      "solution": "蚕茧有原来总套数的 \\(\\frac{1}{3} - \\frac{1}{3} \\times \\frac{1}{3} + (1 - \\frac{1}{3}) \\times \\frac{1}{3} = \\frac{4}{9}\\) ; 未结茧的蚕有原来总套数的 \\((1 - \\frac{1}{3}) \\times (1 - \\frac{1}{3}) = \\frac{4}{9}\\) ; 所以最后蚕房里未结茧的蚕和蚕茧一样多,因此蚕房里有蚕茧400颗."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 甲、乙在黑板上各写了一个自然数,结果发现这两个数的最小公倍数是甲写的数的3倍,是乙写的数的7倍,但只有这两个数乘积的 \\(\\frac{1}{21}\\) ,那么这两个数的和为",
+      "answer_text": "210",
+      "solution_text": "甲数的3倍是甲、乙乘积的 \\(\\frac{1}{21}\\) ,所以乙数是 \\(3 \\div \\frac{1}{21} = 63\\) ;\n\n同理,甲数是 \\(7 \\div \\frac{1}{21} = 147\\) ;\n\n两个数的和为 \\(63 + 147 = 210\\) .",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立完整，但整个文本块包含答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "3. 甲、乙在黑板上各写了一个自然数,结果发现这两个数的最小公倍数是甲写的数的3倍,是乙写的数的7倍,但只有这两个数乘积的 \\(\\frac{1}{21}\\) ,那么这两个数的和为",
+      "answer": "210",
+      "solution": "甲数的3倍是甲、乙乘积的 \\(\\frac{1}{21}\\) ,所以乙数是 \\(3 \\div \\frac{1}{21} = 63\\) ;\n\n同理,甲数是 \\(7 \\div \\frac{1}{21} = 147\\) ;\n\n两个数的和为 \\(63 + 147 = 210\\) ."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 一个梯形的四条边长恰好构成等差数列,且它的周长是2024,那么这个梯形的两腰长之和是",
+      "answer_text": "1012",
+      "solution_text": "设梯形的边长为: \\(a_{1} < a_{2} < a_{3} < a_{4}\\) ,公差为 \\(d\\) .\n\n如图,将梯形分割成 \\(\\square ABED\\) 和 \\(\\triangle BCE\\) ,两底的差与两腰构成 \\(\\triangle BCE\\) ,从而两腰的差小于两底的差,那么两底的差为 \\(2d\\) 或 \\(3d\\) .\n\n\\(BCE\\) ,从而两腰的差小于两底的差,那么两底的差为 \\(2a\\) 或 \\(3d\\) .\n\n若两底的差为 \\(2d\\) ,两底长 \\(a_{1}, a_{3}\\) 或 \\(a_{2}, a_{4}\\) ,两腰的差也是 \\(2d\\) ,矛盾.\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可出题，但直接包含答案和解析，高风险泄露，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "4. 一个梯形的四条边长恰好构成等差数列,且它的周长是2024,那么这个梯形的两腰长之和是",
+      "answer": "1012",
+      "solution": "设梯形的边长为: \\(a_{1} < a_{2} < a_{3} < a_{4}\\) ,公差为 \\(d\\) .\n\n如图,将梯形分割成 \\(\\square ABED\\) 和 \\(\\triangle BCE\\) ,两底的差与两腰构成 \\(\\triangle BCE\\) ,从而两腰的差小于两底的差,那么两底的差为 \\(2d\\) 或 \\(3d\\) .\n\n\\(BCE\\) ,从而两腰的差小于两底的差,那么两底的差为 \\(2a\\) 或 \\(3d\\) .\n\n若两底的差为 \\(2d\\) ,两底长 \\(a_{1}, a_{3}\\) 或 \\(a_{2}, a_{4}\\) ,两腰的差也是 \\(2d\\) ,矛盾.\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/images/0.jpg)\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_001/images/1.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 熊大参加为期10天的体能训练营,每天都要做俯卧撑.已知第一天它只做了11个,第2天比第1天多做1个或2个,第3天比第2天多做1个或3个……第10天比第9天多做到1个或10个.在这10天中他一共做了215个俯卧撑,那么,其中它有天比前一天仅多做1个.",
+      "answer_text": "5",
+      "solution_text": "如果熊大每天仅比前一天多做一个,则10天他共做了 \\(11 + 12 + 13 + \\dots 20 = 155\\) 个.\n\n若第2天多做2个,则后面每天要多做1个,共多做 \\(1\\times 9 = 9\\) 个;\n\n若第3天多做3个,则后面每天要多做2个,共多做 \\(2\\times 8 = 16\\) 个;\n\n依此类推,后面每天改变对总数的影响分别为9,16,21,24,25,24,21,16,9.\n\n而总共需要多做 \\(215 - 155 = 60\\) 个.\n\n60只能表示为 \\(9 + 21 + 21 + 9\\) ,因此有4天它不止比前一天多做一个,有5天仅比前一天多做1个.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题干、答案和解析，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#2#5",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "5. 熊大参加为期10天的体能训练营,每天都要做俯卧撑.已知第一天它只做了11个,第2天比第1天多做1个或2个,第3天比第2天多做1个或3个……第10天比第9天多做到1个或10个.在这10天中他一共做了215个俯卧撑,那么,其中它有天比前一天仅多做1个.",
+      "answer": "5",
+      "solution": "如果熊大每天仅比前一天多做一个,则10天他共做了 \\(11 + 12 + 13 + \\dots 20 = 155\\) 个.\n\n若第2天多做2个,则后面每天要多做1个,共多做 \\(1\\times 9 = 9\\) 个;\n\n若第3天多做3个,则后面每天要多做2个,共多做 \\(2\\times 8 = 16\\) 个;\n\n依此类推,后面每天改变对总数的影响分别为9,16,21,24,25,24,21,16,9.\n\n而总共需要多做 \\(215 - 155 = 60\\) 个.\n\n60只能表示为 \\(9 + 21 + 21 + 9\\) ,因此有4天它不止比前一天多做一个,有5天仅比前一天多做1个."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 如果一个个位数字为5的三位数除以2,3,4,5,6,7,8,9的余数互不相等,那么这个数是",
+      "answer_text": "935",
+      "solution_text": "这个数个奇数所以只能除以2余1,除以4余3,除以6余5,除以8余7;\n\n这个数的末位是5,所以除以5余0;\n\n这个数除以6余5,所以除以3余2,除以9余8;\n\n因此这个数除以360余215.\n\n余数还剩下4和6,所以这个数除以7余4或者6.\n\n枚举知这个三位数是 \\(360\\times 2 + 215 = 935\\)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整，但直接包含答案和解析，存在高风险，不适合作为考题，仅可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "6. 如果一个个位数字为5的三位数除以2,3,4,5,6,7,8,9的余数互不相等,那么这个数是",
+      "answer": "935",
+      "solution": "这个数个奇数所以只能除以2余1,除以4余3,除以6余5,除以8余7;\n\n这个数的末位是5,所以除以5余0;\n\n这个数除以6余5,所以除以3余2,除以9余8;\n\n因此这个数除以360余215.\n\n余数还剩下4和6,所以这个数除以7余4或者6.\n\n枚举知这个三位数是 \\(360\\times 2 + 215 = 935\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 在梯形ABCD中, \\(E\\) 、 \\(F\\) 分别在对角线 \\(AC\\) 和腰\n\n\\(AD\\) 上, \\(\\triangle BEC\\) 面积为30, \\(\\triangle DEC\\) 面积为75,\n\n则平行四边形BEDF面积是",
+      "answer_text": "40",
+      "solution_text": "延长 \\(BE\\) 交 \\(CD\\) 于点 \\(M\\)\n\n等积变形, \\(S_{\\triangle ABC} = S_{\\triangle ABD}\\) , \\(S_{\\triangle ABE} = S_{\\triangle DBE} = S_{\\triangle BDF}\\)\n\n\\(S_{\\triangle ABF} = S_{\\triangle DEM} = S_{\\triangle BEC} = 30\\) , \\(S_{\\triangle EMC} = 75 - 30 = 45\\)\n\n\\(\\therefore S_{\\triangle BDE} = 30\\times 30\\div 45 = 20\\)\n\n平行四边形BEDF的面积为40.\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_002/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该题目块包含完整的题干、答案和解析，因此适合作为练习使用，但不适合作为考试题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#2#7",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "7. 在梯形ABCD中, \\(E\\) 、 \\(F\\) 分别在对角线 \\(AC\\) 和腰\n\n\\(AD\\) 上, \\(\\triangle BEC\\) 面积为30, \\(\\triangle DEC\\) 面积为75,\n\n则平行四边形BEDF面积是",
+      "answer": "40",
+      "solution": "延长 \\(BE\\) 交 \\(CD\\) 于点 \\(M\\)\n\n等积变形, \\(S_{\\triangle ABC} = S_{\\triangle ABD}\\) , \\(S_{\\triangle ABE} = S_{\\triangle DBE} = S_{\\triangle BDF}\\)\n\n\\(S_{\\triangle ABF} = S_{\\triangle DEM} = S_{\\triangle BEC} = 30\\) , \\(S_{\\triangle EMC} = 75 - 30 = 45\\)\n\n\\(\\therefore S_{\\triangle BDE} = 30\\times 30\\div 45 = 20\\)\n\n平行四边形BEDF的面积为40.\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_002/images/0.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 如图,有编号为 \\(1\\sim 9\\) 的9个房间,有公共点的两个房间中的人可以相互看到,否则无法相互看到.老师安排甲、乙、丙、丁四人住在不同的房间中,并且告诉他们,甲、乙、\n\n丙、丁的房间号依次从小到大.四人住进房间后,甲说:\"虽然乙并不能看到所有人,但从他的视角看,丙无法确定了是否知道我在几号房间.\"那么甲、乙、丙、丁四人所在的房间号,按顺序组成的四位数是\n\n<table><tr><td>7</td><td>8</td><td>9</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>1</td><td>2</td><td>3</td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#2#8",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "8. 如图,有编号为 \\(1\\sim 9\\) 的9个房间,有公共点的两个房间中的人可以相互看到,否则无法相互看到.老师安排甲、乙、丙、丁四人住在不同的房间中,并且告诉他们,甲、乙、\n\n丙、丁的房间号依次从小到大.四人住进房间后,甲说:\"虽然乙并不能看到所有人,但从他的视角看,丙无法确定了是否知道我在几号房间.\"那么甲、乙、丙、丁四人所在的房间号,按顺序组成的四位数是\n\n<table><tr><td>7</td><td>8</td><td>9</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>1</td><td>2</td><td>3</td></tr></table>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "9. 小李每天准点开车从家出发去上班,总能恰好按时到达公司,因为早高峰影响,在 \\(8:00\\sim\\) 8:30会堵车严重,这个时间段内开车速度会减半,如果小李早10分钟出发,会早到15分钟,如果小李晚20分钟出发,会晚到25分钟,如果小李晚10分钟出发,会晚到分钟.",
+      "answer_text": "20",
+      "solution_text": "小李早出发10分钟,途中少用 \\(10 - 5 = 5\\) 分钟,说明平时速度减半行10分钟的路程,被现在正常行5分钟所替代,平时上班有以下三类情况:\n\n(1)8:00或之前出发,8:10到达公司;\n\n(2)8:00或之前出发,8:35到达公司;\n\n(3) \\(8:00\\sim 8:05\\) 出发,速度减半行10分钟到达公司.\n\n小李晚20分钟出发,途中多用 \\(25 - 20 = 5\\) 分钟,说明平时正常行驶5分钟的路程,被现在速度减半行10分钟所替代,如果是(2)(3)两种情况之一,则晚出发20分钟时,途中所用时间一定不会多于平时所用时间,所以必为情况(1).\n\n由(1)知小李晚20分钟出发时,晚到25分钟,则是8:35到达公司,在拥堵段上的时间是 \\(10 + 10 = 20\\) 分钟,所以晚20分钟出发是8:10出发,平时是7:50出发.\n\n所以如果小李8:00出发,会8:30到达,比平时晚20分钟到达.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题目、答案和解析，答案已泄露，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#3#9",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "9. 小李每天准点开车从家出发去上班,总能恰好按时到达公司,因为早高峰影响,在 \\(8:00\\sim\\) 8:30会堵车严重,这个时间段内开车速度会减半,如果小李早10分钟出发,会早到15分钟,如果小李晚20分钟出发,会晚到25分钟,如果小李晚10分钟出发,会晚到分钟.",
+      "answer": "20",
+      "solution": "小李早出发10分钟,途中少用 \\(10 - 5 = 5\\) 分钟,说明平时速度减半行10分钟的路程,被现在正常行5分钟所替代,平时上班有以下三类情况:\n\n(1)8:00或之前出发,8:10到达公司;\n\n(2)8:00或之前出发,8:35到达公司;\n\n(3) \\(8:00\\sim 8:05\\) 出发,速度减半行10分钟到达公司.\n\n小李晚20分钟出发,途中多用 \\(25 - 20 = 5\\) 分钟,说明平时正常行驶5分钟的路程,被现在速度减半行10分钟所替代,如果是(2)(3)两种情况之一,则晚出发20分钟时,途中所用时间一定不会多于平时所用时间,所以必为情况(1).\n\n由(1)知小李晚20分钟出发时,晚到25分钟,则是8:35到达公司,在拥堵段上的时间是 \\(10 + 10 = 20\\) 分钟,所以晚20分钟出发是8:10出发,平时是7:50出发.\n\n所以如果小李8:00出发,会8:30到达,比平时晚20分钟到达."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "10. 如图,等腰梯形ABCD中,E是底边BC上一点,将△DEC关于\n\nDE对折,C恰好落在AB上的 \\(F\\) 点处,然后将△BEF关于EF\n\n对折,B恰好落在DF上的 \\(G\\) 点处, \\(\\triangle DEG\\) 面积为36平方厘米,\n\n\\(\\triangle ADG\\) 面积为24平方厘米,那么梯形ABCD的面积为平方厘米.",
+      "answer_text": "162",
+      "solution_text": "由条件有 \\(\\angle B = \\angle C = \\angle 1 = \\angle 2\\) ,所以 \\(\\triangle BEF\\) 为等腰三角形,这样 \\(BE = EF = EC\\) ,又 \\(\\angle 3 = \\angle DEF\\) 且 \\(\\angle 3 + \\angle DEF + \\angle 4 = \\angle 2 + \\angle B + \\angle 4\\) ,所以 \\(\\angle 3 = \\angle B = \\angle C\\) .这样ABED是一个平行四边形.\n\n所以 \\(S_{\\triangle BEF} + S_{\\triangle ADF} = S_{\\triangle GEF} + S_{\\triangle DGE}\\) ,可得 \\(S_{\\triangle ADF} = S_{\\triangle DGE} = 36\\)\n\n\\(DG:DF = S_{\\triangle ADG}:S_{\\triangle ADF} = 24:36 = 2:3\\) ,所以 \\(AF:AB = 2:3\\)\n\n梯形ABCD的面积为 \\(36\\div \\left(\\frac{1}{3}\\times \\frac{2}{3}\\right) = 162\\) 平方厘米.\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_003/images/0.jpg)\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_003/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_003/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_003/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干独立且完整，但文本块中直接包含标准答案和详细解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#3#10",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干描述完整，但包含答案和解析；移除后可作为练习题，但依赖图片可能限制使用场景。",
+        "review_fix_hint": "删除【答案】和【解析】部分及图片链接，仅保留问题描述；题干提及‘如图’，需确保图片可用。",
+        "review_clean_question_text": "10. 如图,等腰梯形ABCD中,E是底边BC上一点,将△DEC关于DE对折,C恰好落在AB上的F点处,然后将△BEF关于EF对折,B恰好落在DF上的G点处,△DEG面积为36平方厘米,△ADG面积为24平方厘米,那么梯形ABCD的面积为平方厘米.",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#3#10",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "10. 如图,等腰梯形ABCD中,E是底边BC上一点,将△DEC关于\n\nDE对折,C恰好落在AB上的 \\(F\\) 点处,然后将△BEF关于EF\n\n对折,B恰好落在DF上的 \\(G\\) 点处, \\(\\triangle DEG\\) 面积为36平方厘米,\n\n\\(\\triangle ADG\\) 面积为24平方厘米,那么梯形ABCD的面积为平方厘米.",
+      "answer": "162",
+      "solution": "由条件有 \\(\\angle B = \\angle C = \\angle 1 = \\angle 2\\) ,所以 \\(\\triangle BEF\\) 为等腰三角形,这样 \\(BE = EF = EC\\) ,又 \\(\\angle 3 = \\angle DEF\\) 且 \\(\\angle 3 + \\angle DEF + \\angle 4 = \\angle 2 + \\angle B + \\angle 4\\) ,所以 \\(\\angle 3 = \\angle B = \\angle C\\) .这样ABED是一个平行四边形.\n\n所以 \\(S_{\\triangle BEF} + S_{\\triangle ADF} = S_{\\triangle GEF} + S_{\\triangle DGE}\\) ,可得 \\(S_{\\triangle ADF} = S_{\\triangle DGE} = 36\\)\n\n\\(DG:DF = S_{\\triangle ADG}:S_{\\triangle ADF} = 24:36 = 2:3\\) ,所以 \\(AF:AB = 2:3\\)\n\n梯形ABCD的面积为 \\(36\\div \\left(\\frac{1}{3}\\times \\frac{2}{3}\\right) = 162\\) 平方厘米.\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_003/images/0.jpg)\n\n![](ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_003/images/1.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 12,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "12. 算式 \\((12.3 - 0.4) \\times (8 + 9) + 56.7\\) 的计算结果是 _______.",
+      "answer_text": "259",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目结构完整但直接包含答案，存在高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#4#12",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "12. 算式 \\((12.3 - 0.4) \\times (8 + 9) + 56.7\\) 的计算结果是 _______.",
+      "answer": "259",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 13,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "13. 如图,在大圆内有一个最大的正方形,在正方形内有一个以边长为直径的半圆;如果正方形的边长为10,那么图中阴影部分面积和是 _______.",
+      "answer_text": "75",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#4#13",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "13. 如图,在大圆内有一个最大的正方形,在正方形内有一个以边长为直径的半圆;如果正方形的边长为10,那么图中阴影部分面积和是 _______.",
+      "answer": "75",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 14,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "14. 张老师带着一些钱去买签字笔,到商店后发现这种笔降价了 \\(12\\%\\) ,结果他带的钱恰好可以比原来多买3支.那么降价前这些钱可以买签字笔 ______ 支.",
+      "answer_text": "22",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含直接答案泄露，风险高，但题干完整可出题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#4#14",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "14. 张老师带着一些钱去买签字笔,到商店后发现这种笔降价了 \\(12\\%\\) ,结果他带的钱恰好可以比原来多买3支.那么降价前这些钱可以买签字笔 ______ 支.",
+      "answer": "22",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 15,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "15. 在右图的每个方框中填入适当的数字,使得乘法竖式成立;那么,竖式的乘积是 _______.",
+      "answer_text": "3348",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案【答案】3348，存在高泄漏风险，但可独立出题，因此仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#4#15",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "15. 在右图的每个方框中填入适当的数字,使得乘法竖式成立;那么,竖式的乘积是 _______.",
+      "answer": "3348",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 16,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "16. 在2022年北京冬奥会的奖牌榜上,挪威、德国分列第一、第二,中国以9块金牌列奖牌榜第三;中国与德国相比,金牌是德国的 \\(75\\%\\) ,银牌、铜牌都是德国的 \\(40\\%\\) ,奖牌总数是德国的 \\(\\frac{5}{9}\\) ;那么,中国共获奖牌 ______ 块.",
+      "answer_text": "15",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含标准答案'15'，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#4#16",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "16. 在2022年北京冬奥会的奖牌榜上,挪威、德国分列第一、第二,中国以9块金牌列奖牌榜第三;中国与德国相比,金牌是德国的 \\(75\\%\\) ,银牌、铜牌都是德国的 \\(40\\%\\) ,奖牌总数是德国的 \\(\\frac{5}{9}\\) ;那么,中国共获奖牌 ______ 块.",
+      "answer": "15",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 17,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "17. 如图,正六边形被分割成了八个完全一样的直角梯形.如果 \\(AB\\) 长1厘米,那么 \\(CD\\) 长 ______ 厘米.",
+      "answer_text": "16",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是完整的数学问题，但答案直接附在下方，存在泄露风险，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#4#17",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "17. 如图,正六边形被分割成了八个完全一样的直角梯形.如果 \\(AB\\) 长1厘米,那么 \\(CD\\) 长 ______ 厘米.",
+      "answer": "16",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 18,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "18. 将3个球随机放入5个盒子中,没有任意两个球在同一个盒子中的概率是 ______%.",
+      "answer_text": "48",
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含标准答案48，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#4#18",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "18. 将3个球随机放入5个盒子中,没有任意两个球在同一个盒子中的概率是 ______%.",
+      "answer": "48",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 19,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "19. 甲、乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时出发,匀速相向而行,当甲走过 \\(AB\\) 中点 120 米时与乙相遇;两人相遇后,甲将速度提高到原来的 2 倍,到 \\(B\\) 地后立即调头;当甲又走过 \\(AB\\) 中点再行 900 米时,保持原来速度的乙恰好到 \\(A\\) 地.那么, \\(A\\) 、 \\(B\\) 两地间的路程是 米.",
+      "answer_text": "4080",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#5#19",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "19. 甲、乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时出发,匀速相向而行,当甲走过 \\(AB\\) 中点 120 米时与乙相遇;两人相遇后,甲将速度提高到原来的 2 倍,到 \\(B\\) 地后立即调头;当甲又走过 \\(AB\\) 中点再行 900 米时,保持原来速度的乙恰好到 \\(A\\) 地.那么, \\(A\\) 、 \\(B\\) 两地间的路程是 米.",
+      "answer": "4080",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 20,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "20. 将 1、2、3、4、5、6 排成一列,使得从第 3 个数开始,每个数都与它前面(不必相邻)某个数相差 2;那么,满足条件的排法一共有 种.",
+      "answer_text": "192",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#5#20",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "20. 将 1、2、3、4、5、6 排成一列,使得从第 3 个数开始,每个数都与它前面(不必相邻)某个数相差 2;那么,满足条件的排法一共有 种.",
+      "answer": "192",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 21,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "21. 老虎、狐狸、狼、狐各四只分别入住右图的 16 个房间中,每个房间一只,结果每只动物都说\"有狐狸与我相邻\"(有公共边的两个房间相邻);老虎都说真话,狐狸都说假话,狼、狐相邻时都说假话,狐与狐狸相邻时也说假话,其余情况狼、狐都说真话;如果入住 3、6、9 号房间的都是狐,那么四只狼所在房间编号的乘积是",
+      "answer_text": "1800",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含标准答案，存在高风险答案泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#5#21",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干逻辑完整，仅需移除答案即可作为标准考试题目。",
+        "review_fix_hint": "删除答案部分'【答案】1800'及其后的空行，保留题干和房间布局表格。",
+        "review_clean_question_text": "21. 老虎、狐狸、狼、狐各四只分别入住右图的 16 个房间中,每个房间一只,结果每只动物都说\"有狐狸与我相邻\"(有公共边的两个房间相邻);老虎都说真话,狐狸都说假话,狼、狐相邻时都说假话,狐与狐狸相邻时也说假话,其余情况狼、狐都说真话;如果入住 3、6、9 号房间的都是狐,那么四只狼所在房间编号的乘积是\n\n房间布局：\n1  2  3  4\n5  6  7  8\n9 10 11 12\n13 14 15 16",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#5#21",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "21. 老虎、狐狸、狼、狐各四只分别入住右图的 16 个房间中,每个房间一只,结果每只动物都说\"有狐狸与我相邻\"(有公共边的两个房间相邻);老虎都说真话,狐狸都说假话,狼、狐相邻时都说假话,狐与狐狸相邻时也说假话,其余情况狼、狐都说真话;如果入住 3、6、9 号房间的都是狐,那么四只狼所在房间编号的乘积是",
+      "answer": "1800",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 22,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "22. 有 99 个自然数的和为 \\(2023^{2023}\\) . 对这 99 个自然数进行如下变换:找出一个最小数加上 1,找出一个最大数减去 1,然后再从小到大排列;连续进行这种变换,直至 99 个数不发生变化为止,最后的 99 个数中有 个偶数.",
+      "answer_text": "56",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#5#22",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "22. 有 99 个自然数的和为 \\(2023^{2023}\\) . 对这 99 个自然数进行如下变换:找出一个最小数加上 1,找出一个最大数减去 1,然后再从小到大排列;连续进行这种变换,直至 99 个数不发生变化为止,最后的 99 个数中有 个偶数.",
+      "answer": "56",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 23,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "23. 右图的字母分别表示 \\(1 \\sim 9\\) 中互不相同的数字.\n\n(1) \\(ABC\\) 、 \\(DEF\\) 、 \\(GHI\\) 、 \\(ADG\\) 、 \\(BEH\\) 、 \\(CFI\\) 这六个三位数总和的最小值是 (5 分)\n\n(2) \\(A \\times B \\times C + D \\times E \\times F + G \\times H \\times I + A \\times E \\times I + C \\times E \\times G\\) 的最小值是 (10 分)",
+      "answer_text": "(1) 1962 (2) 237",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块中直接包含了答案信息，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#5#23",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "23. 右图的字母分别表示 \\(1 \\sim 9\\) 中互不相同的数字.\n\n(1) \\(ABC\\) 、 \\(DEF\\) 、 \\(GHI\\) 、 \\(ADG\\) 、 \\(BEH\\) 、 \\(CFI\\) 这六个三位数总和的最小值是 (5 分)\n\n(2) \\(A \\times B \\times C + D \\times E \\times F + G \\times H \\times I + A \\times E \\times I + C \\times E \\times G\\) 的最小值是 (10 分)",
+      "answer": "(1) 1962 (2) 237",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 24,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "24. 大正方形 \\(ABCD\\) 中如图放置了两个小正方形 \\(OEFG\\) 和 \\(OPQN\\) ; \\(M\\) 、 \\(N\\) 是正方形 \\(ABCD\\) 相应边上的中点,且 \\(\\triangle AEF\\) 和 \\(\\triangle CQN\\) 的面积分别为 70、120.\n\n(1)小正方形 \\(OEFG\\) 的面积是\n\n(2) \\(\\triangle OPG\\) 的面积是",
+      "answer_text": "(1) 296 (2) 118",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了子问题的答案，导致答案信息泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#5#24",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "24. 大正方形 \\(ABCD\\) 中如图放置了两个小正方形 \\(OEFG\\) 和 \\(OPQN\\) ; \\(M\\) 、 \\(N\\) 是正方形 \\(ABCD\\) 相应边上的中点,且 \\(\\triangle AEF\\) 和 \\(\\triangle CQN\\) 的面积分别为 70、120.\n\n(1)小正方形 \\(OEFG\\) 的面积是\n\n(2) \\(\\triangle OPG\\) 的面积是",
+      "answer": "(1) 296 (2) 118",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 25,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "25.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本仅显示题号和答案，无完整题干，答案直接泄露，风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#25",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_exam",
+        "review_repairable": false,
+        "review_reason": "仅提供答案，无题干内容，无法修复为可出题题干。",
+        "review_fix_hint": "文本无题干，需补充完整题目内容或删除仅答案部分。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#25",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "25.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 31,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "31.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本仅包含题号和答案，无题干内容，答案直接泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#31",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "OCR文本只有答案信息，无题干内容，无法修复为可出题题干。",
+        "review_fix_hint": "文本仅包含答案，缺少问题描述，建议丢弃。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#31",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "31.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 33,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "33.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "该文本块仅包含答案信息，无题干，且答案直接泄露，风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#33",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_exam",
+        "review_repairable": false,
+        "review_reason": "无题干内容，只有答案信息，无法修复为完整题目。",
+        "review_fix_hint": "文本仅包含答案和题号，缺少题干，建议删除或作为参考信息处理。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#33",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "33.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 36,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "36.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "该文本块仅包含答案信息，缺少题干，因此不适合作为独立题目且存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#36",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_exam",
+        "review_repairable": false,
+        "review_reason": "OCR文本仅含题号和答案，缺乏题干，无法修复为可出题内容。",
+        "review_fix_hint": "需补充完整题干，当前文本无问题描述。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#36",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "36.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 42,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "42.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本仅包含答案，无题干内容，不适合独立出题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#42",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "文本仅为答案片段，无题干内容，无法修复为可出题题干。",
+        "review_fix_hint": "删除答案信息，但文本缺少题干，需补充完整题目文本或依赖图片。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#42",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "42.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 47,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "47.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本直接包含答案，没有题目内容，因此不适合作为独立题干出题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#47",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "题目块仅包含答案信息，缺少题干，无法通过轻量清洗修复为可出题题干。",
+        "review_fix_hint": "需要补充完整题目文本，仅保留题干和必要选项，删掉答案信息或依赖原始文档。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#47",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "47.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 48,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "48.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本仅包含题号和答案，无题干内容，且答案直接泄露，不适合作为独立题干。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#48",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "文本仅含题号和答案，无题干，无法构成有效题目。",
+        "review_fix_hint": "需要添加完整题干信息，当前仅含答案。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#48",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "48.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 49,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "49.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本直接给出答案，无题干描述，属于答案泄露，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#49",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "OCR文本仅含题号和答案，无题干内容，无法构成可出题目。",
+        "review_fix_hint": "需补充完整题干文本或依赖原题图片，否则无法修复",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#49",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "49.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 50,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "50.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本直接给出答案，无题干描述，存在答案泄露风险，不适合作为独立题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#50",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "文本仅包含题号和答案，无问题内容，无法独立形成可用题干",
+        "review_fix_hint": "需要原题问题文本，当前仅含答案，无法清洗修复",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#50",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "50.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 51,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "51.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本直接给出答案，无题干内容，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#51",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "文本不完整，仅提供题号和答案，无法构成可用题干。",
+        "review_fix_hint": "文本仅含答案，需补充完整题目描述；若无法获取，建议丢弃。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#51",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "51.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 52,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "52.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该文本块仅包含答案，无问题描述，因此不适合作为独立题干使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#6#52",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "52.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 56,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "56.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本直接提供答案，但缺少问题描述，无法作为独立题干。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#56",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "题目块只显示答案，无题干内容，无法修复为可出题文本。",
+        "review_fix_hint": "文本仅包含答案和编号，缺少题干，建议删除或补充完整题目信息。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#56",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "56.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 67,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "67.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本仅包含答案信息，无题干描述，不适合作为独立题目，直接暴露答案存在高风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#67",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "67.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 69,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "69.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本仅包含答案信息，无题干内容，直接泄露答案，无法作为独立题目使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#69",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "OCR文本中没有题干描述，只有答案信息，无法构成可用题目。",
+        "review_fix_hint": "文本仅包含答案和题号，缺少题干内容，无法修复，建议从完整题目源获取。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#69",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "69.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 82,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "82.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本为答案块，无题干描述，直接泄露答案，不适合作为考题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#82",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "文本仅含题号和答案，无题干内容，不可修复为可出题题干。",
+        "review_fix_hint": "删除答案或补充完整题目文本，但无题干内容无法修复。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#82",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "82.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 84,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "84.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本仅包含题号和答案，没有问题描述，因此不适合作为独立题干，且答案直接暴露存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#84",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "文本仅包含答案（84. 答案：32），无题干信息，无法构成完整题目。",
+        "review_fix_hint": "删除整个文本块，因为题干缺失，无法修复为可用题目。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#7#84",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "84.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 85,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "85.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本仅为答案列表，缺乏题干描述，且直接包含答案信息。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#8#85",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_all",
+        "review_repairable": false,
+        "review_reason": "题目块只提供答案数字，无问题描述或选项，无法作为题目使用。",
+        "review_fix_hint": "文本仅包含答案列表，无题干，建议删除整个块或获取完整题目文本。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#8#85",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "85.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 87,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "87.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本仅包含答案信息，无题干描述，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#8#87",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_exam",
+        "review_repairable": false,
+        "review_reason": "文本缺少题干部分，仅有答案和编号，无法构成可出题的题目。",
+        "review_fix_hint": "需要补充完整的题干描述，当前文本仅含题目编号和答案。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#8#87",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "87.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 89,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "89.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本仅包含答案信息，缺乏题干描述，无法独立出题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#8#89",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "89.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 91,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "91. 答案：2\n\n92- 102题答案暂无\n\n103、",
+      "answer_text": "1152",
+      "solution_text": "用[0]、[1]、[2]表示除以3余0、1、2的数．1\\~8中有3个[1]，3个[2]，2个[0].\n\n[1]和[2]不能相邻，[0]和[0]不能相邻．\n\n先将3个[1]和3个[2]，再将[0]插入．\n\n将若干个相邻的[1]或者相邻的[2]称为1段．\n\n因为[1]和[2]不能相邻，相邻的[1]和[2]之间必须插入[0]，所以6个[1]\n\n或[2]至多被分成3段．\n\n假设这6个数排好后开头是[1]，分类枚举如下：\n\n[1][1][1]+[2][2][2]型：两个[0]共有6种插入办法；\n\n[1]+[2][2][2]+[1][1]型：两个[0]只有1种插入办法；\n\n[1][1]+[2][2][2]+[1]型：两个[0]只有1种插入办法．\n\n以上3类，3个[1]、3个[2]、2个[0]共有 \\(6 + 1 + 1 = 8\\) 种排法．\n\n[2]开头的与[1]开头的是对称的．\n\n3个[1]，3个[2]，2个[0]共有 \\(8 \\times 2 = 16\\) 种排法\n\n3个[1]赋值1、4、7有3！种可能可能；3个[2]赋值2、5、8有3！种可能；2个[0]可以赋值3和6有2！种可能．\n\n本题答案为： \\(16 \\times 3! \\times 3! \\times 2! = 1152\\) 种．",
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本为多个题目的答案和解析汇总，无完整问题陈述，包含答案和解析泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#8#91",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "91. 答案：2\n\n92- 102题答案暂无\n\n103、",
+      "answer": "1152",
+      "solution": "用[0]、[1]、[2]表示除以3余0、1、2的数．1\\~8中有3个[1]，3个[2]，2个[0].\n\n[1]和[2]不能相邻，[0]和[0]不能相邻．\n\n先将3个[1]和3个[2]，再将[0]插入．\n\n将若干个相邻的[1]或者相邻的[2]称为1段．\n\n因为[1]和[2]不能相邻，相邻的[1]和[2]之间必须插入[0]，所以6个[1]\n\n或[2]至多被分成3段．\n\n假设这6个数排好后开头是[1]，分类枚举如下：\n\n[1][1][1]+[2][2][2]型：两个[0]共有6种插入办法；\n\n[1]+[2][2][2]+[1][1]型：两个[0]只有1种插入办法；\n\n[1][1]+[2][2][2]+[1]型：两个[0]只有1种插入办法．\n\n以上3类，3个[1]、3个[2]、2个[0]共有 \\(6 + 1 + 1 = 8\\) 种排法．\n\n[2]开头的与[1]开头的是对称的．\n\n3个[1]，3个[2]，2个[0]共有 \\(8 \\times 2 = 16\\) 种排法\n\n3个[1]赋值1、4、7有3！种可能可能；3个[2]赋值2、5、8有3！种可能；2个[0]可以赋值3和6有2！种可能．\n\n本题答案为： \\(16 \\times 3! \\times 3! \\times 2! = 1152\\) 种．"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 105,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 9,
+      "question_text": "105. 一个三位数,考虑它的数字和A与它的101倍的数字和B.\n\n(1)(8分)如果A和B一样大,那么这个三位数是多少?\n\n(2)(10分)能否找到一个三位数使得A比B大?如果能,有多少个?如果不能,请说明理由.",
+      "answer_text": "(1)999;(3)8个.",
+      "solution_text": "B和A的两倍相差9的倍数(进几位就相差几倍).\n\n(1)A和B一样大,则A一定是9的倍数.\n\n若,则无法产生进位,不满足要求;\n\n若,则需要进两位,百位上必须进位,千位上就无法产生进位了,不满足要求;\n\n若,数字和为27的三位数只有一个:999,,满足要求.\n\n(2)若乘积的百位产生进位,则原三位数的百位数字和个位数字之和要大于9,A至少是10;\n\n若乘积的千位产生进位,则原三位数的十位数字必须为9,且乘积的百位必须进位,A至少是19;\n\n若乘积的万位产生进位,则原三位数的百位数字必须为9,且乘积的千位必须进位;\n\n若,则无法产生进位,;\n\n若,至多只能产生一次进位,;\n\n若,且,则需产生3次进位且,因此原三位数的百位数字和十位数字必须都是9\n\n这样的三位数有991\\~998共8个.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题目、答案和解析，直接泄露答案信息，有高风险，适合用于练习而非考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#9#105",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "105. 一个三位数,考虑它的数字和A与它的101倍的数字和B.\n\n(1)(8分)如果A和B一样大,那么这个三位数是多少?\n\n(2)(10分)能否找到一个三位数使得A比B大?如果能,有多少个?如果不能,请说明理由.",
+      "answer": "(1)999;(3)8个.",
+      "solution": "B和A的两倍相差9的倍数(进几位就相差几倍).\n\n(1)A和B一样大,则A一定是9的倍数.\n\n若,则无法产生进位,不满足要求;\n\n若,则需要进两位,百位上必须进位,千位上就无法产生进位了,不满足要求;\n\n若,数字和为27的三位数只有一个:999,,满足要求.\n\n(2)若乘积的百位产生进位,则原三位数的百位数字和个位数字之和要大于9,A至少是10;\n\n若乘积的千位产生进位,则原三位数的十位数字必须为9,且乘积的百位必须进位,A至少是19;\n\n若乘积的万位产生进位,则原三位数的百位数字必须为9,且乘积的千位必须进位;\n\n若,则无法产生进位,;\n\n若,至多只能产生一次进位,;\n\n若,且,则需产生3次进位且,因此原三位数的百位数字和十位数字必须都是9\n\n这样的三位数有991\\~998共8个."
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 106,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 10,
+      "question_text": "106. （1）将3种颜色的棋子各10枚分给若干名同学，发现任意两人之间都有相同颜色的棋子，那么最多可以分给多少名同学？\n\n（2）将4种颜色的棋子各10枚分给若干名同学，发现任意两人之间都有相同颜色的 棋子，那么最多可以分给多少名同学？",
+      "answer_text": "（1）15（2）16",
+      "solution_text": "（1）若有人只有一种颜色的棋子，则所有人都要与他有同色棋子，最多只能分给10个人．若每人都有两色以上的棋子，则任意两人之间都有同色棋子，所以最多可以分给人．下面给出15人的构造：1～5号拥有(红、黄)，6～10号拥有(红、蓝)，11～15号拥有（黄、蓝）\n\n（2）由上一问知至少可以分给15人来满足题目要求．\n\n下面只讨论每人棋子数量不少于2，人数不少于16的情况．\n\n总共有棋子枚，所以至少有人只有2枚棋子．不妨将4种颜色记作红、黄、蓝、绿，4种颜色选2种共有6种选择，其中两两不可同取，所以最多只有3种可选，因此至少有3人的2枚棋子颜色分别相同，不妨记作1～3号拥有红色和黄色．此时还剩红色、黄色棋子各7枚，而其他人必须拥有红色或黄色棋子，因此至多人．\n\n下面证明17人不行，若分给17人，则剩下红、黄棋子分给14个人每人一个，不妨记作4～10号拥有红色，11～17号拥有黄色．\n\n还剩蓝、绿棋子各10枚．因此剩下的14人中必有人只有两枚棋子，不妨设4号拥有红色和蓝色棋子，则11～17号拥有蓝色，则5～10号中至少有4人没有蓝色，不妨记作5～8号仅拥有红色和绿色棋子．则11～17号都必须拥有绿色，矛盾．所以17人不能满足要求．\n\n下面给出16人的构造：1～3号拥有(红、黄)，4～6号拥有(红、蓝)，7～9号拥有(红、绿)，10～16号拥有(黄、蓝、绿)．\n\n因此，最多分给16位同学，可以满足要求．",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "heuristic-only",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#10#106",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "106. （1）将3种颜色的棋子各10枚分给若干名同学，发现任意两人之间都有相同颜色的棋子，那么最多可以分给多少名同学？\n\n（2）将4种颜色的棋子各10枚分给若干名同学，发现任意两人之间都有相同颜色的 棋子，那么最多可以分给多少名同学？",
+      "answer": "（1）15（2）16",
+      "solution": "（1）若有人只有一种颜色的棋子，则所有人都要与他有同色棋子，最多只能分给10个人．若每人都有两色以上的棋子，则任意两人之间都有同色棋子，所以最多可以分给人．下面给出15人的构造：1～5号拥有(红、黄)，6～10号拥有(红、蓝)，11～15号拥有（黄、蓝）\n\n（2）由上一问知至少可以分给15人来满足题目要求．\n\n下面只讨论每人棋子数量不少于2，人数不少于16的情况．\n\n总共有棋子枚，所以至少有人只有2枚棋子．不妨将4种颜色记作红、黄、蓝、绿，4种颜色选2种共有6种选择，其中两两不可同取，所以最多只有3种可选，因此至少有3人的2枚棋子颜色分别相同，不妨记作1～3号拥有红色和黄色．此时还剩红色、黄色棋子各7枚，而其他人必须拥有红色或黄色棋子，因此至多人．\n\n下面证明17人不行，若分给17人，则剩下红、黄棋子分给14个人每人一个，不妨记作4～10号拥有红色，11～17号拥有黄色．\n\n还剩蓝、绿棋子各10枚．因此剩下的14人中必有人只有两枚棋子，不妨设4号拥有红色和蓝色棋子，则11～17号拥有蓝色，则5～10号中至少有4人没有蓝色，不妨记作5～8号仅拥有红色和绿色棋子．则11～17号都必须拥有绿色，矛盾．所以17人不能满足要求．\n\n下面给出16人的构造：1～3号拥有(红、黄)，4～6号拥有(红、蓝)，7～9号拥有(红、绿)，10～16号拥有(黄、蓝、绿)．\n\n因此，最多分给16位同学，可以满足要求．"
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 107,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 11,
+      "question_text": "107. 答案:18。\n\n分析:注意到两种假设情况的相遇时间相同,所以甲、乙速度比为 \\(15:25 = 3:5\\) 。AC相距 \\(200 \\times 3 / (3 + 5) = 75\\) (千米)。\n\n若甲提高速度,甲、乙速度比变为 \\((75 + 25):(200 - 75 - 25) - 1:1\\) ,所以甲的实际速度为 \\(12 \\times 3 / (5 - 3) = 18\\) (千米/时)。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本块直接包含答案和解析，没有独立题干，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#11#107",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "drop_exam",
+        "review_repairable": false,
+        "review_reason": "文本仅包含答案和解析，缺少题干部分",
+        "review_fix_hint": "题干缺失，无法修复为完整题目",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#11#107",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "107. 答案:18。\n\n分析:注意到两种假设情况的相遇时间相同,所以甲、乙速度比为 \\(15:25 = 3:5\\) 。AC相距 \\(200 \\times 3 / (3 + 5) = 75\\) (千米)。\n\n若甲提高速度,甲、乙速度比变为 \\((75 + 25):(200 - 75 - 25) - 1:1\\) ,所以甲的实际速度为 \\(12 \\times 3 / (5 - 3) = 18\\) (千米/时)。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 108,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 11,
+      "question_text": "108. 答案:1346。\n\n分析:实际每人每次兑换出1张100元钞票或者兑换出2或5张钞票换入一张100元钞票。所以如果某人当天持有的100元钞票总数未发生变化,则他兑换出的钞票数必定是3的倍数。所以每位岛民持有的100元钞票数都会发生变化,且减少的张数一定除以3余1,而增加的张数一定除以3余2。\n\n因此,持有100元钞票减少的人数不少100元钞票总数,持有100元钞票增加的人数不少于100元钞票总数的 \\(1 / 2\\) 。\n\n100元钞票总数不少于 \\(2019 \\div (1 + 1 / 2) = 1346\\) (张)\n\n构造如下:\n\n将2019人分为673组,每组3人。\n\n一组中不妨设3人分别为A、B、C,其中A、B原持有1张100元钞票,C原持有0张100元钞票。A、B之间用1张100元和2张50元互换6轮,此时每人兑换出了9张钞票,再各用1张100元钞票与C换5张20元即可满足要求。\n\n所以100元钞票最少有1346张。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本直接给出了答案和解析，不是独立题干，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#11#108",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "108. 答案:1346。\n\n分析:实际每人每次兑换出1张100元钞票或者兑换出2或5张钞票换入一张100元钞票。所以如果某人当天持有的100元钞票总数未发生变化,则他兑换出的钞票数必定是3的倍数。所以每位岛民持有的100元钞票数都会发生变化,且减少的张数一定除以3余1,而增加的张数一定除以3余2。\n\n因此,持有100元钞票减少的人数不少100元钞票总数,持有100元钞票增加的人数不少于100元钞票总数的 \\(1 / 2\\) 。\n\n100元钞票总数不少于 \\(2019 \\div (1 + 1 / 2) = 1346\\) (张)\n\n构造如下:\n\n将2019人分为673组,每组3人。\n\n一组中不妨设3人分别为A、B、C,其中A、B原持有1张100元钞票,C原持有0张100元钞票。A、B之间用1张100元和2张50元互换6轮,此时每人兑换出了9张钞票,再各用1张100元钞票与C换5张20元即可满足要求。\n\n所以100元钞票最少有1346张。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 109,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 12,
+      "question_text": "109.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_012.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_012/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_012/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本直接包含答案和解析，无独立题干，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#12#109",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": false,
+        "review_reason": "文本为解析内容，包含答案，题干不完整且依赖图片，无法独立作为考试题干。",
+        "review_fix_hint": "删除答案和解析部分，但题干依赖图片，需从图片提取或补充问题陈述。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#12#109",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "109.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2024,
+      "number": 110,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小高组110题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小高组110题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 12,
+      "question_text": "110.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）/page_012.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/五年级/2024/ocr_debug/2024年迎春杯小高组110题（答案）/pages/page_012/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块直接包含答案和解析，无法作为独立题干使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json#12#110",
+          "json_path": "2026年迎春杯数学竞赛/五年级/2024/2024年迎春杯小高组110题（答案）.json"
+        }
+      },
+      "text": "110.",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "description": "迎春杯 OCR 题库（yingchun2）结构化落库",
+  "total_problems": 2132,
+  "grades": {
+    "3": {
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "total_problems": 770
+    },
+    "4": {
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2022
+      ],
+      "total_problems": 110
+    },
+    "5": {
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "total_problems": 871
+    },
+    "6": {
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2024
+      ],
+      "total_problems": 445
+    }
+  },
+  "build_info": {
+    "built_at": "2026-05-28T16:11:29",
+    "source_root": "data/yingchun2",
+    "schema_version": 1,
+    "block_scan": {
+      "scan_dir": "data/y2_scan_run1",
+      "generated_at": "2026-05-28 22:45:21",
+      "scan_schema": "yingchun2_block_scan_v1",
+      "scan_llm_used": true,
+      "scan_llm_model": "mimo-v2.5-pro",
+      "scan_action_counts": {
+        "practice_only": 1864,
+        "keep": 2365,
+        "drop_exam": 265,
+        "drop_all": 114
+      },
+      "applied_records": 2196,
+      "missing_records": 0,
+      "applied_by_action": {
+        "practice_only": 1169,
+        "drop_exam": 133,
+        "keep": 830,
+        "drop_all": 64
+      },
+      "scan_map_stats": {
+        "records": 4608,
+        "keys": 3513,
+        "action_counts": {
+          "practice_only": 1864,
+          "keep": 2365,
+          "drop_exam": 265,
+          "drop_all": 114
+        }
+      }
+    },
+    "drop_exam_review": {
+      "review_dir": "data/y2_drop_exam_review_run1",
+      "generated_at": "2026-05-29 07:58:28",
+      "applied_records": 133,
+      "applied_by_action": {
+        "practice_only": 82,
+        "keep": 28,
+        "drop_all": 13,
+        "drop_exam": 10
+      }
+    }
+  },
+  "data_source": "yingchun2_db",
+  "export_filter": {
+    "drop_actions": [
+      "drop_all"
+    ],
+    "excluded": 64,
+    "practice_mode": false
+  }
+}

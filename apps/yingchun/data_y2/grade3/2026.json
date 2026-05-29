@@ -1,0 +1,440 @@
+{
+  "grade": 3,
+  "year": 2026,
+  "total_problems": 11,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(20 \\times 26 - 20 + 26 + 2026\\) 的计算结果是",
+      "answer_text": "2552",
+      "solution_text": "原式 \\(= 520 - 20 + 26 + 2026 = 2552\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整，但直接包含答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json"
+        }
+      },
+      "text": "1. 算式 \\(20 \\times 26 - 20 + 26 + 2026\\) 的计算结果是",
+      "answer": "2552",
+      "solution": "原式 \\(= 520 - 20 + 26 + 2026 = 2552\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 有一种直角梯形,上底和高的长度都是下底的一半,用四个这样的梯形拼出下列三种图案.如果图1和图2的周长差为36厘米,那么图3的周长为 厘米.\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_001/images/0.jpg)\n\n<center>（图1）</center>\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_001/images/1.jpg)\n\n<center>（图2）</center>\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_001/images/2.jpg)\n\n<center>（图3）</center>",
+      "answer_text": "90",
+      "solution_text": "因为图2比图1周长多2条下底的长度,图3的周长为5条下底的长度,所以图3的周长为 \\(36 \\div 2 \\times 5 = 90\\) 厘米.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_001/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干，但直接给出了答案和解析，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json"
+        }
+      },
+      "text": "2. 有一种直角梯形,上底和高的长度都是下底的一半,用四个这样的梯形拼出下列三种图案.如果图1和图2的周长差为36厘米,那么图3的周长为 厘米.\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_001/images/0.jpg)\n\n<center>（图1）</center>\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_001/images/1.jpg)\n\n<center>（图2）</center>\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_001/images/2.jpg)\n\n<center>（图3）</center>",
+      "answer": "90",
+      "solution": "因为图2比图1周长多2条下底的长度,图3的周长为5条下底的长度,所以图3的周长为 \\(36 \\div 2 \\times 5 = 90\\) 厘米."
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 在神秘的魔法森林里,住着一群可爱的小精灵,每年春天,精灵长老都会给小精灵们分魔法糖果,激励大家守护森林,今年,长老准备了一批魔法糖果,如果给每个小精灵3颗糖果,就会剩余18颗糖果;如果精灵的数量增加到原来的3倍,每个小精灵分2颗,还缺12颗,那么一共有 颗魔法糖果.",
+      "answer_text": "48",
+      "solution_text": "第二次分配相当于每个小精灵分到: \\(3 \\times 2 = 6\\) 颗,所以精灵总数为 \\((18 + 12) \\div (6 - 3) = 10\\) 个,糖果总数为 \\(10 \\times 3 + 18 = 48\\) 颗.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是一个独立的数学应用题，但文本块中直接包含答案和解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json"
+        }
+      },
+      "text": "3. 在神秘的魔法森林里,住着一群可爱的小精灵,每年春天,精灵长老都会给小精灵们分魔法糖果,激励大家守护森林,今年,长老准备了一批魔法糖果,如果给每个小精灵3颗糖果,就会剩余18颗糖果;如果精灵的数量增加到原来的3倍,每个小精灵分2颗,还缺12颗,那么一共有 颗魔法糖果.",
+      "answer": "48",
+      "solution": "第二次分配相当于每个小精灵分到: \\(3 \\times 2 = 6\\) 颗,所以精灵总数为 \\((18 + 12) \\div (6 - 3) = 10\\) 个,糖果总数为 \\(10 \\times 3 + 18 = 48\\) 颗."
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 下图的乘法竖式中，相同的汉字代表相同的数字，不同的汉字代表不同的数字，那么云烟晚霞表示的四位数是\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/images/2.jpg)\n\n## 二．填空题Ⅱ（每小题10分，共40分）\n\n5．甲、乙两人同时从家里出发相向而行，甲每分钟走60米，乙每分钟走90米，两人在途中的A处相遇；若两人同时从家里出发同向而行，甲速度不变，乙速度提高，乙可在B处追上甲．如果甲家到B的距离是甲家到A距离的2倍，那么乙提高后的速度是每分钟 米.\n\n6．如图，一个 \\(6\\times 6\\) 的正方形点阵被虚线分成了4个区域，在每个区域中各选择一个点构成正方形的四个顶点，那么有 种不同的选点的方法.\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/images/3.jpg)\n\n7．如图，在大正方形中放置五个小正方形，面积在图中标注，那么大正方形的面积是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/images/2.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为数学竞赛题干集合，包含多个独立问题，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "4. 下图的乘法竖式中，相同的汉字代表相同的数字，不同的汉字代表不同的数字，那么云烟晚霞表示的四位数是\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/images/2.jpg)\n\n## 二．填空题Ⅱ（每小题10分，共40分）\n\n5．甲、乙两人同时从家里出发相向而行，甲每分钟走60米，乙每分钟走90米，两人在途中的A处相遇；若两人同时从家里出发同向而行，甲速度不变，乙速度提高，乙可在B处追上甲．如果甲家到B的距离是甲家到A距离的2倍，那么乙提高后的速度是每分钟 米.\n\n6．如图，一个 \\(6\\times 6\\) 的正方形点阵被虚线分成了4个区域，在每个区域中各选择一个点构成正方形的四个顶点，那么有 种不同的选点的方法.\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_001/images/3.jpg)\n\n7．如图，在大正方形中放置五个小正方形，面积在图中标注，那么大正方形的面积是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "5. 甲、乙两人同时从家里出发相向而行,甲每分钟走60米,乙每分钟走90米,两人在途中的A处相遇;若两人同时从家里出发同向而行,甲速度不变,乙速度提高,乙可在B处追上甲.如果甲家到B的距离是甲家到A距离的2倍,那么乙提高后的速度是每分钟 米.",
+      "answer_text": "135",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是完整的数学问题，但文本块直接包含答案和解析，存在高泄漏风险，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json#2#5",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json"
+        }
+      },
+      "text": "5. 甲、乙两人同时从家里出发相向而行,甲每分钟走60米,乙每分钟走90米,两人在途中的A处相遇;若两人同时从家里出发同向而行,甲速度不变,乙速度提高,乙可在B处追上甲.如果甲家到B的距离是甲家到A距离的2倍,那么乙提高后的速度是每分钟 米.",
+      "answer": "135",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "6. 如图,一个 \\(6\\times 6\\) 的正方形点阵被虚线分成了4个区域,在每个区域中各选择一个点构成正方形的四个顶点,那么有 种不同的选点的方法.\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_002/images/0.jpg)",
+      "answer_text": "33",
+      "solution_text": "法一:计两个格点间距离为1,按正方形是正是斜进行分类(1)正的边长为1:1个边长为2:4个边长为3:9个边长为4:4个边长为5:1个所以正的共有 \\(1 + 4 + 9 + 4 + 1 = 19\\) 个",
+      "topic": "algebra",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题目、答案和解析，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json"
+        }
+      },
+      "text": "6. 如图,一个 \\(6\\times 6\\) 的正方形点阵被虚线分成了4个区域,在每个区域中各选择一个点构成正方形的四个顶点,那么有 种不同的选点的方法.\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_002/images/0.jpg)",
+      "answer": "33",
+      "solution": "法一:计两个格点间距离为1,按正方形是正是斜进行分类(1)正的边长为1:1个边长为2:4个边长为3:9个边长为4:4个边长为5:1个所以正的共有 \\(1 + 4 + 9 + 4 + 1 = 19\\) 个"
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "7. 如图,在大正方形中放置五个小正方形,面积在图中标注,那么大正方形的面积是______.\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_004/images/0.jpg)",
+      "answer_text": "338",
+      "solution_text": "通过平移可得, \\(A \\times A = 4 \\times 2 \\times 4 \\times 18 = 576\\) ,所以 \\(A = 24\\) . \\(B \\times B = 50 \\times (24 + 24 + 8 + 72) = 6400\\) ,所以 \\(B = 80\\) ,所以大正方形的面积为 \\(50 + 80 + 80 + 128 = 338\\)\n\n<table><tr><td rowspan=\"3\">B</td><td rowspan=\"2\">A</td><td></td><td></td></tr><tr><td>18</td><td></td></tr><tr><td>2</td><td></td><td></td></tr><tr><td></td><td>2</td><td></td><td>A</td></tr><tr><td>50</td><td></td><td>B</td><td></td></tr></table>",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": null,
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干像独立题目，但文本块包含答案和解析，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 1,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json#4#7",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷解析.json"
+        }
+      },
+      "text": "7. 如图,在大正方形中放置五个小正方形,面积在图中标注,那么大正方形的面积是______.\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷解析/pages/page_004/images/0.jpg)",
+      "answer": "338",
+      "solution": "通过平移可得, \\(A \\times A = 4 \\times 2 \\times 4 \\times 18 = 576\\) ,所以 \\(A = 24\\) . \\(B \\times B = 50 \\times (24 + 24 + 8 + 72) = 6400\\) ,所以 \\(B = 80\\) ,所以大正方形的面积为 \\(50 + 80 + 80 + 128 = 338\\)\n\n<table><tr><td rowspan=\"3\">B</td><td rowspan=\"2\">A</td><td></td><td></td></tr><tr><td>18</td><td></td></tr><tr><td>2</td><td></td><td></td></tr><tr><td></td><td>2</td><td></td><td>A</td></tr><tr><td>50</td><td></td><td>B</td><td></td></tr></table>"
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 老师写了五个连续的一位数,将其中的三个分别给了三位聪明且诚实的同学甲、乙、丙,三位同学只知道自己拿到的数,而不知道其他同学拿到的数.\n\n甲:我们三人拿到的数可以组成三角形的三条边.\n\n乙:我拿到的数比甲的大.\n\n丙:我们三人拿到的数的总和除以我拿到的数,余数是5.\n\n那么甲、乙、丙三人拿到的数之和是\n\n## 三. 填空题Ⅲ(每小题16分,共48分)",
+      "answer_text": "23",
+      "solution_text": "老师写的五个数可能是:01234;12345;23456;34567;45678;56789. 甲拿到的数能确定三人的数可以组成三角形的三条边,说明五个数中最小两数的和必然大于最大的数;只能是45678或者56789,甲能确定这件事,说明甲为8或者9;由乙",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，无答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json#2#8",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "8. 老师写了五个连续的一位数,将其中的三个分别给了三位聪明且诚实的同学甲、乙、丙,三位同学只知道自己拿到的数,而不知道其他同学拿到的数.\n\n甲:我们三人拿到的数可以组成三角形的三条边.\n\n乙:我拿到的数比甲的大.\n\n丙:我们三人拿到的数的总和除以我拿到的数,余数是5.\n\n那么甲、乙、丙三人拿到的数之和是\n\n## 三. 填空题Ⅲ(每小题16分,共48分)",
+      "answer": "23",
+      "solution": "老师写的五个数可能是:01234;12345;23456;34567;45678;56789. 甲拿到的数能确定三人的数可以组成三角形的三条边,说明五个数中最小两数的和必然大于最大的数;只能是45678或者56789,甲能确定这件事,说明甲为8或者9;由乙"
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 下左图是一个灰色数独的示例图.灰色数独要求每行、每列、每宫数字均为1至6各一个,且图中两块灰色区域对应位置的灰格内数字差为1. 那么下右图所示的灰色数独中,第二行从左到右前五个数字顺次组成的五位数是\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/images/1.jpg)\n\n<center>（示例）</center>",
+      "answer_text": "56214",
+      "solution_text": "【最值构造】",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的灰色数独问题题干，无答案或解析信息泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json#2#9",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "9. 下左图是一个灰色数独的示例图.灰色数独要求每行、每列、每宫数字均为1至6各一个,且图中两块灰色区域对应位置的灰格内数字差为1. 那么下右图所示的灰色数独中,第二行从左到右前五个数字顺次组成的五位数是\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/images/1.jpg)\n\n<center>（示例）</center>",
+      "answer": "56214",
+      "solution": "【最值构造】"
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 中国空间站\"天宫\"正在执行一次精密的轨道维持任务,为确保空间站稳定在距地高度约400公里的圆形轨道上,地面控制中心需要对空间站的10个姿态微调推进器的推力参数(初始值为连续整数1,2,3,……,10)进行调整,每次调整选择推力参数相差大于1的两个推进器,将较小的参数增加1、较大的参数减少1. 当所有参数中任意两者之差不超过1时,调整结束.\n\n(1)调整结束时,各推进器推力参数中最大的是 .(5分)\n\n(2)最多可进行 次调整.(11分)",
+      "answer_text": "(1)6;(2)40",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，包含问题描述和子问题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json#2#10",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "10. 中国空间站\"天宫\"正在执行一次精密的轨道维持任务,为确保空间站稳定在距地高度约400公里的圆形轨道上,地面控制中心需要对空间站的10个姿态微调推进器的推力参数(初始值为连续整数1,2,3,……,10)进行调整,每次调整选择推力参数相差大于1的两个推进器,将较小的参数增加1、较大的参数减少1. 当所有参数中任意两者之差不超过1时,调整结束.\n\n(1)调整结束时,各推进器推力参数中最大的是 .(5分)\n\n(2)最多可进行 次调整.(11分)",
+      "answer": "(1)6;(2)40",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2026,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2026数学花园探秘笔试小中年级决赛A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 在 \\(2 \\times 3\\) 方格表(左图)的每个格子中填入1或2,再计算每个格子的得分.得分计算方法是:先用格子中的数加上与它相邻的1的数量,再与所有与它相邻的格子中的数相乘.(相邻指有公共边,方格表不可旋转)\n\n例如,右图左上角格子的得分即为 \\((2 + 1) \\times 2 \\times 1 = 6\\)\n\n(1)若所有格子所得的总分是奇数,总分最大是 .(8分)\n\n(2)共有 种不同的填写方法可使所有格子的总得分是奇数.(8分)\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": "(1)37;(2)12",
+      "solution_text": "对于任意格,相邻格中的1换成2,得分不会降低,因此2越多得分越高.\n\n(1)6个格子中的分数相加是奇数,意味着至少有1个格子的分数是奇数.\n\n若角格的分数为奇数,则其2个相邻格中均为1,因此该角格中也是1. 按下图填写时,总得分最多,是37:\n\n<table><tr><td>1</td><td>1</td><td>2</td></tr><tr><td></td><td>1</td><td>2</td></tr></table>\n\n若边格的分数为奇数,则其3个相邻格中均为1,因此该边格中必为2,按下图填写时,总得分最多,是29:\n\n<table><tr><td>1</td><td>2</td><td>1</td></tr><tr><td></td><td></td><td></td></tr></table>\n\n所以总分为奇数时,最大为37:\n\n(2)若某边格得分为奇数,那么可能的布局有如下两种,共有4种填写方案:\n\n<table><tr><td>1</td><td>2</td><td>1</td></tr><tr><td></td><td rowspan=\"2\">1</td><td rowspan=\"2\">1</td></tr><tr><td></td></tr></table>\n\n若边格得分都是偶数,则必有1角格或3角格得分是奇数,而3角格得分是奇数会导致所有位置都只能填1,此时总得分是偶数,所以只有1角格得分是奇数,可能的布局有如下2种,共有 \\(4 + 4 = 8\\) 种填法:\n\n<table><tr><td>1</td><td>1</td><td>2</td></tr><tr><td></td><td rowspan=\"2\">1</td><td rowspan=\"2\">2</td></tr><tr><td></td></tr></table>\n\n总计12种填法.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2026年/ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目描述完整，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json#2#11",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2026年/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）.json"
+        }
+      },
+      "text": "11. 在 \\(2 \\times 3\\) 方格表(左图)的每个格子中填入1或2,再计算每个格子的得分.得分计算方法是:先用格子中的数加上与它相邻的1的数量,再与所有与它相邻的格子中的数相乘.(相邻指有公共边,方格表不可旋转)\n\n例如,右图左上角格子的得分即为 \\((2 + 1) \\times 2 \\times 1 = 6\\)\n\n(1)若所有格子所得的总分是奇数,总分最大是 .(8分)\n\n(2)共有 种不同的填写方法可使所有格子的总得分是奇数.(8分)\n\n![](ocr_debug/2026数学花园探秘笔试小中年级决赛A卷（ B5试卷版）/pages/page_002/images/2.jpg)",
+      "answer": "(1)37;(2)12",
+      "solution": "对于任意格,相邻格中的1换成2,得分不会降低,因此2越多得分越高.\n\n(1)6个格子中的分数相加是奇数,意味着至少有1个格子的分数是奇数.\n\n若角格的分数为奇数,则其2个相邻格中均为1,因此该角格中也是1. 按下图填写时,总得分最多,是37:\n\n<table><tr><td>1</td><td>1</td><td>2</td></tr><tr><td></td><td>1</td><td>2</td></tr></table>\n\n若边格的分数为奇数,则其3个相邻格中均为1,因此该边格中必为2,按下图填写时,总得分最多,是29:\n\n<table><tr><td>1</td><td>2</td><td>1</td></tr><tr><td></td><td></td><td></td></tr></table>\n\n所以总分为奇数时,最大为37:\n\n(2)若某边格得分为奇数,那么可能的布局有如下两种,共有4种填写方案:\n\n<table><tr><td>1</td><td>2</td><td>1</td></tr><tr><td></td><td rowspan=\"2\">1</td><td rowspan=\"2\">1</td></tr><tr><td></td></tr></table>\n\n若边格得分都是偶数,则必有1角格或3角格得分是奇数,而3角格得分是奇数会导致所有位置都只能填1,此时总得分是偶数,所以只有1角格得分是奇数,可能的布局有如下2种,共有 \\(4 + 4 = 8\\) 种填法:\n\n<table><tr><td>1</td><td>1</td><td>2</td></tr><tr><td></td><td rowspan=\"2\">1</td><td rowspan=\"2\">2</td></tr><tr><td></td></tr></table>\n\n总计12种填法."
+    }
+  ]
+}

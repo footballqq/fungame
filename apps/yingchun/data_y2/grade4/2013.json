@@ -1,0 +1,392 @@
+{
+  "grade": 4,
+  "year": 2013,
+  "total_problems": 10,
+  "problems": [
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "1. (8分) \\(1 + 3 + 5 + \\dots +17 + 19 + 20 + 22 + \\dots +40 = 430\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解答过程，存在高风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#3#1",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "1. (8分) \\(1 + 3 + 5 + \\dots +17 + 19 + 20 + 22 + \\dots +40 = 430\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "2. (8分)爸爸生日是5月1日,而春春生日是7月1日,从2012年12月26日算起(第1天),直到第2013天,爸爸和春春总共过了_11_个生日.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和完整解答过程，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#3#2",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "2. (8分)爸爸生日是5月1日,而春春生日是7月1日,从2012年12月26日算起(第1天),直到第2013天,爸爸和春春总共过了_11_个生日.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. (8分)笼子里有30只和30只。红毛魔术师每变一次,会把其中的4只变成1只。绿毛魔术师每变一次会把其中的5只变成2只。两个魔术师一共变了18次后,笼子里只有没有了。这时有只。\n\n## 二.填空题(每小题12分,共36分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目描述不完整且有OCR错误，但核心是一个可出题的数学问题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#1#3",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "3. (8分)笼子里有30只和30只。红毛魔术师每变一次,会把其中的4只变成1只。绿毛魔术师每变一次会把其中的5只变成2只。两个魔术师一共变了18次后,笼子里只有没有了。这时有只。\n\n## 二.填空题(每小题12分,共36分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "4. (12分)从1、2、3、4、5、6、7中选择若干个不同的数(所选数不计顺序),使得其中偶数之和等于奇数之和,则符合条件的选法共有_7种.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案'7种'，并附有完整解答过程，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#4",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "4. (12分)从1、2、3、4、5、6、7中选择若干个不同的数(所选数不计顺序),使得其中偶数之和等于奇数之和,则符合条件的选法共有_7种.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "5. (12分)从4、5、6、7、8、9这六个数字中选出互不相同的5个填入下面方格内,使得等式成立.有_13_种不同的填法.\n\n□□- □□=□",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解答过程，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#4#5",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "5. (12分)从4、5、6、7、8、9这六个数字中选出互不相同的5个填入下面方格内,使得等式成立.有_13_种不同的填法.\n\n□□- □□=□",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. (12分) \\(A\\) 、 \\(B\\) 、 \\(C\\) 三人在猜一个 \\(1 \\sim 99\\) 中的自然数.\n\n\\(A\\) : \"它是偶数,比6小.\"\n\n\\(B\\) : \"它比7小,是个两位数.\"\n\n\\(C\\) : \" \\(A\\) 的前半句是对的, \\(A\\) 的后半句是错的.\"\n\n如果这3人当中有1人两句都为真话,有1人两句都为假话,有1人两句话一真一假.那么,这个数是\n\n## 三.填空题(每小题15分,共60分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整逻辑题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#1#6",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "6. (12分) \\(A\\) 、 \\(B\\) 、 \\(C\\) 三人在猜一个 \\(1 \\sim 99\\) 中的自然数.\n\n\\(A\\) : \"它是偶数,比6小.\"\n\n\\(B\\) : \"它比7小,是个两位数.\"\n\n\\(C\\) : \" \\(A\\) 的前半句是对的, \\(A\\) 的后半句是错的.\"\n\n如果这3人当中有1人两句都为真话,有1人两句都为假话,有1人两句话一真一假.那么,这个数是\n\n## 三.填空题(每小题15分,共60分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "7. (15分)如图,有两个小正方形和一个大正方形,大正方形的边长是小正方形边长的2倍,阴影部分三角形面积为240,请问三个正方形的面积和_360_.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，有解答过程，适合练习但不宜用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#5#7",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "7. (15分)如图,有两个小正方形和一个大正方形,大正方形的边长是小正方形边长的2倍,阴影部分三角形面积为240,请问三个正方形的面积和_360_.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_005/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "8. (15分)小张早晨8点整从甲地出发去乙地,速度是每小时60千米.早晨9点整小王从乙地出发去甲地.小张到达乙地后立即沿原路返回,恰好在12点整与小王同时到达甲地.那么两人相遇时距离甲地_96_千米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#6#8",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "8. (15分)小张早晨8点整从甲地出发去乙地,速度是每小时60千米.早晨9点整小王从乙地出发去甲地.小张到达乙地后立即沿原路返回,恰好在12点整与小王同时到达甲地.那么两人相遇时距离甲地_96_千米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. (15分)如图是由 \\(9 \\times 2 \\times 2\\) 的小网格组成的一个正方形大网格并要求相邻两个小网格内的相邻数字完全相同(这些小网格可以旋转,但不能翻转).现在大网格中已放好一个小网格,请你将剩余8个网格按要求放好.右下角格内的数是_____.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目，题干中没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#2#9",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "9. (15分)如图是由 \\(9 \\times 2 \\times 2\\) 的小网格组成的一个正方形大网格并要求相邻两个小网格内的相邻数字完全相同(这些小网格可以旋转,但不能翻转).现在大网格中已放好一个小网格,请你将剩余8个网格按要求放好.右下角格内的数是_____.\n\n![](ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 4,
+      "year": 2013,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.pdf",
+      "exam": {
+        "exam_key": "2013年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. (15分)狼堡的狼欺羊太甚,终于导致羊群造反.接到攻打狼堡的通知后,小羊们陆续出发.7点时小灰灰登高一望,发现有5只羊到狼堡的距离恰好是一个公差为20(单位:米)的等差数列,从前到后,这5只羊分别为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) ;8点时,小灰灰登高一望,发现这5只羊到狼堡的距离仍然是一个公差为30(单位:米)的等差数列,但从前到后的顺序变成了 \\(B\\) 、 \\(E\\) 、 \\(C\\) 、 \\(A\\) 、 \\(D\\) .这5只羊中跑得最快的羊比跑得最慢的羊,每小时多跑____米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/四年级/2013/ocr_debug/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整数学问题，未出现答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json#2#10",
+          "json_path": "source_pdf/四年级/2013/2013年“迎春杯”数学解题能力展示初赛试卷（四年级）.json"
+        }
+      },
+      "text": "10. (15分)狼堡的狼欺羊太甚,终于导致羊群造反.接到攻打狼堡的通知后,小羊们陆续出发.7点时小灰灰登高一望,发现有5只羊到狼堡的距离恰好是一个公差为20(单位:米)的等差数列,从前到后,这5只羊分别为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) ;8点时,小灰灰登高一望,发现这5只羊到狼堡的距离仍然是一个公差为30(单位:米)的等差数列,但从前到后的顺序变成了 \\(B\\) 、 \\(E\\) 、 \\(C\\) 、 \\(A\\) 、 \\(D\\) .这5只羊中跑得最快的羊比跑得最慢的羊,每小时多跑____米.",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

@@ -1,0 +1,2149 @@
+{
+  "grade": 5,
+  "year": 2019,
+  "total_problems": 55,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 如流程图所示，已知输入的是一个一位数，输出的结果是一个有10个约数的四位数整数。则输出结果是\n\n![](ocr_debug/2019年五年级网赛（试卷）/pages/page_001/images/0.jpg)",
+      "answer_text": "1616",
+      "solution_text": "\\(\\overline{1a1a} = \\overline{1a}\\times 101\\) 的因数个数中, \\(10 = 2\\times 5\\) 即需要 \\(\\overline{1a}\\) 中有5个因数,只有当 \\(\\overline{1a} = k^{4}\\) 的形式才可以满足要求,不难发现只有当 \\(k = 2\\) 时, \\(\\overline{1a} = 16\\) 满足要求,所以 \\(\\overline{1a1a} = 101\\times 16 = 1616\\)",
+      "topic": "number_theory",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立且完整，但直接包含答案和解析，存在高泄露风险，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（带解析）.json#1#1",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（带解析）.json"
+        }
+      },
+      "text": "1. 如流程图所示，已知输入的是一个一位数，输出的结果是一个有10个约数的四位数整数。则输出结果是\n\n![](ocr_debug/2019年五年级网赛（试卷）/pages/page_001/images/0.jpg)",
+      "answer": "1616",
+      "solution": "\\(\\overline{1a1a} = \\overline{1a}\\times 101\\) 的因数个数中, \\(10 = 2\\times 5\\) 即需要 \\(\\overline{1a}\\) 中有5个因数,只有当 \\(\\overline{1a} = k^{4}\\) 的形式才可以满足要求,不难发现只有当 \\(k = 2\\) 时, \\(\\overline{1a} = 16\\) 满足要求,所以 \\(\\overline{1a1a} = 101\\times 16 = 1616\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 随着无线互联网的极速发展，每个月无线设备用掉的移动流量也越来越多．有一天，小明，小红讨论了一下他们前10个月用掉的移动流量，小明说：“我每个月都没超过100GB，不过我最近10个月用掉的流量数是10个各不相同的整数（单位：GB)，平均每月用了90GB.”小红说：“那我每月平均流量比你高，是95.4GB.”小明说：“那是我有一个月出国没怎么用流量．如果把我流量用得最多和最少的两个月去掉，那我每月平均流量用得就比你多了.”从以上对话我们可以知道小明用流量最少的一个月用了GB.",
+      "answer_text": "36",
+      "solution_text": "小明去掉最多流量和最少量后八个月的总流量大于 \\(95.4\\times 8 = 763.2\\mathrm{GB}\\)\n\n因这八个月的流量数不能重复并且一定小于100GB,此时最多有 \\(99 + 98 + 97 + 96 + 95 + 94 + 93 + 92 = 764\\mathrm{GB}\\) ,即想要满足要求小明这八个月的总流量只能为764GB.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是完整的数学问题，但包含直接答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（带解析）.json#1#2",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（带解析）.json"
+        }
+      },
+      "text": "2. 随着无线互联网的极速发展，每个月无线设备用掉的移动流量也越来越多．有一天，小明，小红讨论了一下他们前10个月用掉的移动流量，小明说：“我每个月都没超过100GB，不过我最近10个月用掉的流量数是10个各不相同的整数（单位：GB)，平均每月用了90GB.”小红说：“那我每月平均流量比你高，是95.4GB.”小明说：“那是我有一个月出国没怎么用流量．如果把我流量用得最多和最少的两个月去掉，那我每月平均流量用得就比你多了.”从以上对话我们可以知道小明用流量最少的一个月用了GB.",
+      "answer": "36",
+      "solution": "小明去掉最多流量和最少量后八个月的总流量大于 \\(95.4\\times 8 = 763.2\\mathrm{GB}\\)\n\n因这八个月的流量数不能重复并且一定小于100GB,此时最多有 \\(99 + 98 + 97 + 96 + 95 + 94 + 93 + 92 = 764\\mathrm{GB}\\) ,即想要满足要求小明这八个月的总流量只能为764GB."
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 小明编写了一个程序实现了辗转相除法算法，求出了两个非零自然数的最大公约数 \\(G\\) .通过将两数相乘除以他们的最大公约数的办法，小明又求出了最小公倍数 \\(L\\) .已知求出的最小公倍数是最大公约数的12倍，而原来两个自然数的差是它们的和的约数，那么这两个自然数的和最小是",
+      "answer_text": "7",
+      "solution_text": "任何两个数的最大公因数最小为1,此时最小公倍数最小为12。\n\n符合要求的数组只有(1,12)和(3,4)只有3和4可以同时满足题目条件,\n\n此时两个自然数的和最小为 \\(3 + 4 = 7\\) 。\n\n## 二、填空题(每小题10分,共30分)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题，未包含答案或解析，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json#1#3",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json"
+        }
+      },
+      "text": "3. 小明编写了一个程序实现了辗转相除法算法，求出了两个非零自然数的最大公约数 \\(G\\) .通过将两数相乘除以他们的最大公约数的办法，小明又求出了最小公倍数 \\(L\\) .已知求出的最小公倍数是最大公约数的12倍，而原来两个自然数的差是它们的和的约数，那么这两个自然数的和最小是",
+      "answer": "7",
+      "solution": "任何两个数的最大公因数最小为1,此时最小公倍数最小为12。\n\n符合要求的数组只有(1,12)和(3,4)只有3和4可以同时满足题目条件,\n\n此时两个自然数的和最小为 \\(3 + 4 = 7\\) 。\n\n## 二、填空题(每小题10分,共30分)"
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 小猪佩奇下载了一个“超级计算器”的手机应用，可以显示乘法的竖式计算过程．一不小心手机掉到地上碎屏了，只能看到2、0、1、9四个数字和整个竖式有数字的各个位置了．那么，这个竖式原来的乘积结果是\n\n![](ocr_debug/2019年五年级网赛（试卷）/pages/page_002/images/0.jpg)",
+      "answer_text": "2193",
+      "solution_text": "![](ocr_debug/2019年五年级网赛（带解析）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2019年五年级网赛（带解析）/pages/page_002/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是独立的数学问题，但整体包含答案和解析，适合练习使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（带解析）.json#2#4",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（带解析）.json"
+        }
+      },
+      "text": "4. 小猪佩奇下载了一个“超级计算器”的手机应用，可以显示乘法的竖式计算过程．一不小心手机掉到地上碎屏了，只能看到2、0、1、9四个数字和整个竖式有数字的各个位置了．那么，这个竖式原来的乘积结果是\n\n![](ocr_debug/2019年五年级网赛（试卷）/pages/page_002/images/0.jpg)",
+      "answer": "2193",
+      "solution": "![](ocr_debug/2019年五年级网赛（带解析）/pages/page_002/images/0.jpg)\n\n![](ocr_debug/2019年五年级网赛（带解析）/pages/page_002/images/1.jpg)"
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 有10段不同的电脑代码，其中每三段代码可以拼凑成一个完整的程序，但仅有一种拼凑方法可以编译成功．现有一些程序员，每人掌握了三段不同的代码，且任意两人掌握的代码不全相同．那么这些程序员至少有 人，才能保证一定能够编译成功.",
+      "answer_text": "85",
+      "solution_text": "\\(9 \\times 8 \\times 7 \\div 3 \\div 2 = 84\\) 。\n\n若程序员不多于84人,则可能出现有一段代码无人掌握,不符合题意;\n\n若程序员不少于85人,则任意一段代码,至多有 \\(9 \\times 8 \\times 7 \\div 3 \\div 2 = \\frac{84}{3}\\) 人不掌握.所以至少能找到一\n\n人掌握该代码.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整，但直接附带答案和解析，因此不适合考试，仅可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（带解析）.json#2#5",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（带解析）.json"
+        }
+      },
+      "text": "5. 有10段不同的电脑代码，其中每三段代码可以拼凑成一个完整的程序，但仅有一种拼凑方法可以编译成功．现有一些程序员，每人掌握了三段不同的代码，且任意两人掌握的代码不全相同．那么这些程序员至少有 人，才能保证一定能够编译成功.",
+      "answer": "85",
+      "solution": "\\(9 \\times 8 \\times 7 \\div 3 \\div 2 = 84\\) 。\n\n若程序员不多于84人,则可能出现有一段代码无人掌握,不符合题意;\n\n若程序员不少于85人,则任意一段代码,至多有 \\(9 \\times 8 \\times 7 \\div 3 \\div 2 = \\frac{84}{3}\\) 人不掌握.所以至少能找到一\n\n人掌握该代码."
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "6. 中国铁塔集团正在建设大量新的5G通信基站，如图所示的是一个基站铁塔的侧视图，在这个侧视\n\n图中铁塔被看作等腰三角形ABC，在两条腰上各有两个焊接点、底上有一个焊接点，把这些焊接点用钢架连在一起在侧视图中正好是一个正五边形，如果阴影部分的面积为60，那么三角形ABC的面积是\n\n![](ocr_debug/2019年五年级网赛（试卷）/pages/page_002/images/1.jpg)\n\n## 三、填空题（每小题15分，共30分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的几何题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json#2#6",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json"
+        }
+      },
+      "text": "6. 中国铁塔集团正在建设大量新的5G通信基站，如图所示的是一个基站铁塔的侧视图，在这个侧视\n\n图中铁塔被看作等腰三角形ABC，在两条腰上各有两个焊接点、底上有一个焊接点，把这些焊接点用钢架连在一起在侧视图中正好是一个正五边形，如果阴影部分的面积为60，那么三角形ABC的面积是\n\n![](ocr_debug/2019年五年级网赛（试卷）/pages/page_002/images/1.jpg)\n\n## 三、填空题（每小题15分，共30分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 猪妈妈给小猪佩奇和小猪乔治各买了一个人工智能陪伴机器人.陪伴机器人有一个语音交互猜数字的游戏，佩奇和乔治把两个陪伴机器人放到了一起，并分别输入一个数字，输入条件“你和对方的数字之和大于10”，开启游戏，发生了如下的奇怪对话.\n\n佩奇的机器人：“我不知道你的数是多少.”\n\n乔治的机器人：“不用你说，我就知道你刚才猜不出我的数.”\n\n佩奇的机器人：“我还是不知道你的数是多少.”",
+      "answer_text": "30",
+      "solution_text": "将乔治的机器人记作甲,佩奇的机器人记作乙;\n\n(1)两数和大于10,所以甲乙均不能有1,因为1与任意一个一位数和最大为10;",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学推理题题干，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json#2#7",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json"
+        }
+      },
+      "text": "7. 猪妈妈给小猪佩奇和小猪乔治各买了一个人工智能陪伴机器人.陪伴机器人有一个语音交互猜数字的游戏，佩奇和乔治把两个陪伴机器人放到了一起，并分别输入一个数字，输入条件“你和对方的数字之和大于10”，开启游戏，发生了如下的奇怪对话.\n\n佩奇的机器人：“我不知道你的数是多少.”\n\n乔治的机器人：“不用你说，我就知道你刚才猜不出我的数.”\n\n佩奇的机器人：“我还是不知道你的数是多少.”",
+      "answer": "30",
+      "solution": "将乔治的机器人记作甲,佩奇的机器人记作乙;\n\n(1)两数和大于10,所以甲乙均不能有1,因为1与任意一个一位数和最大为10;"
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "8. 在一个圆形棋盘上排有4颗红棋子及8颗黄棋子.如果从一颗黄棋子开始数,沿任意方向依次数到任何棋子,黄棋子的数目都不小于红棋子的数目(包括开始数的那枚黄棋子),那么就称这颗黄棋子在最佳位置上,请问8颗黄棋子都在最佳位置上的排列方法有____种.(旋转后相同的算同一种)\n\n## 四、亲子互动操作题(每小题18分,共36分)",
+      "answer_text": "10",
+      "solution_text": "最终只需要用黄棋子被红棋子分隔排开, 不出现红棋子连续的情况就一定满足要求. 即可以把 8 颗黄棋子分隔为以下几种情况:\n\n1、1、1、5(1种)\n\n1、1、2、4(3种)\n\n1、1、3、3(2种)\n\n1、2、2、3(3种)\n\n2、2、2、2(1种)\n\n共计 \\(1 + 3 + 2 + 3 + 1 = 10\\) (种)\n\n## 四、亲子互动操作题 (每小题 18 分, 共 36 分)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个独立的数学竞赛题干，没有答案或解析信息，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json#3#8",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json"
+        }
+      },
+      "text": "8. 在一个圆形棋盘上排有4颗红棋子及8颗黄棋子.如果从一颗黄棋子开始数,沿任意方向依次数到任何棋子,黄棋子的数目都不小于红棋子的数目(包括开始数的那枚黄棋子),那么就称这颗黄棋子在最佳位置上,请问8颗黄棋子都在最佳位置上的排列方法有____种.(旋转后相同的算同一种)\n\n## 四、亲子互动操作题(每小题18分,共36分)",
+      "answer": "10",
+      "solution": "最终只需要用黄棋子被红棋子分隔排开, 不出现红棋子连续的情况就一定满足要求. 即可以把 8 颗黄棋子分隔为以下几种情况:\n\n1、1、1、5(1种)\n\n1、1、2、4(3种)\n\n1、1、3、3(2种)\n\n1、2、2、3(3种)\n\n2、2、2、2(1种)\n\n共计 \\(1 + 3 + 2 + 3 + 1 = 10\\) (种)\n\n## 四、亲子互动操作题 (每小题 18 分, 共 36 分)"
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "9. 如图,取一张正方形纸,折出图中的6条折痕,使整张纸分成16个相同的小正方形.在左上角和右下角的小正方形正反两面均标上五角星.将整张纸折叠成16层(每次必须按照原有折痕进行折叠),那么标有五角星的两层之间至多能隔____层.\n\n![](ocr_debug/2019年五年级网赛（试卷）/pages/page_003/images/0.jpg)",
+      "answer_text": "14",
+      "solution_text": "方法不唯一, 一种可行解法如下:",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干描述清晰，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json#3#9",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json"
+        }
+      },
+      "text": "9. 如图,取一张正方形纸,折出图中的6条折痕,使整张纸分成16个相同的小正方形.在左上角和右下角的小正方形正反两面均标上五角星.将整张纸折叠成16层(每次必须按照原有折痕进行折叠),那么标有五角星的两层之间至多能隔____层.\n\n![](ocr_debug/2019年五年级网赛（试卷）/pages/page_003/images/0.jpg)",
+      "answer": "14",
+      "solution": "方法不唯一, 一种可行解法如下:"
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2019年五年级网赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2019年五年级网赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "网赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "10. 左下图所示的棋盘上有红方的一个\"马\",黑方的一个\"将\"、一个\"士\"、两个\"马\"和两个\"车\",游戏中红方移动\"马\",黑方不会主动移动他的棋子.游戏具体规则如下:\n\n1)红方的\"马\"走\"日\"字(如果行走方向正前方有棋子,会\"整马脚\",不能走,例如下右图中马不能跳到A点);\n\n2)若红方的\"马\"走到黑方任何一个棋子的攻击路线上,则会立刻被吃掉,黑方获胜;\n\n3)若红方的\"马\"走到黑方任何一个棋子所在的位置,则可以吃掉这个棋子,之后就不会再被这个棋子所吃.\n\n4)红方的\"马\"如果吃掉黑方的\"将\",则红方获胜.\n\n那么,请你给出一种红方30步以内获胜的方法,\n\n完成任务可获得通关密码,请将密码输入横线中:",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年五年级网赛（试卷）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（试卷）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（带解析）/pages/page_005/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019年五年级网赛（带解析）/pages/page_005/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的棋盘游戏题干，描述了规则和目标，但未提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json#3#10",
+          "json_path": "source_pdf/五年级/2019/2019年五年级网赛（试卷）.json"
+        }
+      },
+      "text": "10. 左下图所示的棋盘上有红方的一个\"马\",黑方的一个\"将\"、一个\"士\"、两个\"马\"和两个\"车\",游戏中红方移动\"马\",黑方不会主动移动他的棋子.游戏具体规则如下:\n\n1)红方的\"马\"走\"日\"字(如果行走方向正前方有棋子,会\"整马脚\",不能走,例如下右图中马不能跳到A点);\n\n2)若红方的\"马\"走到黑方任何一个棋子的攻击路线上,则会立刻被吃掉,黑方获胜;\n\n3)若红方的\"马\"走到黑方任何一个棋子所在的位置,则可以吃掉这个棋子,之后就不会再被这个棋子所吃.\n\n4)红方的\"马\"如果吃掉黑方的\"将\",则红方获胜.\n\n那么,请你给出一种红方30步以内获胜的方法,\n\n完成任务可获得通关密码,请将密码输入横线中:",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2019年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2019年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 某数 \\(N\\) 分解质因数为: \\(N = a \\times b \\times \\overline{ab} \\times \\overline{ba}\\) ,那么 \\(N\\) 的值为",
+      "answer_text": "56721",
+      "solution_text": "\\(N = 3 \\times 7 \\times 37 \\times 73 = 56721\\)",
+      "topic": "algebra",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年总决赛五年级一试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级一试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json#1#1",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "1. 某数 \\(N\\) 分解质因数为: \\(N = a \\times b \\times \\overline{ab} \\times \\overline{ba}\\) ,那么 \\(N\\) 的值为",
+      "answer": "56721",
+      "solution": "\\(N = 3 \\times 7 \\times 37 \\times 73 = 56721\\)"
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2019年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 有三种不同的酒精溶液 \\(A\\) 、 \\(B\\) 、 \\(C\\) ,如果取10克 \\(A\\) 和10克 \\(B\\) 混合,得到的溶液浓度为 \\(8\\%\\) ;如果取10克 \\(B\\) 和10克 \\(C\\) 混合,得到的溶液浓度为 \\(17\\%\\) ;如果三种溶液各取10克混合,得到的溶液浓度为 \\(a\\%\\) ,且 \\(a\\) 是一个质数.那么质数 \\(a\\) 的值为",
+      "answer_text": "13",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年总决赛五年级一试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级一试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是完整的数学问题，但直接附有答案和解析，因此只能用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json#1#2",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "2. 有三种不同的酒精溶液 \\(A\\) 、 \\(B\\) 、 \\(C\\) ,如果取10克 \\(A\\) 和10克 \\(B\\) 混合,得到的溶液浓度为 \\(8\\%\\) ;如果取10克 \\(B\\) 和10克 \\(C\\) 混合,得到的溶液浓度为 \\(17\\%\\) ;如果三种溶液各取10克混合,得到的溶液浓度为 \\(a\\%\\) ,且 \\(a\\) 是一个质数.那么质数 \\(a\\) 的值为",
+      "answer": "13",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2019年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 上午6位老师围坐在圆桌边出题,中午饭后,老师们回来继续出题,如果要求每个人都必须坐到原来的座位或者与原来座位相邻的座位上,那么一共有 种可能的就坐方式.(图中6个黑点表示6个座位)",
+      "answer_text": "20",
+      "solution_text": "将6个位置黑白染色,一定是有偶数个人坐在原来的位置,并且黑白格各占一半.\n\n(1)6人坐在原来的座位:1种;\n\n(2)恰有4人坐在原来的座位,这4人一定是相邻的,共6种;\n\n(3)恰有2人坐在原来的座位,这两人要么相邻,要么相对,一共有 \\(6 + 3 = 9\\) 种;\n\n(4)没有人坐在原来的座位,所有人旋转2种,相邻两人交换2种,一共4种;\n\n所以,最后一共有20种不同的符合要求的方式.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年总决赛五年级一试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级一试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含了答案和详细解析，泄露风险高，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json#1#3",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "3. 上午6位老师围坐在圆桌边出题,中午饭后,老师们回来继续出题,如果要求每个人都必须坐到原来的座位或者与原来座位相邻的座位上,那么一共有 种可能的就坐方式.(图中6个黑点表示6个座位)",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json#1#3",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "3. 上午6位老师围坐在圆桌边出题,中午饭后,老师们回来继续出题,如果要求每个人都必须坐到原来的座位或者与原来座位相邻的座位上,那么一共有 种可能的就坐方式.(图中6个黑点表示6个座位)",
+      "answer": "20",
+      "solution": "将6个位置黑白染色,一定是有偶数个人坐在原来的位置,并且黑白格各占一半.\n\n(1)6人坐在原来的座位:1种;\n\n(2)恰有4人坐在原来的座位,这4人一定是相邻的,共6种;\n\n(3)恰有2人坐在原来的座位,这两人要么相邻,要么相对,一共有 \\(6 + 3 = 9\\) 种;\n\n(4)没有人坐在原来的座位,所有人旋转2种,相邻两人交换2种,一共4种;\n\n所以,最后一共有20种不同的符合要求的方式."
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2019年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 如图,在 \\(\\triangle ABC\\) 中, \\(\\triangle ABE\\) , \\(\\triangle BEF\\) , \\(\\triangle BCF\\) 和四边形 \\(AEFC\\) 的面积都相等,若 \\(DF:FC=3:2\\) , \\(\\triangle ABC\\) 的面积为728.\n\n(1)求 \\(AD:DB\\) 的值.(3分)\n\n(2)求阴影 \\(\\triangle GEF\\) 的面积.(12分)",
+      "answer_text": "0.6、14.",
+      "solution_text": "设 \\(\\triangle ABE\\) , \\(\\triangle BEF\\) , \\(\\triangle BCF\\) 和 四边形 \\(AEFC\\) 的面积都为1份, \\(DF=1.5FC\\) ,所以 \\(\\triangle BDF\\) 的面积为1.5份,所以:\n\n(1) \\(AD:DB = S_{\\triangle ADC}:S_{\\triangle BDC} = 1.5:2.5 = 3:5\\) ,比值为0.6.\n\n(2)所以 \\(\\triangle BDE\\) 的面积为 \\(\\frac{5}{8}\\) 份;\n\n\\(\\triangle DEF\\) 的面积为 \\(1 + \\frac{5}{8} - 1.5 = \\frac{1}{8}\\) 份,\n\n![](ocr_debug/2019年总决赛五年级一试解析/pages/page_002/images/1.jpg)\n\n\\[GE:EB = S_{\\triangle DEF}:S_{\\triangle BDF} = \\frac{1}{8}:1.5 = 1:12,\\]\n\n阴影部分的面积为: \\(728 \\times \\frac{1}{4} \\times \\frac{1}{13} = 14\\) .",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年总决赛五年级一试解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级一试解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级一试解析/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级一试解析/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题干、答案和解析，存在泄露风险，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json#2#4",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "4. 如图,在 \\(\\triangle ABC\\) 中, \\(\\triangle ABE\\) , \\(\\triangle BEF\\) , \\(\\triangle BCF\\) 和四边形 \\(AEFC\\) 的面积都相等,若 \\(DF:FC=3:2\\) , \\(\\triangle ABC\\) 的面积为728.\n\n(1)求 \\(AD:DB\\) 的值.(3分)\n\n(2)求阴影 \\(\\triangle GEF\\) 的面积.(12分)",
+      "answer": "0.6、14.",
+      "solution": "设 \\(\\triangle ABE\\) , \\(\\triangle BEF\\) , \\(\\triangle BCF\\) 和 四边形 \\(AEFC\\) 的面积都为1份, \\(DF=1.5FC\\) ,所以 \\(\\triangle BDF\\) 的面积为1.5份,所以:\n\n(1) \\(AD:DB = S_{\\triangle ADC}:S_{\\triangle BDC} = 1.5:2.5 = 3:5\\) ,比值为0.6.\n\n(2)所以 \\(\\triangle BDE\\) 的面积为 \\(\\frac{5}{8}\\) 份;\n\n\\(\\triangle DEF\\) 的面积为 \\(1 + \\frac{5}{8} - 1.5 = \\frac{1}{8}\\) 份,\n\n![](ocr_debug/2019年总决赛五年级一试解析/pages/page_002/images/1.jpg)\n\n\\[GE:EB = S_{\\triangle DEF}:S_{\\triangle BDF} = \\frac{1}{8}:1.5 = 1:12,\\]\n\n阴影部分的面积为: \\(728 \\times \\frac{1}{4} \\times \\frac{1}{13} = 14\\) ."
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019年总决赛五年级一试解析.pdf",
+      "exam": {
+        "exam_key": "2019年总决赛五年级一试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 甲乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时出发,相向而行,在 \\(C\\) 地相遇;如果出发时甲将速度提高 \\(50\\%\\) ,将在距离 \\(C\\) 地60千米的 \\(D\\) 处相遇;如果在刚才的基础上甲将速度再提高 \\(50\\%\\) ,将会在相距 \\(D\\) 地60千米的 \\(E\\) 地相遇,请问 \\(AB\\) 之间相距多少千米?",
+      "answer_text": "600",
+      "solution_text": "(1)从乙来看,乙的速度不变,所以3次时间是等差数列;\n\n(2)看甲,三次路程是等差数列,三次时间是等差数列,所以,第1次和第3次的平均速度和第二次的相等.甲3次速度比为4:6:9,根据浓度十字,三次时间比为6:5:4,所以甲三次路程比为24:30:36,第一次甲走的路程为240千米.\n\n(3)根据时间6:5:4,乙三次走的路程比为6:5:4,所以第一次乙走的路程为360千米.所以, \\(A\\) 、 \\(B\\) 之间的距离为600千米.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年总决赛五年级一试解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级一试解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整的题干、答案和解析，答案直接给出且解析详细，存在高泄露风险，适合用于练习而非考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json#2#5",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级一试解析.json"
+        }
+      },
+      "text": "5. 甲乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时出发,相向而行,在 \\(C\\) 地相遇;如果出发时甲将速度提高 \\(50\\%\\) ,将在距离 \\(C\\) 地60千米的 \\(D\\) 处相遇;如果在刚才的基础上甲将速度再提高 \\(50\\%\\) ,将会在相距 \\(D\\) 地60千米的 \\(E\\) 地相遇,请问 \\(AB\\) 之间相距多少千米?",
+      "answer": "600",
+      "solution": "(1)从乙来看,乙的速度不变,所以3次时间是等差数列;\n\n(2)看甲,三次路程是等差数列,三次时间是等差数列,所以,第1次和第3次的平均速度和第二次的相等.甲3次速度比为4:6:9,根据浓度十字,三次时间比为6:5:4,所以甲三次路程比为24:30:36,第一次甲走的路程为240千米.\n\n(3)根据时间6:5:4,乙三次走的路程比为6:5:4,所以第一次乙走的路程为360千米.所以, \\(A\\) 、 \\(B\\) 之间的距离为600千米."
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019年总决赛五年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2019年总决赛五年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 在正六边形ABCDEF中,从三条边的中点 \\(X\\) 、 \\(Y\\) 、 \\(Z\\) 分别引出两条线段,构造出如图四个大小相等的正三角形.如果每个小正三角形面积为3平方厘米,那么正六边形ABCDEF的面积是 平方厘米.",
+      "answer_text": "56",
+      "solution_text": "连结 \\(XY\\) 、 \\(XZ\\) 、 \\(YZ\\) ,易知图中中心阴影三角形面积等于 \\(\\triangle XYZ\\)\n\n面积的 \\(\\frac{1}{7}\\) ,而 \\(\\triangle XYZ\\) 的面积的等于正六边形ABCDEF面积的 \\(\\frac{3}{8}\\) ,所以\n\n每个小正三角形面积占正六边形ABCDEF面积的 \\(\\frac{1}{7} \\times \\frac{3}{8} = \\frac{3}{56}\\) ,这就得到正六边形面积为 \\(3 \\div \\frac{3}{56} = 56\\) 平方厘米.",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年总决赛五年级二试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级二试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整的题干、答案和解析，风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级二试解析.json#1#2",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级二试解析.json"
+        }
+      },
+      "text": "2. 在正六边形ABCDEF中,从三条边的中点 \\(X\\) 、 \\(Y\\) 、 \\(Z\\) 分别引出两条线段,构造出如图四个大小相等的正三角形.如果每个小正三角形面积为3平方厘米,那么正六边形ABCDEF的面积是 平方厘米.",
+      "answer": "56",
+      "solution": "连结 \\(XY\\) 、 \\(XZ\\) 、 \\(YZ\\) ,易知图中中心阴影三角形面积等于 \\(\\triangle XYZ\\)\n\n面积的 \\(\\frac{1}{7}\\) ,而 \\(\\triangle XYZ\\) 的面积的等于正六边形ABCDEF面积的 \\(\\frac{3}{8}\\) ,所以\n\n每个小正三角形面积占正六边形ABCDEF面积的 \\(\\frac{1}{7} \\times \\frac{3}{8} = \\frac{3}{56}\\) ,这就得到正六边形面积为 \\(3 \\div \\frac{3}{56} = 56\\) 平方厘米."
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019年总决赛五年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2019年总决赛五年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 某班15名学生参加测试,测试完发现,每道题都有2\\~4人做对,恰被2人做对的题目数量是恰被4人做对的1.5倍,恰被3人做对的题比恰被2人做对的多3道.如果任意两名学生做对的题中都恰好有1道是相同的,那么恰被2人做对的题有 道.",
+      "answer_text": "12",
+      "solution_text": "将任意两人,以及他们做对的相同的题一起称为一个\"2人组\".2人组一共有 \\(C_{15}^{2} = 105\\) 个.\n\n如果一道题有2人做对,这道题就会产生1个\"2人组\"\n\n如果一道题有3人做对,这道题就会产生3个\"2人组\"",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年总决赛五年级二试解析/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级二试解析/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出了答案和解析，存在高风险泄露，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级二试解析.json#1#3",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级二试解析.json"
+        }
+      },
+      "text": "3. 某班15名学生参加测试,测试完发现,每道题都有2\\~4人做对,恰被2人做对的题目数量是恰被4人做对的1.5倍,恰被3人做对的题比恰被2人做对的多3道.如果任意两名学生做对的题中都恰好有1道是相同的,那么恰被2人做对的题有 道.",
+      "answer": "12",
+      "solution": "将任意两人,以及他们做对的相同的题一起称为一个\"2人组\".2人组一共有 \\(C_{15}^{2} = 105\\) 个.\n\n如果一道题有2人做对,这道题就会产生1个\"2人组\"\n\n如果一道题有3人做对,这道题就会产生3个\"2人组\""
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019年总决赛五年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2019年总决赛五年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "4. 有100名学生,编号分别为1\\~100,每个学生往黑板上写上自己编号的全部因数以及100除以自己编号的余数,例如编号为3的学生写上:1,3,1,编号为10的学生写上:1,2,5,10,0,那么:\n\n(1)编号为12的学生写数依次分别是多少?(3分)\n\n(2)数4一共出现多少次?(3分)\n\n(3)黑板上所有的数之和是多少?(9分)",
+      "answer_text": "10000",
+      "solution_text": "(1)1、2、3、4、6、12、4;\n\n(2)4作为因数出现了25次,\n\n4作为余数出现的次数, \\(100\\div a = b\\dots 4\\)\n\n那么 \\(a\\) 是96的大于4的因数,有8个,\n\n所以,4一共出现了33次.\n\n(3)对于某个数 \\(k\\) ,从1到100一共有 \\(\\left[\\frac{100}{k}\\right]\\) 个数是 \\(k\\) 的倍数,因此 \\(k\\) 作为因数共出现 \\(\\left[\\frac{100}{k}\\right]\\)\n\n次,故黑板上所有因数的和是 \\(1\\times \\left[\\frac{100}{1}\\right] + 2\\times \\left[\\frac{100}{2}\\right] + 3\\times \\left[\\frac{100}{3}\\right] + \\dots +100\\times \\left[\\frac{100}{100}\\right].\\)\n\n设100除以 \\(k\\) 的余数为 \\(R_{k}\\) ,黑板上所有余数的和为 \\(R_{1} + R_{2} + R_{3} + \\dots +R_{100}\\)\n\n因为 \\(100\\div k = \\left[\\frac{100}{k}\\right]\\dots \\dots R_{k}\\) ,所以 \\(100 = k\\cdot \\left[\\frac{100}{k}\\right] + R_{k}\\)\n\n那么黑板上所有数的和为:\n\n\\[1\\times \\left[\\frac{100}{1}\\right] + R_{1} + 2\\times \\left[\\frac{100}{2}\\right] + R_{2} + 3\\times \\left[\\frac{100}{3}\\right] + R_{3} + \\dots +100\\times \\left[\\frac{100}{100}\\right] + R_{100}\\] \\[= \\underbrace{100 + 100 + \\dots +100}_{100\\uparrow 100} = 10000.\\]",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年总决赛五年级二试解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级二试解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接附有答案和解析，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级二试解析.json#2#4",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级二试解析.json"
+        }
+      },
+      "text": "4. 有100名学生,编号分别为1\\~100,每个学生往黑板上写上自己编号的全部因数以及100除以自己编号的余数,例如编号为3的学生写上:1,3,1,编号为10的学生写上:1,2,5,10,0,那么:\n\n(1)编号为12的学生写数依次分别是多少?(3分)\n\n(2)数4一共出现多少次?(3分)\n\n(3)黑板上所有的数之和是多少?(9分)",
+      "answer": "10000",
+      "solution": "(1)1、2、3、4、6、12、4;\n\n(2)4作为因数出现了25次,\n\n4作为余数出现的次数, \\(100\\div a = b\\dots 4\\)\n\n那么 \\(a\\) 是96的大于4的因数,有8个,\n\n所以,4一共出现了33次.\n\n(3)对于某个数 \\(k\\) ,从1到100一共有 \\(\\left[\\frac{100}{k}\\right]\\) 个数是 \\(k\\) 的倍数,因此 \\(k\\) 作为因数共出现 \\(\\left[\\frac{100}{k}\\right]\\)\n\n次,故黑板上所有因数的和是 \\(1\\times \\left[\\frac{100}{1}\\right] + 2\\times \\left[\\frac{100}{2}\\right] + 3\\times \\left[\\frac{100}{3}\\right] + \\dots +100\\times \\left[\\frac{100}{100}\\right].\\)\n\n设100除以 \\(k\\) 的余数为 \\(R_{k}\\) ,黑板上所有余数的和为 \\(R_{1} + R_{2} + R_{3} + \\dots +R_{100}\\)\n\n因为 \\(100\\div k = \\left[\\frac{100}{k}\\right]\\dots \\dots R_{k}\\) ,所以 \\(100 = k\\cdot \\left[\\frac{100}{k}\\right] + R_{k}\\)\n\n那么黑板上所有数的和为:\n\n\\[1\\times \\left[\\frac{100}{1}\\right] + R_{1} + 2\\times \\left[\\frac{100}{2}\\right] + R_{2} + 3\\times \\left[\\frac{100}{3}\\right] + R_{3} + \\dots +100\\times \\left[\\frac{100}{100}\\right] + R_{100}\\] \\[= \\underbrace{100 + 100 + \\dots +100}_{100\\uparrow 100} = 10000.\\]"
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019年总决赛五年级二试解析.pdf",
+      "exam": {
+        "exam_key": "2019年总决赛五年级二试",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "总决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "5. 把1\\~10这10个数填入图中的十个小圆圈中(其中1已经填好),将相邻两数求差(大减小),得到10个差,然后将这10个差求和.\n\n(1)若和为18,这10个数一共有多少种不同的排列方式?\n\n(6分)\n\n![](ocr_debug/2019年总决赛五年级二试解析/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019年总决赛五年级二试解析/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级二试解析/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019年总决赛五年级二试解析/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019年总决赛五年级二试.json#2#5",
+          "json_path": "source_pdf/五年级/2019/2019年总决赛五年级二试.json"
+        }
+      },
+      "text": "5. 把1\\~10这10个数填入图中的十个小圆圈中(其中1已经填好),将相邻两数求差(大减小),得到10个差,然后将这10个差求和.\n\n(1)若和为18,这10个数一共有多少种不同的排列方式?\n\n(6分)\n\n![](ocr_debug/2019年总决赛五年级二试解析/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13、 \\(A\\) 、 \\(B\\) 两地相距200千米.\n\n某日，甲、乙两人同时从 \\(A\\) 、 \\(B\\) 两地出发，匀速相向而行，在 \\(C\\) 处相遇；\n\n若甲速度提高12千米/小时，则两人在距 \\(C\\) 处25千米的地方相遇；\n\n若乙速度提高12千米/小时，则两人在距 \\(C\\) 处15千米的地方相遇.\n\n那么甲的速度为多少？",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高A卷（试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高A卷（试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，包含问题描述和提问，但无答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高A卷（试卷版）.json#3#13",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高A卷（试卷版）.json"
+        }
+      },
+      "text": "13、 \\(A\\) 、 \\(B\\) 两地相距200千米.\n\n某日，甲、乙两人同时从 \\(A\\) 、 \\(B\\) 两地出发，匀速相向而行，在 \\(C\\) 处相遇；\n\n若甲速度提高12千米/小时，则两人在距 \\(C\\) 处25千米的地方相遇；\n\n若乙速度提高12千米/小时，则两人在距 \\(C\\) 处15千米的地方相遇.\n\n那么甲的速度为多少？",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(673 \\times 0.75 + 20.19 \\times 25 + 201.9 \\times 5\\) 的计算结果是",
+      "answer_text": "2019",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含直接答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#1#1",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(673 \\times 0.75 + 20.19 \\times 25 + 201.9 \\times 5\\) 的计算结果是",
+      "answer": "2019",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 盒中有红、黄、蓝、白四种颜色的小球,其中红球个数恰好是其它球个数的总和.如果每种球都增加20个,那么红球个数等于黄球和蓝球个数总和;如果每种球都增加19个,那么红球个数等于蓝球和白球个数总和;如果每种球都增加11个,那么红球个数等于黄球和白球个数总和.那么盒中原有红球 个.",
+      "answer_text": "50",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但包含直接答案，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#1#2",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "2. 盒中有红、黄、蓝、白四种颜色的小球,其中红球个数恰好是其它球个数的总和.如果每种球都增加20个,那么红球个数等于黄球和蓝球个数总和;如果每种球都增加19个,那么红球个数等于蓝球和白球个数总和;如果每种球都增加11个,那么红球个数等于黄球和白球个数总和.那么盒中原有红球 个.",
+      "answer": "50",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图两个圆的半径分别是10厘米和20厘米两块阴影部分的周长相差68.4厘米,那么周长较小的一块阴影的周长是 厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "60",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#1#3",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "3. 如图两个圆的半径分别是10厘米和20厘米两块阴影部分的周长相差68.4厘米,那么周长较小的一块阴影的周长是 厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "60",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 小红编花篮,上半月她编的大花篮和小花篮的个数比为8:5. 下半月她先编了一些大花篮,结果她该月编的大花篮和小花篮的个数比变成了2:1,接着她又编了一些小花篮,结果她该月编的大花篮和小花篮的个数比又变成了4:3. 已知小红下半月编的大花篮比小花篮少6个,那么她上半月共编了 个大花篮.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "96",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案【答案】96，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#1#4",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "4. 小红编花篮,上半月她编的大花篮和小花篮的个数比为8:5,下半月她先编  \n\n了一些大花篮,结果她该月编的大花篮和小花篮的个数比变成了2:1,接着她又编了一些小花篮,结果她该月编的大花篮和小花篮的个数比又变成了4:3. 已知小红下半月编的大花篮比小花篮少6个,那么她上半月共编了个大花篮.",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#1#4",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "4. 小红编花篮,上半月她编的大花篮和小花篮的个数比为8:5. 下半月她先编了一些大花篮,结果她该月编的大花篮和小花篮的个数比变成了2:1,接着她又编了一些小花篮,结果她该月编的大花篮和小花篮的个数比又变成了4:3. 已知小红下半月编的大花篮比小花篮少6个,那么她上半月共编了 个大花篮.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "96",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 在右图中的方格内填入适当的数字,使乘法竖式成立.那么该乘法竖式中的乘积为\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "10890",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案10890，存在高泄露风险，不适合作为考试题，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#1#5",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "5. 在右图中的方格内填入适当的数字,使乘法竖式成立.那么该乘法竖式中的乘积为\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "10890",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 一个长方体,长、宽、高是三个连续自然数(单位:厘米),体积是 \\(2 \\square \\square \\square 66\\) 立方厘米,那么这个长方体的棱长总和是",
+      "answer_text": "744",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#1#6",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "6. 一个长方体,长、宽、高是三个连续自然数(单位:厘米),体积是 \\(2 \\square \\square \\square 66\\) 立方厘米,那么这个长方体的棱长总和是",
+      "answer": "744",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 有 9 名同学站成一行, 他们的编号顺次为 1\\~9. 其中 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 五名同学对话如下:\n\n\\(A\\) 说: \"我左右两边相邻的同学的编号都是质数.\"\n\n\\(B\\) 说: \"我左右两边相邻的同学的编号都是合数.\"\n\n\\(C\\) 说: \"我们 5 人中, 恰有某两个人相邻.\"\n\n\\(D\\) 说: \"我和 \\(E\\) 的编号之和是质数.\"\n\n\\(E\\) 说: \"我和 \\(C\\) 相邻.\"\n\n如果每个人说的都是正确的, 那么 \\(C\\) 的编号是",
+      "answer_text": "1",
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的问题题干，描述清晰，没有包含答案或解析，适合作为独立考题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#2#7",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "7. 有 9 名同学站成一行, 他们的编号顺次为 1\\~9. 其中 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 五名同学对话如下:\n\n\\(A\\) 说: \"我左右两边相邻的同学的编号都是质数.\"\n\n\\(B\\) 说: \"我左右两边相邻的同学的编号都是合数.\"\n\n\\(C\\) 说: \"我们 5 人中, 恰有某两个人相邻.\"\n\n\\(D\\) 说: \"我和 \\(E\\) 的编号之和是质数.\"\n\n\\(E\\) 说: \"我和 \\(C\\) 相邻.\"\n\n如果每个人说的都是正确的, 那么 \\(C\\) 的编号是",
+      "answer": "1",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 右图由 6 个相同的等腰三角形和 1 个等腰直角三角形组成. 如果所有等腰三角形的腰长都是 22 厘米, 那么, 右图的总面积为 平方厘米.\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题 12 分, 共 48 分)",
+      "answer_text": "968",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目中直接给出了答案968，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#2#8",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "8. 右图由 6 个相同的等腰三角形和 1 个等腰直角三角形组成. 如果所有等腰三角形的腰长都是 22 厘米, 那么, 右图的总面积为 平方厘米.\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题 12 分, 共 48 分)",
+      "answer": "968",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 算式 \\(\\frac{3 + 5 + 7 + 9 + 11 + \\cdots + 4037}{2} \\times \\frac{3}{1 + \\frac{1}{2018}} \\times \\frac{2}{2 + \\frac{2}{2019}} \\times \\frac{4}{3 + \\frac{3}{2020}} \\times \\cdots \\times \\frac{2020}{2019 + \\frac{2019}{4036}}\\) 的计算结果是",
+      "answer_text": "4037",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在高泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#2#9",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "9. 算式 \\(\\frac{3 + 5 + 7 + 9 + 11 + \\cdots + 4037}{2} \\times \\frac{3}{1 + \\frac{1}{2018}} \\times \\frac{2}{2 + \\frac{2}{2019}} \\times \\frac{4}{3 + \\frac{3}{2020}} \\times \\cdots \\times \\frac{2020}{2019 + \\frac{2019}{4036}}\\) 的计算结果是",
+      "answer": "4037",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 在右图方格表中顺次填入数字 1\\~6, 要求从 2 开始每次填入数字的方格必须和已有数字的方格相邻(相邻是指两个方格有公共边). 不同的填法共有 种.\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "208",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干清晰但直接包含答案，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#2#10",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "10. 在右图方格表中顺次填入数字 1\\~6, 要求从 2 开始每次填入数字的方格必须和已有数字的方格相邻(相邻是指两个方格有公共边). 不同的填法共有 种.\n\n![](ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "208",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 如果一个自然数的最小质因数是一位数, 则称这个数是\"好数\". 如果连续九个三位数都是\"好数\", 那么这九个数的平均数最大为",
+      "answer_text": "846",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json#2#11",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（答案）.json"
+        }
+      },
+      "text": "11. 如果一个自然数的最小质因数是一位数, 则称这个数是\"好数\". 如果连续九个三位数都是\"好数\", 那么这九个数的平均数最大为",
+      "answer": "846",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. 一条公路上有 \\(A\\) 、 \\(B\\) 两个小镇。如果甲、乙两人同时从 \\(A\\) 、 \\(B\\) 两地出发，相向而行，那么甲过中点后 10 分钟与乙相遇。如果甲比乙晚出发 10 分钟，那么甲过中点后 6 分钟与乙相遇。假设两人速度均未改变，要使甲和乙恰好在中点相遇，甲需要比乙晚出发多少分钟？",
+      "answer_text": "25",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学竞赛题干，未包含答案或解析，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#3#13",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "13. 一条公路上有 \\(A\\) 、 \\(B\\) 两个小镇。如果甲、乙两人同时从 \\(A\\) 、 \\(B\\) 两地出发，相向而行，那么甲过中点后 10 分钟与乙相遇。如果甲比乙晚出发 10 分钟，那么甲过中点后 6 分钟与乙相遇。假设两人速度均未改变，要使甲和乙恰好在中点相遇，甲需要比乙晚出发多少分钟？",
+      "answer": "25",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘决赛小高D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘决赛小高D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "14. 8 位老师推荐一些学生参加某项活动。组委会收到推荐信息后发现：每两位老师推荐的学生中都恰好有一名相同。如果每名学生最多被 3 位老师推荐，那么这 8 位老师至少共推荐了多少名学生参加该项活动？",
+      "answer_text": "12",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘决赛小高D卷（试卷版）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干为完整的数学竞赛问题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json#4#14",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘决赛小高D卷（试卷版）.json"
+        }
+      },
+      "text": "14. 8 位老师推荐一些学生参加某项活动。组委会收到推荐信息后发现：每两位老师推荐的学生中都恰好有一名相同。如果每名学生最多被 3 位老师推荐，那么这 8 位老师至少共推荐了多少名学生参加该项活动？",
+      "answer": "12",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. \\(2019^{1\\times 2 + 2\\times 3 + 3\\times 4 + \\dots +2019\\times 2020}\\) 的个位数字是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷.json#1#1",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷.json"
+        }
+      },
+      "text": "1. \\(2019^{1\\times 2 + 2\\times 3 + 3\\times 4 + \\dots +2019\\times 2020}\\) 的个位数字是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 一台手机没有电了，如果关机充电，3小时可以充满电；如果边使用边充电，4小时可以充满电．假设充电和耗电的速度保持不变，这台手机充满电后不再充电，一直使用到没电，可以连续使用 小时.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在高泄露风险，但问题本身可独立出题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#2",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "2. 一台手机没有电了，如果关机充电，3小时可以充满电；如果边使用边充电，4小时可以充满电．假设充电和耗电的速度保持不变，这台手机充满电后不再充电，一直使用到没电，可以连续使用 小时.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 在右图乘法竖式的每个方框中填入一个数字，使得乘法竖式成立，那么竖式的乘积是\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#3",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "3. 在右图乘法竖式的每个方框中填入一个数字，使得乘法竖式成立，那么竖式的乘积是\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 南宋时期杰出的数学家杨辉对中国传统的“垛积术”进行了很好的发展，在其著作《详解九章算法》中对自然数幂问题用数形结合的方式加以分析.\n\n如图所示，由1，3，6，10，15个小球堆成的三角锥称为5层的三角垛，六个这样的三角垛可以切拼合并成长、宽、高分别为5， \\(5 + 1\\) ， \\(5 + 2\\) 的长方体球阵.那么一个10层的三角垛共由 个小球堆成.\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含标准答案，泄露风险高，但题目本身可作为练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#4",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "4. 南宋时期杰出的数学家杨辉对中国传统的“垛积术”进行了很好的发展，在其著作《详解九章算法》中对自然数幂问题用数形结合的方式加以分析.\n\n如图所示，由1，3，6，10，15个小球堆成的三角锥称为5层的三角垛，六个这样的三角垛可以切拼合并成长、宽、高分别为5， \\(5 + 1\\) ， \\(5 + 2\\) 的长方体球阵.那么一个10层的三角垛共由 个小球堆成.\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 今天是2018年12月8日，蕴含着两个有趣的数2018和1208，这两个数都使用了0、1、2、8这四个数字．由这四个数字组成的数字不重复的四位数中，除了上述两个数外，还有 个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案【答案】16，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#5",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "5. 今天是2018年12月8日，蕴含着两个有趣的数2018和1208，这两个数都使用了0、1、2、8这四个数字．由这四个数字组成的数字不重复的四位数中，除了上述两个数外，还有 个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 在空格内填入数字1\\~6，使得每行、每列、每宫数字不重复，粗线标注的两个 \\(2\\times 2\\) 正方形区域里分别为一组连续的自然数.那么左数第2列从上到下前5个数字依次组成的五位数是\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在泄露风险，因此仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#1#6",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "6. 在空格内填入数字1\\~6，使得每行、每列、每宫数字不重复，粗线标注的两个 \\(2\\times 2\\) 正方形区域里分别为一组连续的自然数.那么左数第2列从上到下前5个数字依次组成的五位数是\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 在一次飞行演习任务中,由于机械故障,油箱开始持续匀速漏油.经测算,若保持400千米/小时的速度飞行8小时,油箱中的油恰好耗尽;若保持600千米/小时的速度飞行6小时,油箱中的油也恰好耗尽(飞机飞行每千米消耗的油量相同).若飞机需要在油箱里的油耗尽前飞到距离为4000千米处的机场进行维修,则至少需要保持平均 千米/时的速度飞行.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但直接包含答案，不适合考试使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#7",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "7. 在一次飞行演习任务中,由于机械故障,油箱开始持续匀速漏油.经测算,若保持400千米/小时的速度飞行8小时,油箱中的油恰好耗尽;若保持600千米/小时的速度飞行6小时,油箱中的油也恰好耗尽(飞机飞行每千米消耗的油量相同).若飞机需要在油箱里的油耗尽前飞到距离为4000千米处的机场进行维修,则至少需要保持平均 千米/时的速度飞行.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 右图中包含两个直角梯形ABCD和EFGH,并且两个梯形的上底与下底之和都等于梯形的高,如果 \\(A E = 3\\) , \\(E D = 6\\) , \\(B F = C G\\) ,那么两个梯形面积之差为\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#8",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "8. 右图中包含两个直角梯形ABCD和EFGH,并且两个梯形的上底与下底之和都等于梯形的高,如果 \\(A E = 3\\) , \\(E D = 6\\) , \\(B F = C G\\) ,那么两个梯形面积之差为\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 将1至13分别填入如图的方格中(不允许重复),每个\"中填入的5个数之和均为42,那么正中心方框 \\(X\\) 处填的数是\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含标准答案，泄露风险高，建议仅用于练习而非考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#9",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "9. 将1至13分别填入如图的方格中(不允许重复),每个\"中填入的5个数之和均为42,那么正中心方框 \\(X\\) 处填的数是\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 有一个三位合数 \\(A\\) , \\(A\\) 有质数个因数.老师把组成 \\(A\\) 的三个数字以及 \\(A\\) 的因数个数分别写在4张卡片上,随机发给四个聪明且诚实的同学甲、乙、丙、丁,四人只能看到自己拿到的数.老师问:有人知道 \\(A\\) 是多少吗?甲、乙同时说:我知道.那么三位数 \\(A\\) 是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#10",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "10. 有一个三位合数 \\(A\\) , \\(A\\) 有质数个因数.老师把组成 \\(A\\) 的三个数字以及 \\(A\\) 的因数个数分别写在4张卡片上,随机发给四个聪明且诚实的同学甲、乙、丙、丁,四人只能看到自己拿到的数.老师问:有人知道 \\(A\\) 是多少吗?甲、乙同时说:我知道.那么三位数 \\(A\\) 是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级C卷.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级C卷",
+        "doc_type_question": null,
+        "doc_type_solution": "SOLUTION",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. \\(A\\) 、 \\(B\\) 两地相距40千米,上午9点甲从 \\(A\\) 地出发前往 \\(B\\) 地开会,过了一会乙从 \\(A\\) 地,丙从 \\(B\\) 地同时出发相向而行,分别赶往对方的城市开会,上午10点甲丙相遇,与此同时乙恰好抵达 \\(B\\) 地,但此时乙发现自己有一个文件在丙的手上,便立刻回身追丙,拿到文件后再立刻返回到 \\(B\\) 地,结果三人同时抵达目的地.已知三人途中速度均未发生改变,那么乙的速度为每小时 千米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级C卷/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案信息，存在高泄露风险，但题目完整可独立出题，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json#2#11",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级C卷（答案）.json"
+        }
+      },
+      "text": "11. \\(A\\) 、 \\(B\\) 两地相距40千米,上午9点甲从 \\(A\\) 地出发前往 \\(B\\) 地开会,过了一会乙从 \\(A\\) 地,丙从 \\(B\\) 地同时出发相向而行,分别赶往对方的城市开会,上午10点甲丙相遇,与此同时乙恰好抵达 \\(B\\) 地,但此时乙发现自己有一个文件在丙的手上,便立刻回身追丙,拿到文件后再立刻返回到 \\(B\\) 地,结果三人同时抵达目的地.已知三人途中速度均未发生改变,那么乙的速度为每小时 千米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(20.19 \\times 95 + 2.019 \\times 50\\) 的计算结果是",
+      "answer_text": "2019",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#1#1",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(20.19 \\times 95 + 2.019 \\times 50\\) 的计算结果是",
+      "answer": "2019",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 已知图中最大正方形的面积为 \\(64\\mathrm{cm}^2\\) ,每个小正方形的顶点都是较大正方形各边中点,则图中所有阴影部分的面积和是 \\(\\mathrm{cm}^2\\)",
+      "answer_text": "15",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#1#2",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "2. 已知图中最大正方形的面积为 \\(64\\mathrm{cm}^2\\) ,每个小正方形的顶点都是较大正方形各边中点,则图中所有阴影部分的面积和是 \\(\\mathrm{cm}^2\\)",
+      "answer": "15",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 小明开始练习打字,本月1号他每分钟打不到40个字.但他进步很快,每天都比前一天每分钟多打7个字.到本月14号练习完后他发现,自己第一次获得了\"打字小能手\"的称号.获得\"打字小能手\"称号要求每分钟可以打字130个或更多.那么,小明本月1号每分钟能打 \\(\\mathrm{cm}^2\\) 个字.",
+      "answer_text": "39",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干结构完整但包含直接答案泄露，不适合考试，可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#1#3",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "3. 小明开始练习打字,本月1号他每分钟打不到40个字.但他进步很快,每天都比前一天每分钟多打7个字.到本月14号练习完后他发现,自己第一次获得了\"打字小能手\"的称号.获得\"打字小能手\"称号要求每分钟可以打字130个或更多.那么,小明本月1号每分钟能打 \\(\\mathrm{cm}^2\\) 个字.",
+      "answer": "39",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 筐中有苹果和梨若干个.如果放入2个苹果,那么苹果的数量是梨的2倍;如果取走4个梨,那么苹果的数量就会是梨的3倍.那么筐中实际有 \\(\\mathrm{cm}^2\\) 个苹果.",
+      "answer_text": "18",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在泄露风险，但问题结构完整，可作为练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#1#4",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "4. 筐中有苹果和梨若干个.如果放入2个苹果,那么苹果的数量是梨的2倍;如果取走4个梨,那么苹果的数量就会是梨的3倍.那么筐中实际有 \\(\\mathrm{cm}^2\\) 个苹果.",
+      "answer": "18",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 在下面的算式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字,那么四位数\"知行合一\"是\n\n学一学 \\(^+\\) 走一走 \\(=\\) 知行合一",
+      "answer_text": "1089",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在泄露风险，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#1#5",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "5. 在下面的算式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字,那么四位数\"知行合一\"是\n\n学一学 \\(^+\\) 走一走 \\(=\\) 知行合一",
+      "answer": "1089",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 昆明机械厂某项工作需要钳工2人和车工2人共同完成.现有钳工3人,车工3人,另有1人既能当钳工也能当车工.从这7人中挑选4人完成这项工作,共有 \\(\\mathrm{cm}^2\\) 种不同的选法.",
+      "answer_text": "27",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干末尾直接给出答案，导致高泄露风险，但问题本身完整可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#1#6",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "6. 昆明机械厂某项工作需要钳工2人和车工2人共同完成.现有钳工3人,车工3人,另有1人既能当钳工也能当车工.从这7人中挑选4人完成这项工作,共有 \\(\\mathrm{cm}^2\\) 种不同的选法.",
+      "answer": "27",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. 一个不含数字0且各位数字互不相同的三位数 \\(\\overline{abc}\\) ,满足 \\(a \\mid \\overline{bc}\\) , \\(b \\mid \\overline{ac}\\) , \\(c \\mid \\overline{ab}\\) ,那么这个三位数最大是 \\(\\mathrm{cm}^2\\) .",
+      "answer_text": "742",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但答案直接附后，存在泄露风险，不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#1#7",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "7. 一个不含数字0且各位数字互不相同的三位数 \\(\\overline{abc}\\) ,满足 \\(a \\mid \\overline{bc}\\) , \\(b \\mid \\overline{ac}\\) , \\(c \\mid \\overline{ab}\\) ,那么这个三位数最大是 \\(\\mathrm{cm}^2\\) .",
+      "answer": "742",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "8. 一块边长 \\(10cm\\) 的正方形铁片在四个角上各裁掉了一个边长 \\(2cm\\) 的正方形,剩余部分要裁出一个完",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本描述一个几何问题，但内容截断，无答案或解析信息，像独立题干。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#1#8",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "8. 一块边长 \\(10cm\\) 的正方形铁片在四个角上各裁掉了一个边长 \\(2cm\\) 的正方形,剩余部分要裁出一个完",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 在空格内填入数字0、1、2、4、5、6,使得每行、每列数字均不重复.粗线框内数字从左到右或从上到下一定为1024或0512. 最右边一列从上到下前5个数字依次组成的五位数是",
+      "answer_text": "56102",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整且可独立出题，但答案直接泄露在文本中，存在高风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#2#9",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "9. 在空格内填入数字0、1、2、4、5、6,使得每行、每列数字均不重复.粗线框内数字从左到右或从上到下一定为1024或0512. 最右边一列从上到下前5个数字依次组成的五位数是",
+      "answer": "56102",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 如图,甲、乙两人分别从A、B两地出发相向而行,30分钟后在C点相遇;如果两人分别从A、B两地同时出发相向行走10分钟后,乙改为反向行走,再过1小时甲在D点追上乙;那么甲从A走到B需要 分钟.\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_002/images/2.jpg)",
+      "answer_text": "45",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案45，存在泄露风险，因此只能用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#2#10",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "10. 如图,甲、乙两人分别从A、B两地出发相向而行,30分钟后在C点相遇;如果两人分别从A、B两地同时出发相向行走10分钟后,乙改为反向行走,再过1小时甲在D点追上乙;那么甲从A走到B需要 分钟.\n\n![](ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_002/images/2.jpg)",
+      "answer": "45",
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2019,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2019数学花园探秘笔试初赛_5年级D卷（答案）.pdf",
+      "exam": {
+        "exam_key": "2019数学花园探秘笔试初赛_5年级D卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 有一个三位合数 \\(A\\) , \\(A\\) 有质数个因数.老师把组成 \\(A\\) 的三个数字以及 \\(A\\) 的因数个数分别写在4张卡片上,随机发给四个聪明且诚实的同学甲、乙、丙、丁,四人只能看到自己拿到的数.老师问:有人知道 \\(A\\) 是多少吗?甲、乙同时说:我知道.那么三位数 \\(A\\) 是",
+      "answer_text": "729",
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2019/ocr_debug/2019数学花园探秘笔试初赛_5年级D卷（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块直接包含答案，有高泄露风险，不建议用于考试，可作为练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json#2#11",
+          "json_path": "source_pdf/五年级/2019/2019数学花园探秘笔试初赛_5年级D卷（答案）.json"
+        }
+      },
+      "text": "11. 有一个三位合数 \\(A\\) , \\(A\\) 有质数个因数.老师把组成 \\(A\\) 的三个数字以及 \\(A\\) 的因数个数分别写在4张卡片上,随机发给四个聪明且诚实的同学甲、乙、丙、丁,四人只能看到自己拿到的数.老师问:有人知道 \\(A\\) 是多少吗?甲、乙同时说:我知道.那么三位数 \\(A\\) 是",
+      "answer": "729",
+      "solution": null
+    }
+  ]
+}

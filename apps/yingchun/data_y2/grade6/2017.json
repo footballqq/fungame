@@ -1,0 +1,2290 @@
+{
+  "grade": 6,
+  "year": 2017,
+  "total_problems": 58,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(\\frac{17 \\times 17 - 1}{16} - 1\\) 的计算结果是",
+      "answer_text": "17",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#1#1",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "1. 算式 \\(\\frac{17 \\times 17 - 1}{16} - 1\\) 的计算结果是",
+      "answer": "17",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 从2、0、1、7中选出两个不同数字组成一个两位数的质数,有 种组成方法.",
+      "answer_text": "2",
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案，存在答案泄露风险，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#1#2",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "2. 从2、0、1、7中选出两个不同数字组成一个两位数的质数,有 种组成方法.",
+      "answer": "2",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 在2017这个数中的某个位置加上小数点,使它变成一个大于1的小数,然后在小数部分的某些数字上添上一个或两个表示循环的圆点,这样就能得到一个循环小数.例如,我们按这个方法可以得到 \\(20.17\\) 和 \\(2.017\\) .那么,我们按这个方法一共可以得到 个不同的循环小数.",
+      "answer_text": "6",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#1#3",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "3. 在2017这个数中的某个位置加上小数点,使它变成一个大于1的小数,然后在小数部分的某些数字上添上一个或两个表示循环的圆点,这样就能得到一个循环小数.例如,我们按这个方法可以得到 \\(20.17\\) 和 \\(2.017\\) .那么,我们按这个方法一共可以得到 个不同的循环小数.",
+      "answer": "6",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 如右图,以一个面积为9的直角三角形ABC的三条边分别为直径作半圆,则图中阴影面积为 .(π取3.14)",
+      "answer_text": "9",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可出题，但文本块包含答案信息，不适合考试，建议仅用于练习。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#1#4",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "4. 如右图,以一个面积为9的直角三角形ABC的三条边分别为直径作半圆,则图中阴影面积为 .(π取3.14)",
+      "answer": "9",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 一件成本价为150元的乐高玩具由PVC(一种塑料)和ABS(一种树脂)两种材料组成,其中PVC占 \\(60\\%\\) ,由于PVC价格上涨了 \\(30\\%\\) ,ABS价格上涨了 \\(25\\%\\) ,那么该玩具的成本提高了 元.\n\n于PVC价格上涨了 \\(30\\%\\) ,ABS价格上涨了 \\(25\\%\\) ,那么该玩具的成本提高了 _元.",
+      "answer_text": "42",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#1#5",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "5. 一件成本价为150元的乐高玩具由PVC(一种塑料)和ABS(一种树脂)两种材料组成,其中PVC占 \\(60\\%\\) ,由于PVC价格上涨了 \\(30\\%\\) ,ABS价格上涨了 \\(25\\%\\) ,那么该玩具的成本提高了 元.  \n\n于PVC价格上涨了 \\(30\\%\\) ,ABS价格上涨了 \\(25\\%\\) ,那么该玩具的成本提高了 _元.",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#1#5",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "5. 一件成本价为150元的乐高玩具由PVC(一种塑料)和ABS(一种树脂)两种材料组成,其中PVC占 \\(60\\%\\) ,由于PVC价格上涨了 \\(30\\%\\) ,ABS价格上涨了 \\(25\\%\\) ,那么该玩具的成本提高了 元.\n\n于PVC价格上涨了 \\(30\\%\\) ,ABS价格上涨了 \\(25\\%\\) ,那么该玩具的成本提高了 _元.",
+      "answer": "42",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 17与某个自然数的积的末尾5位数字全是8,这个自然数最小是",
+      "answer_text": "93464",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，泄露风险高，但问题本身有效，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#1#6",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "6. 17与某个自然数的积的末尾5位数字全是8,这个自然数最小是",
+      "answer": "93464",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. 某市举办庆元旦足球表演赛,邀请A、B、C、D四只球队同时进行两场比赛(即:A对B,C对D).已知两场比赛中共进了5球,那么各只球队进球数共有 种不同的情况.",
+      "answer_text": "56",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#1#7",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "7. 某市举办庆元旦足球表演赛,邀请A、B、C、D四只球队同时进行两场比赛(即:A对B,C对D).已知两场比赛中共进了5球,那么各只球队进球数共有 种不同的情况.",
+      "answer": "56",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "8. 航天员在\"天宫二号\"中进行了很多细胞培养实验,探究宇宙射线对细胞成长的影响.实验发现A、B、C三种细胞在射线照射下会互相转化.第一次观察后发现,A细胞占 \\(40\\%\\) ,B细胞占 \\(45\\%\\) ,C细胞占 \\(15\\%\\) .而在第二次观察前,原有C细胞的 \\(\\frac{1}{3}\\) 转化成B细胞, \\(\\frac{2}{3}\\) 转化成A细胞;原有A细胞的 \\(\\frac{1}{3}\\) 转化为B细胞,其余不变;原有B细胞有1520个转化成C细",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本仅描述细胞转化实验数据，未包含具体数学问题，因此不构成可独立出题的题干。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#1#8",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "8. 航天员在\"天宫二号\"中进行了很多细胞培养实验,探究宇宙射线对细胞成长的影响.实验发现A、B、C三种细胞在射线照射下会互相转化.第一次观察后发现,A细胞占 \\(40\\%\\) ,B细胞占 \\(45\\%\\) ,C细胞占 \\(15\\%\\) .而在第二次观察前,原有C细胞的 \\(\\frac{1}{3}\\) 转化成B细胞, \\(\\frac{2}{3}\\) 转化成A细胞;原有A细胞的 \\(\\frac{1}{3}\\) 转化为B细胞,其余不变;原有B细胞有1520个转化成C细",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 某精灵部落里共有2017个精灵,他们不是老实人就是骗子,老实人总是说真话,骗子总是说谎话.有一天这些精灵排成一列各说了一句话,前2016个精灵都说:\"站在我后面的那个精灵是骗子.\"第2017个精灵说:\"我是个骗子.\"已知这一天竟然有一个老实人说了谎话.那么这2017个精灵中有 个骗子.",
+      "answer_text": "1008",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#2#9",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "9. 某精灵部落里共有2017个精灵,他们不是老实人就是骗子,老实人总是说真话,骗子总是说谎话.有一天这些精灵排成一列各说了一句话,前2016个精灵都说:\"站在我后面的那个精灵是骗子.\"第2017个精灵说:\"我是个骗子.\"已知这一天竟然有一个老实人说了谎话.那么这2017个精灵中有 个骗子.",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#2#9",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "9. 某精灵部落里共有2017个精灵,他们不是老实人就是骗子,老实人总是说真话,骗子总是说谎话.有一天这些精灵排成一列各说了一句话,前2016个精灵都说:\"站在我后面的那个精灵是骗子.\"第2017个精灵说:\"我是个骗子.\"已知这一天竟然有一个老实人说了谎话.那么这2017个精灵中有 个骗子.",
+      "answer": "1008",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 在算式 \\(A\\times B\\times C\\times D\\times E + \\overline{FG} -\\overline{HI} = 2017\\) 中,相同的字母代表相同的数字,不同的字母表示不同的数字,且满足 \\(A< B< C< D< E\\) ,那么五位数EFGHI的值是",
+      "answer_text": "85049",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#2#10",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "10. 在算式 \\(A\\times B\\times C\\times D\\times E + \\overline{FG} -\\overline{HI} = 2017\\) 中,相同的字母代表相同的数字,不同的字母表示不同的数字,且满足 \\(A< B< C< D< E\\) ,那么五位数EFGHI的值是",
+      "answer": "85049",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 1、7、13、19这4个数有一个非常特别的性质:从中任意选择2个数、3个数或者全选,所选的数的平均数仍然是整数.如果五个不同的正整数也具有类似的性质(即任意从中选择2个数、3个数、4个数或者全选,其平均数都是整数),那么这五个正整数之和至少等于",
+      "answer_text": "125",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案125，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#2#11",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "11. 1、7、13、19这4个数有一个非常特别的性质:从中任意选择2个数、3个数或者全选,所选的数的平均数仍然是整数.如果五个不同的正整数也具有类似的性质(即任意从中选择2个数、3个数、4个数或者全选,其平均数都是整数),那么这五个正整数之和至少等于",
+      "answer": "125",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "12. 甲、乙两人同时从 \\(A\\) 地出发去 \\(B\\) 地,与此同时丙从 \\(B\\) 地出发去 \\(A\\) 地.当甲、丙两人相遇时,乙走了2017米;当乙、丙相遇时,甲恰好到达 \\(B\\) 地,并立即返回;当丙到达 \\(A\\) 地时,甲、乙相遇.那么 \\(AB\\) 两地间的路程是 米.",
+      "answer_text": "10085",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整且可独立出题，但文本块中直接包含答案，存在答案泄露风险。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#2#12",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "12. 甲、乙两人同时从 \\(A\\) 地出发去 \\(B\\) 地,与此同时丙从 \\(B\\) 地出发去 \\(A\\) 地.当甲、丙两人相遇时,乙走了2017米;当乙、丙相遇时,甲恰好到达 \\(B\\) 地,并立即返回;当丙到达 \\(A\\) 地时,甲、乙相遇.那么 \\(AB\\) 两地间的路程是 米.",
+      "answer": "10085",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "13. 如右图所示,8个腰长相同的等腰三角形恰好围成一个八边形,已知八边形的8条边长分别为18、12、12、18、18、12、12和18,求图中阴影部分与空白部分的面积差是",
+      "answer_text": "180",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#2#13",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "13. 如右图所示,8个腰长相同的等腰三角形恰好围成一个八边形,已知八边形的8条边长分别为18、12、12、18、18、12、12和18,求图中阴影部分与空白部分的面积差是",
+      "answer": "180",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2017年决赛_小高年级D卷_答案.pdf",
+      "exam": {
+        "exam_key": "2017年决赛_小高年级D卷_",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "14. \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 六个国家正处于混乱的战争状态,它们之间的关系有同盟、敌对和中立三种,已知:\n\n(1) \\(A\\) 、 \\(B\\) 、 \\(C\\) 互相都是同盟关系, \\(D\\) 、 \\(E\\) 、 \\(F\\) 互相都是中立关系;\n\n(2) \\(C\\) 和其它国都不是中立关系;\n\n(3)有3个国家三种关系都有;\n\n(4) \\(A\\) 和 \\(D\\) 都只有1个敌对国, \\(C\\) 和 \\(F\\) 各有2个敌对国, \\(B\\) 和 \\(E\\) 各有3个敌对国.\n\n如果用数字1代表同盟关系,数字2代表敌对关系,数字3代表中立关系,那么 \\(A\\leftrightarrow D\\leftrightarrow C\\leftrightarrow F\\leftrightarrow E\\leftrightarrow B\\) 之间关系构成的五位数是",
+      "answer_text": "31232",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年决赛_小高年级D卷_答案/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该文本块是一个完整数学竞赛题，题干清晰但直接给出了标准答案，因此仅适用于练习。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json#2#14",
+          "json_path": "source_pdf/六年级/2017/2017年决赛_小高年级D卷_答案.json"
+        }
+      },
+      "text": "14. \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 六个国家正处于混乱的战争状态,它们之间的关系有同盟、敌对和中立三种,已知:\n\n(1) \\(A\\) 、 \\(B\\) 、 \\(C\\) 互相都是同盟关系, \\(D\\) 、 \\(E\\) 、 \\(F\\) 互相都是中立关系;\n\n(2) \\(C\\) 和其它国都不是中立关系;\n\n(3)有3个国家三种关系都有;\n\n(4) \\(A\\) 和 \\(D\\) 都只有1个敌对国, \\(C\\) 和 \\(F\\) 各有2个敌对国, \\(B\\) 和 \\(E\\) 各有3个敌对国.\n\n如果用数字1代表同盟关系,数字2代表敌对关系,数字3代表中立关系,那么 \\(A\\leftrightarrow D\\leftrightarrow C\\leftrightarrow F\\leftrightarrow E\\leftrightarrow B\\) 之间关系构成的五位数是",
+      "answer": "31232",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(\\left(\\frac{1}{36} -\\frac{1}{54} +\\frac{1}{72} -\\frac{1}{108}\\right) \\times 2016 + 12 + 3\\) 的计算结果是",
+      "answer_text": "43",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，存在泄露风险，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(\\left(\\frac{1}{36} -\\frac{1}{54} +\\frac{1}{72} -\\frac{1}{108}\\right) \\times 2016 + 12 + 3\\) 的计算结果是",
+      "answer": "43",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 相邻两个自然数,如果它们的数字和都是8的倍数,我们就称它们为\"8和数组\",那么最小的一组\"8和数组\"中两数之和是",
+      "answer_text": "159",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干和直接答案，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "2. 相邻两个自然数,如果它们的数字和都是8的倍数,我们就称它们为\"8和数组\",那么最小的一组\"8和数组\"中两数之和是",
+      "answer": "159",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 侠客岛的人,原来有 \\(\\frac{1}{3}\\) 是卧底,后来卧底中有 \\(30\\%\\) 的人被驱离出岛,而不是卧底的人有 \\(\\frac{1}{3}\\) 转变成了卧底.如果侠客岛上现在还有810人,那么现在侠客岛上有 人是卧底.(没有其他人入岛)",
+      "answer_text": "410",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干末尾直接给出了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "3. 侠客岛的人,原来有 \\(\\frac{1}{3}\\) 是卧底,后来卧底中有 \\(30\\%\\) 的人被驱离出岛,而不是卧底的人有 \\(\\frac{1}{3}\\) 转变成了卧底.如果侠客岛上现在还有810人,那么现在侠客岛上有 人是卧底.(没有其他人入岛)",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "3. 侠客岛的人,原来有 \\(\\frac{1}{3}\\) 是卧底,后来卧底中有 \\(30\\%\\) 的人被驱离出岛,而不是卧底的人有 \\(\\frac{1}{3}\\) 转变成了卧底.如果侠客岛上现在还有810人,那么现在侠客岛上有 人是卧底.(没有其他人入岛)",
+      "answer": "410",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 如图,一道除法竖式中已经填出了\"2017\",那么被除数是\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "73807",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，导致答案泄露，不适合作为考试题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "4. 如图,一道除法竖式中已经填出了\"2017\",那么被除数是\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/images/0.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "73807",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 今年\"天宫二号\"成功发射,中国科学家在太空进行植物生长实验.如果一种奇怪的植物,它的生长只和温度有关,如果某一天的温度是 \\(n\\) 摄氏度,那么该株植物在当天增重 \\(n^2\\) 克.5天过去,这株植物共增重88克.已知这5天太空舱里的温度的数值都是互不相同的非0自然数,且前3天的总增重量和后3天的总增重量都不是3的倍数,则第3天的气温是 摄氏度.",
+      "answer_text": "3",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，有高泄露风险，不适合用于考试，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "5. 今年\"天宫二号\"成功发射,中国科学家在太空进行植物生长实验.如果一种奇怪的植物,它的生长只和温度有关,如果某一天的温度是 \\(n\\) 摄氏度,那么该株植物在当天增重 \\(n^2\\) 克.5天过去,这株植物共增重88克.已知这5天太空舱里的温度的数值都是互不相同的非0自然数,且前3天的总增重量和后3天的总增重量都不是3的倍数,则第3天的气温是 摄氏度.",
+      "answer": "3",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 如图,在一直角三角形中,剪掉一个最大的半圆,使得半圆的直径在斜边 \\(AB\\) 上;已知 \\(AC\\) 长210厘米, \\(BC\\) 长280厘米,那么图中阴影部分的面积是 平方厘米. \\((\\pi\\) 取3.14)\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "6792",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整问题描述和明确答案，但无解析过程，答案直接出现在文本中。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#1#6",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "6. 如图,在一直角三角形中,剪掉一个最大的半圆,使得半圆的直径在斜边 \\(AB\\) 上;已知 \\(AC\\) 长210厘米, \\(BC\\) 长280厘米,那么图中阴影部分的面积是 平方厘米. \\((\\pi\\) 取3.14)\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "6792",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 甲、乙、丙三人同时从 \\(A\\) 出发匀速向 \\(B\\) 行走;甲到 \\(B\\) 后立即调头,与乙相遇在距离 \\(B\\) 地100米的地方;甲再行120米与丙相遇时,乙恰好到 \\(B\\) ,那么此时甲共行了 米.",
+      "answer_text": "1320",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可独立出题，但答案直接显示在文本中，导致高泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#2#7",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "7. 甲、乙、丙三人同时从 \\(A\\) 出发匀速向 \\(B\\) 行走;甲到 \\(B\\) 后立即调头,与乙相遇在距离 \\(B\\) 地100米的地方;甲再行120米与丙相遇时,乙恰好到 \\(B\\) ,那么此时甲共行了 米.",
+      "answer": "1320",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 如图,由54根直线型管道搭成的大正方体框架,一只蚂蚁要从 \\(A\\) 点处在管道内部爬过6根管道首次达到 \\(B\\) 点处,已知这只蚂蚁在爬行过程中没有走过回头路,且相连接的管道都是相通的.那么这只蚂蚁共有 种可能的爬行路线.(翻转或旋转后相同的路线视为不同的路线)\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "124",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案'124'，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#2#8",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "8. 如图,由54根直线型管道搭成的大正方体框架,一只蚂蚁要从 \\(A\\) 点处在管道内部爬过6根管道首次达到 \\(B\\) 点处,已知这只蚂蚁在爬行过程中没有走过回头路,且相连接的管道都是相通的.那么这只蚂蚁共有 种可能的爬行路线.(翻转或旋转后相同的路线视为不同的路线)\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "124",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 如图,正方形 \\(ABCD\\) 的面积为64平方厘米.图中 \\(AE = AF = BG = BH\\) .如果三角形 \\(AEF\\) 和三角形 \\(BGH\\) 的面积都是27.5平方厘米.那么,梯形 \\(GFAB\\) 的面积是 平方厘米.\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "40",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可独立出题，但直接包含答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#2#9",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "9. 如图,正方形 \\(ABCD\\) 的面积为64平方厘米.图中 \\(AE = AF = BG = BH\\) .如果三角形 \\(AEF\\) 和三角形 \\(BGH\\) 的面积都是27.5平方厘米.那么,梯形 \\(GFAB\\) 的面积是 平方厘米.\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "40",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 从1至9这9个数字中选出4个不同数字,组成一个四位数,使得这个四位数能被未选出的5个数字整除,而不能被选出的4个数字整除.那么,这个四位数是",
+      "answer_text": "5936",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目描述完整但包含标准答案，因此不适合考试使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#2#10",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "10. 从1至9这9个数字中选出4个不同数字,组成一个四位数,使得这个四位数能被未选出的5个数字整除,而不能被选出的4个数字整除.那么,这个四位数是",
+      "answer": "5936",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级A卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级A卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "A卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 在空格里填入数字1至6中的某个数字,使得每行、每列和每个 \\(2 \\times 3\\) 的宫内数字不重复.图中两格之间的分数表示两个数中较小数除以较大数得到的商.那么,最后一行从左到右前五个数组成的五位数是\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": "23514",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级A卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干描述完整数学问题，但直接包含答案，存在高泄露风险，适合仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json#2#11",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级A卷（答案）.json"
+        }
+      },
+      "text": "11. 在空格里填入数字1至6中的某个数字,使得每行、每列和每个 \\(2 \\times 3\\) 的宫内数字不重复.图中两格之间的分数表示两个数中较小数除以较大数得到的商.那么,最后一行从左到右前五个数组成的五位数是\n\n![](ocr_debug/2017年初赛_6年级A卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer": "23514",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(2009 \\times \\left(\\frac{1}{41} - \\frac{1}{49}\\right) \\times 2016\\) 的计算结果是",
+      "answer_text": "16128",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(2009 \\times \\left(\\frac{1}{41} - \\frac{1}{49}\\right) \\times 2016\\) 的计算结果是",
+      "answer": "16128",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 今年,蕾蕾的年龄比菲菲的年龄的 \\(\\frac{1}{3}\\) 多13岁;9年后,菲菲的年龄比蕾蕾的年龄的 \\(\\frac{1}{3}\\) 多15岁.那么,今年蕾蕾和菲菲的年龄之和是 岁.",
+      "answer_text": "33",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，存在答案泄露风险，适合用于练习而非考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "2. 今年,蕾蕾的年龄比菲菲的年龄的 \\(\\frac{1}{3}\\) 多13岁;9年后,菲菲的年龄比蕾蕾的年龄的 \\(\\frac{1}{3}\\) 多15岁.那么,今年蕾蕾和菲菲的年龄之和是 岁.",
+      "answer": "33",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 如图,一道乘法竖式中已经填出了2、0、1、7,那么乘积是\n\n![](ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "7344",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案'7344'，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "3. 如图,一道乘法竖式中已经填出了2、0、1、7,那么乘积是\n\n![](ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "7344",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 在埃及,透明六瓣花寓意着和平与圣洁.如图,有一个边长为20厘米的正六边形,在正六边形内部画了一个最大的圆,然后以正六边形的每个顶点为圆心,画了6个半径为10厘米的小圆,那么大圆内部与外部的阴影面积之差是 平方厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg)\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer_text": "314",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含标准答案，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "4. 在埃及,透明六瓣花寓意着和平与圣洁.如图,有一个边长为20厘米的正六边形,在正六边形内部画了一个最大的圆,然后以正六边形的每个顶点为圆心,画了6个半径为10厘米的小圆,那么大圆内部与外部的阴影面积之差是 平方厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/images/1.jpg)\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer": "314",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 每个香辣鸡排堡内夹有一片鸡排,整个汉堡的利润率为 \\(130\\%\\) ;由于鸡肉涨价,每片鸡排的成本上涨2元,于是餐厅将每个汉堡的价格调高4元,最终利润率变成了 \\(125\\%\\) ,那么现在的定价是元.",
+      "answer_text": "27",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，存在泄露风险，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "5. 每个香辣鸡排堡内夹有一片鸡排,整个汉堡的利润率为 \\(130\\%\\) ;由于鸡肉涨价,每片鸡排的成本上涨2元,于是餐厅将每个汉堡的价格调高4元,最终利润率变成了 \\(125\\%\\) ,那么现在的定价是元.",
+      "answer": "27",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 如图所示的正八边形,图中的等腰直角三角形共有 个.\n\n![](ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer_text": "56",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，泄露风险高，但问题完整可作为练习题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#1#6",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "6. 如图所示的正八边形,图中的等腰直角三角形共有 个.\n\n![](ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer": "56",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 在一条笔直的公路上有 \\(A\\) 、 \\(B\\) 两地,甲、乙、丙三人同时出发,甲、乙从 \\(A\\) 走向 \\(B\\) ,丙从 \\(B\\) 走向 \\(A\\) ;已知甲的速度是乙的 2 倍.甲丙相遇时甲走了全程的 \\(40\\%\\) ,乙与丙相遇时乙离 \\(A\\) 地 600 米,则此时甲距 \\(B\\) 地 米.",
+      "answer_text": "1200",
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了标准答案，导致答案泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#2#7",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "7. 在一条笔直的公路上有 \\(A\\) 、 \\(B\\) 两地,甲、乙、丙三人同时出发,甲、乙从 \\(A\\) 走向 \\(B\\) ,丙从 \\(B\\) 走向 \\(A\\) ;已知甲的速度是乙的 2 倍.甲丙相遇时甲走了全程的 \\(40\\%\\) ,乙与丙相遇时乙离 \\(A\\) 地 600 米,则此时甲距 \\(B\\) 地 米.",
+      "answer": "1200",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. \\(A\\) 有 24 个因数, \\(A\\) 、 \\(2A\\) 、 \\(3A\\) 、 \\(5A\\) 、 \\(7A\\) 的因数个数依次增加.那么,整数 \\(A\\) 是\n\n## 三. 填空题Ⅲ(每小题 12 分,共 48 分)",
+      "answer_text": "360",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含明确答案，存在泄露风险，仅适合用于练习而非正式考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#2#8",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "8. \\(A\\) 有 24 个因数, \\(A\\) 、 \\(2A\\) 、 \\(3A\\) 、 \\(5A\\) 、 \\(7A\\) 的因数个数依次增加.那么,整数 \\(A\\) 是\n\n## 三. 填空题Ⅲ(每小题 12 分,共 48 分)",
+      "answer": "360",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 中国象棋中的\"帅\"只能在如图的网格中从一交点横向(左或右)或纵向(上或下)沿着格线走一步到相邻的交点(不准斜着走).如右图,一开始\"帅\"在点 \\(A\\) (网格内无其它棋子),走 7 步后到中央点 \\(B\\) 的走法有 种.(中途可以经过 \\(B\\) 点)\n\n![](ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer_text": "512",
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案512，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#2#9",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "9. 中国象棋中的\"帅\"只能在如图的网格中从一交点横向(左或右)或纵向(上或下)沿着格线走一步到相邻的交点(不准斜着走).如右图,一开始\"帅\"在点 \\(A\\) (网格内无其它棋子),走 7 步后到中央点 \\(B\\) 的走法有 种.(中途可以经过 \\(B\\) 点)\n\n![](ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_002/images/0.jpg)",
+      "answer": "512",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 有两个体积比为 5:6 的圆柱,它们的侧面展开图是两个相同的长方形,且这两个长方形的长宽都是整数.经计算,若在展开的长方形的四个角上剪去边长相等且为整数的正方形,然后折成一个没有盖的长方体,所得的长方体的体积最大为 324 立方厘米.那么这两个圆柱体中体积较大的体积是 立方厘米.( \\(\\pi\\) 取 3)",
+      "answer_text": "405",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是完整的数学题干，但答案已直接给出，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#2#10",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "10. 有两个体积比为 5:6 的圆柱,它们的侧面展开图是两个相同的长方形,且这两个长方形的长宽都是整数.经计算,若在展开的长方形的四个角上剪去边长相等且为整数的正方形,然后折成一个没有盖的长方体,所得的长方体的体积最大为 324 立方厘米.那么这两个圆柱体中体积较大的体积是 立方厘米.( \\(\\pi\\) 取 3)",
+      "answer": "405",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级B卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级B卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "B卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 在空格里填入 1 至 6 中的某个数字,使得每行、每列数字不重复,且每个粗线框内都是连续的数字.那么,最后一行从左到右前五个数组成的五位数是\n\n<table><tr><td>4</td><td></td><td>3</td><td></td><td>6</td><td></td></tr><tr><td></td><td></td><td>5</td><td>4</td><td></td><td></td></tr><tr><td></td><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td>5</td></tr><tr><td>1</td><td></td><td>2</td><td></td><td>4</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>6</td></tr></table>",
+      "answer_text": "34125",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级B卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级B卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目描述完整但直接包含答案，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json#2#11",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级B卷（答案）.json"
+        }
+      },
+      "text": "11. 在空格里填入 1 至 6 中的某个数字,使得每行、每列数字不重复,且每个粗线框内都是连续的数字.那么,最后一行从左到右前五个数组成的五位数是\n\n<table><tr><td>4</td><td></td><td>3</td><td></td><td>6</td><td></td></tr><tr><td></td><td></td><td>5</td><td>4</td><td></td><td></td></tr><tr><td></td><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td>5</td></tr><tr><td>1</td><td></td><td>2</td><td></td><td>4</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>6</td></tr></table>",
+      "answer": "34125",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(\\frac{1}{4} \\times \\left[\\frac{1}{3} \\times \\left(\\frac{2017 + 1 + 1}{3} + 2\\right) + 3\\right]\\) 的计算结果是",
+      "answer_text": "57",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干清晰但包含标准答案，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(\\frac{1}{4} \\times \\left[\\frac{1}{3} \\times \\left(\\frac{2017 + 1 + 1}{3} + 2\\right) + 3\\right]\\) 的计算结果是",
+      "answer": "57",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 太极图意义深远,其内涵包含了古代哲学,体现出阴阳概念,具有对称之美.已知图中的太极大圆半径是10厘米,那么阴影部分的面积是平方厘米. \\((\\pi\\) 取3.14)\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "157",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干以数字开头并明确提问阴影部分面积，但阴影部分依赖图片定义，文本中未完整描述。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）.json#1#2",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）.json"
+        }
+      },
+      "text": "2. 太极图意义深远,其内涵包含了古代哲学,体现出阴阳概念,具有对称之美.已知图中的太极大圆半径是10厘米,那么阴影部分的面积是平方厘米. \\((\\pi\\) 取3.14)\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "157",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 已知质数 \\(a\\) 、 \\(b\\) 、 \\(c\\) 满足: \\(a + b + c = 38\\) .那么 \\(a \\times b \\times c\\) 的最大值为",
+      "answer_text": "646",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了标准答案，因此不适合用于正式考试，仅适用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "3. 已知质数 \\(a\\) 、 \\(b\\) 、 \\(c\\) 满足: \\(a + b + c = 38\\) .那么 \\(a \\times b \\times c\\) 的最大值为",
+      "answer": "646",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 某款手机充电5分钟,能够通话2小时,或者玩游戏1.5小时.某人将一部完全没电的手机充电4分钟,之后打了20分钟的电话.那么这部手机还能玩 分钟的游戏.\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer_text": "57",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，泄露风险高，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "4. 某款手机充电5分钟,能够通话2小时,或者玩游戏1.5小时.某人将一部完全没电的手机充电4分钟,之后打了20分钟的电话.那么这部手机还能玩 分钟的游戏.\n\n## 二.填空题II(每小题10分,共40分)",
+      "answer": "57",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 某个实心长方体是由若干个棱长为1厘米的正方体堆叠而成,将其按如图方式放置墙角(图只示意堆放方式,并不代表实际情况),刚好有40个小正方体看不见,那么原长方体的表面积最小是 平方厘米.\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "126",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是完整的数学问题，但答案直接附在文本块中，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "5. 某个实心长方体是由若干个棱长为1厘米的正方体堆叠而成,将其按如图方式放置墙角(图只示意堆放方式,并不代表实际情况),刚好有40个小正方体看不见,那么原长方体的表面积最小是 平方厘米.\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "126",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 如图所示,有一个五边形 \\(ABCDE\\) ,其中 \\(M\\) 、 \\(N\\) 、 \\(P\\) 分别为边 \\(AE\\) 、 \\(BC\\) 、 \\(DE\\) 的中点,每块图形中的数表示该块图形的面积(单位:平方厘米),则图中阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer_text": "31",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案，存在答案泄露风险，不适合用于考试，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#1#6",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "6. 如图所示,有一个五边形 \\(ABCDE\\) ,其中 \\(M\\) 、 \\(N\\) 、 \\(P\\) 分别为边 \\(AE\\) 、 \\(BC\\) 、 \\(DE\\) 的中点,每块图形中的数表示该块图形的面积(单位:平方厘米),则图中阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_001/images/2.jpg)",
+      "answer": "31",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 今年\"天宫二号\"成功发射,中国科学家在太空进行植物生长实验.如果一种奇怪的植物,它的生长只和温度有关.如果某一天的温度是 \\(n\\) 摄氏度,那么该株植物在当天增重 \\(n^{2}\\) 克.5天过完,这株植物共增重88克.已知这5天里,每天太空舱里的温度数值都是大于0的自然数且依次递增,则第4天的气温是 摄氏度.",
+      "answer_text": "5",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整可出题，但答案直接附在题后，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#2#7",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "7. 今年\"天宫二号\"成功发射,中国科学家在太空进行植物生长实验.如果一种奇怪的植物,它的生长只和温度有关.如果某一天的温度是 \\(n\\) 摄氏度,那么该株植物在当天增重 \\(n^{2}\\) 克.5天过完,这株植物共增重88克.已知这5天里,每天太空舱里的温度数值都是大于0的自然数且依次递增,则第4天的气温是 摄氏度.",
+      "answer": "5",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 将右图中的乘法竖式补充完整后,两个乘数的差(大减小)是\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer_text": "4286",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案【答案】4286，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#2#8",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "8. 将右图中的乘法竖式补充完整后,两个乘数的差(大减小)是\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题Ⅲ(每小题12分,共48分)",
+      "answer": "4286",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 甲乙两人同时从 \\(A\\) 地出发去 \\(B\\) 地,乙的速度比甲的速度快 \\(50\\%\\) .在距离 \\(B\\) 地6千米处有个淘气的小精灵,他会把每次经过的人的速度变为原来的一半.当甲到精灵处时,刚好与第一次从 \\(B\\) 地返回的乙相遇.那么当乙第一次回到 \\(A\\) 地时,甲距离 \\(A\\) 地 千米.",
+      "answer_text": "22",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案信息，存在高泄漏风险，不适合作为考试题目。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#2#9",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "9. 甲乙两人同时从 \\(A\\) 地出发去 \\(B\\) 地,乙的速度比甲的速度快 \\(50\\%\\) .在距离 \\(B\\) 地6千米处有个淘气的小精灵,他会把每次经过的人的速度变为原来的一半.当甲到精灵处时,刚好与第一次从 \\(B\\) 地返回的乙相遇.那么当乙第一次回到 \\(A\\) 地时,甲距离 \\(A\\) 地 千米.",
+        "review_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#2#9",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "9. 甲乙两人同时从 \\(A\\) 地出发去 \\(B\\) 地,乙的速度比甲的速度快 \\(50\\%\\) .在距离 \\(B\\) 地6千米处有个淘气的小精灵,他会把每次经过的人的速度变为原来的一半.当甲到精灵处时,刚好与第一次从 \\(B\\) 地返回的乙相遇.那么当乙第一次回到 \\(A\\) 地时,甲距离 \\(A\\) 地 千米.",
+      "answer": "22",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 如图,有一个 \\(4 \\times 4\\) 的方格网络,每个方格都是边长为1分米的正方形,一只蚂蚁在点 \\(A\\) 处,试图沿着方格网络爬遍所有的线(可重复)然后回到点 \\(A\\) ,那么这只蚂蚁至少要爬 分米.\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "48",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含明确答案【答案】48，因此有答案泄露风险，但题目可独立出题用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#2#10",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "10. 如图,有一个 \\(4 \\times 4\\) 的方格网络,每个方格都是边长为1分米的正方形,一只蚂蚁在点 \\(A\\) 处,试图沿着方格网络爬遍所有的线(可重复)然后回到点 \\(A\\) ,那么这只蚂蚁至少要爬 分米.\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "48",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级C卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "C卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 如图,由54根直线型管道搭成的大正方体框架,一只蚂蚁要从 \\(A\\) 点处在管道内部爬过6根管道首次达到 \\(B\\) 点处,已知这只蚂蚁在爬行过程中没有重复爬同一根管道,且相连接的管道都是相通的.那么这只蚂蚁有 种可能的爬行路线.(翻转或旋转后相同的路线视为不同的路线)\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": "124",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级C卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出了答案，存在答案泄露风险，因此建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json#2#11",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级C卷（答案）.json"
+        }
+      },
+      "text": "11. 如图,由54根直线型管道搭成的大正方体框架,一只蚂蚁要从 \\(A\\) 点处在管道内部爬过6根管道首次达到 \\(B\\) 点处,已知这只蚂蚁在爬行过程中没有重复爬同一根管道,且相连接的管道都是相通的.那么这只蚂蚁有 种可能的爬行路线.(翻转或旋转后相同的路线视为不同的路线)\n\n![](ocr_debug/2017年初赛_6年级C卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer": "124",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(5 \\times \\left(\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\frac{1}{4 \\times 5}\\right)\\) 的计算结果是",
+      "answer_text": "4",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案信息，存在高泄漏风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json#1#1",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(5 \\times \\left(\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\frac{1}{4 \\times 5}\\right)\\) 的计算结果是",
+      "answer": "4",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 如图, \\(O\\) 是大半圆的圆心,且大半圆的半径为20厘米.那么图中阴影部分面积为 平方厘米. \\((\\pi\\) 取3.14)\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "471",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含标准答案，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json#1#2",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "2. 如图, \\(O\\) 是大半圆的圆心,且大半圆的半径为20厘米.那么图中阴影部分面积为 平方厘米. \\((\\pi\\) 取3.14)\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "471",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 某个长方体的棱长都为质数,且其12条棱长总和为56.那么这个长方体的体积为",
+      "answer_text": "70",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是一个有效的数学问题，但直接附带了答案，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json#1#3",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "3. 某个长方体的棱长都为质数,且其12条棱长总和为56.那么这个长方体的体积为",
+      "answer": "70",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 如图,墙角的积木堆了6层,现在将露在外面的部分都染成绿色,那么最后完全没有被染上颜色的积木有 块.\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/images/1.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "35",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接给出了答案，存在答案泄露风险，不适合用于考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json#1#4",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "4. 如图,墙角的积木堆了6层,现在将露在外面的部分都染成绿色,那么最后完全没有被染上颜色的积木有 块.\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/images/1.jpg)\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "35",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 体育用品商店以每个50元的价格购进一批篮球,并以每个80元的价格售出.当售出总个数的 \\(75\\%\\) 时,发现除收回全部的成本外,还盈利480元.那么这批篮球共 个.",
+      "answer_text": "48",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可独立出题，但文本块直接包含答案，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json#1#5",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "5. 体育用品商店以每个50元的价格购进一批篮球,并以每个80元的价格售出.当售出总个数的 \\(75\\%\\) 时,发现除收回全部的成本外,还盈利480元.那么这批篮球共 个.",
+      "answer": "48",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 在所有的四位回文数(类似于abba的形式,其中 \\(a, b\\) 可以相同,也可以不同.如:1331,6666,4004)中,有 个能被7整除.",
+      "answer_text": "18",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json#1#6",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "6. 在所有的四位回文数(类似于abba的形式,其中 \\(a, b\\) 可以相同,也可以不同.如:1331,6666,4004)中,有 个能被7整除.",
+      "answer": "18",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "7. 甲乙两人同时从 \\(A\\) 地出发去 \\(B\\) 地,乙的速度比甲的速度快 \\(50\\%\\) .在距离 \\(B\\) 地30千米处有个淘气的小精灵,他会把过往的人的速度变为原来的一半.当甲到达精灵处时,乙刚好到达 \\(B\\) 地.那么 \\(AB\\) 之间的距离是 千米.",
+      "answer_text": "150",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为完整的数学题干，描述清晰，未出现答案或解析，适合独立出题用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）.json#2#7",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）.json"
+        }
+      },
+      "text": "7. 甲乙两人同时从 \\(A\\) 地出发去 \\(B\\) 地,乙的速度比甲的速度快 \\(50\\%\\) .在距离 \\(B\\) 地30千米处有个淘气的小精灵,他会把过往的人的速度变为原来的一半.当甲到达精灵处时,乙刚好到达 \\(B\\) 地.那么 \\(AB\\) 之间的距离是 千米.",
+      "answer": "150",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 如图所示,有一个五边形 \\(ABCDE\\) ,其中 \\(M\\) 、 \\(N\\) 、 \\(P\\) 分别为边 \\(AE\\) 、 \\(BC\\) 、 \\(DE\\) 的中点,每块图形中的数表示该块图形的面积(单位:平方厘米),则图中阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer_text": "31",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）.json#2#8",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）.json"
+        }
+      },
+      "text": "8. 如图所示,有一个五边形 \\(ABCDE\\) ,其中 \\(M\\) 、 \\(N\\) 、 \\(P\\) 分别为边 \\(AE\\) 、 \\(BC\\) 、 \\(DE\\) 的中点,每块图形中的数表示该块图形的面积(单位:平方厘米),则图中阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题III(每小题12分,共48分)",
+      "answer": "31",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 将右图中的乘法竖式补充完整后,两个乘数的差(大减小)是",
+      "answer_text": "4286",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（答案）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（答案）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（答案）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是数学题，但答案直接附在文本中，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json#2#9",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "9. 将右图中的乘法竖式补充完整后,两个乘数的差(大减小)是",
+      "answer": "4286",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 如图,有一个 \\(3 \\times 3\\) 的方格网络,每个方格都是边长为1分米的正方形,一只蚂蚁在点 \\(A\\) 处,试图沿着方格网络爬遍所有的线(可重复)然后回到点 \\(A\\) ,那么这只蚂蚁至少要爬 分米.\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "28",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是完整的竞赛题干，但直接给出了答案，导致高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json#2#10",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "10. 如图,有一个 \\(3 \\times 3\\) 的方格网络,每个方格都是边长为1分米的正方形,一只蚂蚁在点 \\(A\\) 处,试图沿着方格网络爬遍所有的线(可重复)然后回到点 \\(A\\) ,那么这只蚂蚁至少要爬 分米.\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "28",
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2017,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2017年初赛_6年级D卷（试卷版）.pdf",
+      "exam": {
+        "exam_key": "2017年初赛_6年级D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": "D卷",
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 下图是由33根直线型管道搭成的大长方体框架,且相连接的管道相通.一只蚂蚁要从 \\(A\\) 点处在管道内部爬过6根管道首次达到 \\(B\\) 点处,且在爬行的过程中没有重复爬同一根管道.那么这只蚂蚁一共有 种可能的爬行路线.(翻转或旋转后相同的路线视为不同的路线)\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": "64",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2017/2017年初赛_6年级D卷（试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2017/ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接包含答案，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json#2#11",
+          "json_path": "source_pdf/六年级/2017/2017年初赛_6年级D卷（答案）.json"
+        }
+      },
+      "text": "11. 下图是由33根直线型管道搭成的大长方体框架,且相连接的管道相通.一只蚂蚁要从 \\(A\\) 点处在管道内部爬过6根管道首次达到 \\(B\\) 点处,且在爬行的过程中没有重复爬同一根管道.那么这只蚂蚁一共有 种可能的爬行路线.(翻转或旋转后相同的路线视为不同的路线)\n\n![](ocr_debug/2017年初赛_6年级D卷（试卷版）/pages/page_002/images/2.jpg)",
+      "answer": "64",
+      "solution": null
+    }
+  ]
+}

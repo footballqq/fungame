@@ -1,0 +1,439 @@
+{
+  "grade": 3,
+  "year": 2025,
+  "total_problems": 11,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式： \\((20 + 2)\\times 5 + 2025\\) 的值是",
+      "answer_text": "2135",
+      "solution_text": "原式 \\(= 22 \\times 5 + 2025 = 2135\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（解析版）.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式： \\((20 + 2)\\times 5 + 2025\\) 的值是",
+      "answer": "2135",
+      "solution": "原式 \\(= 22 \\times 5 + 2025 = 2135\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 小迎、小春、小杯三人分享141颗巧克力．已知小杯分到的巧克力比小迎和小春分到的巧克力之和的两倍多6颗，小迎分到的巧克力比小春分到的巧克力的三倍少3颗．那么小迎分到 颗巧克力.",
+      "answer_text": "33",
+      "solution_text": "假设小春分到1份巧克力,那么小迎分到3份少3颗巧克力,小迎和小春一共分到4份少3颗巧克力,他们的两倍是8份少6颗,小杯分到的数量是小迎和小春的两倍多6颗,所以小杯分到8份。三个人总共分到了12份少3颗,而3人一共分到141颗巧克力,所以一份巧克力是 \\((141 + 3) \\div 12 = 12\\) 颗。小迎是3份少3颗,所以小迎分到 \\(3 \\times 12 - 3 = 33\\) 颗巧克力。",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可出题，但直接附带了答案和解析，存在高泄露风险，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（解析版）.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "2. 小迎、小春、小杯三人分享141颗巧克力．已知小杯分到的巧克力比小迎和小春分到的巧克力之和的两倍多6颗，小迎分到的巧克力比小春分到的巧克力的三倍少3颗．那么小迎分到 颗巧克力.",
+      "answer": "33",
+      "solution": "假设小春分到1份巧克力,那么小迎分到3份少3颗巧克力,小迎和小春一共分到4份少3颗巧克力,他们的两倍是8份少6颗,小杯分到的数量是小迎和小春的两倍多6颗,所以小杯分到8份。三个人总共分到了12份少3颗,而3人一共分到141颗巧克力,所以一份巧克力是 \\((141 + 3) \\div 12 = 12\\) 颗。小迎是3份少3颗,所以小迎分到 \\(3 \\times 12 - 3 = 33\\) 颗巧克力。"
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 右侧竖式中，相同汉字表示相同数字，不同汉字表示不同数字，且所有汉字对应的数字都不是0，2，5．“空歌风度清”表示的五位数是\n\n轻20风 风轻25 空歌风度清",
+      "answer_text": "16934",
+      "solution_text": "高位分析\"空\"为1,末位分析\"度\"为3且\"风\">5,\"轻\" \\(+2 =\\) \"风\",若\"轻\"\"风\"为6和8,那么\"清\"为3重复,所以\"轻\" \\(= 7\\) ,\"风\" \\(= 9\\) 。",
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但包含答案和解析，已泄露，不适合考试，可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（解析版）.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "3. 右侧竖式中，相同汉字表示相同数字，不同汉字表示不同数字，且所有汉字对应的数字都不是0，2，5．“空歌风度清”表示的五位数是\n\n轻20风 风轻25 空歌风度清",
+      "answer": "16934",
+      "solution": "高位分析\"空\"为1,末位分析\"度\"为3且\"风\">5,\"轻\" \\(+2 =\\) \"风\",若\"轻\"\"风\"为6和8,那么\"清\"为3重复,所以\"轻\" \\(= 7\\) ,\"风\" \\(= 9\\) 。"
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 一个由非零自然数组成的四位数A，数字和是其千位数字的两倍．去掉A的个位数字得到三位数B，去掉B的个位数字得到两位数C，去掉C的个位数字得到一位数D．若A、B、C、D依次为9、7、5、3的倍数，那么四位数A的值是\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer_text": "9522",
+      "solution_text": "四位数abcd,依题意得9abcd,7|abc,5|ab,3|a,因为a,b,c,d均为非零数字,所以b只能为5;又因为 \\(a = b + c + d\\) ,所以 \\(a\\) 只能为9;7|95, \\(\\square = 2\\) 或9, \\(c\\) 只有2符合,此时 \\(d = 9 - 5 - 2 = 2\\) ,所以abcd \\(= 9522\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干描述完整但文本块包含答案和解析，有直接泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（解析版）.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（解析版）.json"
+        }
+      },
+      "text": "4. 一个由非零自然数组成的四位数A，数字和是其千位数字的两倍．去掉A的个位数字得到三位数B，去掉B的个位数字得到两位数C，去掉C的个位数字得到一位数D．若A、B、C、D依次为9、7、5、3的倍数，那么四位数A的值是\n\n## 二. 填空题II（每小题10分，共40分）",
+      "answer": "9522",
+      "solution": "四位数abcd,依题意得9abcd,7|abc,5|ab,3|a,因为a,b,c,d均为非零数字,所以b只能为5;又因为 \\(a = b + c + d\\) ,所以 \\(a\\) 只能为9;7|95, \\(\\square = 2\\) 或9, \\(c\\) 只有2符合,此时 \\(d = 9 - 5 - 2 = 2\\) ,所以abcd \\(= 9522\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 如图所示，墙上挂着6件礼物，分成两列，每列必须从下往上依次取走．现在有6位同学，身高分别为100、120、140、160、180、200厘米．每人只能拿到最多比自己身高高100厘米处的礼物．现在6位同学排成一列拿取礼物．为了让每人都能拿到一件礼物，有 种符合要求的排队方式.\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "40",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学问题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json#1#5",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "5. 如图所示，墙上挂着6件礼物，分成两列，每列必须从下往上依次取走．现在有6位同学，身高分别为100、120、140、160、180、200厘米．每人只能拿到最多比自己身高高100厘米处的礼物．现在6位同学排成一列拿取礼物．为了让每人都能拿到一件礼物，有 种符合要求的排队方式.\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "40",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 方格表外的数字表示这一行或列的连续涂色方块数量，有两个数字时，中间需要至少一个不涂色的方格分隔它们，如某行外有数字“22”，则这一行的涂色情况只能是 ，而不能是 ；且涂色的顺序需遵循数字出现顺序，如某行外有数字“12”，则需要先涂1格，再涂2格，可以是 或 等，而不能是 .请按照这个规则涂以下方格表．第三行从左往右的格子分别编号1\\~5，涂色的两个格子编号之和是\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "7",
+      "solution_text": "分析第1列，涂色的2格可以是1、2行或2、3行，即第二行必涂色，同理分析第4列、第5列可推出第二行所有格子染色情况为“√××√”。分析第4行，涂色的三格可以是123或234或345，即第4行第3列的格子必涂色，而第3列只有1格涂色，即可推出第3列所有格子涂色情况为“×××√×”。分析第2列，涂色2格可以是3、4行或4、5行，即第2列涂色情况为“××？√？”（？为不确定），第4行涂色情况为“？√√？×”，可确定第5列涂色情况为“？√？×√”，第5行为“？？××√”，第4列为“√√×√×”，第1行为“√××√×”，第1列为“√√××√”，第3行为“××√××√”， \\(2 + 5 = 7\\)",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题干，描述了涂色规则并提问，但未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json#1#6",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "6. 方格表外的数字表示这一行或列的连续涂色方块数量，有两个数字时，中间需要至少一个不涂色的方格分隔它们，如某行外有数字“22”，则这一行的涂色情况只能是 ，而不能是 ；且涂色的顺序需遵循数字出现顺序，如某行外有数字“12”，则需要先涂1格，再涂2格，可以是 或 等，而不能是 .请按照这个规则涂以下方格表．第三行从左往右的格子分别编号1\\~5，涂色的两个格子编号之和是\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "7",
+      "solution": "分析第1列，涂色的2格可以是1、2行或2、3行，即第二行必涂色，同理分析第4列、第5列可推出第二行所有格子染色情况为“√××√”。分析第4行，涂色的三格可以是123或234或345，即第4行第3列的格子必涂色，而第3列只有1格涂色，即可推出第3列所有格子涂色情况为“×××√×”。分析第2列，涂色2格可以是3、4行或4、5行，即第2列涂色情况为“××？√？”（？为不确定），第4行涂色情况为“？√√？×”，可确定第5列涂色情况为“？√？×√”，第5行为“？？××√”，第4列为“√√×√×”，第1行为“√××√×”，第1列为“√√××√”，第3行为“××√××√”， \\(2 + 5 = 7\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. 在长方形ABCD中，P、Q分别是AD、BC的中点，EM//NF//AD， \\(AE = CF = 6\\) ，阴影部分面积为51，那么AD的长度为\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/images/2.jpg)",
+      "answer_text": "17",
+      "solution_text": "连接 \\(EY\\) 和 \\(XN\\) ,因为 \\(PX = YQ\\) ,所以 \\(PY = XQ\\) 因此 \\(2S_{\\triangle PNY} = 2S_{\\triangle QNX} = 2S_{\\triangle EYQ} = S_{\\triangle EPX}\\) ,所以 \\(S_{\\triangle EPX} = S_{\\triangle PX} = 51\\) ,因此 \\(AD = 51\\div 6\\times 2 = 17\\)\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_003/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，包含已知条件和求解目标，未出现答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json#1#7",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "7. 在长方形ABCD中，P、Q分别是AD、BC的中点，EM//NF//AD， \\(AE = CF = 6\\) ，阴影部分面积为51，那么AD的长度为\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_001/images/2.jpg)",
+      "answer": "17",
+      "solution": "连接 \\(EY\\) 和 \\(XN\\) ,因为 \\(PX = YQ\\) ,所以 \\(PY = XQ\\) 因此 \\(2S_{\\triangle PNY} = 2S_{\\triangle QNX} = 2S_{\\triangle EYQ} = S_{\\triangle EPX}\\) ,所以 \\(S_{\\triangle EPX} = S_{\\triangle PX} = 51\\) ,因此 \\(AD = 51\\div 6\\times 2 = 17\\)\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_003/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 100名同学从南到北排成一列纵队,开始时所有人都面向南方.老师发出第一声口令\"向右转\",一些同学听成了\"向后转\",于是连续向右转了2次,其他同学都正确执行了指令.接着,老师又发出第二声口令\"向后转\",一些同学听成了\"向右转\",其他同学都正确执行了指令(即连续向右转2次).已知所有同学一共向右转了310次,第一次执行错误的同学比第二次执行正确的同学少8名,两次全部执行正确的同学比两次全部执行错误的同学多一半.那么两声口令执行完毕后,最多有________对同学面对面(2位相邻同学面对面称为1对).\n\n## 三. 填空题Ⅲ(每小题第1空5分,第2空11分,共48分)",
+      "answer_text": "25",
+      "solution_text": "除去第一次执行错误且第二次执行正确的同学,可知两次执行正确的同学比两次执行错误的同学多8人,因此两次执行错误的同学有 \\(8\\times 2 = 16\\) 人,两次执行正确的同学有 \\(16 + 8 = 24\\) 人.两次执行错误和两次执行正确的人每人转2次,因此转4次人比转2次的人多 \\(300 - 100\\times 3 = 10\\) 人.所以剩下 \\(100 - 16 - 24 = 60\\) 人中,有 \\((60 + 10)\\div 2 = 35\\) 人转了4次,有 \\(60 - 35 = 25\\) 人转了2次,最多有25对同学面对面.\n\n## 三. 填空题III(每小题12分,共48分)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学问题，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json#2#8",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "8. 100名同学从南到北排成一列纵队,开始时所有人都面向南方.老师发出第一声口令\"向右转\",一些同学听成了\"向后转\",于是连续向右转了2次,其他同学都正确执行了指令.接着,老师又发出第二声口令\"向后转\",一些同学听成了\"向右转\",其他同学都正确执行了指令(即连续向右转2次).已知所有同学一共向右转了310次,第一次执行错误的同学比第二次执行正确的同学少8名,两次全部执行正确的同学比两次全部执行错误的同学多一半.那么两声口令执行完毕后,最多有________对同学面对面(2位相邻同学面对面称为1对).\n\n## 三. 填空题Ⅲ(每小题第1空5分,第2空11分,共48分)",
+      "answer": "25",
+      "solution": "除去第一次执行错误且第二次执行正确的同学,可知两次执行正确的同学比两次执行错误的同学多8人,因此两次执行错误的同学有 \\(8\\times 2 = 16\\) 人,两次执行正确的同学有 \\(16 + 8 = 24\\) 人.两次执行错误和两次执行正确的人每人转2次,因此转4次人比转2次的人多 \\(300 - 100\\times 3 = 10\\) 人.所以剩下 \\(100 - 16 - 24 = 60\\) 人中,有 \\((60 + 10)\\div 2 = 35\\) 人转了4次,有 \\(60 - 35 = 25\\) 人转了2次,最多有25对同学面对面.\n\n## 三. 填空题III(每小题12分,共48分)"
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 有一种黑白迭代游戏,点击一个小六边形,会与相邻的小六边形一起变色(由黑变白,由白变黑).\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/0.jpg)\n\n如果要将图1变成图2形状,至少需要点击次.\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/1.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/2.jpg)\n\n<center>图2</center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学竞赛题干，没有包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json#2#9",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "9. 有一种黑白迭代游戏,点击一个小六边形,会与相邻的小六边形一起变色(由黑变白,由白变黑).\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/0.jpg)\n\n如果要将图1变成图2形状,至少需要点击次.\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/1.jpg)\n\n<center>图1</center>\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/2.jpg)\n\n<center>图2</center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 由12个相同的小正方体无盖盒子如图摆放,每个盒子内放入若干个相同的球,其球数恰好等于它相邻的盒子中无球的盒子的个数,那么满足要求的放球方式有________种.(两个盒子有公共顶点、公共边或公共面均视为相邻)\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/3.jpg)",
+      "answer_text": "22",
+      "solution_text": "问题转化为一个 \\(3\\times 4\\) 的棋盘填数,每个格子填入的数字为与其相邻的格子中填0的个数,依题意,0与0不能相邻,且0确定填法其他格子即可唯一确定数值。设第二行中间两个位置 \\(AB\\)\n\n<table><tr><td></td><td>A</td><td>B</td></tr><tr><td></td><td></td><td></td></tr></table>\n\n(1)若A或B为0,根据对称性不妨假设A为0,那么与A相邻的8个格子均不为0,那么C、D、E三个格子0的情况只能是D为0或C和E同时为0两种情况,所以共有 \\(2\\times 2 = 4\\) 种。\n\n<table><tr><td></td><td></td><td>C</td></tr><tr><td></td><td>A</td><td>B</td></tr><tr><td></td><td></td><td>E</td></tr></table>\n\n(2)若 \\(AB\\) 均不为0时,将棋盘分成左右两个部分,则每部分最多2个0,最少1个0。按照0的总数来分类:\n\n若有2个0:左右各1个0,则都只能在第二行,有1种;\n\n若有3个0:左右有一侧有2个0,则不能在第二行,另一侧只能在第二行,有 \\(2\\times 2\\times 2\\) \\(= 8\\) 种;\n\n若有4个0:左右侧各有2个0,则都不能在第二行,第一行的两个0有 \\(2\\times 2 - 1 = 3\\) 种方法,第三行的两个0也有3种放法,共有 \\(3\\times 3 = 9\\) 种;\n\n共有 \\(1 + 8 + 9 = 18\\) 种不同放法。\n\n综上,一共 \\(4 + 18 = 22\\) 种放法。",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学竞赛题干，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json#2#10",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "10. 由12个相同的小正方体无盖盒子如图摆放,每个盒子内放入若干个相同的球,其球数恰好等于它相邻的盒子中无球的盒子的个数,那么满足要求的放球方式有________种.(两个盒子有公共顶点、公共边或公共面均视为相邻)\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/3.jpg)",
+      "answer": "22",
+      "solution": "问题转化为一个 \\(3\\times 4\\) 的棋盘填数,每个格子填入的数字为与其相邻的格子中填0的个数,依题意,0与0不能相邻,且0确定填法其他格子即可唯一确定数值。设第二行中间两个位置 \\(AB\\)\n\n<table><tr><td></td><td>A</td><td>B</td></tr><tr><td></td><td></td><td></td></tr></table>\n\n(1)若A或B为0,根据对称性不妨假设A为0,那么与A相邻的8个格子均不为0,那么C、D、E三个格子0的情况只能是D为0或C和E同时为0两种情况,所以共有 \\(2\\times 2 = 4\\) 种。\n\n<table><tr><td></td><td></td><td>C</td></tr><tr><td></td><td>A</td><td>B</td></tr><tr><td></td><td></td><td>E</td></tr></table>\n\n(2)若 \\(AB\\) 均不为0时,将棋盘分成左右两个部分,则每部分最多2个0,最少1个0。按照0的总数来分类:\n\n若有2个0:左右各1个0,则都只能在第二行,有1种;\n\n若有3个0:左右有一侧有2个0,则不能在第二行,另一侧只能在第二行,有 \\(2\\times 2\\times 2\\) \\(= 8\\) 种;\n\n若有4个0:左右侧各有2个0,则都不能在第二行,第一行的两个0有 \\(2\\times 2 - 1 = 3\\) 种方法,第三行的两个0也有3种放法,共有 \\(3\\times 3 = 9\\) 种;\n\n共有 \\(1 + 8 + 9 = 18\\) 种不同放法。\n\n综上,一共 \\(4 + 18 = 22\\) 种放法。"
+    },
+    {
+      "grade": 3,
+      "year": 2025,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2025数学花园探秘笔试小中年级决赛C卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "C卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 如图, \\(2 \\times 3\\) 的棋盘上由6个单位正方形构成.棋盘上共有12个格点,甲、乙、丙、丁四人站在其中四个格点上,若任意两人处于同一横线或竖线则认为\n\n可相互看见.\n\n甲说:\"我可以看见你们所有人.\"\n\n乙说:\"我一个人也看不到.\"\n\n丙说:\"我只能看到一个人.\"\n\n丁说:\"我们四人所在格点连成四边形面积为3,且任意3人所在格\n\n点组成的三角形面积都不为整数.\"\n\n已知四人中看见人数最多(其他人看见的人数都比他看见的少)的那个人说了假话,其他人都说了真话,那么这4人有________种不同的站法.\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/4.jpg)",
+      "answer_text": "8",
+      "solution_text": "由于四人中看见人数最多的那个人说了假话结合甲说的话可知甲说了假话, 所以甲看见 2 人, 因为其他人看见的人都没有他看见的人多, 所以不存在 3 人同一横线或竖线。因此甲与其看见的 2 人 (丙和丁) 组成一个直角三角形 (甲所在的点为直角点), 且乙与甲、丙、丁不同横线竖线, 根据丁所说任意 3 人所在格点组成的三角形面积都不为整数, 可知两条直角边只能为 1 和 1 或者 1 和 3。\n\n若为 1 和 1, 围城四边形面积最大为 2.5。为 1 和 3 时, 当为图 (1) 形式时, 无法构造选择合适的乙使得四边形面积为 3, 若为图 (2) 形式时, 仅有一个点 (第三行第 2 个点) 满足乙的要求。在画出形如图 (2) 的图时, 甲有 2 种, 乙的位置有 2 种 (第一行或第三行), 丙、丁站在余下两个点有 2 种, 可只有 \\(2 \\times 2 \\times 2 = 8\\) 种站法。\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_005/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2025年/ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/4.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json#2#11",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2025年/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）.json"
+        }
+      },
+      "text": "11. 如图, \\(2 \\times 3\\) 的棋盘上由6个单位正方形构成.棋盘上共有12个格点,甲、乙、丙、丁四人站在其中四个格点上,若任意两人处于同一横线或竖线则认为\n\n可相互看见.\n\n甲说:\"我可以看见你们所有人.\"\n\n乙说:\"我一个人也看不到.\"\n\n丙说:\"我只能看到一个人.\"\n\n丁说:\"我们四人所在格点连成四边形面积为3,且任意3人所在格\n\n点组成的三角形面积都不为整数.\"\n\n已知四人中看见人数最多(其他人看见的人数都比他看见的少)的那个人说了假话,其他人都说了真话,那么这4人有________种不同的站法.\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（B5试卷版）/pages/page_002/images/4.jpg)",
+      "answer": "8",
+      "solution": "由于四人中看见人数最多的那个人说了假话结合甲说的话可知甲说了假话, 所以甲看见 2 人, 因为其他人看见的人都没有他看见的人多, 所以不存在 3 人同一横线或竖线。因此甲与其看见的 2 人 (丙和丁) 组成一个直角三角形 (甲所在的点为直角点), 且乙与甲、丙、丁不同横线竖线, 根据丁所说任意 3 人所在格点组成的三角形面积都不为整数, 可知两条直角边只能为 1 和 1 或者 1 和 3。\n\n若为 1 和 1, 围城四边形面积最大为 2.5。为 1 和 3 时, 当为图 (1) 形式时, 无法构造选择合适的乙使得四边形面积为 3, 若为图 (2) 形式时, 仅有一个点 (第三行第 2 个点) 满足乙的要求。在画出形如图 (2) 的图时, 甲有 2 种, 乙的位置有 2 种 (第一行或第三行), 丙、丁站在余下两个点有 2 种, 可只有 \\(2 \\times 2 \\times 2 = 8\\) 种站法。\n\n![](ocr_debug/2025数学花园探秘笔试小中年级决赛C卷（解析版）/pages/page_005/images/1.jpg)"
+    }
+  ]
+}

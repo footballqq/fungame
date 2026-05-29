@@ -1,0 +1,1691 @@
+{
+  "grade": 5,
+  "year": 2014,
+  "total_problems": 44,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. 右图中有 个平行四边形.\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个独立的数学题干，询问平行四边形数量，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#1#2",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "2. 右图中有 个平行四边形.\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. 盛盛和嘉嘉共有28块糖，盛盛把自己一半的糖给了嘉嘉，然后嘉嘉又把一半的糖给了盛盛，此时盛盛、嘉嘉的糖数之比为4:3，那么开始时，嘉嘉有 块糖.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#1#3",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "3. 盛盛和嘉嘉共有28块糖，盛盛把自己一半的糖给了嘉嘉，然后嘉嘉又把一半的糖给了盛盛，此时盛盛、嘉嘉的糖数之比为4:3，那么开始时，嘉嘉有 块糖.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. 8的所有约数的乘积是 \\(A\\) ， \\(A\\) 的所有约数的乘积是 \\(B\\) ， \\(B\\) 的所有约数的乘积是 \\(C\\) ，那么， \\(C\\) 有 个约数.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有包含答案或解析信息，可安全用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#1#4",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "4. 8的所有约数的乘积是 \\(A\\) ， \\(A\\) 的所有约数的乘积是 \\(B\\) ， \\(B\\) 的所有约数的乘积是 \\(C\\) ，那么， \\(C\\) 有 个约数.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. 右面竖式中的两个乘数之和为\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/images/1.jpg)\n\n## 二．填空题Ⅱ（每小题10分，共50分）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个数学题目题干，但未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#1#5",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "5. 右面竖式中的两个乘数之和为\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/images/1.jpg)\n\n## 二．填空题Ⅱ（每小题10分，共50分）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. 定义新运算\"○\": \\(a\\odot b = a^{b - 1} + b^{a - 1}\\) ，那么，算式2014○2013○2012○...○201的计 算结果是 .（任何非零数的零次方都是1）",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#1#6",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "6. 定义新运算\"○\": \\(a\\odot b = a^{b - 1} + b^{a - 1}\\) ，那么，算式2014○2013○2012○...○201的计 算结果是 .（任何非零数的零次方都是1）",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "7. 如图，在 \\(10\\times 10\\) 的棋盘内玩警察抓小偷的游戏．游戏开始时，小偷在第4行第4列，警察在第10行第10列．小偷和警察轮流走，小偷先行．小偷1步能走到与所在格子有公共边的格子中，轮到小偷时也可以选择不动．警察1步可走2次，每次能走到与所在格子有公共边的格子中．当警察和小偷在同一格子中时，警察就能抓住小偷．要确保抓住小偷，警察至少要走 步.\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是完整数学题干，未包含答案或解析，可安全出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#1#7",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "7. 如图，在 \\(10\\times 10\\) 的棋盘内玩警察抓小偷的游戏．游戏开始时，小偷在第4行第4列，警察在第10行第10列．小偷和警察轮流走，小偷先行．小偷1步能走到与所在格子有公共边的格子中，轮到小偷时也可以选择不动．警察1步可走2次，每次能走到与所在格子有公共边的格子中．当警察和小偷在同一格子中时，警察就能抓住小偷．要确保抓住小偷，警察至少要走 步.\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_001/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. 如图,在公园内铺设道路,如果按照左下方案铺设,需要360万元;如果按照中下 图方案铺设,需要300万元.如果按照右下方案铺设,那么需要 万元.(图 中虚线表示水泥路,实线表示沥青路)\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干描述了一个完整的数学问题，没有答案或解析信息，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#2#8",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "8. 如图,在公园内铺设道路,如果按照左下方案铺设,需要360万元;如果按照中下 图方案铺设,需要300万元.如果按照右下方案铺设,那么需要 万元.(图 中虚线表示水泥路,实线表示沥青路)\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. 过年了,微信流行\"抢红包\",红包分为大红包、中红包、小红包3种,同种红包所含钱数相同,每种红包所含钱数都是整数元.迎迎、新新和年年3人共抢到9个红包,恰好是大、中、小每种3个.迎迎抢到了4个红包,共获得25元;新新抢到了3个红包,也获得了25元;年年只抢到了2个红包,获得了7元.那么,3种红包内所含的3个钱数(单位:元)的乘积是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本为标准数学竞赛题干，包含完整问题描述，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#2#9",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "9. 过年了,微信流行\"抢红包\",红包分为大红包、中红包、小红包3种,同种红包所含钱数相同,每种红包所含钱数都是整数元.迎迎、新新和年年3人共抢到9个红包,恰好是大、中、小每种3个.迎迎抢到了4个红包,共获得25元;新新抢到了3个红包,也获得了25元;年年只抢到了2个红包,获得了7元.那么,3种红包内所含的3个钱数(单位:元)的乘积是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. 将一个正八面体的8个三角形表面涂上红、黄两种颜色,每种颜色各涂4个面,那么,一共有 种不同的涂色方法.(经过旋转、翻转可以重合的均算作同一种涂色方法)\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/images/1.jpg)\n\n## 三. 填空题III(每小题12分,共60分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#2#10",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "10. 将一个正八面体的8个三角形表面涂上红、黄两种颜色,每种颜色各涂4个面,那么,一共有 种不同的涂色方法.(经过旋转、翻转可以重合的均算作同一种涂色方法)\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/images/1.jpg)\n\n## 三. 填空题III(每小题12分,共60分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. 把一个自然数分别除以2、3、4、5、6、7、8、9、10、11、12、13、14、15、16的余数依次写下来,可以得到一个共有15项的数列,如果这个数列的任意两项都不相同,我们就称这个数列叫\"神马数列\",不同的\"神马数列\"共有 个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#2#11",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "11. 把一个自然数分别除以2、3、4、5、6、7、8、9、10、11、12、13、14、15、16的余数依次写下来,可以得到一个共有15项的数列,如果这个数列的任意两项都不相同,我们就称这个数列叫\"神马数列\",不同的\"神马数列\"共有 个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "12. 甲、乙两车同时从A地出发,向B地匀速行驶,与此同时,丙车从B地出发向A地匀速行驶.当丙行了30千米时与甲相遇,相遇后甲立即调头,并且将速度提高到原来的2倍;当甲、乙两车相遇时,丙行驶了40千米;当乙、丙两车相遇时,甲恰好回到A地.那么A、B两地的距离是 千米.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#2#12",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "12. 甲、乙两车同时从A地出发,向B地匀速行驶,与此同时,丙车从B地出发向A地匀速行驶.当丙行了30千米时与甲相遇,相遇后甲立即调头,并且将速度提高到原来的2倍;当甲、乙两车相遇时,丙行驶了40千米;当乙、丙两车相遇时,甲恰好回到A地.那么A、B两地的距离是 千米.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "13. 如图, \\(E\\) 、 \\(F\\) 分别为线段 \\(BC\\) 和 \\(CD\\) 的中点,三角形 \\(ECG\\) 和三角形 \\(FCH\\) 的面积都是12,矩形 \\(ABCD\\) 的面积是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是完整的几何问题题干，描述条件并提出问题，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#2#13",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "13. 如图, \\(E\\) 、 \\(F\\) 分别为线段 \\(BC\\) 和 \\(CD\\) 的中点,三角形 \\(ECG\\) 和三角形 \\(FCH\\) 的面积都是12,矩形 \\(ABCD\\) 的面积是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“数学花园探秘”小学小高年级组决赛（试卷）.pdf",
+      "exam": {
+        "exam_key": "2014年“数学花园探秘”小学小高年级组决赛",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "ANSWER",
+        "stage": "决赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "14. 三个嫌疑人 \\(A\\) 、 \\(B\\) 、 \\(C\\) 中只有一个偷了东西,现在让他们每个人说一句话,可以说任何一个人(包括自己)是否偷了东西.已知三个人中有且只有一个说了谎,则有 种不同情形使得可以根据他们三个的话判断出是谁偷了东西.\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json#2#14",
+          "json_path": "source_pdf/五年级/2014/2014年“数学花园探秘”小学小高年级组决赛（试卷）.json"
+        }
+      },
+      "text": "14. 三个嫌疑人 \\(A\\) 、 \\(B\\) 、 \\(C\\) 中只有一个偷了东西,现在让他们每个人说一句话,可以说任何一个人(包括自己)是否偷了东西.已知三个人中有且只有一个说了谎,则有 种不同情形使得可以根据他们三个的话判断出是谁偷了东西.\n\n![](ocr_debug/2014年“数学花园探秘”小学小高年级组决赛（试卷）/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. (8分)在所有分母小于10的最简分数中,最接近20.14的分数是( )\n\nA. \\(\\frac{101}{5}\\) B. \\(\\frac{141}{7}\\) C. \\(\\frac{181}{9}\\) D. \\(\\frac{161}{8}\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学选择题题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#1",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "1. (8分)在所有分母小于10的最简分数中,最接近20.14的分数是( )\n\nA. \\(\\frac{101}{5}\\) B. \\(\\frac{141}{7}\\) C. \\(\\frac{181}{9}\\) D. \\(\\frac{161}{8}\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "2. (8分)下面的四个图形中,第( )幅图只有2条对称轴.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/0.jpg)\n\nA.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/1.jpg)\n\n<center>B. </center>\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/2.jpg)\n\n<center>C. </center>\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/3.jpg)\n\n<center>D. </center>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/2.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干块包含完整的问题、选项和直接给出的答案解析，存在高泄露风险，不适合作为考试题目但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#5#2",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "2. (8分)下面的四个图形中,第( )幅图只有2条对称轴.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/0.jpg)\n\nA.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/1.jpg)\n\n<center>B. </center>\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/2.jpg)\n\n<center>C. </center>\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/images/3.jpg)\n\n<center>D. </center>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "3. (8分)一辆大卡车一次可以装煤2.5吨,现在要一次运走48吨煤,那么至少需要( ) 辆这样的大卡车.\n\nA.18\nB.19\nC.20\nD.21",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整但解答部分直接包含答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#6#3",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "3. (8分)一辆大卡车一次可以装煤2.5吨,现在要一次运走48吨煤,那么至少需要( ) 辆这样的大卡车.\n\nA.18\nB.19\nC.20\nD.21",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)已知 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 四个数的平均数是12.345, \\(a > b > c > d\\) ,那么 \\(b\\) ( )\n\nA.大于12.345\nB.小于12.345\nC.等于12.345\nD.无法确定\n\n## 二、选择题(每小题10分,共70分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学选择题，题干清晰且选项完整，没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#4",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "4. (8分)已知 \\(a\\) 、 \\(b\\) 、 \\(c\\) 、 \\(d\\) 四个数的平均数是12.345, \\(a > b > c > d\\) ,那么 \\(b\\) ( )\n\nA.大于12.345\nB.小于12.345\nC.等于12.345\nD.无法确定\n\n## 二、选择题(每小题10分,共70分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. (10分)如图,大正方形的边长为14,小正方形的边长为10,阴影部分的面积之和是( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/2.jpg)\n\nA.25\nB.40\nC.49\nD.50",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_006/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个标准数学竞赛题干，包含选项但无答案或解析信息，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#5",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "5. (10分)如图,大正方形的边长为14,小正方形的边长为10,阴影部分的面积之和是( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/2.jpg)\n\nA.25\nB.40\nC.49\nD.50",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. (10分)甲、乙、丙、丁四人拿出同样多的钱,一起订购同样规格的若干件新年礼物,礼物买来后,甲、乙、丙分别比丁多拿了3,7,14件礼物,最后结算时,乙付给了丁14元钱,并且乙没有付给甲钱.那么丙应该再付给丁( )元钱.\n\nA.6\nB.28\nC.56\nD.70",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#6",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "6. (10分)甲、乙、丙、丁四人拿出同样多的钱,一起订购同样规格的若干件新年礼物,礼物买来后,甲、乙、丙分别比丁多拿了3,7,14件礼物,最后结算时,乙付给了丁14元钱,并且乙没有付给甲钱.那么丙应该再付给丁( )元钱.\n\nA.6\nB.28\nC.56\nD.70",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "7. (10分)在下列算式的空格中填入互不相同的数字: \\(\\square \\times (\\square +\\square \\square) \\times (\\square +\\square +\\square +\\square\\) \\(\\square) = 2014\\) .其中五个一位数的和最大是( )\n\nA.15\nB.24\nC.30\nD.35",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接包含答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#7#7",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": false,
+        "review_reason": "heuristic-only",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#7#7",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "7. (10分)在下列算式的空格中填入互不相同的数字: \\(\\square \\times (\\square +\\square \\square) \\times (\\square +\\square +\\square +\\square\\) \\(\\square) = 2014\\) .其中五个一位数的和最大是( )\n\nA.15\nB.24\nC.30\nD.35",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. (10分)已知4个质数的积是它们和的11倍,则它们的和为( )\n\nA. 46\nB. 47\n\nC. 48\nD. 没有符合条件的数",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学选择题，题干清晰，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#2#8",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "8. (10分)已知4个质数的积是它们和的11倍,则它们的和为( )\n\nA. 46\nB. 47\n\nC. 48\nD. 没有符合条件的数",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. (10分)为了减少城市交通拥堵的情况,某城市拟定从2014年1月1日起开始试行新的限行规则,规定尾号为1、6的车辆周一、周二限行,尾号2、7的车辆周二、周三限行,尾号3、8的车辆周三、周四限行,尾号4、9的车辆周四、周五限行,尾号5、0的车辆周五、周一限行,周六、周日不限行.由于1月31日是春节,因此,1月30日和1月31日两天不限行.已知2014年1月1日是周三并且限行,那么2014年1月份( )组尾号可出行的天数最少.\n\nA. 1、6\nB. 2、7\nC. 4、9\nD. 5、0",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的选择题题干，没有泄露答案或解析，可独立用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#2#9",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "9. (10分)为了减少城市交通拥堵的情况,某城市拟定从2014年1月1日起开始试行新的限行规则,规定尾号为1、6的车辆周一、周二限行,尾号2、7的车辆周二、周三限行,尾号3、8的车辆周三、周四限行,尾号4、9的车辆周四、周五限行,尾号5、0的车辆周五、周一限行,周六、周日不限行.由于1月31日是春节,因此,1月30日和1月31日两天不限行.已知2014年1月1日是周三并且限行,那么2014年1月份( )组尾号可出行的天数最少.\n\nA. 1、6\nB. 2、7\nC. 4、9\nD. 5、0",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. (10分)4个选项之中各有4个碎片,用碎片将如图铺满选项( )是不能将下图恰好不重不漏地铺满的(碎片可以旋转、翻转)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_008/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是完整的数学题干，无答案或解析泄露，适合用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#2#10",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "10. (10分)4个选项之中各有4个碎片,用碎片将如图铺满选项( )是不能将下图恰好不重不漏地铺满的(碎片可以旋转、翻转)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 9,
+      "question_text": "11. (10分)如图所示,将15个点排成三角形点阵或者梯形点阵共有3种不同方法(规定:相邻两行的点数均差1).那么将2014个点排成三角形点阵或者梯形点阵(至少两层)共有()种不同的方法.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_009/images/1.jpg)\n\nA.3\nB.7\nC.4\nD.9",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_009/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题目、选项、解答和答案，存在答案泄露风险，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#9#11",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "11. (10分)如图所示,将15个点排成三角形点阵或者梯形点阵共有3种不同方法(规定:相邻两行的点数均差1).那么将2014个点排成三角形点阵或者梯形点阵(至少两层)共有()种不同的方法.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_009/images/1.jpg)\n\nA.3\nB.7\nC.4\nD.9",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "12. （12分）今天是2013年12月21日，七位数ABCDEFG恰好满足：前五位数字组成的五位数ABCDE是2013的倍数，后五位数字组成的五位数CDEFG是1221的倍数．那么四位数ABFG的最小值是（）\n\nA.1034\nB.2021\nC.2815\nD.3036",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "该文本是一个完整的数学题目，有明确的题干和选项，但未提供答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#12",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "12. （12分）今天是2013年12月21日，七位数ABCDEFG恰好满足：前五位数字组成的五位数ABCDE是2013的倍数，后五位数字组成的五位数CDEFG是1221的倍数．那么四位数ABFG的最小值是（）\n\nA.1034\nB.2021\nC.2815\nD.3036",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. （12分）甲、乙两人比赛折返跑，同时从 \\(A\\) 出发，到达 \\(B\\) 点后，立即返回．先回到 \\(A\\) 点的人获胜．甲先到达 \\(B\\) 点，在距离 \\(B\\) 点24米的地方遇到乙，相遇后，甲的速度减为原来的一半．乙的速度保持不变．在距离终点48米的地方，乙追上甲．那么，当乙到达终点时，甲距离终点（）米.\n\nA.6\nB.8\nC.12\nD.16",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题目，包含问题和选项，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#13",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "13. （12分）甲、乙两人比赛折返跑，同时从 \\(A\\) 出发，到达 \\(B\\) 点后，立即返回．先回到 \\(A\\) 点的人获胜．甲先到达 \\(B\\) 点，在距离 \\(B\\) 点24米的地方遇到乙，相遇后，甲的速度减为原来的一半．乙的速度保持不变．在距离终点48米的地方，乙追上甲．那么，当乙到达终点时，甲距离终点（）米.\n\nA.6\nB.8\nC.12\nD.16",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 11,
+      "question_text": "14. (12分)如图,一只蚂蚁从中心 \\(A\\) 点出发,连走5步后又回到 \\(A\\) 点,且中间没有回到过 \\(A\\) 点.有( )种不同的走法.(每一步只能从任意一点走到与它相邻的点,允许走重复路线.)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_011/images/0.jpg)\n\nA.144\nB.156\nC.168\nD.180",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_011/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题目、选项、答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#11#14",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "14. (12分)如图,一只蚂蚁从中心 \\(A\\) 点出发,连走5步后又回到 \\(A\\) 点,且中间没有回到过 \\(A\\) 点.有( )种不同的走法.(每一步只能从任意一点走到与它相邻的点,允许走重复路线.)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_011/images/0.jpg)\n\nA.144\nB.156\nC.168\nD.180",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 15,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "15. （12分）如图，请将0、1、2、…、14、15填入一个的表格中，使得每行每列的四个数除以4的余数都恰为0、1、2、3各一个，而除以4的商也恰为0、1、2、3各一个．表格中已经填好了几个数，那么，这个表格中最下方一行的四个数的乘积是（）\n\n<table><tr><td></td><td></td><td>12</td><td></td></tr><tr><td></td><td>0</td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td>4</td></tr><tr><td></td><td></td><td>1</td><td></td></tr></table>",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整描述了数学问题，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#15",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "15. （12分）如图，请将0、1、2、…、14、15填入一个的表格中，使得每行每列的四个数除以4的余数都恰为0、1、2、3各一个，而除以4的商也恰为0、1、2、3各一个．表格中已经填好了几个数，那么，这个表格中最下方一行的四个数的乘积是（）\n\n<table><tr><td></td><td></td><td>12</td><td></td></tr><tr><td></td><td>0</td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td>4</td></tr><tr><td></td><td></td><td>1</td><td></td></tr></table>",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "1. (8分)一个最大的三位数除以一个整数,得到的商四舍五入保留一位小数后是2.5,除数最小是()\n\nA.400\nB.396\nC.392\nD.388",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整选择题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#1#1",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "1. (8分)一个最大的三位数除以一个整数,得到的商四舍五入保留一位小数后是2.5,除数最小是()\n\nA.400\nB.396\nC.392\nD.388",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "2. (8分)图中最大的正方形的面积为64,阴影部分的面积为()\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_001/images/0.jpg)\n\nA.28\nB.32\nC.36\nD.40",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛选择题题干，有分值和选项，但未出现答案或解析信息，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#1#2",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "2. (8分)图中最大的正方形的面积为64,阴影部分的面积为()\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_001/images/0.jpg)\n\nA.28\nB.32\nC.36\nD.40",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "3. (8分)过年的时候,康康给客人倒啤酒,一瓶啤酒可以倒满4杯,球球倒酒的时候总是每杯中有半杯泡沫,啤酒倒成泡沫的体积会涨成原来的3倍,那么球球倒啤酒时,一瓶酒可以倒( )杯.\n\nA.5\nB.6\nC.7\nD.8",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干、选项及解答，答案直接泄露，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#5#3",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "3. (8分)过年的时候,康康给客人倒啤酒,一瓶啤酒可以倒满4杯,球球倒酒的时候总是每杯中有半杯泡沫,啤酒倒成泡沫的体积会涨成原来的3倍,那么球球倒啤酒时,一瓶酒可以倒( )杯.\n\nA.5\nB.6\nC.7\nD.8",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)整数除法算式: \\(a\\div b = c\\dots r\\) ,若 \\(a\\) 和 \\(b\\) 同时扩大3倍,则()\n\nA. \\(r\\) 不变\nB.扩大3倍\nC. \\(c\\) 和 \\(r\\) 都扩大3倍\nD. \\(r\\) 扩大3倍\n\n## 二、选择题(每题10分,共70分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的选择题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#1#4",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "4. (8分)整数除法算式: \\(a\\div b = c\\dots r\\) ,若 \\(a\\) 和 \\(b\\) 同时扩大3倍,则()\n\nA. \\(r\\) 不变\nB.扩大3倍\nC. \\(c\\) 和 \\(r\\) 都扩大3倍\nD. \\(r\\) 扩大3倍\n\n## 二、选择题(每题10分,共70分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "5. (10分)算式 \\(826446281 \\times 11 \\times 11\\) 的计算结果是( )\n\nA. \\(9090909091\\) B. \\(909090909091\\)\n\nC. \\(10000000001\\) D. \\(100000000001\\)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含解答和答案，泄露风险高，但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#6#5",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "5. (10分)算式 \\(826446281 \\times 11 \\times 11\\) 的计算结果是( )\n\nA. \\(9090909091\\) B. \\(909090909091\\)\n\nC. \\(10000000001\\) D. \\(100000000001\\)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "6. (10分)对于大于零的分数,有如下4个结论: \\(①\\) 两个真分数的和是真分数; \\(②\\) 两个真分数的积是真分数; \\(③\\) 一个真分数与一个假分数的和是一个假分数; \\(④\\) 一个真分数与一个假分数的积是一个假分数.其中正确的有( )个.\n\nA.1\nB.2\nC.3\nD.4",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整的题干和解答，答案B直接给出，存在高风险泄漏。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#6#6",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "6. (10分)对于大于零的分数,有如下4个结论: \\(①\\) 两个真分数的和是真分数; \\(②\\) 两个真分数的积是真分数; \\(③\\) 一个真分数与一个假分数的和是一个假分数; \\(④\\) 一个真分数与一个假分数的积是一个假分数.其中正确的有( )个.\n\nA.1\nB.2\nC.3\nD.4",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "7. (10分)如图竖式成立时除数与商的和为( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_006/images/0.jpg)\n\nA.289\nB.351\nC.723\nD.1134",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_006/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立且可出题，但解答过程部分存在，可能泄露解题思路，适合练习使用。",
+        "scan_leakage_risk": 1,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#6#7",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "7. (10分)如图竖式成立时除数与商的和为( )\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_006/images/0.jpg)\n\nA.289\nB.351\nC.723\nD.1134",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "8. (10分)将一个数加上或减去或乘或除一个一位数(0不是一位数)视为一次操作,比如53可以通过加3,除以7,除以8三次操作变成1. 那么2014至少经过( )次操作可变成1.\n\nA.4\nB.5\nC.6\nD.7",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题目，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#2#8",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "8. (10分)将一个数加上或减去或乘或除一个一位数(0不是一位数)视为一次操作,比如53可以通过加3,除以7,除以8三次操作变成1. 那么2014至少经过( )次操作可变成1.\n\nA.4\nB.5\nC.6\nD.7",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. (10分)我们定义像:31024、98567这样的五位数为单位\"神马数\",\"神马数\"是中间的数字最小,从中间往两边越来越大,且各位数字均不相同,那么,这样的五位数有( )个.\n\nA.1512\nB.3024\nC.1510\nD.3020",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，包含选项但无标准答案或解析，无泄露风险。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#2#9",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "9. (10分)我们定义像:31024、98567这样的五位数为单位\"神马数\",\"神马数\"是中间的数字最小,从中间往两边越来越大,且各位数字均不相同,那么,这样的五位数有( )个.\n\nA.1512\nB.3024\nC.1510\nD.3020",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "10. (10分)如图所示,五边形 \\(ABCEF\\) 面积是2014平方厘米, \\(BC\\) 与 \\(CE\\) 垂直于 \\(C\\) 点, \\(EF\\) 与 \\(CE\\) 垂直于 \\(E\\) 点,四边形 \\(ABDF\\) 是正方形, \\(CD\\) : \\(ED = 3\\) :2,那么,三角形 \\(ACE\\) 的面积是( )平方厘米.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_008/images/0.jpg)\n\nA.1325\nB.1400\nC.1475\nD.1500",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_008/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立完整，但文本块包含完整解答和答案，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#8#10",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "10. (10分)如图所示,五边形 \\(ABCEF\\) 面积是2014平方厘米, \\(BC\\) 与 \\(CE\\) 垂直于 \\(C\\) 点, \\(EF\\) 与 \\(CE\\) 垂直于 \\(E\\) 点,四边形 \\(ABDF\\) 是正方形, \\(CD\\) : \\(ED = 3\\) :2,那么,三角形 \\(ACE\\) 的面积是( )平方厘米.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_008/images/0.jpg)\n\nA.1325\nB.1400\nC.1475\nD.1500",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. (10分)三位数 \\(N\\) ,分别减3、加4、除以5、乘6,得到四个整数,已知这四个数的数字和恰好是4个连续的自然数,那么满足条件的三位数 \\(N\\) 有( )个.\n\nA.8\nB.6\nC.4\nD.2\n\n## 三、选择题(每题12分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛选择题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#2#11",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "11. (10分)三位数 \\(N\\) ,分别减3、加4、除以5、乘6,得到四个整数,已知这四个数的数字和恰好是4个连续的自然数,那么满足条件的三位数 \\(N\\) 有( )个.\n\nA.8\nB.6\nC.4\nD.2\n\n## 三、选择题(每题12分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 9,
+      "question_text": "12. (12分)如图是由15个点组成的三角形点阵,在右图中至少去掉( )个点,就不会再出现以图中的点为顶点的正三角形了.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_009/images/0.jpg)\n\nA.6\nB.7\nC.8\nD.9",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_009/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整解答和答案，存在泄露风险，但可作为练习题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#9#12",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "12. (12分)如图是由15个点组成的三角形点阵,在右图中至少去掉( )个点,就不会再出现以图中的点为顶点的正三角形了.\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_009/images/0.jpg)\n\nA.6\nB.7\nC.8\nD.9",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. (12分)甲、乙两人从 \\(A\\) 地出发,前往 \\(B\\) 地,当甲走了100米时,乙走了50米,当甲到达 \\(B\\) 地时,乙距离 \\(B\\) 地还差100米.甲到达 \\(B\\) 地后立即调头返回,两人在距离 \\(B\\) 地60米处相遇,那么, \\(A\\) 、 \\(B\\) 两地的距离( )米.\n\nA.150\nB.200\nC.250\nD.300",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目格式完整，包含题干和选项，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#3#13",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "13. (12分)甲、乙两人从 \\(A\\) 地出发,前往 \\(B\\) 地,当甲走了100米时,乙走了50米,当甲到达 \\(B\\) 地时,乙距离 \\(B\\) 地还差100米.甲到达 \\(B\\) 地后立即调头返回,两人在距离 \\(B\\) 地60米处相遇,那么, \\(A\\) 、 \\(B\\) 两地的距离( )米.\n\nA.150\nB.200\nC.250\nD.300",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "14. (12分)如图,一块草地被开垦出11块正六边形耕地,菲菲在这些耕地内种植向日葵、豌豆射手、闪电芦苇、冰冻西瓜4种植物,如果相邻的耕地种植的植物不能相同,她有( )种不同的种植办法.(相邻耕地是指有公共边,每块耕地内只能种植一种植物)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_003/images/1.jpg)\n\nA.6912\nB.6144\nC.4608\nD.4224",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_003/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_010/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题目，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#3#14",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "14. (12分)如图,一块草地被开垦出11块正六边形耕地,菲菲在这些耕地内种植向日葵、豌豆射手、闪电芦苇、冰冻西瓜4种植物,如果相邻的耕地种植的植物不能相同,她有( )种不同的种植办法.(相邻耕地是指有公共边,每块耕地内只能种植一种植物)\n\n![](ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_003/images/1.jpg)\n\nA.6912\nB.6144\nC.4608\nD.4224",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2014,
+      "number": 15,
+      "source_dir": "source_pdf",
+      "source_file": "2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2014年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "15. (12分)老师把某两位数的六个不同因数分别告诉了 \\(A\\sim F\\) 六个聪明诚实的同学.\n\n\\(A\\) 和 \\(B\\) 同时说:我知道这个数是多少了.\n\n\\(C\\) 和 \\(D\\) 同时说:听了他们的话,我也知道这个数是多少了.\n\n\\(E\\) :听了他们的话,我知道我的数一定比 \\(F\\) 的大.\n\n\\(F\\) :我拿的数的大小在 \\(C\\) 和 \\(D\\) 之间.\n\n那么六个人拿的数之和是( )\n\nA.141\nB.152\nC.171\nD.175",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2014/ocr_debug/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为完整的数学竞赛题干，包含问题描述和选项，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json#3#15",
+          "json_path": "source_pdf/五年级/2014/2014年“迎春杯”数学解题能力展示复赛试卷（五年级）.json"
+        }
+      },
+      "text": "15. (12分)老师把某两位数的六个不同因数分别告诉了 \\(A\\sim F\\) 六个聪明诚实的同学.\n\n\\(A\\) 和 \\(B\\) 同时说:我知道这个数是多少了.\n\n\\(C\\) 和 \\(D\\) 同时说:听了他们的话,我也知道这个数是多少了.\n\n\\(E\\) :听了他们的话,我知道我的数一定比 \\(F\\) 的大.\n\n\\(F\\) :我拿的数的大小在 \\(C\\) 和 \\(D\\) 之间.\n\n那么六个人拿的数之和是( )\n\nA.141\nB.152\nC.171\nD.175",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

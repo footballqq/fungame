@@ -1,0 +1,1002 @@
+{
+  "grade": 5,
+  "year": 2012,
+  "total_problems": 25,
+  "problems": [
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "1. (8分)算式 \\(101\\times 2012\\times 121\\div 1111\\div 503\\) 的计算结果是_44.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案和完整解答，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#1",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干清晰，可通过轻量清洗移除答案和解析，变为可用填空题。",
+        "review_fix_hint": "删除解答部分，并从题干中移除答案'44'，留出填空。",
+        "review_clean_question_text": "1. (8分)算式 \\(101\\times 2012\\times 121\\div 1111\\div 503\\) 的计算结果是___",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#1",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "1. (8分)算式 \\(101\\times 2012\\times 121\\div 1111\\div 503\\) 的计算结果是_44.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "2. (8分)在图中, \\(BC = 10\\) , \\(EC = 6\\) ,直角三角形EDF的面积比直角三角形FAB的面积小5,那么长方形ABCD的面积是_35.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接写入答案35，并包含完整解答过程，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#2",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干依赖图片且包含答案，清洗后可出题但需图片支持，适合练习使用。",
+        "review_fix_hint": "删掉【解答】部分及答案数字，仅保留题干核心，确保图片引用正确。",
+        "review_clean_question_text": "在图中, \\(BC = 10\\) , \\(EC = 6\\) ,直角三角形EDF的面积比直角三角形FAB的面积小5,那么长方形ABCD的面积是______.",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#2",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "2. (8分)在图中, \\(BC = 10\\) , \\(EC = 6\\) ,直角三角形EDF的面积比直角三角形FAB的面积小5,那么长方形ABCD的面积是_35.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "3. (8分)龙腾小学五年级共有四个班,五年级一班有学生42人,五年级二班是一班人数的 \\(\\frac{6}{7}\\) ,五年级三班是二班人数的 \\(\\frac{5}{6}\\) ,五年级四班是三班人数的1.2倍.五年级共有_144人.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案'144'和完整解答过程，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#3#3",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "3. (8分)龙腾小学五年级共有四个班,五年级一班有学生42人,五年级二班是一班人数的 \\(\\frac{6}{7}\\) ,五年级三班是二班人数的 \\(\\frac{5}{6}\\) ,五年级四班是三班人数的1.2倍.五年级共有_144人.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (8分)在图中,共能数出 个三角形.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/1.jpg)\n\n## 二、填空题",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目为填空题，题干完整，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#4",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "4. (8分)在图中,共能数出 个三角形.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/1.jpg)\n\n## 二、填空题",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "5. (10分)一个电子钟表上总把日期显示为八位数,如2011年1月1日显示为20110101,那么2011年最后一个能被101整除的日子是2011ABCD,那么ABCD=1221.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案和完整解析，因此仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#4#5",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "5. (10分)一个电子钟表上总把日期显示为八位数,如2011年1月1日显示为20110101,那么2011年最后一个能被101整除的日子是2011ABCD,那么ABCD=1221.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. (10分)在如图的除法竖式中,被除数是\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是题目描述，但需图片支持，未泄露答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#1#6",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "6. (10分)在如图的除法竖式中,被除数是\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_001/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "7. (10分)五支足球队比赛,每两个队之间比赛一场:每场比赛胜者积3分,负者积0分,平局则各积1分,比赛完毕后,发现这五个队的积分恰好是五个连续的自然数.设第1、2、3、4、5名分别平了 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 场,那么五位数 \\(\\overline{\\mathrm{ABCDE}} = \\underline{13213}\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干和解答中直接给出了答案，解析过程完整，因此泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#5#7",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "7. (10分)五支足球队比赛,每两个队之间比赛一场:每场比赛胜者积3分,负者积0分,平局则各积1分,比赛完毕后,发现这五个队的积分恰好是五个连续的自然数.设第1、2、3、4、5名分别平了 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 场,那么五位数 \\(\\overline{\\mathrm{ABCDE}} = \\underline{13213}\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "8. (10分)今天是2011年12月17日,在这个日期中有4个1、2个2、1个0,1个7. 用这8个数字组成若干个合数再求和(每个数字恰用一次,首位数字不能为0,例如21110与217和是21327),这些合数的和的最小值是_231_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接包含答案'231'，且解答部分有完整解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#6#8",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干清晰但包含答案和解析，通过裁剪可修复为标准填空题。",
+        "review_fix_hint": "删除解答部分，移除题干中的答案数字并留空，去掉末尾无关标题。",
+        "review_clean_question_text": "8. (10分)今天是2011年12月17日,在这个日期中有4个1、2个2、1个0,1个7. 用这8个数字组成若干个合数再求和(每个数字恰用一次,首位数字不能为0,例如21110与217和是21327),这些合数的和的最小值是____。",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#6#8",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "8. (10分)今天是2011年12月17日,在这个日期中有4个1、2个2、1个0,1个7. 用这8个数字组成若干个合数再求和(每个数字恰用一次,首位数字不能为0,例如21110与217和是21327),这些合数的和的最小值是_231_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. (12 分) 甲、乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时出发, 相向而行. 第一次迎面相遇在距离 \\(B\\) 地 100 米处, 相遇后甲的速度提高到原来的 2 倍; 甲到 \\(B\\) 后立即调头, 追上乙时, 乙还有 50 米才到 \\(A\\) , 那么 \\(A\\) 、 \\(B\\) 间的路程长多少米?",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#2#9",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "9. (12 分) 甲、乙两人分别从 \\(A\\) 、 \\(B\\) 两地同时出发, 相向而行. 第一次迎面相遇在距离 \\(B\\) 地 100 米处, 相遇后甲的速度提高到原来的 2 倍; 甲到 \\(B\\) 后立即调头, 追上乙时, 乙还有 50 米才到 \\(A\\) , 那么 \\(A\\) 、 \\(B\\) 间的路程长多少米?",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. (12 分) 在图中, 线段 \\(AE\\) 、 \\(FG\\) 将长方形 \\(ABCD\\) 分成了四块; 已知其中两块的面积分别是 2 平方厘米、11 平方厘米, 且 \\(E\\) 是 \\(BC\\) 的中点, \\(O\\) 是 \\(AE\\) 的中点; 那么长方形 \\(ABCD\\) 的面积是 ______ 平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_007/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，包含问题描述和分数标注，但没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#2#10",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "10. (12 分) 在图中, 线段 \\(AE\\) 、 \\(FG\\) 将长方形 \\(ABCD\\) 分成了四块; 已知其中两块的面积分别是 2 平方厘米、11 平方厘米, 且 \\(E\\) 是 \\(BC\\) 的中点, \\(O\\) 是 \\(AE\\) 的中点; 那么长方形 \\(ABCD\\) 的面积是 ______ 平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "11. (12 分) 在算式 \\(\\overline{\\mathrm{ABCD}} +\\mathrm{E}\\times \\mathrm{F}\\times \\mathrm{G}\\times \\mathrm{H} = 2011\\) 中, \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 、 \\(G\\) 、 \\(H\\) 代表 \\(1 \\sim 8\\) 中不同的数字 (不同的字母代表不同的数字), 那么四位数 \\(\\overline{\\mathrm{ABCD}} =\\) _______.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干独立完整，无答案解析泄露，可直接用于考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#2#11",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "11. (12 分) 在算式 \\(\\overline{\\mathrm{ABCD}} +\\mathrm{E}\\times \\mathrm{F}\\times \\mathrm{G}\\times \\mathrm{H} = 2011\\) 中, \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 、 \\(G\\) 、 \\(H\\) 代表 \\(1 \\sim 8\\) 中不同的数字 (不同的字母代表不同的数字), 那么四位数 \\(\\overline{\\mathrm{ABCD}} =\\) _______.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "12. (12 分) 有一个 \\(6 \\times 6\\) 的正方形, 分成 36 个 \\(1 \\times 1\\) 的正方形. 选出其中一些 \\(1 \\times 1\\) 的正方形并画出它们的对角线, 使得所画出的任何两条对角线都没有公共点, 那么最多可以画出 ______ 条对角线.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_009/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学竞赛题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json#2#12",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）.json"
+        }
+      },
+      "text": "12. (12 分) 有一个 \\(6 \\times 6\\) 的正方形, 分成 36 个 \\(1 \\times 1\\) 的正方形. 选出其中一些 \\(1 \\times 1\\) 的正方形并画出它们的对角线, 使得所画出的任何两条对角线都没有公共点, 那么最多可以画出 ______ 条对角线.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示初赛试卷（五年级）/pages/page_002/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "1. （8分） \\(2012\\times \\frac{3^{3}}{4}\\times 1.3 + 3\\div \\frac{2^{2}}{3}\\) 的计算结果是_24.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和解答过程，泄露风险高，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#4#1",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "1. （8分） \\(2012\\times \\frac{3^{3}}{4}\\times 1.3 + 3\\div \\frac{2^{2}}{3}\\) 的计算结果是_24.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "2. （8分）在如图的乘法竖式中，两个乘数的和是_730_\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接给出了答案和完整解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#4#2",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "2. （8分）在如图的乘法竖式中，两个乘数的和是_730_\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "3. (8分)一袋大米,刘备单独吃5天吃完,关羽单独吃3天吃完;一袋小麦,关羽单独吃5天吃完,张飞单独吃4天吃完,刘备每天的饭量比张飞每天的饭量少 \\(\\%\\) 。",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，没有答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#3",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "3. (8分)一袋大米,刘备单独吃5天吃完,关羽单独吃3天吃完;一袋小麦,关羽单独吃5天吃完,张飞单独吃4天吃完,刘备每天的饭量比张飞每天的饭量少 \\(\\%\\) 。",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "4. (8分)有2012个小矮人,他们不是好人,就是坏人,每天他们都要参加一次聚会,每次聚会人数是3或5. 每次参与聚会的小矮人中,若好人占多数,则参加聚会的人全变成好人;若坏人占多数,则参加聚会的人全变成坏人,如果第三天聚会完毕后,全部2012人全变成了好人. 那么第一天聚会前好人的人数的最小值是_435_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出了答案'435'，且包含完整解答过程，存在答案泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#5#4",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "4. (8分)有2012个小矮人,他们不是好人,就是坏人,每天他们都要参加一次聚会,每次聚会人数是3或5. 每次参与聚会的小矮人中,若好人占多数,则参加聚会的人全变成好人;若坏人占多数,则参加聚会的人全变成坏人,如果第三天聚会完毕后,全部2012人全变成了好人. 那么第一天聚会前好人的人数的最小值是_435_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "5. (8分)三个半圆、两个圆如图摆放,两个小半圆和两个小圆的半径都是10厘米,大半圆外的阴影面积比大半圆内的阴影面积大 平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/1.jpg)\n\n## 二、填空题",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_006/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是几何题的题干，描述问题条件和情境，无答案或解析信息泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#5",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "5. (8分)三个半圆、两个圆如图摆放,两个小半圆和两个小圆的半径都是10厘米,大半圆外的阴影面积比大半圆内的阴影面积大 平方厘米.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/1.jpg)\n\n## 二、填空题",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "6. (10分)如图由一个正五边形、五个长方形、五个等边三角形组成,它是一个立体图形的平面展开图,那么这个立体图形有 条棱.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/2.jpg)\n\n\\[\\frac{10}{19}\\frac{9}{18}\\frac{8}{17}\\frac{7}{16}\\frac{6}{15}\\frac{5}{14}\\frac{4}{13}\\frac{3}{12}\\frac{2}{11}\\frac{1}{10} = \\frac{1}{11}\\frac{1}{10} = \\frac{1}{11}\\frac{2}{10} = \\frac{1}{11}\\frac{3}{10} = \\frac{1}{11}\\frac{4}{10} = \\frac{1}{11}\\frac{5}{10} = \\frac{1}{11}\\frac{6}{10} = \\frac{1}{11}\\frac{7}{10} = \\frac{1}{11}\\frac{8}{10} = \\frac{1}{11}\\frac{9}{10} = \\frac{1}{11}\\frac{10}{10} = \\frac{1}{11}\\frac{11}{10} = \\frac{1}{11}\\frac{12}{10} = \\frac{1}{11}\\frac{13}{10} = \\frac{1}{11}\\frac{14}{10} = \\frac{1}{11}\\frac{15}{10} = \\frac{1}{11}\\frac{16}{10} = \\frac{1}{11}\\frac{17}{10} = \\frac{1}{11}\\frac{18}{10} = \\frac{1}{11}\\frac{19}{10} = \\frac{1}{11}\\frac{20}{10} = \\frac{1}{11}\\frac{21}{10} = \\frac{1}{11}\\frac{22}{10} = \\frac{1}{11}\\frac{23}{10} = \\frac{1}{11}\\frac{24}{10} = \\frac{1}{11}\\frac{25}{10} = \\frac{1}{11}\\frac{26}{10} = \\frac{1}{11}\\frac{27}{10} = \\frac{1}{11}\\frac{28}{10} = \\frac{1}{11}\\frac{29}{10} = \\frac{1}{11}\\frac{30}{10} = \\frac{1}{11}\\frac{31}{10} = \\frac{1}{11}\\frac{32}{10} = \\frac{1}{11}\\frac{33}{10} = \\frac{1}{11}\\frac{34}{10} = \\frac{1}{11}\\frac{35}{10} = \\frac{1}{11}\\frac{36}{10} = \\frac{1}{11}\\frac{37}{10} = \\frac{1}{11}\\frac{38}{10} = \\frac{1}{11}\\frac{39}{10} = \\frac{1}{11}\\frac{40}{10} = \\frac{1}{11}\\frac{41}{10} = \\frac{1}{11}\\frac{42}{10} = \\frac{1}{11}\\frac{43}{10} = \\frac{1}{11}\\frac{44}{10} = \\frac{1}{11}\\frac{45}{10} = \\frac{1}{11}\\frac{46}{10} = \\frac{1}{11}\\frac{47}{10} = \\frac{1}{11}\\frac{48}{10} = \\frac{1}{11}\\frac{49}{10} = \\frac{1}{11}\\frac{50}{10} = \\frac{1}{11}\\frac{51}{10} = \\frac{1}{11}\\frac{52}{10} = \\frac{1}{11}\\frac{53}{10} = \\frac{1}{11}\\frac{54}{10} = \\frac{1}{11}\\frac{55}{10} = \\frac{1}{11}\\frac{56}{10} = \\frac{1}{11}\\frac{57}{10} = \\frac{1}{11}\\frac{58}{10} = \\frac{1}{11}\\frac{59}{10} = \\frac{1}{11}\\frac{60}{10} = \\frac{1}{11}\\frac{61}{10} = \\frac{1}{11}\\frac{62}{10} = \\frac{1}{11}\\frac{63}{10} = \\frac{1}{11}\\frac{64}{10} = \\frac{1}{11}\\frac{65}{10} = \\frac{1}{11}\\frac{66}{10} = \\frac{1}{11}\\frac{67}{10} = \\frac{1}{11}\\frac{68}{10} = \\frac{1}{11}\\frac{69}{10} = \\frac{1}{11}\\frac{70}{10} = \\frac{1}{11}\\frac{71}{10} = \\frac{1}{11}\\frac{72}{10} = \\frac{1}{11}\\frac{73}{10} = \\frac{1}{11}\\frac{74}{10} = \\frac{1}{11}\\frac{75}{10} = \\frac{1}{11}\\frac{76}{10} = \\frac{1}{11}\\frac{77}{10} = \\frac{1}{11}\\frac{78}{10} = \\frac{1}{11}\\frac{79}{10} = \\frac{1}{11}\\frac{80}{10} = \\frac{1}{11}\\frac{81}{10} = \\frac{1}{11}\\frac{82}{10} = \\frac{1}{11}\\frac{83}{10} = \\frac{1}{11}\\frac{84}{10} = \\frac{1}{11}\\frac{85}{10} = \\frac{1}{11}\\frac{86}{10} = \\frac{1}{11}\\frac{87}{10} = \\frac{1}{11}\\frac{88}{10} = \\frac{1}{11}\\frac{89}{10} = \\frac{1}{11}\\frac{90}{10} = \\frac{1}{11}\\frac{91}{10} = \\frac{1}{11}\\frac{92}{10} = \\frac{1}{11}\\frac{93}{10} = \\frac{1}{11}\\frac{94}{10} = \\frac{1}{11}\\frac{95}{10} = \\frac{1}{11}\\frac{96}{10} = \\frac{1}{11}\\frac{97}{10} = \\frac{1}{11}\\frac{98}{10} = \\frac{1}{11}\\frac{99}{10} = \\frac{1}{11}\\frac{100}{10} = \\frac{1}{11}\\frac{101}{10} = \\frac{1}{11}\\frac{102}{10} = \\frac{1}{11}\\frac{103}{10} = \\frac{1}{11}\\frac{104}{10} = \\frac{1}{11}\\frac{105}{10} = \\frac{1}{11}\\frac{106}{10} = \\frac{1}{11}\\frac{107}{10} = \\frac{1}{11}\\frac{108}{10} = \\frac{1}{11}\\frac{109}{10} = \\frac{1}{11}\\frac{110}{10} = \\frac{1}{11}\\frac{111}{10} = \\frac{1}{11}\\frac{112}{10} = \\frac{1}{11}\\frac{113}{10} = \\frac{1}{11}\\frac{114}{10} = \\frac{1}{11}\\frac{115}{10} = \\frac{1}{11}\\frac{116}{10} = \\frac{1}{11}\\frac{117}{10} = \\frac{1}{11}\\frac{118}{10} = \\frac{1}{11}\\frac{119}{10} = \\frac{1}{11}\\frac{120}{10} = \\frac{1}{11}\\frac{121}{10} = \\frac{1}{11}\\frac{122}{10} = \\frac{1}{11}\\frac{123}{10} = \\frac{1}{11}\\frac{124}{10} = \\frac{1}{11}\\frac{125}{10} = \\frac{1}{11}\\frac{126}{10} = \\frac{1}{11}\\frac{127}{10} = \\frac{1}{11}\\frac{128}{10} = \\frac{1}{11}\\frac{129}{10} = \\frac{1}{11}\\frac{130}{10} = \\frac{1}{11}\\frac{131}{10} = \\frac{1}{11}\\frac{132}{10} = \\frac{1}{11}\\frac{133}{10} = \\frac{1}{11}\\frac{134}{10} = \\frac{1}{11}\\frac{135}{10} = \\frac{1}{11}\\frac{136}{10} = \\frac{1}{11}\\frac{137}{10} = \\frac{1}{11}\\frac{138}{10} = \\frac{1}{11}\\frac{139}{10} = \\frac{1}{11}\\frac{140}{10} = \\frac{1}{11}\\frac{141}{10} = \\frac{1}{11}\\frac{142}{10} = \\frac{1}{11}\\frac{143}{10} = \\frac{1}{11}\\frac{144}{10} = \\frac{1}{11}\\frac{145}{10} = \\frac{1}{11}\\frac{146}{10} = \\frac{1}{11}\\frac{147}{10} = \\frac{1}{11}\\frac{148}{10} = \\frac{1}{11}\\frac{149}{10} = \\frac{1}{11}\\frac{150}{10} = \\frac{1}{11}\\frac{151}{10} = \\frac{1}{11}\\frac{152}{10} = \\frac{1}{11}\\frac{153}{10} = \\frac{1}{11}\\frac{154}{10} = \\frac{1}{11}\\frac{155}{10} = \\frac{1}{11}\\frac{156}{10} = \\frac{1}{11}\\frac{157}{10} = \\frac{1}{11}\\frac{158}{10} = \\frac{1}{11}\\frac{159}{10} = \\frac{1}{11}\\frac{160}{10} = \\frac{1}{11}\\frac{161}{10} = \\frac{1}{11}\\frac{162}{10} = \\frac{1}{11}\\frac{163}{10} = \\frac{1}{11}\\frac{164}{10} = \\frac{1}{11}\\frac{165}{10} = \\frac{1}{11}\\frac{166}{10} = \\frac{1}{11}\\frac{167}{10} = \\frac{1}{11}\\frac{168}{10} = \\frac{1}{11}\\frac{169}{10} = \\frac{1}{11}\\frac{170}{10} = \\frac{1}{11}\\frac{171}{10} = \\frac{1}{11}\\frac{172}{10} = \\frac{1}{11}\\frac{173}{10} = \\frac{1}{11}\\frac{174}{10} = \\frac{1}{11}\\frac{175}{10} = \\frac{1}{11}\\frac{176}{10} = \\frac{1}{11}\\frac{177}{10} = \\frac{1}{11}\\frac{178}{10} = \\frac{1}{11}\\frac{179}{10} = \\frac{1}{11}\\frac{180}{10} = \\frac{1}{11}\\frac{181}{10} = \\frac{1}{11}\\frac{182}{10} = \\frac{1}{11}\\frac{183}{10} = \\frac{1}{11}\\frac{184}{10} = \\frac{1}{11}\\frac{185}{10} = \\frac{1}{11}\\frac{186}{10} = \\frac{1}{11}\\frac{187}{10} = \\frac{1}{11}\\frac{188}{10} = \\frac{1}{11}\\frac{189}{10} = \\frac{1}{11}\\frac{190}{10} = \\frac{1}{11}\\frac{191}{10} = \\frac{1}{11}\\frac{192}{10} = \\frac{1}{11}\\frac{193}{10} = \\frac{1}{11}\\frac{194}{10} = \\frac{1}{11}\\frac{195}{10} = \\frac{1}{11}\\frac{196}{10} = \\frac{1}{11}\\frac{197}{10} = \\frac{1}{11}\\frac{198}{10} = \\frac{1}{11}\\frac{199}{10} = \\frac{1}{11}\\frac{200}{10} = \\frac{1}{11}\\frac{201}{10} = \\frac{1}{11}\\frac{202}{10} = \\frac{1}{11}\\frac{203}{10} = \\frac{1}{11}\\frac{204}{10} = \\frac{1}{11}\\frac{205}{10} = \\frac{1}{11}\\frac{206}{10} = \\frac{1}{11}\\frac{207}{10} = \\frac{1}{11}\\frac{208}{10} = \\frac{1}{11}\\frac{209}{10} = \\frac{1}{11}\\frac{210}{10} = \\frac{1}{11}\\frac{211}{10} = \\frac{1}{11}\\frac{212}{10} = \\frac{1}{11}\\frac{213}{10} = \\frac{1}{11}\\frac{214}{10} = \\frac{1}{11}\\frac{215}{10} = \\frac{1}{11}\\frac{216}{10} = \\frac{1}{11}\\frac{217}{10} = \\frac{1}{11}\\frac{218}{10} = \\frac{1}{11}\\frac{219}{10} = \\frac{1}{11}\\frac{220}{10} = \\frac{1}{11}\\frac{221}{10} = \\frac{1}{11}\\frac{222}{10} = \\frac{1}{11}\\frac{223}{10} = \\frac{1}{11}\\frac{224}{10} = \\frac{1}{11}\\frac{225}{10} = \\frac{1}{11}\\frac{226}{10} = \\frac{1}{11}\\frac{227}{10} = \\frac{1}{11}\\frac{228}{10} = \\frac{1}{11}\\frac{229}{10} = \\frac{1}{11}\\frac{230}{10} = \\frac{1}{11}\\frac{231}{10} = \\frac{1}{11}\\frac{232}{10} = \\frac{1}{11}\\frac{233}{10} = \\frac{1}{11}\\frac{234}{10} = \\frac{1}{11}\\frac{235}{10} = \\frac{1}{11}\\frac{236}{10} = \\frac{1}{11}\\frac{237}{10} = \\frac{1}{11}\\frac{238}{10} = \\frac{1}{11}\\frac{239}{10} = \\frac{1}{11}\\frac{240}{10} = \\frac{1}{11}\\frac{241}{10} = \\frac{1}{11}\\frac{242}{10} = \\frac{1}{11}\\frac{243}{10} = \\frac{1}{11}\\frac{244}{10} = \\frac{1}{11}\\frac{245}{10} = \\frac{1}{11}\\frac{246}{10} = \\frac{1}{11}\\frac{247}{10} = \\frac{1}{11}\\frac{248}{10} = \\frac{1}{11}\\frac{249}{10} = \\frac{1}{11}\\frac{250}{10} = \\frac{1}{11}\\frac{251}{10} = \\frac{1}{11}\\frac{252}{10} = \\frac{1}{11}\\frac{253}{10} = \\frac{1}{11}\\frac{254}{10} = \\frac{1}{11}\\frac{255}{10} = \\frac{1}{11}\\frac{256}{10} = \\frac{1}{11}\\frac{257}{10} = \\frac{1}{11}\\frac{258}{10} = \\frac{1}{11}\\frac{259}{10} = \\frac{1}{11}\\frac{260}{10} = \\frac{1}{11}\\frac{261}{10} = \\frac{1}{11}\\frac{262}{10} = \\frac{1}{11}\\frac{263}{10} = \\frac{1}{11}\\frac{264}{10} = \\frac{1}{11}\\frac{265}{10} = \\frac{1}{11}\\frac{266}{10} = \\frac{1}{11}\\frac{267}{10} = \\frac{1}{11}\\frac{268}{10} = \\frac{1}{11}\\frac{269}{10} = \\frac{1}{11}\\frac{270}{10} = \\frac{1}{11}\\frac{271}{10} = \\frac{1}{11}\\frac{272}{10} = \\frac{1}{11}\\frac{273}{10} = \\frac{1}{11}\\frac{274}{10} = \\frac{1}{11}\\frac{275}{10} = \\frac{1}{11}\\frac{276}{10} = \\frac{1}{11}\\frac{277}{10} = \\frac{1}{11}\\frac{278}{10} = \\frac{1}{11}\\frac{279}{10} = \\frac{1}{11}\\frac{280}{10} = \\frac{1}{11}\\frac{281}{10} = \\frac{1}{11}\\frac{282}{10} = \\frac{1}{11}\\frac{283}{10} = \\frac{1}{11}\\frac{284}{10} = \\frac{1}{11}\\frac{285}{10} = \\frac{1}{11}\\frac{286}{10} = \\frac{1}{11}\\frac{287}{10} = \\frac{1}{11}\\frac{288}{10} = \\frac{1}{11}\\frac{289}{10} = \\frac{1}{11}\\frac{290}{10} = \\frac{1}{11}\\frac{291}{10} = \\frac{1}{11}\\frac{292}{10} = \\frac{1}{11}\\frac{293}{10} = \\frac{1}{11}\\frac{294}{10} = \\frac{1}{11}\\frac{295}{10} = \\frac{1}{11}\\frac{296}{10} = \\frac{1}{11}\\frac{297}{10} = \\frac{1}{11}\\frac{298}{10} = \\frac{1}{11}\\frac{299}{10} = \\frac{1}{11}\\frac{300}{10} = \\frac{1}{11}\\frac{301}{10} = \\frac{1}{11}\\frac{302}{10} = \\frac{1}{11}\\frac{303}{10} = \\frac{1}{11}\\frac{304}{10} = \\frac{1}{11}\\frac{305}{10} = \\frac{1}{11}\\frac{306}{10} = \\frac{1}{11}\\frac{307}{10} = \\frac{1}{11}\\frac{308}{10} = \\frac{1}{11}\\frac{309}{10} = \\frac{1}{11}\\frac{310}{10} = \\frac{1}{11}\\frac{311}{10} = \\frac{1}{11}\\frac{312}{10} = \\frac{1}{11}\\frac{313}{10} = \\frac{1}{11}\\frac{314}{10} = \\frac{1}{11}\\frac{315}{10} = \\frac{1}{11}\\frac{316}{10} = \\frac{1}{11}\\frac{317}{10} = \\frac{1}{11}\\frac{318}{10} = \\frac{1}{11}\\frac{319}{10} = \\frac{1}{11}\\frac{320}{10} = \\frac{1}{11}\\frac{321}{10} = \\frac{1}{11}\\frac{322}{10} = \\frac{1}{11}\\frac{323}{10} = \\frac{1}{11}\\frac{324}{10} = \\frac{1}{11}\\frac{325}{10} = \\frac{1}{11}\\frac{326}{10} = \\frac{1}{11}\\frac{327}{10} = \\frac{1}{11}\\frac{328}{10} = \\frac{1}{11}\\frac{329}{10} = \\frac{1}{11}\\frac{330}{10} = \\frac{1}{11}\\frac{331}{10} = \\frac{1}{11}\\frac{332}{10} = \\frac{1}{11}\\frac{333}{10} = \\frac{1}{11}\\frac{334}{10} = \\frac{1}{11}\\frac{335}{10} = \\frac{1}{11}\\frac{336}{10} = \\frac{1}{11}\\frac{337}{10} = \\frac{1}{11}\\frac{338}{10} = \\frac{1}{11}\\frac{339}{10} = \\frac{1}{11}\\frac{340}{10} = \\frac{1}{11}\\frac{341}{10} = \\frac{1}{11}\\frac{342}{10} = \\frac{1}{11}\\frac{343}{10} = \\frac{1}{11}\\frac{344}{10} = \\frac{1}{11}\\frac{345}{10} = \\frac{1}{11}\\frac{346}{10} = \\frac{1}{11}\\frac{347}{10} = \\frac{1}{11}\\frac{348}{10} = \\frac{1}{11}\\frac{349}{10} = \\frac{1}{11}\\frac{350}{10} = \\frac{1}{11}\\frac{351}{10} = \\frac{1}{11}\\frac{352}{10} = \\frac{1}{11}\\frac{353}{10} = \\frac{1}{11}\\frac{354}{10} = \\frac{1}{11}\\frac{355}{10} = \\frac{1}{11}\\frac{356}{10} = \\frac{1}{11}\\frac{357}{10} = \\frac{1}{11}\\frac{358}{10} = \\frac{1}{11}\\frac{359}{10} = \\frac{1}{11}\\frac{360}{10} = \\frac{1}{11}\\frac{361}{10} = \\frac{1}{11}\\frac{362}{10} = \\frac{1}{11}\\frac{363}{10} = \\frac{1}{11}\\frac{364}{10} = \\frac{1}{11}\\frac{365}{10} = \\frac{1}{11}\\frac{366}{10} = \\frac{1}{11}\\frac{367}{10} = \\frac{1}{11}\\frac{368}{10} = \\frac{1}{11}\\frac{369}{10} = \\frac{1}{11}\\frac{370}{10} = \\frac{1}{11}\\frac{371}{10} = \\frac{1}{11}\\frac{372}{10} = \\frac{1}{11}\\frac{373}{10} = \\frac{1}{11}\\frac{374}{10} = \\frac{1}{11}\\frac{375}{10} = \\frac{1}{11}\\frac{376}{10} = \\frac{1}{11}\\frac{377}{10} = \\frac{1}{11}\\frac{378}{10} = \\frac{1}{11}\\frac{379}{10} = \\frac{1}{11}\\frac{380}{10} = \\frac{1}{11}\\frac{381}{10} = \\frac{1}{11}\\frac{382}{10} = \\frac{1}{11}\\frac{383}{10} = \\frac{1}{11}\\frac{384}{10} = \\frac{1}{11}\\frac{385}{10} = \\frac{1}{11}\\frac{386}{10} = \\frac{1}{11}\\frac{387}{10} = \\frac{1}{11}\\frac{388}{10} = \\frac{1}{11}\\frac{389}{10} = \\frac{1}{11}\\frac{390}{10} = \\frac{1}{11}\\frac{391}{10} = \\frac{1}{11}\\frac{392}{10} = \\frac{1}{11}\\frac{393}{10} = \\frac{1}{11}\\frac{394}{10} = \\frac{1}{11}\\frac{395}{10} = \\frac{1}{11}\\frac{396}{10} = \\frac{1}{11}\\frac{397}{10} = \\frac{1}{11}\\frac{398}{10} = \\frac{1}{11}\\frac{399}{10} = \\frac{1}{11}\\frac{400}{10} = \\frac{1}{11}\\frac{401}{10} = \\frac{1}{11}\\frac{402}{10} = \\frac{1}{11}\\frac{403}{10} = \\frac{1}{11}\\frac{404}{10} = \\frac{1}{11}\\frac{405}{10} = \\frac{1}{11}\\frac{406}{10} = \\frac{1}{11}\\frac{407}{10} = \\frac{1}{11}\\frac{408}{10} = \\frac{1}{11}\\frac{409}{10} = \\frac{1}{11}\\frac{410}{10} = \\frac{1}{11}\\frac{411}{10} = \\frac{1}{11}\\frac{412}{10} = \\frac{1}{11}\\frac{413}{10} = \\frac{1}{11}\\frac{414}{10} = \\frac{1}{11}\\frac{415}{10} = \\frac{1}{11}\\frac{416}{10} = \\frac{1}{11}\\frac{417}{10} = \\frac{1}{11}\\frac{418}{10} = \\frac{1}{11}\\frac{419}{10} = \\frac{1}{11}\\frac{420}{10} = \\frac{1}{11}\\frac{421}{10} = \\frac{1}{11}\\frac{422}{10} = \\frac{1}{11}\\frac{423}{10} = \\frac{1}{11}\\frac{424}{10} = \\frac{1}{11}\\frac{425}{10} = \\frac{1}{11}\\frac{426}{10} = \\frac{1}{11}\\frac{427}{10} = \\frac{1}{11}\\frac{428}{10} = \\frac{1}{11}\\frac{429}{10} = \\frac{1}{11}\\frac{430}{10} = \\frac{1}{11}\\frac{431}{10} = \\frac{1}{11}\\frac{432}{10} = \\frac{1}{11}\\frac{433}{10} = \\frac{1}{11}\\frac{434}{10} = \\frac{1}{11}\\frac{435}{10} = \\frac{1}{11}\\frac{436}{10} = \\frac{1}{11}\\frac{437}{10} = \\frac{1}{11}\\frac{438}{10} = \\frac{1}{11}\\frac{439}{10} = \\frac{1}{11}\\frac{440}{10} = \\frac{1}{11}\\frac{441}{10} = \\frac{1}{11}\\frac{442}{10} = \\frac{1}{11}\\frac{443}{10} = \\frac{1}{11}\\frac{444}{10} = \\frac{1}{11}\\frac{445}{10} = \\frac{1}{11}\\frac{446}{10} = \\frac{1}{11}\\frac{447}{10} = \\frac{1}{11}\\frac{448}{10} = \\frac{1}{11}\\frac{449}{10} = \\frac{1}{11}\\frac{450}{10} = \\frac{1}{11}\\frac{451}{10} = \\frac{1}{11}\\frac{452}{10} = \\frac{1}{11}\\frac{453}{10} = \\frac{1}{11}\\frac{454}{10} = \\frac{1}{11}\\frac{455}{10} = \\frac{1}{11}\\frac{456}{10} = \\frac{1}{11}\\frac{457}{10} = \\frac{1}{11}\\frac{458}{10} = \\frac{1}{11}\\frac{459}{10} = \\frac{1}{11}\\frac{460}{10} = \\frac{1}{11}\\frac{461}{10} = \\frac{1}{11}\\frac{462}{10} = \\frac{1}{11}\\frac{463}{10} = \\frac{1}{11}\\frac{464}{10} = \\frac{1}{11}\\frac{465}{10} = \\frac{1}{11}\\frac{466}{10} = \\frac{1}{11}\\frac{467}{10} = \\frac{1}{11}\\frac{468}{10} = \\frac{1}{11}\\frac{469}{10} = \\frac{1}{11}\\frac{470}{10} = \\frac{1}{11}\\frac{471}{10} = \\frac{1}{11}\\frac{472}{10} = \\frac{1}{11}\\frac{473}{10} = \\frac{1}{11}\\frac{474}{10} = \\frac{1}{11}\\frac{475}{10} = \\frac{1}{11}\\frac{476}{10} = \\frac{1}{11}\\frac{477}{10} = \\frac{1}{11}\\frac{478}{10} = \\frac{1}{11}\\frac{479}{10} = \\frac{1}{11}\\frac{480}{10} = \\frac{1}{11}\\frac{481}{10} = \\frac{1}{11}\\frac{482}{10} = \\frac{1}{11}\\frac{483}{10} = \\frac{1}{11}\\frac{484}{10} = \\frac{1}{11}\\frac{485}{10} = \\frac{1}{11}\\frac{486}{10} = \\frac{1}{11}\\frac{487}{10} = \\frac{1}{11}\\frac{488}{10} = \\frac{1}{11}\\frac{489}{10} = \\frac{1}{11}\\frac{490}{10} = \\frac{1}{11}\\frac{491}{10} = \\frac{1}{11}\\frac{492}{10} = \\frac{1}{11}\\frac{493}{10} = \\frac{1}{11}\\frac{494}{10} = \\frac{1}{11}\\frac{495}{10} = \\frac{1}{11}\\frac{496}{10} = \\frac{1}{11}\\frac{497}{10} = \\frac{1}{11}\\frac{498}{10} = \\frac{1}{11}\\frac{499}{10} = \\frac{1}{11}\\frac{500}{10} = \\frac{1}{11}\\frac{501}{10} = \\frac{1}{11}\\frac{502}{10} = \\frac{1}{11}\\frac{503}{10} = \\frac{1}{11}\\frac{504}{10} = \\frac{1}{11}\\frac{505}{10} = \\frac{1}{11}\\frac{506}{10} = \\frac{1}{11}\\frac{507}{10} = \\frac{1}{11}\\frac{508}{10} = \\frac{1}{11}\\frac{509}{10} = \\frac{1}{11}\\frac{510}{10} = \\frac{1}{11}\\frac{511}{10} = \\frac{1}{11}\\frac{512}{10} = \\frac{1}{11}\\frac{513}{10} = \\frac{1}{11}\\frac{514}{10} = \\frac{1}{11}\\frac{515}{10} = \\frac{1}{11}\\frac{516}{10} = \\frac{1}{11}\\frac517}{10} = \\frac{1}{11}\\frac518}{10} = \\frac{1}{11}\\frac519}{10} = \\frac{1}{11}\\frac520}{10} = \\frac{1}{11}\\frac521}{10} = \\frac{1}{11}\\frac522}{10} = \\frac{1}{11}\\frac523}{10} = \\frac{1}{11}\\frac524}{10} = \\frac{1}{11}\\frac525}{10} = \\frac{1}{11}\\frac526}{10} = \\frac{1}{11}\\frac527}{10} = \\frac{1}{11}\\frac528}{10} = \\frac{1}{11}\\frac529}{10} = \\frac{1}{11}\\frac530}{10} = \\frac{1}{11}\\frac531}{10} = \\frac{1}{11}\\frac532}{10} = \\frac{1}{11}\\frac533}{10} = \\frac{1}{11}\\frac534}{10} = \\frac{1}{11}\\frac535}{10} = \\frac{1}{11}\\frac536}{10} = \\frac{1}{11}\\frac537}{10} = \\frac{1}{11}\\frac538}{10} = \\frac{1}{11}\\frac539}{10} = \\frac{1}{11}\\frac540}{10} = \\frac{1}{",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_006/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本包含完整的题干问题，但无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#1#6",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "6. (10分)如图由一个正五边形、五个长方形、五个等边三角形组成,它是一个立体图形的平面展开图,那么这个立体图形有 条棱.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_001/images/2.jpg)\n\n\\[\\frac{10}{19}\\frac{9}{18}\\frac{8}{17}\\frac{7}{16}\\frac{6}{15}\\frac{5}{14}\\frac{4}{13}\\frac{3}{12}\\frac{2}{11}\\frac{1}{10} = \\frac{1}{11}\\frac{1}{10} = \\frac{1}{11}\\frac{2}{10} = \\frac{1}{11}\\frac{3}{10} = \\frac{1}{11}\\frac{4}{10} = \\frac{1}{11}\\frac{5}{10} = \\frac{1}{11}\\frac{6}{10} = \\frac{1}{11}\\frac{7}{10} = \\frac{1}{11}\\frac{8}{10} = \\frac{1}{11}\\frac{9}{10} = \\frac{1}{11}\\frac{10}{10} = \\frac{1}{11}\\frac{11}{10} = \\frac{1}{11}\\frac{12}{10} = \\frac{1}{11}\\frac{13}{10} = \\frac{1}{11}\\frac{14}{10} = \\frac{1}{11}\\frac{15}{10} = \\frac{1}{11}\\frac{16}{10} = \\frac{1}{11}\\frac{17}{10} = \\frac{1}{11}\\frac{18}{10} = \\frac{1}{11}\\frac{19}{10} = \\frac{1}{11}\\frac{20}{10} = \\frac{1}{11}\\frac{21}{10} = \\frac{1}{11}\\frac{22}{10} = \\frac{1}{11}\\frac{23}{10} = \\frac{1}{11}\\frac{24}{10} = \\frac{1}{11}\\frac{25}{10} = \\frac{1}{11}\\frac{26}{10} = \\frac{1}{11}\\frac{27}{10} = \\frac{1}{11}\\frac{28}{10} = \\frac{1}{11}\\frac{29}{10} = \\frac{1}{11}\\frac{30}{10} = \\frac{1}{11}\\frac{31}{10} = \\frac{1}{11}\\frac{32}{10} = \\frac{1}{11}\\frac{33}{10} = \\frac{1}{11}\\frac{34}{10} = \\frac{1}{11}\\frac{35}{10} = \\frac{1}{11}\\frac{36}{10} = \\frac{1}{11}\\frac{37}{10} = \\frac{1}{11}\\frac{38}{10} = \\frac{1}{11}\\frac{39}{10} = \\frac{1}{11}\\frac{40}{10} = \\frac{1}{11}\\frac{41}{10} = \\frac{1}{11}\\frac{42}{10} = \\frac{1}{11}\\frac{43}{10} = \\frac{1}{11}\\frac{44}{10} = \\frac{1}{11}\\frac{45}{10} = \\frac{1}{11}\\frac{46}{10} = \\frac{1}{11}\\frac{47}{10} = \\frac{1}{11}\\frac{48}{10} = \\frac{1}{11}\\frac{49}{10} = \\frac{1}{11}\\frac{50}{10} = \\frac{1}{11}\\frac{51}{10} = \\frac{1}{11}\\frac{52}{10} = \\frac{1}{11}\\frac{53}{10} = \\frac{1}{11}\\frac{54}{10} = \\frac{1}{11}\\frac{55}{10} = \\frac{1}{11}\\frac{56}{10} = \\frac{1}{11}\\frac{57}{10} = \\frac{1}{11}\\frac{58}{10} = \\frac{1}{11}\\frac{59}{10} = \\frac{1}{11}\\frac{60}{10} = \\frac{1}{11}\\frac{61}{10} = \\frac{1}{11}\\frac{62}{10} = \\frac{1}{11}\\frac{63}{10} = \\frac{1}{11}\\frac{64}{10} = \\frac{1}{11}\\frac{65}{10} = \\frac{1}{11}\\frac{66}{10} = \\frac{1}{11}\\frac{67}{10} = \\frac{1}{11}\\frac{68}{10} = \\frac{1}{11}\\frac{69}{10} = \\frac{1}{11}\\frac{70}{10} = \\frac{1}{11}\\frac{71}{10} = \\frac{1}{11}\\frac{72}{10} = \\frac{1}{11}\\frac{73}{10} = \\frac{1}{11}\\frac{74}{10} = \\frac{1}{11}\\frac{75}{10} = \\frac{1}{11}\\frac{76}{10} = \\frac{1}{11}\\frac{77}{10} = \\frac{1}{11}\\frac{78}{10} = \\frac{1}{11}\\frac{79}{10} = \\frac{1}{11}\\frac{80}{10} = \\frac{1}{11}\\frac{81}{10} = \\frac{1}{11}\\frac{82}{10} = \\frac{1}{11}\\frac{83}{10} = \\frac{1}{11}\\frac{84}{10} = \\frac{1}{11}\\frac{85}{10} = \\frac{1}{11}\\frac{86}{10} = \\frac{1}{11}\\frac{87}{10} = \\frac{1}{11}\\frac{88}{10} = \\frac{1}{11}\\frac{89}{10} = \\frac{1}{11}\\frac{90}{10} = \\frac{1}{11}\\frac{91}{10} = \\frac{1}{11}\\frac{92}{10} = \\frac{1}{11}\\frac{93}{10} = \\frac{1}{11}\\frac{94}{10} = \\frac{1}{11}\\frac{95}{10} = \\frac{1}{11}\\frac{96}{10} = \\frac{1}{11}\\frac{97}{10} = \\frac{1}{11}\\frac{98}{10} = \\frac{1}{11}\\frac{99}{10} = \\frac{1}{11}\\frac{100}{10} = \\frac{1}{11}\\frac{101}{10} = \\frac{1}{11}\\frac{102}{10} = \\frac{1}{11}\\frac{103}{10} = \\frac{1}{11}\\frac{104}{10} = \\frac{1}{11}\\frac{105}{10} = \\frac{1}{11}\\frac{106}{10} = \\frac{1}{11}\\frac{107}{10} = \\frac{1}{11}\\frac{108}{10} = \\frac{1}{11}\\frac{109}{10} = \\frac{1}{11}\\frac{110}{10} = \\frac{1}{11}\\frac{111}{10} = \\frac{1}{11}\\frac{112}{10} = \\frac{1}{11}\\frac{113}{10} = \\frac{1}{11}\\frac{114}{10} = \\frac{1}{11}\\frac{115}{10} = \\frac{1}{11}\\frac{116}{10} = \\frac{1}{11}\\frac{117}{10} = \\frac{1}{11}\\frac{118}{10} = \\frac{1}{11}\\frac{119}{10} = \\frac{1}{11}\\frac{120}{10} = \\frac{1}{11}\\frac{121}{10} = \\frac{1}{11}\\frac{122}{10} = \\frac{1}{11}\\frac{123}{10} = \\frac{1}{11}\\frac{124}{10} = \\frac{1}{11}\\frac{125}{10} = \\frac{1}{11}\\frac{126}{10} = \\frac{1}{11}\\frac{127}{10} = \\frac{1}{11}\\frac{128}{10} = \\frac{1}{11}\\frac{129}{10} = \\frac{1}{11}\\frac{130}{10} = \\frac{1}{11}\\frac{131}{10} = \\frac{1}{11}\\frac{132}{10} = \\frac{1}{11}\\frac{133}{10} = \\frac{1}{11}\\frac{134}{10} = \\frac{1}{11}\\frac{135}{10} = \\frac{1}{11}\\frac{136}{10} = \\frac{1}{11}\\frac{137}{10} = \\frac{1}{11}\\frac{138}{10} = \\frac{1}{11}\\frac{139}{10} = \\frac{1}{11}\\frac{140}{10} = \\frac{1}{11}\\frac{141}{10} = \\frac{1}{11}\\frac{142}{10} = \\frac{1}{11}\\frac{143}{10} = \\frac{1}{11}\\frac{144}{10} = \\frac{1}{11}\\frac{145}{10} = \\frac{1}{11}\\frac{146}{10} = \\frac{1}{11}\\frac{147}{10} = \\frac{1}{11}\\frac{148}{10} = \\frac{1}{11}\\frac{149}{10} = \\frac{1}{11}\\frac{150}{10} = \\frac{1}{11}\\frac{151}{10} = \\frac{1}{11}\\frac{152}{10} = \\frac{1}{11}\\frac{153}{10} = \\frac{1}{11}\\frac{154}{10} = \\frac{1}{11}\\frac{155}{10} = \\frac{1}{11}\\frac{156}{10} = \\frac{1}{11}\\frac{157}{10} = \\frac{1}{11}\\frac{158}{10} = \\frac{1}{11}\\frac{159}{10} = \\frac{1}{11}\\frac{160}{10} = \\frac{1}{11}\\frac{161}{10} = \\frac{1}{11}\\frac{162}{10} = \\frac{1}{11}\\frac{163}{10} = \\frac{1}{11}\\frac{164}{10} = \\frac{1}{11}\\frac{165}{10} = \\frac{1}{11}\\frac{166}{10} = \\frac{1}{11}\\frac{167}{10} = \\frac{1}{11}\\frac{168}{10} = \\frac{1}{11}\\frac{169}{10} = \\frac{1}{11}\\frac{170}{10} = \\frac{1}{11}\\frac{171}{10} = \\frac{1}{11}\\frac{172}{10} = \\frac{1}{11}\\frac{173}{10} = \\frac{1}{11}\\frac{174}{10} = \\frac{1}{11}\\frac{175}{10} = \\frac{1}{11}\\frac{176}{10} = \\frac{1}{11}\\frac{177}{10} = \\frac{1}{11}\\frac{178}{10} = \\frac{1}{11}\\frac{179}{10} = \\frac{1}{11}\\frac{180}{10} = \\frac{1}{11}\\frac{181}{10} = \\frac{1}{11}\\frac{182}{10} = \\frac{1}{11}\\frac{183}{10} = \\frac{1}{11}\\frac{184}{10} = \\frac{1}{11}\\frac{185}{10} = \\frac{1}{11}\\frac{186}{10} = \\frac{1}{11}\\frac{187}{10} = \\frac{1}{11}\\frac{188}{10} = \\frac{1}{11}\\frac{189}{10} = \\frac{1}{11}\\frac{190}{10} = \\frac{1}{11}\\frac{191}{10} = \\frac{1}{11}\\frac{192}{10} = \\frac{1}{11}\\frac{193}{10} = \\frac{1}{11}\\frac{194}{10} = \\frac{1}{11}\\frac{195}{10} = \\frac{1}{11}\\frac{196}{10} = \\frac{1}{11}\\frac{197}{10} = \\frac{1}{11}\\frac{198}{10} = \\frac{1}{11}\\frac{199}{10} = \\frac{1}{11}\\frac{200}{10} = \\frac{1}{11}\\frac{201}{10} = \\frac{1}{11}\\frac{202}{10} = \\frac{1}{11}\\frac{203}{10} = \\frac{1}{11}\\frac{204}{10} = \\frac{1}{11}\\frac{205}{10} = \\frac{1}{11}\\frac{206}{10} = \\frac{1}{11}\\frac{207}{10} = \\frac{1}{11}\\frac{208}{10} = \\frac{1}{11}\\frac{209}{10} = \\frac{1}{11}\\frac{210}{10} = \\frac{1}{11}\\frac{211}{10} = \\frac{1}{11}\\frac{212}{10} = \\frac{1}{11}\\frac{213}{10} = \\frac{1}{11}\\frac{214}{10} = \\frac{1}{11}\\frac{215}{10} = \\frac{1}{11}\\frac{216}{10} = \\frac{1}{11}\\frac{217}{10} = \\frac{1}{11}\\frac{218}{10} = \\frac{1}{11}\\frac{219}{10} = \\frac{1}{11}\\frac{220}{10} = \\frac{1}{11}\\frac{221}{10} = \\frac{1}{11}\\frac{222}{10} = \\frac{1}{11}\\frac{223}{10} = \\frac{1}{11}\\frac{224}{10} = \\frac{1}{11}\\frac{225}{10} = \\frac{1}{11}\\frac{226}{10} = \\frac{1}{11}\\frac{227}{10} = \\frac{1}{11}\\frac{228}{10} = \\frac{1}{11}\\frac{229}{10} = \\frac{1}{11}\\frac{230}{10} = \\frac{1}{11}\\frac{231}{10} = \\frac{1}{11}\\frac{232}{10} = \\frac{1}{11}\\frac{233}{10} = \\frac{1}{11}\\frac{234}{10} = \\frac{1}{11}\\frac{235}{10} = \\frac{1}{11}\\frac{236}{10} = \\frac{1}{11}\\frac{237}{10} = \\frac{1}{11}\\frac{238}{10} = \\frac{1}{11}\\frac{239}{10} = \\frac{1}{11}\\frac{240}{10} = \\frac{1}{11}\\frac{241}{10} = \\frac{1}{11}\\frac{242}{10} = \\frac{1}{11}\\frac{243}{10} = \\frac{1}{11}\\frac{244}{10} = \\frac{1}{11}\\frac{245}{10} = \\frac{1}{11}\\frac{246}{10} = \\frac{1}{11}\\frac{247}{10} = \\frac{1}{11}\\frac{248}{10} = \\frac{1}{11}\\frac{249}{10} = \\frac{1}{11}\\frac{250}{10} = \\frac{1}{11}\\frac{251}{10} = \\frac{1}{11}\\frac{252}{10} = \\frac{1}{11}\\frac{253}{10} = \\frac{1}{11}\\frac{254}{10} = \\frac{1}{11}\\frac{255}{10} = \\frac{1}{11}\\frac{256}{10} = \\frac{1}{11}\\frac{257}{10} = \\frac{1}{11}\\frac{258}{10} = \\frac{1}{11}\\frac{259}{10} = \\frac{1}{11}\\frac{260}{10} = \\frac{1}{11}\\frac{261}{10} = \\frac{1}{11}\\frac{262}{10} = \\frac{1}{11}\\frac{263}{10} = \\frac{1}{11}\\frac{264}{10} = \\frac{1}{11}\\frac{265}{10} = \\frac{1}{11}\\frac{266}{10} = \\frac{1}{11}\\frac{267}{10} = \\frac{1}{11}\\frac{268}{10} = \\frac{1}{11}\\frac{269}{10} = \\frac{1}{11}\\frac{270}{10} = \\frac{1}{11}\\frac{271}{10} = \\frac{1}{11}\\frac{272}{10} = \\frac{1}{11}\\frac{273}{10} = \\frac{1}{11}\\frac{274}{10} = \\frac{1}{11}\\frac{275}{10} = \\frac{1}{11}\\frac{276}{10} = \\frac{1}{11}\\frac{277}{10} = \\frac{1}{11}\\frac{278}{10} = \\frac{1}{11}\\frac{279}{10} = \\frac{1}{11}\\frac{280}{10} = \\frac{1}{11}\\frac{281}{10} = \\frac{1}{11}\\frac{282}{10} = \\frac{1}{11}\\frac{283}{10} = \\frac{1}{11}\\frac{284}{10} = \\frac{1}{11}\\frac{285}{10} = \\frac{1}{11}\\frac{286}{10} = \\frac{1}{11}\\frac{287}{10} = \\frac{1}{11}\\frac{288}{10} = \\frac{1}{11}\\frac{289}{10} = \\frac{1}{11}\\frac{290}{10} = \\frac{1}{11}\\frac{291}{10} = \\frac{1}{11}\\frac{292}{10} = \\frac{1}{11}\\frac{293}{10} = \\frac{1}{11}\\frac{294}{10} = \\frac{1}{11}\\frac{295}{10} = \\frac{1}{11}\\frac{296}{10} = \\frac{1}{11}\\frac{297}{10} = \\frac{1}{11}\\frac{298}{10} = \\frac{1}{11}\\frac{299}{10} = \\frac{1}{11}\\frac{300}{10} = \\frac{1}{11}\\frac{301}{10} = \\frac{1}{11}\\frac{302}{10} = \\frac{1}{11}\\frac{303}{10} = \\frac{1}{11}\\frac{304}{10} = \\frac{1}{11}\\frac{305}{10} = \\frac{1}{11}\\frac{306}{10} = \\frac{1}{11}\\frac{307}{10} = \\frac{1}{11}\\frac{308}{10} = \\frac{1}{11}\\frac{309}{10} = \\frac{1}{11}\\frac{310}{10} = \\frac{1}{11}\\frac{311}{10} = \\frac{1}{11}\\frac{312}{10} = \\frac{1}{11}\\frac{313}{10} = \\frac{1}{11}\\frac{314}{10} = \\frac{1}{11}\\frac{315}{10} = \\frac{1}{11}\\frac{316}{10} = \\frac{1}{11}\\frac{317}{10} = \\frac{1}{11}\\frac{318}{10} = \\frac{1}{11}\\frac{319}{10} = \\frac{1}{11}\\frac{320}{10} = \\frac{1}{11}\\frac{321}{10} = \\frac{1}{11}\\frac{322}{10} = \\frac{1}{11}\\frac{323}{10} = \\frac{1}{11}\\frac{324}{10} = \\frac{1}{11}\\frac{325}{10} = \\frac{1}{11}\\frac{326}{10} = \\frac{1}{11}\\frac{327}{10} = \\frac{1}{11}\\frac{328}{10} = \\frac{1}{11}\\frac{329}{10} = \\frac{1}{11}\\frac{330}{10} = \\frac{1}{11}\\frac{331}{10} = \\frac{1}{11}\\frac{332}{10} = \\frac{1}{11}\\frac{333}{10} = \\frac{1}{11}\\frac{334}{10} = \\frac{1}{11}\\frac{335}{10} = \\frac{1}{11}\\frac{336}{10} = \\frac{1}{11}\\frac{337}{10} = \\frac{1}{11}\\frac{338}{10} = \\frac{1}{11}\\frac{339}{10} = \\frac{1}{11}\\frac{340}{10} = \\frac{1}{11}\\frac{341}{10} = \\frac{1}{11}\\frac{342}{10} = \\frac{1}{11}\\frac{343}{10} = \\frac{1}{11}\\frac{344}{10} = \\frac{1}{11}\\frac{345}{10} = \\frac{1}{11}\\frac{346}{10} = \\frac{1}{11}\\frac{347}{10} = \\frac{1}{11}\\frac{348}{10} = \\frac{1}{11}\\frac{349}{10} = \\frac{1}{11}\\frac{350}{10} = \\frac{1}{11}\\frac{351}{10} = \\frac{1}{11}\\frac{352}{10} = \\frac{1}{11}\\frac{353}{10} = \\frac{1}{11}\\frac{354}{10} = \\frac{1}{11}\\frac{355}{10} = \\frac{1}{11}\\frac{356}{10} = \\frac{1}{11}\\frac{357}{10} = \\frac{1}{11}\\frac{358}{10} = \\frac{1}{11}\\frac{359}{10} = \\frac{1}{11}\\frac{360}{10} = \\frac{1}{11}\\frac{361}{10} = \\frac{1}{11}\\frac{362}{10} = \\frac{1}{11}\\frac{363}{10} = \\frac{1}{11}\\frac{364}{10} = \\frac{1}{11}\\frac{365}{10} = \\frac{1}{11}\\frac{366}{10} = \\frac{1}{11}\\frac{367}{10} = \\frac{1}{11}\\frac{368}{10} = \\frac{1}{11}\\frac{369}{10} = \\frac{1}{11}\\frac{370}{10} = \\frac{1}{11}\\frac{371}{10} = \\frac{1}{11}\\frac{372}{10} = \\frac{1}{11}\\frac{373}{10} = \\frac{1}{11}\\frac{374}{10} = \\frac{1}{11}\\frac{375}{10} = \\frac{1}{11}\\frac{376}{10} = \\frac{1}{11}\\frac{377}{10} = \\frac{1}{11}\\frac{378}{10} = \\frac{1}{11}\\frac{379}{10} = \\frac{1}{11}\\frac{380}{10} = \\frac{1}{11}\\frac{381}{10} = \\frac{1}{11}\\frac{382}{10} = \\frac{1}{11}\\frac{383}{10} = \\frac{1}{11}\\frac{384}{10} = \\frac{1}{11}\\frac{385}{10} = \\frac{1}{11}\\frac{386}{10} = \\frac{1}{11}\\frac{387}{10} = \\frac{1}{11}\\frac{388}{10} = \\frac{1}{11}\\frac{389}{10} = \\frac{1}{11}\\frac{390}{10} = \\frac{1}{11}\\frac{391}{10} = \\frac{1}{11}\\frac{392}{10} = \\frac{1}{11}\\frac{393}{10} = \\frac{1}{11}\\frac{394}{10} = \\frac{1}{11}\\frac{395}{10} = \\frac{1}{11}\\frac{396}{10} = \\frac{1}{11}\\frac{397}{10} = \\frac{1}{11}\\frac{398}{10} = \\frac{1}{11}\\frac{399}{10} = \\frac{1}{11}\\frac{400}{10} = \\frac{1}{11}\\frac{401}{10} = \\frac{1}{11}\\frac{402}{10} = \\frac{1}{11}\\frac{403}{10} = \\frac{1}{11}\\frac{404}{10} = \\frac{1}{11}\\frac{405}{10} = \\frac{1}{11}\\frac{406}{10} = \\frac{1}{11}\\frac{407}{10} = \\frac{1}{11}\\frac{408}{10} = \\frac{1}{11}\\frac{409}{10} = \\frac{1}{11}\\frac{410}{10} = \\frac{1}{11}\\frac{411}{10} = \\frac{1}{11}\\frac{412}{10} = \\frac{1}{11}\\frac{413}{10} = \\frac{1}{11}\\frac{414}{10} = \\frac{1}{11}\\frac{415}{10} = \\frac{1}{11}\\frac{416}{10} = \\frac{1}{11}\\frac{417}{10} = \\frac{1}{11}\\frac{418}{10} = \\frac{1}{11}\\frac{419}{10} = \\frac{1}{11}\\frac{420}{10} = \\frac{1}{11}\\frac{421}{10} = \\frac{1}{11}\\frac{422}{10} = \\frac{1}{11}\\frac{423}{10} = \\frac{1}{11}\\frac{424}{10} = \\frac{1}{11}\\frac{425}{10} = \\frac{1}{11}\\frac{426}{10} = \\frac{1}{11}\\frac{427}{10} = \\frac{1}{11}\\frac{428}{10} = \\frac{1}{11}\\frac{429}{10} = \\frac{1}{11}\\frac{430}{10} = \\frac{1}{11}\\frac{431}{10} = \\frac{1}{11}\\frac{432}{10} = \\frac{1}{11}\\frac{433}{10} = \\frac{1}{11}\\frac{434}{10} = \\frac{1}{11}\\frac{435}{10} = \\frac{1}{11}\\frac{436}{10} = \\frac{1}{11}\\frac{437}{10} = \\frac{1}{11}\\frac{438}{10} = \\frac{1}{11}\\frac{439}{10} = \\frac{1}{11}\\frac{440}{10} = \\frac{1}{11}\\frac{441}{10} = \\frac{1}{11}\\frac{442}{10} = \\frac{1}{11}\\frac{443}{10} = \\frac{1}{11}\\frac{444}{10} = \\frac{1}{11}\\frac{445}{10} = \\frac{1}{11}\\frac{446}{10} = \\frac{1}{11}\\frac{447}{10} = \\frac{1}{11}\\frac{448}{10} = \\frac{1}{11}\\frac{449}{10} = \\frac{1}{11}\\frac{450}{10} = \\frac{1}{11}\\frac{451}{10} = \\frac{1}{11}\\frac{452}{10} = \\frac{1}{11}\\frac{453}{10} = \\frac{1}{11}\\frac{454}{10} = \\frac{1}{11}\\frac{455}{10} = \\frac{1}{11}\\frac{456}{10} = \\frac{1}{11}\\frac{457}{10} = \\frac{1}{11}\\frac{458}{10} = \\frac{1}{11}\\frac{459}{10} = \\frac{1}{11}\\frac{460}{10} = \\frac{1}{11}\\frac{461}{10} = \\frac{1}{11}\\frac{462}{10} = \\frac{1}{11}\\frac{463}{10} = \\frac{1}{11}\\frac{464}{10} = \\frac{1}{11}\\frac{465}{10} = \\frac{1}{11}\\frac{466}{10} = \\frac{1}{11}\\frac{467}{10} = \\frac{1}{11}\\frac{468}{10} = \\frac{1}{11}\\frac{469}{10} = \\frac{1}{11}\\frac{470}{10} = \\frac{1}{11}\\frac{471}{10} = \\frac{1}{11}\\frac{472}{10} = \\frac{1}{11}\\frac{473}{10} = \\frac{1}{11}\\frac{474}{10} = \\frac{1}{11}\\frac{475}{10} = \\frac{1}{11}\\frac{476}{10} = \\frac{1}{11}\\frac{477}{10} = \\frac{1}{11}\\frac{478}{10} = \\frac{1}{11}\\frac{479}{10} = \\frac{1}{11}\\frac{480}{10} = \\frac{1}{11}\\frac{481}{10} = \\frac{1}{11}\\frac{482}{10} = \\frac{1}{11}\\frac{483}{10} = \\frac{1}{11}\\frac{484}{10} = \\frac{1}{11}\\frac{485}{10} = \\frac{1}{11}\\frac{486}{10} = \\frac{1}{11}\\frac{487}{10} = \\frac{1}{11}\\frac{488}{10} = \\frac{1}{11}\\frac{489}{10} = \\frac{1}{11}\\frac{490}{10} = \\frac{1}{11}\\frac{491}{10} = \\frac{1}{11}\\frac{492}{10} = \\frac{1}{11}\\frac{493}{10} = \\frac{1}{11}\\frac{494}{10} = \\frac{1}{11}\\frac{495}{10} = \\frac{1}{11}\\frac{496}{10} = \\frac{1}{11}\\frac{497}{10} = \\frac{1}{11}\\frac{498}{10} = \\frac{1}{11}\\frac{499}{10} = \\frac{1}{11}\\frac{500}{10} = \\frac{1}{11}\\frac{501}{10} = \\frac{1}{11}\\frac{502}{10} = \\frac{1}{11}\\frac{503}{10} = \\frac{1}{11}\\frac{504}{10} = \\frac{1}{11}\\frac{505}{10} = \\frac{1}{11}\\frac{506}{10} = \\frac{1}{11}\\frac{507}{10} = \\frac{1}{11}\\frac{508}{10} = \\frac{1}{11}\\frac{509}{10} = \\frac{1}{11}\\frac{510}{10} = \\frac{1}{11}\\frac{511}{10} = \\frac{1}{11}\\frac{512}{10} = \\frac{1}{11}\\frac{513}{10} = \\frac{1}{11}\\frac{514}{10} = \\frac{1}{11}\\frac{515}{10} = \\frac{1}{11}\\frac{516}{10} = \\frac{1}{11}\\frac517}{10} = \\frac{1}{11}\\frac518}{10} = \\frac{1}{11}\\frac519}{10} = \\frac{1}{11}\\frac520}{10} = \\frac{1}{11}\\frac521}{10} = \\frac{1}{11}\\frac522}{10} = \\frac{1}{11}\\frac523}{10} = \\frac{1}{11}\\frac524}{10} = \\frac{1}{11}\\frac525}{10} = \\frac{1}{11}\\frac526}{10} = \\frac{1}{11}\\frac527}{10} = \\frac{1}{11}\\frac528}{10} = \\frac{1}{11}\\frac529}{10} = \\frac{1}{11}\\frac530}{10} = \\frac{1}{11}\\frac531}{10} = \\frac{1}{11}\\frac532}{10} = \\frac{1}{11}\\frac533}{10} = \\frac{1}{11}\\frac534}{10} = \\frac{1}{11}\\frac535}{10} = \\frac{1}{11}\\frac536}{10} = \\frac{1}{11}\\frac537}{10} = \\frac{1}{11}\\frac538}{10} = \\frac{1}{11}\\frac539}{10} = \\frac{1}{11}\\frac540}{10} = \\frac{1}{",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "9. (10分)早上8:10,菲菲从家步行去上学.3分钟后,狗狗出发跑去追她,在离家200米的地方追上了她;追上后立刻往家跑去,到家后又立刻回头去追菲菲,在离家400米的地方再次追上了她.追上后又立刻往家跑,到家后又去追菲菲,刚好在学校追上.菲菲到校时间是8点28分.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "general",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_008/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_008/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整解答和答案，因此只适合用于练习，不能用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#8#9",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "9. (10分)早上8:10,菲菲从家步行去上学.3分钟后,狗狗出发跑去追她,在离家200米的地方追上了她;追上后立刻往家跑去,到家后又立刻回头去追菲菲,在离家400米的地方再次追上了她.追上后又立刻往家跑,到家后又去追菲菲,刚好在学校追上.菲菲到校时间是8点28分.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. (10分)如图所示,广场中央有一座漂亮的喷泉,小明从 \\(A\\) 点出发,沿喷泉周围的小路不重复地绕喷泉走一周,最终回到 \\(A\\) 点的走法共有 种.(图中的两个喷泉圆及两圆之间的线段均表示小路,绕喷泉一周指小明行走路线为封闭路线且喷泉在此路线内部)\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/images/0.jpg)\n\n## 三、填空题",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/images/0.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_008/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛填空题题干，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#2#10",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "10. (10分)如图所示,广场中央有一座漂亮的喷泉,小明从 \\(A\\) 点出发,沿喷泉周围的小路不重复地绕喷泉走一周,最终回到 \\(A\\) 点的走法共有 种.(图中的两个喷泉圆及两圆之间的线段均表示小路,绕喷泉一周指小明行走路线为封闭路线且喷泉在此路线内部)\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/images/0.jpg)\n\n## 三、填空题",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 9,
+      "question_text": "11. (12分)有16张卡片,黑白各8张,分别写有数字 \\(1 \\sim 8\\) ,把它们像扑克牌那样洗过后,如图那样排成四行,排列规则如下,每行中左到右按从小到大的顺序排列,黑白卡片上的数字相同时,黑卡片放在左边,已知每行4张卡片上的4个数字之和都相等,左下角是2,右上角是7,请问:图中由左上至右下的对角线四张卡片上的数字依次是_1、4、7、8或者1、2、5、8_.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_009/images/1.jpg)\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_009/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_002/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_009/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_009/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接给出了答案序列，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#9#11",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题目描述完整，但直接包含答案和部分解答，清洗后可用于练习，但需要图片支持。",
+        "review_fix_hint": "删除答案和解答部分，保留题干描述至填空处，注意题目依赖图片。",
+        "review_clean_question_text": "11. (12分)有16张卡片,黑白各8张,分别写有数字 \\(1 \\sim 8\\) ,把它们像扑克牌那样洗过后,如图那样排成四行,排列规则如下,每行中左到右按从小到大的顺序排列,黑白卡片上的数字相同时,黑卡片放在左边,已知每行4张卡片上的4个数字之和都相等,左下角是2,右上角是7,请问:图中由左上至右下的对角线四张卡片上的数字依次是________。",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#9#11",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "11. (12分)有16张卡片,黑白各8张,分别写有数字 \\(1 \\sim 8\\) ,把它们像扑克牌那样洗过后,如图那样排成四行,排列规则如下,每行中左到右按从小到大的顺序排列,黑白卡片上的数字相同时,黑卡片放在左边,已知每行4张卡片上的4个数字之和都相等,左下角是2,右上角是7,请问:图中由左上至右下的对角线四张卡片上的数字依次是_1、4、7、8或者1、2、5、8_.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_009/images/1.jpg)\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_009/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 10,
+      "question_text": "12. (12分)如图,在正方形环形道路的四个顶点各有编号为1、2、3、4的车站:甲、乙、丙、丁四个人分别从编号为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 的车站同时出发( \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 互不相同),沿顺时针方向驾车匀速行驶,且从1、2、3、4号车站出发的车的速度分别为1、2、3、4,以后速度再不变化.行驶完毕后,他们有如下的话:\n\n甲说:\"我第一次追上乙时恰在车站 \\(①\\) \"\n\n乙说:\"我第一次追上丙时恰在车站 \\(②\\) \"\n\n丙说:\"我第一次追上丁时恰在车站 \\(③\\) \"\n\n丁说:\"我第一次追上甲时恰在车站 \\(④\\) \"\n\n已知其中有两人的话正确,两人说的话错误.那么四位数ABCD=2314.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_010/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_010/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接包含答案ABCD=2314和完整解答过程，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#10#12",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干完整，但包含答案和解析，清洗后可成为可用题干。",
+        "review_fix_hint": "移除答案和解析部分，保留题干；如果图片缺失，需补充图片或文字描述。",
+        "review_clean_question_text": "12. (12分)如图,在正方形环形道路的四个顶点各有编号为1、2、3、4的车站:甲、乙、丙、丁四个人分别从编号为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 的车站同时出发( \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 互不相同),沿顺时针方向驾车匀速行驶,且从1、2、3、4号车站出发的车的速度分别为1、2、3、4,以后速度再不变化.行驶完毕后,他们有如下的话:  \n\n甲说:\"我第一次追上乙时恰在车站 \\(①\\) \" \n\n乙说:\"我第一次追上丙时恰在车站 \\(②\\) \" \n\n丙说:\"我第一次追上丁时恰在车站 \\(③\\) \" \n\n丁说:\"我第一次追上甲时恰在车站 \\(④\\) \" \n\n已知其中有两人的话正确,两人说的话错误.",
+        "review_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#10#12",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "12. (12分)如图,在正方形环形道路的四个顶点各有编号为1、2、3、4的车站:甲、乙、丙、丁四个人分别从编号为 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 的车站同时出发( \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 互不相同),沿顺时针方向驾车匀速行驶,且从1、2、3、4号车站出发的车的速度分别为1、2、3、4,以后速度再不变化.行驶完毕后,他们有如下的话:\n\n甲说:\"我第一次追上乙时恰在车站 \\(①\\) \"\n\n乙说:\"我第一次追上丙时恰在车站 \\(②\\) \"\n\n丙说:\"我第一次追上丁时恰在车站 \\(③\\) \"\n\n丁说:\"我第一次追上甲时恰在车站 \\(④\\) \"\n\n已知其中有两人的话正确,两人说的话错误.那么四位数ABCD=2314.\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_010/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 13,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 3,
+      "question_text": "13. (12分)如果正整数 \\(N\\) 的每一个倍数abc都满足bca、cab也都是 \\(N\\) 的倍数(其中 \\(a\\) 、 \\(b\\) 、 \\(c\\) 都是 \\(0 \\sim 9\\) 中的整数,并且约定123表示123,028表示28,007表示7),那么就称 \\(N\\) 为\"完美约数\"(例如9就是一个\"完美约数\").这样的\"完美约数\"一共有____个.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "number_theory",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题定义，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#3#13",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "13. (12分)如果正整数 \\(N\\) 的每一个倍数abc都满足bca、cab也都是 \\(N\\) 的倍数(其中 \\(a\\) 、 \\(b\\) 、 \\(c\\) 都是 \\(0 \\sim 9\\) 中的整数,并且约定123表示123,028表示28,007表示7),那么就称 \\(N\\) 为\"完美约数\"(例如9就是一个\"完美约数\").这样的\"完美约数\"一共有____个.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 5,
+      "year": 2012,
+      "number": 14,
+      "source_dir": "source_pdf",
+      "source_file": "2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.pdf",
+      "exam": {
+        "exam_key": "2012年“迎春杯”数学解题能力展示复赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": "复赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 11,
+      "question_text": "14. (12分)如图,正十二边形和中心白色的正六边形的边长均为12,图中阴影部分的面积\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_011/images/0.jpg)\n\n是_324_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_003/images/1.jpg",
+          "images_y2/problems/source_pdf/五年级/2012/ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_011/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干描述完整可出题，但文本块包含答案和解答，适合练习而非考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json#11#14",
+          "json_path": "source_pdf/五年级/2012/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）.json"
+        }
+      },
+      "text": "14. (12分)如图,正十二边形和中心白色的正六边形的边长均为12,图中阴影部分的面积\n\n![](ocr_debug/2012年“迎春杯”数学解题能力展示复赛试卷（小高组）/pages/page_011/images/0.jpg)\n\n是_324_.",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}

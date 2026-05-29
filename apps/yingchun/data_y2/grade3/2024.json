@@ -1,0 +1,3096 @@
+{
+  "grade": 3,
+  "year": 2024,
+  "total_problems": 77,
+  "problems": [
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(12 \\times 3 - 4 + 56 \\div 7\\) 的计算结果是",
+      "answer_text": "40 【供题】李万成",
+      "solution_text": "\\[12 \\times 3 - 4 + 56 \\div 7 = 36 - 4 + 8 = 40.\\]",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可出题，但直接包含答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（解析版）.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（解析版）.json"
+        }
+      },
+      "text": "1. 算式 \\(12 \\times 3 - 4 + 56 \\div 7\\) 的计算结果是",
+      "answer": "40 【供题】李万成",
+      "solution": "\\[12 \\times 3 - 4 + 56 \\div 7 = 36 - 4 + 8 = 40.\\]"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 1,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(12 \\times 3 - 4 + 56 \\div 7\\) 的计算结果是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#1",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "1. 算式 \\(12 \\times 3 - 4 + 56 \\div 7\\) 的计算结果是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 右图中共能数出 个三角形.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": "8 【供题】王梦博",
+      "solution_text": "![](ocr_debug/2024决赛小中D卷（解析版）/pages/page_001/images/0.jpg)\n\n图中共5块区域,按三角形所含区域数分类:1块的4个,2块的2个;3块的2个.\n\n三角形共 \\(4 + 2 + 2 = 8\\) 个.",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整答案和解析，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（解析版）.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（解析版）.json"
+        }
+      },
+      "text": "2. 右图中共能数出 个三角形.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/0.jpg)",
+      "answer": "8 【供题】王梦博",
+      "solution": "![](ocr_debug/2024决赛小中D卷（解析版）/pages/page_001/images/0.jpg)\n\n图中共5块区域,按三角形所含区域数分类:1块的4个,2块的2个;3块的2个.\n\n三角形共 \\(4 + 2 + 2 = 8\\) 个."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 右图中共能数出 个三角形.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干描述完整，未包含答案或解析信息，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#2",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "2. 右图中共能数出 个三角形.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 正着读和反着读都一样的数称为回文数,如121、9889都\n\n是回文数.如果一个三位回文数和一个四位回文数的和是2024,那么这两个回文数的差是",
+      "answer_text": "1298 【供题】周炬坤",
+      "solution_text": "如右图,百位向千位进位,得 \\(A = 1\\) .由个位 \\(1 + C = 4\\) ,得 \\(C = 3\\)\n\n由百位 \\(B + 3 = 9\\) 或10,得 \\(B = 6\\) 或7;再看十位,知十位向百位进位,\n\n从百位得 \\(B = 6\\) .由十位 \\(6 + D = 12\\) ,得 \\(D = 6\\)\n\n: \\(1661 - 363 = 1298\\)\n\n![](ocr_debug/2024决赛小中D卷（解析版）/pages/page_001/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（解析版）/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（解析版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，直接泄露答案和解题过程，风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（解析版）.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（解析版）.json"
+        }
+      },
+      "text": "3. 正着读和反着读都一样的数称为回文数,如121、9889都\n\n是回文数.如果一个三位回文数和一个四位回文数的和是2024,那么这两个回文数的差是",
+      "answer": "1298 【供题】周炬坤",
+      "solution": "如右图,百位向千位进位,得 \\(A = 1\\) .由个位 \\(1 + C = 4\\) ,得 \\(C = 3\\)\n\n由百位 \\(B + 3 = 9\\) 或10,得 \\(B = 6\\) 或7;再看十位,知十位向百位进位,\n\n从百位得 \\(B = 6\\) .由十位 \\(6 + D = 12\\) ,得 \\(D = 6\\)\n\n: \\(1661 - 363 = 1298\\)\n\n![](ocr_debug/2024决赛小中D卷（解析版）/pages/page_001/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 正着读和反着读都一样的数称为回文数,如121、9889都是回文数.如果一个三位回文数和一个四位回文数的和是2024,那么这两个回文数的差是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的回文数数学题干，没有包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#3",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "3. 正着读和反着读都一样的数称为回文数,如121、9889都是回文数.如果一个三位回文数和一个四位回文数的和是2024,那么这两个回文数的差是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 东海龙王的水晶龙宫墙上嵌有若干颗宝石用于照明,其中红宝石是绿宝石数量的4倍.有一天,龙太子敖丙对墙上的宝石进行施法,他让一半的红宝石变为绿宝石,再让40颗蓝宝石也变为绿宝石.此时绿宝石数量是红宝石的4倍,那么敖丙施法后龙宫里总共有 颗绿宝石.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": "64 【供题】陈景发",
+      "solution_text": "设原来绿宝石数量为1份,则红宝石数量为4份.\n\n施法后,红宝石还有 \\(4 \\div 2 = 2\\) 份,绿宝石变成 \\(1 + 2 = 3\\) 份,最后绿宝石应有 \\(2 \\times 4 = 8\\) 份,那么40颗就是 \\(8 - 3 = 5\\) 份,从而每份 \\(40 \\div 5 = 8\\) 颗.\n\n:最后绿宝石有 \\(8 \\times 8 = 64\\) 颗.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干为独立数学问题，但文本块包含答案和解析，适合练习但不适合考试。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（解析版）.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（解析版）.json"
+        }
+      },
+      "text": "4. 东海龙王的水晶龙宫墙上嵌有若干颗宝石用于照明,其中红宝石是绿宝石数量的4倍.有一天,龙太子敖丙对墙上的宝石进行施法,他让一半的红宝石变为绿宝石,再让40颗蓝宝石也变为绿宝石.此时绿宝石数量是红宝石的4倍,那么敖丙施法后龙宫里总共有 颗绿宝石.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": "64 【供题】陈景发",
+      "solution": "设原来绿宝石数量为1份,则红宝石数量为4份.\n\n施法后,红宝石还有 \\(4 \\div 2 = 2\\) 份,绿宝石变成 \\(1 + 2 = 3\\) 份,最后绿宝石应有 \\(2 \\times 4 = 8\\) 份,那么40颗就是 \\(8 - 3 = 5\\) 份,从而每份 \\(40 \\div 5 = 8\\) 颗.\n\n:最后绿宝石有 \\(8 \\times 8 = 64\\) 颗."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 东海龙王的水晶龙宫墙上嵌有若干颗宝石用于照明,其中红宝石是绿宝石数量的4倍.有一天,龙太子敖丙对墙上的宝石进行施法,他让一半的红宝石变为绿宝石,再让40颗蓝宝石也变为绿宝石.此时绿宝石数量是红宝石的4倍,那么敖丙施法后龙宫里总共有 颗绿宝石.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#4",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "4. 东海龙王的水晶龙宫墙上嵌有若干颗宝石用于照明,其中红宝石是绿宝石数量的4倍.有一天,龙太子敖丙对墙上的宝石进行施法,他让一半的红宝石变为绿宝石,再让40颗蓝宝石也变为绿宝石.此时绿宝石数量是红宝石的4倍,那么敖丙施法后龙宫里总共有 颗绿宝石.\n\n## 二. 填空题II(每小题10分,共40分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 下面一列数字,从第三个数字开始,每个都等于它前面所有数字总和的个位数字.\n\n## 2、0、2、4、8、6、……\n\n那么,这列数字中前100个数字的总和是",
+      "answer_text": "488 【供题】陈曦",
+      "solution_text": "从第4个数字开始,每个数字等于前一个数字2倍的个位数字.\n\n从而从第3个数字开始,按2、4、8、6循环.\n\n\\(100 - 2 = 98\\) , \\(98\\div 4 = 24\\dots 2\\)\n\n:这列数字中前100个数字的总和是 \\(2 + 0 + (2 + 4 + 8 + 6)\\times 24 + 2 + 4 = 488.\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学问题题干，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#5",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "5. 下面一列数字,从第三个数字开始,每个都等于它前面所有数字总和的个位数字.\n\n## 2、0、2、4、8、6、……\n\n那么,这列数字中前100个数字的总和是",
+      "answer": "488 【供题】陈曦",
+      "solution": "从第4个数字开始,每个数字等于前一个数字2倍的个位数字.\n\n从而从第3个数字开始,按2、4、8、6循环.\n\n\\(100 - 2 = 98\\) , \\(98\\div 4 = 24\\dots 2\\)\n\n:这列数字中前100个数字的总和是 \\(2 + 0 + (2 + 4 + 8 + 6)\\times 24 + 2 + 4 = 488.\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "5. 下面一列数字,从第三个数字开始,每个都等于它前面所有数字总和的个位数字.\n\n## 2、0、2、4、8、6、……\n\n那么,这列数字中前100个数字的总和是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，描述了数字序列规则并提问前100个数字的总和，未包含答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#5",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "5. 下面一列数字,从第三个数字开始,每个都等于它前面所有数字总和的个位数字.\n\n## 2、0、2、4、8、6、……\n\n那么,这列数字中前100个数字的总和是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 两个完全一样的长方形如图摆放,如果整个图形的面积是420平方厘米,那么阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": "84 【供题】胡浩",
+      "solution_text": "如图, \\(\\triangle ABC\\) 为等边三角形, \\(\\triangle ACD\\) 为顶角是 \\(120^{\\circ}\\) 的等腰三角形,如图分割知 \\(\\triangle ABC\\) 的面积是 \\(\\triangle ACD\\) 面积的3倍.设 \\(\\triangle ACD\\) 的面积为1份,则 \\(\\triangle ABC\\) 的面积为3份.那么,一个长方形的面积是 \\(3\\times 4 = 12\\) 份,\n\n整个图形的面积是 \\(12\\times 2 - (1 + 3) = 20\\) 份,\n\n从而每份为 \\(420\\div 20 = 21\\) 平方厘米.\n\n阴影部分的面积是 \\(21\\times 4 = 84\\) 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（解析版）/pages/page_002/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学题干，没有出现答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#6",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "6. 两个完全一样的长方形如图摆放,如果整个图形的面积是420平方厘米,那么阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer": "84 【供题】胡浩",
+      "solution": "如图, \\(\\triangle ABC\\) 为等边三角形, \\(\\triangle ACD\\) 为顶角是 \\(120^{\\circ}\\) 的等腰三角形,如图分割知 \\(\\triangle ABC\\) 的面积是 \\(\\triangle ACD\\) 面积的3倍.设 \\(\\triangle ACD\\) 的面积为1份,则 \\(\\triangle ABC\\) 的面积为3份.那么,一个长方形的面积是 \\(3\\times 4 = 12\\) 份,\n\n整个图形的面积是 \\(12\\times 2 - (1 + 3) = 20\\) 份,\n\n从而每份为 \\(420\\div 20 = 21\\) 平方厘米.\n\n阴影部分的面积是 \\(21\\times 4 = 84\\) 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（解析版）/pages/page_002/images/0.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "6. 两个完全一样的长方形如图摆放,如果整个图形的面积是420平方厘米,那么阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整描述数学问题，无答案或解析泄露，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#6",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "6. 两个完全一样的长方形如图摆放,如果整个图形的面积是420平方厘米,那么阴影部分的面积是 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. 李老师将分别写有 \\(1 \\sim 9\\) 的九张卡片平均分给甲、乙、丙三人,每人只能看到自己的三张卡片(6翻转后可以看成9,9翻转后可以看成6).\n\n甲说:你们的数都无法组成形如\" \\(A \\times B = C\\) ( \\(A, B, C\\) 互不相同)\"的乘法等式.\n\n乙说:听了甲的话,我就知道甲手中的三个数分别是多少了.\n\n如果他们都足够聪明且诚实,那么丙手中三个数的乘积是",
+      "answer_text": "35 【供题】李兆伟",
+      "solution_text": "\\(1 \\sim 9\\) 中三个不同数组成的乘法等式只有 \\(2 \\times 3 = 6\\) , \\(2 \\times 4 = 8\\) 这两个.\n\n根据甲的话可知,甲手中三张牌可能是(2、X、X)、(3、4、X)、(3、8、X)、(6、8、\n\n9)、(4、6、9).根据乙的话可知,乙手中的数是(2、3、4)或(2、3、8).\n\n甲对应的是(6、8、9)或(4、6、9),所以丙手中三个数的乘积是 \\(1 \\times 5 \\times 7 = 35\\)",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的逻辑推理数学问题，无答案或解析泄露，可独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#7",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "7. 李老师将分别写有 \\(1 \\sim 9\\) 的九张卡片平均分给甲、乙、丙三人,每人只能看到自己的三张卡片(6翻转后可以看成9,9翻转后可以看成6).\n\n甲说:你们的数都无法组成形如\" \\(A \\times B = C\\) ( \\(A, B, C\\) 互不相同)\"的乘法等式.\n\n乙说:听了甲的话,我就知道甲手中的三个数分别是多少了.\n\n如果他们都足够聪明且诚实,那么丙手中三个数的乘积是",
+      "answer": "35 【供题】李兆伟",
+      "solution": "\\(1 \\sim 9\\) 中三个不同数组成的乘法等式只有 \\(2 \\times 3 = 6\\) , \\(2 \\times 4 = 8\\) 这两个.\n\n根据甲的话可知,甲手中三张牌可能是(2、X、X)、(3、4、X)、(3、8、X)、(6、8、\n\n9)、(4、6、9).根据乙的话可知,乙手中的数是(2、3、4)或(2、3、8).\n\n甲对应的是(6、8、9)或(4、6、9),所以丙手中三个数的乘积是 \\(1 \\times 5 \\times 7 = 35\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "7. 李老师将分别写有 \\(1 \\sim 9\\) 的九张卡片平均分给甲、乙、丙三人,每人只能看到自己的三张卡片(6翻转后可以看成9,9翻转后可以看成6).\n\n甲说:你们的数都无法组成形如\" \\(A \\times B = C\\) ( \\(A, B, C\\) 互不相同)\"的乘法等式.\n\n乙说:听了甲的话,我就知道甲手中的三个数分别是多少了.\n\n如果他们都足够聪明且诚实,那么丙手中三个数的乘积是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，无答案或解析泄露，适合出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#1#7",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "7. 李老师将分别写有 \\(1 \\sim 9\\) 的九张卡片平均分给甲、乙、丙三人,每人只能看到自己的三张卡片(6翻转后可以看成9,9翻转后可以看成6).\n\n甲说:你们的数都无法组成形如\" \\(A \\times B = C\\) ( \\(A, B, C\\) 互不相同)\"的乘法等式.\n\n乙说:听了甲的话,我就知道甲手中的三个数分别是多少了.\n\n如果他们都足够聪明且诚实,那么丙手中三个数的乘积是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 如图,圆环上有9个小球,小球可在圆环上滑动,圆环可翻转.一次操作是指将其中\n\n一个小球取下并放置到圆环上的另外一个位置.现在小球的编号依次是1,1,2,3,4,5,5,6,9,要使得小球的编号变成依次是3,1,4,1,5,9,2,6,5,那么至少要操作\n\n\"422210\"变为\"202412\"\n\n的例子,滑动、翻转不计操作次数)\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题Ⅲ(每小题第1空5分,第2空11分,共48分)",
+      "answer_text": "3 【供题】陈平",
+      "solution_text": "目标状态下,相邻两球的号码有:13,14,14,15,26,29,35,56,59,其中只有56在初始状态下出现.一次操作,新产生的相邻关系至多3对, \\(3 \\times 2 < 8\\) ,∴2次不够,至少3次.可如下3次操作实现目标: \\(112345569 \\rightarrow 113455629 \\rightarrow 141355629 \\rightarrow 514135629\\)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本描述了一个数学竞赛题干，但包含不完整描述和额外例子，无答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#2#8",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "8. 如图,圆环上有9个小球,小球可在圆环上滑动,圆环可翻转.一次操作是指将其中\n\n一个小球取下并放置到圆环上的另外一个位置.现在小球的编号依次是1,1,2,3,4,5,5,6,9,要使得小球的编号变成依次是3,1,4,1,5,9,2,6,5,那么至少要操作\n\n\"422210\"变为\"202412\"\n\n的例子,滑动、翻转不计操作次数)\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题Ⅲ(每小题第1空5分,第2空11分,共48分)",
+      "answer": "3 【供题】陈平",
+      "solution": "目标状态下,相邻两球的号码有:13,14,14,15,26,29,35,56,59,其中只有56在初始状态下出现.一次操作,新产生的相邻关系至多3对, \\(3 \\times 2 < 8\\) ,∴2次不够,至少3次.可如下3次操作实现目标: \\(112345569 \\rightarrow 113455629 \\rightarrow 141355629 \\rightarrow 514135629\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "8. 如图,圆环上有9个小球,小球可在圆环上滑动,圆环可翻转.一次操作是指将其中\n\n一个小球取下并放置到圆环上的另外一个位置.现在小球的编号依次是1,1,2,3,4,5,5,6,9,要使得小球的编号变成依次是3,1,4,1,5,9,2,6,5,那么至少要操作次.(右下图给出了操作一次将\"422210\"变为\"202412\"的例子,滑动、翻转不计操作次数)\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题Ⅲ(每小题第1空5分,第2空11分,共48分)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的数学问题描述，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#2#8",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "8. 如图,圆环上有9个小球,小球可在圆环上滑动,圆环可翻转.一次操作是指将其中\n\n一个小球取下并放置到圆环上的另外一个位置.现在小球的编号依次是1,1,2,3,4,5,5,6,9,要使得小球的编号变成依次是3,1,4,1,5,9,2,6,5,那么至少要操作次.(右下图给出了操作一次将\"422210\"变为\"202412\"的例子,滑动、翻转不计操作次数)\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/0.jpg)\n\n## 三. 填空题Ⅲ(每小题第1空5分,第2空11分,共48分)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 编号为 \\(1 \\sim 2024\\) 的2024个礼物按顺时针方向围成一圈.胡老师和24位同学依次用如下方式取走礼物:\n\n胡老师先取走一个礼物,以后每位同学从前一人取走礼物的下一个编号开始,取走顺时针数到的第2024个礼物.\n\n(1)如果胡老师取走2024号礼物,那么第3位同学取走礼物的编号是\n\n(2)如果第24位同学取走1号礼物,那么胡老师取走礼物的编号是",
+      "answer_text": "(1)6 (2)1725 【供题】胡浩",
+      "solution_text": "(1)第1位同学从1号开始数,数完一圈是2023,再数1到1,他取走1号礼物.\n\n第2位同学从2号开始数,数完一圈是2022,再数2到3,他取走3号礼物.\n\n第3位同学从3号开始数,数完一圈是2021,再数3到6,他取走6号礼物.\n\n(2)假设胡老师取走的是 \\(A\\) 号礼物,第1位同学取走 \\(A + 1\\) 号,第2位同学取走 \\(A + 1 + 2\\) 号,第3位同学取走 \\(A + 1 + 2 + 3\\) 号,\n\n\\(1 + 2 + 3 + \\dots +24 = 300\\) ,而1号礼物相当于 \\(1 + 2024 = 2025\\) 号礼物.\n\n\\(\\therefore A = 2025 - 300 = 1725\\)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学题干，包含问题描述和两个子问题，没有答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#2#9",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "9. 编号为 \\(1 \\sim 2024\\) 的2024个礼物按顺时针方向围成一圈.胡老师和24位同学依次用如下方式取走礼物:\n\n胡老师先取走一个礼物,以后每位同学从前一人取走礼物的下一个编号开始,取走顺时针数到的第2024个礼物.\n\n(1)如果胡老师取走2024号礼物,那么第3位同学取走礼物的编号是\n\n(2)如果第24位同学取走1号礼物,那么胡老师取走礼物的编号是",
+      "answer": "(1)6 (2)1725 【供题】胡浩",
+      "solution": "(1)第1位同学从1号开始数,数完一圈是2023,再数1到1,他取走1号礼物.\n\n第2位同学从2号开始数,数完一圈是2022,再数2到3,他取走3号礼物.\n\n第3位同学从3号开始数,数完一圈是2021,再数3到6,他取走6号礼物.\n\n(2)假设胡老师取走的是 \\(A\\) 号礼物,第1位同学取走 \\(A + 1\\) 号,第2位同学取走 \\(A + 1 + 2\\) 号,第3位同学取走 \\(A + 1 + 2 + 3\\) 号,\n\n\\(1 + 2 + 3 + \\dots +24 = 300\\) ,而1号礼物相当于 \\(1 + 2024 = 2025\\) 号礼物.\n\n\\(\\therefore A = 2025 - 300 = 1725\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "9. 编号为 \\(1 \\sim 2024\\) 的2024个礼物按顺时针方向围成一圈.胡老师和24位同学依次用如下方式取走礼物:\n\n胡老师先取走一个礼物,以后每位同学从前一人取走礼物的下一个编号开始,取走顺时针数到的第2024个礼物.\n\n(1)如果胡老师取走2024号礼物,那么第3位同学取走礼物的编号是\n\n(2)如果第24位同学取走1号礼物,那么胡老师取走礼物的编号是",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学竞赛题干，包含两个子问题，无答案或解析信息，适合用于出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#2#9",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "9. 编号为 \\(1 \\sim 2024\\) 的2024个礼物按顺时针方向围成一圈.胡老师和24位同学依次用如下方式取走礼物:\n\n胡老师先取走一个礼物,以后每位同学从前一人取走礼物的下一个编号开始,取走顺时针数到的第2024个礼物.\n\n(1)如果胡老师取走2024号礼物,那么第3位同学取走礼物的编号是\n\n(2)如果第24位同学取走1号礼物,那么胡老师取走礼物的编号是",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 如图,正方形ABCD被分割成了四部分,其中两个三角形、两个梯形,它们的面积都是整数且恰好构成一个等差数列.已知正方形边长为60厘米,EF长为9厘米.\n\n(1)两个三角形的面积和为 平方厘米.\n\n(2)这四部分中面积最大部分的面积为 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": "(1)1530 (2)1305 【供题】胡球",
+      "solution_text": "(1)两个三角形的面积和为 \\(60\\times (60 - 9)\\div 2 = 1530\\)\n\n(2)设四部分的面积为 \\(S_{1}< S_{2}< S_{3}< S_{4}\\) ,等差数列的公差为 \\(d\\)\n\n1若两个三角形的面积为 \\(S_{1}\\) 和 \\(S_{2}\\) ,则 \\(S_{1} + S_{2}\\) 比 \\(S_{3} + S_{4}\\) 少 \\(4d\\) ,这样 \\(d = 9\\times 60\\div 4 = 135\\) 又 \\(S_{1} + S_{4} = 60\\times 60\\div 2 = 1800\\) ,这样 \\(S_{4} = (1800 + 135\\times 3)\\div 2 = 1102.5\\) ,不是整数,不符合题意.\n\n2若两个三角形的面积为 \\(S_{1}\\) 和 \\(S_{3}\\) ,则 \\(S_{1} + S_{3}\\) 比 \\(S_{2} + S_{4}\\) 少 \\(2d\\) ,这样 \\(d = 9\\times 60\\div 2 = 270\\) 又 \\(S_{1} + S_{4} = 60\\times 60 \\div 2 = 1800\\) ,这样 \\(S_{4} = (1800+270\\times 3)\\div 2 = 1305\\)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，包含具体条件和子问题，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#2#10",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "10. 如图,正方形ABCD被分割成了四部分,其中两个三角形、两个梯形,它们的面积都是整数且恰好构成一个等差数列.已知正方形边长为60厘米,EF长为9厘米.\n\n(1)两个三角形的面积和为 平方厘米.\n\n(2)这四部分中面积最大部分的面积为 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/1.jpg)",
+      "answer": "(1)1530 (2)1305 【供题】胡球",
+      "solution": "(1)两个三角形的面积和为 \\(60\\times (60 - 9)\\div 2 = 1530\\)\n\n(2)设四部分的面积为 \\(S_{1}< S_{2}< S_{3}< S_{4}\\) ,等差数列的公差为 \\(d\\)\n\n1若两个三角形的面积为 \\(S_{1}\\) 和 \\(S_{2}\\) ,则 \\(S_{1} + S_{2}\\) 比 \\(S_{3} + S_{4}\\) 少 \\(4d\\) ,这样 \\(d = 9\\times 60\\div 4 = 135\\) 又 \\(S_{1} + S_{4} = 60\\times 60\\div 2 = 1800\\) ,这样 \\(S_{4} = (1800 + 135\\times 3)\\div 2 = 1102.5\\) ,不是整数,不符合题意.\n\n2若两个三角形的面积为 \\(S_{1}\\) 和 \\(S_{3}\\) ,则 \\(S_{1} + S_{3}\\) 比 \\(S_{2} + S_{4}\\) 少 \\(2d\\) ,这样 \\(d = 9\\times 60\\div 2 = 270\\) 又 \\(S_{1} + S_{4} = 60\\times 60 \\div 2 = 1800\\) ,这样 \\(S_{4} = (1800+270\\times 3)\\div 2 = 1305\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "10. 如图,正方形ABCD被分割成了四部分,其中两个三角形、两个梯形,它们的面积都是整数且恰好构成一个等差数列.已知正方形边长为60厘米,EF长为9厘米.\n\n(1)两个三角形的面积和为 平方厘米.\n\n(2)这四部分中面积最大部分的面积为 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题目是完整的数学竞赛题干，包含几何问题描述和子问题，但未直接给出答案或解析。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#2#10",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "10. 如图,正方形ABCD被分割成了四部分,其中两个三角形、两个梯形,它们的面积都是整数且恰好构成一个等差数列.已知正方形边长为60厘米,EF长为9厘米.\n\n(1)两个三角形的面积和为 平方厘米.\n\n(2)这四部分中面积最大部分的面积为 平方厘米.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": "MIXED",
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 如图,在正方体的一些顶点处各有一只蚂蚁,它们的爬行速度相同且只能沿着正方体的棱爬行,在棱上爬行到达下一个顶点前不能回头,且从未有任两只蚂蚁相遇.\n\n(1)如果在 \\(A\\) 、 \\(B\\) 处各有一只蚂蚁,每只蚂蚁各爬行1条棱,一共有 种不同的爬行情况.\n\n(2)如果在 \\(A\\) 、 \\(C\\) 、 \\(F\\) 处各有一只蚂蚁,每只蚂蚁各爬行2条棱,一共有 种不同的爬行情况.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": "(1)8 (2)121 【供题】王拓斌",
+      "solution_text": "(1)每只蚂蚁各3种选择,但不能同时选择爬向对方.\n\n:不同的爬行情况共 \\(3\\times 3 - 1 = 8\\) 种\n\n(2)考虑爬行第1条棱的情况,三只蚂蚁都只能去 \\(B,D,E,G\\) 三个顶点中的一个,这里注意到 \\(E,D,G\\) 三个点对它们是等价的,所以分情况讨论一下:\n\n\\(①\\) 如果是 \\(B,E,D\\)\n\n若 \\(A\\) 去 \\(B\\) 则 \\(C\\) 去 \\(D\\) , \\(F\\) 去 \\(E\\) ;若 \\(A\\) 去 \\(D\\) 则 \\(C\\) 去 \\(B\\) , \\(F\\) 去 \\(E\\) ;若 \\(A\\) 去 \\(E\\) 则 \\(F\\) 去 \\(B\\)\n\n\\(C\\) 去 \\(D\\) .共3种情况. \\(B,E,G\\) 或 \\(B,D,G\\) 与 \\(B,E,D\\) 同理,也各3种,有 \\(3\\times 3 = 9\\) 种.\n\n\\(②\\) 如果是 \\(D,E,G\\)\n\n若 \\(A\\) 去 \\(D\\) 则 \\(F\\) 去 \\(E\\) , \\(C\\) 去 \\(G\\) ;若 \\(A\\) 去 \\(E\\) 则 \\(F\\) 去 \\(G\\) , \\(C\\) 去 \\(D\\) .共2种情况.\n\n:爬行第1条棱共有 \\(9 + 2 = 11\\) 种情况.\n\n注意到第一次爬行后,三只蚂蚁的相对位置和最初是等价的,从而第二条棱的爬行同样也有11种情况.\n\n:根据乘法原理,不同的爬行情况共 \\(11\\times 11 = 121\\) 种.",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干完整，无答案或解析泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#2#11",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "11. 如图,在正方体的一些顶点处各有一只蚂蚁,它们的爬行速度相同且只能沿着正方体的棱爬行,在棱上爬行到达下一个顶点前不能回头,且从未有任两只蚂蚁相遇.\n\n(1)如果在 \\(A\\) 、 \\(B\\) 处各有一只蚂蚁,每只蚂蚁各爬行1条棱,一共有 种不同的爬行情况.\n\n(2)如果在 \\(A\\) 、 \\(C\\) 、 \\(F\\) 处各有一只蚂蚁,每只蚂蚁各爬行2条棱,一共有 种不同的爬行情况.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/2.jpg)",
+      "answer": "(1)8 (2)121 【供题】王拓斌",
+      "solution": "(1)每只蚂蚁各3种选择,但不能同时选择爬向对方.\n\n:不同的爬行情况共 \\(3\\times 3 - 1 = 8\\) 种\n\n(2)考虑爬行第1条棱的情况,三只蚂蚁都只能去 \\(B,D,E,G\\) 三个顶点中的一个,这里注意到 \\(E,D,G\\) 三个点对它们是等价的,所以分情况讨论一下:\n\n\\(①\\) 如果是 \\(B,E,D\\)\n\n若 \\(A\\) 去 \\(B\\) 则 \\(C\\) 去 \\(D\\) , \\(F\\) 去 \\(E\\) ;若 \\(A\\) 去 \\(D\\) 则 \\(C\\) 去 \\(B\\) , \\(F\\) 去 \\(E\\) ;若 \\(A\\) 去 \\(E\\) 则 \\(F\\) 去 \\(B\\)\n\n\\(C\\) 去 \\(D\\) .共3种情况. \\(B,E,G\\) 或 \\(B,D,G\\) 与 \\(B,E,D\\) 同理,也各3种,有 \\(3\\times 3 = 9\\) 种.\n\n\\(②\\) 如果是 \\(D,E,G\\)\n\n若 \\(A\\) 去 \\(D\\) 则 \\(F\\) 去 \\(E\\) , \\(C\\) 去 \\(G\\) ;若 \\(A\\) 去 \\(E\\) 则 \\(F\\) 去 \\(G\\) , \\(C\\) 去 \\(D\\) .共2种情况.\n\n:爬行第1条棱共有 \\(9 + 2 = 11\\) 种情况.\n\n注意到第一次爬行后,三只蚂蚁的相对位置和最初是等价的,从而第二条棱的爬行同样也有11种情况.\n\n:根据乘法原理,不同的爬行情况共 \\(11\\times 11 = 121\\) 种."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2024决赛小中D卷（B5试卷版）.pdf",
+      "exam": {
+        "exam_key": "2024决赛小中D卷",
+        "doc_type_question": "QUESTION",
+        "doc_type_solution": null,
+        "stage": "决赛",
+        "variant": "D卷",
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "11. 如图,在正方体的一些顶点处各有一只蚂蚁,它们的爬行速度相同且只能沿着正方体的棱爬行,在棱上爬行到达下一个顶点前不能回头,且从未有任两只蚂蚁相遇.\n\n(1)如果在 \\(A\\) 、 \\(B\\) 处各有一只蚂蚁,每只蚂蚁各爬行1条棱,一共有 种不同的爬行情况.\n\n(2)如果在 \\(A\\) 、 \\(C\\) 、 \\(F\\) 处各有一只蚂蚁,每只蚂蚁各爬行2条棱,一共有 种不同的爬行情况.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/三年级/2024年/ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个完整的数学竞赛题干，没有答案或解析信息，适合独立出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json#2#11",
+          "json_path": "source_pdf/三年级/2024年/2024决赛小中D卷（B5试卷版）.json"
+        }
+      },
+      "text": "11. 如图,在正方体的一些顶点处各有一只蚂蚁,它们的爬行速度相同且只能沿着正方体的棱爬行,在棱上爬行到达下一个顶点前不能回头,且从未有任两只蚂蚁相遇.\n\n(1)如果在 \\(A\\) 、 \\(B\\) 处各有一只蚂蚁,每只蚂蚁各爬行1条棱,一共有 种不同的爬行情况.\n\n(2)如果在 \\(A\\) 、 \\(C\\) 、 \\(F\\) 处各有一只蚂蚁,每只蚂蚁各爬行2条棱,一共有 种不同的爬行情况.\n\n![](ocr_debug/2024决赛小中D卷（B5试卷版）/pages/page_002/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(12 \\times 34 \\times 5 - 6 + 7 - 8 - 9\\) 的计算结果是",
+      "answer_text": "2024 【供题】肖婷婷",
+      "solution_text": "\\(12 \\times 34 \\times 5 - 6 + 7 - 8 - \\frac{9}{9} = 2040 - 16 = 2024\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接附有答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "1. 算式 \\(12 \\times 34 \\times 5 - 6 + 7 - 8 - 9\\) 的计算结果是",
+      "answer": "2024 【供题】肖婷婷",
+      "solution": "\\(12 \\times 34 \\times 5 - 6 + 7 - 8 - \\frac{9}{9} = 2040 - 16 = 2024\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 右图中共能数出 个三角形.",
+      "answer_text": "10 【供题】侯佩英",
+      "solution_text": "按三角形所含区域数分类:1块的8个,2块的2个;\n\n:三角形共 \\(8 + 2 = 10\\) 个.\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目本身是可出题的题干，但直接包含答案和解析，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "2. 右图中共能数出 个三角形.",
+      "answer": "10 【供题】侯佩英",
+      "solution": "按三角形所含区域数分类:1块的8个,2块的2个;\n\n:三角形共 \\(8 + 2 = 10\\) 个.\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/images/0.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 下面的算式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字,那么龙行天下表示的四位数是\n\n龙行 \\(\\frac{1}{2} +\\) 行天下 \\(= 2024\\)",
+      "answer_text": "1524 【供题】胡一凡",
+      "solution_text": "如右图,若 \\(A = 2\\) ,则 \\(B = 0\\) ,三位数开头数字为0,不合题意;\n\n所以 \\(A = 1\\) ,百位向千位进位,得 \\(B = 5\\) .由十位 \\(C + D = 2\\) , \\(C \\neq 1\\)\n\n若 \\(C = 2\\) , \\(D = 0\\) , \\(E = 2\\) ,与 \\(C\\) 相同,不合题意;\n\n所以 \\(C = 0\\) , \\(D = 2\\) , \\(E = 4\\)\n\n:龙行天下代表的四位数是1524.\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含了答案和解析，因此有高泄露风险，仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "3. 下面的算式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字,那么龙行天下表示的四位数是\n\n龙行 \\(\\frac{1}{2} +\\) 行天下 \\(= 2024\\)",
+      "answer": "1524 【供题】胡一凡",
+      "solution": "如右图,若 \\(A = 2\\) ,则 \\(B = 0\\) ,三位数开头数字为0,不合题意;\n\n所以 \\(A = 1\\) ,百位向千位进位,得 \\(B = 5\\) .由十位 \\(C + D = 2\\) , \\(C \\neq 1\\)\n\n若 \\(C = 2\\) , \\(D = 0\\) , \\(E = 2\\) ,与 \\(C\\) 相同,不合题意;\n\n所以 \\(C = 0\\) , \\(D = 2\\) , \\(E = 4\\)\n\n:龙行天下代表的四位数是1524.\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 某地7月的31天除了晴天就是雨天.有一颗新种的小树苗,在每个晴天会长高3毫米,在每个雨天会长高2毫米,但连续经过6个晴天,小树苗就会因为干旱而停止生长.那么整个7月小树苗最多长高 毫米.",
+      "answer_text": "88 【供题】刘苗",
+      "solution_text": "想要长得最多,晴天天数尽量多,但不能连续超过6天,则5个晴天1个雨天为一周期,一周期最多可长 \\(3 \\times 5 + 2 = 17\\) 毫米, \\(31 \\div 6 = 5 \\dots 1\\) 天,最多可长高 \\(17 \\times 5 + 3 = 88\\) 毫米.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含标准答案和详细解析，不适合用于考试，但可作为练习题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "4. 某地7月的31天除了晴天就是雨天.有一颗新种的小树苗,在每个晴天会长高3毫米,在每个雨天会长高2毫米,但连续经过6个晴天,小树苗就会因为干旱而停止生长.那么整个7月小树苗最多长高 毫米.",
+      "answer": "88 【供题】刘苗",
+      "solution": "想要长得最多,晴天天数尽量多,但不能连续超过6天,则5个晴天1个雨天为一周期,一周期最多可长 \\(3 \\times 5 + 2 = 17\\) 毫米, \\(31 \\div 6 = 5 \\dots 1\\) 天,最多可长高 \\(17 \\times 5 + 3 = 88\\) 毫米."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "5. 老师来到教室,发现糊糊和涂涂在争吵.两人各有一堆开心果,但现在混到了一起.\n\n糊糊说:\"开始我数过,我的开心果比你的2倍还多1颗.\"\n\n涂涂说:\"后来你吃了22颗,我只吃了2颗,所以我的开心果比你的2倍多1颗.\"\n\n两人说的都是对的.老师根据他们的话把两人的开心果分好了,那么涂涂现在有颗开心果.",
+      "answer_text": "11 【供题】胡球",
+      "solution_text": "后来的糊糊的开心果为1份,则涂涂的开心果为2份加1颗,这样开始时涂涂的开心果为2份加3颗,糊糊的开心果为4份加7颗.所以3份加7颗是22颗,那么1份为5颗.所以涂涂现在有11颗开心果.",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干但直接给出答案和解析，存在高泄漏风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#2#5",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "5. 老师来到教室,发现糊糊和涂涂在争吵.两人各有一堆开心果,但现在混到了一起.\n\n糊糊说:\"开始我数过,我的开心果比你的2倍还多1颗.\"\n\n涂涂说:\"后来你吃了22颗,我只吃了2颗,所以我的开心果比你的2倍多1颗.\"\n\n两人说的都是对的.老师根据他们的话把两人的开心果分好了,那么涂涂现在有颗开心果.",
+      "answer": "11 【供题】胡球",
+      "solution": "后来的糊糊的开心果为1份,则涂涂的开心果为2份加1颗,这样开始时涂涂的开心果为2份加3颗,糊糊的开心果为4份加7颗.所以3份加7颗是22颗,那么1份为5颗.所以涂涂现在有11颗开心果."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "6. 甲、乙、丙、丁、戊、己6人站成 \\(2\\times 3\\) 的队列,已知:第一行的人对第二行的人说假话,第二行的人对第一行的人说真话,同一行的人互相不说话.6人之间有对话如下:\n\n甲对乙说:\"我们都在第二列.\"\n\n乙对丙说:\"我跟第三列的人没有交流.\"\n\n丙对丁说:\"我和你不在同一列.\"\n\n丁对戊说:\"你和乙不在同一列.\"\n\n那么已所在的行数与列数的和是\n\n第第第\n\n1 2 3\n\n列列列\n\n第1行\n\n第2行",
+      "answer_text": "5 【供题】孙奕青",
+      "solution_text": "由题意,甲乙、乙丙、丙丁、丁戊均不同行,所以甲丙戊在同一行,乙丁已在另一行.\n\n若甲丙戊在第二行,则甲和丙说真话,那么甲乙都在第二列,戊不在第二列,那么丁说的是真话,矛盾;\n\n故甲丙戊在第一行,那么甲和丙说假话,说明甲和乙至少一人不在第二列,丙和丁在同一列;乙和丁说真话,所以甲和丙都不在第三列,戊和乙不在同一列;所以乙只能和甲同一列,且不在第二列,那么甲乙只能在第一列.所以丙丁在第二列,所以已在第二行第三列.",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干直接给出了答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "heuristic-only",
+        "review_clean_question_text": "6. 甲、乙、丙、丁、戊、己6人站成 \\(2\\times 3\\) 的队列,已知:第一行的人对第二行的人说假话,第二行的人对第一行的人说真话,同一行的人互相不说话.6人之间有对话如下:  \n\n甲对乙说:\"我们都在第二列.\"  \n\n乙对丙说:\"我跟第三列的人没有交流.\"  \n\n丙对丁说:\"我和你不在同一列.\"  \n\n丁对戊说:\"你和乙不在同一列.\"  \n\n那么已所在的行数与列数的和是  \n\n第第第  \n\n1 2 3  \n\n列列列  \n\n第1行  \n\n第2行",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "6. 甲、乙、丙、丁、戊、己6人站成 \\(2\\times 3\\) 的队列,已知:第一行的人对第二行的人说假话,第二行的人对第一行的人说真话,同一行的人互相不说话.6人之间有对话如下:\n\n甲对乙说:\"我们都在第二列.\"\n\n乙对丙说:\"我跟第三列的人没有交流.\"\n\n丙对丁说:\"我和你不在同一列.\"\n\n丁对戊说:\"你和乙不在同一列.\"\n\n那么已所在的行数与列数的和是\n\n第第第\n\n1 2 3\n\n列列列\n\n第1行\n\n第2行",
+      "answer": "5 【供题】孙奕青",
+      "solution": "由题意,甲乙、乙丙、丙丁、丁戊均不同行,所以甲丙戊在同一行,乙丁已在另一行.\n\n若甲丙戊在第二行,则甲和丙说真话,那么甲乙都在第二列,戊不在第二列,那么丁说的是真话,矛盾;\n\n故甲丙戊在第一行,那么甲和丙说假话,说明甲和乙至少一人不在第二列,丙和丁在同一列;乙和丁说真话,所以甲和丙都不在第三列,戊和乙不在同一列;所以乙只能和甲同一列,且不在第二列,那么甲乙只能在第一列.所以丙丁在第二列,所以已在第二行第三列."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "7. 如图,边长为 24 的大正方形被分成了五个周长相等的长方形,那么阴影长方形的面积是______.\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_003/images/0.jpg)",
+      "answer_text": "160 【供题】胡浩",
+      "solution_text": "周长相等,所以长与宽的和一定,设最上方的长方形宽为 \\(x\\) ,那么长方形的长宽和为 \\(24 + x\\) 所以左侧长方形的两边为 \\(24 - x\\) 和 \\(2x\\) ;下方长方形的两边为 \\(24 - 2x\\) 和 \\(3x\\) ;右侧长方形的两边为 \\(24 - 4x\\) 和 \\(5x\\) ;中心阴影长方形的两边也为 \\(24 - 4x\\) 和 \\(5x\\) ;所以 \\(2x + 5x + 5x = 24\\) ,那么 \\(x = 2\\) ,所以阴影长方形的面积是 \\(16 \\times 10 = 160\\)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含明确答案和详细解析，存在答案泄露风险，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#3#7",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "7. 如图,边长为 24 的大正方形被分成了五个周长相等的长方形,那么阴影长方形的面积是______.\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_003/images/0.jpg)",
+      "answer": "160 【供题】胡浩",
+      "solution": "周长相等,所以长与宽的和一定,设最上方的长方形宽为 \\(x\\) ,那么长方形的长宽和为 \\(24 + x\\) 所以左侧长方形的两边为 \\(24 - x\\) 和 \\(2x\\) ;下方长方形的两边为 \\(24 - 2x\\) 和 \\(3x\\) ;右侧长方形的两边为 \\(24 - 4x\\) 和 \\(5x\\) ;中心阴影长方形的两边也为 \\(24 - 4x\\) 和 \\(5x\\) ;所以 \\(2x + 5x + 5x = 24\\) ,那么 \\(x = 2\\) ,所以阴影长方形的面积是 \\(16 \\times 10 = 160\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "8. 将 1、2、3、4、5、6、7、8 这八个数字分别填到一个固定好的正方体的八个顶点上,要求同一条棱上的两个数之和小于 12,那么共有______种不同的填法.",
+      "answer_text": "288 【供题】周炬坤",
+      "solution_text": "任选一个顶点填 8,有 8 种填法;不妨设 \\(A = 8\\) ,和 8 相加小于 12 的只有 1,2,3,三个数必须都与 8 相邻,分别填入 \\(B\\) 、 \\(D\\) 、 \\(E\\) ,有 6 种填法;再填 7,7 只能填在 \\(C\\) 、 \\(F\\) 、 \\(H\\) 中,有 3 种填法;7 只能与 4 相邻, \\(G = 4\\) ;最后填 5 和 6,有 2 种填法,总计 \\(8 \\times 6 \\times 3 \\times 2 = 288\\) 种填法.\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_003/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_003/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_003/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是一个完整的数学问题，但文本块中包含答案和解析，因此只能用于练习。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#3#8",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "8. 将 1、2、3、4、5、6、7、8 这八个数字分别填到一个固定好的正方体的八个顶点上,要求同一条棱上的两个数之和小于 12,那么共有______种不同的填法.",
+      "answer": "288 【供题】周炬坤",
+      "solution": "任选一个顶点填 8,有 8 种填法;不妨设 \\(A = 8\\) ,和 8 相加小于 12 的只有 1,2,3,三个数必须都与 8 相邻,分别填入 \\(B\\) 、 \\(D\\) 、 \\(E\\) ,有 6 种填法;再填 7,7 只能填在 \\(C\\) 、 \\(F\\) 、 \\(H\\) 中,有 3 种填法;7 只能与 4 相邻, \\(G = 4\\) ;最后填 5 和 6,有 2 种填法,总计 \\(8 \\times 6 \\times 3 \\times 2 = 288\\) 种填法.\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_003/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "9. 如图,正六边形ABCDEF中,以 \\(AB\\) 为边长向内作正方形ABGH, \\(CG\\) 与FH交于点 \\(M\\)\n\n(1)如果正六边形ABCDEF的边长是20,那么三角形AFH的面积是\n\n(2)如果正六边形ABCDEF的面积是24,那么阴影部分面积之和是\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_004/images/0.jpg)",
+      "answer_text": "(1)100 (2)16 【供题】陈景发",
+      "solution_text": "(1) \\(F C = 2A B = 40\\) , \\(N K = 20\\) ,所以 \\(F N = C K = 10\\) ,三角形AFH的面积为 \\(20\\times 10\\div 2 = 100\\)\n\n(2)因为 \\(S_{\\triangle H E M} = S_{\\triangle H E O} = S_{\\triangle H E F}\\) ,同理 \\(S_{\\triangle C G D} = S_{\\triangle G D O} = S_{\\triangle G D M}\\) ,由于三角形HEM和三角形GDM的面积和为长方形GDHE面积的一半,因此\n\n\\[S_{\\triangle C D M} + S_{\\triangle M E F} = S_{\\triangle G D E H},\\]\n\n所以 \\(S_{\\mathrm{阴影}} = S_{\\mathrm{GDEH}} + S_{\\mathrm{ABGH}} = S_{\\mathrm{ABDE}} = 24\\div 3\\times 2 = 16\\)\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_004/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接包含了答案和详细解析，存在高风险泄露，不适合用于考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#4#9",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "9. 如图,正六边形ABCDEF中,以 \\(AB\\) 为边长向内作正方形ABGH, \\(CG\\) 与FH交于点 \\(M\\)\n\n(1)如果正六边形ABCDEF的边长是20,那么三角形AFH的面积是\n\n(2)如果正六边形ABCDEF的面积是24,那么阴影部分面积之和是\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_004/images/0.jpg)",
+      "answer": "(1)100 (2)16 【供题】陈景发",
+      "solution": "(1) \\(F C = 2A B = 40\\) , \\(N K = 20\\) ,所以 \\(F N = C K = 10\\) ,三角形AFH的面积为 \\(20\\times 10\\div 2 = 100\\)\n\n(2)因为 \\(S_{\\triangle H E M} = S_{\\triangle H E O} = S_{\\triangle H E F}\\) ,同理 \\(S_{\\triangle C G D} = S_{\\triangle G D O} = S_{\\triangle G D M}\\) ,由于三角形HEM和三角形GDM的面积和为长方形GDHE面积的一半,因此\n\n\\[S_{\\triangle C D M} + S_{\\triangle M E F} = S_{\\triangle G D E H},\\]\n\n所以 \\(S_{\\mathrm{阴影}} = S_{\\mathrm{GDEH}} + S_{\\mathrm{ABGH}} = S_{\\mathrm{ABDE}} = 24\\div 3\\times 2 = 16\\)\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_004/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "10. 坤坤对 \\(3\\times 3\\) 的方格表按顺序完成下列3个操作,称为完成了1组操作:\n\n\\(①\\) 选择一个格子让格子中的数变为0;\n\n\\(②\\) 选择两个不同格子让每个格子中的数增加2;\n\n\\(③\\) 选择一行和一列,让该行和该列包含的5个格子中的数都增加1.\n\n在操作过程中要求任意时刻不能出现两位数,那么\n\n<table><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr></table>\n\n(1)坤坤对左表进行1组操作后,表中所有数总和至多是\n\n(2)坤坤将左表至少进行 组操作后,才能变为右表.",
+      "answer_text": "(1)53 (2)3 【供题】周炬坤",
+      "solution_text": "(1)每一组操作中, \\(②③\\) 使得所有数总和一共增大9, \\(①\\) 使得所有数总和减少,至少减少1, \\(\\therefore\\) 所有数总和至多是 \\(45 + 9 - 1 = 53\\)\n\n(2)每一组操作中, \\(②③\\) 使得所有数之和一共增大9, \\(①\\) 使得所有数之和最多减少9,而左侧9数之和与右侧9数之和相等,故每一次 \\(①\\) 操作都是将9变为0;\n\n左右对应格变化为:5,3,1,5,3,1,- 6,- 6,- 6,所以后三格都经历了9变为0的操作,对应格至少要增大:5,3,1,5,3,1,3,3,3,总计增大27,而每次增大总量都恰好是9,故至少进行3组操作.",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干后直接附有答案和解析，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#4#10",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "10. 坤坤对 \\(3\\times 3\\) 的方格表按顺序完成下列3个操作,称为完成了1组操作:\n\n\\(①\\) 选择一个格子让格子中的数变为0;\n\n\\(②\\) 选择两个不同格子让每个格子中的数增加2;\n\n\\(③\\) 选择一行和一列,让该行和该列包含的5个格子中的数都增加1.\n\n在操作过程中要求任意时刻不能出现两位数,那么\n\n<table><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td></tr></table>\n\n(1)坤坤对左表进行1组操作后,表中所有数总和至多是\n\n(2)坤坤将左表至少进行 组操作后,才能变为右表.",
+      "answer": "(1)53 (2)3 【供题】周炬坤",
+      "solution": "(1)每一组操作中, \\(②③\\) 使得所有数总和一共增大9, \\(①\\) 使得所有数总和减少,至少减少1, \\(\\therefore\\) 所有数总和至多是 \\(45 + 9 - 1 = 53\\)\n\n(2)每一组操作中, \\(②③\\) 使得所有数之和一共增大9, \\(①\\) 使得所有数之和最多减少9,而左侧9数之和与右侧9数之和相等,故每一次 \\(①\\) 操作都是将9变为0;\n\n左右对应格变化为:5,3,1,5,3,1,- 6,- 6,- 6,所以后三格都经历了9变为0的操作,对应格至少要增大:5,3,1,5,3,1,3,3,3,总计增大27,而每次增大总量都恰好是9,故至少进行3组操作."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年7月27日迎春杯小中组答案解析版本.pdf",
+      "exam": {
+        "exam_key": "2024年7月27日迎春杯小中组",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "11. 一个表盘上只有一个指针,初始时指向12,小字可以顺时针或逆时针转动指针.小字共转了5次,第一次转动后指针指向整数 \\(A\\) ,第二次转动后指针指向整数 \\(B\\) ,第三次转动后指针指向整数 \\(C\\) ,第四次转动后指针指向整数 \\(D\\) ,第五次转动后指针指向整数 \\(E\\) ,已知:\n\n\\(①\\) 这五次转动的格数恰是5个连续自然数的某个排列;\n\n\\(②\\) 某一次转动了5格;\n\n\\(③\\) \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 可能相同,其中只有 \\(D\\) 是奇数,且 \\(B = 6\\)\n\n(1) \\(C =\\)\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_005/images/0.jpg)\n\n(2) \\(A\\times B\\times C\\times D\\times E\\) 的结果有 种不同取值.",
+      "answer_text": "(1)12 (2)27 【供题】张宇平",
+      "solution_text": "(1)只有第四次转动后指向的数字是奇数,那么五次转动的格数一定是两奇三偶,又有一次转动了5格,则只能为23456或45678,且前三次转动格数为偶数,后两次转动格数为奇数;又因为第二次转动后指针指向6,排除45678,五次转动格数只能为23456,那么前两次共转动 \\(2 + 4 = 6\\) 格,第三次转动后仍为偶数,则第三次转6格,指向12.\n\n(2)第一次转动后指向的数可能是10,2,8,4;最后两次分别转3格和5格,\n\n可能指向的数有(9,4),(9,2),(7,10),(7,4),(3,8),(3,10),(5,2),(5,8)\n\n与第一次转动后指向的数所有组合共 \\(4\\times 8 = 32\\) 种,但 \\(2\\times 4\\times 9,2\\times 5\\times 8,3\\times 8\\times 10,4\\times\\) \\(7\\times 10\\) 都被计算了两次,另外 \\(4\\times 4\\times 9\\) 与 \\(2\\times 8\\times 9\\) 结果相同,因此有 \\(32 - 5 = 27\\) 种不同的乘积.",
+      "topic": "algebra",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_005/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，因此不能用于考试，只能用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json#5#11",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年7月27日迎春杯小中组答案解析版本.json"
+        }
+      },
+      "text": "11. 一个表盘上只有一个指针,初始时指向12,小字可以顺时针或逆时针转动指针.小字共转了5次,第一次转动后指针指向整数 \\(A\\) ,第二次转动后指针指向整数 \\(B\\) ,第三次转动后指针指向整数 \\(C\\) ,第四次转动后指针指向整数 \\(D\\) ,第五次转动后指针指向整数 \\(E\\) ,已知:\n\n\\(①\\) 这五次转动的格数恰是5个连续自然数的某个排列;\n\n\\(②\\) 某一次转动了5格;\n\n\\(③\\) \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 可能相同,其中只有 \\(D\\) 是奇数,且 \\(B = 6\\)\n\n(1) \\(C =\\)\n\n![](ocr_debug/2024年7月27日迎春杯小中组答案解析版本/pages/page_005/images/0.jpg)\n\n(2) \\(A\\times B\\times C\\times D\\times E\\) 的结果有 种不同取值.",
+      "answer": "(1)12 (2)27 【供题】张宇平",
+      "solution": "(1)只有第四次转动后指向的数字是奇数,那么五次转动的格数一定是两奇三偶,又有一次转动了5格,则只能为23456或45678,且前三次转动格数为偶数,后两次转动格数为奇数;又因为第二次转动后指针指向6,排除45678,五次转动格数只能为23456,那么前两次共转动 \\(2 + 4 = 6\\) 格,第三次转动后仍为偶数,则第三次转6格,指向12.\n\n(2)第一次转动后指向的数可能是10,2,8,4;最后两次分别转3格和5格,\n\n可能指向的数有(9,4),(9,2),(7,10),(7,4),(3,8),(3,10),(5,2),(5,8)\n\n与第一次转动后指向的数所有组合共 \\(4\\times 8 = 32\\) 种,但 \\(2\\times 4\\times 9,2\\times 5\\times 8,3\\times 8\\times 10,4\\times\\) \\(7\\times 10\\) 都被计算了两次,另外 \\(4\\times 4\\times 9\\) 与 \\(2\\times 8\\times 9\\) 结果相同,因此有 \\(32 - 5 = 27\\) 种不同的乘积."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 1,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "1. 算式 \\(12 \\times 3 - 4 + 56 \\div 7\\) 的计算结果是",
+      "answer_text": "40",
+      "solution_text": "\\[12 \\times 3 - 4 + 56 \\div 7 = 36 - 4 + 8 = 40.\\]",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立但直接包含答案和解析，泄露风险高。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#1#1",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "1. 算式 \\(12 \\times 3 - 4 + 56 \\div 7\\) 的计算结果是",
+      "answer": "40",
+      "solution": "\\[12 \\times 3 - 4 + 56 \\div 7 = 36 - 4 + 8 = 40.\\]"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 2,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "2. 右图中共能数出 个三角形.",
+      "answer_text": "8",
+      "solution_text": "![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/images/0.jpg)\n\n图中共5块区域,按三角形所含区域数分类:1块的4个,2块的2个;3块的2个.\n\n三角形共 \\(4 + 2 + 2 = 8\\) 个.",
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题目、答案和解析，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#1#2",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "2. 右图中共能数出 个三角形.",
+      "answer": "8",
+      "solution": "![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/images/0.jpg)\n\n图中共5块区域,按三角形所含区域数分类:1块的4个,2块的2个;3块的2个.\n\n三角形共 \\(4 + 2 + 2 = 8\\) 个."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 3,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "3. 正着读和反着读都一样的数称为回文数,如121、9889都是回文数.如果一个三位回文数和一个四位回文数的和是2024,那么这两个回文数的差是",
+      "answer_text": "1298",
+      "solution_text": "如右图,百位向千位进位,得 \\(A = 1\\) .由个位 \\(1 + C = 4\\) ,得 \\(C = 3\\)\n\n由百位 \\(B + 3 = 9\\) 或10,得 \\(B = 6\\) 或7;再看十位,知十位向百位进位,\n\n从百位得 \\(B = 6\\) .由十位 \\(6 + D = 12\\) ,得 \\(D = 6\\)\n\n: \\(1661 - 363 = 1298\\)\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/images/1.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整但包含答案和解析，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#1#3",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "3. 正着读和反着读都一样的数称为回文数,如121、9889都是回文数.如果一个三位回文数和一个四位回文数的和是2024,那么这两个回文数的差是",
+      "answer": "1298",
+      "solution": "如右图,百位向千位进位,得 \\(A = 1\\) .由个位 \\(1 + C = 4\\) ,得 \\(C = 3\\)\n\n由百位 \\(B + 3 = 9\\) 或10,得 \\(B = 6\\) 或7;再看十位,知十位向百位进位,\n\n从百位得 \\(B = 6\\) .由十位 \\(6 + D = 12\\) ,得 \\(D = 6\\)\n\n: \\(1661 - 363 = 1298\\)\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 4,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 1,
+      "question_text": "4. 东海龙王的水晶龙宫墙上嵌有若干颗宝石用于照明,其中红宝石是绿宝石数量的4倍.有一天,龙太子敖丙对墙上的宝石进行施法,他让一半的红宝石变为绿宝石,再让40颗蓝宝石也变为绿宝石.此时绿宝石数量是红宝石的4倍,那么敖丙施法后龙宫里总共有颗绿宝石.",
+      "answer_text": "64",
+      "solution_text": "设原来绿宝石数量为1份,则红宝石数量为4份.\n\n施法后,红宝石还有 \\(4 \\div 2 = 2\\) 份,绿宝石变成 \\(1 + 2 = 3\\) 份,最后绿宝石应有 \\(2 \\times 4 = 8\\) 份,那么40颗就是 \\(8 - 3 = 5\\) 份,从而每份 \\(40 \\div 5 = 8\\) 颗.\n\n:最后绿宝石有 \\(8 \\times 8 = 64\\) 颗.",
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含完整的题干、答案和解析，答案和解析直接出现在文本中，存在高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#1#4",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "4. 东海龙王的水晶龙宫墙上嵌有若干颗宝石用于照明,其中红宝石是绿宝石数量的4倍.有一天,龙太子敖丙对墙上的宝石进行施法,他让一半的红宝石变为绿宝石,再让40颗蓝宝石也变为绿宝石.此时绿宝石数量是红宝石的4倍,那么敖丙施法后龙宫里总共有颗绿宝石.",
+      "answer": "64",
+      "solution": "设原来绿宝石数量为1份,则红宝石数量为4份.\n\n施法后,红宝石还有 \\(4 \\div 2 = 2\\) 份,绿宝石变成 \\(1 + 2 = 3\\) 份,最后绿宝石应有 \\(2 \\times 4 = 8\\) 份,那么40颗就是 \\(8 - 3 = 5\\) 份,从而每份 \\(40 \\div 5 = 8\\) 颗.\n\n:最后绿宝石有 \\(8 \\times 8 = 64\\) 颗."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 5,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "5. 下面一列数字,从第三个数字开始,每个都等于它前面所有数字总和的个位数字.\n\n## 2、0、2、4、8、6、……\n\n那么,这列数字中前100个数字的总和是",
+      "answer_text": "488",
+      "solution_text": "从第4个数字开始,每个数字等于前一个数字2倍的个位数字.\n\n从而从第3个数字开始,按2、4、8、6循环.\n\n\\(100 - 2 = 98\\) , \\(98\\div 4 = 24\\dots 2\\)\n\n:这列数字中前100个数字的总和是 \\(2 + 0 + (2 + 4 + 8 + 6)\\times 24 + 2 + 4 = 488.\\)",
+      "topic": "arithmetic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#2#5",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "5. 下面一列数字,从第三个数字开始,每个都等于它前面所有数字总和的个位数字.\n\n## 2、0、2、4、8、6、……\n\n那么,这列数字中前100个数字的总和是",
+      "answer": "488",
+      "solution": "从第4个数字开始,每个数字等于前一个数字2倍的个位数字.\n\n从而从第3个数字开始,按2、4、8、6循环.\n\n\\(100 - 2 = 98\\) , \\(98\\div 4 = 24\\dots 2\\)\n\n:这列数字中前100个数字的总和是 \\(2 + 0 + (2 + 4 + 8 + 6)\\times 24 + 2 + 4 = 488.\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 6,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "6. 两个完全一样的长方形如图摆放,如果整个图形的面积是420平方厘米,那么阴影部分的面积是 平方厘米.",
+      "answer_text": "84",
+      "solution_text": "如图, \\(\\triangle ABC\\) 为等边三角形, \\(\\triangle ACD\\) 为顶角是 \\(120^{\\circ}\\) 的等腰三角形,如图分割知 \\(\\triangle ABC\\) 的面积是 \\(\\triangle ACD\\) 面积的3倍.设 \\(\\triangle ACD\\) 的面积为1份,则 \\(\\triangle ABC\\) 的面积为3份.\n\n整个图形的面积是 \\(12\\times 2 - (1 + 3) = 20\\) 份,\n\n从而每份为 \\(420\\div 20 = 21\\) 平方厘米.\n\n阴影部分的面积是 \\(21\\times 4 = 84\\) 平方厘米.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_002/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_002/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是完整的数学问题，但直接给出了答案和解析，存在泄露风险，适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#2#6",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "6. 两个完全一样的长方形如图摆放,如果整个图形的面积是420平方厘米,那么阴影部分的面积是 平方厘米.",
+      "answer": "84",
+      "solution": "如图, \\(\\triangle ABC\\) 为等边三角形, \\(\\triangle ACD\\) 为顶角是 \\(120^{\\circ}\\) 的等腰三角形,如图分割知 \\(\\triangle ABC\\) 的面积是 \\(\\triangle ACD\\) 面积的3倍.设 \\(\\triangle ACD\\) 的面积为1份,则 \\(\\triangle ABC\\) 的面积为3份.\n\n整个图形的面积是 \\(12\\times 2 - (1 + 3) = 20\\) 份,\n\n从而每份为 \\(420\\div 20 = 21\\) 平方厘米.\n\n阴影部分的面积是 \\(21\\times 4 = 84\\) 平方厘米.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_002/images/0.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 7,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 2,
+      "question_text": "7. 李老师将分别写有 \\(1\\sim 9\\) 的九张卡片平均分给甲、乙、丙三人,每人只能看到自己的三张卡片(6翻转后可以看成9,9翻转后可以看成6).\n\n甲说:你们的数都无法组成形如\" \\(A\\times B = C\\) ( \\(A,B,C\\) 互不相同)\"的乘法等式.\n\n乙说:听了甲的话,我就知道甲手中的三个数分别是多少了.\n\n如果他们都足够聪明且诚实,那么丙手中三个数的乘积是",
+      "answer_text": "35",
+      "solution_text": "\\(1\\sim 9\\) 中三个不同数组成的乘法等式只有 \\(2\\times 3 = 6\\) 、 \\(2\\times 4 = 8\\) 这两个.\n\n根据甲的话可知,甲手中三张牌可能是(2、X、X)、(3、4、X)、(3、8、X)、(6、8、\n\n9)、(4、6、9).根据乙的话可知,乙手中的数是(2、3、4)或(2、3、8).\n\n甲对应的是(6、8、9)或(4、6、9),所以丙手中三个数的乘积是 \\(1\\times 5\\times 7 = 35\\)",
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整的题干、答案和解析，直接用于考试会泄露答案，因此适合仅作为练习材料。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#2#7",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "7. 李老师将分别写有 \\(1\\sim 9\\) 的九张卡片平均分给甲、乙、丙三人,每人只能看到自己的三张卡片(6翻转后可以看成9,9翻转后可以看成6).\n\n甲说:你们的数都无法组成形如\" \\(A\\times B = C\\) ( \\(A,B,C\\) 互不相同)\"的乘法等式.\n\n乙说:听了甲的话,我就知道甲手中的三个数分别是多少了.\n\n如果他们都足够聪明且诚实,那么丙手中三个数的乘积是",
+      "answer": "35",
+      "solution": "\\(1\\sim 9\\) 中三个不同数组成的乘法等式只有 \\(2\\times 3 = 6\\) 、 \\(2\\times 4 = 8\\) 这两个.\n\n根据甲的话可知,甲手中三张牌可能是(2、X、X)、(3、4、X)、(3、8、X)、(6、8、\n\n9)、(4、6、9).根据乙的话可知,乙手中的数是(2、3、4)或(2、3、8).\n\n甲对应的是(6、8、9)或(4、6、9),所以丙手中三个数的乘积是 \\(1\\times 5\\times 7 = 35\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 8,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "8. 如图,圆环上有9个小球,小球可在圆环上滑动,圆环可翻转.一次操作是指将其中一个小球取下并放置到圆环上的另外一个位置.现在小球的编号依次是1,1,2,3,4,5,5,6,9,要使得小球的编号变成依次是3,1,4,1,5,9,2,6,5,那么至少要操作次.(右下图给出了操作一次将\"422210\"变为\"202412\"的例子,滑动、翻转不计操作次数)\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_003/images/0.jpg)",
+      "answer_text": "3",
+      "solution_text": "目标状态下,相邻两球的号码有:13,14,14,15,26,29,35,56,59,其中只有56在初始状态下出现.一次操作,新产生的相邻关系至多3对, \\(3\\times 2< 8\\) , \\(\\therefore 2\\) 次不够,至少3次.可如下3次操作实现目标: \\(112345569\\rightarrow 113455629\\rightarrow 141355629\\rightarrow 514135629\\)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_003/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目为完整题干，但直接包含答案和解析，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#3#8",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "8. 如图,圆环上有9个小球,小球可在圆环上滑动,圆环可翻转.一次操作是指将其中一个小球取下并放置到圆环上的另外一个位置.现在小球的编号依次是1,1,2,3,4,5,5,6,9,要使得小球的编号变成依次是3,1,4,1,5,9,2,6,5,那么至少要操作次.(右下图给出了操作一次将\"422210\"变为\"202412\"的例子,滑动、翻转不计操作次数)\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_003/images/0.jpg)",
+      "answer": "3",
+      "solution": "目标状态下,相邻两球的号码有:13,14,14,15,26,29,35,56,59,其中只有56在初始状态下出现.一次操作,新产生的相邻关系至多3对, \\(3\\times 2< 8\\) , \\(\\therefore 2\\) 次不够,至少3次.可如下3次操作实现目标: \\(112345569\\rightarrow 113455629\\rightarrow 141355629\\rightarrow 514135629\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 9,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 3,
+      "question_text": "9. 编号为 \\(1\\sim 2024\\) 的2024个礼物按顺时针方向围成一圈.胡老师和24位同学依次用如下方式取走礼物:\n\n胡老师先取走一个礼物,以后每位同学从前一人取走礼物的下一个编号开始,取走顺时针数到的第2024个礼物.\n\n(1)如果胡老师取走2024号礼物,那么第3位同学取走礼物的编号是\n\n(2)如果第24位同学取走1号礼物,那么胡老师取走礼物的编号是",
+      "answer_text": "(1)6 (2)1725",
+      "solution_text": "(1)第1位同学从1号开始数,数完一圈是2023,再数1到1,他取走1号礼物.第2位同学从2号开始数,数完一圈是2022,再数2到3,他取走3号礼物.第3位同学从3号开始数,数完一圈是2021,再数3到6,他取走6号礼物.\n\n(2)假设胡老师取走的是 \\(A\\) 号礼物,第1位同学取走 \\(A + 1\\) 号,第2位同学取走 \\(A + 1 + 2\\) 号,第3位同学取走 \\(A + 1 + 2 + 3\\) 号,\n\n\\(1 + 2 + 3 + \\dots +24 = 300\\) ,而1号礼物相当于 \\(1 + 2024 = 2025\\) 号礼物.\n\n\\(\\therefore A = 2025 - 300 = 1725\\)",
+      "topic": "logic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_003.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_003/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的题目、答案和解析，适合作为练习材料，但不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#3#9",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "9. 编号为 \\(1\\sim 2024\\) 的2024个礼物按顺时针方向围成一圈.胡老师和24位同学依次用如下方式取走礼物:\n\n胡老师先取走一个礼物,以后每位同学从前一人取走礼物的下一个编号开始,取走顺时针数到的第2024个礼物.\n\n(1)如果胡老师取走2024号礼物,那么第3位同学取走礼物的编号是\n\n(2)如果第24位同学取走1号礼物,那么胡老师取走礼物的编号是",
+      "answer": "(1)6 (2)1725",
+      "solution": "(1)第1位同学从1号开始数,数完一圈是2023,再数1到1,他取走1号礼物.第2位同学从2号开始数,数完一圈是2022,再数2到3,他取走3号礼物.第3位同学从3号开始数,数完一圈是2021,再数3到6,他取走6号礼物.\n\n(2)假设胡老师取走的是 \\(A\\) 号礼物,第1位同学取走 \\(A + 1\\) 号,第2位同学取走 \\(A + 1 + 2\\) 号,第3位同学取走 \\(A + 1 + 2 + 3\\) 号,\n\n\\(1 + 2 + 3 + \\dots +24 = 300\\) ,而1号礼物相当于 \\(1 + 2024 = 2025\\) 号礼物.\n\n\\(\\therefore A = 2025 - 300 = 1725\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 10,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "10. 如图,正方形 \\(ABCD\\) 被分割成了四部分,其中两个三角形、两个梯形,它们的面积都是整数且恰好构成一个等差数列.已知正方形边长为60厘米, \\(EF\\) 长为9厘米.\n\n(1)两个三角形的面积和为 平方厘米.\n\n(2)这四部分中面积最大部分的面积为 平方厘米.",
+      "answer_text": "(1)1530 (2)1305",
+      "solution_text": "(1)两个三角形的面积和为 \\(60\\times (60 - 9)\\div 2 = 1530\\)\n\n(2)设四部分的面积为 \\(S_{1}< S_{2}< S_{3}< S_{4}\\) ,等差数列的公差为 \\(d\\)\n\n\\(①\\) 若两个三角形的面积为 \\(S_{1}\\) 和 \\(S_{2}\\) ,则 \\(S_{1} + S_{2}\\) 比 \\(S_{3} + S_{4}\\) 少 \\(4d\\) ,这样 \\(d = 9\\times 60\\div 4 = 135\\) 又 \\(S_{1} + S_{4} = 60\\times 60\\div 2 = 1800\\) ,这样 \\(S_{4} = (1800 + 135\\times 3)\\div 2 = 1102.5\\) ,不是整数,不符合题意.\n\n\\(②\\) 若两个三角形的面积为 \\(S_{1}\\) 和 \\(S_{3}\\) ,则 \\(S_{1} + S_{3}\\) 比 \\(S_{2} + S_{4}\\) 少 \\(2d\\) ,这样 \\(d = 9\\times 60\\div 2 = 270\\) 又 \\(S_{1} + S_{4} = 60\\times 60 + 2 = 1800\\) ,这样 \\(S_{4} = (1800 +270\\times 3)\\div 2 = 1305\\)",
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_004/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_004/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干包含完整答案和解析，有高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#4#10",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "10. 如图,正方形 \\(ABCD\\) 被分割成了四部分,其中两个三角形、两个梯形,它们的面积都是整数且恰好构成一个等差数列.已知正方形边长为60厘米, \\(EF\\) 长为9厘米.\n\n(1)两个三角形的面积和为 平方厘米.\n\n(2)这四部分中面积最大部分的面积为 平方厘米.",
+      "answer": "(1)1530 (2)1305",
+      "solution": "(1)两个三角形的面积和为 \\(60\\times (60 - 9)\\div 2 = 1530\\)\n\n(2)设四部分的面积为 \\(S_{1}< S_{2}< S_{3}< S_{4}\\) ,等差数列的公差为 \\(d\\)\n\n\\(①\\) 若两个三角形的面积为 \\(S_{1}\\) 和 \\(S_{2}\\) ,则 \\(S_{1} + S_{2}\\) 比 \\(S_{3} + S_{4}\\) 少 \\(4d\\) ,这样 \\(d = 9\\times 60\\div 4 = 135\\) 又 \\(S_{1} + S_{4} = 60\\times 60\\div 2 = 1800\\) ,这样 \\(S_{4} = (1800 + 135\\times 3)\\div 2 = 1102.5\\) ,不是整数,不符合题意.\n\n\\(②\\) 若两个三角形的面积为 \\(S_{1}\\) 和 \\(S_{3}\\) ,则 \\(S_{1} + S_{3}\\) 比 \\(S_{2} + S_{4}\\) 少 \\(2d\\) ,这样 \\(d = 9\\times 60\\div 2 = 270\\) 又 \\(S_{1} + S_{4} = 60\\times 60 + 2 = 1800\\) ,这样 \\(S_{4} = (1800 +270\\times 3)\\div 2 = 1305\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 11,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 4,
+      "question_text": "11. 如图,在正方体的一些顶点处各有一只蚂蚁,它们的爬行速度相同且只能沿着正方体的棱爬行,在棱上爬行到达下一个顶点前不能回头,且从未有任两只蚂蚁相遇.\n\n(1)如果在 \\(A\\) 、 \\(B\\) 处各有一只蚂蚁,每只蚂蚁各爬行1条棱,一共有 种不同的爬行情况.\n\n(2)如果在 \\(A\\) 、 \\(C\\) 、 \\(F\\) 处各有一只蚂蚁,每只蚂蚁各爬行2条棱,一共有 种不同的爬行情况.",
+      "answer_text": "(1)8 (2)121",
+      "solution_text": "(1)每只蚂蚁各3种选择,但不能同时选择爬向对方.\n\n:不同的爬行情况共 \\(3\\times 3 - 1 = 8\\) 种\n\n(2)考虑爬行第1条棱的情况,三只蚂蚁都只能去 \\(B,D,E,G\\) 三个顶点中的一个,这里注意到 \\(E,D,G\\) 三个点对它们是等价的,所以分情况讨论一下:\n\n\\(①\\) 如果是 \\(B,E,D\\)\n\n若 \\(A\\) 去 \\(B\\) 则 \\(C\\) 去 \\(D\\) , \\(F\\) 去 \\(E\\) ;若 \\(A\\) 去 \\(D\\) 则 \\(C\\) 去 \\(B\\) , \\(F\\) 去 \\(E\\) ;若 \\(A\\) 去 \\(E\\) 则 \\(F\\) 去 \\(B\\)\n\n\\(C\\) 去 \\(D\\) .共3种情况. \\(B,E,G\\) 或 \\(B,D,G\\) 与 \\(B,E,D\\) 同理,也各3种,有 \\(3\\times 3 = 9\\) 种.\n\n\\(②\\) 如果是 \\(D,E,G\\)\n\n若 \\(A\\) 去 \\(D\\) 则 \\(F\\) 去 \\(E\\) , \\(C\\) 去 \\(G\\) ;若 \\(A\\) 去 \\(E\\) 则 \\(F\\) 去 \\(G\\) , \\(C\\) 去 \\(D\\) .共2种情况.\n\n:爬行第1条棱共有 \\(9 + 2 = 11\\) 种情况.\n\n注意到第一次爬行后,三只蚂蚁的相对位置和最初是等价的,从而第二条棱的爬行同样也有11种情况.\n\n:根据乘法原理,不同的爬行情况共 \\(11\\times 11 = 121\\) 种.",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_004/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_004/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干、答案和解析，直接提供答案，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#4#11",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "11. 如图,在正方体的一些顶点处各有一只蚂蚁,它们的爬行速度相同且只能沿着正方体的棱爬行,在棱上爬行到达下一个顶点前不能回头,且从未有任两只蚂蚁相遇.\n\n(1)如果在 \\(A\\) 、 \\(B\\) 处各有一只蚂蚁,每只蚂蚁各爬行1条棱,一共有 种不同的爬行情况.\n\n(2)如果在 \\(A\\) 、 \\(C\\) 、 \\(F\\) 处各有一只蚂蚁,每只蚂蚁各爬行2条棱,一共有 种不同的爬行情况.",
+      "answer": "(1)8 (2)121",
+      "solution": "(1)每只蚂蚁各3种选择,但不能同时选择爬向对方.\n\n:不同的爬行情况共 \\(3\\times 3 - 1 = 8\\) 种\n\n(2)考虑爬行第1条棱的情况,三只蚂蚁都只能去 \\(B,D,E,G\\) 三个顶点中的一个,这里注意到 \\(E,D,G\\) 三个点对它们是等价的,所以分情况讨论一下:\n\n\\(①\\) 如果是 \\(B,E,D\\)\n\n若 \\(A\\) 去 \\(B\\) 则 \\(C\\) 去 \\(D\\) , \\(F\\) 去 \\(E\\) ;若 \\(A\\) 去 \\(D\\) 则 \\(C\\) 去 \\(B\\) , \\(F\\) 去 \\(E\\) ;若 \\(A\\) 去 \\(E\\) 则 \\(F\\) 去 \\(B\\)\n\n\\(C\\) 去 \\(D\\) .共3种情况. \\(B,E,G\\) 或 \\(B,D,G\\) 与 \\(B,E,D\\) 同理,也各3种,有 \\(3\\times 3 = 9\\) 种.\n\n\\(②\\) 如果是 \\(D,E,G\\)\n\n若 \\(A\\) 去 \\(D\\) 则 \\(F\\) 去 \\(E\\) , \\(C\\) 去 \\(G\\) ;若 \\(A\\) 去 \\(E\\) 则 \\(F\\) 去 \\(G\\) , \\(C\\) 去 \\(D\\) .共2种情况.\n\n:爬行第1条棱共有 \\(9 + 2 = 11\\) 种情况.\n\n注意到第一次爬行后,三只蚂蚁的相对位置和最初是等价的,从而第二条棱的爬行同样也有11种情况.\n\n:根据乘法原理,不同的爬行情况共 \\(11\\times 11 = 121\\) 种."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 12,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "12. 算式 \\(12\\div 3 + 45\\times 6 - 78\\) 的计算结果是",
+      "answer_text": "196",
+      "solution_text": "\\[12\\div 3 + 45\\times 6 - 78 = 4 + 270 - 78 = 196.\\]",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题目、答案和解析，但答案和解析的出现使其不适合用于考试，仅适合练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#5#12",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "12. 算式 \\(12\\div 3 + 45\\times 6 - 78\\) 的计算结果是",
+      "answer": "196",
+      "solution": "\\[12\\div 3 + 45\\times 6 - 78 = 4 + 270 - 78 = 196.\\]"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 13,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "13. 右图中,三角形共有 个.",
+      "answer_text": "6",
+      "solution_text": "只有三种方向的线各一条才能构成三角形;共 \\(1 + 2 + 3 = 6\\) 个.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/0.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "文本块包含题干、答案和解析，有答案泄露风险，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#5#13",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        },
+        "review_action": "practice_only",
+        "review_repairable": true,
+        "review_reason": "题干本身可出题，但包含答案和解析，且依赖图片，清洗后适合练习使用。",
+        "review_fix_hint": "删掉【答案】和【解析】部分，保留题干；由于题干依赖右图，需确保图片附件清晰可用。",
+        "review_clean_question_text": "右图中,三角形共有 ____ 个.",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#5#13",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "13. 右图中,三角形共有 个.",
+      "answer": "6",
+      "solution": "只有三种方向的线各一条才能构成三角形;共 \\(1 + 2 + 3 = 6\\) 个.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/0.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 14,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "14. 2022年卡塔尔世界杯是国际足联第22次举办的世界杯足球比赛;已知足球世界杯每4年举行一次,因战争原因有两次该举办的年份没有举行,那么第一届世界杯在乌拉圭举行的时间是公元 年.",
+      "answer_text": "1930",
+      "solution_text": "\\(2022 - (22 - 1 + 2)\\times 4 = 2022 - 92 = 1930\\)",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#5#14",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "14. 2022年卡塔尔世界杯是国际足联第22次举办的世界杯足球比赛;已知足球世界杯每4年举行一次,因战争原因有两次该举办的年份没有举行,那么第一届世界杯在乌拉圭举行的时间是公元 年.",
+      "answer": "1930",
+      "solution": "\\(2022 - (22 - 1 + 2)\\times 4 = 2022 - 92 = 1930\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 15,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "15. 如图,一个大正方形被分割成了周长依次为70、80、90、100的四个小长方形;那么,其中最小的小长方形的面积是",
+      "answer_text": "34",
+      "solution_text": "大正方形的边长为: \\((70 + 80 + 90 + 100)\\div (4 + 2\\times 3) = 34\\)\n\n最小的小长方形的宽为: \\(70\\div 2 - 34 = 1\\)\n\n最小的小长方形的面积是 \\(34\\times 1 = 34\\)\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目包含标准答案和详细解析，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#5#15",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "15. 如图,一个大正方形被分割成了周长依次为70、80、90、100的四个小长方形;那么,其中最小的小长方形的面积是",
+      "answer": "34",
+      "solution": "大正方形的边长为: \\((70 + 80 + 90 + 100)\\div (4 + 2\\times 3) = 34\\)\n\n最小的小长方形的宽为: \\(70\\div 2 - 34 = 1\\)\n\n最小的小长方形的面积是 \\(34\\times 1 = 34\\)\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 16,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "16. 工人运瓷器1000件,规定完整运到目的地一件给运费5元,损坏一件倒赔120元,运完这批瓷器后,工人共得4500元,那么损坏了 件.",
+      "answer_text": "4",
+      "solution_text": "假设没有损坏,工人应得 \\(5\\times 1000 = 5000\\) 元,实际比这少了 \\(5000 - 4500 = 500\\) 元;所以,损坏了 \\(500\\div (120 + 5) = 4\\) 件",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干独立可出题，但文本块中包含答案和解析，因此适合练习使用。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#5#16",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "16. 工人运瓷器1000件,规定完整运到目的地一件给运费5元,损坏一件倒赔120元,运完这批瓷器后,工人共得4500元,那么损坏了 件.",
+      "answer": "4",
+      "solution": "假设没有损坏,工人应得 \\(5\\times 1000 = 5000\\) 元,实际比这少了 \\(5000 - 4500 = 500\\) 元;所以,损坏了 \\(500\\div (120 + 5) = 4\\) 件"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 17,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 5,
+      "question_text": "17. 将 \\(1\\sim 9\\) 分别填入到右图的方框中,每个数字用一次,使得竖式成立;现在数字6、7、8已经被填入,那么竖式的和是",
+      "answer_text": "819",
+      "solution_text": "数字和 \\(1 + 2 + 3 + \\ldots +9\\) 为奇数,所以进位奇数次;\n\n百位没有向千位进位,所以只能进位一次.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/2.jpg)\n\n若个位进位,则十位不进位,十位必为 \\(1 + 7 + 1 = 9\\) ,个位只能 \\(6 + 5 = 11\\) ,1用了两次;\n\n若十位进位,则个位只能是 \\(6 + 3 = 9\\)\n\n两加数百位和为7,在余下的1,2,4,5中只有 \\(2 + 5 = 7\\) ;那么十位 \\(4 + 7 = 11\\) ,满足.\n\n所以,算式为: \\(246 + 573 = 819\\) 或 \\(546 + 273 = 819\\)",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整独立，但同一文本块包含答案和解析，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 2,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#5#17",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "17. 将 \\(1\\sim 9\\) 分别填入到右图的方框中,每个数字用一次,使得竖式成立;现在数字6、7、8已经被填入,那么竖式的和是",
+      "answer": "819",
+      "solution": "数字和 \\(1 + 2 + 3 + \\ldots +9\\) 为奇数,所以进位奇数次;\n\n百位没有向千位进位,所以只能进位一次.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_005/images/2.jpg)\n\n若个位进位,则十位不进位,十位必为 \\(1 + 7 + 1 = 9\\) ,个位只能 \\(6 + 5 = 11\\) ,1用了两次;\n\n若十位进位,则个位只能是 \\(6 + 3 = 9\\)\n\n两加数百位和为7,在余下的1,2,4,5中只有 \\(2 + 5 = 7\\) ;那么十位 \\(4 + 7 = 11\\) ,满足.\n\n所以,算式为: \\(246 + 573 = 819\\) 或 \\(546 + 273 = 819\\)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 18,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "18. 老虎、狐狸、猴子各 3 只分别入住右图的 9 个房间中, 每个房间一只, 结果每只动物都说\"有老虎与我相邻\"(有公共边的两个房间相邻); 如果老虎都说真话, 狐狸都说假话, 猴子说的话不知真假, 那么说真话的猴子所在房间编号的和是 ______.",
+      "answer_text": "15",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在泄露风险，但题目可独立出题，适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#6#18",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "18. 老虎、狐狸、猴子各 3 只分别入住右图的 9 个房间中, 每个房间一只, 结果每只动物都说\"有老虎与我相邻\"(有公共边的两个房间相邻); 如果老虎都说真话, 狐狸都说假话, 猴子说的话不知真假, 那么说真话的猴子所在房间编号的和是 ______.",
+      "answer": "15",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 19,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 6,
+      "question_text": "19. 如图, 九个小三角形拼成了一个大三角形, 十个小圆圈中分别填有 \\(1 \\sim 10\\) ; 每次操作, 指当一个小三角形三个顶点上的数都是正整数时, 可对这三个数同时加 1 或同时减 1. 当大三角形边上九个小圆圈中的数都变成 0 时, 中心小圆圈中的数变成 ______.",
+      "answer_text": "7",
+      "solution_text": "![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/1.jpg)\n\n将三个顶点和中心小圆圈染成红色, 其余白色, 每个小三角形的顶点都是 1 红 2 白;\n\n当六个白色小圆圈中数由 \\(2 + 3 + 4 + 6 + 8 + 9 = 32\\) 变为 0 时, 四个红色小圆圈中数的总和变为 \\((1 + 5 + 7 + 10) - 32 \\div 2 = 7\\) . 可以如下操作:\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/2.jpg)",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "该文本块包含完整的数学竞赛题目、答案和解析，适合作为练习题使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#6#19",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "19. 如图, 九个小三角形拼成了一个大三角形, 十个小圆圈中分别填有 \\(1 \\sim 10\\) ; 每次操作, 指当一个小三角形三个顶点上的数都是正整数时, 可对这三个数同时加 1 或同时减 1. 当大三角形边上九个小圆圈中的数都变成 0 时, 中心小圆圈中的数变成 ______.",
+      "answer": "7",
+      "solution": "![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/1.jpg)\n\n将三个顶点和中心小圆圈染成红色, 其余白色, 每个小三角形的顶点都是 1 红 2 白;\n\n当六个白色小圆圈中数由 \\(2 + 3 + 4 + 6 + 8 + 9 = 32\\) 变为 0 时, 四个红色小圆圈中数的总和变为 \\((1 + 5 + 7 + 10) - 32 \\div 2 = 7\\) . 可以如下操作:\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_006/images/2.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 20,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "20. 右图已固定, 请将 1、2、3、4 各两个分别填入八个圆圈中, 使得阴影圆圈中的数比它两边相邻的白色圆圈中的数都大; 那么, 不同的填法共有 ______ 种.",
+      "answer_text": "44",
+      "solution_text": "两个 4 都必在阴影圆圈, 两个 1 都必在白色圆圈, 至多一个 3 在白色圆圈.\n\n(1)若阴影圆圈中填 \\(4,4,3,3\\) : \\(C_{4}^{2}\\times C_{4}^{2} = 36\\)\n\n(2)若阴影圆圈中填 \\(4,4,3,2\\) ,则两4之间白圈填3,阴影圈的2两边白圈都填1;所以,如果阴影圈中的 \\(4,4,3,2\\) 已填好,则白圈中的数唯一确定: \\(4\\times 2 = 8\\)\n\n:不同的填法共有 \\(36 + 8 = 44\\) 种.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/0.jpg)\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/1.jpg)",
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/2.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/3.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/4.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题目、答案和解析，泄露风险高，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#7#20",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "20. 右图已固定, 请将 1、2、3、4 各两个分别填入八个圆圈中, 使得阴影圆圈中的数比它两边相邻的白色圆圈中的数都大; 那么, 不同的填法共有 ______ 种.",
+      "answer": "44",
+      "solution": "两个 4 都必在阴影圆圈, 两个 1 都必在白色圆圈, 至多一个 3 在白色圆圈.\n\n(1)若阴影圆圈中填 \\(4,4,3,3\\) : \\(C_{4}^{2}\\times C_{4}^{2} = 36\\)\n\n(2)若阴影圆圈中填 \\(4,4,3,2\\) ,则两4之间白圈填3,阴影圈的2两边白圈都填1;所以,如果阴影圈中的 \\(4,4,3,2\\) 已填好,则白圈中的数唯一确定: \\(4\\times 2 = 8\\)\n\n:不同的填法共有 \\(36 + 8 = 44\\) 种.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/0.jpg)\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/1.jpg)"
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 21,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "21. 箱子里有一些红球和一些白球; 如果每次同时拿 1 个红球和 1 个白球, 当红球拿完时白球还余下 30 个; 如果每次同时拿 1 个红球和 3 个白球, 当白球余下 2 个不够拿一次时红球还余下 30 个. 箱子里的白球有 ______ 个.",
+      "answer_text": "89",
+      "solution_text": "同时拿 1 个红球和 3 个白球时, 再借 30 \\(\\times 3 - 2 = 88\\) 个白球, 则正好拿完;\n\n说明: 红球的 3 倍比白球多 88 个.\n\n而红球的 1 倍比白球少 30 个, 所以红球有 \\((88 + 30)\\div (3 - 1) = 59\\) 个;\n\n那么, 白球有 \\(59 + 30 = 89\\) 个.",
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整的问题、答案和解析，适合练习但不适合考试使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#7#21",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "21. 箱子里有一些红球和一些白球; 如果每次同时拿 1 个红球和 1 个白球, 当红球拿完时白球还余下 30 个; 如果每次同时拿 1 个红球和 3 个白球, 当白球余下 2 个不够拿一次时红球还余下 30 个. 箱子里的白球有 ______ 个.",
+      "answer": "89",
+      "solution": "同时拿 1 个红球和 3 个白球时, 再借 30 \\(\\times 3 - 2 = 88\\) 个白球, 则正好拿完;\n\n说明: 红球的 3 倍比白球多 88 个.\n\n而红球的 1 倍比白球少 30 个, 所以红球有 \\((88 + 30)\\div (3 - 1) = 59\\) 个;\n\n那么, 白球有 \\(59 + 30 = 89\\) 个."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 22,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 7,
+      "question_text": "22. 右图的迷宫中, 从入口进入, 最后从出口走出, 只能从和为奇数的两个数字间通过, 经过后获得的积分是这两个数字的和, 每条道路至多经过一次. 如图 \\(①\\) , 可得积分:\n\n\\((1 + 12) + (15 + 6) + (6 + 7) + (10 + 11) + (11 + 2) + (5 + 16)\\)\n\n将 \\(1\\sim 16\\) 这 16 个自然数填入图 \\(②\\) 的小正方形\n\n中, 每个数用一次; 按照上述迷宫规则, 获得\n\n的积分最多是",
+      "answer_text": "284",
+      "solution_text": "因为每条道路至多经过一次, 所以被\"围墙\"堵死的\"死胡同\"实际不能走, 有可能走到的道路如图(1).\n\n图(1)中除了起点和终点外, 还有 2 个奇点, 而这 2 个奇点间又没有道路直接相连, 从而图(1)中至少有 2 条道路走不到.\n\n当图(1)中只有 2 条道路走不到时, 能走到的道路如图(2); 再将相应小方格标在图(2)中, 得到图(3); 小方格周围的道路被走了几条, 那么小方格中标的数就要在积分中被累加几次, 在图(3)中标注每个小方格中标的数被累计的次数.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/2.jpg)\n\n<center>图 \\(①\\) </center>\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/3.jpg)\n\n<center>图(1)</center>\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/4.jpg)\n\n<center>图(3)</center>\n\n<center>图(4)</center>\n\n所以, 总积分至多 \\((16 + 15 + 14 + 13)\\times 3 + (12 + 11 + 10 + 9)\\times 2 + (8 + 7 + 6 + 5) = 284\\)\n\n图(4)给出了一种能获得 284 积分的填数方式.",
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/2.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/3.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/4.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解析，存在高风险泄露，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#7#22",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "22. 右图的迷宫中, 从入口进入, 最后从出口走出, 只能从和为奇数的两个数字间通过, 经过后获得的积分是这两个数字的和, 每条道路至多经过一次. 如图 \\(①\\) , 可得积分:\n\n\\((1 + 12) + (15 + 6) + (6 + 7) + (10 + 11) + (11 + 2) + (5 + 16)\\)\n\n将 \\(1\\sim 16\\) 这 16 个自然数填入图 \\(②\\) 的小正方形\n\n中, 每个数用一次; 按照上述迷宫规则, 获得\n\n的积分最多是",
+      "answer": "284",
+      "solution": "因为每条道路至多经过一次, 所以被\"围墙\"堵死的\"死胡同\"实际不能走, 有可能走到的道路如图(1).\n\n图(1)中除了起点和终点外, 还有 2 个奇点, 而这 2 个奇点间又没有道路直接相连, 从而图(1)中至少有 2 条道路走不到.\n\n当图(1)中只有 2 条道路走不到时, 能走到的道路如图(2); 再将相应小方格标在图(2)中, 得到图(3); 小方格周围的道路被走了几条, 那么小方格中标的数就要在积分中被累加几次, 在图(3)中标注每个小方格中标的数被累计的次数.\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/2.jpg)\n\n<center>图 \\(①\\) </center>\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/3.jpg)\n\n<center>图(1)</center>\n\n![](ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_007/images/4.jpg)\n\n<center>图(3)</center>\n\n<center>图(4)</center>\n\n所以, 总积分至多 \\((16 + 15 + 14 + 13)\\times 3 + (12 + 11 + 10 + 9)\\times 2 + (8 + 7 + 6 + 5) = 284\\)\n\n图(4)给出了一种能获得 284 积分的填数方式."
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 45,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "45. 算式 \\(123 + 4 - 56 \\div 7 \\times 8 - 9\\) 的计算结果是",
+      "answer_text": "54",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案信息，导致泄露风险高，不适合考试但可用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#9#45",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "45. 算式 \\(123 + 4 - 56 \\div 7 \\times 8 - 9\\) 的计算结果是",
+      "answer": "54",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 46,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "46. 如右图, 小鱼老师在为圣诞树准备装饰物, 每个树顶需要放一颗幸运星, 每一层树的两侧需要各放1个许愿球, 一共3层。小鱼老师数了数, 许愿球比幸运星多40个; 那么, 小鱼老师装饰了 ______ 棵圣诞树。",
+      "answer_text": "8",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目后直接附有答案，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#9#46",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "46. 如右图, 小鱼老师在为圣诞树准备装饰物, 每个树顶需要放一颗幸运星, 每一层树的两侧需要各放1个许愿球, 一共3层。小鱼老师数了数, 许愿球比幸运星多40个; 那么, 小鱼老师装饰了 ______ 棵圣诞树。",
+      "answer": "8",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 47,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "47. 右图中, 共有 ______ 个三角形。",
+      "answer_text": "16",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#9#47",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "47. 右图中, 共有 ______ 个三角形。",
+      "answer": "16",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 48,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "48. 下左图是小佳画的一个戴帽子小人儿, 下右图是帽子图, 这个帽子是由6个完全一样的长方形拼成的。如果这6个长方形的长都是6, 那么, 这个帽子图形的周长是 ______ 。",
+      "answer_text": "44",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目是完整的数学竞赛题干，但直接包含标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#9#48",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "48. 下左图是小佳画的一个戴帽子小人儿, 下右图是帽子图, 这个帽子是由6个完全一样的长方形拼成的。如果这6个长方形的长都是6, 那么, 这个帽子图形的周长是 ______ 。",
+      "answer": "44",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 49,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "49. 盒子里有一些黑球和白球。如果将黑球数量变成原来的4倍, 总球数将会变成原来的2倍。那么, 如果将白球数量变成原来的4倍, 总球数将会变成原来的 ______ 倍。",
+      "answer_text": "3",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整可独立出题，但答案直接附在文本中，存在高泄漏风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#9#49",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "49. 盒子里有一些黑球和白球。如果将黑球数量变成原来的4倍, 总球数将会变成原来的2倍。那么, 如果将白球数量变成原来的4倍, 总球数将会变成原来的 ______ 倍。",
+      "answer": "3",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 50,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "50. 在右图的加法竖式中, 6个汉字恰好代表6个连续的数字。那么, 花园探秘所代表的四位数是 ______ 。",
+      "answer_text": "8354",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案8354，存在泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#9#50",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "50. 在右图的加法竖式中, 6个汉字恰好代表6个连续的数字。那么, 花园探秘所代表的四位数是 ______ 。",
+      "answer": "8354",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 51,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 9,
+      "question_text": "51. 马戏团的38只小狗排成两排, 其中有16只头向南尾向北, 其余的都是头向北尾向南, 如果第一排小狗统统向后转, 两排中头向南尾向北的小狗就一样多了, 那么, 第一排有 ______ 只小狗。",
+      "answer_text": "16",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_009.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_009/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干完整可独立出题，但直接包含答案，存在高泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#9#51",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "51. 马戏团的38只小狗排成两排, 其中有16只头向南尾向北, 其余的都是头向北尾向南, 如果第一排小狗统统向后转, 两排中头向南尾向北的小狗就一样多了, 那么, 第一排有 ______ 只小狗。",
+      "answer": "16",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 52,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 10,
+      "question_text": "52. 在空格里填入数字1\\~6, 使得每行、每列和每个由粗线划出的 \\(2 \\times 3\\) 小长方形内数字不重复, 并且在图中连续的灰线上, 任意相邻的两个格中数的差都是1(右图是一个例子)。那么, 将左图的空格补充完整后, 最后一行从左到右前五个数组成的五位数是______。",
+      "answer_text": "24315",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_010/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_010/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含完整题干，但直接给出了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#10#52",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "52. 在空格里填入数字1\\~6, 使得每行、每列和每个由粗线划出的 \\(2 \\times 3\\) 小长方形内数字不重复, 并且在图中连续的灰线上, 任意相邻的两个格中数的差都是1(右图是一个例子)。那么, 将左图的空格补充完整后, 最后一行从左到右前五个数组成的五位数是______。",
+      "answer": "24315",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 53,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 10,
+      "question_text": "53. 将2017进行如下操作: 每次操作将这个数末两位数字的乘积写在这个数的后面。例如: 对2017进行3次操作, 结果将依次得到20177、2017749、201774936。那么, 如果对2017进行123次操作, 操作后所得到结果的末两位数字依次组成的两位数是______。",
+      "answer_text": "32",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干是完整的数学问题，但直接包含答案，泄露风险高，因此仅建议用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#10#53",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "53. 将2017进行如下操作: 每次操作将这个数末两位数字的乘积写在这个数的后面。例如: 对2017进行3次操作, 结果将依次得到20177、2017749、201774936。那么, 如果对2017进行123次操作, 操作后所得到结果的末两位数字依次组成的两位数是______。",
+      "answer": "32",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 54,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 10,
+      "question_text": "54. 如下图, 在格子左端小格内有一颗棋子, 右端有星星的小格是终点, 现在按照如下规则走到终点:\n\n(1)每次操作走 \\(1 \\sim 6\\) 格;\n\n(2)每次操作开始时, 棋子都必须往右走, 如果走到头, 步数尚未用完, 则调转方向, 直到这次操作的步数走完(例: 从C开始走5格会走到D);\n\n(3)某一次操作完成后, 恰好到达终点就算胜利.\n\n那么, 恰好三次操作后胜利的走法有______种。(从C开始走1格到D和从C开始走5格到D算不同走法)",
+      "answer_text": "25",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案【25】，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#10#54",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "54. 如下图, 在格子左端小格内有一颗棋子, 右端有星星的小格是终点, 现在按照如下规则走到终点:\n\n(1)每次操作走 \\(1 \\sim 6\\) 格;\n\n(2)每次操作开始时, 棋子都必须往右走, 如果走到头, 步数尚未用完, 则调转方向, 直到这次操作的步数走完(例: 从C开始走5格会走到D);\n\n(3)某一次操作完成后, 恰好到达终点就算胜利.\n\n那么, 恰好三次操作后胜利的走法有______种。(从C开始走1格到D和从C开始走5格到D算不同走法)",
+      "answer": "25",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 55,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 10,
+      "question_text": "55. 甲、乙、丙、丁四个人各有一些糖果, 他们之间对话如下:\n\n甲: 如果把我的糖果数量变成和丙一样多, 我们4人的平均数会减少2;\n\n乙: 如果把我的糖果数量变成和丁一样多, 我们4人的平均数会减半;\n\n丙: 如果我的糖果数量变为原来2倍, 而甲的数量减半, 我们4人的平均数会增加2;\n\n丁: 如果我的糖果数量变为原来2倍, 而乙的数量减半, 我们4人的平均数恰好会是一个整数。\n\n事实证明, 他们4人中只有糖果数量最少的人说了假话, 并且糖果最多人的糖果数恰好是糖果最少人糖果数的3倍。那么, 他们4人一共有______颗糖果。",
+      "answer_text": "120",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_010.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_010/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "文本包含完整题干和直接答案【答案】120，有泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#10#55",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "55. 甲、乙、丙、丁四个人各有一些糖果, 他们之间对话如下:\n\n甲: 如果把我的糖果数量变成和丙一样多, 我们4人的平均数会减少2;\n\n乙: 如果把我的糖果数量变成和丁一样多, 我们4人的平均数会减半;\n\n丙: 如果我的糖果数量变为原来2倍, 而甲的数量减半, 我们4人的平均数会增加2;\n\n丁: 如果我的糖果数量变为原来2倍, 而乙的数量减半, 我们4人的平均数恰好会是一个整数。\n\n事实证明, 他们4人中只有糖果数量最少的人说了假话, 并且糖果最多人的糖果数恰好是糖果最少人糖果数的3倍。那么, 他们4人一共有______颗糖果。",
+      "answer": "120",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 56,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 11,
+      "question_text": "56. 算式 \\(7 \\times 17 \\div 3 \\times 13 \\times 43 \\div 13 \\times 17\\) 的计算结果是",
+      "answer_text": "2017",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目块包含题干和直接答案，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#11#56",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "56. 算式 \\(7 \\times 17 \\div 3 \\times 13 \\times 43 \\div 13 \\times 17\\) 的计算结果是",
+      "answer": "2017",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 57,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 11,
+      "question_text": "57. 右图中,共有 个正六边形。",
+      "answer_text": "12",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/2.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目直接给出了标准答案，存在答案泄露风险。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#11#57",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "57. 右图中,共有 个正六边形。",
+      "answer": "12",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 58,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 11,
+      "question_text": "58. 一筐水果中,恰好有一半数量是苹果.如果吃掉苹果数量的一半,筐中只剩下60个水果。那么,这时筐子中还有 个苹果。",
+      "answer_text": "20",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目本身可出题，但直接包含答案，泄露风险高，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#11#58",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "58. 一筐水果中,恰好有一半数量是苹果.如果吃掉苹果数量的一半,筐中只剩下60个水果。那么,这时筐子中还有 个苹果。",
+      "answer": "20",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 59,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 11,
+      "question_text": "59. 在右面的乘法竖式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字;那么,迎接夏天代表的四位数是",
+      "answer_text": "1024",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/2.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题干中直接包含答案，存在高泄露风险，不适合用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#11#59",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        },
+        "review_action": "drop_exam",
+        "review_repairable": false,
+        "review_reason": "题干依赖图像且包含答案，轻量清洗后仍不完整，不适合考试。",
+        "review_fix_hint": "移除答案和图片链接，但题干依赖图像，需提供竖式描述或图像才能使用。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#11#59",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "59. 在右面的乘法竖式中,相同的汉字代表相同的数字,不同的汉字代表不同的数字;那么,迎接夏天代表的四位数是",
+      "answer": "1024",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 60,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 11,
+      "question_text": "60. 如右图,空白部分是4个大小形状完全相同的平行四边形,它们的底都是1,高都是2;那么,图中阴影部分的面积是",
+      "answer_text": "4",
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/2.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案信息，存在高泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#11#60",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "60. 如右图,空白部分是4个大小形状完全相同的平行四边形,它们的底都是1,高都是2;那么,图中阴影部分的面积是",
+      "answer": "4",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 61,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 11,
+      "question_text": "61. 数列:1、3、3、4、11、13、13... ,是从1开始,依次加2、加0、加1、加7并循环往复所形成。那么,当这个数列中第一次出现恰好由2、0、1、7这四个数字(不一定按顺序)所组成的四位数时,这个数列已经写了 个数。",
+      "answer_text": "829",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "drop_exam",
+        "scan_reason": "题目块包含完整题干但直接给出了答案，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#11#61",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        },
+        "review_action": "keep",
+        "review_repairable": true,
+        "review_reason": "题干完整且清晰，移除答案后适合作为考试题目。",
+        "review_fix_hint": "删除答案信息【答案】829，保留题干文本。",
+        "review_clean_question_text": "61. 数列:1、3、3、4、11、13、13... ,是从1开始,依次加2、加0、加1、加7并循环往复所形成。那么,当这个数列中第一次出现恰好由2、0、1、7这四个数字(不一定按顺序)所组成的四位数时,这个数列已经写了 个数。",
+        "review_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#11#61",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "61. 数列:1、3、3、4、11、13、13... ,是从1开始,依次加2、加0、加1、加7并循环往复所形成。那么,当这个数列中第一次出现恰好由2、0、1、7这四个数字(不一定按顺序)所组成的四位数时,这个数列已经写了 个数。",
+      "answer": "829",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 62,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 11,
+      "question_text": "62. 如右图所示,某停车场的车位编号按照由小到大逐行蛇形排列。一天,赵老师将车停在位于第1行的12号车位,下车后他发现孙老师的车停在位于第26行的2017号车位,且两人的车位处于同一列;那么,这个停车场每行有 个车位。",
+      "answer_text": "78",
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_011.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/1.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/2.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_011/images/3.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案，存在高泄露风险，但问题完整可独立出题。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#11#62",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "62. 如右图所示,某停车场的车位编号按照由小到大逐行蛇形排列。一天,赵老师将车停在位于第1行的12号车位,下车后他发现孙老师的车停在位于第26行的2017号车位,且两人的车位处于同一列;那么,这个停车场每行有 个车位。",
+      "answer": "78",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 63,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 12,
+      "question_text": "63. 在下左图空格里填入数字 \\(1 \\sim 4\\) , 使得每行、每列和每个由粗线围成的 \\(2 \\times 2\\) 的宫内数字不重复。圆圈里如果填入的是奇数, 则表示与圆圈所在格有公共点的格 (除本身以外) 中填入的数有多少个是奇数; 圆圈里如果填入的是偶数, 则表示与圆圈所在格有公共点的格 (除本身以外) 中填入的数有多少个是偶数。那么, 第一行四个数字从左到右组成的四位数是______。(下右图是一个例子, 圆圈中的3, 表示它四周有1、1、3共3个奇数)\n\n数)",
+      "answer_text": "3142",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_012.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_012/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_012/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_012/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干结构完整但直接包含答案，风险高，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#12#63",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "63. 在下左图空格里填入数字 \\(1 \\sim 4\\) , 使得每行、每列和每个由粗线围成的 \\(2 \\times 2\\) 的宫内数字不重复。圆圈里如果填入的是奇数, 则表示与圆圈所在格有公共点的格 (除本身以外) 中填入的数有多少个是奇数; 圆圈里如果填入的是偶数, 则表示与圆圈所在格有公共点的格 (除本身以外) 中填入的数有多少个是偶数。那么, 第一行四个数字从左到右组成的四位数是______。(下右图是一个例子, 圆圈中的3, 表示它四周有1、1、3共3个奇数)\n\n数)",
+      "answer": "3142",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 64,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 12,
+      "question_text": "64. 甲、乙、丙、丁共有糖果17颗, 且每人的糖果数都不超过9颗。他们有如下的对话:\n\n甲对乙说:\"如果我给你1颗糖, 我们的糖果数就相同了。\"\n\n乙对甲说:\"如果你给我2颗糖, 我的糖果数就是你的3倍了。\"\n\n丙对甲说:\"如果我给你3颗糖, 你的糖果数就是我的3倍了。\"\n\n丁对甲说:\"如果你给我4颗糖, 我的糖果数就是你的4倍了。\"\n\n结果发现: 糖果数是奇数的人说的都是对的, 而糖果数是偶数的人说的都是错的。\n\n设甲、乙、丙、丁依次拥有A、B、C、D颗, 那么, 四位数ABCD是______。",
+      "answer_text": "3158",
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_012.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_012/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出了答案，存在泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#12#64",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "64. 甲、乙、丙、丁共有糖果17颗, 且每人的糖果数都不超过9颗。他们有如下的对话:\n\n甲对乙说:\"如果我给你1颗糖, 我们的糖果数就相同了。\"\n\n乙对甲说:\"如果你给我2颗糖, 我的糖果数就是你的3倍了。\"\n\n丙对甲说:\"如果我给你3颗糖, 你的糖果数就是我的3倍了。\"\n\n丁对甲说:\"如果你给我4颗糖, 我的糖果数就是你的4倍了。\"\n\n结果发现: 糖果数是奇数的人说的都是对的, 而糖果数是偶数的人说的都是错的。\n\n设甲、乙、丙、丁依次拥有A、B、C、D颗, 那么, 四位数ABCD是______。",
+      "answer": "3158",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 65,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 12,
+      "question_text": "65. 有两种卡片各10张, 其中一种卡片两面分别写着1和3; 另外一种卡片两面分别写着2和5。佳佳、俊俊每人随机拿走了10张卡片, 并让它们随机摆放, 并各自计算了自己10张卡片向上的数字之和, 发现佳佳比俊俊的和大1; 两人又将各自所有卡片翻转, 再次计算各自10张卡片向上的数字之和, 发现佳佳的和变小了10, 而俊俊的和变小了14。那么, 翻转之后, 俊俊的卡片中有______张是数字2向上的。",
+      "answer_text": "3",
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_012.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_012/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目为完整数学竞赛题，但答案已直接泄露，不适合用于正式考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#12#65",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "65. 有两种卡片各10张, 其中一种卡片两面分别写着1和3; 另外一种卡片两面分别写着2和5。佳佳、俊俊每人随机拿走了10张卡片, 并让它们随机摆放, 并各自计算了自己10张卡片向上的数字之和, 发现佳佳比俊俊的和大1; 两人又将各自所有卡片翻转, 再次计算各自10张卡片向上的数字之和, 发现佳佳的和变小了10, 而俊俊的和变小了14。那么, 翻转之后, 俊俊的卡片中有______张是数字2向上的。",
+      "answer": "3",
+      "solution": null
+    },
+    {
+      "grade": 3,
+      "year": 2024,
+      "number": 66,
+      "source_dir": "2026年迎春杯数学竞赛",
+      "source_file": "2024年迎春杯小中组培训题77题（答案）.pdf",
+      "exam": {
+        "exam_key": "2024年迎春杯小中组培训题77题",
+        "doc_type_question": null,
+        "doc_type_solution": "MIXED",
+        "stage": null,
+        "variant": null,
+        "group": "small_middle"
+      },
+      "page": 12,
+      "question_text": "66. 如图, 2017年是农历\"鸡\"年; 那么, 从A点出发, 一笔画完这只雄鸡, 共有______种不同的方法。(\"一笔画完\"是指笔不离开纸面, 每条线经过一次, 且只经过一次)",
+      "answer_text": "512",
+      "solution_text": null,
+      "topic": "combinatorics",
+      "difficulty": 3,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）/page_012.png",
+        "page_boxes_image": "images_y2/boxes/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_012/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_012/images/0.jpg",
+          "images_y2/problems/2026年迎春杯数学竞赛/三年级/2024年/ocr_debug/2024年迎春杯小中组培训题77题（答案）/pages/page_012/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案，泄露风险高，适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json#12#66",
+          "json_path": "2026年迎春杯数学竞赛/三年级/2024年/2024年迎春杯小中组培训题77题（答案）.json"
+        }
+      },
+      "text": "66. 如图, 2017年是农历\"鸡\"年; 那么, 从A点出发, 一笔画完这只雄鸡, 共有______种不同的方法。(\"一笔画完\"是指笔不离开纸面, 每条线经过一次, 且只经过一次)",
+      "answer": "512",
+      "solution": null
+    }
+  ]
+}

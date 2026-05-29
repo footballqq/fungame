@@ -1,0 +1,443 @@
+{
+  "grade": 6,
+  "year": 2010,
+  "total_problems": 12,
+  "problems": [
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 2,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "2. (3分)小明带着一些钱去买签字笔,到商店后发现这种笔降价了 \\(12.5\\%\\) ,如果他带的钱恰好可以比原来多买13支,那么降价前这些钱可以买_91_支签字笔.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案和完整解答，泄露风险高，仅适合练习使用。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#2",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "2. (3分)小明带着一些钱去买签字笔,到商店后发现这种笔降价了 \\(12.5\\%\\) ,如果他带的钱恰好可以比原来多买13支,那么降价前这些钱可以买_91_支签字笔.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 3,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 4,
+      "question_text": "3. (3分)满足图中算式的三位数abc最小值是_102_;\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/images/0.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_004.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/0.jpg",
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/images/0.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接给出答案102，并附有完整解答，因此泄露风险高，仅适合用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#4#3",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "3. (3分)满足图中算式的三位数abc最小值是_102_;\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_004/images/0.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 4,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 1,
+      "question_text": "4. (3分)三个半径为100厘米且圆心角为 \\(60^{\\circ}\\) 的扇形如图摆放;那么,这个封闭图形的周长是 厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_001.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg",
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "文本是一个完整的数学题干，描述问题并询问周长，未包含答案或解析信息。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#1#4",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "4. (3分)三个半径为100厘米且圆心角为 \\(60^{\\circ}\\) 的扇形如图摆放;那么,这个封闭图形的周长是 厘米.( \\(\\pi\\) 取3.14)\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 5,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "5. (3分)用 \\(0\\sim 9\\) 这10个数字组成若干个合数,每个数字都恰好用一次,那么这些合数之和的最小值是_99_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "logic",
+      "difficulty": 1,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和详细解析，存在高风险泄露，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#5",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "5. (3分)用 \\(0\\sim 9\\) 这10个数字组成若干个合数,每个数字都恰好用一次,那么这些合数之和的最小值是_99_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 6,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 5,
+      "question_text": "6. (3分)梯形的上底为5,下底为10,两腰分别为3和4,那么梯形的面积为_18_;\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/images/2.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_005.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_001/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/images/2.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接包含答案和解答过程，存在高风险泄露。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#5#6",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "6. (3分)梯形的上底为5,下底为10,两腰分别为3和4,那么梯形的面积为_18_;\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_005/images/2.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 7,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "7. (3分)有5个不同的正整数,它们中任意两数的乘积都是12的倍数,那么这5个数之和的最小值是_62_.",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中包含答案且有完整解析，存在答案泄露风险，建议仅用于练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#6#7",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "7. (3分)有5个不同的正整数,它们中任意两数的乘积都是12的倍数,那么这5个数之和的最小值是_62_.",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 8,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 6,
+      "question_text": "8. (3分)一个大正方体、四个中正方体、四个小正方体拼成如图的立体图形,已知大、中、小三个正方体的棱长分别为5厘米、2厘米、1厘米.那么,这个立体图形的表面积是_230平方厘米.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_006/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_006.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_006/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_006/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干直接给出答案，且包含完整解析，存在高风险，仅适合练习。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#6#8",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "8. (3分)一个大正方体、四个中正方体、四个小正方体拼成如图的立体图形,已知大、中、小三个正方体的棱长分别为5厘米、2厘米、1厘米.那么,这个立体图形的表面积是_230平方厘米.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_006/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 9,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "9. (3分)九个大小相等的小正方形拼成了如图,现从 \\(A\\) 点走到 \\(B\\) 点,每次只能沿着小正方形的对角线从一个顶点到另一个顶点,不允许走重复路线(如图的虚线就是一种走法),那么从 \\(A\\) 点走到 \\(B\\) 点共有 种不同的走法.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "题干独立完整，无答案或解析泄露，可正常出题。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#9",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "9. (3分)九个大小相等的小正方形拼成了如图,现从 \\(A\\) 点走到 \\(B\\) 点,每次只能沿着小正方形的对角线从一个顶点到另一个顶点,不允许走重复路线(如图的虚线就是一种走法),那么从 \\(A\\) 点走到 \\(B\\) 点共有 种不同的走法.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 10,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 2,
+      "question_text": "10. (3分)学校打算在1月4日或1月10日组织同学们看电影,确定好日期后,老师告诉了班长,但是由于\"四\"和\"十\"发音接近,班长有 \\(10\\%\\) 的可能性听错(把4听成10或者把10听成4),班长又把日期告诉了小明,小明也有 \\(10\\%\\) 的可能性听错,那么小明认为看电影的日期是正确的可能性为 \\(\\%\\) .",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "arithmetic",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_002.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/result_with_boxes.jpg",
+        "problem_images": []
+      },
+      "quality": {
+        "scan_action": "keep",
+        "scan_reason": "这是一个独立的概率问题题干，无答案泄露。",
+        "scan_leakage_risk": 0,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#2#10",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "10. (3分)学校打算在1月4日或1月10日组织同学们看电影,确定好日期后,老师告诉了班长,但是由于\"四\"和\"十\"发音接近,班长有 \\(10\\%\\) 的可能性听错(把4听成10或者把10听成4),班长又把日期告诉了小明,小明也有 \\(10\\%\\) 的可能性听错,那么小明认为看电影的日期是正确的可能性为 \\(\\%\\) .",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 11,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 7,
+      "question_text": "11. (3分)如图, \\(C\\) 、 \\(D\\) 为 \\(AB\\) 的三等分点.8点整时甲从 \\(A\\) 出发匀速向 \\(B\\) 行走,8点12分乙从 \\(B\\) 出发匀速向 \\(A\\) 行走,再过几分钟丙从 \\(B\\) 出发匀速向 \\(A\\) 行走;甲、乙在 \\(C\\) 点相遇时丙恰好走到 \\(D\\) 点,甲、丙8:30相遇时乙恰好到 \\(A\\) .那么,丙出发时是_8_点_16_分.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "algebra",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_007.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_002/images/2.jpg",
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题干中直接包含答案并附有完整解答过程，存在答案泄露风险，不宜用于考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#7#11",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "11. (3分)如图, \\(C\\) 、 \\(D\\) 为 \\(AB\\) 的三等分点.8点整时甲从 \\(A\\) 出发匀速向 \\(B\\) 行走,8点12分乙从 \\(B\\) 出发匀速向 \\(A\\) 行走,再过几分钟丙从 \\(B\\) 出发匀速向 \\(A\\) 行走;甲、乙在 \\(C\\) 点相遇时丙恰好走到 \\(D\\) 点,甲、丙8:30相遇时乙恰好到 \\(A\\) .那么,丙出发时是_8_点_16_分.\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_007/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    },
+    {
+      "grade": 6,
+      "year": 2010,
+      "number": 12,
+      "source_dir": "source_pdf",
+      "source_file": "2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.pdf",
+      "exam": {
+        "exam_key": "2010年“迎春杯”数学解题能力展示初赛试卷",
+        "doc_type_question": null,
+        "doc_type_solution": "ANSWER",
+        "stage": "初赛",
+        "variant": null,
+        "group": "small_high"
+      },
+      "page": 8,
+      "question_text": "12. (3分)图中是一个边长为1的正六边形,它被分成六个小三角形,将4、6、8、10、12、14、16各一个填入7个圆圈之中,相邻的两个小正三角形可以组成6个菱形,把每个菱形的四个顶点上的数相加,填在菱形的中心 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 位置上(例如: \\(a + b + g + f = A\\) )已知 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) , \\(F\\) 依次分布能被2、3、4、5、6、7整除,那么 \\(a \\times g \\times d = 320\\) .\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_008/images/1.jpg)",
+      "answer_text": null,
+      "solution_text": null,
+      "topic": "geometry",
+      "difficulty": 2,
+      "images": {
+        "page_image": "images_y2/pages/preprocessed_pages/source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/page_008.png",
+        "page_boxes_image": "images_y2/boxes/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_008/result_with_boxes.jpg",
+        "problem_images": [
+          "images_y2/problems/source_pdf/六年级/2010/ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_008/images/1.jpg"
+        ]
+      },
+      "quality": {
+        "scan_action": "practice_only",
+        "scan_reason": "题目完整且独立，但题干直接给出答案且解析已泄露，存在高风险，适合练习但不适合考试。",
+        "scan_leakage_risk": 3,
+        "scan_src": {
+          "block_id": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json#8#12",
+          "json_path": "source_pdf/六年级/2010/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）.json"
+        }
+      },
+      "text": "12. (3分)图中是一个边长为1的正六边形,它被分成六个小三角形,将4、6、8、10、12、14、16各一个填入7个圆圈之中,相邻的两个小正三角形可以组成6个菱形,把每个菱形的四个顶点上的数相加,填在菱形的中心 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) 、 \\(F\\) 位置上(例如: \\(a + b + g + f = A\\) )已知 \\(A\\) 、 \\(B\\) 、 \\(C\\) 、 \\(D\\) 、 \\(E\\) , \\(F\\) 依次分布能被2、3、4、5、6、7整除,那么 \\(a \\times g \\times d = 320\\) .\n\n![](ocr_debug/2010年“迎春杯”数学解题能力展示初赛试卷（六年级）/pages/page_008/images/1.jpg)",
+      "answer": null,
+      "solution": null
+    }
+  ]
+}
