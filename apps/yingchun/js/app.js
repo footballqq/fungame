@@ -1,3 +1,4 @@
+// codex: 2026-05-30 首页新增“每日一题”，用确定性随机挑选一题并支持开始练习/换一题
 // 主应用：路由 + 页面渲染
 console.log('app.js loading...');
 import { loadIndex, loadProblems, loadAllProblems, filterProblems, getExamProblems, getImagePath, getPageImagePath, setDataRoot } from './problem.js';
@@ -8,6 +9,7 @@ let currentPage = 'home';
 let practiceState = null;  // { problems, index, answers, startTime, timers }
 let examState = null;
 let _globalDelegates = { chips: false, exam_refresh: false, keydown: false };
+let dailyState = { dateKey: '', offset: 0, problem: null, error: '' };
 
 runMigrations();
 // Optional: switch to yingchun2 dataset by adding ?db=y2 to URL.
@@ -86,6 +88,174 @@ function hideLoading() {
 
 async function nextFrame() {
   return new Promise(r => requestAnimationFrame(() => r()));
+}
+
+// ---- Daily Problem (home) ----
+function getDbKey() {
+  try {
+    const params = new URLSearchParams(location.search);
+    return (params.get('db') || 'default').trim() || 'default';
+  } catch {
+    return 'default';
+  }
+}
+
+function localDateKey(d = new Date()) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+function hashSeed(str) {
+  // FNV-1a
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a |= 0;
+    a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function getDailyOffset() {
+  try {
+    const key = `yc_daily_offset_${getDbKey()}`;
+    const v = Number(localStorage.getItem(key) || '0');
+    return Number.isFinite(v) ? Math.max(0, Math.floor(v)) : 0;
+  } catch {
+    return 0;
+  }
+}
+
+function setDailyOffset(v) {
+  try {
+    const key = `yc_daily_offset_${getDbKey()}`;
+    localStorage.setItem(key, String(Math.max(0, Math.floor(v))));
+  } catch {}
+}
+
+function readDailyCache(dateKey) {
+  try {
+    const key = `yc_daily_cache_${getDbKey()}`;
+    const raw = localStorage.getItem(key);
+    if (!raw) return null;
+    const obj = JSON.parse(raw);
+    if (obj && obj.dateKey === dateKey && obj.problem) return obj;
+  } catch {}
+  return null;
+}
+
+function writeDailyCache(dateKey, offset, problem) {
+  try {
+    const key = `yc_daily_cache_${getDbKey()}`;
+    localStorage.setItem(key, JSON.stringify({ dateKey, offset, problem }));
+  } catch {}
+}
+
+function dailyProblemExtraFilter(p) {
+  const stem = (p.text || '').trim();
+  if (!stem) return false;
+  if (stem.length > 800) return false;
+  // Skip if it likely contains multiple questions after the start.
+  if (/\n\s*\d{1,2}[\.．]\s+/.test(stem.slice(10))) return false;
+  // Skip obvious non-question blocks
+  if (/填涂上你认为本试卷中一道最佳试题的题号/.test(stem)) return false;
+  return true;
+}
+
+async function pickDailyProblem({ grades = [3, 4], pool = 'exam', offset = 0 } = {}) {
+  const index = await loadIndex();
+  const tasks = [];
+  for (const g of grades) {
+    const ys = index.grades?.[String(g)]?.years || [];
+    for (const y of ys) tasks.push([g, y]);
+  }
+  if (!tasks.length) return null;
+
+  const dateKey = localDateKey();
+  const seed = hashSeed(`${getDbKey()}|${dateKey}|${offset}`);
+  const rng = mulberry32(seed);
+
+  // Deterministic shuffle to avoid always hitting the same year first.
+  for (let i = tasks.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [tasks[i], tasks[j]] = [tasks[j], tasks[i]];
+  }
+
+  for (const [g, y] of tasks) {
+    const problems = await loadProblems(g, y);
+    const filtered = filterProblems(problems, { pool, requireQuestionText: true }).filter(dailyProblemExtraFilter);
+    if (!filtered.length) continue;
+    const pick = filtered[Math.floor(rng() * filtered.length)];
+    return pick;
+  }
+  return null;
+}
+
+function renderDailySummary(problem, dateKey) {
+  if (!problem) {
+    return `<div style="color:var(--text-muted);font-size:0.9rem">今日未找到可用题目（请稍后重试或先使用“开始练习/考试模式”）。</div>`;
+  }
+  const stage = problem.exam?.stage ? ` · ${problem.exam.stage}` : '';
+  const src = problem.source_file || '未知来源';
+  return `
+    <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap">
+      <div style="min-width:220px">
+        <div style="font-weight:600;margin-bottom:4px">📌 今日一题（${dateKey}）</div>
+        <div style="color:var(--text-muted);font-size:0.85rem">
+          ${problem.grade}年级${problem.year}年${stage} · 原题 #${problem.number || '-'} · ${topicName(problem.topic)}
+        </div>
+        <div style="color:var(--text-muted);font-size:0.8rem;margin-top:6px">来源：${src}${problem.page ? `（第${problem.page}页）` : ''}</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="startDaily">开始今日一题</button>
+        <button class="btn btn-secondary" id="refreshDaily" title="仅影响本设备">换一题</button>
+      </div>
+    </div>
+  `;
+}
+
+async function ensureDailyProblemLoaded({ force = false } = {}) {
+  const dateKey = localDateKey();
+  const offset = getDailyOffset();
+  const container = document.getElementById('dailyBox');
+  if (!container) return;
+
+  if (!force) {
+    const cached = readDailyCache(dateKey);
+    if (cached && cached.problem && Number(cached.offset || 0) === offset) {
+      dailyState = { dateKey, offset, problem: cached.problem, error: '' };
+      container.innerHTML = renderDailySummary(dailyState.problem, dateKey);
+      return;
+    }
+  }
+
+  container.innerHTML = `<div style="color:var(--text-muted);font-size:0.9rem">正在为你抽取今日题目…</div>`;
+
+  const slowTimer = setTimeout(() => showLoading({ title: '每日一题', text: '正在抽取今日题目（首次进入可能略慢）' }), 500);
+  try {
+    const problem = await pickDailyProblem({ grades: [3, 4], pool: 'exam', offset });
+    dailyState = { dateKey, offset, problem, error: '' };
+    writeDailyCache(dateKey, offset, problem);
+    container.innerHTML = renderDailySummary(problem, dateKey);
+  } catch (e) {
+    dailyState = { dateKey, offset, problem: null, error: e?.message || String(e) };
+    container.innerHTML = `<div style="color:var(--error)">每日一题加载失败：${dailyState.error}</div>`;
+  } finally {
+    clearTimeout(slowTimer);
+    hideLoading();
+  }
 }
 
 // ---- Image Preload (next question) ----
@@ -172,6 +342,9 @@ async function render(params = {}) {
       default: app.innerHTML = '<div class="card">页面未找到</div>';
     }
     bindEvents();
+    if (currentPage === 'home') {
+      scheduleIdle(() => ensureDailyProblemLoaded({ force: false }), 300);
+    }
     if (window.renderMathInElement) {
       window.renderMathInElement(app, {
         delimiters: [
@@ -200,11 +373,19 @@ async function renderHome() {
   const rate = prog.total_answered > 0 ? Math.round(prog.total_correct / prog.total_answered * 100) : 0;
   const history = getHistory().slice(-5).reverse();
   const exams = getExams().slice(-5).reverse();
+  const dateKey = localDateKey();
   return `
     <div class="stats">
       <div class="stat-card"><div class="num">${prog.total_answered}</div><div class="label">总做题</div></div>
       <div class="stat-card"><div class="num">${rate}%</div><div class="label">正确率</div></div>
       <div class="stat-card"><div class="num">${Object.keys(getWrong()).filter(k => getWrong()[k].st !== 'mastered').length}</div><div class="label">错题</div></div>
+    </div>
+    <div class="card">
+      <h2>每日一题</h2>
+      <div id="dailyBox">${dailyState.problem && dailyState.dateKey === dateKey ? renderDailySummary(dailyState.problem, dateKey) : `<div style="color:var(--text-muted);font-size:0.9rem">正在准备今日题目…</div>`}</div>
+      <div style="margin-top:10px;color:var(--text-muted);font-size:0.8rem">
+        提示：首次加载可能略慢（需要拉取题库与图片缓存）。答案默认隐藏，做完再展开查看更有效。
+      </div>
     </div>
     <div class="card">
       <h2>快速开始</h2>
@@ -1215,6 +1396,18 @@ function bindEvents() {
   // Navigation
   document.querySelectorAll('[data-nav]').forEach(el => {
     el.onclick = () => navigate(el.dataset.nav);
+  });
+  document.getElementById('startDaily')?.addEventListener('click', async () => {
+    if (!dailyState.problem) await ensureDailyProblemLoaded({ force: true });
+    if (!dailyState.problem) return;
+    practiceState = { problems: [dailyState.problem], index: 0, answers: [], startTime: Date.now(), timers: [0], questionStart: Date.now(), scope: { mode: 'daily', dateKey: dailyState.dateKey, offset: dailyState.offset } };
+    navigate('practice');
+  });
+  document.getElementById('refreshDaily')?.addEventListener('click', async () => {
+    const next = getDailyOffset() + 1;
+    setDailyOffset(next);
+    dailyState.offset = next;
+    await ensureDailyProblemLoaded({ force: true });
   });
   // Practice start
   document.getElementById('startPractice')?.addEventListener('click', () => navigate('practice', { start: true }));

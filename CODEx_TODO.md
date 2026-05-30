@@ -20,3 +20,5 @@
 - [X] 新增: `snail/game.js` 冒险模式作弊：玩家选择蜗牛时，移动前动态重排怪物；若存在合法布局则强制下一步踩雷（新增 `tryBuildAdventureCheatMonsterLayout`）
 - [X] 测试: 使用 `node --test` 覆盖冒险模式作弊布局求解器关键分支（更新 `snail/ai_strategy.test.js`）
 - [X] 修复: `history/historycards.py` 兼容缺依赖环境（`pypinyin`/`openai` 缺失时可导入，便于 `pytest` 运行）
+
+- [X] 新增: `apps/yingchun/` 首页“每日一题”，默认从 3–4 年级考试池确定性随机抽 1 题（支持开始练习/本设备换一题，并带缓存与加载提示）

@@ -1,22 +1,14 @@
 {
-  "current_task": "chesshorse：马踏遍棋盘（Knight's Tour）游戏",
+  "current_task": "迎春杯：首页每日一题",
   "last_changes": [
-    "chesshorse/index.html",
-    "chesshorse/style.css",
-    "chesshorse/app.js",
-    "chesshorse/knight_tour_solver.js",
-    "chesshorse/knight_tour_solver.test.js",
-    "chesshorse/README.md",
-    "tools/chesshorse_knight_tour_solver.py",
-    "tests/test_chesshorse_knight_tour_solver.py",
+    "apps/yingchun/js/app.js",
+    "apps/yingchun/index.html",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "运行 node --test chesshorse/knight_tour_solver.test.js",
-    "运行 python.exe -m pytest -q",
     "git status 确认变更",
     "git commit 并 push"
   ],
-  "notes": "已实现 chesshorse 游戏（N×N 4..8）、求解器（答案+演示）、祝福/烟花彩蛋、localStorage 记录；并新增 Node + pytest 回归测试。"
+  "notes": "首页新增“每日一题”卡片：确定性随机抽题（按本地日期+db+offset），缓存到 localStorage；按钮：开始今日一题 / 换一题（仅本设备）。"
 }
