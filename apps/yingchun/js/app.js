@@ -88,6 +88,37 @@ async function nextFrame() {
   return new Promise(r => requestAnimationFrame(() => r()));
 }
 
+// ---- Image Preload (next question) ----
+function scheduleIdle(fn, timeoutMs = 800) {
+  if (typeof requestIdleCallback === 'function') {
+    requestIdleCallback(() => fn(), { timeout: timeoutMs });
+  } else {
+    setTimeout(fn, 0);
+  }
+}
+
+function preloadImageUrl(url) {
+  if (!url) return;
+  window._ycPreloaded = window._ycPreloaded || new Set();
+  if (window._ycPreloaded.has(url)) return;
+  window._ycPreloaded.add(url);
+  const img = new Image();
+  img.decoding = 'async';
+  img.src = url;
+}
+
+function maybePreloadNextProblemImages() {
+  if (!practiceState || !practiceState.problems || practiceState.index === undefined) return;
+  const i = practiceState.index;
+  const probs = practiceState.problems;
+
+  // Only preload cropped problem images; never preload large page images.
+  const next = probs[i + 1];
+  if (!next) return;
+  const imgs = (next.images?.problem_images || []).slice(0, 2).map(resolveImgSrc);
+  imgs.forEach(preloadImageUrl);
+}
+
 async function loadProblemsForGradesWithProgress(grades, onProgress) {
   const index = await loadIndex();
   const tasks = [];
@@ -151,6 +182,11 @@ async function render(params = {}) {
         ],
         throwOnError: false
       });
+    }
+
+    // Preload next question images in idle time (helps new devices / slow networks).
+    if (practiceState && practiceState.index < (practiceState.problems?.length || 0)) {
+      scheduleIdle(() => maybePreloadNextProblemImages());
     }
   } catch (e) {
     console.error('Render error:', e);
