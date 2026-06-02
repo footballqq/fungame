@@ -1,0 +1,137 @@
+<!-- codex: 2026-06-02 修改缩放控制为5档选择模式（100%-200%） -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Cracker 50 - 木质环形数字谜题</title>
+    <meta name="description" content="Safe Cracker 50 数字拼图游戏 - 旋转五个木质圆环，让16个半径（列）上的数字之和等于50。超过65000种排列，只有唯一解。">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 标题 -->
+    <header class="header">
+        <h1>⚙️ SAFE CRACKER 50</h1>
+        <p class="subtitle">旋转木质圆环，让每列数字之和等于 50</p>
+    </header>
+
+    <!-- 游戏主体 -->
+    <div class="game-layout">
+
+        <!-- 拼图区域 -->
+        <div class="puzzle-container" style="display: flex; flex-direction: column; align-items: center;">
+            <svg id="puzzle-svg" width="560" height="560"></svg>
+            <div class="zoom-controls">
+                <span class="zoom-label">缩放:</span>
+                <button class="btn-zoom-opt active" data-scale="1.0">100%</button>
+                <button class="btn-zoom-opt" data-scale="1.2">120%</button>
+                <button class="btn-zoom-opt" data-scale="1.4">140%</button>
+                <button class="btn-zoom-opt" data-scale="1.6">160%</button>
+                <button class="btn-zoom-opt" data-scale="2.0">200%</button>
+            </div>
+        </div>
+
+        <!-- 右侧面板 -->
+        <div class="side-panel">
+
+            <!-- 状态显示 -->
+            <div id="game-status"></div>
+
+            <!-- 旋转控制面板 -->
+            <div class="control-panel">
+                <h3>🎛️ 旋转控制</h3>
+
+                <div class="control-group">
+                    <span class="control-label" style="color: #B28362;">环 B</span>
+                    <div class="control-buttons">
+                        <button class="btn btn-rotate" id="btn-blockB-ccw" title="逆时针旋转环B">⟲</button>
+                        <button class="btn btn-rotate" id="btn-blockB-cw" title="顺时针旋转环B">⟳</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <span class="control-label" style="color: #FAF6EE;">环 C</span>
+                    <div class="control-buttons">
+                        <button class="btn btn-rotate" id="btn-blockC-ccw" title="逆时针旋转环C">⟲</button>
+                        <button class="btn btn-rotate" id="btn-blockC-cw" title="顺时针旋转环C">⟳</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <span class="control-label" style="color: #B28362;">环 D</span>
+                    <div class="control-buttons">
+                        <button class="btn btn-rotate" id="btn-blockD-ccw" title="逆时针旋转环D">⟲</button>
+                        <button class="btn btn-rotate" id="btn-blockD-cw" title="顺时针旋转环D">⟳</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <span class="control-label" style="color: #FAF6EE;">环 E</span>
+                    <div class="control-buttons">
+                        <button class="btn btn-rotate" id="btn-blockE-ccw" title="逆时针旋转环E">⟲</button>
+                        <button class="btn btn-rotate" id="btn-blockE-cw" title="顺时针旋转环E">⟳</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-action" id="btn-reset">🔀 重新打乱</button>
+                    <button class="btn btn-action" id="btn-solve">💡 查看解法</button>
+                </div>
+
+                <div class="action-buttons" style="margin-top: 8px;">
+                    <button class="btn btn-action" id="btn-rules" style="width: 100%;">📖 游戏规则</button>
+                </div>
+            </div>
+
+            <!-- 列和值面板 -->
+            <div class="sums-panel">
+                <h3>📊 各列之和</h3>
+                <div id="diameter-sums"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 规则弹窗 -->
+    <div class="modal-overlay" id="rules-modal">
+        <div class="modal-content" style="position: relative;">
+            <button class="close-btn" id="modal-close">&times;</button>
+            <h2>📖 游戏规则</h2>
+            <p><strong>Safe Cracker 50</strong> 是一款经典木质数字拼图。目标是旋转环使 16 个半径（列）上的 5 个可见数字之和恰好等于 50。</p>
+
+            <h3 style="color: var(--accent-gold); margin: 16px 0 8px; font-size: 1rem;">🔧 结构说明</h3>
+            <ul>
+                <li>拼图由 5 个同心圆环组成，按 16 个半径方向划分为 16 个扇区（列）</li>
+                <li>每个环有上下两层，上层有镂空（隔一个缺一个），会露出下层数字</li>
+                <li>因物理结构叠加，旋转外环时放置在其上面的所有内环也会跟着同步旋转</li>
+                <li>相邻的层绑定为一个"积木"，共有 4 个可旋转的积木（环 B/C/D/E）</li>
+            </ul>
+
+            <h3 style="color: var(--accent-gold); margin: 16px 0 8px; font-size: 1rem;">🎮 操作方式</h3>
+            <ul>
+                <li><strong>按钮旋转：</strong>点击右侧控制面板中的 ⟲ ⟳ 按钮</li>
+                <li><strong>拖拽旋转：</strong>在拼图上按住并拖动对应的环（会联动内圈环同步转动）</li>
+            </ul>
+
+            <h3 style="color: var(--accent-gold); margin: 16px 0 8px; font-size: 1rem;">🎯 目标</h3>
+            <p>调整 4 个可旋转的环，使 <strong>16 个半径（列）</strong>中每个半径上的可见数字之和都等于 <strong>50</strong>。</p>
+
+            <h3 style="color: var(--accent-gold); margin: 16px 0 8px; font-size: 1rem;">💡 提示</h3>
+            <p>超过 65,000 种排列组合，但只有<strong>唯一一个正确解</strong>。这是一个数字对齐谜题，不是密码锁！</p>
+        </div>
+    </div>
+
+    <!-- 庆祝动画画布 -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- JavaScript 模块（按依赖顺序加载） -->
+    <script src="js/config.js"></script>
+    <script src="js/ring-model.js"></script>
+    <script src="js/ring-renderer.js"></script>
+    <script src="js/interaction.js"></script>
+    <script src="js/game-logic.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

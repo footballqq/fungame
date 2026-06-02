@@ -1,0 +1,5 @@
+# Git ignore file for Safe Cracker 50
+.antigravitycli/
+~$*
+.gemini/
+*.tmp

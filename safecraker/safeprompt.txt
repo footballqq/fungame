@@ -1,0 +1,18 @@
+这是一个safe cracker 50 游戏，你可以搜索一下这个游戏的设计。 不过程序写的有问题。我重新给你数字。@safe.csv 。目标是做一个游戏，可以通过目前gemini-code-1780359771189.html 的模式旋转（点击按钮旋转），也可以直接拖拽旋转。
+
+对于 save.csv的说明
+5down  最外圈
+4down(bind 5 down) 第四圈底层，实际上和 5是一块木头，会一起旋转
+4up 第四圈上层，相当于隔一个空缺出现一个，会盖住4down的一半数字，露出来一半。
+3down(bind 4up) 第三圈下层，和第四圈上层是一个积木（会一起转动）
+3up 第三圈上层，相当于隔一个空缺出现一个，会盖住3down的一半数字，露出来一半。
+2down(bind 3up)第二圈下层，和第三圈上层是一个积木（会一起转动）
+2up 第2圈上层，相当于隔一个空缺出现一个，会盖住2down的一半数字，露出来一半。
+1down(bind 2up)第1圈下层，和第2圈上层是一个积木（会一起转动）
+1up 第1圈上层，相当于隔一个空缺出现一个，会盖住1down的一半数字，露出来一半。
+
+
+要求你设计出整个环形结构，美观，看起来有立体效果。旋转过程中数字下方始终面向圆心。最里面可以是一个实心圆写上safe cracker 50. 有游戏规则介绍
+
+
+Hard brain teaser for adults: rotate the five wooden rings until all 16 columns of laser-engraved numbers each add up to 50. Over 65,000 alignments, only one solution. A number-alignment puzzle, not a combination lock.

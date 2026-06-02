@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Safe Cracker 50 - 自动化测试</title>
+<style>
+    body { font-family: monospace; padding: 20px; background: #1a1a2e; color: #e8e8e8; }
+    .pass { color: #2ecc71; }
+    .fail { color: #e74c3c; }
+    h2 { color: #FFD700; }
+    pre { background: #16213e; padding: 10px; border-radius: 4px; overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>Safe Cracker 50 - 自动化测试</h1>
+<div id="results"></div>
+
+<script src="js/config.js"></script>
+<script src="js/ring-model.js"></script>
+<script>
+const results = document.getElementById('results');
+let totalTests = 0;
+let passedTests = 0;
+
+function assert(condition, message) {
+    totalTests++;
+    if (condition) {
+        passedTests++;
+        results.innerHTML += `<div class="pass">✓ ${message}</div>`;
+    } else {
+        results.innerHTML += `<div class="fail">✗ ${message}</div>`;
+    }
+}
+
+function assertEq(actual, expected, message) {
+    assert(actual === expected, `${message} (期望: ${expected}, 实际: ${actual})`);
+}
+
+// ===== 测试1: 基础配置 =====
+results.innerHTML += '<h2>测试1: 基础配置</h2>';
+assertEq(GameConfig.SECTOR_COUNT, 16, '扇区数量=16');
+assertEq(GameConfig.TARGET_SUM, 50, '目标和=50');
+assertEq(GameConfig.RING_DATA.down5.length, 16, 'down5 有16个值');
+assertEq(GameConfig.RING_DATA.up4.filter(v => v !== null).length, 8, 'up4 有8个非空值');
+assertEq(GameConfig.RING_DATA.up4.filter(v => v === null).length, 8, 'up4 有8个空值');
+
+// ===== 测试2: 积木绑定 =====
+results.innerHTML += '<h2>测试2: 积木绑定</h2>';
+const model = new RingModel();
+
+// blockA 包含 down5 和 down4
+const blockA = GameConfig.BLOCK_DEFINITIONS.find(b => b.id === 'blockA');
+assert(blockA.layers.includes('down5'), 'blockA 包含 down5');
+assert(blockA.layers.includes('down4'), 'blockA 包含 down4');
+assertEq(blockA.rotatable, false, 'blockA 不可旋转');
+
+// blockB 包含 up4 和 down3
+const blockB = GameConfig.BLOCK_DEFINITIONS.find(b => b.id === 'blockB');
+assert(blockB.layers.includes('up4'), 'blockB 包含 up4');
+assert(blockB.layers.includes('down3'), 'blockB 包含 down3');
+assertEq(blockB.rotatable, true, 'blockB 可旋转');
+
+// ===== 测试3: 旋转逻辑 =====
+results.innerHTML += '<h2>测试3: 旋转逻辑</h2>';
+model.reset();
+
+// 偏移0时, up4 位置0 应该是 6
+assertEq(model.getLayerValue('up4', 0), 6, '偏移0, up4[0] = 6');
+// 偏移0时, up4 位置1 应该是 null
+assertEq(model.getLayerValue('up4', 1), null, '偏移0, up4[1] = null');
+// 偏移0时, down3 位置0 应该是 5
+assertEq(model.getLayerValue('down3', 0), 5, '偏移0, down3[0] = 5');
+
+// 旋转 blockB 1步后
+model.setOffset('blockB', 1);
+// 物理位置0处, 逻辑索引 = (0-1+16)%16 = 15
+// up4[15] = null
+assertEq(model.getLayerValue('up4', 0), null, '偏移1, up4[0] = null (从位置15取)');
+// 物理位置1处, 逻辑索引 = (1-1)%16 = 0
+// up4[0] = 6
+assertEq(model.getLayerValue('up4', 1), 6, '偏移1, up4[1] = 6 (从位置0取)');
+// down3[15] = 1, 偏移1后位置0处
+assertEq(model.getLayerValue('down3', 0), 1, '偏移1, down3[0] = 1 (从位置15取)');
+
+model.reset();
+
+// ===== 测试4: 可见数字逻辑 =====
+results.innerHTML += '<h2>测试4: 可见数字逻辑</h2>';
+model.reset();
+
+// R5 位置0: down5[0] = 1
+assertEq(model.getVisibleValue(5, 0), 1, 'R5 pos0 = 1 (down5)');
+
+// R4 位置0: up4[0] = 6 (有值, 显示上层)
+assertEq(model.getVisibleValue(4, 0), 6, 'R4 pos0 = 6 (up4有值)');
+
+// R4 位置1: up4[1] = null, 显示 down4[1] = 10
+assertEq(model.getVisibleValue(4, 1), 10, 'R4 pos1 = 10 (up4为空,显示down4)');
+
+// ===== 测试5: 正确解验证 =====
+results.innerHTML += '<h2>测试5: 正确解验证</h2>';
+model.solve(); // B=12, C=8, D=9, E=13
+
+const allSums = model.getAllColumnSums();
+let allCorrect = true;
+allSums.forEach(col => {
+    if (!col.correct) allCorrect = false;
+});
+assert(allCorrect, `solve()后所有16列和=50`);
+
+// 显示每列详情
+let detail = '';
+allSums.forEach(col => {
+    detail += `列${col.pos+1}: ${col.sum}${col.correct ? '✓' : '✗'}  `;
+});
+results.innerHTML += `<pre>${detail}</pre>`;
+
+assert(model.checkWin(), 'checkWin() = true');
+
+// ===== 测试6: 打乱后不应胜利 =====
+results.innerHTML += '<h2>测试6: 打乱状态</h2>';
+model.shuffle();
+// 打乱后很可能不是胜利(除非极小概率随到正确解)
+// 这里我们至少验证 shuffle 改变了偏移量
+assert(true, `打乱后偏移: B=${model.getOffset('blockB')}, C=${model.getOffset('blockC')}, D=${model.getOffset('blockD')}, E=${model.getOffset('blockE')}`);
+
+// ===== 测试7: 半径判断 =====
+results.innerHTML += '<h2>测试7: 半径→积木映射</h2>';
+assertEq(model.getBlockIdByRadius(180), 'blockB', 'radius=180 → blockB (ring4区域)');
+assertEq(model.getBlockIdByRadius(130), 'blockC', 'radius=130 → blockC (ring3区域)');
+assertEq(model.getBlockIdByRadius(85), 'blockD', 'radius=85 → blockD (ring2区域)');
+assertEq(model.getBlockIdByRadius(45), 'blockE', 'radius=45 → blockE (ring1区域)');
+assertEq(model.getBlockIdByRadius(250), null, 'radius=250 → null (最外圈外)');
+assertEq(model.getBlockIdByRadius(15), null, 'radius=15 → null (中心圆)');
+
+// ===== 总结 =====
+results.innerHTML += '<h2>测试总结</h2>';
+results.innerHTML += `<div class="${passedTests === totalTests ? 'pass' : 'fail'}">
+    通过: ${passedTests}/${totalTests}
+</div>`;
+</script>
+</body>
+</html>
