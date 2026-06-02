@@ -1,4 +1,4 @@
-// codex: 2026-06-02 修改颜色为白枫和浅褐相间交替，无渐变，保证木块对比度与数字清晰度
+// codex: 2026-06-02 增加3D厚度属性，优化同心圆环层叠的立体效果
 // Safe Cracker 50 - config.js
 
 /**
@@ -86,7 +86,7 @@ const BLOCK_DEFINITIONS = [
         name: '基座 (固定)',
         layers: ['down5', 'down4'],
         rotatable: false,
-        color: { base: '#FAF6EE', light: '#FFFFFF', dark: '#F3EBE0', stroke: '#E0D5C3' }
+        color: { base: '#FAF6EE', light: '#FFFFFF', dark: '#F3EBE0', stroke: '#E0D5C3', thickness: '#C5B59E' }
     },
     {
         id: 'blockB',

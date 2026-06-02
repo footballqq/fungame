@@ -1,4 +1,4 @@
-// codex: 2026-06-02 SVG 渲染器 - 绘制木质环形拼图，含3D立体效果
+// codex: 2026-06-02 优化阴影滤镜，增加 3D 侧面厚度渲染以增强层叠立体感
 // Safe Cracker 50 - ring-renderer.js
 
 /**
@@ -107,16 +107,16 @@ class RingRenderer {
         // drop-shadow 滤镜 - 上层板块投影
         const dropShadow = this._createSVGElement('filter');
         dropShadow.setAttribute('id', 'drop-shadow');
-        dropShadow.setAttribute('x', '-10%');
-        dropShadow.setAttribute('y', '-10%');
-        dropShadow.setAttribute('width', '130%');
-        dropShadow.setAttribute('height', '130%');
+        dropShadow.setAttribute('x', '-20%');
+        dropShadow.setAttribute('y', '-20%');
+        dropShadow.setAttribute('width', '140%');
+        dropShadow.setAttribute('height', '140%');
 
         const feDropShadow = this._createSVGElement('feDropShadow');
-        feDropShadow.setAttribute('dx', '1');
-        feDropShadow.setAttribute('dy', '1');
-        feDropShadow.setAttribute('stdDeviation', '1.5');
-        feDropShadow.setAttribute('flood-color', 'rgba(0,0,0,0.4)');
+        feDropShadow.setAttribute('dx', '0');
+        feDropShadow.setAttribute('dy', '2.5');
+        feDropShadow.setAttribute('stdDeviation', '2');
+        feDropShadow.setAttribute('flood-color', 'rgba(0,0,0,0.55)');
         dropShadow.appendChild(feDropShadow);
         defs.appendChild(dropShadow);
 
@@ -251,11 +251,19 @@ class RingRenderer {
             path.setAttribute('d', d);
 
             if (isUpper) {
-                // 上层用实色 + 投影
+                // 1. 绘制 3D 厚度边（侧面），下移 3.5px 并应用投影
+                const thickness = this._createSVGElement('path');
+                thickness.setAttribute('d', d);
+                thickness.setAttribute('fill', layer.color.thickness || layer.color.stroke);
+                thickness.setAttribute('transform', 'translate(0, 3.5)');
+                thickness.setAttribute('filter', 'url(#drop-shadow)');
+                thickness.setAttribute('pointer-events', 'none');
+                group.appendChild(thickness);
+
+                // 2. 绘制上层表面
                 path.setAttribute('fill', layer.color.base);
                 path.setAttribute('stroke', layer.color.stroke);
                 path.setAttribute('stroke-width', '1');
-                path.setAttribute('filter', 'url(#drop-shadow)');
             } else {
                 // 下层用渐变
                 path.setAttribute('fill', `url(#grad-${layer.blockId})`);
@@ -312,14 +320,23 @@ class RingRenderer {
         const r = this.radii.center.radius;
         const centerGroup = this._createSVGElement('g');
 
-        // 中心圆背景
+        // 1. 中心圆 3D 厚度边（侧面），下移 3.5px 并应用投影
+        const thickness = this._createSVGElement('circle');
+        thickness.setAttribute('cx', 0);
+        thickness.setAttribute('cy', 3.5);
+        thickness.setAttribute('r', r);
+        thickness.setAttribute('fill', '#3E2723'); // 深木色侧边
+        thickness.setAttribute('filter', 'url(#drop-shadow)');
+        centerGroup.appendChild(thickness);
+
+        // 2. 中心圆表面
         const circle = this._createSVGElement('circle');
         circle.setAttribute('cx', 0);
         circle.setAttribute('cy', 0);
         circle.setAttribute('r', r);
         circle.setAttribute('fill', 'url(#grad-center)');
         circle.setAttribute('stroke', '#2C1810');
-        circle.setAttribute('stroke-width', '2');
+        circle.setAttribute('stroke-width', '1.5');
         centerGroup.appendChild(circle);
 
         // 中心文字 "SAFE" 和 "CRACKER"
