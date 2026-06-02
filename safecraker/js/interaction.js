@@ -1,4 +1,4 @@
-// codex: 2026-06-02 交互控制 - 按钮旋转 + 拖拽旋转
+// codex: 2026-06-02 交互控制 - 限制仅可拖拽上层木块，增加动态光标切换
 // Safe Cracker 50 - interaction.js
 
 /**
@@ -39,6 +39,7 @@ class InteractionController {
     _bindEvents() {
         // 鼠标事件
         this.svg.addEventListener('mousedown', this._onPointerDown.bind(this));
+        this.svg.addEventListener('mousemove', this._updateCursor.bind(this)); // 悬停时动态更新光标
         document.addEventListener('mousemove', this._onPointerMove.bind(this));
         document.addEventListener('mouseup', this._onPointerUp.bind(this));
 
@@ -96,7 +97,8 @@ class InteractionController {
 
         const point = this._getSVGPoint(event);
         const radius = this._getRadius(point.x, point.y);
-        const blockId = this.model.getBlockIdByRadius(radius);
+        const angle = this._getAngle(point.x, point.y);
+        const blockId = this.model.getRotatableBlockIdAt(radius, angle);
 
         if (!blockId) return;
 
@@ -122,7 +124,8 @@ class InteractionController {
         const touch = event.touches[0];
         const point = this._getSVGPoint(touch);
         const radius = this._getRadius(point.x, point.y);
-        const blockId = this.model.getBlockIdByRadius(radius);
+        const angle = this._getAngle(point.x, point.y);
+        const blockId = this.model.getRotatableBlockIdAt(radius, angle);
 
         if (!blockId) return;
 
@@ -221,8 +224,27 @@ class InteractionController {
      */
     destroy() {
         this.svg.removeEventListener('mousedown', this._onPointerDown);
+        this.svg.removeEventListener('mousemove', this._updateCursor);
         document.removeEventListener('mousemove', this._onPointerMove);
         document.removeEventListener('mouseup', this._onPointerUp);
+    }
+
+    /**
+     * 鼠标悬停时根据指针位置动态切换光标样式
+     */
+    _updateCursor(event) {
+        if (this.isDragging) return; // 拖拽中由拖拽逻辑统一管理
+
+        const point = this._getSVGPoint(event);
+        const radius = this._getRadius(point.x, point.y);
+        const angle = this._getAngle(point.x, point.y);
+        const blockId = this.model.getRotatableBlockIdAt(radius, angle);
+
+        if (blockId) {
+            this.svg.style.cursor = 'grab'; // 悬停在上层可拖动齿轮时显示抓取手势
+        } else {
+            this.svg.style.cursor = 'default'; // 其他区域显示默认箭头
+        }
     }
 }
 

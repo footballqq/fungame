@@ -1,4 +1,4 @@
-// codex: 2026-06-02 增加环旋转物理耦合联动逻辑，旋转外环时内部所有环同步旋转
+// codex: 2026-06-02 增加 getRotatableBlockIdAt 检测特定坐标处是否属于可旋转上层木块
 // Safe Cracker 50 - ring-model.js
 
 /**
@@ -241,6 +241,35 @@ class RingModel {
         // 第一圈区域 → 积木E (up1)
         if (radius >= radii.ring1.inner && radius <= radii.ring1.outer) {
             return 'blockE';
+        }
+        return null;
+    }
+
+    /**
+     * 判断指定半径和角度位置是否处于某个可旋转积木的上层（齿轮凸出部）
+     * @param {number} radius - 距圆心的半径
+     * @param {number} angle - 角度（0~360，12点钟方向为0）
+     * @returns {string|null} 对应的可旋转积木 ID，若处于镂空或不可旋转区域则返回 null
+     */
+    getRotatableBlockIdAt(radius, angle) {
+        const radii = window.GameConfig.RING_RADII;
+        const pos = Math.floor(angle / (360 / this.N)) % this.N;
+
+        // 第四圈区域 → 积木B (up4)
+        if (radius >= radii.ring4.inner && radius <= radii.ring4.outer) {
+            return this.getLayerValue('up4', pos) !== null ? 'blockB' : null;
+        }
+        // 第三圈区域 → 积木C (up3)
+        if (radius >= radii.ring3.inner && radius <= radii.ring3.outer) {
+            return this.getLayerValue('up3', pos) !== null ? 'blockC' : null;
+        }
+        // 第二圈区域 → 积木D (up2)
+        if (radius >= radii.ring2.inner && radius <= radii.ring2.outer) {
+            return this.getLayerValue('up2', pos) !== null ? 'blockD' : null;
+        }
+        // 第一圈区域 → 积木E (up1)
+        if (radius >= radii.ring1.inner && radius <= radii.ring1.outer) {
+            return this.getLayerValue('up1', pos) !== null ? 'blockE' : null;
         }
         return null;
     }
