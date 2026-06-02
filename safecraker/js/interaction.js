@@ -1,4 +1,4 @@
-// codex: 2026-06-02 交互控制 - 限制仅可拖拽上层木块，增加动态光标切换
+// codex: 2026-06-02 交互控制 - 限制仅可拖拽上层木块，增加动态光标切换，胜利后锁定交互
 // Safe Cracker 50 - interaction.js
 
 /**
@@ -93,7 +93,7 @@ class InteractionController {
      * 鼠标按下
      */
     _onPointerDown(event) {
-        if (this.isAnimating) return;
+        if (this.isAnimating || this.model.checkWin()) return; // 胜利后锁定交互
 
         const point = this._getSVGPoint(event);
         const radius = this._getRadius(point.x, point.y);
@@ -118,8 +118,7 @@ class InteractionController {
      * 触摸开始
      */
     _onTouchStart(event) {
-        if (this.isAnimating) return;
-        if (event.touches.length !== 1) return;
+        if (this.isAnimating || this.model.checkWin() || event.touches.length !== 1) return; // 胜利后锁定交互
 
         const touch = event.touches[0];
         const point = this._getSVGPoint(touch);
@@ -213,7 +212,7 @@ class InteractionController {
      * @param {number} direction - 方向: 1=顺时针, -1=逆时针
      */
     buttonRotate(blockId, direction) {
-        if (this.isAnimating) return;
+        if (this.isAnimating || this.model.checkWin()) return; // 胜利后锁定交互
 
         this.onRotate(blockId, direction);
         this.onRender();
@@ -234,6 +233,10 @@ class InteractionController {
      */
     _updateCursor(event) {
         if (this.isDragging) return; // 拖拽中由拖拽逻辑统一管理
+        if (this.model.checkWin()) {
+            this.svg.style.cursor = 'default'; // 胜利后恢复默认光标且不可交互
+            return;
+        }
 
         const point = this._getSVGPoint(event);
         const radius = this._getRadius(point.x, point.y);

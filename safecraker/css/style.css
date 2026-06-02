@@ -1,4 +1,4 @@
-/* codex: 2026-06-02 优化缩放控制面板为5档预设选项样式 */
+/* codex: 2026-06-02 优化大屏响应式布局，调整最大宽度为1600px，并修复移动端SVG拉伸问题 */
 /* Safe Cracker 50 - style.css */
 
 /* ========== 全局重置与基础样式 ========== */
@@ -25,7 +25,7 @@
     --shadow-color: rgba(0, 0, 0, 0.4);
 
     /* 尺寸变量 */
-    --max-width: 1200px;
+    --max-width: 1600px;
     --border-radius: 12px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
@@ -95,7 +95,7 @@ body {
     filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.5));
     transition: filter 0.3s ease;
     max-width: 100%;
-    height: auto;
+    height: auto !important; /* 强制等比例，防止在移动端因 inline-height 发生垂直方向拉伸 */
 }
 
 .puzzle-container svg:hover {
