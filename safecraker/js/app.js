@@ -1,4 +1,4 @@
-// codex: 2026-06-02 优化缩放控制为5档预设快速选择面板（100%-200%）
+// codex: 2026-06-02 引入 localStorage 自动存档与读档功能，防止刷新丢失当前进度
 // Safe Cracker 50 - app.js
 
 /**
@@ -50,11 +50,15 @@ class SafeCrackerApp {
             () => {
                 this.renderer.render();
                 this.gameLogic.update();
+                this.saveProgress();
             }
         );
 
         // 设置拖拽光标
         svgEl.style.cursor = 'grab';
+
+        // 从 localStorage 恢复玩家当前进度
+        this.loadProgress();
 
         // 初始渲染
         this.renderer.render();
@@ -69,7 +73,48 @@ class SafeCrackerApp {
         // 初始化缩放控制
         this._initZoomControls();
 
-        console.log('Safe Cracker 50 游戏已初始化');
+        console.log('Safe Cracker 50 游戏已初始化并加载进度');
+    }
+
+    /**
+     * 保存当前进度到 localStorage
+     */
+    saveProgress() {
+        try {
+            const data = {
+                offsets: this.model.offsets,
+                moveCount: this.gameLogic.moveCount
+            };
+            localStorage.setItem('safecracker_progress', JSON.stringify(data));
+            console.log('进度已自动保存到本地:', data);
+        } catch (e) {
+            console.error('自动保存本地进度失败:', e);
+        }
+    }
+
+    /**
+     * 从 localStorage 恢复进度
+     */
+    loadProgress() {
+        try {
+            const saved = localStorage.getItem('safecracker_progress');
+            if (saved) {
+                const data = JSON.parse(saved);
+                if (data && data.offsets) {
+                    Object.keys(data.offsets).forEach(key => {
+                        if (this.model.offsets[key] !== undefined) {
+                            this.model.offsets[key] = data.offsets[key];
+                        }
+                    });
+                }
+                if (data && typeof data.moveCount === 'number') {
+                    this.gameLogic.moveCount = data.moveCount;
+                }
+                console.log('已从本地存档成功加载历史进度:', data);
+            }
+        } catch (e) {
+            console.error('恢复本地进度失败:', e);
+        }
     }
 
     /**
@@ -116,6 +161,7 @@ class SafeCrackerApp {
         this.gameLogic.reset();
         this.renderer.render();
         this.gameLogic.update();
+        this.saveProgress();
     }
 
     /**
@@ -125,6 +171,7 @@ class SafeCrackerApp {
         this.model.solve();
         this.renderer.render();
         this.gameLogic.update();
+        this.saveProgress();
     }
 
     /**
