@@ -1,4 +1,4 @@
-// codex: 2026-06-02 优化阴影滤镜，增加 3D 侧面厚度渲染以增强层叠立体感
+// codex: 2026-06-02 优化阴影滤镜与3D厚度，调整各环数字字体大小使其更紧凑协调
 // Safe Cracker 50 - ring-renderer.js
 
 /**
@@ -304,13 +304,21 @@ class RingRenderer {
     }
 
     /**
-     * 根据环的宽度计算合适的字体大小
+     * 根据环的半径范围计算合适的字体大小
      */
     _getFontSize(innerR, outerR) {
-        const width = outerR - innerR;
-        if (width > 40) return '15px';
-        if (width > 30) return '13px';
-        return '11px';
+        // outerR 用于判断是哪一圈的环 (从内到外分别是 65, 110, 155, 200, 240)
+        if (outerR <= 65) {
+            return '10px';  // Ring 1 (1down / 1up) - 内圈小字体更紧凑
+        } else if (outerR <= 110) {
+            return '12px';  // Ring 2 (2down / 2up)
+        } else if (outerR <= 155) {
+            return '13px';  // Ring 3 (3down / 3up)
+        } else if (outerR <= 200) {
+            return '13px';  // Ring 4 (4down / 4up)
+        } else {
+            return '13px';  // Ring 5 (5down)
+        }
     }
 
     /**
