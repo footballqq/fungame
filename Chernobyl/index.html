@@ -64,23 +64,30 @@
                             </div>
                         </div>
 
-                        <!-- 控制棒调节滑块 -->
-                        <div class="rod-controls">
-                            <h3>手动控制棒组 (BC组)</h3>
-                            <div class="slider-container">
-                                <span>全插入</span>
-                                <input type="range" id="rod-slider" min="0" max="100" value="80" step="1">
-                                <span>全拔出</span>
+                        <!-- 控制区并排布局以节省高度 -->
+                        <div class="reactor-controls-row">
+                            <!-- 控制棒调节滑块与核心物理动画 -->
+                            <div class="rod-controls">
+                                <h3>手动控制棒组 (BC组)</h3>
+                                <div class="slider-container">
+                                    <span>全插入</span>
+                                    <input type="range" id="rod-slider" min="0" max="100" value="80" step="1">
+                                    <span>全拔出</span>
+                                </div>
+                                <div class="core-canvas-box">
+                                    <canvas id="core-anim-canvas"></canvas>
+                                </div>
                             </div>
-                            <div class="slider-desc">拖动滑块调整控制棒拔出深度。拔出越多，反应堆功率上涨，但ORM（安全裕度）会减少。</div>
-                        </div>
 
-                        <!-- AZ-5 按钮区 -->
-                        <div class="az5-container">
-                            <div class="az5-shield" id="az5-shield">
-                                <span class="shield-label">AZ-5 安全罩</span>
+                            <!-- AZ-5 紧急按钮区 -->
+                            <div class="az5-container">
+                                <div class="az5-shield-wrapper">
+                                    <div class="az5-shield" id="az5-shield">
+                                        <span class="shield-label">AZ-5 安全罩</span>
+                                    </div>
+                                </div>
+                                <button class="btn-az5" id="btn-az5" disabled>AZ-5 停堆</button>
                             </div>
-                            <button class="btn-az5" id="btn-az5" disabled>AZ-5 停堆</button>
                         </div>
                     </div>
                 </div>

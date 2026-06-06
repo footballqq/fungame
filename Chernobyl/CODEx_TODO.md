@@ -24,3 +24,9 @@
   - [X] Write a python script (`tests/test_game_assets.py`) to verify all assets and files exist and conform to layout.
   - [X] Write unit tests for the reactor physics equations in Python to verify reactor-core logic mathematically.
   - [X] Perform final review and verify cross-device responsive layout. Tests run successfully and show all green.
+- [X] **Phase 7: Optimization & User Feedback (2026-06-06)**
+  - [X] 放大反应堆控制面板仪表与滑块比例，优化桌面端布局占比（75% 与 25% 分离）。
+  - [X] 实现手动控制棒插入失败逻辑：当玩家试图插入控制棒时，控制棒在 65% 深处卡死，并弹出高温管道变形警告对话框。
+  - [X] 优化停堆后反应堆功率增长曲线：AZ-5 正停堆效应和蒸汽空泡正反馈被调整为强烈的指数级上升，热功率在 4-5 秒内暴增超 30,000 MW 触爆，配以骤增的盖革计数器爆鸣。
+  - [X] 重构控制棒 2D Canvas 切面动画：所有像素位置和元素（碳化硼、石墨慢化体、X卡死红叉）完全重写为基于容器高度的动态比例自适应。
+  - [X] 修复 PowerShell 自动化测试脚本在中文 Windows 系统的 CP936 编码解析问题。

@@ -116,7 +116,7 @@ body, html {
 
 /* 交互控制视口 (左) */
 .interactive-panel {
-    flex: 6;
+    flex: 7.5;
     background-color: var(--panel-bg);
     border: 2px solid var(--panel-border);
     border-radius: 4px;
@@ -130,7 +130,7 @@ body, html {
 
 /* 叙事对话视口 (右) */
 .narrative-panel {
-    flex: 4;
+    flex: 2.5;
     background-color: var(--panel-bg);
     border: 2px solid var(--panel-border);
     border-radius: 4px;

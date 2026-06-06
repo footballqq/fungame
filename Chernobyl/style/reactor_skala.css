@@ -5,33 +5,35 @@
 .reactor-dashboard {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     height: 100%;
 }
 
 .gauge-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 12px;
 }
 
 .gauge-card {
-    background: rgba(0,0,0,0.4);
-    border: 1px solid var(--panel-border);
-    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    border: 2px solid var(--panel-border);
+    padding: 16px 20px;
     border-radius: 4px;
+    box-shadow: 0 0 5px rgba(51, 255, 51, 0.05);
 }
 
 .gauge-card label {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #88aa88;
+    font-weight: bold;
 }
 
 .gauge-value {
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     font-weight: bold;
     color: var(--terminal-green);
-    text-shadow: 0 0 5px var(--terminal-glow);
+    text-shadow: 0 0 8px var(--terminal-glow);
     margin: 5px 0;
 }
 
@@ -56,24 +58,43 @@
     background: var(--alert-red);
 }
 
+/* 侧边并排控制区 */
+.reactor-controls-row {
+    display: flex;
+    gap: 20px;
+    margin-top: auto;
+    align-items: stretch;
+}
+
 .rod-controls {
-    border: 1px solid var(--panel-border);
+    flex: 7;
+    border: 2px solid var(--panel-border);
     padding: 15px;
     border-radius: 4px;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .rod-controls h3 {
-    margin-bottom: 10px;
     color: var(--terminal-green);
-    font-size: 1rem;
+    font-size: 1.05rem;
+    margin-bottom: 2px;
+    text-shadow: 0 0 5px var(--terminal-glow);
 }
 
 .slider-container {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin: 10px 0;
+    gap: 12px;
+    margin: 5px 0;
+}
+
+.slider-container span {
+    font-size: 0.9rem;
+    color: #88aa88;
+    font-weight: bold;
 }
 
 .slider-container input[type="range"] {
@@ -83,66 +104,102 @@
     height: 10px;
     border: 1px solid var(--panel-border);
     outline: none;
+    border-radius: 5px;
 }
 
 .slider-container input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     background: var(--terminal-green);
     border: 2px solid var(--bg-color);
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0 0 5px var(--terminal-glow);
+    box-shadow: 0 0 8px var(--terminal-glow);
 }
 
-.slider-desc {
-    font-size: 0.8rem;
-    color: #88aa88;
+/* 核心物理切面动画 - 放大高度 */
+.core-canvas-box {
+    width: 100%;
+    background: #010401;
+    border: 2px solid var(--panel-border);
+    border-radius: 4px;
+    height: 180px;
+    overflow: hidden;
+    margin-top: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
 }
 
+#core-anim-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* AZ-5 紧急按钮容器 - 放大尺寸 */
 .az5-container {
+    flex: 3;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: auto;
-    gap: 10px;
+    border: 2px solid var(--panel-border);
+    border-radius: 4px;
+    background: rgba(255, 0, 0, 0.05);
+    padding: 15px;
+    gap: 12px;
+    min-width: 140px;
+}
+
+.az5-shield-wrapper {
+    perspective: 600px;
+    width: 100%;
+    height: 54px;
+    position: relative;
 }
 
 .az5-shield {
-    width: 150px;
-    height: 40px;
-    background: rgba(255, 50, 0, 0.2);
-    border: 2px dashed var(--alert-red);
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 50, 0, 0.35);
+    border: 2.5px solid var(--alert-red);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--alert-red);
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--alert-glow);
+    transition: transform 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+    transform-origin: top;
+    box-shadow: 0 0 8px var(--alert-glow);
 }
 
 .az5-shield.open {
-    transform: rotateX(100deg);
-    transform-origin: top;
-    background: transparent;
-    border-style: solid;
-}
-
-.shield-label {
-    font-size: 0.75rem;
-    color: var(--alert-red);
+    transform: rotateX(-120deg); /* 翻转打开 */
+    background: rgba(255, 50, 0, 0.05);
+    color: rgba(255, 50, 0, 0.3);
+    border-color: rgba(255, 50, 0, 0.3);
+    box-shadow: none;
 }
 
 .btn-az5 {
-    background: #440000;
-    border: 4px solid var(--alert-red);
+    width: 100%;
+    height: 64px;
+    background: #550000;
+    border: 3.5px solid var(--alert-red);
     color: var(--alert-red);
-    padding: 15px 40px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     box-shadow: 0 0 10px var(--alert-glow);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-az5:hover:not(:disabled) {
@@ -152,9 +209,12 @@
 }
 
 .btn-az5:disabled {
-    opacity: 0.2;
+    opacity: 0.25;
     cursor: not-allowed;
     box-shadow: none;
+    border-color: #552222;
+    color: #662222;
+    background: #220000;
 }
 
 /* --- SKALA 终端样式 --- */

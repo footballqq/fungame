@@ -19,11 +19,11 @@ class ScenarioEngine {
         this.state.switchView('view-reactor');
 
         this.state.showDialogue(
-            "阿纳托利·迪亚特洛夫",
-            "阿基莫夫，今天我们要对4号机组进行例行停机，并在此时执行涡轮发电机惰转测试。这是极其关键的安全试验！立刻将热功率降到 700 - 1000 MWth 目标范围，然后手动断开应急堆芯冷却系统（ECCS）！",
+            "阿纳托利·迪亚特洛夫 (副总工程师)",
+            "阿基莫夫，今天我们要对4号机组进行例行停机，并在此时执行发电机惰转测试。这是极其关键的安全试验！立刻通过棒组控制将热功率降低至 700 - 1000 MWth 的试验额定区间。然后，手动断开应急堆芯冷却系统（ECCS）！",
             [
                 {
-                    text: "阿基莫夫: 收到，我们立刻按程序开始降功率。",
+                    text: "阿基莫夫: 收到，我们立刻按程序开始降低反应堆功率。",
                     callback: () => {
                         this.state.power = 1600; // 快速降低到中间功率
                         this.state.addMinutes(120); // 时间跳过2小时
@@ -31,19 +31,19 @@ class ScenarioEngine {
                     }
                 },
                 {
-                    text: "阿基莫夫: 反应堆状态还有波动，断开ECCS太冒险了，我认为应该推迟试验。",
+                    text: "阿基莫夫: 迪亚特洛夫同志，反应堆状态目前还不算稳定，且断开ECCS等于拔掉了唯一的应急水泵。这违背了操作规程！",
                     callback: () => {
                         this.state.showDialogue(
                             "阿纳托利·迪亚特洛夫",
-                            "推迟？你疯了吗？基辅电网要求我们必须完成它。别像个懦夫一样教我做事！照我说的做，要么你现在就被开除，换个人来干！",
+                            "规程？这台反应堆是我看着建起来的！在西伯利亚，我经手的反应堆比你吃过的面包还多！基辅电网已经催了无数次。你现在只有两个选择：听从我的命令，立刻断开ECCS；或者我撤销你的值班长职务，换个听话的人来签字。你那点微薄的退休金和前途，自己掂量吧！",
                             [
-                                { text: "服从命令，开始降功并准备试验", callback: () => {
+                                { text: "阿基莫夫: （低头）服从命令，开始降功并断开系统...", callback: () => {
                                     this.state.power = 1600;
                                     this.state.addMinutes(120);
                                     this.triggerECCSQuestion();
                                 }},
-                                { text: "坚持拒绝违规操作", callback: () => {
-                                    this.state.triggerGameOver("你拒绝了迪亚特洛夫的命令。你被当场免职，剥夺了控制室值班长资格。这未能阻止灾难，但你保全了自己的良心。");
+                                { text: "坚决拒绝执行违规操作", callback: () => {
+                                    this.state.triggerGameOver("你拒绝了迪亚特洛夫的命令。你被当场免职，剥夺了值班长资格并被记录档案。你虽然失去工作，但成功避免成为爆炸的直接操作者。");
                                 }}
                             ]
                         );
@@ -56,10 +56,10 @@ class ScenarioEngine {
     triggerECCSQuestion() {
         this.state.showDialogue(
             "系统提示",
-            "现在功率已降至 1600 MW。为了防止测试时系统自动注入应急水流破坏实验数据，必须手动关闭应急堆芯冷却系统 (ECCS)。",
+            "现在功率已降至 1600 MW。为了防止测试启动时系统误判定并自动向核心灌入水流而破坏试验数据，必须手动关闭应急堆芯冷却系统 (ECCS)。这等于彻底剥夺了反应堆对失控过热时的自我防御能力。",
             [
                 {
-                    text: "手动关闭 ECCS 冷却阀门",
+                    text: "（合上电闸）手动切断 ECCS 并等待电网命令",
                     callback: () => {
                         this.state.addMinutes(600); // 蒙太奇，九小时电网延误
                         this.triggerStage2();
@@ -80,7 +80,7 @@ class ScenarioEngine {
 
         this.state.showDialogue(
             "旁白",
-            "4月25日 14:00。基辅电网调度员突然来电，要求机组必须维持供电以满足工厂用电，测试被迫中止！ECCS被关闭，反应堆在 1600 MW 半功率状态下苦苦维持了整整 9 个小时，直到深夜 23:04，测试才被允许恢复。但此时，看不见的幽灵——氙-135 已经在堆芯内疯狂堆积！\n\n【交互任务】：输入 SKALA 控制码 00000302，调用 PRIZMA 程序计算当前反应性裕度（ORM）以判断是否安全。",
+            "4月25日 14:00。就在你断开冷却系统后，基辅电网调度员突然来电，咆哮着称工业区用电吃紧，命令你必须维持反应堆输出，严禁测试停机！由于体制的死板调度，反应堆在“无冷却防御”状态下滞留在 1600 MW 长达 9 个小时。在这绝望的九小时里，堆芯里的中子强吸收剂——氙-135 正在堆芯中大量积聚。反应堆正滑向致命的“反应堆毒化阱”...\n\n深夜 23:04，基辅终于同意测试。为了判断当前反应性余度（ORM），你需要通过计算机查询核心数据。\n\n【交互任务】：在 SKALA 中输入八进制命令 00000302，调用 PRIZMA 计算反应堆 ORM 值。",
             []
         );
     }
@@ -88,15 +88,15 @@ class ScenarioEngine {
     // SKALA查询完ORM后触发
     onPrizmaQueried() {
         this.state.showDialogue(
-            "列昂尼德·托普图诺夫",
-            "阿基莫夫同志！数据出来了！计算显示，我们的操作反应性裕度（ORM）已经降到了 12.0 根控制棒当量！这严重违背了不低于 15 根的安全底线！反应堆已经严重'氙中毒'，对控制棒极为迟钝。我们应该立即紧急停堆！",
+            "列昂尼德·托普图诺夫 (操作员)",
+            "阿基莫夫同志！数据出来了……这太可怕了！计算显示我们的 ORM（操作反应性裕度）已经跌到了 12.0 根控制棒！安全红线是 15 根！核心已经被氙-135严重‘毒死’，对控制棒响应极其迟钝。此时我们必须立刻停堆，等待24小时直到氙衰退完毕！",
             [
                 {
                     text: "阿基莫夫: 我同意。迪亚特洛夫同志，堆芯毒性太大，不能再试验了！",
                     callback: () => {
                         this.state.showDialogue(
                             "阿纳托利·迪亚特洛夫",
-                            "一派胡言！你们这些大学刚毕业的懦夫根本不懂大修！ORM只是计算滞后的估算。如果停机，你们的职业生涯就全完了！把自动控制关闭，手动拉出控制棒，把功率强行给我拉上去！",
+                            "一派胡言！你们这些刚从学校出来的毛头小子根本不懂大修！ORM只是计算滞后的估算。物理学规律在核电站里也是要服从党和计划的！如果现在停机，今年的劳动红旗就没了，整个轮班组也会被剥夺工程师头衔！把自动控制关闭，手动拔出控制棒，把功率强行给我拉上去！",
                             [
                                 {
                                     text: "无奈顺从：切入手动，强行拔出控制棒，功率艰难稳定在 200 MW",
@@ -108,9 +108,9 @@ class ScenarioEngine {
                                     }
                                 },
                                 {
-                                    text: "阿基莫夫: 这违反了绝对禁令，我拒绝执行命令！",
+                                    text: "阿基莫夫: 这违反了核安全绝对禁令，我坚决拒绝执行命令！",
                                     callback: () => {
-                                        this.state.triggerGameOver("你坚决拒绝拔出控制棒。愤怒的迪亚特洛夫强行推开了你，命令托普图诺夫动手。你虽然被拘留免职，但成功逃离了灾难的第一波冲击。");
+                                        this.state.triggerGameOver("你坚决拒绝拔出控制棒。愤怒的迪亚特洛夫强行推开了你，命令托普图诺夫动手。你虽然保全了自己的生命，但未能阻止灾难的发生。");
                                     }
                                 }
                             ]
@@ -127,25 +127,39 @@ class ScenarioEngine {
         document.getElementById('game-phase-tag').textContent = "断电测试";
         this.state.switchView('view-reactor');
         
-        // 激活AZ-5按钮，并允许滑动条交互
-        document.getElementById('rod-slider').disabled = false;
-        document.getElementById('btn-az5').disabled = false;
+        // 激活滑动条，并将初始控制棒拔出率设为 93% 以匹配极低的 ORM (6.0)
+        const rodSlider = document.getElementById('rod-slider');
+        if (rodSlider) {
+            rodSlider.value = 93;
+            rodSlider.disabled = false;
+        }
+        window.reactor.rodPosition = 93;
+        
+        // 保持AZ-5停堆按钮锁定 (必须先拉开安全罩!)
+        document.getElementById('btn-az5').disabled = true;
+        
+        // 保证安全罩复位为闭合状态
+        const shield = document.getElementById('az5-shield');
+        if (shield) {
+            shield.classList.remove('open');
+            shield.querySelector('.shield-label').textContent = "AZ-5 安全罩";
+        }
         
         // 初始化反应堆物理环路
         window.reactor.start();
 
         this.state.showDialogue(
             "阿纳托利·迪亚特洛夫",
-            "很好，功率稳定在 200 MW。1:23:04，关闭汽轮机蒸汽供应！惰转测试正式开始！",
+            "很好，功率稳定在 200 MW。一切尽在掌控。01:23:04，关闭汽轮机蒸汽阀门！涡轮惰转测试正式开始！",
             [
                 {
-                    text: "关闭汽轮发电机蒸汽阀门，开始断电试验",
+                    text: "切断发电机汽轮机蒸汽阀门，开始断电惰转",
                     callback: () => {
                         // 汽轮发电机减速，主泵流量暴跌
                         window.reactor.coolantFlow = 24000; 
                         this.state.showDialogue(
-                            "系统警报",
-                            "主循环泵转速暴跌！蒸汽空泡反馈正急速增加！热功率正在失控飙升！仪表盘数据开始疯狂抖动，必须立刻采取紧急措施！\n\n【交互任务】：拉开右下角 AZ-5 保护罩，按下 AZ-5 紧急停堆键！",
+                            "列昂尼德·托普图诺夫",
+                            "不好了！水泵减速导致核心温度急剧上升，水正在剧烈沸腾！蒸汽空泡份额呈指数级暴增！正空泡反馈激活了！天啊，热功率正在疯长！300... 600... 1200 MW！核心中子通量闪烁，反应堆局部过热！快，阿基莫夫，按下紧急停堆！",
                             []
                         );
                     }
@@ -180,6 +194,7 @@ class ScenarioEngine {
 
     // ==================== 阶段 4：盖革探测 ====================
     triggerStage4() {
+        document.body.classList.remove('screen-shake');
         this.state.currentPhase = 4;
         document.getElementById('game-phase-tag').textContent = "辐射评估";
         this.state.switchView('view-geiger');

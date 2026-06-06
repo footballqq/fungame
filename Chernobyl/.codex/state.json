@@ -1,14 +1,15 @@
 {
-  "current_task": "Completed Game Development and Verification",
+  "current_task": "Enlarged dashboard, implemented manual rod failure & exponential AZ-5 positive SCRAM explosion",
   "last_changes": [
-    "js/liquidators.js",
-    "tests/test_game_assets.py",
-    "tests/test_reactor_math.py",
-    "CODEx_TODO.md",
+    "js/reactor.js",
+    "js/scenario.js",
+    "index.css",
+    "style/reactor_skala.css",
+    "run_tests.ps1",
     ".codex/state.json"
   ],
   "next_actions": [
-    "Report completion of the game development to the user and summarize the architecture."
+    "Confirm the user is happy with the enlarged layout, manual rod failure warning, and quick explosion timing."
   ],
-  "notes": "All unit tests passed. Code line limits (<=500 lines) fully respected. Physics equations (Iodine/Xenon, voids, ORM) mathematically verified. Game is fully responsive and interactive across PC/mobile."
+  "notes": "All tests pass. Emojis removed from run_tests.ps1 to avoid CP936 encoding conflicts. Dashboard flex widths changed to 75%/25% for larger visualization. Canvas scaling of control rods is now fully dynamic."
 }
