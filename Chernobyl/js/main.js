@@ -1,3 +1,4 @@
+// codex: 2026-06-07 增加大结局解锁的盖革计数器沙盒主界面启动按钮与点击绑定
 /* js/main.js - 游戏主控制与初始化脚本 */
 /* codex: 2026-06-06 引入 localStorage 自动加载进度与重置进度按钮逻辑 */
 
@@ -119,5 +120,22 @@ document.addEventListener('DOMContentLoaded', () => {
             // 直接跳转至保存的阶段
             window.scenario.jumpToPhase(phaseNum);
         }
+    }
+
+    // 8. 盖革计数器沙盒入口绑定
+    const geigerUnlocked = localStorage.getItem('chernobyl_geiger_unlocked') === 'true';
+    const sandboxBtn = document.getElementById('btn-start-geiger-sandbox');
+    if (sandboxBtn) {
+        if (geigerUnlocked) {
+            sandboxBtn.style.display = 'block';
+        }
+        sandboxBtn.addEventListener('click', () => {
+            window.audio.init();
+            window.audio.playBeep(1000, 0.1, 0.1);
+            if (!window.geigerSandbox) {
+                window.geigerSandbox = new GeigerSandboxManager(window.state);
+            }
+            window.geigerSandbox.enterSandbox();
+        });
     }
 });

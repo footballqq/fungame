@@ -35,7 +35,10 @@
                     <div class="terminal-card">
                         <h2>系统引导程序已加载</h2>
                         <p class="blink-text">Awaiting input...</p>
-                        <button class="btn btn-primary btn-large" id="btn-start-game">开始模拟</button>
+                        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+                            <button class="btn btn-primary btn-large" id="btn-start-game" style="width: 100%;">开始模拟</button>
+                            <button class="btn btn-success btn-large" id="btn-start-geiger-sandbox" style="width: 100%; display: none;">☢️ 盖革计数器沙盒模拟器 (已解锁)</button>
+                        </div>
                     </div>
                 </div>
 
@@ -305,6 +308,48 @@
                     </div>
                 </div>
 
+                <!-- 盖革计数器沙盒模拟器 (第8阶段 - 大结局后解锁) -->
+                <div class="panel-view" id="view-geiger-sandbox" style="display:none;">
+                    <div class="terminal-card" style="text-align: center;">
+                        <h3 style="color: var(--warning-yellow);">☢️ 盖革计数器沙盒模拟器</h3>
+                        <p class="desc">核物理实验室辐射计仪表板。可手动调节中子束通量与衰变源强度，或测试常见物体的辐射指标。</p>
+                        
+                        <div class="geiger-device-box" style="margin: 15px auto; padding: 15px; background: rgba(0,20,0,0.3); border: 2px solid var(--panel-border); border-radius: 4px; max-width: 320px;">
+                            <div class="geiger-digital-screen" style="background: #000; border: 1px solid var(--panel-border); padding: 10px; font-family: monospace; font-size: 1.5rem; text-shadow: 0 0 5px var(--terminal-glow); color: var(--terminal-green); margin-bottom: 12px;">
+                                <span id="sandbox-geiger-val">0.12</span> <span id="sandbox-geiger-unit" style="font-size: 0.95rem;">μSv/h</span>
+                            </div>
+                            <!-- 表盘 Canvas -->
+                            <canvas id="sandbox-geiger-dial" width="280" height="120" style="background:#020502; border: 1px solid var(--panel-border); display: block; margin: 0 auto;"></canvas>
+                            
+                            <!-- 手动调节滑块 -->
+                            <div class="slider-container" style="margin-top: 15px; text-align: left; font-size: 0.85rem;">
+                                <div style="display:flex; justify-content:space-between; margin-bottom: 4px;">
+                                    <span>手调辐射强度 (对数):</span>
+                                    <span id="sandbox-slider-hint" style="color:var(--warning-yellow);">正常背景</span>
+                                </div>
+                                <input type="range" id="sandbox-rad-slider" min="-2.0" max="6.0" step="0.1" value="-0.9" style="width: 100%;">
+                            </div>
+                        </div>
+
+                        <!-- 随机事件与测试源选择 -->
+                        <div class="sandbox-controls">
+                            <button class="btn btn-warning" id="btn-sandbox-random" style="width:100%; margin-bottom: 10px; font-weight: bold;">🎲 随机触发突发辐射事件</button>
+                            <div class="event-desc-box" id="sandbox-event-desc" style="margin: 10px 0; min-height: 70px; padding: 8px; background: rgba(0,25,0,0.5); border: 1px solid var(--panel-border); font-size: 0.85rem; text-align: left; line-height: 1.4; color: #aaccbb;">
+                                当前测试源：【天然本底辐射】。属于大自然正常存在的宇宙射线与地表微量衰变。盖革计数器发出零星的喀哒声，完全安全。
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 10px;">
+                                <button class="btn btn-sm btn-source" data-level="background" style="font-size: 0.75rem; padding: 4px;">本底辐射</button>
+                                <button class="btn btn-sm btn-source" data-level="banana" style="font-size: 0.75rem; padding: 4px;">熟香蕉</button>
+                                <button class="btn btn-sm btn-source" data-level="watch" style="font-size: 0.75rem; padding: 4px;">镭表表盘</button>
+                                <button class="btn btn-sm btn-source" data-level="filter" style="font-size: 0.75rem; padding: 4px;">核电厂滤网</button>
+                                <button class="btn btn-sm btn-source" data-level="graphite" style="font-size: 0.75rem; padding: 4px; color: var(--alert-red);">堆芯石墨</button>
+                                <button class="btn btn-sm btn-source" data-level="elephant" style="font-size: 0.75rem; padding: 4px; color: var(--alert-red); font-weight: bold;">熔融象脚</button>
+                            </div>
+                            <button class="btn btn-large btn-primary" id="btn-sandbox-exit" style="margin-top: 15px; width: 100%; font-weight: bold;">🚪 返回系统引导主界面</button>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <!-- 右侧或底部：叙事与对话面板 -->
@@ -335,6 +380,7 @@
     <script src="js/reactor.js"></script>
     <script src="js/skala.js"></script>
     <script src="js/geiger.js"></script>
+    <script src="js/geiger_sandbox.js"></script>
     <script src="js/evacuation.js"></script>
     <script src="js/forsmark.js"></script>
     <script src="js/liquidators.js"></script>

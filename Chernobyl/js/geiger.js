@@ -1,3 +1,4 @@
+// codex: 2026-06-07 增加大结局解锁的盖革计数器沙盒模拟器管理器
 /* js/geiger.js - 盖革计数器探测与废墟迷宫探索 */
 /* codex: 2026-06-06 走廊迷宫、盖革爆音反馈与保险箱八进制解谜 */
 
@@ -222,7 +223,6 @@ class GeigerExplorer {
             setTimeout(() => {
                 input.classList.remove('critical-alert');
             }, 500);
-        }
     }
 }
 

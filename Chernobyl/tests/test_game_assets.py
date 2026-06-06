@@ -21,6 +21,7 @@ class TestGameAssets(unittest.TestCase):
             "js/reactor.js",
             "js/skala.js",
             "js/geiger.js",
+            "js/geiger_sandbox.js",
             "js/evacuation.js",
             "js/forsmark.js",
             "js/liquidators.js",

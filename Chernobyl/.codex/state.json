@@ -1,12 +1,16 @@
 {
-  "current_task": "Optimized Game Over screen with Stage Replay and Restart stage options",
+  "current_task": "Implemented Geiger counter standalone sandbox simulator unlocked after the game finale",
   "last_changes": [
-    "js/state.js",
+    "js/geiger_sandbox.js",
+    "js/scenario.js",
+    "js/main.js",
+    "index.html",
+    "tests/test_game_assets.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "Verify Game Over stage retry actions work seamlessly without full page reloading."
+    "Ready for user acceptance testing and final game feedback."
   ],
-  "notes": "Added a '🔄 重玩本关' (Replay Current Stage) button on the Game Over screen that resets the gameOver flag and specific accumulative radiation/suspicion metrics without reloading the page, seamlessly jumping back to the phase start. The full restart option is renamed to '⚡ 重开整场游戏 (清空存档)' which clears localStorage and reloads the page. This prevents accidental loss of progress due to ambiguous wording."
+  "notes": "Added a standalone Geiger counter simulator module (js/geiger_sandbox.js) that implements a logarithmic dial Canvas, micro-jitter physics, customizable sources, and dynamic audio sound mapping. This is unlocked upon game completion (saving chernobyl_geiger_unlocked: 'true' in localStorage) and is directly accessible via a new green button on the main welcome screen."
 }

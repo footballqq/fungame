@@ -1,3 +1,4 @@
+// codex: 2026-06-07 增加大结局解锁盖革沙盒模拟器逻辑
 /* js/scenario.js - 游戏剧情文字脚本与推进逻辑 */
 /* codex: 2026-06-06 增加剧情跳转方法 jumpToPhase 以加载 localStorage 进度 */
 
@@ -369,12 +370,25 @@ class ScenarioEngine {
             window.audio.stopGeigerStatic();
         }
 
+        // 保存盖革沙盒解锁状态
+        localStorage.setItem('chernobyl_geiger_unlocked', 'true');
+
         this.state.showDialogue(
             "大结局：向清理者致敬",
-            "Masha屋顶清理完毕，最后一个高危放射源被扔回了炉心。随后，六十万军民建造了巨大的混凝土石棺，将其永久包裹。\n\n这场物理学与体制谎言的灾难在清理者无私的英雄主义奉献中宣告落幕。无数年轻的清理者为了拯救欧罗巴，将他们的健康与生命留在了这片死寂的土地上。\n\n历史不会忘记他们。切尔诺贝利的钟声长鸣，警示后世：真相的代价，是任何人也无法逃避的。\n\n【模拟成功】",
+            "Masha屋顶清理完毕，最后一个高危放射源被扔回了炉心。随后，六十万军民建造了巨大的混凝土石棺，将其永久包裹。\n\n这场物理学与体制谎言的灾难在清理者无私的英雄主义奉献中宣告落幕。无数年轻的清理者为了拯救欧罗巴，将他们的健康与生命留在了这片死寂的土地上。\n\n历史不会忘记他们。切尔诺贝利的钟声长鸣，警示后世：真相的代价，是任何人也无法逃避的。\n\n【模拟成功】 (盖革计数器沙盒模拟器已解锁！)",
             [
                 {
-                    text: "重新载入模拟",
+                    text: "🔮 进入盖革计数器沙盒模拟器",
+                    callback: () => {
+                        if (window.audio) window.audio.init();
+                        if (!window.geigerSandbox) {
+                            window.geigerSandbox = new GeigerSandboxManager(window.state);
+                        }
+                        window.geigerSandbox.enterSandbox();
+                    }
+                },
+                {
+                    text: "🚪 返回系统引导主界面",
                     callback: () => {
                         window.location.reload();
                     }
