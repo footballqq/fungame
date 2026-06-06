@@ -1,0 +1,26 @@
+# Chernobyl Game Development TODO
+
+- [X] **Phase 1: Game Design Document & Asset Preparation**
+  - [X] Write detailed game design document (`docs/design_document.md` / `game_design.md` in artifact) detailing the narrative, UI mockup designs, character dialogues, state machine variables, and minigames.
+  - [X] Formulate directory layout and verify existing resources (maps, images).
+- [X] **Phase 2: Project Setup & Style Base**
+  - [X] Initialize `index.html` structure.
+  - [X] Create `index.css` and sub-styles in `style/` (e.g. `style/reactor_skala.css`, `style/exploration.css`, `style/forsmark_liq.css`) with dark theme, terminal effects, CRT monitor look, retro fonts, and responsive grid layouts. Checked code lines limit (<= 500 lines per file).
+  - [X] Create `js/audio.js` using Web Audio API to dynamically synthesize geiger clicks, alarms, and system beeps.
+- [X] **Phase 3: Core Simulation Engines (Js Modules)**
+  - [X] Create `js/state.js` to manage global game state, characters, and transitions.
+  - [X] Create `js/reactor.js` with reactor thermal power calculations, xenon poisoning simulation, control rods ORM, void coefficient feedback, and the AZ-5 positive SCRAM explosion.
+  - [X] Create `js/skala.js` implementing the SKALA central computer command-line, octal querying, and delayed computation.
+  - [X] Create `js/geiger.js` for post-accident corridor navigation, Geiger counter clicks, radiation hotspot estimation, and the high-range radiometer search puzzle.
+- [X] **Phase 4: Global & Narrative Modules**
+  - [X] Create `js/scenario.js` containing dialogue branches, character scripts (Dyatlov, Akimov, Toptunov), KGB phone line-cutting, and evacuation city map.
+  - [X] Create `js/forsmark.js` for the Swedish laboratory portal alarm, gamma spectrometer analysis, and wind map overlay.
+  - [X] Create `js/liquidators.js` for helicopter cargo planning, bubbler pool diver maze (2D tile-based or pathfinding), and Masha roof 90s cleanup minigame.
+- [X] **Phase 5: UI Assembly & Responsive Adaptation**
+  - [X] Update `index.html` with component containers.
+  - [X] Write `js/main.js` to coordinate state changes and UI views.
+  - [X] Ensure mobile touch interactions work for sliders, keypads, and canvas mazes.
+- [X] **Phase 6: Automated Verification & Manual Testing**
+  - [X] Write a python script (`tests/test_game_assets.py`) to verify all assets and files exist and conform to layout.
+  - [X] Write unit tests for the reactor physics equations in Python to verify reactor-core logic mathematically.
+  - [X] Perform final review and verify cross-device responsive layout. Tests run successfully and show all green.

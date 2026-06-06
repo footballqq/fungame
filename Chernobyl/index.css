@@ -1,0 +1,313 @@
+/* index.css - 核心样式文件 */
+/* codex: 2026-06-06 核心CRT效果、布局与文本叙事区样式 */
+
+:root {
+    --bg-color: #0b0f0b;
+    --terminal-green: #33ff33;
+    --terminal-glow: rgba(51, 255, 51, 0.45);
+    --alert-red: #ff3300;
+    --alert-glow: rgba(255, 51, 0, 0.5);
+    --warning-yellow: #ffcc00;
+    --warning-glow: rgba(255, 204, 0, 0.4);
+    --panel-bg: rgba(15, 25, 15, 0.85);
+    --panel-border: #225522;
+    --text-color: #e5ffe5;
+    --font-mono: 'Courier New', Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    overflow: hidden;
+    position: relative;
+}
+
+/* --- CRT 荧光屏视觉叠加层 --- */
+.crt-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 6px 100%;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+.crt-bezel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.8), inset 0 0 30px rgba(51,255,51,0.1);
+    z-index: 9998;
+    pointer-events: none;
+}
+
+@keyframes crt-flicker {
+    0% { opacity: 0.98; }
+    50% { opacity: 1; }
+    100% { opacity: 0.99; }
+}
+
+/* --- 主容器布局 --- */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    animation: crt-flicker 0.15s infinite;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--panel-bg);
+    border: 2px solid var(--panel-border);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(51, 255, 51, 0.1);
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.header-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--terminal-green);
+    text-shadow: 0 0 8px var(--terminal-glow);
+}
+
+.header-status {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+#game-phase-tag {
+    color: var(--warning-yellow);
+    text-shadow: 0 0 5px var(--warning-glow);
+}
+
+/* --- 主体双栏适配 --- */
+.game-main {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    overflow: hidden;
+}
+
+/* 交互控制视口 (左) */
+.interactive-panel {
+    flex: 6;
+    background-color: var(--panel-bg);
+    border: 2px solid var(--panel-border);
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* 叙事对话视口 (右) */
+.narrative-panel {
+    flex: 4;
+    background-color: var(--panel-bg);
+    border: 2px solid var(--panel-border);
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+}
+
+/* --- 叙事子元素 --- */
+.dialogue-box {
+    flex: 1;
+    border: 1px solid var(--panel-border);
+    background-color: rgba(5, 12, 5, 0.7);
+    padding: 15px;
+    border-radius: 4px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.6;
+}
+
+.speaker-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px dashed var(--panel-border);
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.speaker-name {
+    color: var(--warning-yellow);
+}
+
+.story-text {
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.choice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* --- 通用组件与按钮 --- */
+.btn {
+    background-color: #112211;
+    border: 2px solid var(--panel-border);
+    color: var(--text-color);
+    padding: 10px 15px;
+    font-family: var(--font-mono);
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s;
+    text-align: left;
+    width: 100%;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--panel-border);
+    color: var(--bg-color);
+    box-shadow: 0 0 8px var(--terminal-glow);
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: #223322;
+}
+
+.btn-primary {
+    border-color: var(--terminal-green);
+    color: var(--terminal-green);
+}
+
+.btn-danger {
+    border-color: var(--alert-red);
+    color: var(--alert-red);
+}
+
+.btn-large {
+    font-size: 1.1rem;
+    padding: 15px;
+    text-align: center;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.blink-text {
+    animation: text-blink 1s step-end infinite;
+}
+
+@keyframes text-blink {
+    50% { opacity: 0; }
+}
+
+/* --- 不同的面板视图切换 --- */
+.panel-view {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.panel-view.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    gap: 20px;
+}
+
+/* --- 屏幕振动动效 (爆炸触发) --- */
+.screen-shake {
+    animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(0px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(2px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(2px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* --- 响应式手机/平板适配 --- */
+@media (max-width: 768px) {
+    .crt-overlay {
+        background-size: 100% 2px, 3px 100%;
+    }
+    
+    .game-container {
+        padding: 5px;
+        overflow-y: auto;
+    }
+    
+    .game-main {
+        flex-direction: column;
+        overflow-y: visible;
+        gap: 10px;
+    }
+    
+    .interactive-panel {
+        height: 380px;
+        flex: none;
+    }
+    
+    .narrative-panel {
+        height: auto;
+        min-height: 250px;
+        flex: none;
+        overflow-y: visible;
+    }
+    
+    .dialogue-box {
+        max-height: 200px;
+    }
+}

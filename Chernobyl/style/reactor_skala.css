@@ -1,0 +1,210 @@
+/* style/reactor_skala.css - 反应堆与SKALA终端样式 */
+/* codex: 2026-06-06 拆分样式文件以遵循代码限额门禁 */
+
+/* --- 反应堆仪表控制面板 --- */
+.reactor-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+
+.gauge-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gauge-card {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid var(--panel-border);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.gauge-card label {
+    font-size: 0.8rem;
+    color: #88aa88;
+}
+
+.gauge-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--terminal-green);
+    text-shadow: 0 0 5px var(--terminal-glow);
+    margin: 5px 0;
+}
+
+.gauge-bar {
+    width: 100%;
+    height: 8px;
+    background: #051505;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.gauge-fill {
+    height: 100%;
+    background: var(--terminal-green);
+}
+
+.gauge-fill.warning {
+    background: var(--warning-yellow);
+}
+
+.gauge-fill.danger {
+    background: var(--alert-red);
+}
+
+.rod-controls {
+    border: 1px solid var(--panel-border);
+    padding: 15px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.2);
+}
+
+.rod-controls h3 {
+    margin-bottom: 10px;
+    color: var(--terminal-green);
+    font-size: 1rem;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.slider-container input[type="range"] {
+    flex: 1;
+    -webkit-appearance: none;
+    background: #112211;
+    height: 10px;
+    border: 1px solid var(--panel-border);
+    outline: none;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: var(--terminal-green);
+    border: 2px solid var(--bg-color);
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--terminal-glow);
+}
+
+.slider-desc {
+    font-size: 0.8rem;
+    color: #88aa88;
+}
+
+.az5-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    gap: 10px;
+}
+
+.az5-shield {
+    width: 150px;
+    height: 40px;
+    background: rgba(255, 50, 0, 0.2);
+    border: 2px dashed var(--alert-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.az5-shield.open {
+    transform: rotateX(100deg);
+    transform-origin: top;
+    background: transparent;
+    border-style: solid;
+}
+
+.shield-label {
+    font-size: 0.75rem;
+    color: var(--alert-red);
+}
+
+.btn-az5 {
+    background: #440000;
+    border: 4px solid var(--alert-red);
+    color: var(--alert-red);
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--alert-glow);
+}
+
+.btn-az5:hover:not(:disabled) {
+    background: var(--alert-red);
+    color: #fff;
+    box-shadow: 0 0 20px #ff3300;
+}
+
+.btn-az5:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* --- SKALA 终端样式 --- */
+.skala-terminal {
+    background: #000;
+    border: 1px solid var(--panel-border);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.skala-header {
+    border-bottom: 2px solid var(--panel-border);
+    padding-bottom: 5px;
+    color: var(--terminal-green);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.skala-log {
+    flex: 1;
+    overflow-y: auto;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--terminal-green);
+    margin-bottom: 10px;
+}
+
+.skala-input-row {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--panel-border);
+    padding-top: 8px;
+}
+
+.skala-input-row input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--terminal-green);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+}
+
+.skala-help {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    border-top: 1px dashed var(--panel-border);
+    padding-top: 5px;
+    color: #669966;
+}

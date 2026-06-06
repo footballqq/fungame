@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>切尔诺贝利：深渊抉择 (Chernobyl: The Critical Scram)</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style/reactor_skala.css">
+    <link rel="stylesheet" href="style/exploration.css">
+    <link rel="stylesheet" href="style/forsmark_liq.css">
+</head>
+<body>
+    <!-- CRT 效果扫描线与光栅叠加层 -->
+    <div class="crt-overlay"></div>
+    <div class="crt-bezel"></div>
+
+    <div class="game-container">
+        <!-- 顶部状态栏 -->
+        <header class="game-header">
+            <div class="header-title">切尔诺贝利核电站 - 4号机组</div>
+            <div class="header-status">
+                <span id="game-time">1986-04-25 01:00:00</span>
+                <span id="game-phase-tag">准备阶段</span>
+            </div>
+        </header>
+
+        <!-- 主工作区：分为交互面板与文本叙事面板 -->
+        <main class="game-main">
+            <!-- 左侧或顶部：交互控制面板 (由JS动态切换显示) -->
+            <section class="interactive-panel" id="interactive-panel">
+                
+                <!-- 欢迎/开始界面 -->
+                <div class="panel-view active" id="view-intro">
+                    <div class="terminal-card">
+                        <h2>系统引导程序已加载</h2>
+                        <p class="blink-text">Awaiting input...</p>
+                        <button class="btn btn-primary btn-large" id="btn-start-game">开始模拟</button>
+                    </div>
+                </div>
+
+                <!-- 反应堆动力学控制面板 (第1, 3阶段) -->
+                <div class="panel-view" id="view-reactor">
+                    <div class="reactor-dashboard">
+                        <div class="gauge-grid">
+                            <div class="gauge-card">
+                                <label>热功率 (MWth)</label>
+                                <div class="gauge-value" id="val-power">3200</div>
+                                <div class="gauge-bar"><div class="gauge-fill" id="fill-power" style="width: 100%;"></div></div>
+                            </div>
+                            <div class="gauge-card">
+                                <label>操作反应性裕度 (ORM)</label>
+                                <div class="gauge-value" id="val-orm">30.0</div>
+                                <div class="gauge-bar"><div class="gauge-fill warning" id="fill-orm" style="width: 100%;"></div></div>
+                            </div>
+                            <div class="gauge-card">
+                                <label>氙-135 相对浓度</label>
+                                <div class="gauge-value" id="val-xenon">1.00</div>
+                                <div class="gauge-bar"><div class="gauge-fill danger" id="fill-xenon" style="width: 5%;"></div></div>
+                            </div>
+                            <div class="gauge-card">
+                                <label>蒸汽空泡份额</label>
+                                <div class="gauge-value" id="val-void">0.02</div>
+                                <div class="gauge-bar"><div class="gauge-fill" id="fill-void" style="width: 10%;"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- 控制棒调节滑块 -->
+                        <div class="rod-controls">
+                            <h3>手动控制棒组 (BC组)</h3>
+                            <div class="slider-container">
+                                <span>全插入</span>
+                                <input type="range" id="rod-slider" min="0" max="100" value="80" step="1">
+                                <span>全拔出</span>
+                            </div>
+                            <div class="slider-desc">拖动滑块调整控制棒拔出深度。拔出越多，反应堆功率上涨，但ORM（安全裕度）会减少。</div>
+                        </div>
+
+                        <!-- AZ-5 按钮区 -->
+                        <div class="az5-container">
+                            <div class="az5-shield" id="az5-shield">
+                                <span class="shield-label">AZ-5 安全罩</span>
+                            </div>
+                            <button class="btn-az5" id="btn-az5" disabled>AZ-5 停堆</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SKALA 中央计算机终端 (第2阶段) -->
+                <div class="panel-view" id="view-skala">
+                    <div class="skala-terminal">
+                        <div class="skala-header">SKALA CENTRAL PROCESSOR V1986</div>
+                        <div class="skala-log" id="skala-log"></div>
+                        <div class="skala-input-row">
+                            <span class="prompt">SKALA> </span>
+                            <input type="text" id="skala-input" placeholder="输入八进制代码... (如 00000302)" autocomplete="off">
+                        </div>
+                        <div class="skala-help">
+                            <h4>八进制快捷指令：</h4>
+                            <ul>
+                                <li><code>00000104</code> - 查询堆芯温度 (℃)</li>
+                                <li><code>00000201</code> - 查询中子通量 (n/cm²·s)</li>
+                                <li><code>00000302</code> - 调用 PRIZMA 计算 ORM</li>
+                                <li><code>00000410</code> - 查询冷却剂总流量 (m³/h)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 盖革计数器探测 (第4阶段) -->
+                <div class="panel-view" id="view-geiger">
+                    <div class="geiger-interface">
+                        <div class="geiger-hardware">
+                            <div class="geiger-header">DP-5V 辐射测量仪</div>
+                            <img src="Geiger-Counter-13-2894135-0.jpg" alt="DP-5V" class="geiger-device-img">
+                            <div class="geiger-meter">
+                                <div class="meter-needle-box">
+                                    <div class="meter-needle" id="geiger-needle"></div>
+                                </div>
+                                <div class="meter-scale">0 . . . 1 . . . 10 . . . 100 . . . 200 R/h</div>
+                            </div>
+                            <div class="geiger-knobs">
+                                <div class="knob-container">
+                                    <label>量程档位</label>
+                                    <select id="geiger-range">
+                                        <option value="0.1">x0.1 (低量程)</option>
+                                        <option value="1">x1</option>
+                                        <option value="10">x10</option>
+                                        <option value="100">x100</option>
+                                        <option value="200">x200 (极高)</option>
+                                    </select>
+                                </div>
+                                <div class="geiger-audio-light">
+                                    <span class="indicator-led" id="geiger-led"></span>
+                                    <span>耳机爆音监测中</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 走廊平面探索区 -->
+                        <div class="corridor-explore">
+                            <h4>4号反应堆残骸走廊探索</h4>
+                            <p class="desc">点击网格格点移动角色，探头会测量该点辐射。寻找副总工保险箱以获取高量程仪器。</p>
+                            <div class="grid-container" id="geiger-grid"></div>
+                            <div class="safe-puzzle-container" id="safe-puzzle-container" style="display:none;">
+                                <h5>副总工的机密保险箱</h5>
+                                <div class="keypad-grid">
+                                    <input type="password" id="safe-input" readonly maxlength="4" placeholder="****">
+                                    <div class="keypad-keys">
+                                        <button class="key">1</button><button class="key">2</button><button class="key">3</button>
+                                        <button class="key">4</button><button class="key">5</button><button class="key">6</button>
+                                        <button class="key">7</button><button class="key">8</button><button class="key">9</button>
+                                        <button class="key btn-danger">C</button><button class="key">0</button><button class="key btn-success" id="btn-safe-enter">E</button>
+                                    </div>
+                                </div>
+                                <p class="hint">提示：密码是一场重大操作启动的八进制指令后四位数字。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 普里皮亚季疏散调度 (第5阶段) -->
+                <div class="panel-view" id="view-evacuation">
+                    <div class="evac-container">
+                        <!-- 接线板拨线解谜 -->
+                        <div class="patchpanel-box" id="patchpanel-box">
+                            <h4>KGB 机密指令：切断长途电话插孔</h4>
+                            <p class="desc">拖动插头插线，切断标红的长途电话（Kiev, Moscow等），平息消息传播。</p>
+                            <div class="patch-board" id="patch-board">
+                                <!-- 动态渲染插板和插线 -->
+                            </div>
+                        </div>
+
+                        <!-- 撤离大巴车调度地图 -->
+                        <div class="bus-dispatch-box" id="bus-dispatch-box" style="display:none;">
+                            <h4>普里皮亚季撤离大巴车调度 (4月27日)</h4>
+                            <div class="evac-metrics">
+                                <div>已撤离平民: <span id="evac-count">0</span> / 49,000</div>
+                                <div>时间限制: <span id="evac-timer">180</span>s</div>
+                                <div>市民辐射吸收量: <span id="evac-dose">0.0</span> mSv</div>
+                            </div>
+                            <div class="map-wrapper">
+                                <canvas id="evac-map-canvas"></canvas>
+                            </div>
+                            <p class="desc">点击地图上的黄色居民点派出空闲大巴，大巴装载平民后会返回基辅安全点。避开反应堆吹来的红色辐射羽流！</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 瑞典福斯马克溯源 (第6阶段) -->
+                <div class="panel-view" id="view-forsmark">
+                    <div class="forsmark-container">
+                        <!-- 光谱仪 -->
+                        <div class="spectrometer-box">
+                            <h4>锗半导体伽马能谱仪分析</h4>
+                            <div class="canvas-wrapper">
+                                <canvas id="spec-canvas"></canvas>
+                            </div>
+                            <div class="spectrum-controls">
+                                <p class="desc">拖动红色参考同位素谱线，将其与蓝色实测谱线重合，以识别大气颗粒成分。</p>
+                                <div class="isotope-select">
+                                    <button class="btn btn-sm btn-isotope active" data-isotope="xe133">Xe-133 (气体)</option>
+                                    <button class="btn btn-sm btn-isotope" data-isotope="i131">I-131 (碘)</option>
+                                    <button class="btn btn-sm btn-isotope" data-isotope="cs137">Cs-137 (铯)</option>
+                                </div>
+                                <div class="slider-container">
+                                    <span>谱线偏移</span>
+                                    <input type="range" id="spec-shift-slider" min="-100" max="100" value="0">
+                                </div>
+                                <button class="btn btn-sm btn-success" id="btn-verify-spectrum">确认同位素</button>
+                            </div>
+                        </div>
+
+                        <!-- 气流追溯地图 -->
+                        <div class="plume-map-box" id="plume-map-box" style="display:none;">
+                            <h4>波罗的海气流轨迹反向追踪</h4>
+                            <div class="canvas-wrapper">
+                                <canvas id="plume-canvas"></canvas>
+                            </div>
+                            <p class="desc">拖动旋转量角器，调整风向夹角。当气流轨迹覆盖测量异常点且发射源指向乌克兰北部时锁定位置。</p>
+                            <div class="slider-container">
+                                <span>风向角 (度)</span>
+                                <input type="range" id="wind-angle-slider" min="0" max="360" value="45">
+                            </div>
+                            <button class="btn btn-sm btn-success" id="btn-lock-source">锁定辐射源头</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 清理者行动 (第7阶段) -->
+                <div class="panel-view" id="view-liquidators">
+                    <div class="liquidators-container">
+                        <!-- 子选项菜单 -->
+                        <div class="liquidator-menu" id="liq-menu">
+                            <h3>清理者行动计划表</h3>
+                            <button class="btn btn-primary btn-large btn-liq-select" data-subgame="heli">1. 直升机核心覆盖空投</button>
+                            <button class="btn btn-primary btn-large btn-liq-select" data-subgame="diver" id="btn-liq-diver" disabled>2. 鼓泡池闸阀紧急排水</button>
+                            <button class="btn btn-primary btn-large btn-liq-select" data-subgame="roof" id="btn-liq-roof" disabled>3. Masha屋顶石墨人工清理</button>
+                        </div>
+
+                        <!-- 空投战术微游戏 -->
+                        <div class="liq-game-view" id="liq-game-heli" style="display:none;">
+                            <h4>直升机沙/硼空投航线控制</h4>
+                            <div class="canvas-wrapper">
+                                <canvas id="heli-canvas"></canvas>
+                            </div>
+                            <div class="game-hud">
+                                <div>总重量投放: <span id="heli-sand">0</span> / 5000 吨</div>
+                                <div>飞行员吸收剂量: <span id="heli-dose">0.0</span> Sv (上限2.0)</div>
+                            </div>
+                            <p class="desc">在画布上拖拽直升机，将其引导至冒烟的堆芯上方，松开鼠标进行投沙。避开堆芯中央上升的热气柱！</p>
+                        </div>
+
+                        <!-- 潜水走廊迷宫微游戏 -->
+                        <div class="liq-game-view" id="liq-game-diver" style="display:none;">
+                            <h4>鼓泡池地下室阀门开启</h4>
+                            <div class="canvas-wrapper">
+                                <canvas id="diver-canvas"></canvas>
+                            </div>
+                            <div class="game-hud">
+                                <div>手电筒电量: <span id="diver-battery">100</span>%</div>
+                                <div>三人组累积剂量: <span id="diver-dose">0.0</span> mSv</div>
+                            </div>
+                            <p class="desc">使用屏幕上的虚拟摇杆或键盘方向键移动潜水员小队，在积水中寻找并拧开 2 个排污阀。根据盖革鸣响声避开地面的红点辐射石墨残骸！</p>
+                            <div class="virtual-dpad">
+                                <button class="btn btn-sm" id="btn-dpad-up">▲</button>
+                                <div class="dpad-row">
+                                    <button class="btn btn-sm" id="btn-dpad-left">◀</button>
+                                    <button class="btn btn-sm" id="btn-dpad-down">▼</button>
+                                    <button class="btn btn-sm" id="btn-dpad-right">▶</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 屋顶 90秒清理微游戏 -->
+                        <div class="liq-game-view" id="liq-game-roof" style="display:none;">
+                            <h4 class="critical-alert">Masha屋顶 - 生物机器人清理任务</h4>
+                            <div class="canvas-wrapper">
+                                <canvas id="roof-canvas"></canvas>
+                            </div>
+                            <div class="game-hud-roof">
+                                <div class="time-countdown" id="roof-timer">90</div>
+                                <div>已清理石墨: <span id="roof-cleared">0</span> / 15 块</div>
+                            </div>
+                            <p class="desc">致命高辐射环境！玩家可以使用鼠标或触屏点击屋顶上的高亮红色石墨块，将其铲起并扔向右下角的反应堆核心开口。**90秒内必须返回铅门（绿色区域）！**</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 右侧或底部：叙事与对话面板 -->
+            <section class="narrative-panel">
+                <div class="dialogue-box">
+                    <!-- 人物头像及姓名 -->
+                    <div class="speaker-info" id="speaker-info" style="display:none;">
+                        <span class="speaker-avatar" id="speaker-avatar">👤</span>
+                        <span class="speaker-name" id="speaker-name">迪亚特洛夫</span>
+                    </div>
+                    <!-- 剧情文本区 -->
+                    <div class="story-text" id="story-text">
+                        正在连接中央仿真控制系统...
+                    </div>
+                </div>
+                <!-- 对话选项与控制区 -->
+                <div class="choice-container" id="choice-container">
+                    <!-- 动态生成按钮 -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 核心系统脚本加载 -->
+    <script src="js/audio.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/scenario.js"></script>
+    <script src="js/reactor.js"></script>
+    <script src="js/skala.js"></script>
+    <script src="js/geiger.js"></script>
+    <script src="js/evacuation.js"></script>
+    <script src="js/forsmark.js"></script>
+    <script src="js/liquidators.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+/* style/exploration.css - 废墟探索与隔离接线板样式 */
+/* codex: 2026-06-06 拆分样式文件以遵循代码限额门禁 */
+
+/* --- 盖革计数器网格探索与保险柜 --- */
+.geiger-interface {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.geiger-hardware {
+    background: #112211;
+    border: 2px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.geiger-header {
+    text-align: center;
+    font-weight: bold;
+    color: var(--warning-yellow);
+    margin-bottom: 10px;
+}
+
+.geiger-device-img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: cover;
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    opacity: 0.85;
+}
+
+.geiger-meter {
+    background: #eeddbb;
+    border: 3px solid #332211;
+    height: 90px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+.meter-needle-box {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 80px;
+    background: transparent;
+    transform-origin: bottom center;
+    transform: rotate(-60deg);
+    transition: transform 0.2s cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+
+.meter-needle {
+    width: 2px;
+    height: 100%;
+    background: #aa0000;
+}
+
+.meter-scale {
+    width: 100%;
+    text-align: center;
+    color: #332211;
+    font-size: 0.7rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.geiger-knobs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.geiger-audio-light {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+}
+
+.indicator-led {
+    width: 10px;
+    height: 10px;
+    background: #330000;
+    border-radius: 50%;
+}
+
+.indicator-led.active {
+    background: #ff3300;
+    box-shadow: 0 0 5px #ff3300;
+}
+
+.corridor-explore {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    width: 100%;
+    aspect-ratio: 1.2;
+    background: #000;
+    border: 2px solid var(--panel-border);
+    padding: 4px;
+}
+
+.grid-cell {
+    background: #081108;
+    border: 1px solid #112211;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.grid-cell:hover {
+    background: #113311;
+}
+
+.grid-cell.player::after {
+    content: "👤";
+}
+
+.grid-cell.rubble::after {
+    content: "🧱";
+}
+
+.grid-cell.safe::after {
+    content: "🗄️";
+}
+
+.grid-cell.revealed {
+    background: #0c220c;
+}
+
+/* 保险柜密码输入器 */
+.safe-puzzle-container {
+    border: 1px solid var(--panel-border);
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.keypad-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.keypad-grid input {
+    background: #000;
+    color: var(--terminal-green);
+    border: 1px solid var(--panel-border);
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.keypad-keys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 150px;
+}
+
+.keypad-keys button {
+    padding: 8px;
+    background: #152515;
+    border: 1px solid var(--panel-border);
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    cursor: pointer;
+}
+
+/* --- 接线板与城市调度 --- */
+.evac-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.patch-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    background: #111b11;
+    border: 2px solid var(--panel-border);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.patch-jack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+}
+
+.jack-hole {
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border: 2px solid var(--panel-border);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.jack-hole.connected::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    background: var(--alert-red);
+    border-radius: 50%;
+}
+
+.jack-hole.target {
+    border-color: var(--alert-red);
+}
+
+.evac-metrics {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.5);
+    padding: 8px;
+    border: 1px dashed var(--panel-border);
+    font-size: 0.8rem;
+}

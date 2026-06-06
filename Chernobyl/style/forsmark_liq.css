@@ -1,0 +1,79 @@
+/* style/forsmark_liq.css - 瑞典能谱与清理者行动样式 */
+/* codex: 2026-06-06 拆分样式文件以遵循代码限额门禁 */
+
+.canvas-wrapper {
+    width: 100%;
+    background: #000;
+    border: 1px solid var(--panel-border);
+    position: relative;
+    overflow: hidden;
+}
+
+#evac-map-canvas, #spec-canvas, #plume-canvas, #heli-canvas, #diver-canvas, #roof-canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- 清理者行动计划菜单 --- */
+.liquidator-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    height: 100%;
+}
+
+.liq-game-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.game-hud {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.5);
+    padding: 8px;
+    border: 1px solid var(--panel-border);
+    font-size: 0.85rem;
+}
+
+.game-hud-roof {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    padding: 8px;
+    border: 2px solid var(--alert-red);
+}
+
+.time-countdown {
+    color: var(--alert-red);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--alert-glow);
+}
+
+.virtual-dpad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.dpad-row {
+    display: flex;
+    gap: 15px;
+}
+
+.virtual-dpad button {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
