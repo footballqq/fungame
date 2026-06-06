@@ -223,6 +223,7 @@ class GeigerExplorer {
             setTimeout(() => {
                 input.classList.remove('critical-alert');
             }, 500);
+        }
     }
 }
 
