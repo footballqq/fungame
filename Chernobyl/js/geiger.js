@@ -98,28 +98,15 @@ class GeigerExplorer {
     }
 
     calculateRadiation() {
-        // 根据到废墟残骸和核心(5,5)的距离计算辐射
-        // 核心(5,5)是爆心，辐射源最强
-        let minDistToRubble = 999;
-        this.rubbleList.forEach(r => {
-            const d = Math.sqrt((r.x - this.playerPos.x)**2 + (r.y - this.playerPos.y)**2);
-            if (d < minDistToRubble) minDistToRubble = d;
-        });
-
         const distToCore = Math.sqrt((this.safePos.x - this.playerPos.x)**2 + (this.safePos.y - this.playerPos.y)**2);
         
-        // 物理估算：靠近核心呈指数级增加
-        let rad = 3.6; // 基础限制
-        let soundIntensity = 0.2; // 0 到 1
-
+        // 物理估算：随着靠近核心，辐射呈指数级增加
+        const realRad = Math.exp(5.5 - distToCore * 0.9);
+        
+        let rad = realRad;
         if (distToCore === 0) {
-            rad = 15000.0;
-            soundIntensity = 0.99;
+            rad = this.hasHighRangeMeter ? 15000.0 : Math.min(3.6, realRad);
         } else {
-            // 距离核心越近，真实辐射越高
-            const realRad = Math.exp(10 - distToCore * 1.5) + 5;
-            soundIntensity = Math.min(1.0, 0.2 + (8 - distToCore) * 0.1);
-            
             // 如果没有高量程测量仪，日常量程上限卡在 3.6 伦琴
             rad = this.hasHighRangeMeter ? realRad : Math.min(3.6, realRad);
         }
@@ -127,7 +114,15 @@ class GeigerExplorer {
         this.currentDose = rad;
         this.updateMeter(rad);
 
-        // 调节盖革爆音频率
+        // 调节盖革爆音频率：基于真实辐射值的对数进行映射 (0.1 - 1.0)
+        let soundIntensity = 0.15;
+        if (this.hasHighRangeMeter && distToCore === 0) {
+            soundIntensity = 1.0;
+        } else {
+            // 对数映射：从约 0.1 R/h 到 60 R/h 映射到 0.15 到 0.85
+            soundIntensity = Math.min(0.85, 0.15 + (Math.log(realRad + 0.1) + 2) / 7 * 0.7);
+        }
+
         if (window.audio) {
             window.audio.startGeigerStatic(soundIntensity);
         }
@@ -187,6 +182,21 @@ class GeigerExplorer {
                 }
             });
         });
+
+        // 绑定快捷自动输入按钮
+        const btnShortcut = container.querySelector('#btn-safe-shortcut');
+        if (btnShortcut) {
+            btnShortcut.replaceWith(btnShortcut.cloneNode(true));
+        }
+        
+        const newBtnShortcut = container.querySelector('#btn-safe-shortcut');
+        if (newBtnShortcut) {
+            newBtnShortcut.addEventListener('click', () => {
+                if (window.audio) window.audio.playBeep(800, 0.05, 0.05);
+                input.value = "0302";
+                this.verifySafeCode("0302");
+            });
+        }
     }
 
     verifySafeCode(code) {

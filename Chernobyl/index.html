@@ -102,13 +102,13 @@
                             <input type="text" id="skala-input" placeholder="输入八进制代码... (如 00000302)" autocomplete="off">
                         </div>
                         <div class="skala-help">
-                            <h4>八进制快捷指令：</h4>
-                            <ul>
-                                <li><code>00000104</code> - 查询堆芯温度 (℃)</li>
-                                <li><code>00000201</code> - 查询中子通量 (n/cm²·s)</li>
-                                <li><code>00000302</code> - 调用 PRIZMA 计算 ORM</li>
-                                <li><code>00000410</code> - 查询冷却剂总流量 (m³/h)</li>
-                            </ul>
+                            <h4>八进制快捷指令（点击直接运行）：</h4>
+                            <div class="skala-shortcuts" style="display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
+                                <button class="btn btn-sm btn-primary btn-skala-cmd" data-cmd="00000104" style="text-align: left; width: 100%;">00000104 - 查询堆芯温度 (℃)</button>
+                                <button class="btn btn-sm btn-primary btn-skala-cmd" data-cmd="00000201" style="text-align: left; width: 100%;">00000201 - 查询中子通量密度</button>
+                                <button class="btn btn-sm btn-primary btn-skala-cmd" data-cmd="00000302" style="text-align: left; width: 100%;">00000302 - 调用 PRIZMA 计算 ORM (关键)</button>
+                                <button class="btn btn-sm btn-primary btn-skala-cmd" data-cmd="00000410" style="text-align: left; width: 100%;">00000410 - 查询冷却剂总流量</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -146,9 +146,11 @@
                         <!-- 走廊平面探索区 -->
                         <div class="corridor-explore">
                             <h4>4号反应堆残骸走廊探索</h4>
-                            <p class="desc">点击网格格点移动角色，探头会测量该点辐射。寻找副总工保险箱以获取高量程仪器。</p>
+                            <p class="desc" style="color: #88aa88; line-height: 1.4; margin-bottom: 8px;">
+                                【任务指南】：使用鼠标或触控，点击与当前位置（闪烁绿格 ☣️）<strong>上下左右相邻</strong>的空格进行移动。避开红色瓦砾碎石（⚠️），逐步走到右下角标有 🔐 符号的机密保险箱处。
+                            </p>
                             <div class="grid-container" id="geiger-grid"></div>
-                            <div class="safe-puzzle-container" id="safe-puzzle-container" style="display:none;">
+                            <div class="safe-puzzle-container" id="safe-puzzle-container" style="display:none; margin-top: 10px;">
                                 <h5>副总工的机密保险箱</h5>
                                 <div class="keypad-grid">
                                     <input type="password" id="safe-input" readonly maxlength="4" placeholder="****">
@@ -159,7 +161,10 @@
                                         <button class="key btn-danger">C</button><button class="key">0</button><button class="key btn-success" id="btn-safe-enter">E</button>
                                     </div>
                                 </div>
-                                <p class="hint">提示：密码是一场重大操作启动的八进制指令后四位数字。</p>
+                                <p class="hint" style="color: #ffcc00; font-size: 0.8rem; margin: 8px 0; text-align: center;">
+                                    提示：密码是刚才 SKALA 终端调用 PRIZMA 计算 ORM 所用八进制代码 00000302 的后四位，即 0302。
+                                </p>
+                                <button class="btn btn-sm btn-primary" id="btn-safe-shortcut" style="margin-top: 5px; text-align: center; width: 100%;">[快捷一键解码 0302 打开]</button>
                             </div>
                         </div>
                     </div>

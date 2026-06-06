@@ -23,6 +23,20 @@ class SkalaTerminal {
             });
         }
 
+        // 绑定终端内快捷指令按钮事件
+        document.querySelectorAll('.btn-skala-cmd').forEach(btn => {
+            // 先替换节点清除多余事件绑定
+            btn.replaceWith(btn.cloneNode(true));
+        });
+        
+        document.querySelectorAll('.btn-skala-cmd').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const cmd = btn.getAttribute('data-cmd');
+                if (this.inputEl) this.inputEl.value = cmd;
+                this.executeCommand(cmd);
+            });
+        });
+
         this.clearLog();
         this.printLine("SKALA 中央控制台已就绪 (RBMK-1000 CPU v1986)");
         this.printLine("系统采用八进制编址。请输入指令进行参数轮询。");

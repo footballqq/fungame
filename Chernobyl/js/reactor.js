@@ -14,6 +14,7 @@ class ReactorSimulator {
         this.autoControl = false; // 是否开启自动调节
         this.az5Pressed = false;
         this.manualStuck = false; // 手动控制棒卡死状态
+        this.az5Unlockable = false; // 是否允许解锁停堆盖
         
         // 反应堆功率物理公式常数
         this.lambdaI = 0.05 / 3600; // 碘-135衰变常数 (按每秒计)
@@ -25,6 +26,7 @@ class ReactorSimulator {
         this.stop();
         this.az5Pressed = false;
         this.manualStuck = false;
+        this.az5Unlockable = false;
         this.intervalId = setInterval(() => {
             this.tick(0.5); // 每秒模拟2步 (每步0.5秒)
         }, 500);
@@ -56,6 +58,7 @@ class ReactorSimulator {
                     this.rodPosition = 65;
                     rodSlider.value = 65;
                     rodSlider.disabled = true;
+                    this.az5Unlockable = true; // 同时也解锁 AZ-5 保护罩！
                     
                     // 提示玩家卡死，需要按下 AZ-5
                     this.state.showDialogue(

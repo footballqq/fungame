@@ -37,6 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (az5Shield && btnAz5) {
         az5Shield.addEventListener('click', () => {
+            // 情节触发校验：在试验惰转开始前，或手动卡死前，禁止操作安全罩
+            if (!window.reactor || !window.reactor.az5Unlockable) {
+                if (window.audio) {
+                    window.audio.playBeep(150, 0.15, 0.12); // 报错低音
+                }
+                az5Shield.classList.add('locked-flash');
+                setTimeout(() => {
+                    az5Shield.classList.remove('locked-flash');
+                }, 400);
+                return;
+            }
+
             if (!az5Shield.classList.contains('open')) {
                 // 打开玻璃罩
                 az5Shield.classList.add('open');

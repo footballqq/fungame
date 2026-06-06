@@ -15,6 +15,11 @@
     display: block;
 }
 
+#spec-canvas, #plume-canvas {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
 /* --- 清理者行动计划菜单 --- */
 .liquidator-menu {
     display: flex;

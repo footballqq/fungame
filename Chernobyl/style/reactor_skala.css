@@ -185,6 +185,18 @@
     box-shadow: none;
 }
 
+@keyframes locked-shake {
+    0% { transform: translateX(0); border-color: var(--alert-red); background: rgba(255,50,0,0.55); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); border-color: var(--alert-red); background: rgba(255,50,0,0.35); }
+}
+
+.az5-shield.locked-flash {
+    animation: locked-shake 0.3s ease-in-out;
+}
+
 .btn-az5 {
     width: 100%;
     height: 64px;
