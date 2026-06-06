@@ -1,5 +1,5 @@
 /* js/scenario.js - 游戏剧情文字脚本与推进逻辑 */
-/* codex: 2026-06-06 游戏各阶段剧情脚本配置与交互分支推进逻辑 */
+/* codex: 2026-06-06 增加剧情跳转方法 jumpToPhase 以加载 localStorage 进度 */
 
 class ScenarioEngine {
     constructor(gameState) {
@@ -10,6 +10,19 @@ class ScenarioEngine {
     startStory() {
         this.state.updateHeaderTime();
         this.triggerStage1();
+    }
+
+    // 跳转至特定阶段（调试与加载进度）
+    jumpToPhase(phaseNum) {
+        this.state.updateHeaderTime();
+        if (phaseNum === 1) this.triggerStage1();
+        else if (phaseNum === 2) this.triggerStage2();
+        else if (phaseNum === 3) this.triggerStage3();
+        else if (phaseNum === 4) this.triggerStage4();
+        else if (phaseNum === 5) this.triggerStage5();
+        else if (phaseNum === 6) this.triggerStage6();
+        else if (phaseNum === 7) this.triggerStage7();
+        else this.triggerStage1();
     }
 
     // ==================== 阶段 1：降温降功准备 ====================

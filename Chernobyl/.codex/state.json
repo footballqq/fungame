@@ -1,15 +1,12 @@
 {
-  "current_task": "Enlarged dashboard, implemented manual rod failure & exponential AZ-5 positive SCRAM explosion",
+  "current_task": "Optimized Game Over screen with Stage Replay and Restart stage options",
   "last_changes": [
-    "js/reactor.js",
-    "js/scenario.js",
-    "index.css",
-    "style/reactor_skala.css",
-    "run_tests.ps1",
+    "js/state.js",
+    "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "Confirm the user is happy with the enlarged layout, manual rod failure warning, and quick explosion timing."
+    "Verify Game Over stage retry actions work seamlessly without full page reloading."
   ],
-  "notes": "All tests pass. Emojis removed from run_tests.ps1 to avoid CP936 encoding conflicts. Dashboard flex widths changed to 75%/25% for larger visualization. Canvas scaling of control rods is now fully dynamic."
+  "notes": "Added a '🔄 重玩本关' (Replay Current Stage) button on the Game Over screen that resets the gameOver flag and specific accumulative radiation/suspicion metrics without reloading the page, seamlessly jumping back to the phase start. The full restart option is renamed to '⚡ 重开整场游戏 (清空存档)' which clears localStorage and reloads the page. This prevents accidental loss of progress due to ambiguous wording."
 }

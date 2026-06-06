@@ -1,5 +1,5 @@
 /* js/main.js - 游戏主控制与初始化脚本 */
-/* codex: 2026-06-06 实例化各系统类，绑定按钮监听器，衔接整体系统 */
+/* codex: 2026-06-06 引入 localStorage 自动加载进度与重置进度按钮逻辑 */
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. 实例化全局游戏管理模块
@@ -81,13 +81,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. 控制棒滑动条交互音效反馈 (限制高频触发，只在松开时或者变动时偶尔发出短嘀声)
     const rodSlider = document.getElementById('rod-slider');
     if (rodSlider) {
         rodSlider.addEventListener('change', () => {
             if (window.audio) {
-                window.audio.playBeep(800, 0.04, 0.02); // 微弱调节机械声
+                window.audio.playBeep(800, 0.04, 0.02);
             }
         });
+    }
+
+    // 6. 重置进度按钮事件绑定
+    const resetBtn = document.getElementById('btn-reset-game');
+    if (resetBtn) {
+        const savedPhase = localStorage.getItem('chernobyl_game_phase');
+        if (savedPhase) {
+            resetBtn.style.display = 'inline-block';
+        }
+        resetBtn.addEventListener('click', () => {
+            localStorage.removeItem('chernobyl_game_phase');
+            window.location.reload();
+        });
+    }
+
+    // 7. 页面加载时如果存在 localStorage 进度，则自动跳转
+    const savedPhase = localStorage.getItem('chernobyl_game_phase');
+    if (savedPhase) {
+        const phaseNum = parseInt(savedPhase, 10);
+        if (phaseNum >= 1 && phaseNum <= 7) {
+            const initAudioOnGesture = () => {
+                window.audio.init();
+                window.removeEventListener('click', initAudioOnGesture);
+                window.removeEventListener('touchstart', initAudioOnGesture);
+            };
+            window.addEventListener('click', initAudioOnGesture);
+            window.addEventListener('touchstart', initAudioOnGesture);
+
+            // 直接跳转至保存的阶段
+            window.scenario.jumpToPhase(phaseNum);
+        }
     }
 });

@@ -1,9 +1,9 @@
 /* js/state.js - 全局状态机与视口切换 */
-/* codex: 2026-06-06 状态机管理各章节切换、角色对话渲染及数值修改 */
+/* codex: 2026-06-06 加入localStorage进度保存及currentPhase setter机制 */
 
 class GameState {
     constructor() {
-        this.currentPhase = 1; // 1-7 个游戏阶段
+        this._currentPhase = 1; // 1-7 个游戏阶段
         this.time = new Date(1986, 3, 25, 1, 0, 0); // 1986年4月25日凌晨1点 (月份0-indexed)
         this.gameOver = false;
         
@@ -29,6 +29,16 @@ class GameState {
 
         // 对话框打字机效果计时器
         this.dialogueTimer = null;
+    }
+
+    get currentPhase() {
+        return this._currentPhase;
+    }
+    set currentPhase(val) {
+        this._currentPhase = val;
+        localStorage.setItem('chernobyl_game_phase', val);
+        const resetBtn = document.getElementById('btn-reset-game');
+        if (resetBtn) resetBtn.style.display = 'inline-block';
     }
 
     // 时间前推
@@ -130,6 +140,24 @@ class GameState {
         });
     }
 
+    resetStateForReplay() {
+        this.gameOver = false;
+        this.suspicion = 10;
+        this.citizenDose = 0.0;
+        this.heliSand = 0;
+        this.heliDose = 0.0;
+        this.diverDose = 0.0;
+        this.diverBattery = 100;
+        this.roofCleared = 0;
+        if (this._currentPhase === 1) this.time = new Date(1986, 3, 25, 1, 0, 0);
+        else if (this._currentPhase === 2) this.time = new Date(1986, 3, 25, 23, 0, 0);
+        else if (this._currentPhase === 3) this.time = new Date(1986, 3, 26, 0, 5, 0);
+        else if (this._currentPhase === 4) this.time = new Date(1986, 3, 26, 1, 24, 0);
+        else if (this._currentPhase === 5) this.time = new Date(1986, 3, 26, 8, 0, 0);
+        else if (this._currentPhase === 6) this.time = new Date(1986, 3, 28, 9, 0, 0);
+        else if (this._currentPhase === 7) this.time = new Date(1986, 3, 30, 6, 0, 0);
+    }
+
     // 结束游戏逻辑
     triggerGameOver(reason) {
         this.gameOver = true;
@@ -148,8 +176,44 @@ class GameState {
         titleEl.style.color = "var(--alert-red)";
         descEl.textContent = reason;
         descEl.className = "critical-alert";
-        startBtn.textContent = "重新加载系统";
-        startBtn.onclick = () => {
+
+        // 克隆并替换开始按钮以彻底清除历史 addEventListener
+        const newStartBtn = startBtn.cloneNode(true);
+        startBtn.replaceWith(newStartBtn);
+
+        // 动态添加一个“重玩本关”按钮，防止玩家误触导致清空整场进度
+        let replayBtn = document.getElementById('btn-replay-stage');
+        if (replayBtn) replayBtn.remove();
+
+        replayBtn = document.createElement('button');
+        replayBtn.id = 'btn-replay-stage';
+        replayBtn.className = 'btn btn-success btn-large';
+        replayBtn.style.marginRight = '10px';
+        replayBtn.textContent = "🔄 重玩本关";
+        replayBtn.onclick = () => {
+            replayBtn.remove();
+            this.resetStateForReplay();
+            
+            // 恢复原始开始按钮的状态和动作
+            const originalBtn = newStartBtn.cloneNode(true);
+            originalBtn.textContent = "开始模拟";
+            originalBtn.className = "btn btn-primary btn-large";
+            originalBtn.addEventListener('click', () => {
+                if (window.audio) { window.audio.init(); window.audio.playBeep(1000, 0.1, 0.1); }
+                this.switchView('view-reactor');
+                if (window.scenario) window.scenario.startStory();
+            });
+            newStartBtn.replaceWith(originalBtn);
+
+            if (window.scenario) window.scenario.jumpToPhase(this.currentPhase);
+        };
+
+        newStartBtn.parentNode.insertBefore(replayBtn, newStartBtn);
+
+        newStartBtn.textContent = "⚡ 重开整场游戏 (清空存档)";
+        newStartBtn.className = "btn btn-danger btn-large";
+        newStartBtn.onclick = () => {
+            localStorage.clear();
             window.location.reload();
         };
     }

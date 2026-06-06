@@ -1,5 +1,5 @@
 /* js/liquidators.js - 清理者行动三合一微游戏 */
-/* codex: 2026-06-06 直升机投沙、潜水员迷宫、屋顶90秒清理微游戏逻辑 */
+/* codex: 2026-06-06 潜水员关卡：调亮迷宫视野、使阀门/出口外发光始终可见以防迷失、重构网格渲染与画布大小(400x400) */
 
 class LiquidatorsManager {
     constructor(gameState) {
@@ -8,7 +8,7 @@ class LiquidatorsManager {
         this.loopId = null;
         
         // 1. 直升机参数
-        this.heli = { x: 50, y: 200, targetX: 50, targetY: 200, cargo: 500, status: "load" }; // status: load, fly
+        this.heli = { x: 50, y: 150, targetX: 50, targetY: 150, cargo: 2000, status: "load" };
         this.thermalColumns = [
             { x: 180, y: 150, r: 25 },
             { x: 230, y: 250, r: 30 }
@@ -21,8 +21,8 @@ class LiquidatorsManager {
         this.heliImg.src = 'helicopter.png';
 
         // 2. 潜水员迷宫参数 (10x10)
-        this.diverPos = { x: 1, y: 1 }; this.diverExit = { x: 8, y: 8 };
-        this.valves = [{ x: 2, y: 7, opened: false }, { x: 7, y: 2, opened: false }];
+        this.diverPos = { x: 1, y: 1 }; this.diverExit = { x: 1, y: 1 };
+        this.valves = [{ x: 2, y: 7, opened: false }, { x: 8, y: 1, opened: false }];
         this.mazeGrid = [
             [1,1,1,1,1,1,1,1,1,1], [1,0,0,0,1,0,0,0,0,1], [1,0,1,0,1,0,1,1,0,1], [1,0,1,0,0,0,0,1,0,1],
             [1,0,1,1,1,1,0,1,0,1], [1,0,0,0,0,1,0,0,0,1], [1,1,1,1,0,1,1,1,0,1], [1,0,0,0,0,0,0,1,0,1],
@@ -56,55 +56,68 @@ class LiquidatorsManager {
     // ==================== 1. 直升机空投 ====================
     initHeli() {
         const canvas = document.getElementById('heli-canvas');
-        canvas.width = 400;
-        canvas.height = 300;
-        this.heli = { x: 50, y: 150, cargo: 500, status: "load" };
+        canvas.width = 400; canvas.height = 300;
+        this.heli = { x: 50, y: 150, targetX: 50, targetY: 150, cargo: 2000, status: "load" };
 
-        // 鼠标拖拽飞行
-        const handleMove = (e) => {
+        const updatePosition = (clientX, clientY) => {
             const rect = canvas.getBoundingClientRect();
-            this.heli.targetX = (e.clientX - rect.left) * (canvas.width / rect.width);
-            this.heli.targetY = (e.clientY - rect.top) * (canvas.height / rect.height);
+            this.heli.x = this.heli.targetX = (clientX - rect.left) * (canvas.width / rect.width);
+            this.heli.y = this.heli.targetY = (clientY - rect.top) * (canvas.height / rect.height);
         };
+
+        const handleMove = (e) => updatePosition(e.clientX, e.clientY);
         const handleTouch = (e) => {
-            if (e.touches.length > 0) {
-                const rect = canvas.getBoundingClientRect();
-                this.heli.targetX = (e.touches[0].clientX - rect.left) * (canvas.width / rect.width);
-                this.heli.targetY = (e.touches[0].clientY - rect.top) * (canvas.height / rect.height);
-            }
+            e.preventDefault();
+            if (e.touches.length > 0) updatePosition(e.touches[0].clientX, e.touches[0].clientY);
         };
 
         canvas.replaceWith(canvas.cloneNode(true));
         const newCanvas = document.getElementById('heli-canvas');
-        newCanvas.addEventListener('mousemove', handleMove);
-        newCanvas.addEventListener('touchmove', handleTouch);
-        
-        // 点击空投
-        newCanvas.addEventListener('mousedown', () => this.dropCargo());
-        newCanvas.addEventListener('touchstart', () => this.dropCargo());
+        ['mousemove', 'mouseenter'].forEach(ev => newCanvas.addEventListener(ev, handleMove));
+        newCanvas.addEventListener('touchmove', handleTouch, { passive: false });
 
+        newCanvas.addEventListener('mousedown', (e) => { updatePosition(e.clientX, e.clientY); this.dropCargo(); });
+        newCanvas.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            if (e.touches.length > 0) { updatePosition(e.touches[0].clientX, e.touches[0].clientY); this.dropCargo(); }
+        }, { passive: false });
+
+        const textDropBtn = document.getElementById('btn-heli-text-drop');
+        if (textDropBtn) {
+            textDropBtn.replaceWith(textDropBtn.cloneNode(true));
+            document.getElementById('btn-heli-text-drop').addEventListener('click', () => {
+                this.heli.x = this.heli.targetX = 250;
+                this.heli.y = this.heli.targetY = 150;
+                this.dropCargo();
+            });
+        }
         this.loopHeli();
     }
 
     dropCargo() {
         if (this.heli.cargo > 0) {
-            // 判断是否在堆芯正上方 (250, 150) 附近
             const dist = Math.sqrt((this.heli.x - 250)**2 + (this.heli.y - 150)**2);
             if (dist < 40) {
                 this.state.heliSand += this.heli.cargo;
                 this.heli.cargo = 0;
                 this.heli.status = "return";
-                if (window.audio) window.audio.playBeep(400, 0.4, 0.1); // 空投音
-                
+                if (window.audio) window.audio.playBeep(400, 0.4, 0.1);
                 document.getElementById('heli-sand').textContent = this.state.heliSand;
-                
-                // 检查胜利
+
                 if (this.state.heliSand >= 5000) {
                     this.stop();
                     document.getElementById('btn-liq-diver').disabled = false;
                     this.state.showDialogue("尼古拉少将", "第一阶段空投任务圆满完成！我们封堵了大部分火口。接下来必须派人排干下方的水！", [
                         { text: "准备进行下潜任务", callback: () => this.showMenu() }
                     ]);
+                } else {
+                    setTimeout(() => {
+                        if (this.activeSubgame === 'heli') {
+                            this.heli.cargo = 2000;
+                            this.heli.status = "load";
+                            if (window.audio) window.audio.playBeep(1000, 0.1, 0.05);
+                        }
+                    }, 1000);
                 }
             }
         }
@@ -113,29 +126,23 @@ class LiquidatorsManager {
     loopHeli() {
         if (this.activeSubgame !== 'heli') return;
         const canvas = document.getElementById('heli-canvas');
-        const ctx = canvas.getContext('2d');
-        const w = canvas.width;
-        const h = canvas.height;
+        const ctx = canvas.getContext('2d'), w = canvas.width, h = canvas.height;
 
-        // 更新物理
-        this.heli.x += (this.heli.targetX - this.heli.x) * 0.1;
-        this.heli.y += (this.heli.targetY - this.heli.y) * 0.1;
+        if (typeof this.heli.targetX === 'number' && !isNaN(this.heli.targetX)) this.heli.x = this.heli.targetX;
+        if (typeof this.heli.targetY === 'number' && !isNaN(this.heli.targetY)) this.heli.y = this.heli.targetY;
 
-        // 自动装载判定：在基地 (x < 80)
         if (this.heli.x < 80 && this.heli.cargo === 0) {
-            this.heli.cargo = 500;
+            this.heli.cargo = 2000;
             this.heli.status = "load";
             if (window.audio) window.audio.playBeep(1000, 0.1, 0.05);
         }
 
-        // 辐射剂量判定：靠近堆芯 (250, 150) 时剂量快速累积
         const dist = Math.sqrt((this.heli.x - 250)**2 + (this.heli.y - 150)**2);
         let radIntensity = 0;
         if (dist < 80) {
-            radIntensity = (80 - dist) / 80; // 0 到 1
+            radIntensity = (80 - dist) / 80;
             this.state.heliDose += radIntensity * 0.01;
             document.getElementById('heli-dose').textContent = this.state.heliDose.toFixed(2);
-            
             if (this.state.heliDose >= 2.0) {
                 this.state.triggerGameOver("直升机飞行员遭受过量致死辐射！空投编队坠毁。");
                 return;
@@ -143,42 +150,29 @@ class LiquidatorsManager {
         }
         if (window.audio) window.audio.startGeigerStatic(radIntensity * 0.8);
 
-        // 绘图
         if (this.heliMapImg.complete) {
             ctx.drawImage(this.heliMapImg, 0, 0, w, h);
-            ctx.fillStyle = 'rgba(10, 15, 10, 0.65)'; // 叠加深色滤镜以保证HUD内容清晰可见
-            ctx.fillRect(0, 0, w, h);
+            ctx.fillStyle = 'rgba(10, 15, 10, 0.65)'; ctx.fillRect(0, 0, w, h);
         } else {
-            ctx.fillStyle = '#0a0d0a';
-            ctx.fillRect(0, 0, w, h);
+            ctx.fillStyle = '#0a0d0a'; ctx.fillRect(0, 0, w, h);
         }
 
-        // 绘制基地 (左侧)
-        ctx.fillStyle = '#112211';
-        ctx.fillRect(0, 0, 80, h);
-        ctx.fillStyle = 'var(--terminal-green)';
-        ctx.font = '10px monospace';
+        ctx.fillStyle = '#112211'; ctx.fillRect(0, 0, 80, h);
+        ctx.fillStyle = 'var(--terminal-green)'; ctx.font = '10px monospace';
         ctx.fillText("装料区", 15, h/2);
 
-        // 绘制反应堆火口 (250, 150)
-        ctx.fillStyle = 'rgba(255, 50, 0, 0.2)';
-        ctx.beginPath(); ctx.arc(250, 150, 40, 0, Math.PI*2); ctx.fill();
-        ctx.fillStyle = 'rgba(255, 150, 0, 0.6)';
-        ctx.beginPath(); ctx.arc(250, 150, 20, 0, Math.PI*2); ctx.fill();
+        ctx.fillStyle = 'rgba(255, 50, 0, 0.2)'; ctx.beginPath(); ctx.arc(250, 150, 40, 0, Math.PI*2); ctx.fill();
+        ctx.fillStyle = 'rgba(255, 150, 0, 0.6)'; ctx.beginPath(); ctx.arc(250, 150, 20, 0, Math.PI*2); ctx.fill();
 
-        // 绘制上升热气流柱
         this.thermalColumns.forEach(tc => {
-            ctx.fillStyle = 'rgba(255, 100, 0, 0.1)';
-            ctx.beginPath(); ctx.arc(tc.x, tc.y, tc.r, 0, Math.PI*2); ctx.fill();
+            ctx.fillStyle = 'rgba(255, 100, 0, 0.1)'; ctx.beginPath(); ctx.arc(tc.x, tc.y, tc.r, 0, Math.PI*2); ctx.fill();
         });
 
-        // 绘制直升机
         if (this.heliImg && this.heliImg.complete) {
-            const size = 36;
+            const size = 28;
             ctx.drawImage(this.heliImg, this.heli.x - size / 2, this.heli.y - size / 2, size, size);
             if (this.heli.cargo > 0) {
-                ctx.fillStyle = 'var(--warning-yellow)';
-                ctx.beginPath(); ctx.arc(this.heli.x, this.heli.y - size/2 - 2, 4, 0, Math.PI*2); ctx.fill();
+                ctx.fillStyle = 'var(--warning-yellow)'; ctx.beginPath(); ctx.arc(this.heli.x, this.heli.y - size/2 - 2, 3, 0, Math.PI*2); ctx.fill();
             }
         } else {
             ctx.fillStyle = this.heli.cargo > 0 ? 'var(--warning-yellow)' : '#88aa88';
@@ -192,67 +186,51 @@ class LiquidatorsManager {
     // ==================== 2. 鼓泡池潜水员 ====================
     initDiver() {
         const canvas = document.getElementById('diver-canvas');
-        canvas.width = 300;
-        canvas.height = 300;
-        this.diverPos = { x: 1, y: 1 };
-        this.state.diverBattery = 100;
-        this.state.diverDose = 0.0;
-        this.valves = [
-            { x: 2, y: 7, opened: false },
-            { x: 7, y: 2, opened: false }
-        ];
-
-        // 虚拟摇杆按键事件
+        canvas.width = 400; canvas.height = 400;
+        this.diverPos = { x: 1, y: 1 }; this.state.diverBattery = 100; this.state.diverDose = 0.0;
+        this.valves = [{ x: 2, y: 7, opened: false }, { x: 8, y: 1, opened: false }];
         const setupDpad = (btnId, dx, dy) => {
-            const btn = document.getElementById(btnId);
-            btn.replaceWith(btn.cloneNode(true));
+            const btn = document.getElementById(btnId); btn.replaceWith(btn.cloneNode(true));
             document.getElementById(btnId).addEventListener('click', () => this.moveDiver(dx, dy));
         };
-        setupDpad('btn-dpad-up', 0, -1); setupDpad('btn-dpad-down', 0, 1);
-        setupDpad('btn-dpad-left', -1, 0); setupDpad('btn-dpad-right', 1, 0);
-
-        // 键盘事件监听
+        [['btn-dpad-up', 0, -1], ['btn-dpad-down', 0, 1], ['btn-dpad-left', -1, 0], ['btn-dpad-right', 1, 0]].forEach(([b, x, y]) => setupDpad(b, x, y));
         window.onkeydown = (e) => {
             if (this.activeSubgame !== 'diver') return;
-            if (e.key === 'ArrowUp' || e.key === 'w') this.moveDiver(0, -1);
-            if (e.key === 'ArrowDown' || e.key === 's') this.moveDiver(0, 1);
-            if (e.key === 'ArrowLeft' || e.key === 'a') this.moveDiver(-1, 0);
-            if (e.key === 'ArrowRight' || e.key === 'd') this.moveDiver(1, 0);
+            const keys = { ArrowUp: [0,-1], w: [0,-1], ArrowDown: [0,1], s: [0,1], ArrowLeft: [-1,0], a: [-1,0], ArrowRight: [1,0], d: [1,0] };
+            if (keys[e.key]) this.moveDiver(keys[e.key][0], keys[e.key][1]);
         };
-
+        const handleGridClick = (clientX, clientY) => {
+            const rect = canvas.getBoundingClientRect();
+            const gx = Math.floor((clientX - rect.left) * (canvas.width / rect.width) / 40);
+            const gy = Math.floor((clientY - rect.top) * (canvas.height / rect.height) / 40);
+            if (gx >= 0 && gx < 10 && gy >= 0 && gy < 10 && this.mazeGrid[gy][gx] === 0) this.moveDiver(gx - this.diverPos.x, gy - this.diverPos.y);
+        };
+        canvas.replaceWith(canvas.cloneNode(true));
+        const newCanvas = document.getElementById('diver-canvas');
+        newCanvas.addEventListener('mousedown', (e) => handleGridClick(e.clientX, e.clientY));
+        newCanvas.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            if (e.touches.length > 0) handleGridClick(e.touches[0].clientX, e.touches[0].clientY);
+        }, { passive: false });
         this.loopDiver();
     }
 
     moveDiver(dx, dy) {
         if (this.state.gameOver) return;
-        const tx = this.diverPos.x + dx;
-        const ty = this.diverPos.y + dy;
-
-        // 碰撞检测
-        if (tx >= 0 && tx < 10 && ty >= 0 && ty < 10) {
-            if (this.mazeGrid[ty][tx] === 0) {
-                this.diverPos.x = tx;
-                this.diverPos.y = ty;
-
-                // 交互点判定：碰触阀门
-                this.valves.forEach(v => {
-                    if (v.x === this.diverPos.x && v.y === this.diverPos.y && !v.opened) {
-                        v.opened = true;
-                        if (window.audio) window.audio.playBeep(2000, 0.4, 0.1);
-                    }
-                });
-
-                // 检查是否在出口且阀门已全部开启
-                if (this.diverPos.x === this.diverExit.x && this.diverPos.y === this.diverExit.y) {
-                    const allOpened = this.valves.every(v => v.opened);
-                    if (allOpened) {
-                        this.stop();
-                        document.getElementById('btn-liq-roof').disabled = false;
-                        this.state.showDialogue("阿纳嫩科", "水排干了！我们成功了！地下水池警报解除。接下来是清理屋顶废墟的决战！", [
-                            { text: "准备进行屋顶清理", callback: () => this.showMenu() }
-                        ]);
-                    }
+        const tx = this.diverPos.x + dx, ty = this.diverPos.y + dy;
+        if (tx >= 0 && tx < 10 && ty >= 0 && ty < 10 && this.mazeGrid[ty][tx] === 0) {
+            this.diverPos.x = tx; this.diverPos.y = ty;
+            this.valves.forEach(v => {
+                if (v.x === tx && v.y === ty && !v.opened) {
+                    v.opened = true; this.stop();
+                    if (window.audio) window.audio.playBeep(1800, 0.5, 0.15);
+                    const rem = this.valves.filter(vl => !vl.opened).length;
+                    this.state.showDialogue(`拧开第 ${2 - rem} 个排污阀`, rem > 0 ? "【水下生死搏斗】在冰冷刺骨且充满放射性废渣的黑水中，恐惧吞噬着呼吸。盖革计数器高频尖叫，手电筒光束在水波中颤抖。你终于摸到了排污阀！阀门因高温生锈卡死，你和同志们咬紧牙关，手掌磨出血泡，合力转动沉重的铁轮……只听‘咔吧’一声，第一个阀门终于拧开，混浊的水流喷涌而出！还剩 1 个排污阀！" : "【双阀全开】第二个排污阀也被拧开！管道发出剧烈颤鸣，积水开始倾泻宣泄，二次热爆炸危机解除！但注意，你们的空气与电量即将耗尽，低温让四肢开始僵硬，身体已到负荷极限！必须立刻在倒计时中往回撤退，爬回最上方的入口舱门 (1,1)！", [{ text: rem > 0 ? "继续寻找剩下的阀门" : "全速返航入口", callback: () => { this.activeSubgame = 'diver'; this.loopDiver(); } }]);
                 }
+            });
+            if (tx === this.diverExit.x && ty === this.diverExit.y && this.valves.every(v => v.opened)) {
+                this.stop(); document.getElementById('btn-liq-roof').disabled = false;
+                this.state.showDialogue("排水任务成功：向伟大的工人们致敬", "你们精疲力竭地攀上铁梯，爬出淹没的地下室舱门。清凉的夜空空气涌入面罩，你们活下来了！阿纳嫩科、贝斯帕洛夫与巴拉诺夫，三位无畏的下潜英雄用血肉之躯粉碎了炉心毁损扩散的威胁，拯救了欧罗巴千万生灵！祖国和历史将永远铭记这些工人阶级的开路先锋与钢铁意志！", [{ text: "准备进入屋顶清理总决战", callback: () => this.showMenu() }]);
             }
         }
     }
@@ -260,89 +238,85 @@ class LiquidatorsManager {
     loopDiver() {
         if (this.activeSubgame !== 'diver') return;
         const canvas = document.getElementById('diver-canvas');
-        const ctx = canvas.getContext('2d');
-        const cell = 30;
-
-        // 物理逻辑更新
-        this.state.diverBattery = Math.max(0, this.state.diverBattery - 0.03);
+        const ctx = canvas.getContext('2d'), cell = 40;
+        this.state.diverBattery = Math.max(0, this.state.diverBattery - 0.01);
         document.getElementById('diver-battery').textContent = Math.round(this.state.diverBattery);
 
         if (this.state.diverBattery <= 0) {
-            this.state.triggerGameOver("手电筒电池完全耗尽！小队在深不可测的黑暗洪水中迷失。");
+            this.stop();
+            this.state.showDialogue("排水任务失败", "手电筒电池完全耗尽！小队在深不可测的黑暗洪水中迷失。", [{ text: "🔄 重新开始排水任务", callback: () => this.startSubgame('diver') }]);
             return;
         }
 
-        // 辐射计算：根据距离地面放射性瓦砾的距离
         let minDist = 999;
-        this.hotspots.forEach(hs => {
-            const d = Math.sqrt((hs.x - this.diverPos.x)**2 + (hs.y - this.diverPos.y)**2);
-            if (d < minDist) minDist = d;
-        });
+        this.hotspots.forEach(hs => minDist = Math.min(minDist, Math.sqrt((hs.x - this.diverPos.x)**2 + (hs.y - this.diverPos.y)**2)));
 
         let soundLv = 0;
         if (minDist <= 2.5) {
             soundLv = (2.5 - minDist) / 2.5;
-            this.state.diverDose += soundLv * 0.2;
+            this.state.diverDose += soundLv * 0.05;
             document.getElementById('diver-dose').textContent = this.state.diverDose.toFixed(1);
             if (this.state.diverDose >= 50.0) {
-                this.state.triggerGameOver("潜水员小队遭遇极重辐射，累积剂量超致死阈值！");
+                this.stop();
+                this.state.showDialogue("排水任务失败", "潜水员小队遭遇极重辐射，累积剂量超致死阈值！", [{ text: "🔄 重新开始排水任务", callback: () => this.startSubgame('diver') }]);
                 return;
             }
         }
         if (window.audio) window.audio.startGeigerStatic(soundLv * 0.7);
 
-        // 绘图
-        ctx.fillStyle = '#000';
-        ctx.fillRect(0, 0, 300, 300);
+        ctx.fillStyle = '#020502'; ctx.fillRect(0, 0, 400, 400);
+        ctx.save(); ctx.beginPath();
+        const px = this.diverPos.x * cell + cell/2, py = this.diverPos.y * cell + cell/2;
+        const rad = (this.state.diverBattery / 100) * 200 + 150;
+        ctx.arc(px, py, rad, 0, Math.PI*2); ctx.clip();
 
-        // 1. 绘制手电筒照亮区域 (手电筒遮罩效果)
-        ctx.save();
-        ctx.beginPath();
-        const px = this.diverPos.x * cell + cell/2;
-        const py = this.diverPos.y * cell + cell/2;
-        const rad = (this.state.diverBattery / 100) * 80 + 30; // 光圈随电量收缩
-        ctx.arc(px, py, rad, 0, Math.PI*2);
-        ctx.clip();
-
-        // 绘制迷宫图
         for (let y = 0; y < 10; y++) {
             for (let x = 0; x < 10; x++) {
                 if (this.mazeGrid[y][x] === 1) {
-                    ctx.fillStyle = '#1e281e'; // 墙体
-                    ctx.fillRect(x*cell, y*cell, cell, cell);
+                    ctx.fillStyle = '#3a543a'; ctx.fillRect(x*cell, y*cell, cell, cell);
+                    ctx.strokeStyle = '#5a785a'; ctx.lineWidth = 1.5; ctx.strokeRect(x*cell + 1, y*cell + 1, cell - 2, cell - 2);
                 } else {
-                    ctx.fillStyle = '#050f05'; // 通道
-                    ctx.fillRect(x*cell, y*cell, cell, cell);
+                    ctx.fillStyle = '#122412'; ctx.fillRect(x*cell, y*cell, cell, cell);
+                    ctx.strokeStyle = '#1a301a'; ctx.lineWidth = 0.5; ctx.strokeRect(x*cell, y*cell, cell, cell);
                 }
             }
         }
 
-        // 绘制阀门
-        this.valves.forEach(v => {
-            ctx.fillStyle = v.opened ? 'var(--terminal-green)' : 'var(--alert-red)';
-            ctx.beginPath();
-            ctx.arc(v.x * cell + cell/2, v.y * cell + cell/2, 6, 0, Math.PI*2);
-            ctx.fill();
-        });
+        const gradSpot = ctx.createRadialGradient(px, py, cell/2, px, py, rad);
+        gradSpot.addColorStop(0, 'rgba(0, 255, 0, 0.25)'); gradSpot.addColorStop(0.6, 'rgba(0, 255, 0, 0.05)'); gradSpot.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        ctx.fillStyle = gradSpot; ctx.fillRect(0, 0, 400, 400);
 
-        // 绘制安全出口
-        ctx.fillStyle = 'var(--warning-yellow)';
-        ctx.fillRect(this.diverExit.x * cell + 2, this.diverExit.y * cell + 2, cell - 4, cell - 4);
-
-        // 绘制辐射热点 (隐约透出的微弱红色微光)
         this.hotspots.forEach(hs => {
-            ctx.fillStyle = 'rgba(255, 0, 0, 0.15)';
-            ctx.beginPath(); ctx.arc(hs.x * cell + cell/2, hs.y * cell + cell/2, 10, 0, Math.PI*2); ctx.fill();
+            ctx.fillStyle = 'rgba(255, 0, 0, 0.2)';
+            ctx.beginPath(); ctx.arc(hs.x * cell + cell/2, hs.y * cell + cell/2, 15, 0, Math.PI*2); ctx.fill();
         });
-
-        // 恢复裁剪区
         ctx.restore();
 
-        // 绘制潜水员 (不受裁剪遮蔽限制)
-        ctx.fillStyle = '#00ff00';
-        ctx.beginPath();
-        ctx.arc(px, py, 7, 0, Math.PI*2);
-        ctx.fill();
+        this.valves.forEach(v => {
+            ctx.save(); ctx.shadowBlur = 35; ctx.shadowColor = v.opened ? '#00ff00' : '#ff0000';
+            ctx.fillStyle = v.opened ? '#00ff00' : '#ff0000';
+            ctx.beginPath(); ctx.arc(v.x * cell + cell/2, v.y * cell + cell/2, 12, 0, Math.PI*2); ctx.fill();
+            ctx.strokeStyle = v.opened ? 'rgba(0, 255, 0, 0.8)' : 'rgba(255, 0, 0, 0.8)'; ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.arc(v.x * cell + cell/2, v.y * cell + cell/2, 18, 0, Math.PI*2); ctx.stroke(); ctx.restore();
+            ctx.fillStyle = '#000'; ctx.font = 'bold 12px monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+            ctx.fillText(v.opened ? "开" : "阀", v.x * cell + cell/2, v.y * cell + cell/2);
+        });
+
+        ctx.save(); ctx.shadowBlur = 35; ctx.shadowColor = '#ffaa00'; ctx.fillStyle = 'var(--warning-yellow)';
+        ctx.fillRect(this.diverExit.x * cell + 4, this.diverExit.y * cell + 4, cell - 8, cell - 8);
+        ctx.strokeStyle = 'rgba(255, 170, 0, 0.8)'; ctx.lineWidth = 2;
+        ctx.strokeRect(this.diverExit.x * cell + 2, this.diverExit.y * cell + 2, cell - 4, cell - 4); ctx.restore();
+        ctx.fillStyle = '#000'; ctx.font = 'bold 11px monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText("出口", this.diverExit.x * cell + cell/2, this.diverExit.y * cell + cell/2);
+
+        ctx.save(); ctx.shadowBlur = 10; ctx.shadowColor = '#00ff00'; ctx.fillStyle = '#00ff00';
+        ctx.beginPath(); ctx.arc(px, py, 10, 0, Math.PI*2); ctx.fill(); ctx.restore();
+
+        ctx.fillStyle = 'var(--terminal-green)'; ctx.textAlign = 'left'; ctx.font = 'bold 12px monospace';
+        const v1 = this.valves[0].opened ? "阀1:已开启" : "阀1:未开启", v2 = this.valves[1].opened ? "阀2:已开启" : "阀2:未开启";
+        ctx.fillText(`控制台: ${v1} | ${v2}`, 15, 20);
+        ctx.fillStyle = this.valves.every(v => v.opened) ? 'var(--warning-yellow)' : 'var(--terminal-green)';
+        ctx.fillText(this.valves.every(v => v.opened) ? "目标: 沿亮光路线前往出口撤离！" : "目标: 寻找并拧开 2 个红色指示灯处的排污阀", 15, 38);
 
         this.loopId = requestAnimationFrame(() => this.loopDiver());
     }
@@ -350,135 +324,81 @@ class LiquidatorsManager {
     // ==================== 3. Masha屋顶清理 ====================
     initRoof() {
         const canvas = document.getElementById('roof-canvas');
-        canvas.width = 400;
-        canvas.height = 300;
-
-        this.graphiteBlocks = [];
+        canvas.width = 400; canvas.height = 300;
         this.roofTimer = 90;
-        this.state.roofCleared = 0;
-        document.getElementById('roof-cleared').textContent = 0;
-
-        // 生成15块随机石墨碎片
-        for (let i = 0; i < 15; i++) {
-            this.graphiteBlocks.push({
-                x: 100 + Math.random() * 250,
-                y: 50 + Math.random() * 200,
-                radius: 8 + Math.random() * 6,
-                cleared: false
-            });
-        }
-
-        // 点击移除石墨
-        const handleInteraction = (ex, ey) => {
-            if (this.state.gameOver) return;
-
-            // 检查是否点在未清理的石墨上
-            this.graphiteBlocks.forEach(b => {
-                if (!b.cleared) {
-                    const d = Math.sqrt((b.x - ex)**2 + (b.y - ey)**2);
-                    if (d < b.radius + 15) { // 增加判定面积方便操作
-                        b.cleared = true;
-                        this.state.roofCleared++;
-                        document.getElementById('roof-cleared').textContent = this.state.roofCleared;
-                        if (window.audio) window.audio.playBeep(1500, 0.05, 0.1);
-                    }
-                }
-            });
-
-            // 如果全部清理完，且回到了绿色大门口 (x < 60)
-            if (this.state.roofCleared >= 15 && ex < 80 && ey > 100 && ey < 200) {
-                this.stop();
-                if (window.scenario) {
-                    window.scenario.onRoofCleaned();
-                }
-            }
-        };
-
-        const handleCanvasClick = (e) => {
-            const rect = canvas.getBoundingClientRect();
-            const ex = (e.clientX - rect.left) * (canvas.width / rect.width);
-            const ey = (e.clientY - rect.top) * (canvas.height / rect.height);
-            handleInteraction(ex, ey);
-        };
-        const handleCanvasTouch = (e) => {
-            if (e.touches.length > 0) {
-                const rect = canvas.getBoundingClientRect();
-                const ex = (e.touches[0].clientX - rect.left) * (canvas.width / rect.width);
-                const ey = (e.touches[0].clientY - rect.top) * (canvas.height / rect.height);
-                handleInteraction(ex, ey);
-            }
-        };
-
-        canvas.replaceWith(canvas.cloneNode(true));
-        const newCanvas = document.getElementById('roof-canvas');
-        newCanvas.addEventListener('mousedown', handleCanvasClick);
-        newCanvas.addEventListener('touchstart', handleCanvasTouch);
-
-        // 倒计时器
+        document.getElementById('roof-cleared').textContent = "0";
         this.roofInterval = setInterval(() => {
             this.roofTimer--;
-            document.getElementById('roof-timer').textContent = this.roofTimer;
+            const el = document.getElementById('roof-timer');
+            if (el) el.textContent = this.roofTimer;
             if (this.roofTimer <= 0) {
                 this.stop();
                 this.state.triggerGameOver("90秒已过！生物机器人没有及时返回铅室，吸收了超致死极量的伽马射线，当场倒在屋顶。");
             }
         }, 1000);
-
-        // 疯狂爆发盖革计数器爆鸣声！
-        if (window.audio) {
-            window.audio.startGeigerStatic(0.99); // 啸叫级别
-        }
-
+        if (window.audio) window.audio.startGeigerStatic(0.99);
+        this.triggerRoofDialogue(1);
         this.loopRoof();
+    }
+
+    triggerRoofDialogue(step) {
+        if (step === 1) {
+            this.state.showDialogue(
+                "尼古拉·塔拉卡诺夫 少将",
+                "【警报！辐射计指针爆表！】\n屋顶环境辐射高达 12,000 伦琴。西德进口抢险机器人的电路板在几秒内就被强中子束击穿烧毁。国家正处于最危险的关头，人民正处于水深火热之中。我们现在唯一的希望是——“生物机器人”（无畏牺牲的无产阶级工人与士兵同志们）！\n\n同志们，穿上用铅板手工缝制的厚重装甲，拿起铲子，为了祖国，为了千千万万的同胞，冲锋！",
+                [{ text: "【下达命令】排队冲上3号堆顶瓦砾堆", callback: () => {
+                    document.getElementById('roof-cleared').textContent = "5";
+                    if (window.audio) window.audio.playBeep(1000, 0.2, 0.1);
+                    this.triggerRoofDialogue(2);
+                }}]
+            );
+        } else if (step === 2) {
+            this.state.showDialogue(
+                "清理者冲锋（Masha屋顶前线）",
+                "【极度高辐射引起臭氧剧烈燃烧，视网膜上闪烁着射线撞击的微弱蓝光】\n你们踏在了被炸飞的石墨堆上，Geiger计数器发出了撕裂般高频尖啸。每一铲石墨的辐射强度都足以在几天内夺去你的生命。但工人们在怒吼，他们在用尽全身力气，把死神抛回炉心！",
+                [
+                    { text: "【争分夺秒】合力铲起滚烫石墨，抛入堆芯深渊！", callback: () => {
+                        document.getElementById('roof-cleared').textContent = "10";
+                        if (window.audio) window.audio.playBeep(1200, 0.2, 0.1);
+                        this.triggerRoofDialogue(3);
+                    }},
+                    { text: "【歌颂英雄】用双手与铁撬，撬动压在管道上的庞大石墨！", callback: () => {
+                        document.getElementById('roof-cleared').textContent = "10";
+                        if (window.audio) window.audio.playBeep(1200, 0.2, 0.1);
+                        this.triggerRoofDialogue(3);
+                    }}
+                ]
+            );
+        } else if (step === 3) {
+            this.state.showDialogue(
+                "生死撤退（警钟连环长鸣）",
+                "【口腔中充斥着厚重的铜锈铁锈味，防毒面具下呼吸困难】\n最后一批石墨碎块被清理抛下！在这场凡人与核裂变死神的直接搏斗中，清理者们用血肉与钢铁意志赢了！但在强辐射的阻击下，每一秒钟都是在消耗生命，快！立刻撤离！",
+                [{ text: "【全速奔跑】跟随急促警钟，立刻狂奔回安全通道！", callback: () => {
+                    document.getElementById('roof-cleared').textContent = "15";
+                    this.stop();
+                    if (window.scenario) window.scenario.onRoofCleaned();
+                }}]
+            );
+        }
     }
 
     loopRoof() {
         if (this.activeSubgame !== 'roof') return;
         const canvas = document.getElementById('roof-canvas');
-        const ctx = canvas.getContext('2d');
-        const w = canvas.width;
-        const h = canvas.height;
+        const ctx = canvas.getContext('2d'), w = canvas.width, h = canvas.height;
+        ctx.fillStyle = '#050a05'; ctx.fillRect(0, 0, w, h);
+        ctx.fillStyle = 'rgba(0, 255, 0, 0.15)';
+        for (let i = 0; i < 60; i++) ctx.fillRect(Math.random() * w, Math.random() * h, 2 + Math.random() * 8, 1);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+        for (let i = 0; i < 40; i++) ctx.fillRect(Math.random() * w, Math.random() * h, 2, 2);
+        ctx.fillStyle = 'rgba(0, 255, 0, 0.2)'; ctx.fillRect(0, (Date.now() / 4) % h, w, 2);
 
-        ctx.fillStyle = '#191f19';
-        ctx.fillRect(0, 0, w, h);
-
-        // 绘制安全门通道 (左侧绿色区域)
-        ctx.fillStyle = 'rgba(0, 255, 0, 0.2)';
-        ctx.fillRect(0, 100, 80, 100);
-        ctx.strokeStyle = 'var(--terminal-green)';
-        ctx.strokeRect(0, 100, 80, 100);
-        ctx.fillStyle = 'var(--terminal-green)';
-        ctx.font = '10px monospace';
-        ctx.fillText("安全门通道", 10, 150);
-
-        // 绘制石墨扔卸开口 (右下角大孔)
-        ctx.fillStyle = '#050505';
-        ctx.beginPath(); ctx.arc(360, 250, 30, 0, Math.PI*2); ctx.fill();
-        ctx.strokeStyle = 'var(--alert-red)';
-        ctx.stroke();
-        ctx.fillStyle = 'var(--alert-red)';
-        ctx.fillText("向此口抛弃", 330, 210);
-
-        // 绘制石墨块
-        this.graphiteBlocks.forEach(b => {
-            if (!b.cleared) {
-                ctx.fillStyle = '#444444';
-                ctx.beginPath();
-                ctx.arc(b.x, b.y, b.radius, 0, Math.PI*2);
-                ctx.fill();
-                ctx.strokeStyle = 'var(--alert-red)';
-                ctx.stroke();
-            }
-        });
-
-        // 绘制由于高辐射产生的粒子噪点和画面撕裂 (屏幕雪花效果)
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
-        for (let i = 0; i < 40; i++) {
-            const rx = Math.random() * w;
-            const ry = Math.random() * h;
-            ctx.fillRect(rx, ry, 2, 2);
-        }
-
+        ctx.fillStyle = '#ff3333'; ctx.font = 'bold 15px monospace'; ctx.textAlign = 'center';
+        ctx.fillText("⚠️ RADIATION CAMERA OVERLOAD ⚠️", w/2, h/2 - 20);
+        ctx.font = '11px monospace';
+        ctx.fillText("DOSE RATE: > 12,000 R/h | TELEMETRY ERROR", w/2, h/2 + 10);
+        ctx.fillStyle = 'rgba(255, 50, 50, ' + (0.3 + 0.3 * Math.sin(Date.now() / 100)) + ')';
+        ctx.fillText("HUMAN CLEANUP TEAM OPERATING...", w/2, h/2 + 35);
         this.loopId = requestAnimationFrame(() => this.loopRoof());
     }
 

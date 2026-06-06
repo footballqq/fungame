@@ -57,6 +57,21 @@ class ForsmarkManager {
         verifyBtn.replaceWith(verifyBtn.cloneNode(true));
         document.getElementById('btn-verify-spectrum').addEventListener('click', () => this.verifyIsotope());
 
+        const shortcutBtn = document.getElementById('btn-spec-shortcut');
+        if (shortcutBtn) {
+            shortcutBtn.replaceWith(shortcutBtn.cloneNode(true));
+        }
+        const newShortcutBtn = document.getElementById('btn-spec-shortcut');
+        if (newShortcutBtn) {
+            newShortcutBtn.addEventListener('click', () => {
+                if (window.audio) window.audio.playBeep(1800, 0.1, 0.05);
+                this.specShift = 0;
+                if (slider) slider.value = 0;
+                this.drawSpectrum();
+                this.verifyIsotope();
+            });
+        }
+
         this.drawSpectrum();
     }
 
@@ -234,35 +249,35 @@ class ForsmarkManager {
         ctx.beginPath(); ctx.arc(cX, cY, 5, 0, Math.PI*2); ctx.fill();
         ctx.fillText("切尔诺贝利 (?)", cX + 10, cY - 5);
 
-        // 气流从放射源吹出。连接切尔诺贝利和福斯马克
+        // 气流从瑞典检测站吹出以追踪源头。连接福斯马克和切尔诺贝利
         ctx.strokeStyle = 'rgba(255, 50, 0, 0.45)';
         ctx.lineWidth = 4;
         ctx.setLineDash([5, 5]);
         ctx.beginPath();
-        ctx.moveTo(cX, cY);
+        ctx.moveTo(fX, fY);
 
-        // 玩家调整的风向线条
+        // 玩家调整的风向线条（从福斯马克向外旋转延伸）
         const angleRad = (this.windAngle * Math.PI) / 180;
         const length = 230;
-        const endX = cX + length * Math.cos(angleRad + Math.PI); // 逆风吹向
-        const endY = cY + length * Math.sin(angleRad + Math.PI);
+        const endX = fX + length * Math.cos(angleRad); 
+        const endY = fY + length * Math.sin(angleRad);
         ctx.lineTo(endX, endY);
         ctx.stroke();
         ctx.setLineDash([]);
 
-        // 绘制气流扩散羽流
+        // 绘制以福斯马克为核心的气流追踪羽流区域
         ctx.fillStyle = 'rgba(255, 0, 0, 0.15)';
         ctx.beginPath();
-        ctx.moveTo(cX, cY);
-        ctx.arc(cX, cY, length, angleRad + Math.PI - 0.15, angleRad + Math.PI + 0.15);
+        ctx.moveTo(fX, fY);
+        ctx.arc(fX, fY, length, angleRad - 0.15, angleRad + 0.15);
         ctx.closePath();
         ctx.fill();
     }
 
     lockSource() {
-        // 新坐标下目标角度大约为 235 度 (风从切尔诺贝利吹向福斯马克)
+        // 福斯马克 (212, 96) 指向切尔诺贝利 (258, 163) 的夹角约为 55 度
         // 容差放宽至 15 度，避免玩家在手机上难以精确调整
-        const targetAngle = 235;
+        const targetAngle = 55;
         const error = Math.abs(this.windAngle - targetAngle);
 
         if (error <= 15) {

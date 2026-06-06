@@ -1,5 +1,5 @@
 /* style/forsmark_liq.css - 瑞典能谱与清理者行动样式 */
-/* codex: 2026-06-06 拆分样式文件以遵循代码限额门禁 */
+/* codex: 2026-06-06 潜水员画布尺寸调大与响应式适配 */
 
 .canvas-wrapper {
     width: 100%;
@@ -15,9 +15,33 @@
     display: block;
 }
 
-#spec-canvas, #plume-canvas {
+#spec-canvas {
     max-width: 320px;
     margin: 0 auto;
+}
+
+#plume-canvas {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#heli-canvas {
+    max-width: 100%;
+    margin: 0 auto;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+#diver-canvas {
+    max-width: 360px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    #diver-canvas {
+        max-width: 280px;
+    }
 }
 
 /* --- 清理者行动计划菜单 --- */

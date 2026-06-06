@@ -18,7 +18,8 @@
         <!-- 顶部状态栏 -->
         <header class="game-header">
             <div class="header-title">切尔诺贝利核电站 - 4号机组</div>
-            <div class="header-status">
+            <div class="header-status" style="align-items: center;">
+                <button class="btn btn-sm btn-danger" id="btn-reset-game" style="margin-right: 15px; display: none; width: auto;">重置进度</button>
                 <span id="game-time">1986-04-25 01:00:00</span>
                 <span id="game-phase-tag">准备阶段</span>
             </div>
@@ -218,7 +219,10 @@
                                     <span>谱线偏移</span>
                                     <input type="range" id="spec-shift-slider" min="-100" max="100" value="0">
                                 </div>
-                                <button class="btn btn-sm btn-success" id="btn-verify-spectrum">确认同位素</button>
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    <button class="btn btn-sm btn-success" id="btn-verify-spectrum" style="text-align: center; width: 100%;">确认当前同位素对齐</button>
+                                    <button class="btn btn-sm btn-primary" id="btn-spec-shortcut" style="text-align: center; width: 100%;">[快捷键：一键自动校准当前元素]</button>
+                                </div>
                             </div>
                         </div>
 
@@ -259,7 +263,10 @@
                                 <div>总重量投放: <span id="heli-sand">0</span> / 5000 吨</div>
                                 <div>飞行员吸收剂量: <span id="heli-dose">0.0</span> Sv (上限2.0)</div>
                             </div>
-                            <p class="desc">在画布上拖拽直升机，将其引导至冒烟的堆芯上方，松开鼠标进行投沙。避开堆芯中央上升的热气柱！</p>
+                            <p class="desc">在画布上移动直升机至堆芯上方投沙。若触控/点击对齐困难，请直接点击下方文字按钮指令投放：</p>
+                            <div style="margin-top: 10px;">
+                                <button class="btn btn-large btn-primary" id="btn-heli-text-drop" style="text-align: center; font-weight: bold; width: 100%;">【文字指令：直接向反应堆核心投沙 (2000吨)】</button>
+                            </div>
                         </div>
 
                         <!-- 潜水走廊迷宫微游戏 -->
