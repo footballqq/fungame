@@ -36,6 +36,12 @@ class ForsmarkManager {
                 buttons.forEach(x => x.classList.remove('active'));
                 b.classList.add('active');
                 this.currentIsotope = b.getAttribute('data-isotope');
+                
+                // 重置位移与滑动条，防止直接对齐或因滑块残留直接通过
+                this.specShift = Math.random() > 0.5 ? 50 : -50;
+                const slider = document.getElementById('spec-shift-slider');
+                if (slider) slider.value = this.specShift;
+                
                 this.drawSpectrum();
             });
         });
@@ -118,8 +124,9 @@ class ForsmarkManager {
 
     verifyIsotope() {
         // 玩家把参考谱线移动到和实测重合 (即 specShift 接近 0 时，峰值完全对齐)
+        // 容差从 3 像素放宽至 12 像素，解决因屏幕缩放导致难以对齐的问题
         const error = Math.abs(this.specShift);
-        if (error <= 3) {
+        if (error <= 12) {
             this.verifiedIsotopes[this.currentIsotope] = true;
             if (window.audio) window.audio.playBeep(1800, 0.2, 0.05); // 对齐音
             this.printIsotopeStatus();
@@ -159,6 +166,13 @@ class ForsmarkManager {
         this.plumeCanvas.width = 400;
         this.plumeCanvas.height = 300;
 
+        // 加载气流扩散背景地图
+        this.plumeMapImg = new Image();
+        this.plumeMapImg.src = "map-showing-how-a-cloud-of-radiation-engulfed-europe-during-v0-ypdatrhrgf1a1.webp";
+        this.plumeMapImg.onload = () => {
+            this.drawPlumeMap();
+        };
+
         this.windAngle = 90;
 
         const slider = document.getElementById('wind-angle-slider');
@@ -179,68 +193,79 @@ class ForsmarkManager {
         const ctx = this.plumeCtx;
         const w = this.plumeCanvas.width;
         const h = this.plumeCanvas.height;
-        ctx.fillStyle = '#0a100a';
-        ctx.fillRect(0, 0, w, h);
 
-        // 绘制瑞典与苏联的示意版图
-        ctx.strokeStyle = '#1e381e';
-        ctx.lineWidth = 2;
-        
-        // 绘制瑞典海岸线 (左上)
-        ctx.beginPath();
-        ctx.moveTo(30, 20); ctx.lineTo(120, 30); ctx.lineTo(80, 150); ctx.lineTo(10, 220);
-        ctx.stroke();
+        // 优先绘制新载入的欧洲辐射云实况地图背景
+        if (this.plumeMapImg && this.plumeMapImg.complete) {
+            ctx.drawImage(this.plumeMapImg, 0, 0, w, h);
+            // 盖一层微弱的半透明滤镜以匹配 CRT 绿色荧光风格，增加历史沧桑感
+            ctx.fillStyle = 'rgba(51, 255, 51, 0.12)';
+            ctx.fillRect(0, 0, w, h);
+        } else {
+            ctx.fillStyle = '#0a100a';
+            ctx.fillRect(0, 0, w, h);
 
-        // 绘制东欧海岸线与国界 (右下)
-        ctx.beginPath();
-        ctx.moveTo(180, 300); ctx.lineTo(260, 210); ctx.lineTo(380, 180);
-        ctx.stroke();
+            // 兜底绘制版图线条
+            ctx.strokeStyle = '#1e381e';
+            ctx.lineWidth = 2;
+            
+            // 绘制瑞典海岸线 (左上)
+            ctx.beginPath();
+            ctx.moveTo(30, 20); ctx.lineTo(120, 30); ctx.lineTo(80, 150); ctx.lineTo(10, 220);
+            ctx.stroke();
 
-        // 地标点：瑞典福斯马克核电站 (100, 100)
+            // 绘制东欧海岸线与国界 (右下)
+            ctx.beginPath();
+            ctx.moveTo(180, 300); ctx.lineTo(260, 210); ctx.lineTo(380, 180);
+            ctx.stroke();
+        }
+
+        // 新背景坐标校正：福斯马克检测站位于 (212, 96)，切尔诺贝利位于 (258, 163)
+        const fX = 212, fY = 96;
+        const cX = 258, cY = 163;
+
+        // 地标点：瑞典福斯马克核电站 (fX, fY)
         ctx.fillStyle = 'var(--terminal-green)';
-        ctx.beginPath(); ctx.arc(100, 100, 5, 0, Math.PI*2); ctx.fill();
+        ctx.beginPath(); ctx.arc(fX, fY, 5, 0, Math.PI*2); ctx.fill();
         ctx.font = '10px monospace';
-        ctx.fillText("福斯马克 (检测站)", 110, 105);
+        ctx.fillText("福斯马克 (检测站)", fX + 10, fY + 5);
 
-        // 地标点：切尔诺贝利 (280, 240)
+        // 地标点：切尔诺贝利 (cX, cY)
         ctx.fillStyle = 'var(--alert-red)';
-        ctx.beginPath(); ctx.arc(280, 240, 5, 0, Math.PI*2); ctx.fill();
-        ctx.fillText("切尔诺贝利 (?)", 290, 245);
+        ctx.beginPath(); ctx.arc(cX, cY, 5, 0, Math.PI*2); ctx.fill();
+        ctx.fillText("切尔诺贝利 (?)", cX + 10, cY - 5);
 
-        // 气流从放射源吹出。我们需要找到逆向风向角度，连接切尔诺贝利和福斯马克
-        // 从 (280, 240) 到 (100, 100) 的夹角
-        // dy = -140, dx = -180。夹角约为 218度
-        ctx.strokeStyle = 'rgba(255, 50, 0, 0.4)';
+        // 气流从放射源吹出。连接切尔诺贝利和福斯马克
+        ctx.strokeStyle = 'rgba(255, 50, 0, 0.45)';
         ctx.lineWidth = 4;
         ctx.setLineDash([5, 5]);
         ctx.beginPath();
-        ctx.moveTo(280, 240);
+        ctx.moveTo(cX, cY);
 
         // 玩家调整的风向线条
         const angleRad = (this.windAngle * Math.PI) / 180;
         const length = 230;
-        const endX = 280 + length * Math.cos(angleRad + Math.PI); // 逆风吹向
-        const endY = 240 + length * Math.sin(angleRad + Math.PI);
+        const endX = cX + length * Math.cos(angleRad + Math.PI); // 逆风吹向
+        const endY = cY + length * Math.sin(angleRad + Math.PI);
         ctx.lineTo(endX, endY);
         ctx.stroke();
         ctx.setLineDash([]);
 
         // 绘制气流扩散羽流
-        ctx.fillStyle = 'rgba(255, 0, 0, 0.1)';
+        ctx.fillStyle = 'rgba(255, 0, 0, 0.15)';
         ctx.beginPath();
-        ctx.moveTo(280, 240);
-        ctx.arc(280, 240, length, angleRad + Math.PI - 0.15, angleRad + Math.PI + 0.15);
+        ctx.moveTo(cX, cY);
+        ctx.arc(cX, cY, length, angleRad + Math.PI - 0.15, angleRad + Math.PI + 0.15);
         ctx.closePath();
         ctx.fill();
     }
 
     lockSource() {
-        // 目标夹角约 218度 (风从切尔诺贝利向西北吹到福斯马克)
-        // 容差 5 度
-        const targetAngle = 218;
+        // 新坐标下目标角度大约为 235 度 (风从切尔诺贝利吹向福斯马克)
+        // 容差放宽至 15 度，避免玩家在手机上难以精确调整
+        const targetAngle = 235;
         const error = Math.abs(this.windAngle - targetAngle);
 
-        if (error <= 6) {
+        if (error <= 15) {
             if (window.audio) window.audio.playBeep(2200, 0.4, 0.1);
             if (window.scenario) {
                 window.scenario.onSourceLocked();

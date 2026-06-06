@@ -14,28 +14,19 @@ class LiquidatorsManager {
             { x: 230, y: 250, r: 30 }
         ];
         
-        // 加载直升机卫星背景图
+        // 加载直升机卫星背景图与直升机贴图
         this.heliMapImg = new Image();
         this.heliMapImg.src = 'satelite_chornobyl0410-1.jpg';
+        this.heliImg = new Image();
+        this.heliImg.src = 'helicopter.png';
 
         // 2. 潜水员迷宫参数 (10x10)
-        this.diverPos = { x: 1, y: 1 };
-        this.diverExit = { x: 8, y: 8 };
-        this.valves = [
-            { x: 2, y: 7, opened: false },
-            { x: 7, y: 2, opened: false }
-        ];
+        this.diverPos = { x: 1, y: 1 }; this.diverExit = { x: 8, y: 8 };
+        this.valves = [{ x: 2, y: 7, opened: false }, { x: 7, y: 2, opened: false }];
         this.mazeGrid = [
-            [1,1,1,1,1,1,1,1,1,1],
-            [1,0,0,0,1,0,0,0,0,1],
-            [1,0,1,0,1,0,1,1,0,1],
-            [1,0,1,0,0,0,0,1,0,1],
-            [1,0,1,1,1,1,0,1,0,1],
-            [1,0,0,0,0,1,0,0,0,1],
-            [1,1,1,1,0,1,1,1,0,1],
-            [1,0,0,0,0,0,0,1,0,1],
-            [1,1,0,1,1,1,0,0,0,1],
-            [1,1,1,1,1,1,1,1,1,1]
+            [1,1,1,1,1,1,1,1,1,1], [1,0,0,0,1,0,0,0,0,1], [1,0,1,0,1,0,1,1,0,1], [1,0,1,0,0,0,0,1,0,1],
+            [1,0,1,1,1,1,0,1,0,1], [1,0,0,0,0,1,0,0,0,1], [1,1,1,1,0,1,1,1,0,1], [1,0,0,0,0,0,0,1,0,1],
+            [1,1,0,1,1,1,0,0,0,1], [1,1,1,1,1,1,1,1,1,1]
         ];
         this.hotspots = [{ x: 3, y: 3 }, { x: 6, y: 5 }, { x: 5, y: 7 }];
 
@@ -182,10 +173,18 @@ class LiquidatorsManager {
         });
 
         // 绘制直升机
-        ctx.fillStyle = this.heli.cargo > 0 ? 'var(--warning-yellow)' : '#88aa88';
-        ctx.beginPath(); ctx.arc(this.heli.x, this.heli.y, 10, 0, Math.PI*2); ctx.fill();
-        ctx.strokeStyle = '#fff';
-        ctx.stroke();
+        if (this.heliImg && this.heliImg.complete) {
+            const size = 36;
+            ctx.drawImage(this.heliImg, this.heli.x - size / 2, this.heli.y - size / 2, size, size);
+            if (this.heli.cargo > 0) {
+                ctx.fillStyle = 'var(--warning-yellow)';
+                ctx.beginPath(); ctx.arc(this.heli.x, this.heli.y - size/2 - 2, 4, 0, Math.PI*2); ctx.fill();
+            }
+        } else {
+            ctx.fillStyle = this.heli.cargo > 0 ? 'var(--warning-yellow)' : '#88aa88';
+            ctx.beginPath(); ctx.arc(this.heli.x, this.heli.y, 10, 0, Math.PI*2); ctx.fill();
+            ctx.strokeStyle = '#fff'; ctx.stroke();
+        }
 
         this.loopId = requestAnimationFrame(() => this.loopHeli());
     }
@@ -209,10 +208,8 @@ class LiquidatorsManager {
             btn.replaceWith(btn.cloneNode(true));
             document.getElementById(btnId).addEventListener('click', () => this.moveDiver(dx, dy));
         };
-        setupDpad('btn-dpad-up', 0, -1);
-        setupDpad('btn-dpad-down', 0, 1);
-        setupDpad('btn-dpad-left', -1, 0);
-        setupDpad('btn-dpad-right', 1, 0);
+        setupDpad('btn-dpad-up', 0, -1); setupDpad('btn-dpad-down', 0, 1);
+        setupDpad('btn-dpad-left', -1, 0); setupDpad('btn-dpad-right', 1, 0);
 
         // 键盘事件监听
         window.onkeydown = (e) => {
