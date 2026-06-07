@@ -32,12 +32,21 @@
                 
                 <!-- 欢迎/开始界面 -->
                 <div class="panel-view active" id="view-intro">
-                    <div class="terminal-card">
-                        <h2>系统引导程序已加载</h2>
-                        <p class="blink-text">Awaiting input...</p>
-                        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-                            <button class="btn btn-primary btn-large" id="btn-start-game" style="width: 100%;">开始模拟</button>
-                            <button class="btn btn-success btn-large" id="btn-start-geiger-sandbox" style="width: 100%; display: none;">☢️ 盖革计数器沙盒模拟器 (已解锁)</button>
+                    <div class="terminal-card" style="text-align: left; padding: 20px; max-width: 600px; width: 100%;">
+                        <h2 style="text-align: center; color: var(--terminal-green); text-shadow: 0 0 10px var(--terminal-glow); margin-bottom: 15px;">☢️ 1986·切尔诺贝利灾难模拟器</h2>
+                        
+                        <div class="intro-section" style="border: 1px solid var(--panel-border); background: rgba(5,15,5,0.7); padding: 15px; border-radius: 4px; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px; max-height: 220px; overflow-y: auto;">
+                            <strong>📜 历史背景与物理原理：</strong><br>
+                            1986年4月26日凌晨，苏联切尔诺贝利核电站4号反应堆发生了毁灭性的超载爆炸。中子轰击铀-235会产生分裂（核裂变）并释放质能热量。当时，在副总工程师迪亚特洛夫强令违规操作下，自动控制系统和应急堆芯冷却系统（ECCS）被关闭。由于反应堆长时间低功率运作，堆内中子强吸收体“氙-135”大量积聚陷入“中子毒化阱”；此时汽轮机断电惰转测试开启导致冷却泵流量骤降，激活了蒸汽“正空泡反馈”正循环；最后一刻按下紧急停堆按钮 AZ-5 时，控制棒底端的“石墨置换端头”却瞬间排开轻水，诱发了极端的“正停堆效应”，终致狂暴的二次热爆炸冲飞了重达2000吨的钢盖。<br><br>
+                            <strong>🎮 游戏说明与操作：</strong><br>
+                            1. <strong>阶段式推进</strong>：游戏分为降温准备、中子毒化、断电测试、废墟盖革评估、信息隔离、风向能谱追溯和清理者战役（直升机/潜水/屋顶）等多阶段。<br>
+                            2. <strong>高容错交互</strong>：通过控制面板、代码终端、潜水网格等控制局势。如果您使用的是手机，或操作精细度困难，每个动作阶段都配备了<b>【文字指令 / 战术调度】选项</b>，点击即可完美替代物理交互轻松过关！<br>
+                            3. <strong>自动保存</strong>：进度会自动保存在本地缓存。点击顶部的“重置进度”可重新来过。大结局后将解锁独立的盖革模拟器沙盒！
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center; width: 100%;">
+                            <button class="btn btn-primary btn-large" id="btn-start-game" style="width: 100%; font-weight: bold;">⚡ 开始历史模拟</button>
+                            <button class="btn btn-success btn-large" id="btn-start-geiger-sandbox" style="width: 100%; display: none; font-weight: bold;">☢️ 盖革计数器沙盒模拟器 (已解锁)</button>
                         </div>
                     </div>
                 </div>
@@ -377,6 +386,7 @@
     <script src="js/audio.js"></script>
     <script src="js/state.js"></script>
     <script src="js/scenario.js"></script>
+    <script src="js/scenario_science.js"></script>
     <script src="js/reactor.js"></script>
     <script src="js/skala.js"></script>
     <script src="js/geiger.js"></script>
@@ -384,6 +394,8 @@
     <script src="js/evacuation.js"></script>
     <script src="js/forsmark.js"></script>
     <script src="js/liquidators.js"></script>
+    <script src="js/liquidators_diver.js"></script>
+    <script src="js/liquidators_roof.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

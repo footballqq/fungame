@@ -25,7 +25,10 @@ class TestGameAssets(unittest.TestCase):
             "js/evacuation.js",
             "js/forsmark.js",
             "js/liquidators.js",
+            "js/liquidators_diver.js",
+            "js/liquidators_roof.js",
             "js/scenario.js",
+            "js/scenario_science.js",
             "js/main.js"
         ]
 

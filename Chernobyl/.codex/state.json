@@ -1,16 +1,15 @@
 {
-  "current_task": "Implemented Geiger counter standalone sandbox simulator unlocked after the game finale",
+  "current_task": "Added welcome manual, startup background narration, and scientific physics pop-ups",
   "last_changes": [
-    "js/geiger_sandbox.js",
-    "js/scenario.js",
-    "js/main.js",
     "index.html",
+    "js/scenario.js",
+    "js/scenario_science.js",
     "tests/test_game_assets.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "Ready for user acceptance testing and final game feedback."
+    "Ready for user acceptance testing."
   ],
-  "notes": "Added a standalone Geiger counter simulator module (js/geiger_sandbox.js) that implements a logarithmic dial Canvas, micro-jitter physics, customizable sources, and dynamic audio sound mapping. This is unlocked upon game completion (saving chernobyl_geiger_unlocked: 'true' in localStorage) and is directly accessible via a new green button on the main welcome screen."
+  "notes": "Added a detailed game manual and historical background summary directly onto the startup layout in index.html. Triggered an introductory story cutscene summarizing the 1986 disaster. Implemented interactive science popup choices at key stages in scenario.js by creating js/scenario_science.js, explaining fission vs fusion (tritium production via lithium-6), xenon-135 neutron poisoning, positive void coefficient feedback, and the positive scram effect of boron rods with graphite tips."
 }

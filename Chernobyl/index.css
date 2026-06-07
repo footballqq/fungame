@@ -305,6 +305,11 @@ body, html {
         min-height: 250px;
         flex: none;
         overflow-y: visible;
+        padding-bottom: 30px;
+    }
+    
+    .choice-container {
+        margin-bottom: 20px;
     }
     
     .dialogue-box {
