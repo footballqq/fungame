@@ -14,6 +14,8 @@ class TriangleRenderer {
         this.hoverEdgeIndex = -1;
         this.hoverT = 0;
         this.hoverSnapAngle = null;
+        this.hoverSnapKind = null;
+        this.hoverSnapLabel = null;
         this.keyboardAngleTarget = null;
         this.selectedCutPoint = null;
         this.animatingDiscard = null;
@@ -326,12 +328,12 @@ class TriangleRenderer {
         this.drawCutPointLabel(P_scaled);
 
         this.drawPAngles(P_scaled, v0, v1, vOpp, rawVertices, edgeIndex, t, theta);
-        if (this.hoverSnapAngle) {
+        if (this.hoverSnapLabel) {
             this.ctx.font = '700 12px Inter, sans-serif';
-            this.ctx.fillStyle = '#facc15';
+            this.ctx.fillStyle = this.hoverSnapKind === 'bisector' ? '#22c55e' : '#facc15';
             this.ctx.textAlign = 'center';
             this.ctx.fillText(
-                `吸附 ${formatAngleForDisplay(this.hoverSnapAngle)}°`,
+                this.hoverSnapLabel,
                 P_scaled.x,
                 P_scaled.y - 28
             );
@@ -521,8 +523,9 @@ class TriangleRenderer {
 
         annotations.forEach((annotation, annotationIndex) => {
             const safety = checkAngleSafety(annotation.angle, theta);
-            const color = safety.isExactTheta ? '#ffb703' :
-                safety.isUnsafe ? '#ff2e93' : '#00f3ff';
+            const color = this.hoverSnapKind === 'bisector' ? '#22c55e' :
+                safety.isExactTheta ? '#ffb703' :
+                    safety.isUnsafe ? '#ff2e93' : '#00f3ff';
             const arc = getInteriorArcGeometry(
                 annotation.first,
                 annotation.second,

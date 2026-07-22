@@ -334,8 +334,28 @@ document.addEventListener('DOMContentLoaded', () => {
             [90, game.theta],
             Math.min(0.12, 36 / Math.max(edgeLength, 1))
         );
-        renderer.hoverSnapAngle = snapped.targetAngle;
-        return snapped.t;
+        const bisectorSnap = snapCutParameterToVertexBisector(
+            game.currentTriangle,
+            edgeIndex,
+            t,
+            Math.min(0.12, 36 / Math.max(edgeLength, 1))
+        );
+        const snapCandidates = [
+            { ...snapped, type: snapped.targetAngle === null ? null : 'target' },
+            { ...bisectorSnap, type: bisectorSnap.isBisector ? 'bisector' : null }
+        ].filter(candidate => candidate.type);
+        snapCandidates.sort((first, second) =>
+            Math.abs(first.t - t) - Math.abs(second.t - t)
+        );
+        const selected = snapCandidates[0];
+        renderer.hoverSnapAngle = selected?.type === 'target' ? selected.targetAngle : null;
+        renderer.hoverSnapKind = selected?.type ?? null;
+        renderer.hoverSnapLabel = selected?.type === 'bisector'
+            ? `吸附角平分：${formatAngleForDisplay(selected.targetAngle)}° + ${formatAngleForDisplay(selected.targetAngle)}°`
+            : selected?.type === 'target'
+                ? `吸附 ${formatAngleForDisplay(selected.targetAngle)}°`
+                : null;
+        return selected?.t ?? t;
     }
 
     let keyboardCut = null;
@@ -363,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function showKeyboardCut(edgeIndex, t) {
+    function showKeyboardCut(edgeIndex, t, preserveSnapFeedback = false) {
         const scaledVertices = renderer.getScaledVertices(game.currentTriangle);
         renderer.hoverEdgeIndex = edgeIndex;
         renderer.hoverT = t;
@@ -372,7 +392,11 @@ document.addEventListener('DOMContentLoaded', () => {
             scaledVertices[(edgeIndex + 1) % 3],
             t
         );
-        renderer.hoverSnapAngle = null;
+        if (!preserveSnapFeedback) {
+            renderer.hoverSnapAngle = null;
+            renderer.hoverSnapKind = null;
+            renderer.hoverSnapLabel = null;
+        }
         renderer.keyboardAngleTarget = calculateCutPointAngles(
             game.currentTriangle,
             edgeIndex,
@@ -429,6 +453,8 @@ document.addEventListener('DOMContentLoaded', () => {
             renderer.hoverEdgeIndex = -1;
             renderer.hoverPoint = null;
             renderer.hoverSnapAngle = null;
+            renderer.hoverSnapKind = null;
+            renderer.hoverSnapLabel = null;
             renderer.keyboardAngleTarget = null;
             updateCutKeyboardHint();
         }
@@ -504,7 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (minDistance >= 70) return false;
         const snappedT = snapHoveredCut(bestEdgeIndex, bestT, scaledVertices);
         keyboardCut = { edgeIndex: bestEdgeIndex, t: snappedT };
-        showKeyboardCut(bestEdgeIndex, snappedT);
+        showKeyboardCut(bestEdgeIndex, snappedT, true);
         updateTouchCutSubmitButton();
         return true;
     }

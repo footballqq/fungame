@@ -19,7 +19,7 @@ const sandbox = {
     ResizeObserver: undefined
 };
 vm.createContext(sandbox);
-vm.runInContext(`${source}\nglobalThis.frontendApi = { splitTriangle, calculateTriangleAngles, calculateCutPointAngles, calculateCutVertexAngles, snapCutParameter, findCutParameterForPointAngle, roundAngleForDisplay, formatAngleForDisplay, checkAngleSafety, hasExactThetaAngle, isTriangleSafe, getShanYuChoice, getMulanOptimalCut, PaperTriangleGame, getChallengingInitialTriangle, GameGuide, ProblemDemoPlayer, TriangleRenderer, getCanvasPointFromClient, getInteriorArcGeometry, getAngleAnnotationLayout, getCutPointAngleLabels, getPendingSplitPresentation, orientVerticesForDisplay };`, sandbox);
+vm.runInContext(`${source}\nglobalThis.frontendApi = { splitTriangle, calculateTriangleAngles, calculateCutPointAngles, calculateCutVertexAngles, snapCutParameter, snapCutParameterToVertexBisector, findCutParameterForPointAngle, roundAngleForDisplay, formatAngleForDisplay, checkAngleSafety, hasExactThetaAngle, isTriangleSafe, getShanYuChoice, getMulanOptimalCut, PaperTriangleGame, getChallengingInitialTriangle, GameGuide, ProblemDemoPlayer, TriangleRenderer, getCanvasPointFromClient, getInteriorArcGeometry, getAngleAnnotationLayout, getCutPointAngleLabels, getPendingSplitPresentation, orientVerticesForDisplay };`, sandbox);
 
 const {
     splitTriangle,
@@ -27,6 +27,7 @@ const {
     calculateCutPointAngles,
     calculateCutVertexAngles,
     snapCutParameter,
+    snapCutParameterToVertexBisector,
     findCutParameterForPointAngle,
     roundAngleForDisplay,
     formatAngleForDisplay,
@@ -233,6 +234,14 @@ function testCutSnapsToExactRightAngle() {
     assert(Math.abs(snapped.t - 0.25) < 1e-8);
 }
 
+function testCutSnapsToExactVertexAngleBisector() {
+    const triangle = [{ x: 0, y: 0 }, { x: 8, y: 0 }, { x: 2, y: 5 }];
+    const snapped = snapCutParameterToVertexBisector(triangle, 0, 0.54, 0.5);
+    assert.strictEqual(snapped.isBisector, true);
+    const splitAngles = calculateCutVertexAngles(triangle, 0, snapped.t);
+    assert(Math.abs(splitAngles.angleV1 - splitAngles.angleV2) < 1e-8);
+}
+
 function testCutPointAngleCanAdjustByOneTenthDegree() {
     const triangle = [{ x: 2, y: 5 }, { x: 0, y: 0 }, { x: 8, y: 0 }];
     const initialT = 0.4;
@@ -373,7 +382,8 @@ function testUserFacingAngleTextUsesSharedFormatter() {
     const mainSource = fs.readFileSync(path.join(projectRoot, 'js', 'main.js'), 'utf8');
     const rendererSource = fs.readFileSync(path.join(projectRoot, 'js', 'renderer.js'), 'utf8');
     assert(mainSource.includes('formatAngleForDisplay(game.theta)'));
-    assert(rendererSource.includes('formatAngleForDisplay(this.hoverSnapAngle)'));
+    assert(rendererSource.includes('this.hoverSnapLabel'));
+    assert(mainSource.includes('formatAngleForDisplay(selected.targetAngle)'));
     assert.strictEqual(mainSource.includes('game.theta.toFixed(1)'), false);
 }
 
@@ -408,6 +418,7 @@ testCutPointAngleLabelsMatchTheirEdgeSides();
 testCutVertexAnglesSumToOriginalAngle();
 testPendingSplitPresentationUsesDistinctChoiceColors();
 testCutSnapsToExactRightAngle();
+testCutSnapsToExactVertexAngleBisector();
 testCutPointAngleCanAdjustByOneTenthDegree();
 testDisplayedTargetAngleIsRecognizedAsTarget();
 testAngleHistoryAndJudgmentShareOneDecimalRounding();

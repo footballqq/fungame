@@ -1,5 +1,5 @@
 {
-  "current_task": "完成触控拖动提交与角度格式化审计",
+  "current_task": "完成对顶点角平分吸附与绿色反馈",
   "last_changes": [
     "index.html",
     "styles.css",
@@ -7,6 +7,7 @@
     "js/main.js",
     "js/ai.js",
     "js/demo.js",
+    "js/geometry.js",
     "styles.css",
     "tests/js_frontend_regression.js",
     "imo2026Q4.md",
@@ -14,7 +15,7 @@
     "CODEx_TODO.md"
   ],
   "next_actions": [
-    "向用户汇报触控拖动提交和角度格式化统一"
+    "向用户汇报角平分精确吸附和绿色反馈"
   ],
-  "notes": "触控不再直接切割：拖动更新 P，提交按钮执行。所有可见角度采用统一一位小数格式；接近 θ 或 90° 的选点会在更宽的屏幕像素范围内吸附到精确角。"
+  "notes": "除 θ 和 90° 外，接近对顶点角平分线时也会精确吸附。渲染时两段等分角为绿色，并显示其相等值；测试断言求出的两段角差小于 1e-8。"
 }

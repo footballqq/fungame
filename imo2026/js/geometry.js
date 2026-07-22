@@ -234,6 +234,38 @@ function findCutParameterForPointAngle(vertices, edgeIndex, currentT, targetAngl
 }
 
 /**
+ * Snaps to the internal angle bisector from the opposite vertex.
+ * At the returned point, the two vertex-split angles are exactly equal.
+ */
+function snapCutParameterToVertexBisector(vertices, edgeIndex, currentT, maxDeltaT) {
+    const initialSplit = calculateCutVertexAngles(vertices, edgeIndex, currentT);
+    const targetAngle = (initialSplit.angleV1 + initialSplit.angleV2) / 2;
+    const evaluate = t =>
+        calculateCutVertexAngles(vertices, edgeIndex, t).angleV1 - targetAngle;
+    let low = 0.01;
+    let high = 0.99;
+    let lowValue = evaluate(low);
+
+    if (Math.abs(lowValue) < EPSILON) low = 0.0001;
+    for (let step = 0; step < 44; step++) {
+        const middle = (low + high) / 2;
+        const middleValue = evaluate(middle);
+        if (lowValue * middleValue <= 0) {
+            high = middle;
+        } else {
+            low = middle;
+            lowValue = middleValue;
+        }
+    }
+
+    const t = (low + high) / 2;
+    if (Math.abs(t - currentT) > maxDeltaT) {
+        return { t: currentT, targetAngle: null, isBisector: false };
+    }
+    return { t, targetAngle, isBisector: true };
+}
+
+/**
  * Calculates the two angles into which the opposite vertex is split by a cut.
  */
 function calculateCutVertexAngles(vertices, edgeIndex, t) {
@@ -284,6 +316,7 @@ if (typeof module !== 'undefined' && module.exports) {
         splitTriangle,
         calculateCutPointAngles,
         snapCutParameter,
+        snapCutParameterToVertexBisector,
         findCutParameterForPointAngle,
         calculateCutVertexAngles,
         hasExactThetaAngle,
