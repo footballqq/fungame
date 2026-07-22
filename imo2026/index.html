@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- codex: 2026-07-22 Offer ten quick θ presets: eight winning and two defensive cases. -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>IMO 2026 第4题：单于与木兰的纸三角形游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="zoom-medium">
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="brand">
+            <div class="brand-icon">📐</div>
+            <div>
+                <h1 class="brand-title">IMO 2026 第 4 题：纸三角形剪切博弈</h1>
+                <p class="brand-sub">启发式交互实验室 • 单于 vs 木兰</p>
+            </div>
+        </div>
+
+        <div class="mode-tabs">
+            <button class="tab-btn active" data-mode="mulan">⚔️ 木兰视角 (挑战单于)</button>
+            <button class="tab-btn" data-mode="shanyu">🛡️ 单于视角 (防御测试)</button>
+            <button class="tab-btn" data-mode="sandbox">💡 启发式解密与证明</button>
+            <button class="tab-btn" data-mode="demo">📜 题目说明与动画演示</button>
+        </div>
+
+        <!-- View Size Selector -->
+        <div class="size-selector">
+            <span style="font-size: 0.85rem; color: var(--text-secondary); white-space: nowrap;">🔍 画面尺寸:</span>
+            <div style="display: flex; gap: 4px;">
+                <button class="btn-chip size-btn" data-size="small">小</button>
+                <button class="btn-chip size-btn active" data-size="medium">中</button>
+                <button class="btn-chip size-btn" data-size="large">大</button>
+                <button class="btn-chip size-btn" data-size="xlarge">特大</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Mode 1, 2, 3: Control Sidebar -->
+        <aside class="control-sidebar glass-panel" id="main-control-sidebar">
+            <div class="section-title">
+                <span>⚙️ 角度参数设定 (<span class="math-sym">θ</span>)</span>
+            </div>
+
+            <div class="control-group">
+                <div class="label-row">
+                    <span>目标角度 <span class="math-sym">θ</span></span>
+                    <strong id="theta-val-display" style="color: var(--accent-cyan);">45.0°</strong>
+                </div>
+                <input type="range" id="theta-slider" class="range-slider" min="15" max="120" step="0.5" value="45">
+            </div>
+
+            <!-- Ratio Check Card -->
+            <div id="ratio-info-card" class="tip-box" style="margin-top: 0;">
+                <div style="font-weight: 600; margin-bottom: 4px;">数学比值检验：</div>
+                <div id="ratio-status-text">180° / 45° = <strong>n = 4</strong> (整数！木兰必胜)</div>
+            </div>
+
+            <!-- Angle Presets -->
+            <div class="control-group">
+                <div class="label-row"><span>快速设置角度 <span class="math-sym">θ</span></span></div>
+                <div class="preset-buttons">
+                    <button class="btn-chip" data-theta="90">θ = 90° (n=2，木兰胜)</button>
+                    <button class="btn-chip" data-theta="60">θ = 60° (n=3，木兰胜)</button>
+                    <button class="btn-chip active" data-theta="45">θ = 45° (n=4，木兰胜)</button>
+                    <button class="btn-chip" data-theta="36">θ = 36° (n=5，木兰胜)</button>
+                    <button class="btn-chip" data-theta="30">θ = 30° (n=6，木兰胜)</button>
+                    <button class="btn-chip" data-theta="22.5">θ = 22.5° (n=8，木兰胜)</button>
+                    <button class="btn-chip" data-theta="20">θ = 20° (n=9，木兰胜)</button>
+                    <button class="btn-chip" data-theta="18">θ = 18° (n=10，木兰胜)</button>
+                    <button class="btn-chip" data-theta="50.5">θ = 50.5° (单于可防守)</button>
+                    <button class="btn-chip" data-theta="37.5">θ = 37.5° (单于可防守)</button>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 10px;">
+                <span>🔺 初始三角形形状</span>
+            </div>
+            <div class="preset-buttons">
+                <button class="btn-chip" id="tri-preset-right">直角三角形</button>
+                <button class="btn-chip" id="tri-preset-scalene">钝角三角形</button>
+                <button class="btn-chip" id="tri-preset-acute">锐角三角形</button>
+                <button class="btn-chip" id="tri-preset-reset">重置三角形</button>
+            </div>
+        </aside>
+
+        <!-- Center Viewport: Canvas & Game Area -->
+        <section class="viewport-panel glass-panel" id="main-viewport-panel">
+            <div class="canvas-header">
+                <div id="game-status-badge" class="status-badge status-ongoing">
+                    <span>🎮 游戏进行中 (第 <strong id="step-counter">0</strong> 步)</span>
+                </div>
+                <div>
+                    <button class="btn btn-secondary" id="undo-btn" style="padding: 6px 12px; font-size: 0.85rem;">↩️ 撤销上一步</button>
+                    <button class="btn btn-secondary" id="reset-game-btn" style="padding: 6px 12px; font-size: 0.85rem;">🔄 重置游戏</button>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="geo-canvas"></canvas>
+
+                <!-- Choice Overlay for Shan-Yu mode -->
+                <div id="choice-overlay" class="choice-overlay" style="display: none;">
+                    <h2 style="color: var(--accent-gold); font-family: Outfit, sans-serif;">🛡️ 单于决策时刻！</h2>
+                    <p style="color: var(--text-secondary); margin-top: 6px;">木兰已将三角形一分为二，请点击选择要【保留】的三角形：</p>
+                    <div class="choice-cards">
+                        <div class="choice-card" id="choose-t1-btn">
+                            <h3 style="color: var(--accent-cyan);">保留左侧三角形 <span class="math-sym">T<sub>1</sub></span></h3>
+                            <p id="t1-angle-info" style="font-size: 0.85rem; margin-top: 8px; color: var(--text-muted);"></p>
+                        </div>
+                        <div class="choice-card" id="choose-t2-btn">
+                            <h3 style="color: var(--accent-blue);">保留右侧三角形 <span class="math-sym">T<sub>2</sub></span></h3>
+                            <p id="t2-angle-info" style="font-size: 0.85rem; margin-top: 8px; color: var(--text-muted);"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <button class="btn btn-primary" id="ai-cut-hint-btn">💡 木兰最佳算法建议</button>
+                <button class="btn btn-secondary" id="altitude-cut-btn">📏 快速做顶点高线剪切</button>
+            </div>
+        </section>
+
+        <!-- Right Sidebar: Angle Inspector & Tutorial Guide -->
+        <aside class="info-sidebar glass-panel" id="main-info-sidebar">
+            <!-- Mode 1/2: Angle Inspector -->
+            <div id="inspector-section">
+                <div class="section-title">
+                    <span>📊 当前三角形角度实时检测</span>
+                </div>
+                <div id="angles-inspector-card" style="display: flex; flex-direction: column; gap: 8px;">
+                    <!-- Angle badges rendered dynamically -->
+                </div>
+
+                <div class="section-title" style="margin-top: 20px;">
+                    <span>📜 操作步骤历史</span>
+                </div>
+                <div class="history-list" id="history-list-container">
+                    <!-- History items -->
+                </div>
+            </div>
+
+            <!-- Mode 3: Heuristic Guide Section -->
+            <div id="guide-section" style="display: none;">
+                <!-- Guide steps rendered dynamically -->
+            </div>
+        </aside>
+
+        <!-- Mode 4: Problem Statement & Animated Demo View (Hidden by default) -->
+        <div id="demo-mode-container" class="demo-grid" style="display: none;">
+            <!-- Problem Description Card -->
+            <article class="glass-panel" style="padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+                <h2 style="color: var(--accent-cyan); font-family: Outfit, sans-serif; display: flex; align-items: center; gap: 8px;">
+                    📜 IMO 2026 第 4 题（单于与木兰）完整题面说明
+                </h2>
+
+                <div style="font-size: 0.95rem; line-height: 1.7; color: #e2e8f0;">
+                    <p style="margin-bottom: 12px;">
+                        单于（Shan-Yu）和木兰（Mulan）在玩一个游戏。设 <span class="math-sym">α</span>（或 <span class="math-sym">θ</span>）为已知角度，满足 <code>0° &lt; θ &lt; 180°</code>，双方均已知 <span class="math-sym">θ</span>。
+                    </p>
+                    <p style="margin-bottom: 12px;">
+                        初始时，单于制作一个任意尺寸的纸质三角形 <span class="math-sym">T</span>。然后，他们重复执行以下步骤：
+                    </p>
+                    <ul style="padding-left: 20px; margin-bottom: 16px;">
+                        <li style="margin-bottom: 8px;">若 <span class="math-sym">T</span> 中至少有一个内角恰好等于 <span class="math-sym">θ</span>，则游戏结束，木兰获胜；</li>
+                        <li style="margin-bottom: 8px;">否则，木兰在 <span class="math-sym">T</span> 的边界上选择一个不同于三个顶点的点 <span class="math-sym">P</span>，并沿着点 <span class="math-sym">P</span> 到其对顶点的连线进行直线剪切，将 <span class="math-sym">T</span> 剪成两个三角形（<span class="math-sym">T<sub>1</sub></span> 与 <span class="math-sym">T<sub>2</sub></span>）；</li>
+                        <li style="margin-bottom: 8px;">单于弃置这两个三角形中的一个，剩下的另一个三角形成为新的 <span class="math-sym">T</span>。</li>
+                    </ul>
+                    <div class="tip-box">
+                        <strong>核心提问：</strong>对于哪些实数 <span class="math-sym">θ</span> 的值，无论单于如何应对，木兰都能保证在有限步内获得胜利？
+                    </div>
+
+                    <!-- Rule FAQ Box 1 -->
+                    <div class="warn-box" style="margin-top: 16px;">
+                        <h4 style="color: var(--accent-gold); font-size: 0.98rem; margin-bottom: 6px;">💡 常见误区：为什么包含大于 45° 的角不能直接获胜？</h4>
+                        <div style="font-size: 0.88rem; line-height: 1.6; color: var(--text-primary);">
+                            <p style="margin-bottom: 6px;"><strong>疑问：</strong>如果三角形里有一个 60° 角（&gt; 45°），木兰把它切成 45° + 15°，不就产生 45° 了吗？</p>
+                            <p style="margin-bottom: 6px;"><strong>解答：不能！因为单于有选择权！</strong>单于会弃置 45° 的 T₁，保留只含 15° 的 T₂，木兰无法获胜。</p>
+                            <p style="margin-bottom: 0;"><strong>绝杀死局的定义：</strong>木兰必须切出使 T₁ 和 T₂ 两边都必含 45° 角（如平分 90° 成 45° + 45°），单于留哪边都是死局。</p>
+                        </div>
+                    </div>
+
+                    <!-- Rule FAQ Box 2: 1.5 theta -->
+                    <div class="tip-box" style="margin-top: 12px;">
+                        <h4 style="color: var(--accent-cyan); font-size: 0.98rem; margin-bottom: 6px;">💡 进阶思考：如果三角形里出现了 1.5θ 的角该怎么构造与破解？</h4>
+                        <div style="font-size: 0.88rem; line-height: 1.6; color: var(--text-primary);">
+                            <p style="margin-bottom: 6px;"><strong>分析：</strong>1.5θ 的系数是 1.5（非整数），依然是一个<strong>安全角</strong>（如 θ=45° 时 1.5θ = 67.5°）。若切成 1θ + 0.5θ，单于会弃置 1θ 那一半，保留 0.5θ 逃脱。</p>
+                            <p style="margin-bottom: 0;"><strong>破解法：木兰无需处理 1.5θ！</strong>直接作顶点高线，在底边切缝处直接创造出两个 90° 直角（即 2θ 危险倍数角！），平分 90° 即可启动死局。</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Animated Demo Player Card -->
+            <article class="glass-panel" style="padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h2 style="color: var(--accent-gold); font-family: Outfit, sans-serif;">
+                        🎬 规则演示动画引擎
+                    </h2>
+                    <span id="demo-step-badge" class="status-badge status-ongoing">
+                        步骤 1 / 5
+                    </span>
+                </div>
+
+                <div id="demo-step-info-card" class="tip-box">
+                    <h4 id="demo-step-title" style="color: var(--accent-cyan); font-size: 1rem; margin-bottom: 6px;">步骤 1：单于制作初始三角形 T</h4>
+                    <p id="demo-step-desc" style="font-size: 0.88rem; color: var(--text-secondary);">初始时，单于任意制作一个指定尺寸的纸质三角形 T。双方已知目标角度 θ = 45°。</p>
+                </div>
+
+                <div class="canvas-container">
+                    <canvas id="demo-canvas"></canvas>
+                </div>
+
+                <!-- Demo Controls -->
+                <div style="display: flex; justify-content: center; gap: 12px; margin-top: 10px;">
+                    <button class="btn btn-secondary" id="demo-prev-btn">⏮️ 上一步</button>
+                    <button class="btn btn-primary" id="demo-play-btn">▶️ 播放演示动画</button>
+                    <button class="btn btn-secondary" id="demo-next-btn">下一步 ⏭️</button>
+                    <button class="btn btn-secondary" id="demo-reset-btn">🔄 重置演示</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div id="win-dialog" class="win-dialog" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="win-dialog-title">
+        <section class="win-dialog-card">
+            <div class="win-dialog-icon">🏆</div>
+            <h2 id="win-dialog-title">木兰获胜！</h2>
+            <p id="win-dialog-message"></p>
+            <div class="win-dialog-actions">
+                <button class="btn btn-secondary" id="win-dialog-close-btn">查看棋局</button>
+                <button class="btn btn-primary" id="win-dialog-reset-btn">再来一局</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/geometry.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/guide.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
