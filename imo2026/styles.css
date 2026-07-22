@@ -390,6 +390,16 @@ body.zoom-xlarge {
     flex-wrap: wrap;
 }
 
+.touch-cut-submit {
+    display: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+    .touch-cut-submit {
+        display: inline-flex;
+    }
+}
+
 .btn {
     padding: 11px 22px;
     border-radius: 10px;

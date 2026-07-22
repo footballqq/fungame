@@ -1,9 +1,12 @@
 {
-  "current_task": "完成狭长三角形的角度标注自动避让",
+  "current_task": "完成触控拖动提交与角度格式化审计",
   "last_changes": [
     "index.html",
     "styles.css",
     "js/renderer.js",
+    "js/main.js",
+    "js/ai.js",
+    "js/demo.js",
     "styles.css",
     "tests/js_frontend_regression.js",
     "imo2026Q4.md",
@@ -11,7 +14,7 @@
     "CODEx_TODO.md"
   ],
   "next_actions": [
-    "向用户汇报角度标注自动避让与引线布局"
+    "向用户汇报触控拖动提交和角度格式化统一"
   ],
-  "notes": "每次 Canvas 重绘会登记所有文字边界和顶点/切点保护区；新标签会在多种方向和距离中选择不重叠位置，必要时以虚线箭头指向对应弧线。"
+  "notes": "触控不再直接切割：拖动更新 P，提交按钮执行。所有可见角度采用统一一位小数格式；接近 θ 或 90° 的选点会在更宽的屏幕像素范围内吸附到精确角。"
 }

@@ -330,7 +330,11 @@ class TriangleRenderer {
             this.ctx.font = '700 12px Inter, sans-serif';
             this.ctx.fillStyle = '#facc15';
             this.ctx.textAlign = 'center';
-            this.ctx.fillText(`吸附 ${this.hoverSnapAngle.toFixed(0)}°`, P_scaled.x, P_scaled.y - 28);
+            this.ctx.fillText(
+                `吸附 ${formatAngleForDisplay(this.hoverSnapAngle)}°`,
+                P_scaled.x,
+                P_scaled.y - 28
+            );
         }
         this.drawVertexSplitAngles(vOpp, v0, v1, P_scaled, rawVertices, edgeIndex, t, theta);
 

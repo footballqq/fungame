@@ -72,7 +72,7 @@ function getMulanOptimalCut(vertices, theta) {
                     edgeIndex: P.edgeIndex,
                     P: P.point,
                     t: P.t,
-                    reason: `将 ${angObj.label} 角 (${angObj.angle.toFixed(1)}° = ${safety.k}θ) 切出一个 θ = ${theta.toFixed(1)}° 角`
+                    reason: `将 ${angObj.label} 角 (${formatAngleForDisplay(angObj.angle)}° = ${safety.k}θ) 切出一个 θ = ${formatAngleForDisplay(theta)}° 角`
                 };
             }
         }

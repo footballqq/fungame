@@ -73,7 +73,7 @@ class ProblemDemoPlayer {
         const retainedRightTriangle = [
             { x: 2, y: 5 }, { x: 0, y: 0 }, { x: 2, y: 0, isCutPoint: true }
         ];
-        const thetaText = theta.toFixed(1);
+        const thetaText = formatAngleForDisplay(theta);
         const ratioInfo = isIntegerRatioTheta(theta);
         const steps = [
             {
@@ -126,7 +126,7 @@ class ProblemDemoPlayer {
         });
         steps.push({
             title: `步骤 5：构造 ${k}θ 与 ${(ratioInfo.n - k)}θ 两条必胜分支`,
-            description: `取 45° < ${k}θ = ${(k * theta).toFixed(1)}° ≤ 90°。木兰在斜边上选 P 并连 AP；两个候选分别含 ${k}θ 与 ${(ratioInfo.n - k)}θ，单于无论保留哪一块，木兰都可继续把倍数递减到 θ。`,
+            description: `取 45° < ${k}θ = ${formatAngleForDisplay(k * theta)}° ≤ 90°。木兰在斜边上选 P 并连 AP；两个候选分别含 ${k}θ 与 ${(ratioInfo.n - k)}θ，单于无论保留哪一块，木兰都可继续把倍数递减到 θ。`,
             triangle: retainedRightTriangle,
             cut: finalCut ? { edgeIndex: finalCut.edgeIndex, t: finalCut.t } : null
         });

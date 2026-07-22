@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const demoStepBadge = document.getElementById('demo-step-badge');
     const demoThetaIndicator = document.getElementById('demo-theta-indicator');
     const cutKeyboardHint = document.getElementById('cut-keyboard-hint');
+    const touchCutSubmitBtn = document.getElementById('touch-cut-submit-btn');
 
     // Prevent default drag/selection on canvas elements
     [canvas, demoCanvas].forEach(c => {
@@ -58,16 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Render Update Function
     function updateUI() {
+        if (game.stepCount === 0 && !game.pendingSplit && !game.gameOver) {
+            keyboardCut = null;
+            renderer.hoverPoint = null;
+            renderer.keyboardAngleTarget = null;
+            updateTouchCutSubmitButton();
+        }
         const ratioInfo = isIntegerRatioTheta(game.theta);
-        thetaDisplay.textContent = `${game.theta.toFixed(1)}°`;
+        thetaDisplay.textContent = `${formatAngleForDisplay(game.theta)}°`;
         thetaSlider.value = game.theta;
 
         if (ratioInfo.isValid) {
-            ratioStatusText.innerHTML = `180° / ${game.theta.toFixed(1)}° = <strong>n = ${ratioInfo.n}</strong> (整数！木兰必胜 🎉)`;
+            ratioStatusText.innerHTML = `180° / ${formatAngleForDisplay(game.theta)}° = <strong>n = ${ratioInfo.n}</strong> (整数！木兰必胜 🎉)`;
             ratioStatusText.parentElement.className = 'success-box';
         } else {
             const ratioVal = (180.0 / game.theta).toFixed(2);
-            ratioStatusText.innerHTML = `180° / ${game.theta.toFixed(1)}° = <strong>${ratioVal}</strong> (非整数！单于可防守 🛡️)`;
+            ratioStatusText.innerHTML = `180° / ${formatAngleForDisplay(game.theta)}° = <strong>${ratioVal}</strong> (非整数！单于可防守 🛡️)`;
             ratioStatusText.parentElement.className = 'warn-box';
         }
 
@@ -248,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         demoStepTitle.textContent = step.title;
         demoStepDesc.textContent = step.description;
         demoStepBadge.textContent = `步骤 ${idx + 1} / ${total}`;
-        demoThetaIndicator.textContent = `θ = ${demoPlayer.theta.toFixed(1)}°`;
+        demoThetaIndicator.textContent = `θ = ${formatAngleForDisplay(demoPlayer.theta)}°`;
     }
 
     function renderDemoWhenVisible(attempt = 0) {
@@ -325,13 +332,20 @@ document.addEventListener('DOMContentLoaded', () => {
             edgeIndex,
             t,
             [90, game.theta],
-            Math.min(0.08, 16 / Math.max(edgeLength, 1))
+            Math.min(0.12, 36 / Math.max(edgeLength, 1))
         );
         renderer.hoverSnapAngle = snapped.targetAngle;
         return snapped.t;
     }
 
     let keyboardCut = null;
+    let activeTouchIdentifier = null;
+    let lastTouchInteractionAt = 0;
+
+    function updateTouchCutSubmitButton() {
+        if (!touchCutSubmitBtn) return;
+        touchCutSubmitBtn.disabled = !keyboardCut || game.gameOver || game.pendingSplit;
+    }
 
     function updateCutKeyboardHint(angle = null) {
         if (!cutKeyboardHint) return;
@@ -424,6 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     canvas.addEventListener('click', (e) => {
         e.preventDefault();
+        if (Date.now() - lastTouchInteractionAt < 700) return;
         if (renderer.hoverEdgeIndex >= 0 && !game.gameOver && !game.pendingSplit) {
             game.executeCut(renderer.hoverEdgeIndex, renderer.hoverT);
         }
@@ -466,36 +481,68 @@ document.addEventListener('DOMContentLoaded', () => {
         showKeyboardCut(keyboardCut.edgeIndex, adjustedT);
     });
 
-    // Touch support for Pad/Mobile with pan lock
-    canvas.addEventListener('touchstart', (e) => {
-        if (e.touches.length > 0) {
-            e.preventDefault();
-            const touch = e.touches[0];
-            const mouseP = getPointerPoint(touch.clientX, touch.clientY);
-            const scaledVerts = renderer.getScaledVertices(game.currentTriangle);
+    // Touch support: drag P to preview, then explicitly submit instead of cutting on touch.
+    function updateTouchCutPreview(touch) {
+        if (!touch || game.gameOver || game.pendingSplit) return false;
+        const pointer = getPointerPoint(touch.clientX, touch.clientY);
+        const scaledVertices = renderer.getScaledVertices(game.currentTriangle);
+        let minDistance = Infinity;
+        let bestEdgeIndex = -1;
+        let bestT = 0.5;
 
-            let minDistance = Infinity;
-            let bestEdgeIndex = -1;
-            let bestT = 0.5;
-
-            for (let i = 0; i < 3; i++) {
-                const v0 = scaledVerts[i];
-                const v1 = scaledVerts[(i + 1) % 3];
-                const proj = projectPointToSegment(mouseP, v0, v1);
-                if (proj.dist < minDistance) {
-                    minDistance = proj.dist;
-                    bestEdgeIndex = i;
-                    bestT = proj.t;
-                }
-            }
-
-            if (minDistance < 60 && !game.gameOver && !game.pendingSplit) {
-                const snappedT = snapHoveredCut(bestEdgeIndex, bestT, scaledVerts);
-                keyboardCut = { edgeIndex: bestEdgeIndex, t: snappedT };
-                game.executeCut(bestEdgeIndex, snappedT);
+        for (let index = 0; index < 3; index++) {
+            const edgeStart = scaledVertices[index];
+            const edgeEnd = scaledVertices[(index + 1) % 3];
+            const projection = projectPointToSegment(pointer, edgeStart, edgeEnd);
+            if (projection.dist < minDistance) {
+                minDistance = projection.dist;
+                bestEdgeIndex = index;
+                bestT = projection.t;
             }
         }
+
+        if (minDistance >= 70) return false;
+        const snappedT = snapHoveredCut(bestEdgeIndex, bestT, scaledVertices);
+        keyboardCut = { edgeIndex: bestEdgeIndex, t: snappedT };
+        showKeyboardCut(bestEdgeIndex, snappedT);
+        updateTouchCutSubmitButton();
+        return true;
+    }
+
+    canvas.addEventListener('touchstart', (e) => {
+        const touch = e.changedTouches[0];
+        if (!touch) return;
+        e.preventDefault();
+        activeTouchIdentifier = touch.identifier;
+        lastTouchInteractionAt = Date.now();
+        updateTouchCutPreview(touch);
     }, { passive: false });
+
+    canvas.addEventListener('touchmove', (e) => {
+        const touch = [...e.touches].find(item => item.identifier === activeTouchIdentifier);
+        if (!touch) return;
+        e.preventDefault();
+        lastTouchInteractionAt = Date.now();
+        updateTouchCutPreview(touch);
+    }, { passive: false });
+
+    canvas.addEventListener('touchend', (e) => {
+        if ([...e.changedTouches].some(item => item.identifier === activeTouchIdentifier)) {
+            activeTouchIdentifier = null;
+            lastTouchInteractionAt = Date.now();
+        }
+    }, { passive: false });
+
+    canvas.addEventListener('touchcancel', () => {
+        activeTouchIdentifier = null;
+        lastTouchInteractionAt = Date.now();
+    }, { passive: false });
+
+    touchCutSubmitBtn?.addEventListener('click', () => {
+        if (!keyboardCut || game.gameOver || game.pendingSplit) return;
+        game.executeCut(keyboardCut.edgeIndex, keyboardCut.t);
+        updateTouchCutSubmitButton();
+    });
 
     // Initial setup
     game.init(45, null, 'mulan');

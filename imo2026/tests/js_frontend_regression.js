@@ -352,6 +352,31 @@ function testKeyboardHintExplainsAngleDirectionWithoutFalseRotationClaim() {
     assert(mainSource.includes('function updateCutKeyboardHint(angle = null)'));
 }
 
+function testTouchInteractionUsesPreviewThenExplicitSubmit() {
+    const html = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf8');
+    const styles = fs.readFileSync(path.join(projectRoot, 'styles.css'), 'utf8');
+    const mainSource = fs.readFileSync(path.join(projectRoot, 'js', 'main.js'), 'utf8');
+    assert(html.includes('id="touch-cut-submit-btn"'));
+    assert(html.includes('提交当前切割'));
+    assert(styles.includes('@media (hover: none), (pointer: coarse)'));
+    assert(mainSource.includes('function updateTouchCutPreview(touch)'));
+    assert(mainSource.includes("canvas.addEventListener('touchmove'"));
+    assert(mainSource.includes("touchCutSubmitBtn?.addEventListener('click'"));
+    assert.strictEqual(
+        mainSource.includes('game.executeCut(bestEdgeIndex, snappedT);'),
+        false,
+        '触控拖动只能预览，不能直接切割'
+    );
+}
+
+function testUserFacingAngleTextUsesSharedFormatter() {
+    const mainSource = fs.readFileSync(path.join(projectRoot, 'js', 'main.js'), 'utf8');
+    const rendererSource = fs.readFileSync(path.join(projectRoot, 'js', 'renderer.js'), 'utf8');
+    assert(mainSource.includes('formatAngleForDisplay(game.theta)'));
+    assert(rendererSource.includes('formatAngleForDisplay(this.hoverSnapAngle)'));
+    assert.strictEqual(mainSource.includes('game.theta.toFixed(1)'), false);
+}
+
 function testResetOpeningAvoidsImmediateThetaMultiples() {
     const game = new PaperTriangleGame();
     game.init(36, null, 'mulan');
@@ -392,5 +417,7 @@ testDemoAdaptsToValidAndInvalidTheta();
 testQuickThetaPresetsContainEightWinningAndTwoDefensiveChoices();
 testCanvasKeepsKeyboardFocusForCutAdjustments();
 testKeyboardHintExplainsAngleDirectionWithoutFalseRotationClaim();
+testTouchInteractionUsesPreviewThenExplicitSubmit();
+testUserFacingAngleTextUsesSharedFormatter();
 testResetOpeningAvoidsImmediateThetaMultiples();
 console.log('JavaScript frontend regression tests passed.');
