@@ -1,15 +1,17 @@
 {
-  "current_task": "完成十个快速角度选项与高难度重置开局",
+  "current_task": "完成狭长三角形的角度标注自动避让",
   "last_changes": [
     "index.html",
-    "js/game.js",
+    "styles.css",
+    "js/renderer.js",
+    "styles.css",
     "tests/js_frontend_regression.js",
     "imo2026Q4.md",
     "IMO2026_Q4_错误修复记录.md",
     "CODEx_TODO.md"
   ],
   "next_actions": [
-    "向用户汇报十个快速角度与高难度初始局面"
+    "向用户汇报角度标注自动避让与引线布局"
   ],
-  "notes": "快速设置含 8 个 180°/n 必胜角和 2 个小数防守角。普通重置局面避开 θ 与 kθ；例如 θ=36° 时不再从 72° 开局，要求先构造中间局面。"
+  "notes": "每次 Canvas 重绘会登记所有文字边界和顶点/切点保护区；新标签会在多种方向和距离中选择不重叠位置，必要时以虚线箭头指向对应弧线。"
 }

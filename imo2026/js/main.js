@@ -1,4 +1,4 @@
-// codex: 2026-07-22 Execute the active cut point P by keyboard without pointer drift.
+// codex: 2026-07-22 Keep P keyboard controls focused and reliable after pointer selection.
 /**
  * Main entry point initializing game, renderer, guide, demo player, size selector, and user interactions.
  */
@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const demoStepDesc = document.getElementById('demo-step-desc');
     const demoStepBadge = document.getElementById('demo-step-badge');
     const demoThetaIndicator = document.getElementById('demo-theta-indicator');
+    const cutKeyboardHint = document.getElementById('cut-keyboard-hint');
 
     // Prevent default drag/selection on canvas elements
     [canvas, demoCanvas].forEach(c => {
@@ -99,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             return `
                 <div class="glass-panel" style="padding: 8px 12px; font-size: 0.88rem; display: flex; justify-content: space-between; align-items: center;">
-                    <strong>顶角 ${a.label}: ${a.angle.toFixed(1)}°</strong>
+                    <strong>顶角 ${a.label}: ${formatAngleForDisplay(a.angle)}°</strong>
                     <div>${tag}</div>
                 </div>
             `;
@@ -107,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         historyContainer.innerHTML = game.history.slice().reverse().map(item => {
             const keptAngles = calculateTriangleAngles(item.keptTriangle)
-                .map(angle => angle.angle.toFixed(0) + '°')
+                .map(angle => formatAngleForDisplay(angle.angle) + '°')
                 .join(', ');
             const resultText = item.result === 'mulan-forced-win'
                 ? '🏆 强制胜局：两种选择都含 θ，木兰获胜！'
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             choiceOverlay.style.display = 'flex';
             const formatChoiceInfo = triangle => {
                 const angleText = calculateTriangleAngles(triangle)
-                    .map(angle => angle.angle.toFixed(1) + '°')
+                    .map(angle => formatAngleForDisplay(angle.angle) + '°')
                     .join(', ');
                 return hasExactThetaAngle(triangle, game.theta)
                     ? `内角: ${angleText} · 🎯 保留即木兰获胜`
@@ -332,6 +333,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let keyboardCut = null;
 
+    function updateCutKeyboardHint(angle = null) {
+        if (!cutKeyboardHint) return;
+        const baseHint = '← 减少 ∠P₁ 0.1°　→ 增加 ∠P₁ 0.1°　空格执行切割';
+        const directionHint = '数值方向固定；画面中的顺/逆时针方向会随所选边变化。';
+        const currentAngle = angle === null ? '' :
+            `　当前 ∠P₁：${formatAngleForDisplay(angle)}°`;
+        cutKeyboardHint.innerHTML = `${baseHint}${currentAngle}<small>${directionHint}</small>`;
+        cutKeyboardHint.classList.toggle('is-active', angle !== null);
+    }
+
+    function focusCutCanvas() {
+        if (document.activeElement !== canvas) {
+            canvas.focus({ preventScroll: true });
+        }
+    }
+
     function showKeyboardCut(edgeIndex, t) {
         const scaledVertices = renderer.getScaledVertices(game.currentTriangle);
         renderer.hoverEdgeIndex = edgeIndex;
@@ -347,13 +364,17 @@ document.addEventListener('DOMContentLoaded', () => {
             edgeIndex,
             t
         ).angleP1;
+        updateCutKeyboardHint(renderer.keyboardAngleTarget);
         renderer.render(game.currentTriangle, game.theta, { enableCutHover: true });
     }
 
     // Canvas Mouse Hover & Click Interaction with pan lock
+    canvas.addEventListener('pointerenter', focusCutCanvas);
+    canvas.addEventListener('pointerdown', focusCutCanvas);
     canvas.addEventListener('mousemove', (e) => {
         e.preventDefault();
         if (game.gameOver || game.pendingSplit) return;
+        focusCutCanvas();
         const mouseP = getPointerPoint(e.clientX, e.clientY);
 
         const scaledVerts = renderer.getScaledVertices(game.currentTriangle);
@@ -389,11 +410,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 bestEdgeIndex,
                 renderer.hoverT
             ).angleP1;
+            updateCutKeyboardHint(renderer.keyboardAngleTarget);
         } else {
             renderer.hoverEdgeIndex = -1;
             renderer.hoverPoint = null;
             renderer.hoverSnapAngle = null;
             renderer.keyboardAngleTarget = null;
+            updateCutKeyboardHint();
         }
 
         renderer.render(game.currentTriangle, game.theta, { enableCutHover: true });
@@ -411,7 +434,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const isSpaceKey = e.code === 'Space' || e.key === ' ';
         if (!isArrowKey && !isSpaceKey) return;
         if (!keyboardCut || game.gameOver || game.pendingSplit) return;
-        if (document.activeElement?.matches('input, textarea, select, button')) return;
+        if (document.activeElement && document.activeElement !== document.body &&
+            document.activeElement !== canvas) return;
 
         if (isSpaceKey) {
             e.preventDefault();

@@ -4,8 +4,17 @@
  */
 
 const EPSILON = 1e-4;
-// 与一位小数的角度显示保持一致：显示为 θ 的角必须可触发目标判定。
-const INTERACTION_ANGLE_TOLERANCE = 0.05;
+// 角度显示、历史记录和交互判定统一为一位小数，避免不同舍入规则给出矛盾结论。
+const ANGLE_DISPLAY_PRECISION = 10;
+
+function roundAngleForDisplay(angle) {
+    return Math.round((angle + Number.EPSILON) * ANGLE_DISPLAY_PRECISION) /
+        ANGLE_DISPLAY_PRECISION;
+}
+
+function formatAngleForDisplay(angle) {
+    return roundAngleForDisplay(angle).toFixed(1);
+}
 
 function isIntegerRatioTheta(theta) {
     if (theta <= 0 || theta >= 180) return { isValid: false, n: null };
@@ -15,10 +24,12 @@ function isIntegerRatioTheta(theta) {
 }
 
 function checkAngleSafety(angle, theta) {
-    const k = Math.round(angle / theta);
+    const displayedAngle = roundAngleForDisplay(angle);
+    const displayedTheta = roundAngleForDisplay(theta);
+    const k = Math.round(displayedAngle / displayedTheta);
     const isMultiple = k >= 1 &&
-        Math.abs(k * theta - angle) < INTERACTION_ANGLE_TOLERANCE;
-    const isExactTheta = Math.abs(angle - theta) < INTERACTION_ANGLE_TOLERANCE;
+        Math.abs(k * displayedTheta - displayedAngle) < EPSILON;
+    const isExactTheta = Math.abs(displayedAngle - displayedTheta) < EPSILON;
     return {
         isUnsafe: isMultiple,
         isExactTheta: isExactTheta,
@@ -250,9 +261,7 @@ function calculateCutVertexAngles(vertices, edgeIndex, t) {
 
 function hasExactThetaAngle(vertices, theta) {
     const angles = calculateTriangleAngles(vertices);
-    return angles.some(a =>
-        Math.abs(a.angle - theta) < INTERACTION_ANGLE_TOLERANCE
-    );
+    return angles.some(a => checkAngleSafety(a.angle, theta).isExactTheta);
 }
 
 function isTriangleSafe(vertices, theta) {
@@ -263,6 +272,8 @@ function isTriangleSafe(vertices, theta) {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         isIntegerRatioTheta,
+        roundAngleForDisplay,
+        formatAngleForDisplay,
         checkAngleSafety,
         distance,
         calculateTriangleAngles,

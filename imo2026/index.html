@@ -99,8 +99,13 @@
                 </div>
             </div>
 
+            <div id="cut-keyboard-hint" class="cut-keyboard-hint" aria-live="polite">
+                悬停边上的 P 后：← 减少 ∠P₁ 0.1°　→ 增加 ∠P₁ 0.1°　空格执行切割
+                <small>数值方向固定；画面中的顺/逆时针方向会随所选边变化。</small>
+            </div>
+
             <div class="canvas-container">
-                <canvas id="geo-canvas"></canvas>
+                <canvas id="geo-canvas" tabindex="0" aria-label="三角形剪切画布：悬停边上的 P 后可用左右键调整、空格切割"></canvas>
 
                 <!-- Choice Overlay for Shan-Yu mode -->
                 <div id="choice-overlay" class="choice-overlay" style="display: none;">

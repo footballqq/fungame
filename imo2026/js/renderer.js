@@ -1,4 +1,4 @@
-// codex: 2026-07-22 Display keyboard adjustment and execution feedback for the active cut point P.
+// codex: 2026-07-22 Lay out every angle annotation with collision avoidance and leader arrows.
 /**
  * Renderer class to draw triangles, angle arcs, labels, cut lines, P-sides angles, and animations.
  * Supports high-DPI displays (4K/2K), dynamic resize, and safe margin bounds.
@@ -17,6 +17,8 @@ class TriangleRenderer {
         this.keyboardAngleTarget = null;
         this.selectedCutPoint = null;
         this.animatingDiscard = null;
+        this.annotationBoxes = [];
+        this.annotationProtectedPoints = [];
 
         this.setupResizing();
     }
@@ -89,6 +91,7 @@ class TriangleRenderer {
 
         const scaled = this.getScaledVertices(rawVertices);
         const angles = calculateTriangleAngles(rawVertices);
+        this.beginAnnotationLayout(scaled);
 
         // Draw Triangle Body
         this.drawTrianglePolygon(scaled, options);
@@ -104,6 +107,79 @@ class TriangleRenderer {
         } else if (this.hoverPoint && options.enableCutHover) {
             this.drawCutHover(scaled, rawVertices, this.hoverEdgeIndex, this.hoverT, theta);
         }
+    }
+
+    beginAnnotationLayout(vertices) {
+        this.annotationBoxes = [];
+        this.annotationProtectedPoints = vertices.map(vertex => ({ ...vertex }));
+    }
+
+    protectAnnotationPoint(point) {
+        this.annotationProtectedPoints.push({ ...point });
+    }
+
+    placeAnnotation(text, anchor, preferredAngle, baseDistance) {
+        const measured = this.ctx.measureText(text);
+        const width = Math.max(36, measured.width + 10);
+        const height = 21;
+        const angleOffsets = [0, -0.32, 0.32, -0.68, 0.68, -1.05, 1.05, Math.PI];
+        const distanceOffsets = [0, 24, 48, 76, 106, 138];
+
+        for (const distanceOffset of distanceOffsets) {
+            for (const angleOffset of angleOffsets) {
+                const angle = preferredAngle + angleOffset;
+                const distance = baseDistance + distanceOffset;
+                const label = {
+                    x: anchor.x + Math.cos(angle) * distance,
+                    y: anchor.y + Math.sin(angle) * distance
+                };
+                const box = {
+                    x: label.x - width / 2,
+                    y: label.y - height / 2,
+                    width,
+                    height
+                };
+                if (this.isAnnotationBoxAvailable(box)) {
+                    this.annotationBoxes.push(box);
+                    return { anchor, label, box };
+                }
+            }
+        }
+
+        const fallback = {
+            x: Math.min(this.width - width / 2 - 6,
+                Math.max(width / 2 + 6, anchor.x + Math.cos(preferredAngle) * (baseDistance + 150))),
+            y: Math.min(this.height - height / 2 - 6,
+                Math.max(height / 2 + 6, anchor.y + Math.sin(preferredAngle) * (baseDistance + 150)))
+        };
+        const box = {
+            x: fallback.x - width / 2,
+            y: fallback.y - height / 2,
+            width,
+            height
+        };
+        this.annotationBoxes.push(box);
+        return { anchor, label: fallback, box };
+    }
+
+    isAnnotationBoxAvailable(box) {
+        const outsideCanvas = box.x < 4 || box.y < 4 ||
+            box.x + box.width > this.width - 4 ||
+            box.y + box.height > this.height - 4;
+        if (outsideCanvas) return false;
+
+        const overlapsAnnotation = this.annotationBoxes.some(other =>
+            box.x < other.x + other.width + 8 &&
+            box.x + box.width + 8 > other.x &&
+            box.y < other.y + other.height + 8 &&
+            box.y + box.height + 8 > other.y
+        );
+        if (overlapsAnnotation) return false;
+
+        return !this.annotationProtectedPoints.some(point =>
+            point.x > box.x - 18 && point.x < box.x + box.width + 18 &&
+            point.y > box.y - 18 && point.y < box.y + box.height + 18
+        );
     }
 
     drawTrianglePolygon(vertices, options) {
@@ -174,14 +250,14 @@ class TriangleRenderer {
             const arcRadius = 34;
 
             let arcColor = '#38bdf8';
-            let badgeText = `${angleVal.toFixed(1)}°`;
+            let badgeText = `${formatAngleForDisplay(angleVal)}°`;
 
             if (safety.isExactTheta) {
                 arcColor = '#ffb703';
-                badgeText = `🎯 ${angleVal.toFixed(1)}° (θ!)`;
+                badgeText = `🎯 ${formatAngleForDisplay(angleVal)}° (θ!)`;
             } else if (safety.isUnsafe) {
                 arcColor = '#ff2e93';
-                badgeText = `⚠️ ${angleVal.toFixed(1)}° (${safety.k}θ)`;
+                badgeText = `⚠️ ${formatAngleForDisplay(angleVal)}° (${safety.k}θ)`;
             }
 
             this.ctx.save();
@@ -204,14 +280,15 @@ class TriangleRenderer {
 
             const midAngle = arc.midAngle;
             const textRadius = arcRadius + 26;
-            const tx = V.x + Math.cos(midAngle) * textRadius;
-            const ty = V.y + Math.sin(midAngle) * textRadius;
-
             this.ctx.font = '600 13px Inter, sans-serif';
             this.ctx.fillStyle = arcColor;
             this.ctx.textAlign = 'center';
             this.ctx.textBaseline = 'middle';
-            this.ctx.fillText(badgeText, tx, ty);
+            const layout = this.placeAnnotation(badgeText, V, midAngle, textRadius);
+            if (Math.hypot(layout.label.x - V.x, layout.label.y - V.y) > textRadius + 10) {
+                this.drawAngleAnnotationLeader(layout, arcColor);
+            }
+            this.ctx.fillText(badgeText, layout.label.x, layout.label.y);
 
             this.ctx.restore();
         });
@@ -245,6 +322,7 @@ class TriangleRenderer {
         this.ctx.strokeStyle = '#ffffff';
         this.ctx.lineWidth = 2.5;
         this.ctx.stroke();
+        this.protectAnnotationPoint(P_scaled);
         this.drawCutPointLabel(P_scaled);
 
         this.drawPAngles(P_scaled, v0, v1, vOpp, rawVertices, edgeIndex, t, theta);
@@ -253,16 +331,6 @@ class TriangleRenderer {
             this.ctx.fillStyle = '#facc15';
             this.ctx.textAlign = 'center';
             this.ctx.fillText(`吸附 ${this.hoverSnapAngle.toFixed(0)}°`, P_scaled.x, P_scaled.y - 28);
-        }
-        if (this.keyboardAngleTarget !== null) {
-            this.ctx.font = '700 12px Inter, sans-serif';
-            this.ctx.fillStyle = '#f8fafc';
-            this.ctx.textAlign = 'center';
-            this.ctx.fillText(
-                `←/→ 调整 ∠P₁：${this.keyboardAngleTarget.toFixed(1)}° · 空格执行`,
-                P_scaled.x,
-                P_scaled.y - 46
-            );
         }
         this.drawVertexSplitAngles(vOpp, v0, v1, P_scaled, rawVertices, edgeIndex, t, theta);
 
@@ -296,6 +364,7 @@ class TriangleRenderer {
         this.ctx.strokeStyle = '#ffffff';
         this.ctx.lineWidth = 2.5;
         this.ctx.stroke();
+        this.protectAnnotationPoint(P_scaled);
         this.drawCutPointLabel(P_scaled);
 
         this.drawPAngles(P_scaled, v0, v1, vOpp, rawVertices, cut.edgeIndex, cut.t, theta);
@@ -364,6 +433,7 @@ class TriangleRenderer {
         this.ctx.strokeStyle = '#ffffff';
         this.ctx.lineWidth = 2.5;
         this.ctx.stroke();
+        this.protectAnnotationPoint(P);
         this.drawCutPointLabel(P);
 
         this.drawPAngles(P, v0, v1, vOpp, rawVertices, edgeIndex, t, theta);
@@ -373,6 +443,7 @@ class TriangleRenderer {
 
     drawPAngles(P, v0, v1, vOpp, rawVertices, edgeIndex, t, theta) {
         const pAngles = calculateCutPointAngles(rawVertices, edgeIndex, t);
+        const pAngleLabels = getCutPointAngleLabels(edgeIndex);
 
         const aPB = Math.atan2(v0.y - P.y, v0.x - P.x);
         const aPC = Math.atan2(v1.y - P.y, v1.x - P.x);
@@ -390,15 +461,21 @@ class TriangleRenderer {
         this.ctx.lineWidth = 3;
         this.ctx.stroke();
 
-        const mid1 = arc1.midAngle;
-        const t1x = P.x + Math.cos(mid1) * (arcRadius + 20);
-        const t1y = P.y + Math.sin(mid1) * (arcRadius + 20);
-
         this.ctx.font = '600 12px Inter, sans-serif';
         this.ctx.fillStyle = color1;
         this.ctx.textAlign = 'center';
         this.ctx.textBaseline = 'middle';
-        this.ctx.fillText(`∠P₁: ${pAngles.angleP1.toFixed(1)}°`, t1x, t1y);
+        const p1Text = `${pAngleLabels.angleP1}: ${formatAngleForDisplay(pAngles.angleP1)}°`;
+        const p1Layout = this.placeAnnotation(p1Text, {
+            x: P.x + Math.cos(arc1.midAngle) * (arcRadius + 5),
+            y: P.y + Math.sin(arc1.midAngle) * (arcRadius + 5)
+        }, arc1.midAngle, 58);
+        this.drawAngleAnnotationLeader(p1Layout, color1);
+        this.ctx.fillText(
+            p1Text,
+            p1Layout.label.x,
+            p1Layout.label.y
+        );
 
         const safety2 = checkAngleSafety(pAngles.angleP2, theta);
         let color2 = safety2.isExactTheta ? '#ffb703' : safety2.isUnsafe ? '#ff2e93' : '#00f3ff';
@@ -410,15 +487,21 @@ class TriangleRenderer {
         this.ctx.lineWidth = 3;
         this.ctx.stroke();
 
-        const mid2 = arc2.midAngle;
-        const t2x = P.x + Math.cos(mid2) * (arcRadius + 20);
-        const t2y = P.y + Math.sin(mid2) * (arcRadius + 20);
-
         this.ctx.font = '600 12px Inter, sans-serif';
         this.ctx.fillStyle = color2;
         this.ctx.textAlign = 'center';
         this.ctx.textBaseline = 'middle';
-        this.ctx.fillText(`∠P₂: ${pAngles.angleP2.toFixed(1)}°`, t2x, t2y);
+        const p2Text = `${pAngleLabels.angleP2}: ${formatAngleForDisplay(pAngles.angleP2)}°`;
+        const p2Layout = this.placeAnnotation(p2Text, {
+            x: P.x + Math.cos(arc2.midAngle) * (arcRadius + 5),
+            y: P.y + Math.sin(arc2.midAngle) * (arcRadius + 5)
+        }, arc2.midAngle, 58);
+        this.drawAngleAnnotationLeader(p2Layout, color2);
+        this.ctx.fillText(
+            p2Text,
+            p2Layout.label.x,
+            p2Layout.label.y
+        );
     }
 
     drawVertexSplitAngles(V, v0, v1, P, rawVertices, edgeIndex, t, theta) {
@@ -432,7 +515,7 @@ class TriangleRenderer {
             { suffix: '₂', angle: vertexAngles.angleV2, first: aVP, second: aV1, radius: 62 }
         ];
 
-        annotations.forEach(annotation => {
+        annotations.forEach((annotation, annotationIndex) => {
             const safety = checkAngleSafety(annotation.angle, theta);
             const color = safety.isExactTheta ? '#ffb703' :
                 safety.isUnsafe ? '#ff2e93' : '#00f3ff';
@@ -447,17 +530,66 @@ class TriangleRenderer {
             this.ctx.lineWidth = 2.5;
             this.ctx.stroke();
 
-            const textRadius = annotation.radius + 19;
+            const preferredLayout = getAngleAnnotationLayout(
+                V,
+                arc,
+                annotation.radius,
+                annotationIndex
+            );
+            const text = `∠${vertexLabel}${annotation.suffix}: ${formatAngleForDisplay(annotation.angle)}°`;
             this.ctx.font = '600 12px Inter, sans-serif';
+            const preferredDirection = Math.atan2(
+                preferredLayout.label.y - preferredLayout.anchor.y,
+                preferredLayout.label.x - preferredLayout.anchor.x
+            );
+            const preferredDistance = Math.hypot(
+                preferredLayout.label.x - preferredLayout.anchor.x,
+                preferredLayout.label.y - preferredLayout.anchor.y
+            );
+            const layout = this.placeAnnotation(
+                text,
+                preferredLayout.anchor,
+                preferredDirection,
+                preferredDistance
+            );
+            this.drawAngleAnnotationLeader(layout, color);
             this.ctx.fillStyle = color;
             this.ctx.textAlign = 'center';
             this.ctx.textBaseline = 'middle';
-            this.ctx.fillText(
-                `∠${vertexLabel}${annotation.suffix}: ${annotation.angle.toFixed(1)}°`,
-                V.x + Math.cos(arc.midAngle) * textRadius,
-                V.y + Math.sin(arc.midAngle) * textRadius
-            );
+            this.ctx.fillText(text, layout.label.x, layout.label.y);
         });
+    }
+
+    drawAngleAnnotationLeader(layout, color) {
+        const arrowDirection = Math.atan2(
+            layout.anchor.y - layout.label.y,
+            layout.anchor.x - layout.label.x
+        );
+        const arrowSize = 6;
+
+        this.ctx.save();
+        this.ctx.strokeStyle = color;
+        this.ctx.fillStyle = color;
+        this.ctx.lineWidth = 1.5;
+        this.ctx.setLineDash([3, 3]);
+        this.ctx.beginPath();
+        this.ctx.moveTo(layout.label.x, layout.label.y);
+        this.ctx.lineTo(layout.anchor.x, layout.anchor.y);
+        this.ctx.stroke();
+        this.ctx.setLineDash([]);
+        this.ctx.beginPath();
+        this.ctx.moveTo(layout.anchor.x, layout.anchor.y);
+        this.ctx.lineTo(
+            layout.anchor.x - Math.cos(arrowDirection - Math.PI / 6) * arrowSize,
+            layout.anchor.y - Math.sin(arrowDirection - Math.PI / 6) * arrowSize
+        );
+        this.ctx.lineTo(
+            layout.anchor.x - Math.cos(arrowDirection + Math.PI / 6) * arrowSize,
+            layout.anchor.y - Math.sin(arrowDirection + Math.PI / 6) * arrowSize
+        );
+        this.ctx.closePath();
+        this.ctx.fill();
+        this.ctx.restore();
     }
 
     drawCutPointLabel(P) {
@@ -486,6 +618,42 @@ function getInteriorArcGeometry(firstAngle, secondAngle, targetDegrees) {
         startAngle,
         endAngle: startAngle + span,
         midAngle: startAngle + span / 2
+    };
+}
+
+/**
+ * Positions split-angle text outside its arc and offsets sibling labels to avoid overlap.
+ */
+function getAngleAnnotationLayout(center, arc, arcRadius, annotationIndex) {
+    const sideOffset = annotationIndex === 0 ? -0.14 : 0.14;
+    const labelAngle = arc.midAngle + sideOffset;
+    const anchorRadius = arcRadius + 6;
+    const labelRadius = arcRadius + 57 + annotationIndex * 23;
+
+    return {
+        anchor: {
+            x: center.x + Math.cos(arc.midAngle) * anchorRadius,
+            y: center.y + Math.sin(arc.midAngle) * anchorRadius
+        },
+        label: {
+            x: center.x + Math.cos(labelAngle) * labelRadius,
+            y: center.y + Math.sin(labelAngle) * labelRadius
+        }
+    };
+}
+
+/**
+ * Names the supplementary P angles by the endpoint ray they touch.
+ * P₁ is always on the edge-start side and P₂ on the edge-end side.
+ */
+function getCutPointAngleLabels(edgeIndex) {
+    const vertexLabels = ['A', 'B', 'C'];
+    const startLabel = vertexLabels[edgeIndex];
+    const endLabel = vertexLabels[(edgeIndex + 1) % 3];
+
+    return {
+        angleP1: `∠P₁(靠${startLabel})`,
+        angleP2: `∠P₂(靠${endLabel})`
     };
 }
 

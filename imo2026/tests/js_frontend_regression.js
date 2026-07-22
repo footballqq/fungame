@@ -9,9 +9,17 @@ const sourceFiles = ['geometry.js', 'ai.js', 'game.js', 'guide.js', 'demo.js', '
 const source = sourceFiles.map(fileName =>
     fs.readFileSync(path.join(projectRoot, 'js', fileName), 'utf8')
 ).join('\n');
-const sandbox = { console, Math, setInterval, clearInterval, setTimeout: () => 0 };
+const sandbox = {
+    console,
+    Math,
+    setInterval,
+    clearInterval,
+    setTimeout: () => 0,
+    window: { devicePixelRatio: 1, addEventListener() {} },
+    ResizeObserver: undefined
+};
 vm.createContext(sandbox);
-vm.runInContext(`${source}\nglobalThis.frontendApi = { splitTriangle, calculateTriangleAngles, calculateCutPointAngles, calculateCutVertexAngles, snapCutParameter, findCutParameterForPointAngle, checkAngleSafety, hasExactThetaAngle, isTriangleSafe, getShanYuChoice, getMulanOptimalCut, PaperTriangleGame, getChallengingInitialTriangle, GameGuide, ProblemDemoPlayer, getCanvasPointFromClient, getInteriorArcGeometry, getPendingSplitPresentation, orientVerticesForDisplay };`, sandbox);
+vm.runInContext(`${source}\nglobalThis.frontendApi = { splitTriangle, calculateTriangleAngles, calculateCutPointAngles, calculateCutVertexAngles, snapCutParameter, findCutParameterForPointAngle, roundAngleForDisplay, formatAngleForDisplay, checkAngleSafety, hasExactThetaAngle, isTriangleSafe, getShanYuChoice, getMulanOptimalCut, PaperTriangleGame, getChallengingInitialTriangle, GameGuide, ProblemDemoPlayer, TriangleRenderer, getCanvasPointFromClient, getInteriorArcGeometry, getAngleAnnotationLayout, getCutPointAngleLabels, getPendingSplitPresentation, orientVerticesForDisplay };`, sandbox);
 
 const {
     splitTriangle,
@@ -20,6 +28,8 @@ const {
     calculateCutVertexAngles,
     snapCutParameter,
     findCutParameterForPointAngle,
+    roundAngleForDisplay,
+    formatAngleForDisplay,
     checkAngleSafety,
     hasExactThetaAngle,
     isTriangleSafe,
@@ -29,8 +39,11 @@ const {
     getChallengingInitialTriangle,
     GameGuide,
     ProblemDemoPlayer,
+    TriangleRenderer,
     getCanvasPointFromClient,
     getInteriorArcGeometry,
+    getAngleAnnotationLayout,
+    getCutPointAngleLabels,
     getPendingSplitPresentation,
     orientVerticesForDisplay
 } = sandbox.frontendApi;
@@ -149,6 +162,55 @@ function testArcUsesCalculatedInteriorAngle() {
     assert(Math.abs(arc.midAngle - degrees(225)) < 1e-10);
 }
 
+function testSplitAngleLabelsUseSeparatedArrowLayouts() {
+    const center = { x: 120, y: 160 };
+    const arc = getInteriorArcGeometry(0, Math.PI / 2, 90);
+    const first = getAngleAnnotationLayout(center, arc, 44, 0);
+    const second = getAngleAnnotationLayout(center, arc, 62, 1);
+    const firstLeaderLength = Math.hypot(
+        first.label.x - first.anchor.x,
+        first.label.y - first.anchor.y
+    );
+    const secondLeaderLength = Math.hypot(
+        second.label.x - second.anchor.x,
+        second.label.y - second.anchor.y
+    );
+    assert(firstLeaderLength > 45, '角度文字应通过足够长的引线远离顶点');
+    assert(secondLeaderLength > 45, '第二个角度文字应通过足够长的引线远离顶点');
+    assert(
+        Math.hypot(first.label.x - second.label.x, first.label.y - second.label.y) > 35,
+        '相邻的分割角标签应错开，避免重叠'
+    );
+}
+
+function testAnnotationPlacementAvoidsExistingLabels() {
+    const context = {
+        setTransform() {},
+        measureText(text) { return { width: text.length * 7 }; }
+    };
+    const canvas = {
+        parentElement: { clientWidth: 800, clientHeight: 500 },
+        getContext() { return context; },
+        style: {}
+    };
+    const renderer = new TriangleRenderer(canvas);
+    renderer.beginAnnotationLayout([{ x: 400, y: 250 }]);
+    const first = renderer.placeAnnotation('∠P₁(A侧): 97.8°', { x: 400, y: 250 }, 0, 70);
+    const second = renderer.placeAnnotation('∠P₂(B侧): 82.2°', { x: 400, y: 250 }, 0, 70);
+    const boxesOverlap = first.box.x < second.box.x + second.box.width + 8 &&
+        first.box.x + first.box.width + 8 > second.box.x &&
+        first.box.y < second.box.y + second.box.height + 8 &&
+        first.box.y + first.box.height + 8 > second.box.y;
+    assert.strictEqual(boxesOverlap, false, '相邻标注必须自动错开并保留间隔');
+}
+
+function testCutPointAngleLabelsMatchTheirEdgeSides() {
+    assert.strictEqual(getCutPointAngleLabels(0).angleP1, '∠P₁(靠A)');
+    assert.strictEqual(getCutPointAngleLabels(0).angleP2, '∠P₂(靠B)');
+    assert.strictEqual(getCutPointAngleLabels(1).angleP1, '∠P₁(靠B)');
+    assert.strictEqual(getCutPointAngleLabels(1).angleP2, '∠P₂(靠C)');
+}
+
 function testCutVertexAnglesSumToOriginalAngle() {
     const triangle = [{ x: 0, y: 0 }, { x: 8, y: 0 }, { x: 2, y: 5 }];
     const splitAngles = calculateCutVertexAngles(triangle, 1, 0.6);
@@ -198,6 +260,18 @@ function testDisplayedTargetAngleIsRecognizedAsTarget() {
         }],
         36
     ), true);
+}
+
+function testAngleHistoryAndJudgmentShareOneDecimalRounding() {
+    assert.strictEqual(formatAngleForDisplay(17.94), '17.9');
+    assert.strictEqual(formatAngleForDisplay(17.95), '18.0');
+    assert.strictEqual(roundAngleForDisplay(17.95), 18);
+    assert.strictEqual(checkAngleSafety(17.94, 18).isExactTheta, false);
+    assert.strictEqual(checkAngleSafety(17.95, 18).isExactTheta, true);
+
+    const mainSource = fs.readFileSync(path.join(projectRoot, 'js', 'main.js'), 'utf8');
+    assert(mainSource.includes('.map(angle => formatAngleForDisplay(angle.angle) + \'°\')'));
+    assert.strictEqual(mainSource.includes('.map(angle => angle.angle.toFixed(0)'), false);
 }
 
 function testDisplayOrientationKeepsLongestEdgeHorizontal() {
@@ -252,6 +326,32 @@ function testQuickThetaPresetsContainEightWinningAndTwoDefensiveChoices() {
     assert.strictEqual(presetValues.includes(37.5), true, '应包含小数防守角 37.5°');
 }
 
+function testCanvasKeepsKeyboardFocusForCutAdjustments() {
+    const html = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf8');
+    const mainSource = fs.readFileSync(path.join(projectRoot, 'js', 'main.js'), 'utf8');
+    assert(
+        html.includes('id="geo-canvas" tabindex="0"'),
+        '主画布应可获得键盘焦点'
+    );
+    assert(mainSource.includes("canvas.addEventListener('pointerenter', focusCutCanvas)"));
+    assert(mainSource.includes('document.activeElement !== canvas'));
+}
+
+function testKeyboardHintExplainsAngleDirectionWithoutFalseRotationClaim() {
+    const html = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf8');
+    const mainSource = fs.readFileSync(path.join(projectRoot, 'js', 'main.js'), 'utf8');
+    assert(html.includes('id="cut-keyboard-hint"'));
+    assert(html.includes('← 减少 ∠P₁ 0.1°'));
+    assert(html.includes('→ 增加 ∠P₁ 0.1°'));
+    assert(html.includes('顺/逆时针方向会随所选边变化'));
+    assert(
+        html.indexOf('id="cut-keyboard-hint"') <
+        html.indexOf('<div class="canvas-container">'),
+        '快捷键提示应位于画布容器外侧，不能遮挡三角形'
+    );
+    assert(mainSource.includes('function updateCutKeyboardHint(angle = null)'));
+}
+
 function testResetOpeningAvoidsImmediateThetaMultiples() {
     const game = new PaperTriangleGame();
     game.init(36, null, 'mulan');
@@ -277,14 +377,20 @@ testKeptTargetAngleRecordsMulanWin();
 testGuideProvidesCompleteTeachingPath();
 testPointerCoordinateNormalization();
 testArcUsesCalculatedInteriorAngle();
+testSplitAngleLabelsUseSeparatedArrowLayouts();
+testAnnotationPlacementAvoidsExistingLabels();
+testCutPointAngleLabelsMatchTheirEdgeSides();
 testCutVertexAnglesSumToOriginalAngle();
 testPendingSplitPresentationUsesDistinctChoiceColors();
 testCutSnapsToExactRightAngle();
 testCutPointAngleCanAdjustByOneTenthDegree();
 testDisplayedTargetAngleIsRecognizedAsTarget();
+testAngleHistoryAndJudgmentShareOneDecimalRounding();
 testDisplayOrientationKeepsLongestEdgeHorizontal();
 testExecutedCutPreservesPVertexIdentity();
 testDemoAdaptsToValidAndInvalidTheta();
 testQuickThetaPresetsContainEightWinningAndTwoDefensiveChoices();
+testCanvasKeepsKeyboardFocusForCutAdjustments();
+testKeyboardHintExplainsAngleDirectionWithoutFalseRotationClaim();
 testResetOpeningAvoidsImmediateThetaMultiples();
 console.log('JavaScript frontend regression tests passed.');
