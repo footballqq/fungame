@@ -9,10 +9,6 @@
     --node-color: #3e2723;
     --highlight-color: rgba(211, 84, 0, 0.4);
     --hover-color: rgba(0, 0, 0, 0.1);
-    
-    --board-size: 500px;
-    --node-size: 20px;
-    --grid-gap: calc(var(--board-size) / 5);
 }
 
 * {
@@ -146,11 +142,10 @@ body {
 
 .status-bar {
     width: 100%;
-    max-width: var(--board-size);
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
@@ -178,21 +173,21 @@ body {
 
 .board-wrapper {
     position: relative;
-    width: var(--board-size);
-    height: var(--board-size);
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
     background-color: var(--board-bg);
     border-radius: 10px;
     box-shadow: inset 0 0 20px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.15);
-    padding: 20px; /* offset for outer nodes */
-    box-sizing: content-box;
+    margin: 0 auto;
 }
 
 .board-lines {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: var(--board-size);
-    height: var(--board-size);
+    top: 6%;
+    left: 6%;
+    width: 88%;
+    height: 88%;
     pointer-events: none;
 }
 
@@ -204,16 +199,16 @@ body {
 
 .board-nodes {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: var(--board-size);
-    height: var(--board-size);
+    top: 6%;
+    left: 6%;
+    width: 88%;
+    height: 88%;
 }
 
 .node {
     position: absolute;
-    width: var(--node-size);
-    height: var(--node-size);
+    width: clamp(14px, 3.5vw, 20px);
+    height: clamp(14px, 3.5vw, 20px);
     background-color: var(--node-color);
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -227,8 +222,8 @@ body {
 .node::after {
     content: '';
     position: absolute;
-    width: calc(var(--node-size) * 2.5);
-    height: calc(var(--node-size) * 2.5);
+    width: 250%;
+    height: 250%;
     border-radius: 50%;
     background-color: transparent;
     z-index: 1;
@@ -249,8 +244,8 @@ body {
 
 .piece {
     position: absolute;
-    width: 48px;
-    height: 48px;
+    width: clamp(32px, 9vw, 48px);
+    height: clamp(32px, 9vw, 48px);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -316,10 +311,11 @@ body {
 
 .node-label {
     position: absolute;
-    top: -20px;
+    top: -24px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
     pointer-events: none;
+    font-weight: 500;
 }

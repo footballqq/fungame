@@ -115,7 +115,7 @@ function getBestMove(fox, goose, isFoxTurn, movesLeft) {
 function getXY(nodeIndex) {
     const col = Math.floor(nodeIndex / GRID_SIZE);
     const row = nodeIndex % GRID_SIZE;
-    const spacing = 500 / (GRID_SIZE - 1);
+    const spacing = 100 / (GRID_SIZE - 1); // 使用百分比
     return {
         x: col * spacing,
         y: row * spacing
@@ -135,10 +135,10 @@ function initGame() {
                 const p1 = getXY(u);
                 const p2 = getXY(v);
                 const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                line.setAttribute('x1', p1.x);
-                line.setAttribute('y1', p1.y);
-                line.setAttribute('x2', p2.x);
-                line.setAttribute('y2', p2.y);
+                line.setAttribute('x1', `${p1.x}%`);
+                line.setAttribute('y1', `${p1.y}%`);
+                line.setAttribute('x2', `${p2.x}%`);
+                line.setAttribute('y2', `${p2.y}%`);
                 line.setAttribute('class', 'line');
                 boardLines.appendChild(line);
             }
@@ -151,8 +151,8 @@ function initGame() {
         node.className = 'node';
         node.id = `node-${i}`;
         const p = getXY(i);
-        node.style.left = `${p.x}px`;
-        node.style.top = `${p.y}px`;
+        node.style.left = `${p.x}%`;
+        node.style.top = `${p.y}%`;
         
         // Add number label for original board mapping
         const col = Math.floor(i / GRID_SIZE);
@@ -207,8 +207,8 @@ function resetState() {
         movesLeftEl.textContent = `狐狸剩余步数: ${MAX_FOX_MOVES}`;
         
         const gp = getXY(goosePos);
-        gooseEl.style.left = `${gp.x}px`;
-        gooseEl.style.top = `${gp.y}px`;
+        gooseEl.style.left = `${gp.x}%`;
+        gooseEl.style.top = `${gp.y}%`;
         
         document.querySelectorAll('.node').forEach(n => {
             if (parseInt(n.id.split('-')[1]) !== GOOSE_START) {
@@ -233,12 +233,12 @@ function resetState() {
 function updateUI() {
     // Update piece positions
     const fp = getXY(foxPos);
-    foxEl.style.left = `${fp.x}px`;
-    foxEl.style.top = `${fp.y}px`;
+    foxEl.style.left = `${fp.x}%`;
+    foxEl.style.top = `${fp.y}%`;
     
     const gp = getXY(goosePos);
-    gooseEl.style.left = `${gp.x}px`;
-    gooseEl.style.top = `${gp.y}px`;
+    gooseEl.style.left = `${gp.x}%`;
+    gooseEl.style.top = `${gp.y}%`;
     
     // Update status
     if (!gameOver) {
@@ -419,12 +419,12 @@ async function runDemo() {
     foxEl.style.display = 'block';
     
     const fg = getXY(foxPos);
-    foxEl.style.left = `${fg.x}px`;
-    foxEl.style.top = `${fg.y}px`;
+    foxEl.style.left = `${fg.x}%`;
+    foxEl.style.top = `${fg.y}%`;
     
     const gg = getXY(goosePos);
-    gooseEl.style.left = `${gg.x}px`;
-    gooseEl.style.top = `${gg.y}px`;
+    gooseEl.style.left = `${gg.x}%`;
+    gooseEl.style.top = `${gg.y}%`;
     
     turnIndicator.textContent = demoPath[0].msg;
     turnIndicator.className = 'turn-indicator fox';
@@ -439,13 +439,13 @@ async function runDemo() {
         if (step.foxX !== undefined) {
             foxPos = step.foxX * GRID_SIZE + step.foxY;
             const fxy = getXY(foxPos);
-            foxEl.style.left = `${fxy.x}px`;
-            foxEl.style.top = `${fxy.y}px`;
+            foxEl.style.left = `${fxy.x}%`;
+            foxEl.style.top = `${fxy.y}%`;
         } else {
             goosePos = step.x * GRID_SIZE + step.y;
             const gxy = getXY(goosePos);
-            gooseEl.style.left = `${gxy.x}px`;
-            gooseEl.style.top = `${gxy.y}px`;
+            gooseEl.style.left = `${gxy.x}%`;
+            gooseEl.style.top = `${gxy.y}%`;
         }
         
         turnIndicator.textContent = step.msg;
