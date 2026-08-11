@@ -28,6 +28,9 @@ let currentTurn = 'fox'; // 'fox' or 'goose'
 let foxMovesMade = 0;
 let gameMode = 'pvp';
 let gameOver = false;
+let isPlacingFox = false;
+let isDemo = false;
+let demoStep = 0;
 
 // DOM Elements
 const boardLines = document.getElementById('board-lines');
@@ -40,6 +43,8 @@ const modalMessage = document.getElementById('modal-message');
 const btnRestart = document.getElementById('btn-restart');
 const btnPlayAgain = document.getElementById('btn-play-again');
 const radioModes = document.querySelectorAll('input[name="gameMode"]');
+const cbSuperMode = document.getElementById('cb-super-mode');
+const btnDemo = document.getElementById('btn-demo');
 
 let foxEl, gooseEl;
 
@@ -178,23 +183,50 @@ function initGame() {
 }
 
 function resetState() {
+    isDemo = false;
+    demoStep++; // used to cancel running demo
+    
     // Get mode
     const selectedMode = document.querySelector('input[name="gameMode"]:checked').value;
     gameMode = selectedMode;
+    const isSuperMode = cbSuperMode.checked;
     
-    foxPos = FOX_START;
     goosePos = GOOSE_START;
     currentTurn = 'fox';
     foxMovesMade = 0;
     gameOver = false;
-    
     gameOverModal.classList.add('hidden');
     
-    updateUI();
-    
-    // Check if AI needs to start
-    if (gameMode === 'pve_goose' && currentTurn === 'fox') {
-        setTimeout(playAITurn, 500);
+    if (isSuperMode) {
+        isPlacingFox = true;
+        foxPos = -1;
+        foxEl.style.display = 'none';
+        
+        turnIndicator.textContent = '🌟 请点击选择狐狸起点';
+        turnIndicator.className = 'turn-indicator fox';
+        movesLeftEl.textContent = `狐狸剩余步数: ${MAX_FOX_MOVES}`;
+        
+        const gp = getXY(goosePos);
+        gooseEl.style.left = `${gp.x}px`;
+        gooseEl.style.top = `${gp.y}px`;
+        
+        document.querySelectorAll('.node').forEach(n => {
+            if (parseInt(n.id.split('-')[1]) !== GOOSE_START) {
+                n.classList.add('valid-move');
+            } else {
+                n.classList.remove('valid-move');
+            }
+        });
+    } else {
+        isPlacingFox = false;
+        foxPos = FOX_START;
+        foxEl.style.display = 'block';
+        updateUI();
+        
+        // Check if AI needs to start
+        if (gameMode === 'pve_goose' && currentTurn === 'fox') {
+            setTimeout(playAITurn, 500);
+        }
     }
 }
 
@@ -247,6 +279,19 @@ function updateUI() {
 
 function handleNodeClick(nodeIndex) {
     if (gameOver) return;
+    
+    if (isPlacingFox) {
+        if (nodeIndex !== GOOSE_START) {
+            foxPos = nodeIndex;
+            isPlacingFox = false;
+            foxEl.style.display = 'block';
+            updateUI();
+            if (gameMode === 'pve_goose' && currentTurn === 'fox') {
+                setTimeout(playAITurn, 500);
+            }
+        }
+        return;
+    }
     
     const isHumanTurn = 
         (gameMode === 'pvp') ||
@@ -340,6 +385,80 @@ btnPlayAgain.addEventListener('click', resetState);
 radioModes.forEach(radio => {
     radio.addEventListener('change', resetState);
 });
+cbSuperMode.addEventListener('change', resetState);
+
+btnDemo.addEventListener('click', runDemo);
+
+async function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function runDemo() {
+    if (isDemo) return;
+    isDemo = true;
+    gameOver = true;
+    const currentDemoStep = ++demoStep;
+    
+    gameOverModal.classList.add('hidden');
+    document.querySelectorAll('.node').forEach(n => n.classList.remove('valid-move'));
+    
+    let demoPath = [
+        { msg: "【演示】开始：注意狐狸和鹅形成的相对位置，这就是必胜态的“正方形”！" },
+        { x: 1, y: 1, msg: "【演示】鹅为了不直接撞到狐狸，只能往上方逃跑..." },
+        { foxX: 2, foxY: 2, msg: "【演示】狐狸向同方向平移，继续保持正方形压制！" },
+        { x: 0, y: 1, msg: "【演示】鹅继续逃跑，被逼到了左边的墙上！" },
+        { foxX: 1, foxY: 2, msg: "【演示】狐狸再次平移，依然保持完美的距离压制！" },
+        { x: 0, y: 0, msg: "【演示】鹅退无可退，被迫缩进棋盘最左上角的死角！" },
+        { foxX: 1, foxY: 1, msg: "【演示】狐狸跟进！此时鹅的仅有两条退路都在狐狸的嘴边。" },
+        { x: 1, y: 0, msg: "【演示】鹅无论怎么走，都只能自动走到与狐狸相邻的格子上..." },
+        { foxX: 1, foxY: 0, msg: "【演示】狐狸走上去完成绝杀！只要保持对角状态，鹅必败无疑。" }
+    ];
+
+    goosePos = 1 * GRID_SIZE + 2; // (1,2)
+    foxPos = 2 * GRID_SIZE + 3; // (2,3)
+    foxEl.style.display = 'block';
+    
+    const fg = getXY(foxPos);
+    foxEl.style.left = `${fg.x}px`;
+    foxEl.style.top = `${fg.y}px`;
+    
+    const gg = getXY(goosePos);
+    gooseEl.style.left = `${gg.x}px`;
+    gooseEl.style.top = `${gg.y}px`;
+    
+    turnIndicator.textContent = demoPath[0].msg;
+    turnIndicator.className = 'turn-indicator fox';
+    movesLeftEl.textContent = '动画演示中...';
+    
+    await sleep(4000);
+    
+    for (let i = 1; i < demoPath.length; i++) {
+        if (!isDemo || demoStep !== currentDemoStep) break;
+        let step = demoPath[i];
+        
+        if (step.foxX !== undefined) {
+            foxPos = step.foxX * GRID_SIZE + step.foxY;
+            const fxy = getXY(foxPos);
+            foxEl.style.left = `${fxy.x}px`;
+            foxEl.style.top = `${fxy.y}px`;
+        } else {
+            goosePos = step.x * GRID_SIZE + step.y;
+            const gxy = getXY(goosePos);
+            gooseEl.style.left = `${gxy.x}px`;
+            gooseEl.style.top = `${gxy.y}px`;
+        }
+        
+        turnIndicator.textContent = step.msg;
+        await sleep(2500);
+    }
+    
+    if (isDemo && demoStep === currentDemoStep) {
+        isDemo = false;
+        setTimeout(() => {
+            if (demoStep === currentDemoStep) resetState();
+        }, 4000);
+    }
+}
 
 // Start
 initGame();
