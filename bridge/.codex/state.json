@@ -1,0 +1,22 @@
+{
+  "current_task": "配对演示切割选择保持已修复",
+  "last_changes": [
+    "js/ai.js",
+    "js/ui.js",
+    "index.html",
+    "css/style.css",
+    "pairing_demo.html",
+    "tests/test_pairing_demo.py",
+    "docs/algo.txt",
+    "tests/test_ai_runtime.py",
+    "tests/test_gross_strategy.py",
+    "tests/test_pairing_winrate.py",
+    "tests/test_ui_controls.py",
+    "CODEx_TODO.md",
+    ".codex/state.json"
+  ],
+  "next_actions": [
+    "根据玩家反馈继续优化双树教学演示"
+  ],
+  "notes": "用户选择和默认示例现在分别记录来源。后续 A/B、绿色替代边和修复说明均使用该选择；返回步骤会重建同一切割，重选按钮可回到步骤 4 选择另一条可修复红线。模拟非默认选择与全量 pytest 均通过。"
+}

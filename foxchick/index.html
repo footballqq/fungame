@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狐狸和鹅 (Fox and Goose)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>狐狸和鹅</h1>
+            <p>经典策略棋盘游戏</p>
+        </header>
+        
+        <main class="main-content">
+            <aside class="left-panel">
+                <div class="rules-card">
+                    <h2>游戏规则</h2>
+                    <p>这个饶有趣味的游戏是在8x8的网格上进行的。</p>
+                    <ul>
+                        <li><span class="icon">🦊</span> 代表狐狸，<span class="icon">🦢</span> 代表鹅。</li>
+                        <li>一方移动狐狸，另一方移动鹅。一次“移动”是指把棋子从一个黑点沿着黑线移到一个相邻的黑点上。</li>
+                        <li><strong>狐狸企图移到鹅所占据的黑点上，从而把鹅捉住。</strong>鹅则尽量逃避。</li>
+                        <li>如果狐狸用 <strong>10次</strong> 或不到10次的移动把鹅捉住，狐狸胜。</li>
+                        <li>如果狐狸移动10次还没捉住鹅，则鹅胜。</li>
+                        <li><strong>狐狸必须首先移动。</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="controls-card">
+                    <h2>游戏设置</h2>
+                    <div class="mode-selection">
+                        <label>
+                            <input type="radio" name="gameMode" value="pvp" checked>
+                            双人对战 (PvP)
+                        </label>
+                        <label>
+                            <input type="radio" name="gameMode" value="pve_fox">
+                            玩家扮演 🦊 狐狸 (先手)
+                        </label>
+                        <label>
+                            <input type="radio" name="gameMode" value="pve_goose">
+                            玩家扮演 🦢 鹅 (后手)
+                        </label>
+                    </div>
+                    <button id="btn-restart" class="btn primary-btn">重新开始</button>
+                </div>
+            </aside>
+
+            <section class="game-board-container">
+                <div class="status-bar">
+                    <div id="turn-indicator" class="turn-indicator">等待开始...</div>
+                    <div id="moves-left" class="moves-left">狐狸剩余步数: 10</div>
+                </div>
+                
+                <div class="board-wrapper">
+                    <!-- SVG用于绘制连线 -->
+                    <svg id="board-lines" class="board-lines"></svg>
+                    <!-- 节点容器 -->
+                    <div id="board-nodes" class="board-nodes"></div>
+                </div>
+                
+                <div id="game-over-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2 id="modal-title">游戏结束</h2>
+                        <p id="modal-message"></p>
+                        <button id="btn-play-again" class="btn primary-btn">再玩一局</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>

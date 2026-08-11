@@ -1,4 +1,5 @@
-<!-- codex: 2026-02-13 新增 chesshorse：马踏遍棋盘（Knight's Tour）游戏与回归测试 -->
+<!-- codex: 2026-08-11 新增 foxchick 狐狸和鹅 网页游戏 -->
+- [X] 新增: `foxchick/` “狐狸和鹅”网页游戏，基于 8x8 网格与一条对角线实现规则。支持双人对战、玩家扮演狐狸（PvE）、玩家扮演鹅（PvE），其中 AI 使用极小化极大算法确保最佳策略。
 - [X] 新增: `chesshorse/` 国际象棋“马”走遍棋盘（默认 4×4，可选 N×N），走过格子变色不可再踩，支持“显示答案/动画演示/提示一步/撤销”，含春节元素与祝福语、玩家记录
 - [X] 测试: 使用 `pytest` 覆盖 Knight's Tour 求解器的“无解/有解/路径合法性”关键场景（新增 `tests/test_chesshorse_knight_tour_solver.py`；并补 Node 单测 `chesshorse/knight_tour_solver.test.js`）
 - [X] 文档: 补齐 `chesshorse/README.md`（玩法/按钮/答案与演示说明）

@@ -1,0 +1,206 @@
+<!-- codex: 2026-08-10 在 AI 前加载预存 Lehman 双树策略。 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>架桥 (Bridg-It) - 蓝红图论博弈网页游戏</title>
+    <meta name="description" content="基于戴维·盖尔教授发明的《架桥》(Bridg-It) 经典图论棋盘游戏，支持 🔵 蓝方(上下) 与 🔴 红方(左右) 对决、6 种棋盘尺寸与 4 种 AI 难度。">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <header>
+            <div class="title-section">
+                <h1>架桥 (Bridg-It)</h1>
+                <p>戴维·盖尔图论博弈棋盘</p>
+            </div>
+            
+            <div class="control-panel">
+                <div class="control-group">
+                    <label for="modeSelect">模式:</label>
+                    <select id="modeSelect">
+                        <option value="pve" selected>🤖 人机对决</option>
+                        <option value="pvp">👥 双人同屏对战</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="sizeSelect">尺寸:</label>
+                    <select id="sizeSelect">
+                        <option value="3x4">3×4 (经典)</option>
+                        <option value="4x5">4×5</option>
+                        <option value="5x6">5×6</option>
+                        <option value="6x7">6×7</option>
+                        <option value="7x8">7×8</option>
+                        <option value="8x9">8×9</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="diffSelect">难度:</label>
+                    <select id="diffSelect">
+                        <option value="beginner">入门</option>
+                        <option value="normal" selected>普通</option>
+                        <option value="hard">困难</option>
+                        <option value="master">大师</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="roleSelect">执棋阵营:</label>
+                    <select id="roleSelect">
+                        <option value="blue">🔵 执蓝(先手·上下通)</option>
+                        <option value="red">🔴 执红(后手·左右通)</option>
+                        <option value="random">🎲 随机分配</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="fontSelect">🔍 界面字号:</label>
+                    <select id="fontSelect">
+                        <option value="1">标准 100%</option>
+                        <option value="1.15" selected>大 115%</option>
+                        <option value="1.3">超大 130%</option>
+                        <option value="1.5">巨型 150%</option>
+                    </select>
+                </div>
+
+                <button id="newGameBtn" class="btn btn-primary">🎮 新游戏</button>
+            </div>
+        </header>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                <span id="turnBadge" class="status-badge player-turn blue">准备开始...</span>
+                <span id="exemptBadge" class="exempt-badge" style="display: none;">⚠️ 大师先手（战绩豁免）</span>
+            </div>
+
+            <div class="game-metrics">
+                <span>⏱️ <span id="timerDisplay">00:00</span></span>
+                <span>👣 步数: <span id="movesDisplay">0</span></span>
+                <span>🏆 胜率: <span id="winRateDisplay">0%</span></span>
+            </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; width: 100%; justify-content: space-between; align-items: center;">
+            <div class="control-group" style="background: var(--card-bg); padding: 6px 14px; border-radius: 10px; border: 1px solid var(--card-border);">
+                <span>🔎 棋盘缩放:</span>
+                <button id="zoomOutBtn" class="btn btn-small">➖</button>
+                <span id="zoomLevelDisplay" style="font-weight: 700; min-width: 45px; text-anchor: center;">130%</span>
+                <button id="zoomInBtn" class="btn btn-small">➕</button>
+                <button id="zoomResetBtn" class="btn btn-small">还原</button>
+            </div>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button id="undoBtn" class="btn">↩️ 悔棋</button>
+                <button id="hintBtn" class="btn">💡 提示</button>
+                <button id="rulesBtn" class="btn">📖 规则</button>
+                <button id="demoBtn" class="btn" onclick="window.open('pairing_demo.html', '_blank')">🎨 配对演示</button>
+                <button id="statsBtn" class="btn">📊 战绩</button>
+                <button id="soundToggleBtn" class="btn">🔊 音效开启</button>
+            </div>
+        </div>
+
+        <!-- SVG Board -->
+        <main class="board-wrapper">
+            <svg id="boardSvg"></svg>
+        </main>
+
+        <section class="move-history-panel" aria-labelledby="moveHistoryTitle">
+            <div class="move-history-header">
+                <h2 id="moveHistoryTitle">本局操作历史</h2>
+                <span id="moveHistoryCount">0 手</span>
+            </div>
+            <ol id="moveHistory" class="move-history-list">
+                <li class="move-history-empty">本局尚未落子</li>
+            </ol>
+        </section>
+    </div>
+
+    <!-- Rules Modal -->
+    <div id="rulesModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📖 《架桥》(Bridg-It) 游戏规则说明</h2>
+                <button id="closeRulesBtn" class="close-btn">&times;</button>
+            </div>
+            <div class="rules-body">
+                <p>《架桥》（Bridg-It）是由美国布朗大学数学教授戴维·盖尔（David Gale）发明的经典双人图论博弈游戏。</p>
+
+                <div class="rule-diagram">
+                    <svg width="320" height="190" viewBox="0 0 320 190">
+                        <!-- Blue grid 3x4 -->
+                        <line x1="45" y1="40" x2="45" y2="150" stroke="#38bdf8" stroke-width="4" stroke-dasharray="4"/>
+                        <line x1="275" y1="40" x2="275" y2="150" stroke="#38bdf8" stroke-width="4" stroke-dasharray="4"/>
+                        <!-- Blue dots -->
+                        <circle cx="45" cy="40" r="8" fill="#38bdf8"/><circle cx="121" cy="40" r="8" fill="#38bdf8"/><circle cx="198" cy="40" r="8" fill="#38bdf8"/><circle cx="275" cy="40" r="8" fill="#38bdf8"/>
+                        <circle cx="45" cy="95" r="8" fill="#38bdf8"/><circle cx="121" cy="95" r="8" fill="#38bdf8"/><circle cx="198" cy="95" r="8" fill="#38bdf8"/><circle cx="275" cy="95" r="8" fill="#38bdf8"/>
+                        <circle cx="45" cy="150" r="8" fill="#38bdf8"/><circle cx="121" cy="150" r="8" fill="#38bdf8"/><circle cx="198" cy="150" r="8" fill="#38bdf8"/><circle cx="275" cy="150" r="8" fill="#38bdf8"/>
+                        
+                        <!-- Red dots -->
+                        <circle cx="83" cy="15" r="8" fill="#f43f5e"/><circle cx="160" cy="15" r="8" fill="#f43f5e"/><circle cx="236" cy="15" r="8" fill="#f43f5e"/>
+                        <circle cx="83" cy="67" r="8" fill="#f43f5e"/><circle cx="160" cy="67" r="8" fill="#f43f5e"/><circle cx="236" cy="67" r="8" fill="#f43f5e"/>
+                        <circle cx="83" cy="122" r="8" fill="#f43f5e"/><circle cx="160" cy="122" r="8" fill="#f43f5e"/><circle cx="236" cy="122" r="8" fill="#f43f5e"/>
+                        <circle cx="83" cy="175" r="8" fill="#f43f5e"/><circle cx="160" cy="175" r="8" fill="#f43f5e"/><circle cx="236" cy="175" r="8" fill="#f43f5e"/>
+
+                        <!-- Goal arrows -->
+                        <text x="160" y="36" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle">▼ 蓝方目标：顶行 ➔ 底行连通 ▼</text>
+                        <text x="160" y="170" fill="#f43f5e" font-size="14" font-weight="bold" text-anchor="middle">◄ 红方目标：左列 ➔ 右列连通 ►</text>
+                    </svg>
+                </div>
+
+                <ul style="padding-left: 20px; color: var(--text-secondary); line-height: 1.8;">
+                    <li><strong>棋盘阵营：</strong> 🔵 <strong>蓝方 (先手)</strong> 控制蓝色点阵；🔴 <strong>红方 (后手)</strong> 控制红色点阵。</li>
+                    <li><strong>划线规则：</strong> 双方轮流落子。玩家只能点击属于自己阵营颜色的相邻点画线。两方的线段不能交叉。</li>
+                    <li><strong>胜利条件：</strong>
+                        <ul>
+                            <li>🔵 <strong>蓝方：</strong> 形成一条从最顶行通往最底行的连续蓝线。</li>
+                            <li>🔴 <strong>红方：</strong> 形成一条从最左列通往最右列的连续红线。</li>
+                        </ul>
+                    </li>
+                    <li><strong>无和局规则：</strong> 在数学原理上，本游戏绝不可能出现平局，必有一方完成连线！</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Modal -->
+    <div id="statsModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📊 战绩统计面板</h2>
+                <button id="closeStatsBtn" class="close-btn">&times;</button>
+            </div>
+            <div id="statsBody">
+                <!-- Dynamic Content -->
+            </div>
+            <div style="margin-top: 20px; text-align: left;">
+                <button id="clearStatsBtn" class="btn" style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; border-color: #f43f5e;">🗑️ 清空战绩</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Victory Modal -->
+    <div id="victoryModal" class="modal-overlay">
+        <div class="modal-content victory-body">
+            <h2 id="victoryTitle">🎉 蓝方 (玩家) 获胜！</h2>
+            <p id="victorySub" style="color: var(--text-secondary); margin-bottom: 24px;"></p>
+            <div class="victory-actions">
+                <button id="playAgainBtn" class="btn btn-primary">再来一局</button>
+                <button id="closeVictoryBtn" class="btn">关闭并查看棋盘</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/game.js?v=1.0.4"></script>
+    <script src="js/lehman.js?v=1.0.7"></script>
+    <script src="js/ai.js?v=1.0.5"></script>
+    <script src="js/stats.js?v=1.0.4"></script>
+    <script src="js/ui.js?v=1.0.4"></script>
+</body>
+</html>

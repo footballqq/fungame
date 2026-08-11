@@ -1,0 +1,395 @@
+<!-- codex: 2026-08-10 将静态配对页重构为可交互的 Lehman 双树修复演示。 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridg-It Lehman 双树策略演示</title>
+    <style>
+        :root { --bg:#101826; --panel:#182335; --text:#e7eef8; --muted:#9caec4; --cyan:#22d3ee; --orange:#fb923c; --gold:#fbbf24; --red:#fb4b68; --green:#4ade80; }
+        * { box-sizing:border-box; }
+        body { margin:0; min-height:100vh; padding:24px; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,sans-serif; }
+        header, main { max-width:1440px; margin:auto; }
+        header { margin-bottom:18px; }
+        h1 { margin:0; font-size:1.8rem; }
+        header p { margin:6px 0 0; color:var(--muted); }
+        main { display:grid; grid-template-columns:minmax(620px,1.5fr) minmax(360px,1fr); gap:18px; }
+        section { background:var(--panel); border:1px solid #2b3a52; border-radius:8px; padding:18px; }
+        svg { display:block; width:100%; height:auto; background:#0d1522; border:1px solid #2b3a52; border-radius:6px; }
+        .legend { display:flex; flex-wrap:wrap; gap:14px; margin-top:12px; color:var(--muted); font-size:.84rem; }
+        .legend span { display:flex; align-items:center; gap:6px; }
+        .swatch { width:13px; height:13px; border-radius:2px; }
+        .step { color:var(--gold); font-weight:700; font-size:.86rem; }
+        h2 { margin:8px 0; font-size:1.18rem; }
+        .explanation { margin:0; color:var(--muted); line-height:1.7; }
+        .controls { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0; }
+        .tree-focus { display:flex; flex-wrap:wrap; gap:8px; margin:-7px 0 18px; }
+        .tree-focus button[aria-pressed="true"] { background:#0f6d84; border-color:var(--cyan); }
+        .focus-hint { margin:-9px 0 14px; color:var(--muted); font-size:.86rem; }
+        .cut-choice { margin:-6px 0 14px; padding:9px 10px; border-left:3px solid var(--red); background:#241923; color:#ffc0cc; font-size:.86rem; line-height:1.5; }
+        button { min-height:38px; padding:0 12px; border:1px solid #3c506d; border-radius:5px; background:#24344d; color:var(--text); cursor:pointer; font-weight:650; }
+        button.primary { background:#126d87; border-color:#22d3ee; }
+        button:hover { filter:brightness(1.15); }
+        .status { border-left:3px solid var(--cyan); background:#111c2b; padding:12px; color:var(--muted); line-height:1.65; font-size:.9rem; }
+        .tree-list { list-style:none; padding:0; margin:14px 0 0; display:grid; gap:8px; }
+        .tree-list li { padding:9px 10px; background:#111c2b; border-left:4px solid var(--cyan); color:var(--muted); font-size:.85rem; }
+        .tree-list li:nth-child(2) { border-color:var(--orange); }
+        .tree-list li:nth-child(3) { border-color:var(--gold); }
+        .tree-proof { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+        .proof { padding:8px 10px; background:#111c2b; border:1px solid #2b3a52; border-radius:4px; font-size:.86rem; }
+        .proof.ok { border-color:var(--green); color:#b9f6ca; }
+        .edge { stroke-linecap:round; stroke-width:7; opacity:.2; }
+        .red { stroke:var(--red); }
+        .tree-one { stroke:var(--cyan); opacity:.9; }
+        .tree-two { stroke:var(--orange); opacity:.9; }
+        .shared { stroke:var(--gold); stroke-width:10; opacity:1; filter:drop-shadow(0 0 6px var(--gold)); }
+        .shared-overlay { stroke-width:13; pointer-events:none; }
+        .muted-tree { opacity:.07; }
+        .focused-tree { stroke-width:12; opacity:1; filter:drop-shadow(0 0 9px currentColor); animation:focus-pulse .8s infinite alternate; }
+        .played-red { stroke:var(--red); stroke-width:10; opacity:1; filter:drop-shadow(0 0 7px var(--red)); }
+        .cut { stroke:var(--red); stroke-width:12; opacity:1; stroke-dasharray:8 5; animation:pulse .7s infinite alternate; }
+        .repair { stroke:var(--green); stroke-width:12; opacity:1; filter:drop-shadow(0 0 8px var(--green)); animation:pulse .7s infinite alternate; }
+        .partition-a { fill:#0d1522; stroke:var(--gold); stroke-width:4; }
+        .partition-b { fill:#0d1522; stroke:#a78bfa; stroke-width:4; }
+        .partition-label { fill:var(--text); font-size:12px; font-weight:700; text-anchor:middle; }
+        .dot { stroke:#0d1522; stroke-width:3; }
+        .blue-dot { fill:var(--cyan); } .red-dot { fill:var(--red); }
+        .terminal-rail { stroke:var(--cyan); stroke-width:5; opacity:.85; }
+        .terminal-node { fill:#0d1522; stroke:var(--cyan); stroke-width:3; }
+        .terminal-text { fill:var(--cyan); font-size:13px; font-weight:700; text-anchor:middle; }
+        .label { fill:var(--muted); font-size:12px; text-anchor:middle; }
+        @keyframes pulse { to { opacity:.35; } }
+        @keyframes focus-pulse { to { opacity:.55; } }
+        @media (max-width:900px) { body { padding:12px; } main { grid-template-columns:1fr; } section { padding:13px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lehman 双树动态修复演示</h1>
+        <p>3×4 紧凑棋盘：两个终端、两棵树、一次断边与四步修复推演</p>
+    </header>
+    <main>
+        <section>
+            <svg id="demoSvg" viewBox="0 0 620 440" aria-label="Lehman 双树棋盘演示"></svg>
+            <div class="legend">
+                <span><i class="swatch" style="background:var(--cyan)"></i>树甲 T1</span>
+                <span><i class="swatch" style="background:var(--orange)"></i>树乙 T2</span>
+                <span><i class="swatch" style="background:var(--gold)"></i>两树共享的已修道路（两棵树都计入）</span>
+                <span><i class="swatch" style="background:var(--red)"></i>破坏者切断的候选边</span>
+                <span><i class="swatch" style="background:var(--green)"></i>创造者的替代边</span>
+            </div>
+        </section>
+        <section>
+            <div class="step" id="stepBadge"></div>
+            <h2 id="stepTitle"></h2>
+            <p class="explanation" id="stepDesc"></p>
+            <div class="controls">
+                <button id="prevBtn">上一步</button>
+                <button class="primary" id="nextBtn">下一步</button>
+                <button id="resetBtn">重置演示</button>
+                <button id="changeCutBtn">重新选择切割边</button>
+            </div>
+            <div class="tree-focus" role="group" aria-label="选择要观察的树">
+                <button data-tree-focus="treeOne" aria-pressed="false">查看树甲 T1</button>
+                <button data-tree-focus="treeTwo" aria-pressed="false">查看树乙 T2</button>
+                <button data-tree-focus="both" aria-pressed="true">同时查看</button>
+            </div>
+            <p class="focus-hint" id="focusHint">提示：选择一棵树后，它和金色共享边会闪烁；暗下去的线属于另一棵树。</p>
+            <p class="cut-choice" id="cutChoice">本轮尚未选择切割边。</p>
+            <div class="status" id="dynamicStatus"></div>
+            <ul class="tree-list">
+                <li><strong>树甲 T1</strong>：青色边构成从终端 S 到终端 T 的一棵树。</li>
+                <li><strong>树乙 T2</strong>：橙色边加上金色共享边，构成从终端 S 到终端 T 的完整树。</li>
+                <li><strong>共享边</strong>：金色边已经由蓝方修路，因此同时属于两棵树；它不是“只属于树甲”的青色边。</li>
+            </ul>
+            <div class="tree-proof" id="treeProof" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="js/game.js?v=1.0.5"></script>
+    <script src="js/lehman.js?v=1.0.8"></script>
+    <script>
+        // 3x4 keeps the terminal contraction visible: each terminal merges three blue dots.
+        // codex: 2026-08-10 使用 boardTop 避免与浏览器 window.top 全局属性冲突。
+        const R = 3, C = 4, step = 92, left = 170, boardTop = 92;
+        const plan = LehmanPairingStrategy.PLANS['3x4'];
+        const blueEdges = Object.keys(new BridgItGame(R, C).blueEdges);
+        const redEdges = Object.keys(new BridgItGame(R, C).redEdges);
+        const steps = [
+            ['步骤 1 / 8', '先把三点收缩成两个终端', '顶部的 3 个蓝点不是三个独立起点：在 Shannon 图里它们收缩为同一个终端 S。底部的 3 个蓝点同样收缩为终端 T。蓝方的目标因此是连接 S 与 T。'],
+            ['步骤 2 / 8', '找到两棵“都能连到终点”的树', '青色 T1 和橙色 T2 都覆盖同一批收缩后的顶点，并各自保持 S 到 T 连通。金色边是两棵树共同拥有的边，所以树乙的完整路径是“橙色边 + 金色共享边”，不是只看橙色线段。'],
+            ['步骤 3 / 8', '创造者先修共享开局边', '蓝方先修左起第 1 列、最下方一段蓝竖线。它变成金色：这条路同时属于 T1 与 T2，是两棵树共同已拥有的连接。之后红方不能再用与它交叉的红边破坏它。'],
+            ['步骤 4 / 8', '破坏者切断其中一棵树', '点击任意红色内部边。它会禁用一条与之相交的蓝线；红色闪烁的蓝边显示被禁用的候选边。接下来的步骤不急着修，而是先看清这次切断造成了什么。'],
+            ['步骤 5 / 8', '断边把一棵树分成两部分', '红色虚线的两个端点分别落在标记为 A、B 的部分。把这条蓝线拿走以后，A 只能在原树内到达 A，B 只能在原树内到达 B；树因此不再是一棵连通树。修复所需的不是“随便补一条边”，而是一条从 A 到 B 的边。'],
+            ['步骤 6 / 8', '另一棵树提供一条跨越 A-B 的边', '绿色闪烁边来自另一棵仍完整的树。图上的 A、B 标记显示：它的一端在 A，另一端在 B。正因它跨越了这道割，把它加入断开的树时才会把两部分重新接起来。'],
+            ['步骤 7 / 8', '蓝方修这条跨割边', '现在蓝方修绿色边。它不是临时绕路：在断树中替换被禁用的红色虚线后，断树又成为一棵从 S 到 T 连通的树。绿色表示本步刚完成的修复。'],
+            ['步骤 8 / 8', '恢复双树不变量，准备下一轮', '刚修好的边现为金色公共边，表示它同时计入两棵树。于是 T1、T2 又都各自 S-T 连通。红方下一次只能再禁用一条尚未修好的候选边，蓝方重复“识别断树 → 找跨割边 → 修复”的过程。']
+        ];
+        let currentStep = 0;
+        let state;
+        let chosen = null;
+        let focusedTree = 'both';
+
+        const svgElement = (name, attributes = {}) => {
+            const element = document.createElementNS('http://www.w3.org/2000/svg', name);
+            Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+            return element;
+        };
+        const bluePoint = (row, column) => ({ x: left + (column + .5) * step, y: boardTop + row * step });
+        const redPoint = (row, column) => ({ x: left + column * step, y: boardTop + (row + .5) * step });
+        const edgePoints = (id, color) => {
+            const [kind, rowText, columnText] = id.split('_');
+            const row = Number(rowText), column = Number(columnText);
+            if (color === 'blue') return kind === 'bv'
+                ? [bluePoint(row, column), bluePoint(row + 1, column)]
+                : [bluePoint(row, column), bluePoint(row, column + 1)];
+            return kind === 'rh'
+                ? [redPoint(row, column), redPoint(row, column + 1)]
+                : [redPoint(row, column), redPoint(row + 1, column)];
+        };
+        function describeEdge(id, color) {
+            const [kind, rowText, columnText] = id.split('_');
+            const row = Number(rowText) + 1;
+            const column = Number(columnText) + 1;
+            if (color === 'blue') {
+                return kind === 'bv'
+                    ? `左起第 ${column} 列、从上数第 ${row} 段蓝竖线`
+                    : `从上数第 ${row} 排、从左数第 ${column} 段蓝横线`;
+            }
+            return kind === 'rh'
+                ? `从上数第 ${row} 排、从左数第 ${column} 段红横线`
+                : `左起第 ${column} 列、从上数第 ${row} 段红竖线`;
+        }
+        function vertexPoint(vertex) {
+            if (vertex === 'top') return { x:left + step, y:boardTop - 34 };
+            if (vertex === 'bottom') return { x:left + step, y:boardTop + R * step + 34 };
+            const [row, column] = vertex.split(':').map(Number);
+            return bluePoint(row, column);
+        }
+        function getCutParts() {
+            if (!chosen?.response.repair) return null;
+            const brokenTree = state[chosen.response.repair.brokenTree];
+            const blockedEdge = chosen.response.repair.blockedBlueEdge;
+            const componentA = LehmanPairingStrategy._reachableVertices(brokenTree, blockedEdge, R, C);
+            const [blockedFrom, blockedTo] = LehmanPairingStrategy._edgeVertices(blockedEdge, R, C);
+            const [repairFrom, repairTo] = LehmanPairingStrategy._edgeVertices(chosen.response.edgeId, R, C);
+            return { componentA, blockedFrom, blockedTo, repairFrom, repairTo };
+        }
+        const reset = () => { state = { treeOne:new Set(plan.treeOne), treeTwo:new Set(plan.treeTwo) }; chosen = null; };
+
+        function treeHasSTPath(tree) {
+            const seen = new Set(['top']);
+            const queue = ['top'];
+            for (let head = 0; head < queue.length; head += 1) {
+                for (const edgeId of tree) {
+                    const [from, to] = LehmanPairingStrategy._edgeVertices(edgeId, R, C);
+                    const next = from === queue[head] ? to : (to === queue[head] ? from : null);
+                    if (next !== null && !seen.has(next)) { seen.add(next); queue.push(next); }
+                }
+            }
+            return seen.has('bottom');
+        }
+
+        function updateTreeProof() {
+            const proof = document.getElementById('treeProof');
+            const firstOk = treeHasSTPath(state.treeOne);
+            const secondOk = treeHasSTPath(state.treeTwo);
+            proof.innerHTML = `<span class="proof ${firstOk ? 'ok' : ''}">树甲 T1：S → T ${firstOk ? '✓ 连通' : '✗ 断开'}</span><span class="proof ${secondOk ? 'ok' : ''}">树乙 T2：S → T ${secondOk ? '✓ 连通' : '✗ 断开'}</span>`;
+        }
+
+        function setTreeFocus(nextFocus) {
+            focusedTree = nextFocus;
+            if (focusedTree !== 'both' && currentStep < 1) currentStep = 1;
+            document.querySelectorAll('[data-tree-focus]').forEach(button => {
+                button.setAttribute('aria-pressed', String(button.dataset.treeFocus === focusedTree));
+            });
+            const hint = document.getElementById('focusHint');
+            hint.textContent = focusedTree === 'both'
+                ? '提示：选择一棵树后，它和金色共享边会闪烁；暗下去的线属于另一棵树。'
+                : `${focusedTree === 'treeOne' ? '树甲 T1' : '树乙 T2'} 已高亮：从终端 S 沿亮线走到终端 T；金色边同时属于两棵树。`;
+            render();
+        }
+
+        function chooseCut(redId) {
+            if (currentStep < 3 || chosen) return;
+            if (!selectCut(redId, 'player')) return;
+            render();
+        }
+
+        function selectCut(redId, source) {
+            const response = LehmanPairingStrategy._findResponse(state, redId, plan);
+            if (!response || !response.repair) return false;
+            chosen = { redId, response, repaired:false, source };
+            return true;
+        }
+
+        function repairChosen() {
+            if (!chosen || chosen.repaired) return;
+            LehmanPairingStrategy._applyResponse(state, chosen.response);
+            chosen.repaired = true;
+        }
+
+        function renderTerminals(svg) {
+            const first = bluePoint(0, 0), last = bluePoint(0, C - 2);
+            const bottomFirst = bluePoint(R, 0), bottomLast = bluePoint(R, C - 2);
+            [[first, last, boardTop - 34, '终端 S：顶部 3 个蓝点收缩为 1 个点'], [bottomFirst, bottomLast, boardTop + R * step + 34, '终端 T：底部 3 个蓝点收缩为 1 个点']].forEach(([from, to, y, text]) => {
+                svg.appendChild(svgElement('line', { x1:from.x, y1:y, x2:to.x, y2:y, class:'terminal-rail' }));
+                svg.appendChild(svgElement('line', { x1:from.x, y1:y, x2:from.x, y2:from.y, class:'terminal-rail' }));
+                svg.appendChild(svgElement('line', { x1:to.x, y1:y, x2:to.x, y2:to.y, class:'terminal-rail' }));
+                svg.appendChild(svgElement('circle', { cx:(from.x + to.x) / 2, cy:y, r:14, class:'terminal-node' }));
+                const label = svgElement('text', { x:(from.x + to.x) / 2, y:y - (y < boardTop ? 22 : -27), class:'terminal-text' });
+                label.textContent = text;
+                svg.appendChild(label);
+            });
+        }
+
+        function renderCutParts(svg) {
+            if (currentStep < 4 || !chosen || currentStep > 5) return;
+            const parts = getCutParts();
+            if (!parts) return;
+            const pointA = vertexPoint(parts.blockedFrom);
+            const pointB = vertexPoint(parts.blockedTo);
+            const marker = (point, className, text, offset) => {
+                svg.appendChild(svgElement('circle', { cx:point.x, cy:point.y, r:16, class:className }));
+                const label = svgElement('text', { x:point.x + offset, y:point.y - 21, class:'partition-label' });
+                label.textContent = text;
+                svg.appendChild(label);
+            };
+            marker(pointA, 'partition-a', '部分 A', -20);
+            marker(pointB, 'partition-b', '部分 B', 20);
+            if (currentStep === 5) {
+                const repairA = vertexPoint(parts.repairFrom);
+                const repairB = vertexPoint(parts.repairTo);
+                const repairAInA = parts.componentA.has(parts.repairFrom);
+                marker(repairA, repairAInA ? 'partition-a' : 'partition-b', repairAInA ? 'A 端' : 'B 端', -20);
+                marker(repairB, repairAInA ? 'partition-b' : 'partition-a', repairAInA ? 'B 端' : 'A 端', 20);
+            }
+        }
+
+        function render() {
+            const svg = document.getElementById('demoSvg');
+            svg.innerHTML = '';
+            renderTerminals(svg);
+            const shared = new Set([...state.treeOne].filter(edge => state.treeTwo.has(edge)));
+            const cutEdge = chosen?.response.repair?.blockedBlueEdge;
+            const repairEdge = chosen && currentStep >= 5 ? chosen.response.edgeId : null;
+
+            blueEdges.forEach(id => {
+                const [from, to] = edgePoints(id, 'blue');
+                let className = 'edge';
+                if (currentStep >= 1) {
+                    if (shared.has(id) && currentStep >= 2) className += ' shared';
+                    else if (state.treeOne.has(id)) className += ' tree-one';
+                    else if (state.treeTwo.has(id)) className += ' tree-two';
+                }
+                if (focusedTree !== 'both' && currentStep >= 1) {
+                    const belongsToFocusedTree = state[focusedTree].has(id);
+                    className += belongsToFocusedTree ? ' focused-tree' : ' muted-tree';
+                }
+                if (currentStep >= 3 && id === cutEdge) className += ' cut';
+                if (currentStep >= 5 && id === repairEdge) className += ' repair';
+                svg.appendChild(svgElement('line', { x1:from.x, y1:from.y, x2:to.x, y2:to.y, class:className }));
+            });
+            // 共享边最后单独叠画，避免普通树边的颜色掩盖“两树共有”的金色语义。
+            if (currentStep >= 1) {
+                shared.forEach(id => {
+                    if (id === repairEdge && currentStep < 7) return;
+                    const [from, to] = edgePoints(id, 'blue');
+                    const focusClass = focusedTree === 'both' ? '' : ' focused-tree';
+                    svg.appendChild(svgElement('line', {
+                        x1:from.x, y1:from.y, x2:to.x, y2:to.y,
+                        class:`edge shared shared-overlay${focusClass}`
+                    }));
+                });
+            }
+            redEdges.forEach(id => {
+                const [from, to] = edgePoints(id, 'red');
+                let className = 'edge red';
+                if (chosen?.redId === id) className += ' played-red';
+                const line = svgElement('line', { x1:from.x, y1:from.y, x2:to.x, y2:to.y, class:className });
+                line.setAttribute('data-edge-id', id);
+                line.setAttribute('aria-label', describeEdge(id, 'red'));
+                if (currentStep === 3 && !chosen && LehmanPairingStrategy._crossingBlueEdge(id, R, C)) {
+                    line.style.cursor = 'pointer';
+                    line.addEventListener('click', () => chooseCut(id));
+                }
+                svg.appendChild(line);
+            });
+            for (let row = 0; row <= R; row++) for (let column = 0; column < C - 1; column++) {
+                const point = bluePoint(row, column); svg.appendChild(svgElement('circle', { cx:point.x, cy:point.y, r:9, class:'dot blue-dot' }));
+            }
+            for (let row = 0; row < R; row++) for (let column = 0; column < C; column++) {
+                const point = redPoint(row, column); svg.appendChild(svgElement('circle', { cx:point.x, cy:point.y, r:9, class:'dot red-dot' }));
+            }
+            renderCutParts(svg);
+            updateText();
+            updateCutChoice();
+            updateTreeProof();
+        }
+
+        function updateCutChoice() {
+            const choice = document.getElementById('cutChoice');
+            if (!chosen) {
+                choice.textContent = currentStep === 3
+                    ? '本轮尚未选择切割边：请点击一条红色内部边。'
+                    : '本轮尚未选择切割边。';
+                return;
+            }
+            const prefix = chosen.source === 'player' ? '本轮讲解沿用你选择的切割：' : '本轮未选择切割，正在使用示例：';
+            choice.textContent = `${prefix}${describeEdge(chosen.redId, 'red')}。后续 A/B、绿色替代边和修复都会以这一次切割为准。`;
+        }
+
+        function updateText() {
+            const [badge, title, desc] = steps[currentStep];
+            document.getElementById('stepBadge').textContent = badge;
+            document.getElementById('stepTitle').textContent = title;
+            document.getElementById('stepDesc').innerHTML = desc;
+            const status = document.getElementById('dynamicStatus');
+            if (!chosen) {
+                status.innerHTML = currentStep === 3
+                    ? '<strong>等待破坏：</strong>点击一条红色内部边，观察它切断的是树甲还是树乙。'
+                    : '<strong>当前不变量：</strong>树甲和树乙都保持 S 到 T 连通；金色边是蓝方已经修好的公共边。';
+                return;
+            }
+            const treeName = chosen.response.repair.brokenTree === 'treeOne' ? '树甲 T1（青色）' : '树乙 T2（橙色）';
+            const redDescription = describeEdge(chosen.redId, 'red');
+            const blockedDescription = describeEdge(chosen.response.repair.blockedBlueEdge, 'blue');
+            const repairDescription = describeEdge(chosen.response.edgeId, 'blue');
+            if (currentStep === 4) {
+                status.innerHTML = `<strong>断开原因：</strong>红方走了${redDescription}，禁用了${blockedDescription}。红色虚线两端的 A、B 就是${treeName}被分开的两部分；此时树内没有任何路径能从 A 走到 B。`;
+            } else if (currentStep === 5) {
+                status.innerHTML = `<strong>为什么选绿色边：</strong>${repairDescription}来自另一棵仍完整的树。它的一端标为 A，另一端标为 B，正好跨越断树缺失的连接；这正是修复所需的边。`;
+            } else if (currentStep === 6) {
+                status.innerHTML = `<strong>修复的作用：</strong>蓝方修了${repairDescription}。它把 A、B 接回同一部分，替代被禁用的${blockedDescription}，${treeName}因此重新 S-T 连通。`;
+            } else if (currentStep >= 7) {
+                status.innerHTML = `<strong>下一轮为何仍可应对：</strong>${repairDescription}已转为金色公共边。两棵树再次都 S-T 连通；下一次红方破坏一条候选边时，仍可从另一棵完整树找一条跨割边重复修复。`;
+            } else {
+                status.innerHTML = `<strong>切断已定位：</strong>红方走了${redDescription}。它与${blockedDescription}相交，因此禁用了这条属于${treeName}的蓝线。下一步先标出它把树分开的两部分。`;
+            }
+        }
+
+        function setStep(next) {
+            const targetStep = Math.max(0, Math.min(steps.length - 1, next));
+            const savedCut = chosen ? { redId:chosen.redId, source:chosen.source } : null;
+            if (targetStep < currentStep || targetStep === 0) {
+                reset();
+                if (savedCut && targetStep >= 3) selectCut(savedCut.redId, savedCut.source);
+            }
+            currentStep = targetStep;
+            if (currentStep >= 4 && !chosen) selectCut('rh_0_0', 'example');
+            if (currentStep >= 6) {
+                repairChosen();
+            }
+            render();
+        }
+        document.getElementById('prevBtn').addEventListener('click', () => setStep(currentStep - 1));
+        document.getElementById('nextBtn').addEventListener('click', () => setStep(currentStep + 1));
+        document.getElementById('resetBtn').addEventListener('click', () => { reset(); currentStep = 0; render(); });
+        document.getElementById('changeCutBtn').addEventListener('click', () => { reset(); currentStep = 3; render(); });
+        document.querySelectorAll('[data-tree-focus]').forEach(button => {
+            button.addEventListener('click', () => setTreeFocus(button.dataset.treeFocus));
+        });
+        reset(); render();
+    </script>
+</body>
+</html>
