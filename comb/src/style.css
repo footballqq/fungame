@@ -282,6 +282,33 @@ td:hover {
     transition: all 0.2s;
 }
 
+.matrix-tabs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.matrix-tab-btn {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.matrix-tab-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.matrix-tab-btn.active {
+    background: rgba(56, 189, 248, 0.2);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    font-weight: bold;
+}
+
 .result-highlight {
     display: inline-block;
     margin-top: 1rem;

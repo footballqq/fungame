@@ -142,16 +142,7 @@ function setupEventListeners() {
         });
     });
 
-    // Toggle recurrence mode
-    if (formulaCard) {
-        formulaCard.addEventListener('click', () => {
-            const model = MODELS[currentMode];
-            if (model && model.formulaZh && model.formulaZh.includes('\n')) {
-                useAltRecurrence = !useAltRecurrence;
-                updateUI();
-            }
-        });
-    }
+
 
     if (visualCard) {
         visualCard.addEventListener('click', () => {
@@ -219,19 +210,38 @@ function updateUI() {
     if (exEn) exEn.innerText = formatString(model.explainEn);
 
     // 3. Update Formulas
-    const rf = getEl('recurrence-formula');
-    if (rf) {
+    const mt = getEl('matrix-tabs');
+    const af = getEl('active-formula-display');
+    
+    if (mt && af) {
         if (model.formulaZh.includes('\n')) {
-            rf.style.cursor = 'pointer';
-            rf.title = '点击切换递推演示 / Click to toggle recurrence demo';
+            mt.style.display = 'flex';
             const lines = model.formulaZh.split('\n');
             const labels = model.modeLabels || [];
-            rf.innerHTML = `<div class="${!useAltRecurrence ? 'active-formula' : ''}">${labels[0] ? `<b>${labels[0]}</b><br>` : ''}${lines[0]}</div>
-                            <div class="${useAltRecurrence ? 'active-formula' : ''}">${labels[1] ? `<b>${labels[1]}</b><br>` : ''}${lines[1]}</div>`;
+            
+            mt.innerHTML = `
+                <button class="matrix-tab-btn ${!useAltRecurrence ? 'active' : ''}" data-alt="false">
+                    ${labels[0] || '视角 1'}
+                </button>
+                <button class="matrix-tab-btn ${useAltRecurrence ? 'active' : ''}" data-alt="true">
+                    ${labels[1] || '视角 2'}
+                </button>
+            `;
+            
+            // Set the active formula text
+            af.innerHTML = useAltRecurrence ? lines[1] : lines[0];
+            af.style.display = 'block';
+
+            mt.querySelectorAll('.matrix-tab-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    useAltRecurrence = btn.dataset.alt === 'true';
+                    updateUI();
+                });
+            });
         } else {
-            rf.innerHTML = model.formulaZh.replace('\n', '<br>');
-            rf.style.cursor = 'default';
-            rf.title = '';
+            mt.style.display = 'none';
+            af.innerHTML = model.formulaZh.replace('\n', '<br>');
+            af.style.display = 'block';
         }
     }
 

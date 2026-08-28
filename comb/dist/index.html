@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>球盒模型演示系统（n球m盒) | Balls and Boxes Demo</title>
     <link rel="icon" href="./assets/favicon-CUenFZYv.ico">
-  <script type="module" crossorigin src="./assets/main-CfEtG-Bi.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-ZWV0CW54.css">
+  <script type="module" crossorigin src="./assets/main-CIfiQzr0.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-CGTKtpBO.css">
 </head>
 
 <body>
@@ -41,8 +41,13 @@
 
             <div class="content-grid">
                 <section class="matrix-section card">
-                    <h2>递推矩阵 Matrix f(n, m)</h2>
+                    <div class="matrix-header-container" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                        <h2 style="margin-bottom: 0;">递推矩阵 Matrix</h2>
+                        <div id="matrix-tabs" class="matrix-tabs"></div>
+                    </div>
+                    <div id="active-formula-display" class="latex-box" style="margin-bottom: 1rem; font-size: 1.1rem; padding: 0.75rem;"></div>
                     <div class="matrix-container" id="matrix-container"></div>
+                    <div id="closed-formula" class="latex-box highlight" style="margin-top: 1rem; font-size: 1.1rem; padding: 0.75rem;"></div>
                 </section>
 
                 <section class="details-section">
@@ -54,12 +59,6 @@
                         <div id="visual-demo-container">
                             <canvas id="canvas"></canvas>
                         </div>
-                    </div>
-
-                    <div class="formula-card card">
-                        <h2>公式 Formulas</h2>
-                        <div id="recurrence-formula" class="latex-box"></div>
-                        <div id="closed-formula" class="latex-box highlight"></div>
                     </div>
 
                     <div class="explanation-card card">
