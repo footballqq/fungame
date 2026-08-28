@@ -303,6 +303,7 @@ function renderMatrix() {
             if (mInput) mInput.value = currentM;
             if (nVal) nVal.textContent = currentN;
             if (mVal) mVal.textContent = currentM;
+            generateDistribution();
             updateUI();
         });
     });
@@ -310,6 +311,8 @@ function renderMatrix() {
 
 function generateDistribution() {
     distribution = Array.from({ length: currentM }, () => []);
+
+    if (currentM === 0) return; // Prevent crash when m=0
 
     if (currentMode.startsWith('D')) {
         for (let i = 0; i < currentN; i++) {
