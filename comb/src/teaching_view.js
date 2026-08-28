@@ -27,6 +27,7 @@ export function renderEnumerationCardsHtml(enums, mode) {
                 const balls = p.map(b => `<span class="mini-ball distinct-ball ball-c${b}">${b}</span>`).join('');
                 return `<span class="mini-group">{${balls}}</span>`;
             }).join(' + ');
+            if (!detail) detail = '<i>{空}</i>';
         } else if (mode === 'II') {
             detail = item.partition.map(cnt => {
                 return `<span class="mini-part"><span class="badge-num">${cnt}</span></span>`;

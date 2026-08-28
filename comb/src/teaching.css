@@ -111,6 +111,16 @@
     font-weight: 600;
     cursor: pointer;
 }
+.teaching-icon {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+}
+.teaching-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    flex-grow: 1;
+}
 
 /* 题目与情境 */
 .story-box {

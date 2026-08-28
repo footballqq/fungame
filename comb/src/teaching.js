@@ -29,6 +29,9 @@ export class TeachingManager {
             II: { level: 1, state: 'unanswered', selectedId: null, attempts: 0 }
         };
 
+        this.toastContent = null;
+        this.toastTimer = null;
+
         this.container = null;
     }
 
@@ -247,36 +250,28 @@ export class TeachingManager {
             </div>
 
             ${renderConceptModalHtml(this.showConceptModal)}
-            <div id="comparison-toast" class="comparison-toast hidden"></div>
+            <div id="comparison-toast" class="comparison-toast ${this.toastContent ? 'visible' : 'hidden'}">
+                ${this.toastContent || ''}
+            </div>
         `;
 
         this.bindEvents();
     }
 
     showComparisonNotice(fromMode, toMode) {
-        const toast = document.getElementById('comparison-toast');
-        if (!toast) return;
+        if (!this.isExpanded) return;
 
         const content = renderComparisonToastContent(fromMode, toMode);
         if (!content) return;
 
-        toast.innerHTML = content;
-        toast.classList.remove('hidden');
-        toast.classList.add('visible');
+        this.toastContent = content;
+        if (this.toastTimer) clearTimeout(this.toastTimer);
+        
+        this.render();
 
-        const closeBtn = document.getElementById('toast-close-btn');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                toast.classList.remove('visible');
-                toast.classList.add('hidden');
-            });
-        }
-
-        setTimeout(() => {
-            if (toast) {
-                toast.classList.remove('visible');
-                toast.classList.add('hidden');
-            }
+        this.toastTimer = setTimeout(() => {
+            this.toastContent = null;
+            this.render();
         }, 7000);
     }
 
@@ -285,6 +280,15 @@ export class TeachingManager {
         if (toggleBtn) {
             toggleBtn.addEventListener('click', () => {
                 this.isExpanded = !this.isExpanded;
+                this.render();
+            });
+        }
+
+        const closeToastBtn = document.getElementById('toast-close-btn');
+        if (closeToastBtn) {
+            closeToastBtn.addEventListener('click', () => {
+                this.toastContent = null;
+                if (this.toastTimer) clearTimeout(this.toastTimer);
                 this.render();
             });
         }

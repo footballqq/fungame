@@ -58,6 +58,7 @@ export const MODELS = {
             if (!alt) return { matrix: S, isStirling: true };
 
             const total = Array.from({ length: n + 1 }, () => Array(m + 1).fill(0));
+            total[0][0] = 1;
             for (let i = 0; i <= n; i++) {
                 for (let j = 1; j <= m; j++) {
                     let sum = 0;
@@ -104,6 +105,7 @@ export const MODELS = {
                 }
             }
             const total = Array.from({ length: n + 1 }, () => Array(m + 1).fill(0));
+            total[0][0] = 1;
             for (let i = 0; i <= n; i++) {
                 for (let j = 1; j <= m; j++) {
                     total[i][j] = C[i + j - 1][j - 1];

@@ -176,6 +176,7 @@ function setupEventListeners() {
                 if (mInput) mInput.value = currentM;
                 if (mVal) mVal.textContent = currentM;
             }
+            generateDistribution();
             updateUI();
         }
         resizeCanvas();
