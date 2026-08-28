@@ -1,10 +1,14 @@
-import { MODELS } from './math.js';
+// codex: 2026-08-28 集成教学引导组件与双向参数联动，默认采用从易到难推荐模式 (DD)
 
-let currentMode = 'II';
-let currentN = 5;
-let currentM = 3;
+import { MODELS } from './math.js';
+import { TeachingManager } from './teaching.js';
+
+let currentMode = 'DD';
+let currentN = 2;
+let currentM = 2;
 let useAltRecurrence = false;
 let distribution = [];
+let teachingManager = null;
 
 let nInput, mInput, nVal, mVal, matrixContainer, modeBtns, formulaCard, canvas, ctx, visualCard;
 
@@ -16,7 +20,7 @@ const query = (sel) => document.querySelector(sel);
 let matrixSize = window.innerWidth < 640 ? 7 : 10;
 
 function init() {
-    // 1. Robust DOM selection
+    // 1. DOM selection
     nInput = getEl('n-input');
     mInput = getEl('m-input');
     nVal = getEl('n-val');
@@ -28,16 +32,47 @@ function init() {
     if (canvas) ctx = canvas.getContext('2d');
     visualCard = query('.visual-card');
 
-    currentN = 5;
-    currentM = 3;
-    currentMode = 'II';
+    currentN = 2;
+    currentM = 2;
+    currentMode = 'DD';
     useAltRecurrence = false;
 
-    // 4. Update DOM to match these defaults
-    nInput.value = currentN;
-    mInput.value = currentM;
-    nInput.max = matrixSize;
-    mInput.max = matrixSize;
+    // 2. 初始化教学引导控制器
+    const teachingContainer = getEl('teaching-container');
+    teachingManager = new TeachingManager({
+        onSyncParams: (n, m) => {
+            currentN = n;
+            currentM = m;
+            if (nInput) {
+                nInput.value = n;
+                if (nVal) nVal.textContent = n;
+            }
+            if (mInput) {
+                mInput.value = m;
+                if (mVal) mVal.textContent = m;
+            }
+            generateDistribution();
+            updateUI();
+        },
+        onSwitchMode: (mode) => {
+            switchMode(mode);
+        }
+    });
+
+    if (teachingContainer) {
+        teachingManager.mount(teachingContainer);
+        teachingManager.setMode(currentMode);
+    }
+
+    // 3. Update DOM to match defaults
+    if (nInput) {
+        nInput.value = currentN;
+        nInput.max = matrixSize;
+    }
+    if (mInput) {
+        mInput.value = currentM;
+        mInput.max = matrixSize;
+    }
     if (nVal) nVal.textContent = currentN;
     if (mVal) mVal.textContent = currentM;
 
@@ -47,88 +82,113 @@ function init() {
         else btn.classList.remove('active');
     });
 
-    // 5. Setup all interactions
+    // 4. Setup all interactions
     setupEventListeners();
 
-    // 6. Initial render sequence
+    // 5. Initial render sequence
     generateDistribution();
     updateUI();
 
-    // 7. Final polish after layout settles (especially for Canvas and Matrix grid)
+    // 6. Final polish after layout settles
     setTimeout(() => {
         resizeCanvas();
         updateUI();
     }, 100);
 }
 
-function setupEventListeners() {
-    nInput.addEventListener('input', (e) => {
-        currentN = parseInt(e.target.value);
-        nVal.textContent = currentN;
-        generateDistribution();
-        updateUI();
+function switchMode(newMode, prevMode = null) {
+    if (!MODELS[newMode]) return;
+    const oldMode = prevMode || currentMode;
+    currentMode = newMode;
+    useAltRecurrence = false;
+
+    modeBtns.forEach(b => {
+        if (b.dataset.mode === currentMode) b.classList.add('active');
+        else b.classList.remove('active');
     });
 
-    mInput.addEventListener('input', (e) => {
-        currentM = parseInt(e.target.value);
-        mVal.textContent = currentM;
-        generateDistribution();
-        updateUI();
-    });
+    if (teachingManager) {
+        teachingManager.setMode(newMode, oldMode);
+    }
+
+    updateUI();
+}
+
+function setupEventListeners() {
+    if (nInput) {
+        nInput.addEventListener('input', (e) => {
+            currentN = parseInt(e.target.value);
+            if (nVal) nVal.textContent = currentN;
+            generateDistribution();
+            updateUI();
+        });
+    }
+
+    if (mInput) {
+        mInput.addEventListener('input', (e) => {
+            currentM = parseInt(e.target.value);
+            if (mVal) mVal.textContent = currentM;
+            generateDistribution();
+            updateUI();
+        });
+    }
 
     modeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            modeBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            currentMode = btn.dataset.mode;
-            useAltRecurrence = false; // Reset to default
-            updateUI();
+            const newMode = btn.dataset.mode;
+            if (newMode !== currentMode) {
+                switchMode(newMode, currentMode);
+            }
         });
     });
 
     // Toggle recurrence mode
-    formulaCard.addEventListener('click', (e) => {
-        const model = MODELS[currentMode];
-        if (model.formulaZh.includes('\n')) {
-            useAltRecurrence = !useAltRecurrence;
-            updateUI();
-        }
-    });
+    if (formulaCard) {
+        formulaCard.addEventListener('click', () => {
+            const model = MODELS[currentMode];
+            if (model && model.formulaZh && model.formulaZh.includes('\n')) {
+                useAltRecurrence = !useAltRecurrence;
+                updateUI();
+            }
+        });
+    }
 
-    visualCard.addEventListener('click', () => {
-        generateDistribution();
-        drawVisualDemo();
-    });
+    if (visualCard) {
+        visualCard.addEventListener('click', () => {
+            generateDistribution();
+            drawVisualDemo();
+        });
+    }
 
     window.addEventListener('resize', () => {
         const newSize = window.innerWidth < 640 ? 7 : 10;
         if (newSize !== matrixSize) {
             matrixSize = newSize;
-            nInput.max = matrixSize;
-            mInput.max = matrixSize;
+            if (nInput) nInput.max = matrixSize;
+            if (mInput) mInput.max = matrixSize;
             if (currentN > matrixSize) {
                 currentN = matrixSize;
-                nInput.value = currentN;
-                nVal.textContent = currentN;
+                if (nInput) nInput.value = currentN;
+                if (nVal) nVal.textContent = currentN;
             }
             if (currentM > matrixSize) {
                 currentM = matrixSize;
-                mInput.value = currentM;
-                mVal.textContent = currentM;
+                if (mInput) mInput.value = currentM;
+                if (mVal) mVal.textContent = currentM;
             }
             updateUI();
         }
         resizeCanvas();
     });
 
-    // Initial slider setup
-    nInput.max = matrixSize;
-    mInput.max = matrixSize;
+    if (nInput) nInput.max = matrixSize;
+    if (mInput) mInput.max = matrixSize;
 
     resizeCanvas();
 }
 
 function resizeCanvas() {
+    if (!canvas || !canvas.parentElement) return;
     const container = canvas.parentElement;
     canvas.width = container.clientWidth;
     canvas.height = container.clientHeight;
@@ -183,6 +243,7 @@ function updateUI() {
 }
 
 function renderMatrix() {
+    if (!matrixContainer) return;
     const model = MODELS[currentMode];
     const result = model.calculate(matrixSize, matrixSize, useAltRecurrence);
     const matrix = result.matrix || result;
@@ -197,14 +258,11 @@ function renderMatrix() {
             let val = matrix[i][j];
             const isSelected = (i === currentN && j === currentM);
 
-            // Calculate corner value (Exactly m) when in At most m mode
             let cornerVal = '';
             if (useAltRecurrence) {
                 if (currentMode === 'DI') {
-                    // DI: Matrix shows Sum, Corner shows S(i, j)
                     cornerVal = result.componentMatrix[i][j];
                 } else if (currentMode === 'II') {
-                    // II: Matrix shows Sum f(i, j), Corner shows p(i, j) = f(i-j, j)
                     if (i >= j) cornerVal = matrix[i - j][j];
                     else cornerVal = 0;
                 }
@@ -214,14 +272,9 @@ function renderMatrix() {
             let label = '';
             let cornerHtml = cornerVal !== '' ? `<span class="cell-corner">${cornerVal}</span>` : '';
 
-            // In summation mode for DI, use componentMatrix for dependencies
-            const depMatrix = (currentMode === 'DI' && useAltRecurrence) ? result.componentMatrix : matrix;
-
-            // Check if this cell is a dependency of the selected cell
             const deps = model.getDependencies(currentN, currentM, useAltRecurrence);
             const dep = deps.find(d => d.r === i && d.c === j);
             if (dep) {
-                // If it's a dependency, show the component value if in DI sum mode
                 if (currentMode === 'DI' && useAltRecurrence && !isSelected) {
                     val = result.componentMatrix[i][j];
                 }
@@ -245,10 +298,10 @@ function renderMatrix() {
         td.addEventListener('click', () => {
             currentN = parseInt(td.dataset.r);
             currentM = parseInt(td.dataset.c);
-            nInput.value = currentN;
-            mInput.value = currentM;
-            nVal.textContent = currentN;
-            mVal.textContent = currentM;
+            if (nInput) nInput.value = currentN;
+            if (mInput) mInput.value = currentM;
+            if (nVal) nVal.textContent = currentN;
+            if (mVal) mVal.textContent = currentM;
             updateUI();
         });
     });
@@ -258,13 +311,11 @@ function generateDistribution() {
     distribution = Array.from({ length: currentM }, () => []);
 
     if (currentMode.startsWith('D')) {
-        // Distinct balls: assign each to a random box
         for (let i = 0; i < currentN; i++) {
             const dest = Math.floor(Math.random() * currentM);
             distribution[dest].push(i);
         }
     } else {
-        // Identical balls: random composition
         let remaining = currentN;
         for (let i = 0; i < currentM - 1; i++) {
             const count = Math.floor(Math.random() * (remaining + 1));
@@ -274,13 +325,13 @@ function generateDistribution() {
         for (let k = 0; k < remaining; k++) distribution[currentM - 1].push('ball');
     }
 
-    // If Identical boxes, sort the distribution to show canonical form
     if (currentMode.endsWith('I')) {
         distribution.sort((a, b) => b.length - a.length);
     }
 }
 
 function drawVisualDemo() {
+    if (!ctx || !canvas) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     const margin = 50;
@@ -288,36 +339,32 @@ function drawVisualDemo() {
     const boxH = 60;
     const spacing = (canvas.width - 2 * margin - currentM * boxW) / (currentM - 1 || 1);
 
-    // Dynamic Header
     ctx.fillStyle = '#fff';
     ctx.font = 'bold 16px Outfit';
     ctx.textAlign = 'center';
     const val = MODELS[currentMode].calculate(10, 10);
     const matrix = val.matrix || val;
-    ctx.fillText(`${currentN} Balls → ${currentM} Boxes: ${matrix[currentN][currentM]} ways`, canvas.width / 2, 30);
+    const ways = matrix[currentN] ? matrix[currentN][currentM] : 0;
+    ctx.fillText(`${currentN} Balls → ${currentM} Boxes: ${ways} ways`, canvas.width / 2, 30);
     ctx.font = '12px Outfit';
     ctx.fillStyle = varColor('--text-secondary');
     ctx.fillText('(点击卡片切换示例 / Click card to cycle examples)', canvas.width / 2, 50);
 
-    // Draw Boxes and Balls inside them
     for (let i = 0; i < currentM; i++) {
         const x = margin + i * (boxW + spacing);
         const y = canvas.height - 120;
 
-        // Draw Box
         ctx.strokeStyle = varColor('--accent-color');
         ctx.lineWidth = 2;
         ctx.strokeRect(x, y, boxW, boxH);
 
-        // Box Label
         ctx.fillStyle = varColor('--text-secondary');
         ctx.font = '12px Outfit';
         ctx.textAlign = 'center';
         const label = currentMode.endsWith('D') ? `Box ${i + 1}` : `Part ${i + 1}`;
         ctx.fillText(label, x + boxW / 2, y + boxH + 20);
 
-        // Draw Balls in this box
-        const balls = distribution[i];
+        const balls = distribution[i] || [];
         const ballRadius = 6;
         balls.forEach((ball, idx) => {
             const bx = x + 15 + (idx % 4) * 15;
@@ -326,7 +373,7 @@ function drawVisualDemo() {
             ctx.beginPath();
             ctx.arc(bx, by, ballRadius, 0, Math.PI * 2);
             if (typeof ball === 'number') {
-                ctx.fillStyle = `hsl(${(ball * 360 / currentN)}, 70%, 60%)`;
+                ctx.fillStyle = `hsl(${(ball * 360 / (currentN || 1))}, 70%, 60%)`;
                 ctx.fill();
                 ctx.fillStyle = '#fff';
                 ctx.font = '8px Outfit';
@@ -342,20 +389,17 @@ function drawVisualDemo() {
 function varColor(name) {
     const color = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
     if (color) return color;
-    // Fallbacks if CSS isn't fully ready
     if (name === '--accent-color') return '#38bdf8';
     if (name === '--text-secondary') return '#94a3b8';
     return '#ffffff';
 }
 
-// 1. Initialize logic as soon as DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
     init();
 }
 
-// 2. Refresh canvas once everything (CSS/Fonts) is fully loaded
 window.addEventListener('load', () => {
     resizeCanvas();
     updateUI();

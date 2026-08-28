@@ -1,3 +1,6 @@
+/* codex: 2026-08-28 引入教学引导模块样式 */
+@import './teaching.css';
+
 :root {
     --bg-color: #0f172a;
     --card-bg: rgba(30, 41, 59, 0.7);

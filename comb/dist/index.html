@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>球盒模型演示系统（n球m盒) | Balls and Boxes Demo</title>
     <link rel="icon" href="./assets/favicon-CUenFZYv.ico">
-  <script type="module" crossorigin src="./assets/main-B8s0SRBv.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-CHCS5WgV.css">
+  <script type="module" crossorigin src="./assets/main-BV_j-LaB.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-DZUm2x5c.css">
 </head>
 
 <body>
@@ -18,10 +18,10 @@
                 <a href="combmath.html" class="math-link">📖 数学原理解析 / Math Principles</a>
             </div>
             <nav id="mode-selector">
-                <button class="mode-btn active" data-mode="II">球同 盒同 (ID/ID)</button>
-                <button class="mode-btn" data-mode="DI">球异 盒同 (DS/ID)</button>
-                <button class="mode-btn" data-mode="ID">球同 盒异 (ID/DS)</button>
-                <button class="mode-btn" data-mode="DD">球异 盒异 (DS/DS)</button>
+                <button class="mode-btn active" data-mode="DD">1. 球异 盒异 (DS/DS)</button>
+                <button class="mode-btn" data-mode="ID">2. 球同 盒异 (ID/DS)</button>
+                <button class="mode-btn" data-mode="DI">3. 球异 盒同 (DS/ID)</button>
+                <button class="mode-btn" data-mode="II">4. 球同 盒同 (ID/ID)</button>
             </nav>
         </header>
 
@@ -29,13 +29,13 @@
             <section class="controls">
                 <div class="control-group">
                     <label for="n-input">球数 (n):</label>
-                    <input type="range" id="n-input" min="0" max="10" value="5">
-                    <span id="n-val">5</span>
+                    <input type="range" id="n-input" min="0" max="10" value="2">
+                    <span id="n-val">2</span>
                 </div>
                 <div class="control-group">
                     <label for="m-input">盒数 (m):</label>
-                    <input type="range" id="m-input" min="1" max="10" value="3">
-                    <span id="m-val">3</span>
+                    <input type="range" id="m-input" min="1" max="10" value="2">
+                    <span id="m-val">2</span>
                 </div>
             </section>
 
@@ -46,17 +46,20 @@
                 </section>
 
                 <section class="details-section">
-                    <div class="formula-card card">
-                        <h2>公式 Formulas</h2>
-                        <div id="recurrence-formula" class="latex-box"></div>
-                        <div id="closed-formula" class="latex-box highlight"></div>
-                    </div>
+                    <!-- 教学引导与问答互动面板 -->
+                    <div id="teaching-container"></div>
 
                     <div class="visual-card card">
                         <h2>可视化演示 Visual Demo</h2>
                         <div id="visual-demo-container">
                             <canvas id="canvas"></canvas>
                         </div>
+                    </div>
+
+                    <div class="formula-card card">
+                        <h2>公式 Formulas</h2>
+                        <div id="recurrence-formula" class="latex-box"></div>
+                        <div id="closed-formula" class="latex-box highlight"></div>
                     </div>
 
                     <div class="explanation-card card">
