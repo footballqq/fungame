@@ -23,3 +23,4 @@
 - [X] 修复: `history/historycards.py` 兼容缺依赖环境（`pypinyin`/`openai` 缺失时可导入，便于 `pytest` 运行）
 
 - [X] 新增: `apps/yingchun/` 首页“每日一题”，默认从 3–4 年级考试池确定性随机抽 1 题（支持开始练习/本设备换一题，并带缓存与加载提示）
+- [X] 文档: 优化 `boardgame/tzarr/Tzaar_ I play the game_zh.html` 游戏规则说明（修正获胜条件表述及中心黑洞不可跨越等细节）

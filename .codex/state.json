@@ -1,14 +1,12 @@
 {
-  "current_task": "迎春杯：首页每日一题",
+  "current_task": "优化 Tzaar 规则说明文档并提交推送",
   "last_changes": [
-    "apps/yingchun/js/app.js",
-    "apps/yingchun/index.html",
+    "boardgame/tzarr/Tzaar_ I play the game_zh.html",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git status 确认变更",
     "git commit 并 push"
   ],
-  "notes": "首页新增“每日一题”卡片：确定性随机抽题（按本地日期+db+offset），缓存到 localStorage；按钮：开始今日一题 / 换一题（仅本设备）。"
+  "notes": "已优化 Tzaar 中文规则（修正获胜条件表述及中心黑洞不可跨越等），更新 TODO 并提交推送"
 }
