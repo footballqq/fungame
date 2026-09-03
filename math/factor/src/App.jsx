@@ -1,3 +1,4 @@
+// codex: 2026-09-03 add version watermark in layout footer
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import useUserStore from './store/userStore';
@@ -82,6 +83,9 @@ const Layout = ({ children }) => {
       <main>
         {children}
       </main>
+      <footer style={{ textAlign: 'center', padding: '1.5rem', color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', borderTop: '1px solid rgba(255,255,255,0.05)', marginTop: '2rem' }}>
+        🪐 代数星系 · 因式分解探险 | Ver: 2026.09.03-v2
+      </footer>
     </div>
   )
 }
