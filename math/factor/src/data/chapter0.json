@@ -1,0 +1,162 @@
+{
+  "id": "chapter_0",
+  "title": "第 0 关：项数雷达站",
+  "blocks": [
+    {
+      "type": "story",
+      "text": "欢迎来到代数星系！在我们正式开始冒险之前，想象一下你正准备搬家。你的房间里散落着 3 个苹果、2 本书和 5 把椅子。"
+    },
+    {
+      "type": "concept",
+      "color": "blue",
+      "title": "什么是“展开”与“分解”？",
+      "content": [
+        "如果你把所有的东西都散落在地上，这就像是数学里的**“展开”**。比如：$2 \\times 3 = 6$，或者 $3x + 6$。它看起来很零散。",
+        "但是，如果你把相同的东西打包进盒子里，并且贴上标签，这就叫**“分解”**（或者叫打包）。",
+        "在代数里，**因式分解**本质上就是把散落的多项式重新“打包”成几个盒子（因式）相乘的样子。"
+      ]
+    },
+    {
+      "type": "story",
+      "text": "比如 $3x + 6$。如果你仔细观察，你会发现 3 和 6 都有一个共同点：它们都能被 3 整除。这就像你发现有些东西都可以装进名为“3”的盒子里一样！"
+    },
+    {
+      "type": "concept",
+      "color": "green",
+      "title": "第一法则：提取公因式 (GCF)",
+      "content": [
+        "面对任何一个多项式，我们要做的第一件事，永远是**寻找所有项的共同特征**（最大公约数）。",
+        "对于 $3x + 6$，共同特征是 3。我们把 3 提取出来，就像把它拉到了括号外面：",
+        "$3x + 6 = 3 \\times (x + 2)$",
+        "看！散落的东西被打包成了 $3$ 和 $(x+2)$ 两个包裹，这就是最基础的因式分解。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "遇到任何因式分解的题目，你的第一步应该做什么？",
+      "options": [
+        {
+          "text": "马上找公式套用",
+          "isCorrect": false,
+          "explanation": "错啦！就像搬家一样，你得先看看有没有能归类的东西，不能直接瞎打包。"
+        },
+        {
+          "text": "寻找并提取全局公因式 (GCF)",
+          "isCorrect": true,
+          "explanation": "完全正确！无论式子多复杂，第一步永远是扫描全局寻找并提取公因式。这是降维的第一步！"
+        }
+      ]
+    },
+    {
+      "type": "story",
+      "text": "提完公因式后，决定你接下来使用什么“招数”的，就是包裹里剩下的**项数**。让我们通过扫描仪来训练你的直觉！"
+    },
+    {
+      "type": "canvas",
+      "animId": "term_scanner",
+      "target": {
+        "items": [
+          {
+            "expression": "4x^2y",
+            "count": 1
+          },
+          {
+            "expression": "x^2 - 9",
+            "count": 2
+          },
+          {
+            "expression": "x^2 + 5x + 6",
+            "count": 3
+          },
+          {
+            "expression": "xy + x + y + 1",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "question": "分解 $12x^3y + 18x^2y^2$ 时，最大的公因式是？",
+      "options": [
+        {
+          "text": "$6x^2y$",
+          "isCorrect": true,
+          "explanation": "12 和 18 的最大公因数是 6；两项共有的 x 最低次数是 $x^2$，y 最低次数是 $y$。"
+        },
+        {
+          "text": "$6x^3y^2$",
+          "isCorrect": false,
+          "explanation": "公因式中的变量次数必须取每一项都具有的最低次数，不能取 $x^3y^2$。"
+        },
+        {
+          "text": "$3xy$",
+          "isCorrect": false,
+          "explanation": "它可以提取，但不是最大的公因式，漏掉了 2、x 和 y 的公共部分。"
+        }
+      ]
+    }
+  ],
+  "challengeQuizzes": [
+    {
+      "question": "这道式子一共有几项？ $4x^2 - 2x(y+1) + 7$",
+      "options": [
+        {
+          "text": "3 项",
+          "isCorrect": true,
+          "explanation": "正确！项是由加减号（括号外的）隔开的。分别是 $4x^2$、$-2x(y+1)$ 和 $7$。"
+        },
+        {
+          "text": "4 项",
+          "isCorrect": false,
+          "explanation": "注意括号 $(y+1)$ 内的加号不算作大项的分割线哦。"
+        },
+        {
+          "text": "2 项",
+          "isCorrect": false,
+          "explanation": "你可能漏掉了常数项 $7$。"
+        }
+      ]
+    },
+    {
+      "question": "在多项式 $-3a^3b + 5ab^2 - c$ 中，次数最高的是哪一项？",
+      "options": [
+        {
+          "text": "$-3a^3b$",
+          "isCorrect": true,
+          "explanation": "正确！它的总次数是 $3+1 = 4$ 次，是全场最高。"
+        },
+        {
+          "text": "$5ab^2$",
+          "isCorrect": false,
+          "explanation": "它的总次数是 $1+2 = 3$ 次，不如第一项高。"
+        },
+        {
+          "text": "$-c$",
+          "isCorrect": false,
+          "explanation": "它的次数只有 1 次。"
+        }
+      ]
+    },
+    {
+      "question": "请提取公因式：$15x^3y^2 - 10x^2y^3$",
+      "options": [
+        {
+          "text": "$5x^2y^2(3x - 2y)$",
+          "isCorrect": true,
+          "explanation": "完全正确！数字提取最大公约数 5，字母提取指数最小的 $x^2$ 和 $y^2$。"
+        },
+        {
+          "text": "$5xy(3x^2y - 2xy^2)$",
+          "isCorrect": false,
+          "explanation": "没有提取出最大的公因式，括号里还有公因式 $xy$ 没提干净。"
+        },
+        {
+          "text": "$10x^2y^2(1.5x - y)$",
+          "isCorrect": false,
+          "explanation": "一般不提取产生小数的系数哦。"
+        }
+      ]
+    }
+  ]
+}

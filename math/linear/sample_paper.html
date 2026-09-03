@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多重括号方程测试卷</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "SimSun", "STSong", "KaiTi", "Microsoft YaHei", serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            color: #111;
+        }
+        .paper-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            min-height: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #222;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .meta-info {
+            display: flex;
+            justify-content: space-around;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .meta-item {
+            border-bottom: 1px solid #333;
+            padding: 0 15px 2px 15px;
+            min-width: 100px;
+            display: inline-block;
+        }
+        .questions-list {
+            flex-grow: 1;
+        }
+        .question-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 45px;
+            font-size: 17px;
+            line-height: 1.8;
+            page-break-inside: avoid;
+        }
+        .q-num {
+            font-weight: bold;
+            min-width: 35px;
+        }
+        .q-content {
+            flex-grow: 1;
+        }
+        .single-eq {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .system-eq {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .left-brace {
+            font-size: 42px;
+            font-weight: 300;
+            line-height: 1;
+            margin-right: 2px;
+            font-family: "Times New Roman", serif;
+        }
+        .eq-lines {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .ans-blank {
+            margin-left: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* 倒置答案样式 */
+        .answer-section {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 2px dashed #aaa;
+            transform: rotate(180deg);
+            transform-origin: center center;
+            page-break-inside: avoid;
+        }
+        .answer-title {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .answer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 10px 20px;
+            font-size: 13px;
+            color: #333;
+        }
+        .ans-item {
+            background: #fafafa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            .paper-container {
+                box-shadow: none;
+                padding: 10mm 15mm;
+                max-width: 100%;
+                width: 100%;
+                border-radius: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="paper-container">
+        <div class="main-content">
+            <div class="header">
+                <div class="title">多重括号方程测试卷</div>
+                <div class="subtitle">方程与方程组专项训练</div>
+                <div class="meta-info">
+                    <div>姓名：<span class="meta-item"></span></div>
+                    <div>日期：<span class="meta-item"></span></div>
+                    <div>得分：<span class="meta-item"></span></div>
+                </div>
+            </div>
+
+            <div class="questions-list">
+                
+            <div class="question-item">
+                <div class="q-num">1、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>8x - (x + 2) = 68</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="question-item">
+                <div class="q-num">2、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>4[3(x - 6) - 5] - 14 = 26</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="question-item">
+                <div class="q-num">3、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>19 - 3{3[2(x - 3) + 1] - 8} = 16</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="question-item">
+                <div class="q-num">4、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>8x + (4x + 4) = 184</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="question-item">
+                <div class="q-num">5、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>5(3x - 4) + 7 = 7x + 59</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="question-item">
+                <div class="q-num">6、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>8x + (x + 12) = 21</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="question-item">
+                <div class="q-num">7、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>2{3[3(x - 2) - 4] + 1} - 14 = 72</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="question-item">
+                <div class="q-num">8、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>5(3x - 2) + 2(x - 5) = 3(x + 1) + 173</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="question-item">
+                <div class="q-num">9、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>3{3[3(2x + 5) - 6] + 7} - 11 = 307</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="question-item">
+                <div class="q-num">10、</div>
+                <div class="q-content">
+                <div class="single-eq">
+                    <span>2{3[3(2x + 5) + 2] - 6} + 2 = 416</span>
+                    <span class="ans-blank">的解为 ______.</span>
+                </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+        <div class="answer-section">
+            <div class="answer-title">【 参考答案（反向倒置印刷） 】</div>
+            <div class="answer-grid">
+                <div class="ans-item"><b>1.</b> x = 10</div>
+<div class="ans-item"><b>2.</b> x = 11</div>
+<div class="ans-item"><b>3.</b> x = 4</div>
+<div class="ans-item"><b>4.</b> x = 15</div>
+<div class="ans-item"><b>5.</b> x = 9</div>
+<div class="ans-item"><b>6.</b> x = 1</div>
+<div class="ans-item"><b>7.</b> x = 8</div>
+<div class="ans-item"><b>8.</b> x = 14</div>
+<div class="ans-item"><b>9.</b> x = 4</div>
+<div class="ans-item"><b>10.</b> x = 9</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

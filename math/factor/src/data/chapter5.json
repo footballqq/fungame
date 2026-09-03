@@ -1,0 +1,234 @@
+{
+  "id": "chapter_5",
+  "title": "第 5 关：绝对领域与艾森斯坦审判",
+  "blocks": [
+    {
+      "type": "story",
+      "text": "随着你深入代数星系，你遇到了一些看起来坚不可摧的“硬骨头”。无论你怎么用公式、怎么拼方块、怎么除法降维，都无济于事。"
+    },
+    {
+      "type": "concept",
+      "color": "orange",
+      "title": "不可约多项式与质数",
+      "content": [
+        "有时候，解不出来不是因为你不够努力，而是它在数学上**绝对不可约**。",
+        "在普通的数字世界里，有这样一种特别单纯的数字叫做**质数 (Prime Numbers)**，比如 2, 3, 5, 7, 11。它们除了 1 和自己之外，再也无法被其他任何数字整除（不能被拆分）。",
+        "同样地，在代数世界里，有些多项式就像质数一样，绝对无法被拆分为更低次多项式的乘积。",
+        "但是，如果你做不出题，你怎么证明它“不可约”，而不是你“没找对方法”呢？"
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "green",
+      "title": "艾森斯坦判别法 (Eisenstein's Criterion)",
+      "content": [
+        "这是代数学中的终极审判武器。如果你能找到一个**质数 p**，用它来对多项式的系数进行“三连拷问”，只要全中，就能证明它不可约：",
+        "**条件 1**：质数 $p$ **不能**整除最高次项的系数。（最高次项也就是最前面的那个大哥，它必须挺住）",
+        "**条件 2**：质数 $p$ **能**整除其余所有的系数。（后面的小弟全部被 $p$ 拿下）",
+        "**条件 3**：质数 $p$ 的平方（也就是 $p^2$）**不能**整除最后的常数项。（常数项不能向 $p^2$ 屈服）",
+        "只要满足这三个严苛的条件，这个多项式在有理数域上就**绝对不可约**！你可以直接写上结论交卷，停止一切无效计算。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "对于多项式 $3x^4 + 15x^3 + 10x^2 + 5x + 5$，我们怀疑它不可约。你应该选择哪个质数 $p$ 来进行艾森斯坦审判？",
+      "options": [
+        {
+          "text": "质数 3",
+          "isCorrect": false,
+          "explanation": "最高次项系数是 3。如果选 3，3 能整除 3。这违背了条件 1（不能整除最高次项）。最高项必须挺住！"
+        },
+        {
+          "text": "质数 2",
+          "isCorrect": false,
+          "explanation": "后面有系数 15 和 5，2 无法整除它们。这违背了条件 2（必须能整除其余所有项）。"
+        },
+        {
+          "text": "质数 5",
+          "isCorrect": true,
+          "explanation": "完美！条件1：5 不能整除 3；条件2：5 能整除 15, 10, 5, 5；条件3：5 的平方 25 不能整除常数项 5。三连审判全部通过，此式不可约！"
+        }
+      ]
+    },
+    {
+      "type": "story",
+      "text": "太棒了！你现在不仅会拆散多项式，还能一眼看穿那些“拆不散”的硬骨头。你已经掌握了因式分解世界里的最高阶武器。不要盲目计算，要学会审视和判定。现在，返回主星系，准备迎接最后的期末考核吧！"
+    },
+    {
+      "type": "quiz",
+      "question": "在有理数范围内，$x^2-2$ 的结论是什么？",
+      "options": [
+        {
+          "text": "不能分解成有理系数的一次因式",
+          "isCorrect": true,
+          "explanation": "它的根是 $\\pm\\sqrt{2}$，不是有理数；在实数范围内则可分解为 $(x-\\sqrt{2})(x+\\sqrt{2})$。"
+        },
+        {
+          "text": "等于 $(x-2)(x+1)$",
+          "isCorrect": false,
+          "explanation": "展开会得到 $x^2-x-2$，与原式不同。"
+        },
+        {
+          "text": "任何数域中都不能分解",
+          "isCorrect": false,
+          "explanation": "是否可分解取决于数域；在实数范围内可以使用 $\\sqrt{2}$ 分解。"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "blue",
+      "title": "多变量复合结构与双十字相乘",
+      "content": [
+        "面对 $x^2+3xy+2y^2+4x+5y+3$ 这类含 $x,y$ 的二次六项式，先把二次齐次部分 $x^2+3xy+2y^2$ 分解为 $(x+y)(x+2y)$。",
+        "再考虑常数项 3 的因子排布，尝试把式子组织为 $(x+y+1)(x+2y+3)$。",
+        "最后必须展开核验：$x$ 项为 $3x+x=4x$，$y$ 项为 $3y+2y=5y$。这就是双十字相乘的两层校验。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "$(x+y+1)(x+2y+3)$ 展开后的一次 $y$ 项系数是多少？",
+      "options": [
+        {
+          "text": "5",
+          "isCorrect": true,
+          "explanation": "一次 y 项来自 $3\\cdot y$ 与 $1\\cdot2y$，合计 $5y$。"
+        },
+        {
+          "text": "3",
+          "isCorrect": false,
+          "explanation": "漏掉了常数 1 与 $2y$ 的乘积。"
+        },
+        {
+          "text": "2",
+          "isCorrect": false,
+          "explanation": "漏掉了常数 3 与 y 的乘积。"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "orange",
+      "title": "待定系数法：假设结构，再对齐系数",
+      "content": [
+        "若知道四次式可分解成两个二次式，可以先设为 $(x^2+ax+b)(x^2+cx+d)$，再展开并逐项对比系数。",
+        "例如 $x^4-x^3+4x^2+3x+5=(x^2+x+1)(x^2-2x+5)$。",
+        "它不是猜答案：$a+c=-1$、$ac+b+d=4$、$ad+bc=3$、$bd=5$ 是必须同时满足的方程组。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "设 $(x^2+ax+b)(x^2+cx+d)$，其 $x^3$ 项系数是？",
+      "options": [
+        {
+          "text": "$a+c$",
+          "isCorrect": true,
+          "explanation": "x³ 只来自 $ax\\cdot x^2$ 和 $cx\\cdot x^2$。"
+        },
+        {
+          "text": "$ac$",
+          "isCorrect": false,
+          "explanation": "$ac$ 是两个一次项相乘，对应 x² 项的一部分。"
+        },
+        {
+          "text": "$bd$",
+          "isCorrect": false,
+          "explanation": "$bd$ 是常数项。"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "green",
+      "title": "轮换与对称多项式",
+      "content": [
+        "若一个多项式在令 $a=b$ 时变为 0，因式定理告诉我们 $(a-b)$ 是它的因式。对称结构往往会同时给出 $(b-c)$、$(c-a)$。",
+        "例如 $a^2(b-c)+b^2(c-a)+c^2(a-b)$ 是三次式，因此可由三个一次差因式配平。",
+        "比较一组非零代入值即可确定常数，结果为 $-(a-b)(b-c)(c-a)$。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "若多项式 $P(a,b,c)$ 在 $a=b$ 时恒为 0，可以立刻确定哪个因式？",
+      "options": [
+        {
+          "text": "$(a-b)$",
+          "isCorrect": true,
+          "explanation": "把 a 看成变量，a=b 是一个根，因此 $(a-b)$ 是因式。"
+        },
+        {
+          "text": "$(a+b)$",
+          "isCorrect": false,
+          "explanation": "a=b 并不表示 a=-b。"
+        },
+        {
+          "text": "$(abc)$",
+          "isCorrect": false,
+          "explanation": "零值条件并没有说明任一变量必为 0。"
+        }
+      ]
+    }
+  ],
+  "challengeQuizzes": [
+    {
+      "question": "组合技极限测试：分解 $x^6 - 64$",
+      "options": [
+        {
+          "text": "$(x^3 - 8)(x^3 + 8)$",
+          "isCorrect": false,
+          "explanation": "这只是第一步平方差！这俩括号全是立方公式，还需要继续拆！"
+        },
+        {
+          "text": "$(x-2)(x^2+2x+4)(x+2)(x^2-2x+4)$",
+          "isCorrect": true,
+          "explanation": "一代宗师！先平方差变成立方差和立方和，再用两次立方公式彻底拆解！"
+        },
+        {
+          "text": "$(x^2 - 4)^3$",
+          "isCorrect": false,
+          "explanation": "这可不是完全立方公式。"
+        }
+      ]
+    },
+    {
+      "question": "隐蔽的完全平方：分解 $a^2 - 2ab + b^2 - c^2$",
+      "options": [
+        {
+          "text": "$(a - b - c)(a - b + c)$",
+          "isCorrect": true,
+          "explanation": "漂亮的三一分组法！前三项合成 $(a-b)^2$，再与 $c^2$ 形成平方差！"
+        },
+        {
+          "text": "$(a - b)^2 - c^2$",
+          "isCorrect": false,
+          "explanation": "分解没有到底。"
+        },
+        {
+          "text": "$(a - c)(a + c) - b(2a - b)$",
+          "isCorrect": false,
+          "explanation": "这样的分组不能创造出可以继续提取的公因式。"
+        }
+      ]
+    },
+    {
+      "question": "因式分解黄金法则，哪一个是第一步？",
+      "options": [
+        {
+          "text": "数数有几项",
+          "isCorrect": false,
+          "explanation": "这是第二步！"
+        },
+        {
+          "text": "提取最大的公因式 (GCF)",
+          "isCorrect": true,
+          "explanation": "无论面对什么怪物，雷达站的第一扫描永远是：提取公因式！"
+        },
+        {
+          "text": "使用长除法",
+          "isCorrect": false,
+          "explanation": "长除法是没招时的最后手段。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "id": "base3",
+  "title": "前置营地 3：多项式乘多项式",
+  "blocks": [
+    {
+      "type": "story",
+      "text": "终于来到了最后的前置训练！如果两个多项式相乘，怎么办？\n\n你可以想象这是两军交战，每一位士兵都要和敌方的每一位士兵交手一次！不漏过任何一个。"
+    },
+    {
+      "type": "concept",
+      "color": "blue",
+      "title": "二项式相乘：FOIL 法则",
+      "content": [
+        "对于两个二项式相乘 $(a+b)(c+d)$，有一个经典的口诀叫 **FOIL**：",
+        "• **F**irst（首项相乘）：$a \\cdot c = ac$",
+        "• **O**utside（外项相乘）：$a \\cdot d = ad$",
+        "• **I**nside（内项相乘）：$b \\cdot c = bc$",
+        "• **L**ast（尾项相乘）：$b \\cdot d = bd$",
+        "全部加起来就是 $ac + ad + bc + bd$。",
+        "**完整示例 $(x + 2)(x + 5)$：**",
+        "F: $x \\cdot x = x^2$",
+        "O: $x \\cdot 5 = 5x$",
+        "I: $2 \\cdot x = 2x$",
+        "L: $2 \\cdot 5 = 10$",
+        "写在一起：$= x^2 + 5x + 2x + 10$。最后合并同类项 $= x^2 + 7x + 10$。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "一步一测：用 FOIL 展开 $(x - 3)(x + 4)$",
+      "options": [
+        {
+          "text": "$x^2 - 12$",
+          "isCorrect": false,
+          "explanation": "你只算了 F 和 L，漏掉了中间的 O 和 I！这可是致命错误。"
+        },
+        {
+          "text": "$x^2 + x - 12$",
+          "isCorrect": true,
+          "explanation": "漂亮！F:$x^2$, O:$4x$, I:$-3x$, L:$-12$。合并 $4x - 3x = x$。"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "orange",
+      "title": "面积盒模型 (Box Method)",
+      "content": [
+        "如果项数变多，比如二项式乘三项式，FOIL 就容易乱了。这时候你可以画一个**面积盒**！",
+        "这其实也是因式分解“十字相乘”的几何本质。",
+        "计算 $(x - 3)(x + 3)$：",
+        "你可以画一个 2x2 的格子：",
+        "行是 $x$ 和 $-3$，列是 $x$ 和 $+3$。",
+        "四格分别是：$x^2$, $3x$, $-3x$, $-9$。",
+        "**详细计算步骤**：",
+        "$= x^2 + 3x - 3x - 9$",
+        "$= x^2 + (3 - 3)x - 9$",
+        "$= x^2 - 9$ (看！中间项抵消了！)"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "思考题：你刚才发现了什么公式的乘法展开？",
+      "options": [
+        {
+          "text": "完全平方公式",
+          "isCorrect": false,
+          "explanation": "完全平方展开会多出一个中间项，刚才中间项抵消了！"
+        },
+        {
+          "text": "平方差公式",
+          "isCorrect": true,
+          "explanation": "非常棒！因式分解中把 $x^2-9$ 变回 $(x-3)(x+3)$，就是这条路径的逆行！"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "green",
+      "title": "展开完全平方：$(x - 4)^2$ 的陷阱",
+      "content": [
+        "无数学生在写 $(x - 4)^2$ 时，会直接写成 $x^2 - 16$。千万别掉进这个大坑！",
+        "**正确的展开逻辑：** $(x - 4)^2 = (x - 4)(x - 4)$",
+        "用 FOIL 法则：",
+        "F: $x \\cdot x = x^2$",
+        "O: $x \\cdot -4 = -4x$",
+        "I: $-4 \\cdot x = -4x$",
+        "L: $-4 \\cdot -4 = +16$",
+        "**合体合并：** $= x^2 - 4x - 4x + 16 = x^2 - 8x + 16$。记住中间这 $-8x$！"
+      ]
+    },
+    {
+      "type": "story",
+      "text": "恭喜你！你已经掌握了多项式乘法的所有武器！你会发现，因式分解无非就是把这些乘法结果“逆向拆解”出来。\n\n准备好开始第 0 关挑战了吗？"
+    }
+  ],
+  "challengeQuizzes": [
+    {
+      "question": "展开二项式：$(2x + 1)(x - 3)$",
+      "options": [
+        {
+          "text": "$2x^2 - 3$",
+          "isCorrect": false,
+          "explanation": "漏掉了中间项。一定要用 FOIL！"
+        },
+        {
+          "text": "$2x^2 - 5x - 3$",
+          "isCorrect": true,
+          "explanation": "F: $2x^2$, O: $-6x$, I: $+x$, L: $-3$。合并 $-6x+x = -5x$。"
+        },
+        {
+          "text": "$2x^2 - 6x - 3$",
+          "isCorrect": false,
+          "explanation": "合并 O 和 I 错误，$-6x + x = -5x$。"
+        }
+      ]
+    },
+    {
+      "question": "完全平方陷阱：$(3a + 2)^2$ 展开后是？",
+      "options": [
+        {
+          "text": "$9a^2 + 4$",
+          "isCorrect": false,
+          "explanation": "你漏掉了中间的 O 和 I 项！记住它是 $(3a+2)(3a+2)$。"
+        },
+        {
+          "text": "$9a^2 + 12a + 4$",
+          "isCorrect": true,
+          "explanation": "F: $9a^2$, O: $6a$, I: $6a$, L: $4$。合并 $6a+6a = 12a$。"
+        },
+        {
+          "text": "$9a^2 + 6a + 4$",
+          "isCorrect": false,
+          "explanation": "O 和 I 有两个 $6a$，所以加起来是 $12a$。"
+        }
+      ]
+    },
+    {
+      "question": "二项式乘以三项式：$(x - 2)(x^2 + 2x + 4)$",
+      "options": [
+        {
+          "text": "$x^3 - 8$",
+          "isCorrect": true,
+          "explanation": "逐项乘开：$x^3 + 2x^2 + 4x - 2x^2 - 4x - 8$。中间项全抵消！这是著名的立方差公式展开。"
+        },
+        {
+          "text": "$x^3 - 4x^2 - 8$",
+          "isCorrect": false,
+          "explanation": "中间项 $2x^2 - 2x^2 = 0$。"
+        },
+        {
+          "text": "$x^3 - 2x^2 + 8$",
+          "isCorrect": false,
+          "explanation": "常数项是 $-2 \\times 4 = -8$。"
+        }
+      ]
+    }
+  ]
+}

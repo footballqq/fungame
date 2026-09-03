@@ -1,0 +1,45 @@
+<div class="card">
+  <button class="btn" onclick="window.location.hash='#/'" style="margin-bottom: var(--space-4);">◀ 返回星空</button>
+  <h2>学习档案：<span id="profile-name"></span></h2>
+</div>
+
+<div class="card" style="display: flex; gap: var(--space-8); flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 200px; text-align: center;">
+    <div style="font-size: 64px;">⭐</div>
+    <h3>总经验值</h3>
+    <div id="profile-xp" style="font-size: 32px; font-weight: bold; color: var(--color-star);">0</div>
+  </div>
+  
+  <div style="flex: 1; min-width: 200px; text-align: center;">
+    <div style="font-size: 64px;">🔥</div>
+    <h3>连续学习</h3>
+    <div style="font-size: 32px; font-weight: bold; color: var(--color-accent-400);">
+      <span id="profile-streak">0</span> 天
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🏅 成就徽章</h2>
+  <div id="achievements-grid" style="display: flex; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-4);">
+    <!-- JS 生成 -->
+  </div>
+</div>
+
+<div class="card" style="margin-top: var(--space-6);">
+  <h2 style="margin-bottom: var(--space-4);">📝 考试历史成绩</h2>
+  <div id="exam-history-container" style="display: flex; flex-direction: column; gap: var(--space-3);">
+    <!-- JS 生成 -->
+  </div>
+</div>
+
+<div class="card" style="margin-top: var(--space-6);">
+  <h2 style="margin-bottom: var(--space-4);">📔 错题本</h2>
+  <div id="mistakes-book-container" style="display: flex; flex-direction: column; gap: var(--space-4);">
+    <!-- JS 生成 -->
+  </div>
+</div>
+
+<div class="text-center" style="margin-top: var(--space-6);">
+  <button class="btn" id="btn-switch-user" style="background-color: var(--color-primary-800);">切换探险家</button>
+</div>

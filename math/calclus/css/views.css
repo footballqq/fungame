@@ -1,0 +1,202 @@
+/* views.css */
+/* --- 学习地图首页 (Home) --- */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: radial-gradient(circle at center, var(--color-primary-800), var(--color-primary-950));
+  border-radius: var(--radius-lg);
+  overflow-y: auto;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+  margin-bottom: var(--space-6);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.map-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.planet-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  transition: transform var(--duration-normal) var(--ease-out-back);
+  z-index: 10;
+}
+
+.planet-node:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* 悬停时的超强发光效果 */
+.planet-node:not(.planet-locked):hover .planet-glow {
+  box-shadow: 
+    inset -15px -15px 25px rgba(0, 0, 0, 0.6), 
+    inset 10px 10px 20px rgba(255, 255, 255, 0.6), 
+    0 0 50px var(--p-glow), 
+    0 0 80px var(--p-glow);
+  filter: brightness(1.2);
+}
+
+/* 锁定状态悬停时轻微发光 */
+.planet-locked:hover .planet-glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* 已锁定的星球状态 */
+.planet-locked {
+  filter: brightness(0.7); /* 移除灰度，保留原本颜色，仅仅是变暗 */
+  opacity: 1;
+}
+.planet-locked .planet-glow {
+  box-shadow: 
+    inset -15px -15px 25px rgba(0, 0, 0, 0.6), 
+    inset 10px 10px 20px rgba(255, 255, 255, 0.2); /* 去除外发光 */
+}
+
+/* --- 星球基础样式 --- */
+.planet-glow {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, 
+    var(--p-light, var(--color-accent-300)) 0%, 
+    var(--p-base, var(--color-accent-500)) 40%, 
+    var(--p-dark, var(--color-primary-800)) 80%, 
+    var(--color-primary-950) 100%
+  );
+  box-shadow: 
+    inset -15px -15px 25px rgba(0, 0, 0, 0.6), 
+    inset 10px 10px 20px rgba(255, 255, 255, 0.4), 
+    0 0 35px var(--p-glow, rgba(100, 200, 255, 0.4)); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-out; /* 让发光效果平滑过渡 */
+}
+
+/* 各种星球的鲜艳配色主题 */
+.planet-emerald {
+  --p-light: #6ee7b7;
+  --p-base: #10b981;
+  --p-dark: #047857;
+  --p-glow: rgba(16, 185, 129, 0.8);
+}
+.planet-cyan {
+  --p-light: #67e8f9;
+  --p-base: #06b6d4;
+  --p-dark: #0e7490;
+  --p-glow: rgba(6, 182, 212, 0.8);
+}
+.planet-gold {
+  --p-light: #fde047;
+  --p-base: #eab308;
+  --p-dark: #a16207;
+  --p-glow: rgba(234, 179, 8, 0.8);
+}
+.planet-magenta {
+  --p-light: #f9a8d4;
+  --p-base: #ec4899;
+  --p-dark: #be185d;
+  --p-glow: rgba(236, 72, 153, 0.8);
+}
+
+/* 给星球增加一点纹理/环形装饰 */
+.planet-glow::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -20%;
+  width: 140%;
+  height: 40%;
+  border-radius: 50%;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.1);
+  transform: rotate(-20deg);
+}
+
+.planet-name {
+  margin-top: 10px;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 4px 14px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+}
+
+.planet-locked {
+  filter: brightness(0.6) opacity(0.8);
+}
+.planet-locked .planet-glow {
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* --- 用户管理页 (Users) --- */
+.users-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+
+.user-cards-grid {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-6);
+}
+
+.user-card {
+  width: 150px;
+  background-color: var(--color-primary-800);
+  border: 2px solid var(--color-primary-700);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-in-out);
+}
+
+.user-card:hover {
+  border-color: var(--color-accent-400);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.user-card-avatar {
+  font-size: 48px;
+  margin-bottom: var(--space-2);
+}
+
+.user-card-name {
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.new-user-form {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.new-user-form input {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-primary-600);
+  background-color: var(--color-primary-900);
+  color: var(--text-primary);
+  font-size: var(--text-base);
+}

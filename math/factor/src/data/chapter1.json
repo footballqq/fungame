@@ -1,0 +1,202 @@
+{
+  "id": "chapter_1",
+  "title": "第 1 关：两项式的秘密",
+  "blocks": [
+    {
+      "type": "story",
+      "text": "欢迎来到「两项式之岛」。还记得雷达站的教诲吗？第一步提取公因式之后，接下来就是“数项数”。如果式子里只有两项（比如 $x^2 - 9$），那么你的大脑只需启动两种模式：平方差，或者立方和/差！"
+    },
+    {
+      "type": "concept",
+      "color": "orange",
+      "title": "模式一：平方差公式 (Difference of Squares)",
+      "content": [
+        "**适用场景**：两项均为完全平方数，且符号相反（如 $a^2 - b^2$）。",
+        "**核心逻辑**：利用公式 $a^2 - b^2 = (a-b)(a+b)$ 进行直接分解。关键在于通过开平方识别出底数 $a$ 和 $b$。",
+        "比如 $x^2 - 16$，你必须火眼金睛看出 16 是 $4^2$，所以它变成了 $(x-4)(x+4)$。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "试着分解平方差：$x^2 - 49$。",
+      "options": [
+        {
+          "text": "$(x-49)(x+1)$",
+          "isCorrect": false,
+          "explanation": "错误！49 还没有被开平方。49 是 7 的平方。"
+        },
+        {
+          "text": "$(x-7)(x+7)$",
+          "isCorrect": true,
+          "explanation": "正确！底数是 $x$ 和 $7$，所以是 $(x-7)(x+7)$。"
+        },
+        {
+          "text": "$(x-7)^2$",
+          "isCorrect": false,
+          "explanation": "这是完全平方式展开的样子，会多出一个中间项哦。"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "进阶挑战：如何分解 $4x^2 - 25$？",
+      "options": [
+        {
+          "text": "$(4x-5)(4x+5)$",
+          "isCorrect": false,
+          "explanation": "注意 $4x^2$ 的底数不是 $4x$，因为 4 也需要开平方，应该是 $2x$。"
+        },
+        {
+          "text": "$(2x-5)(2x+5)$",
+          "isCorrect": true,
+          "explanation": "完美！$4x^2$ 是 $(2x)^2$，25 是 $5^2$。底数是 $2x$ 和 $5$。"
+        },
+        {
+          "text": "无法分解",
+          "isCorrect": false,
+          "explanation": "它完全符合平方差的条件哦。"
+        }
+      ]
+    },
+    {
+      "type": "story",
+      "text": "你可能会问，如果两项是相加的呢？比如 $x^2 + 9$。请记住一条铁律：如果是平方和（$a^2 + b^2$），在实数范围内它**绝对无法分解**！"
+    },
+    {
+      "type": "concept",
+      "color": "blue",
+      "title": "模式二：立方公式是怎么被发现的？(零点与待定系数)",
+      "content": [
+        "很多人觉得 $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ 难以凭空想象。其实它不是硬背的，而是有 3 个极其自然的思考步骤：",
+        "**1. 寻找零点，确定第一个因子**：",
+        "观察 $a^3 + b^3$，如果令 $a = -b$，代入得到 $(-b)^3 + b^3 = 0$。",
+        "根据因式定理：既然 $a = -b$（即 $a + b = 0$）能让整个式子变成 0，那么 $(a + b)$ 就绝对是它的一个因子！",
+        "即：$a^3 + b^3 = (a + b) \\times (\\text{二次式})$。",
+        "**2. 用“待定系数法”推导二次式**：",
+        "设 $a^3 + b^3 = (a + b)(a^2 + \\lambda ab + b^2)$，展开右边：",
+        "$= a(a^2 + \\lambda ab + b^2) + b(a^2 + \\lambda ab + b^2) = a^3 + (\\lambda + 1)a^2b + (\\lambda + 1)ab^2 + b^3$。",
+        "左边只有 $a^3 + b^3$，没有交叉项，所以中间项必须抵消：$\\lambda + 1 = 0 \\implies \\lambda = -1$！",
+        "于是二次式就是 $(a^2 - ab + b^2)$，完美推导出 $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$！"
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "green",
+      "title": "启发思考：3 个核心提问与 SOAP 记忆法",
+      "content": [
+        "下次遇到立方和/差，问自己三个问题：",
+        "• **第一步：有没有明显的零点？** 令 $a = -b \\implies (a + b)$ 出来（或令 $a = b \\implies (a - b)$ 出来）。",
+        "• **第二步：剩下什么？** 三次 $\\div$ 一次 $=$ 二次，结构为 $(a^2 + ?ab + b^2)$。",
+        "• **第三步：怎么让中间项抵消？** 求出中间项为 $-ab$（同理 $a^3 - b^3$ 为 $+ab$）。",
+        "**对照表与 SOAP 口诀**：",
+        "• $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$",
+        "• $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$",
+        "**SOAP** 辅助记忆：**S**ame（短括号符号与原式相同）、**O**pposite（长括号首符相反）、**A**lways **P**ositive（末符永远为正）。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "利用 SOAP 口诀，分解立方和 $x^3 + 27$。提示：27 的立方根是 3。",
+      "options": [
+        {
+          "text": "$(x+3)(x^2 - 3x + 9)$",
+          "isCorrect": true,
+          "explanation": "漂亮！Same(+), Opposite(-), Always Positive(+)。"
+        },
+        {
+          "text": "$(x+3)(x^2 + 3x + 9)$",
+          "isCorrect": false,
+          "explanation": "O 代表 Opposite，长括号的第一个符号应该是相反的减号！"
+        },
+        {
+          "text": "$(x-3)(x^2 + 3x + 9)$",
+          "isCorrect": false,
+          "explanation": "S 代表 Same，短括号的符号应该和原式相同！"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "终极测试：分解 $8x^3 - 125$！提示：找出各自的立方底数。",
+      "options": [
+        {
+          "text": "$(8x-125)(...)$",
+          "isCorrect": false,
+          "explanation": "你需要先求它们的立方根！"
+        },
+        {
+          "text": "$(2x-5)(4x^2 - 10x + 25)$",
+          "isCorrect": false,
+          "explanation": "符号填错啦，原式是减号，O (Opposite) 应该是加号！"
+        },
+        {
+          "text": "$(2x-5)(4x^2 + 10x + 25)$",
+          "isCorrect": true,
+          "explanation": "真棒！$8x^3$ 的底是 $2x$，$125$ 的底是 $5$。根据 SOAP (-, +, +)，得到正确答案。"
+        }
+      ]
+    }
+  ],
+  "challengeQuizzes": [
+    {
+      "question": "综合试炼：分解 $16x^4 - 81$",
+      "options": [
+        {
+          "text": "$(4x^2 - 9)(4x^2 + 9)$",
+          "isCorrect": false,
+          "explanation": "分解得不彻底！$(4x^2 - 9)$ 还可以继续用平方差分解。"
+        },
+        {
+          "text": "$(2x - 3)(2x + 3)(4x^2 + 9)$",
+          "isCorrect": true,
+          "explanation": "满分！先分解成 $(4x^2 - 9)(4x^2 + 9)$，再把第一项分解为 $(2x-3)(2x+3)$。"
+        },
+        {
+          "text": "$(4x^2 - 9)^2$",
+          "isCorrect": false,
+          "explanation": "符号不同，不能合并成平方哦。"
+        }
+      ]
+    },
+    {
+      "question": "观察项数，提取再套公式：分解 $3x^3 - 75x$",
+      "options": [
+        {
+          "text": "$3x(x^2 - 25)$",
+          "isCorrect": false,
+          "explanation": "没有分解到底！括号里的平方差还要继续分解。"
+        },
+        {
+          "text": "$3x(x - 5)(x + 5)$",
+          "isCorrect": true,
+          "explanation": "完美！先提取公因式 $3x$，再用平方差公式处理剩下的部分。"
+        },
+        {
+          "text": "$(3x^2 - 15)(x + 5)$",
+          "isCorrect": false,
+          "explanation": "提取公因式一定要全部提干净，并且写在最前面。"
+        }
+      ]
+    },
+    {
+      "question": "利用 SOAP 口诀分解：$125a^3 + 8$",
+      "options": [
+        {
+          "text": "$(5a + 2)(25a^2 - 10a + 4)$",
+          "isCorrect": true,
+          "explanation": "太强了！底数是 $5a$ 和 $2$，符号 Same(+), Opposite(-), Always Positive(+)。"
+        },
+        {
+          "text": "$(5a + 2)(25a^2 + 10a + 4)$",
+          "isCorrect": false,
+          "explanation": "长括号的第一个符号应该是 Opposite（相反），即减号。"
+        },
+        {
+          "text": "$(125a + 8)(a^2 - 10a + 4)$",
+          "isCorrect": false,
+          "explanation": "你需要先求 $125a^3$ 和 $8$ 的立方根，即 $5a$ 和 $2$。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方程与方程组自动出题系统 (纯前端单文件版)</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-color: #f3f4f6;
+            --panel-bg: #ffffff;
+            --text-main: #1f2937;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "SimSun", "STSong", serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 左侧配置控制面板 */
+        .sidebar {
+            width: 360px;
+            min-width: 360px;
+            background-color: var(--panel-bg);
+            border-right: 1px solid #e5e7eb;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.03);
+            overflow-y: auto;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+        }
+
+        .type-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .type-card label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .type-card input[type="number"] {
+            width: 70px;
+            text-align: center;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: #10b981;
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background-color: #059669;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #d1d5db;
+            color: #374151;
+        }
+
+        .btn-outline:hover {
+            background-color: #f3f4f6;
+        }
+
+        /* 右侧预览区 */
+        .preview-area {
+            flex-grow: 1;
+            background-color: #e5e7eb;
+            overflow-y: auto;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 试卷容器 */
+        .paper-container {
+            width: 100%;
+            max-width: 800px;
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            min-height: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #222;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: space-around;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .meta-item {
+            border-bottom: 1px solid #333;
+            padding: 0 15px 2px 15px;
+            min-width: 100px;
+            display: inline-block;
+        }
+
+        .questions-list {
+            flex-grow: 1;
+        }
+
+        .question-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 45px;
+            font-size: 17px;
+            line-height: 1.8;
+            page-break-inside: avoid;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 35px;
+        }
+
+        .q-content {
+            flex-grow: 1;
+        }
+
+        .single-eq {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .system-eq {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .left-brace {
+            font-size: 42px;
+            font-weight: 300;
+            line-height: 1;
+            margin-right: 2px;
+            font-family: "Times New Roman", serif;
+        }
+
+        .eq-lines {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .ans-blank {
+            margin-left: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* 180度倒置答案样式 */
+        .answer-section {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 2px dashed #aaa;
+            transform: rotate(180deg);
+            transform-origin: center center;
+            page-break-inside: avoid;
+        }
+
+        .answer-title {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .answer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 10px 20px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .ans-item {
+            background: #fafafa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+                overflow: visible !important;
+            }
+            .sidebar {
+                display: none !important;
+            }
+            .preview-area {
+                padding: 0 !important;
+                background: none !important;
+            }
+            .paper-container {
+                box-shadow: none;
+                padding: 10mm 15mm;
+                max-width: 100%;
+                width: 100%;
+                border-radius: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 控制面板 -->
+    <div class="sidebar no-print">
+        <div class="brand">
+            <span>📐</span> 方程出题器 (纯 HTML 版)
+        </div>
+
+        <div class="form-group">
+            <label for="paperTitle">试卷标题</label>
+            <input type="text" id="paperTitle" value="方程与方程组小测验">
+        </div>
+
+        <div class="form-group">
+            <label>题目类型与数量</label>
+            
+            <div class="type-card">
+                <label><input type="checkbox" id="enable_1var" checked> 一元一次方程</label>
+                <input type="number" id="count_1var" value="3" min="0" max="20">
+            </div>
+
+            <div class="type-card">
+                <label><input type="checkbox" id="enable_2var" checked> 二元一次方程组</label>
+                <input type="number" id="count_2var" value="2" min="0" max="20">
+            </div>
+
+            <div class="type-card">
+                <label><input type="checkbox" id="enable_3var" checked> 三元一次方程组</label>
+                <input type="number" id="count_3var" value="1" min="0" max="20">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>题目难度/结构</label>
+            <div class="radio-group">
+                <label><input type="radio" name="difficulty" value="advanced" checked> 进阶复杂型 (含双重/三重嵌套括号)</label>
+                <label><input type="radio" name="difficulty" value="basic"> 基础标准型 (ax+b=c)</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="solutionMax">正整数解上限</label>
+            <input type="number" id="solutionMax" value="15" min="5" max="50">
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-primary" onclick="generatePaper()">🔄 生成/换一批题目</button>
+            <button class="btn btn-secondary" onclick="window.print()">🖨️ 打印试卷 (A4/PDF)</button>
+            <button class="btn btn-outline" onclick="downloadCurrentHTML()">💾 下载 HTML 网页</button>
+        </div>
+    </div>
+
+    <!-- 试卷预览区域 -->
+    <div class="preview-area">
+        <div class="paper-container" id="paperContainer">
+            <!-- 动态生成试卷内容 -->
+        </div>
+    </div>
+
+    <!-- 纯 JS 出题引擎 -->
+    <script>
+        class JSMathGenerator {
+            static randInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            static randChoice(arr) {
+                return arr[Math.floor(Math.random() * arr.length)];
+            }
+
+            static formatTerm(coeff, varName, isFirst = false) {
+                if (coeff === 0) return "";
+                const absC = Math.abs(coeff);
+                const coeffStr = (absC === 1 && varName !== "") ? "" : absC.toString();
+                const varStr = `${coeffStr}${varName}`;
+                if (isFirst) {
+                    return coeff < 0 ? `-${varStr}` : varStr;
+                } else {
+                    return coeff < 0 ? ` - ${varStr}` : ` + ${varStr}`;
+                }
+            }
+
+            static formatParen(k, innerStr) {
+                if (k === 1) return `(${innerStr})`;
+                if (k === -1) return `-(${innerStr})`;
+                return `${k}(${innerStr})`;
+            }
+
+            static weightedChoice(items, weights) {
+                const totalWeight = weights.reduce((a, b) => a + b, 0);
+                let randomNum = Math.random() * totalWeight;
+                for (let i = 0; i < items.length; i++) {
+                    if (randomNum < weights[i]) return items[i];
+                    randomNum -= weights[i];
+                }
+                return items[0];
+            }
+
+            // 一元一次方程 (支持 1重、2重[()]、3重{[()]})
+            static genLinear1Var(difficulty = "advanced", solMax = 15) {
+                const x = this.randInt(1, solMax);
+                if (difficulty === "basic") {
+                    const a = this.randInt(2, 12);
+                    const b = this.randInt(1, 30);
+                    const op = this.randChoice(['+', '-']);
+                    let c, eqStr;
+                    if (op === '+') {
+                        c = a * x + b;
+                        eqStr = `${this.formatTerm(a, 'x', true)} + ${b} = ${c}`;
+                    } else {
+                        c = a * x - b;
+                        if (c <= 0) {
+                            c = a * x + b;
+                            eqStr = `${this.formatTerm(a, 'x', true)} + ${b} = ${c}`;
+                        } else {
+                            eqStr = `${this.formatTerm(a, 'x', true)} - ${b} = ${c}`;
+                        }
+                    }
+                    return { type: "一元一次方程", question: eqStr, solution: `x = ${x}` };
+                } else {
+                    const weights = [10, 10, 10, 10, 10, 30, 20];
+                    const pattern = this.weightedChoice([1,2,3,4,5,6,7], weights);
+                    let eqStr = "";
+
+                    if (pattern === 1) {
+                        const k1 = this.randInt(2, 6), a1 = this.randInt(1, 5), b1 = this.randInt(1, 8);
+                        const k2 = this.randInt(1, 5), a2 = this.randInt(1, 4), b2 = this.randInt(1, 8);
+                        let k3 = this.randInt(1, 5), a3 = this.randInt(1, 4), b3 = this.randInt(1, 8);
+                        const op1 = this.randChoice(['+', '-']), op2 = this.randChoice(['+', '-']), op3 = this.randChoice(['+', '-']);
+                        const opBetween = this.randChoice(['+', '-']);
+                        const s1 = op1 === '+' ? 1 : -1, s2 = op2 === '+' ? 1 : -1, s3 = op3 === '+' ? 1 : -1;
+                        const sBetween = opBetween === '+' ? 1 : -1;
+                        while ((k1 * a1 + sBetween * k2 * a2) === k3 * a3) k3++;
+                        const valL = k1 * (a1 * x + s1 * b1) + sBetween * k2 * (a2 * x + s2 * b2);
+                        const valRBase = k3 * (a3 * x + s3 * b3);
+                        const constVal = valL - valRBase;
+                        const in1 = `${this.formatTerm(a1, 'x', true)} ${op1} ${b1}`;
+                        const in2 = `${this.formatTerm(a2, 'x', true)} ${op2} ${b2}`;
+                        const in3 = `${this.formatTerm(a3, 'x', true)} ${op3} ${b3}`;
+                        const p1 = this.formatParen(k1, in1), p2 = this.formatParen(k2, in2), p3 = this.formatParen(k3, in3);
+                        const opConst = constVal > 0 ? `+ ${constVal}` : (constVal < 0 ? `- ${Math.abs(constVal)}` : "");
+                        eqStr = `${p1} ${opBetween} ${p2} = ${p3} ${opConst}`.trim();
+                    } else if (pattern === 2) {
+                        const k1 = this.randInt(2, 6), a1 = this.randInt(1, 5), b1 = this.randInt(1, 8);
+                        const op1 = this.randChoice(['+', '-']);
+                        const s1 = op1 === '+' ? 1 : -1;
+                        const innerVal = k1 * (a1 * x + s1 * b1);
+                        const in1 = `${this.formatTerm(a1, 'x', true)} ${op1} ${b1}`;
+                        const p1 = this.formatParen(k1, in1);
+                        if (Math.random() > 0.5) {
+                            const c2 = this.randInt(1, 20);
+                            const c1 = innerVal + c2;
+                            eqStr = `${c1} - ${p1} = ${c2}`;
+                        } else {
+                            const c1 = this.randInt(1, 30);
+                            const c2 = innerVal - c1;
+                            eqStr = c2 > 0 ? `${p1} - ${c1} = ${c2}` : `${p1} + ${Math.abs(c2)} = ${c1}`;
+                        }
+                    } else if (pattern === 3) {
+                        let a1 = this.randInt(3, 10), a2 = this.randInt(1, 5);
+                        while (a1 === a2) a1++;
+                        const b1 = this.randInt(1, 15);
+                        const opIn = this.randChoice(['+', '-']), opMid = this.randChoice(['+', '-']);
+                        const sIn = opIn === '+' ? 1 : -1, sMid = opMid === '+' ? 1 : -1;
+                        const val = a1 * x + sMid * (a2 * x + sIn * b1);
+                        const t1 = this.formatTerm(a1, 'x', true);
+                        const in2 = `${this.formatTerm(a2, 'x', true)} ${opIn} ${b1}`;
+                        if (val > 0) {
+                            eqStr = `${t1} ${opMid} (${in2}) = ${val}`;
+                        } else {
+                            const constAdd = Math.abs(val) + this.randInt(5, 20);
+                            eqStr = `${t1} ${opMid} (${in2}) + ${constAdd} = ${val + constAdd}`;
+                        }
+                    } else if (pattern === 4) {
+                        const k1 = this.randInt(2, 5), a1 = this.randInt(1, 4), b1 = this.randInt(1, 6);
+                        const op1 = this.randChoice(['+', '-']), opD = this.randChoice(['+', '-']);
+                        const s1 = op1 === '+' ? 1 : -1, sD = opD === '+' ? 1 : -1;
+                        const d1 = this.randInt(1, 20);
+                        const leftVal = k1 * (a1 * x + s1 * b1) + sD * d1;
+                        let e1 = this.randInt(1, 8);
+                        while (k1 * a1 === e1) e1++;
+                        const f1 = leftVal - e1 * x;
+                        const tE = this.formatTerm(e1, 'x', true);
+                        const opF = f1 > 0 ? `+ ${f1}` : (f1 < 0 ? `- ${Math.abs(f1)}` : "");
+                        const in1 = `${this.formatTerm(a1, 'x', true)} ${op1} ${b1}`;
+                        const p1 = this.formatParen(k1, in1);
+                        eqStr = `${p1} ${opD} ${d1} = ${tE} ${opF}`.trim();
+                    } else if (pattern === 5) {
+                        const a1 = this.randInt(2, 6), a2 = this.randInt(1, 5), b1 = this.randInt(1, 15);
+                        let a3 = this.randInt(1, 5);
+                        while ((a1 + a2) === a3) a3++;
+                        const c1 = (a1 + a2) * x - b1 - a3 * x;
+                        const t1 = this.formatTerm(a1, 'x', true), t2 = this.formatTerm(a2, 'x', false), t3 = this.formatTerm(a3, 'x', true);
+                        const opC = c1 > 0 ? `+ ${c1}` : (c1 < 0 ? `- ${Math.abs(c1)}` : "");
+                        eqStr = `${t1}${t2} - ${b1} = ${t3} ${opC}`.trim();
+                    } else if (pattern === 6) {
+                        let a1 = this.randInt(1, 4), b1 = this.randInt(1, 6), op1 = this.randChoice(['+', '-']);
+                        let s1 = op1 === '+' ? 1 : -1;
+                        let v1 = a1 * x + s1 * b1;
+                        if (v1 <= 0) { op1 = '+'; s1 = 1; v1 = a1 * x + b1; }
+                        const k1 = this.randInt(2, 4), v2 = k1 * v1;
+                        let b2 = this.randInt(1, 8), op2 = this.randChoice(['+', '-']);
+                        let s2 = op2 === '+' ? 1 : -1;
+                        let v3 = v2 + s2 * b2;
+                        if (v3 <= 0) { op2 = '+'; s2 = 1; v3 = v2 + b2; }
+                        const k2 = this.randInt(2, 4), v4 = k2 * v3;
+                        let b3 = this.randInt(1, 20), op3 = this.randChoice(['+', '-']);
+                        let s3 = op3 === '+' ? 1 : -1;
+                        const in1 = `${this.formatTerm(a1, 'x', true)} ${op1} ${b1}`;
+                        const p1 = this.formatParen(k1, in1);
+                        const innerBracket = `${p1} ${op2} ${b2}`;
+                        const p2 = k2 !== 1 ? `${k2}[${innerBracket}]` : `[${innerBracket}]`;
+                        if (Math.random() > 0.5) {
+                            const C = v4 + s3 * b3;
+                            eqStr = `${p2} ${op3} ${b3} = ${C}`;
+                        } else {
+                            const C1 = v4 + this.randInt(5, 30);
+                            eqStr = `${C1} - ${p2} = ${C1 - v4}`;
+                        }
+                    } else {
+                        let a1 = this.randInt(1, 3), b1 = this.randInt(1, 5), op1 = this.randChoice(['+', '-']);
+                        let s1 = op1 === '+' ? 1 : -1;
+                        let v1 = a1 * x + s1 * b1;
+                        if (v1 <= 0) { op1 = '+'; s1 = 1; v1 = a1 * x + b1; }
+                        const k1 = this.randInt(2, 3), v2 = k1 * v1;
+                        let b2 = this.randInt(1, 6), op2 = this.randChoice(['+', '-']);
+                        let s2 = op2 === '+' ? 1 : -1;
+                        let v3 = v2 + s2 * b2;
+                        if (v3 <= 0) { op2 = '+'; s2 = 1; v3 = v2 + b2; }
+                        const k2 = this.randInt(2, 3), v4 = k2 * v3;
+                        let b3 = this.randInt(1, 8), op3 = this.randChoice(['+', '-']);
+                        let s3 = op3 === '+' ? 1 : -1;
+                        let v5 = v4 + s3 * b3;
+                        if (v5 <= 0) { op3 = '+'; s3 = 1; v5 = v4 + b3; }
+                        const k3 = this.randInt(2, 3), v6 = k3 * v5;
+                        let b4 = this.randInt(1, 15), op4 = this.randChoice(['+', '-']);
+                        let s4 = op4 === '+' ? 1 : -1;
+                        const in1 = `${this.formatTerm(a1, 'x', true)} ${op1} ${b1}`;
+                        const p1 = this.formatParen(k1, in1);
+                        const midBracket = `${p1} ${op2} ${b2}`;
+                        const p2 = k2 !== 1 ? `${k2}[${midBracket}]` : `[${midBracket}]`;
+                        const outerBrace = `${p2} ${op3} ${b3}`;
+                        const p3 = k3 !== 1 ? `${k3}{${outerBrace}}` : `{${outerBrace}}`;
+                        if (Math.random() > 0.5) {
+                            const C = v6 + s4 * b4;
+                            eqStr = `${p3} ${op4} ${b4} = ${C}`;
+                        } else {
+                            const C1 = v6 + this.randInt(5, 30);
+                            eqStr = `${C1} - ${p3} = ${C1 - v6}`;
+                        }
+                    }
+
+                    return { type: "一元一次方程", question: eqStr, solution: `x = ${x}` };
+                }
+            }
+            
+            // 二元一次方程组
+            static genLinear2Var(difficulty = "advanced", solMax = 15) {
+                const x = this.randInt(1, solMax), y = this.randInt(1, solMax);
+                let a1, b1, a2, b2;
+                while (true) {
+                    a1 = this.randInt(1, 9);
+                    b1 = this.randChoice([-9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9]);
+                    a2 = this.randInt(1, 9);
+                    b2 = this.randChoice([-9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9]);
+                    if (a1 * b2 - a2 * b1 !== 0) break;
+                }
+                const c1 = a1 * x + b1 * y, c2 = a2 * x + b2 * y;
+                if (difficulty === "basic") {
+                    const eq1 = `${this.formatTerm(a1, 'x', true)}${this.formatTerm(b1, 'y', false)} = ${c1}`;
+                    const eq2 = `${this.formatTerm(a2, 'x', true)}${this.formatTerm(b2, 'y', false)} = ${c2}`;
+                    return { type: "二元一次方程组", question: [eq1, eq2], solution: `x = ${x}, y = ${y}` };
+                } else {
+                    const buildAdv = (a, b, c) => {
+                        const mode = this.randInt(1, 3);
+                        if (mode === 1) {
+                            const aR = this.randInt(1, 5), bR = this.randInt(1, 5);
+                            const aL = a + aR, bL = b + bR;
+                            const eqL = `${this.formatTerm(aL, 'x', true)}${this.formatTerm(bL, 'y', false)}`.trim();
+                            const eqR = `${this.formatTerm(aR, 'x', true)}${this.formatTerm(bR, 'y', false)}`.trim();
+                            return c >= 0 ? `${eqL} = ${eqR} + ${c}` : `${eqL} + ${Math.abs(c)} = ${eqR}`;
+                        } else if (mode === 2) {
+                            const aR = this.randInt(1, 6), aL = a + aR;
+                            const eqL = `${this.formatTerm(aL, 'x', true)}${this.formatTerm(b, 'y', false)}`.trim();
+                            const eqR = `${this.formatTerm(aR, 'x', true)}`.trim();
+                            return c >= 0 ? `${eqL} = ${eqR} + ${c}` : `${eqL} + ${Math.abs(c)} = ${eqR}`;
+                        } else {
+                            return `${this.formatTerm(a, 'x', true)}${this.formatTerm(b, 'y', false)} = ${c}`;
+                        }
+                    };
+                    return { type: "二元一次方程组", question: [buildAdv(a1, b1, c1), buildAdv(a2, b2, c2)], solution: `x = ${x}, y = ${y}` };
+                }
+            }
+
+            // 三元一次方程组
+            static genLinear3Var(difficulty = "advanced", solMax = 10) {
+                const x = this.randInt(1, solMax), y = this.randInt(1, solMax), z = this.randInt(1, solMax);
+                let a1, b1, c1, a2, b2, c2, a3, b3, c3;
+                const nonZero = [-5,-4,-3,-2,-1,1,2,3,4,5];
+                while (true) {
+                    a1 = this.randInt(1, 6); b1 = this.randChoice(nonZero); c1 = this.randChoice(nonZero);
+                    a2 = this.randInt(1, 6); b2 = this.randChoice(nonZero); c2 = this.randChoice(nonZero);
+                    a3 = this.randInt(1, 6); b3 = this.randChoice(nonZero); c3 = this.randChoice(nonZero);
+                    const det = a1*(b2*c3 - b3*c2) - b1*(a2*c3 - a3*c2) + c1*(a2*b3 - a3*b2);
+                    if (det !== 0) break;
+                }
+                const d1 = a1*x + b1*y + c1*z, d2 = a2*x + b2*y + c2*z, d3 = a3*x + b3*y + c3*z;
+                const format3 = (a,b,c,d) => `${this.formatTerm(a,'x',true)}${this.formatTerm(b,'y',false)}${this.formatTerm(c,'z',false)} = ${d}`;
+                if (difficulty === "basic") {
+                    return { type: "三元一次方程组", question: [format3(a1,b1,c1,d1), format3(a2,b2,c2,d2), format3(a3,b3,c3,d3)], solution: `x = ${x}, y = ${y}, z = ${z}` };
+                } else {
+                    const buildAdv3 = (a,b,c,d) => {
+                        if (Math.random() > 0.5) {
+                            const aR = this.randInt(1,3), bR = this.randInt(1,3), cR = this.randInt(1,3);
+                            const aL = a + aR, bL = b + bR, cL = c + cR;
+                            const eqL = `${this.formatTerm(aL,'x',true)}${this.formatTerm(bL,'y',false)}${this.formatTerm(cL,'z',false)}`.trim();
+                            const eqR = `${this.formatTerm(aR,'x',true)}${this.formatTerm(bR,'y',false)}${this.formatTerm(cR,'z',false)}`.trim();
+                            return d >= 0 ? `${eqL} = ${eqR} + ${d}` : `${eqL} + ${Math.abs(d)} = ${eqR}`;
+                        } else {
+                            return format3(a,b,c,d);
+                        }
+                    };
+                    return { type: "三元一次方程组", question: [buildAdv3(a1,b1,c1,d1), buildAdv3(a2,b2,c2,d2), buildAdv3(a3,b3,c3,d3)], solution: `x = ${x}, y = ${y}, z = ${z}` };
+                }
+            }
+        }
+
+        function getFormConfig() {
+            const e1 = document.getElementById('enable_1var').checked;
+            const e2 = document.getElementById('enable_2var').checked;
+            const e3 = document.getElementById('enable_3var').checked;
+
+            return {
+                title: document.getElementById('paperTitle').value.trim() || '方程与方程组小测验',
+                enable_1var: e1,
+                count_1var: e1 ? Math.max(0, parseInt(document.getElementById('count_1var').value) || 0) : 0,
+                enable_2var: e2,
+                count_2var: e2 ? Math.max(0, parseInt(document.getElementById('count_2var').value) || 0) : 0,
+                enable_3var: e3,
+                count_3var: e3 ? Math.max(0, parseInt(document.getElementById('count_3var').value) || 0) : 0,
+                difficulty: document.querySelector('input[name="difficulty"]:checked').value,
+                solution_max: parseInt(document.getElementById('solutionMax').value) || 15
+            };
+        }
+
+        function generatePaper() {
+            const config = getFormConfig();
+            const totalCount = config.count_1var + config.count_2var + config.count_3var;
+            
+            if (totalCount === 0) {
+                alert('⚠️ 题目总数不能为 0！请至少勾选一种题型并设置题目数量大于 0。');
+                return;
+            }
+
+            const questions = [];
+            const seenQuestions = new Set();
+
+            const getUniqueQuestion = (genFn) => {
+                for (let i = 0; i < 30; i++) {
+                    const item = genFn(config.difficulty, config.solution_max);
+                    const qKey = JSON.stringify(item.question);
+                    if (!seenQuestions.has(qKey)) {
+                        seenQuestions.add(qKey);
+                        return item;
+                    }
+                }
+                return genFn(config.difficulty, config.solution_max);
+            };
+
+            if (config.enable_1var) {
+                for (let i = 0; i < config.count_1var; i++) {
+                    questions.push(getUniqueQuestion((diff, max) => JSMathGenerator.genLinear1Var(diff, max)));
+                }
+            }
+
+            if (config.enable_2var) {
+                for (let i = 0; i < config.count_2var; i++) {
+                    questions.push(getUniqueQuestion((diff, max) => JSMathGenerator.genLinear2Var(diff, max)));
+                }
+            }
+
+            if (config.enable_3var) {
+                for (let i = 0; i < config.count_3var; i++) {
+                    questions.push(getUniqueQuestion((diff, max) => JSMathGenerator.genLinear3Var(diff, max)));
+                }
+            }
+
+            renderPaperHTML(config.title, questions);
+        }
+
+        function renderPaperHTML(paperTitle, questions) {
+            const itemsHTML = [];
+            const answersHTML = [];
+
+            questions.forEach((item, idx) => {
+                const qNum = idx + 1;
+                const qContent = item.question;
+                const sol = item.solution;
+
+                let itemBody = "";
+                if (Array.isArray(qContent)) {
+                    const eqLines = qContent.map(eq => `<div>${eq}</div>`).join('');
+                    itemBody = `
+                    <div class="system-eq">
+                        <span class="left-brace">&#123;</span>
+                        <div class="eq-lines">${eqLines}</div>
+                        <span class="ans-blank">的解为 ______.</span>
+                    </div>`;
+                } else {
+                    itemBody = `
+                    <div class="single-eq">
+                        <span>${qContent}</span>
+                        <span class="ans-blank">的解为 ______.</span>
+                    </div>`;
+                }
+
+                itemsHTML.push(`
+                <div class="question-item">
+                    <div class="q-num">${qNum}、</div>
+                    <div class="q-content">${itemBody}</div>
+                </div>`);
+
+                answersHTML.push(`<div class="ans-item"><b>${qNum}.</b> ${sol}</div>`);
+            });
+
+            const html = `
+            <div class="main-content">
+                <div class="header">
+                    <div class="title">${paperTitle}</div>
+                    <div class="subtitle">方程与方程组专项训练</div>
+                    <div class="meta-info">
+                        <div>姓名：<span class="meta-item"></span></div>
+                        <div>日期：<span class="meta-item"></span></div>
+                        <div>得分：<span class="meta-item"></span></div>
+                    </div>
+                </div>
+
+                <div class="questions-list">
+                    ${itemsHTML.join('\n')}
+                </div>
+            </div>
+
+            <div class="answer-section">
+                <div class="answer-title">【 参考答案（反向倒置印刷） 】</div>
+                <div class="answer-grid">
+                    ${answersHTML.join('\n')}
+                </div>
+            </div>`;
+
+            document.getElementById('paperContainer').innerHTML = html;
+        }
+
+        function downloadCurrentHTML() {
+            const paperContent = document.getElementById('paperContainer').outerHTML;
+            const fullHTML = `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>方程与方程组小测验</title>
+    <style>
+        * { box-sizing: border-box; font-family: "SimSun", "STSong", "KaiTi", "Microsoft YaHei", serif; }
+        body { background-color: #fff; margin: 0; padding: 20px; color: #111; }
+        .paper-container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; border-bottom: 2px solid #222; padding-bottom: 15px; margin-bottom: 30px; }
+        .title { font-size: 26px; font-weight: bold; margin-bottom: 8px; }
+        .subtitle { font-size: 14px; color: #555; margin-bottom: 15px; }
+        .meta-info { display: flex; justify-content: space-around; font-size: 15px; }
+        .meta-item { border-bottom: 1px solid #333; padding: 0 15px; min-width: 100px; display: inline-block; }
+        .question-item { display: flex; margin-bottom: 40px; font-size: 17px; page-break-inside: avoid; }
+        .q-num { font-weight: bold; min-width: 35px; }
+        .single-eq { display: flex; align-items: center; gap: 15px; }
+        .system-eq { display: inline-flex; align-items: center; gap: 5px; }
+        .left-brace { font-size: 42px; font-weight: 300; font-family: "Times New Roman", serif; }
+        .eq-lines { display: flex; flex-direction: column; justify-content: center; font-size: 16px; }
+        .ans-blank { margin-left: 20px; }
+        .answer-section { margin-top: 50px; padding-top: 20px; border-top: 2px dashed #aaa; transform: rotate(180deg); page-break-inside: avoid; }
+        .answer-title { font-size: 14px; font-weight: bold; text-align: center; margin-bottom: 10px; }
+        .answer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; font-size: 13px; }
+        .ans-item { background: #fafafa; padding: 4px 8px; border: 1px solid #eee; }
+    </style>
+</head>
+<body>
+    ${paperContent}
+</body>
+</html>`;
+            const blob = new Blob([fullHTML], { type: 'text/html;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = '方程与方程组小测验.html';
+            link.click();
+        }
+
+        // 页面初始自动生成试卷
+        window.onload = generatePaper;
+    </script>
+</body>
+</html>

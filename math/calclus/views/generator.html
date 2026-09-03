@@ -1,0 +1,193 @@
+<div class="generator-layout">
+  <!-- 左侧控制面板 -->
+  <div class="sidebar no-print">
+    <div style="margin-bottom: 15px;">
+      <a href="#/" class="btn" style="padding: 6px 12px; font-size: 14px;">← 返回星图</a>
+    </div>
+    <h2 style="margin-bottom: 15px; color: var(--color-accent-400);">🖨️ 试卷出题器</h2>
+    
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-size: 14px;">试卷标题</label>
+      <input type="text" id="gen-paper-title" value="因式分解与微积分专项训练" class="config-input">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-size: 14px;">全局难度</label>
+      <select id="gen-paper-diff" class="config-input">
+        <option value="basic">基础 (系数较小，全正数为主)</option>
+        <option value="advanced" selected>进阶 (含负数，适合平时练习)</option>
+        <option value="challenge">挑战 (大数字，全考点覆盖)</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 8px; font-weight: bold; font-size: 14px;">题型与技巧选择 (输入数量)</label>
+      <div class="type-row"><span>1. 提取公因式 (GCF)</span><input type="number" id="cnt-gcf" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>2. 平方差公式 ($a^2-b^2$)</span><input type="number" id="cnt-diffSq" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>3. 完全平方公式</span><input type="number" id="cnt-perfSq" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>4. 十字相乘 ($a=1$)</span><input type="number" id="cnt-triBasic" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>5. 十字相乘 ($a\neq 1$)</span><input type="number" id="cnt-triComplex" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>6. 分组分解法</span><input type="number" id="cnt-grouping" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>7. 立方和/立方差</span><input type="number" id="cnt-cubes" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>8. 换元法/双二次</span><input type="number" id="cnt-subst" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>9. 嵌套平方差</span><input type="number" id="cnt-advDiff" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>10. 教材真题精选</span><input type="number" id="cnt-pdf" value="2" min="0" max="10" class="config-input number-input"></div>
+      <div class="type-row"><span>11. 复合综合技巧</span><input type="number" id="cnt-composite" value="2" min="0" max="10" class="config-input number-input"></div>
+    </div>
+
+    <button id="btn-gen-refresh" type="button" class="btn" style="width: 100%; margin-bottom: 10px;">🔄 换一批题目</button>
+    <button id="btn-gen-print" type="button" class="btn" style="width: 100%; background: var(--color-success, #22c55e);">🖨️ 打印试卷 (A4)</button>
+  </div>
+
+  <!-- 右侧试卷预览区 -->
+  <div class="print-area">
+    <div className="paper-container" id="paper-container">
+      <!-- 试卷内容动态注入 -->
+    </div>
+  </div>
+
+  <style>
+    .generator-layout {
+      display: flex;
+      min-height: calc(100vh - 64px);
+    }
+    .sidebar {
+      width: 320px;
+      background: #1e293b;
+      padding: 20px;
+      border-right: 1px solid #334155;
+      overflow-y: auto;
+      color: #f8fafc;
+    }
+    .config-input {
+      width: 100%;
+      padding: 8px;
+      background: #0f172a;
+      border: 1px solid #475569;
+      color: white;
+      border-radius: 4px;
+    }
+    .type-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+    }
+    .number-input {
+      width: 55px;
+      text-align: center;
+    }
+    .print-area {
+      flex: 1;
+      background: #475569;
+      padding: 30px;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+    }
+    #paper-container {
+      background: #ffffff !important;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 20mm;
+      color: #000000 !important;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    #paper-container *, 
+    #paper-container h1, 
+    #paper-container h2, 
+    #paper-container h3, 
+    #paper-container p, 
+    #paper-container span, 
+    #paper-container div {
+      color: #000000 !important;
+    }
+    #paper-container .katex, 
+    #paper-container .katex * {
+      color: #000000 !important;
+    }
+    .paper-header {
+      text-align: center;
+      border-bottom: 2px solid black;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+    .paper-title {
+      font-size: 22pt;
+      margin-bottom: 15px;
+      color: #000000 !important;
+    }
+    .paper-meta {
+      display: flex;
+      justify-content: space-around;
+      font-size: 13pt;
+      color: #000000 !important;
+    }
+    .paper-questions {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px 15px;
+      align-content: start;
+      color: #000000 !important;
+    }
+    .paper-q-item {
+      font-size: 13pt;
+      display: flex;
+      align-items: baseline;
+      color: #000000 !important;
+    }
+    .q-num {
+      font-weight: bold;
+      margin-right: 8px;
+      min-width: 25px;
+      color: #000000 !important;
+    }
+    .paper-answers {
+      margin-top: 40px;
+      padding-top: 15px;
+      border-top: 1px dashed #666;
+      transform: rotate(180deg);
+      color: #000000 !important;
+    }
+    .answers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      font-size: 9.5pt;
+      color: #000000 !important;
+    }
+
+    @media print {
+      body, html, #app-root { 
+        background: white !important; 
+        color: black !important; 
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .global-nav, .no-print { display: none !important; }
+      .generator-layout { display: block !important; min-height: auto !important; }
+      .print-area { padding: 0 !important; background: white !important; overflow: visible !important; }
+      #paper-container { 
+        box-shadow: none !important; 
+        width: 100% !important; 
+        min-height: auto !important; 
+        padding: 0 !important; 
+        color: black !important; 
+      }
+      #paper-container *, #paper-container h1, #paper-container h2, #paper-container h3, #paper-container p, #paper-container span, #paper-container div {
+        color: black !important;
+      }
+      .katex, .katex * {
+        color: black !important;
+      }
+      @page { margin: 15mm; }
+    }
+  </style>
+</div>

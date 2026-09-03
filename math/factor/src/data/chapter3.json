@@ -1,0 +1,192 @@
+{
+  "id": "chapter_3",
+  "title": "第 3 关：十字密码锁与分组迷宫",
+  "blocks": [
+    {
+      "type": "story",
+      "text": "上一关我们破解了首项系数为 1 的三项式（比如 $x^2 + 5x + 6$）。但如果 $x^2$ 前面有个讨厌的数字呢？比如 $6x^2 + 7x + 2$。"
+    },
+    {
+      "type": "concept",
+      "color": "orange",
+      "title": "双重切分",
+      "content": [
+        "面对 $ax^2 + bx + c$，你不但要切分常数项 $c$，还要切分二次项系数 $a$！",
+        "比如 $6x^2$，6 可以被切分成 $1 \\times 6$，或者 $2 \\times 3$。",
+        "常数项 2，只能被切分成 $1 \\times 2$。",
+        "到底哪一种组合是对的？这就需要我们像锁匠开密码锁一样，尝试不同的组合，直到“齿轮”完美咬合。"
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "green",
+      "title": "高阶十字相乘法",
+      "content": [
+        "这就是著名的“高阶十字相乘法”操作指南：",
+        "1. 把头（$a$）分成两个数 $a_1 \\times a_2$ 竖着写在左边。",
+        "2. 把尾（$c$）分成两个数 $c_1 \\times c_2$ 竖着写在右边。",
+        "3. **最关键的一步**：像打 X 一样交叉相乘，然后把两个乘积相加：$(a_1 \\times c_2) + (a_2 \\times c_1)$。",
+        "4. 观察这个加出来的结果，如果它**刚好等于中间项（$b$）**，恭喜你，大门就会向你敞开！分解结果就是横向读取的 $(a_1 x + c_1)(a_2 x + c_2)$。"
+      ]
+    },
+    {
+      "type": "story",
+      "text": "纸上谈兵不如亲自上手。下面是一把真实的十字相乘密码锁，目标方程是 $6x^2 + 7x + 2$。请拨动轮盘解锁吧！"
+    },
+    {
+      "type": "canvas",
+      "animId": "cross_lock",
+      "target": {
+        "a": 6,
+        "b": 7,
+        "c": 2,
+        "equation": "6x^2 + 7x + 2"
+      }
+    },
+    {
+      "type": "quiz",
+      "question": "如果在十字相乘中，常数项 $c$ 是负数（比如 $3x^2 - 5x - 2$），这意味着什么？",
+      "options": [
+        {
+          "text": "说明方程没有解，无法分解",
+          "isCorrect": false,
+          "explanation": "负数完全可以分解，只是我们需要小心符号！"
+        },
+        {
+          "text": "拆分出的 $c_1$ 和 $c_2$ 必须是一正一负",
+          "isCorrect": true,
+          "explanation": "非常敏锐！因为只有一正一负相乘才会得到负数。所以在交叉相乘后相加时，你实际上是在做减法，借此来凑出中间项。"
+        },
+        {
+          "text": "拆分出的 $a_1$ 和 $a_2$ 必须是一正一负",
+          "isCorrect": false,
+          "explanation": "通常我们习惯让首项（左边的部分）保持正数，把所有的负号烦恼都丢给常数项（右边的部分）去处理。"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "blue",
+      "title": "四项式：分组分解法",
+      "content": [
+        "四项式先尝试**两两分组**。例如 $ax + ay + bx + by$ 可以写成 $(ax + ay) + (bx + by)$。",
+        "每一组分别提取公因式：$a(x+y) + b(x+y)$。两个组都出现同一个二项式 $(x+y)$，就能再提一次公因式。",
+        "因此 $ax + ay + bx + by = (a+b)(x+y)$。分组的目标不是随意切开，而是制造相同的公共括号。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "把 $x^2 + 3x + 2x + 6$ 分成 $(x^2+2x)+(3x+6)$ 后，两组共同的二项式是？",
+      "options": [
+        {
+          "text": "$(x+2)$",
+          "isCorrect": true,
+          "explanation": "$x(x+2)+3(x+2)$ 的公共二项式是 $(x+2)$，所以结果为 $(x+3)(x+2)$。"
+        },
+        {
+          "text": "$(x+3)$",
+          "isCorrect": false,
+          "explanation": "$(x+3)$ 是最后得到的另一个因式，不是两组提取后共同出现的括号。"
+        },
+        {
+          "text": "$(2x+6)$",
+          "isCorrect": false,
+          "explanation": "这是原式的一部分，不是提取公因式后两组共有的二项式。"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "orange",
+      "title": "添项与拆项：构造平方差",
+      "content": [
+        "有些式子没有现成公式结构，可以在**保持总值不变**的前提下同时加、减同一项，制造熟悉的结构。",
+        "例如 $x^4+4 = x^4+4x^2+4-4x^2 = (x^2+2)^2-(2x)^2$。",
+        "接着使用平方差：$x^4+4=(x^2-2x+2)(x^2+2x+2)$。添项必须同时补回相同的一项，不能改变原式。"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "把 $x^4+4$ 改写成平方差时，应当补上并减去哪一项？",
+      "options": [
+        {
+          "text": "$2x^2$",
+          "isCorrect": false,
+          "explanation": "要凑成 $(x^2+2)^2$，中间项应为 $2\\times x^2\\times2=4x^2$。"
+        },
+        {
+          "text": "$4x^2$",
+          "isCorrect": true,
+          "explanation": "正确：$x^4+4x^2+4=(x^2+2)^2$，再减去 $4x^2=(2x)^2$。"
+        },
+        {
+          "text": "$4$",
+          "isCorrect": false,
+          "explanation": "常数 4 已经存在；缺少的是构成完全平方所需的中间项。"
+        }
+      ]
+    }
+  ],
+  "challengeQuizzes": [
+    {
+      "question": "复杂首项十字相乘：分解 $3x^2 - 14x + 8$",
+      "options": [
+        {
+          "text": "$(3x - 2)(x - 4)$",
+          "isCorrect": true,
+          "explanation": "正确！十字交叉：$3x \\times (-4) + (-2) \\times x = -12x - 2x = -14x$。"
+        },
+        {
+          "text": "$(3x - 4)(x - 2)$",
+          "isCorrect": false,
+          "explanation": "十字交叉：$3x \\times (-2) + (-4) \\times x = -10x$，不匹配中间项。"
+        },
+        {
+          "text": "$(3x + 2)(x + 4)$",
+          "isCorrect": false,
+          "explanation": "符号不对，末尾是正，中间是负，两个数必须都是负数。"
+        }
+      ]
+    },
+    {
+      "question": "分组分解法的艺术：分解 $x^3 - 2x^2 + 3x - 6$",
+      "options": [
+        {
+          "text": "$x^2(x - 2) - 3(x - 2)$",
+          "isCorrect": false,
+          "explanation": "中间的加号提取错了，应该是 $+3(x-2)$。"
+        },
+        {
+          "text": "$(x^2 + 3)(x - 2)$",
+          "isCorrect": true,
+          "explanation": "完美！前两项提 $x^2$ 得 $x^2(x-2)$，后两项提 3 得 $3(x-2)$，合并得到 $(x^2+3)(x-2)$。"
+        },
+        {
+          "text": "$(x^2 - 3)(x - 2)$",
+          "isCorrect": false,
+          "explanation": "后两项提取的是 $+3$，所以第一括号里应该是 $x^2+3$。"
+        }
+      ]
+    },
+    {
+      "question": "带有多个字母的十字相乘：分解 $2a^2 + 7ab + 3b^2$",
+      "options": [
+        {
+          "text": "$(2a + 3b)(a + b)$",
+          "isCorrect": false,
+          "explanation": "展开中间项是 $2ab + 3ab = 5ab$。"
+        },
+        {
+          "text": "$(2a + b)(a + 3b)$",
+          "isCorrect": true,
+          "explanation": "正确！$2a \\times 3b + a \\times b = 6ab + ab = 7ab$。"
+        },
+        {
+          "text": "$(2a + 3)(a + b^2)$",
+          "isCorrect": false,
+          "explanation": "多字母项的维度不对哦。"
+        }
+      ]
+    }
+  ]
+}

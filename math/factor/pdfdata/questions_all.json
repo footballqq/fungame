@@ -1,0 +1,4438 @@
+[
+  {
+    "id": "factoring_methods_p1_q1",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 1,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factoring is a process used to solve algebraic expressions. An essential aspect of factoring is learning how to find the greatest common factor (GCF) of a given algebraic problem. Once the GCF is",
+    "expression": "how to find the greatest common factor (GCF)*of a given algebraic problem. Once the GCF is",
+    "book_answer": null,
+    "steps": [
+      "explain how to find the greatest common factor as well as demonstrate the following methods of",
+      "factoring: grouping, slide and divide, difference of perfect squares, sum and difference of cubes, and",
+      "substitution.",
+      "Finding the Greatest Common Factor (GCF)"
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "how to find the greatest common factor (GCF)*of a given algebraic problem. Once the GCF is",
+    "answer": "how to find the greatest common factor (GCF)*of a given algebraic problem. Once the GCF is",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p2_q2",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 2,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Example 1: Determine the GCF and factor. 5x4 − 35x3 + 10x2",
+    "expression": "5*x^4 - 35*x^3 + 10*x^2",
+    "book_answer": null,
+    "steps": [
+      "Step 1: Break the terms into the smallest factors possible to determine the GCF.",
+      "5x4 = (𝟓)(𝐱)(𝐱)(x)(x)",
+      "35x3 = (7)(𝟓)(𝐱)(𝐱)(x)",
+      "10x2 = (𝟓)(2)(𝐱)(𝐱)"
+    ],
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "5*x^2*(x^2 - 7*x + 2)",
+    "answer": "5*x^2*(x^2 - 7*x + 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p2_q3",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 2,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factoring by Grouping If a four-term polynomial is present, and there is no GCF shared by all four terms, the terms can",
+    "expression": "If a four-term polynomial is present, and there is no GCF shared by all four terms, the terms can",
+    "book_answer": null,
+    "steps": [
+      "be grouped into pairs that have a GCF. This method is called factoring by grouping.",
+      "Grouping Steps",
+      "1. Check for a GCF.",
+      "2. Group the terms so that two identical sets of"
+    ],
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "If a four-term polynomial is present, and there is no GCF shared by all four terms, the terms can",
+    "answer": "If a four-term polynomial is present, and there is no GCF shared by all four terms, the terms can",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p2_q4",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 2,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Example 2: Factor the following expression using the grouping method. 10abx − 8ax + 15bx − 12x",
+    "expression": "10*abx - 8*ax + 15*bx - 12*x",
+    "book_answer": null,
+    "steps": [],
+    "category_code": "grouping",
+    "category": "分组分解法 (Factoring by Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "10*abx - 8*ax + 15*bx - 12*x",
+    "answer": "10*abx - 8*ax + 15*bx - 12*x",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p3_q5",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 3,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Example 3: Factor the following expression using the grouping method.",
+    "expression": "the following expression using the grouping method.",
+    "book_answer": null,
+    "steps": [
+      "3A.",
+      "6xy − 5 − 15x + 2y",
+      "3B.",
+      "6xy − 5 − 15x + 2y"
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "the following expression using the grouping method.",
+    "answer": "the following expression using the grouping method.",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p3_q6",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 3,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factor the following expression using the grouping method. 3A.",
+    "expression": "3*A.",
+    "book_answer": null,
+    "steps": [
+      "6xy − 5 − 15x + 2y",
+      "3B.",
+      "6xy − 5 − 15x + 2y",
+      "(6xy −5) + (−15x + 2y)"
+    ],
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "3*A.",
+    "answer": "3*A.",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p3_q7",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 3,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factoring by Grouping: Quadratic Expressions Factoring by grouping can also be used to factor problems in the form ax2 + bx + c. The letters",
+    "expression": "ing by grouping can also be used to factor problems in the form ax^2 + bx + c. The letters",
+    "book_answer": null,
+    "steps": [],
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "ing by grouping can also be used to factor problems in the form ax^2 + bx + c. The letters",
+    "answer": "ing by grouping can also be used to factor problems in the form ax^2 + bx + c. The letters",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p3_q8",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 3,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factoring by grouping can also be used to factor problems in the form ax2 + bx + c. The letters a, b, and c represent numbers, and their order in the expression can vary (i.e. bx + ax2 + c). If",
+    "expression": "a, b, and c represent numbers, and their order in the expression can vary (i.e. bx + ax^2 + c). If",
+    "book_answer": null,
+    "steps": [],
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "a, b, and c represent numbers, and their order in the expression can vary (i.e. bx + ax^2 + c). If",
+    "answer": "a, b, and c represent numbers, and their order in the expression can vary (i.e. bx + ax^2 + c). If",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p4_q9",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 4,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factors Multiply to c",
+    "expression": "Multiply to c",
+    "book_answer": null,
+    "steps": [
+      "1",
+      "6",
+      "1 × 6 = 6",
+      "-1 -6 (−1) × (−6) = 6"
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Multiply to c",
+    "answer": "Multiply to c",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p4_q10",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 4,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factors Sum to b",
+    "expression": "Sum to b",
+    "book_answer": null,
+    "steps": [
+      "-2 -3 (−2) + (−3) = −5",
+      "Step 4: Replace the b term of the original expression with the chosen factors.",
+      "x2 −𝟑𝐱−𝟐𝐱+ 6",
+      "Step 5: Group the new expression into pairs."
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Sum to b",
+    "answer": "Sum to b",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p5_q11",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 5,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factoring by the Slide and Divide Method The slide and divide method is used when the a term is not 1 in a three-term polynomial. This",
+    "expression": "The slide and divide method is used when the a term is not 1 in a three-term polynomial. This",
+    "book_answer": null,
+    "steps": [
+      "method converts the a term to 1, making it easier to factor.",
+      "Slide and Divide Steps",
+      "1. Identify the values of a, b, and c.",
+      "2. Slide a over to be multiplied by c."
+    ],
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "The slide and divide method is used when the a term is not 1 in a three-term polynomial. This",
+    "answer": "The slide and divide method is used when the a term is not 1 in a three-term polynomial. This",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p5_q12",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 5,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Example 5: Factor the following quadratic using the slide and divide method. 2x2 + 5x + 3",
+    "expression": "2*x^2 + 5*x + 3",
+    "book_answer": null,
+    "steps": [
+      "Step 1: Identify the values of a, b, and c.",
+      "a = 2",
+      "b = 5",
+      "c = 3"
+    ],
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(x + 1)*(2*x + 3)",
+    "answer": "(x + 1)*(2*x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p6_q13",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 6,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factors Multiply to c",
+    "expression": "Multiply to c",
+    "book_answer": null,
+    "steps": [
+      "1",
+      "6",
+      "1 × 6 = 6",
+      "-1 -6 (−1) × (−6) = 6"
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Multiply to c",
+    "answer": "Multiply to c",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p6_q14",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 6,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factors Sum to b 2 3 2 + 3 = 5",
+    "expression": "2 3 2 + 3 = 5",
+    "book_answer": null,
+    "steps": [
+      "Step 6: Replace the b term of the original expression with the chosen factors.",
+      "x2 + 2x + 3x + 6",
+      "Step 7: Group the new expression into pairs.",
+      "(x2 + 2x) + (3x + 6)"
+    ],
+    "category_code": "sum_diff_cubes",
+    "category": "立方和与立方差公式 (Sum and Difference of Cubes)",
+    "question_type": "factorization",
+    "calculated_answer": "2 3 2 + 3 = 5",
+    "answer": "2 3 2 + 3 = 5",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p7_q15",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 7,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factoring by the Difference of Perfect Squares When working with expressions containing perfect squares, the difference of perfect squares",
+    "expression": "When working with expressions containing perfect squares, the difference of perfect squares",
+    "book_answer": null,
+    "steps": [
+      "formula can be used. Perfect squares are numbers times themselves. An example is 9, which is",
+      "3 × 3, or 32 .",
+      "The Difference of Perfect Squares Formula",
+      "Difference of Perfect Squares"
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "When working with expressions containing perfect squares, the difference of perfect squares",
+    "answer": "When working with expressions containing perfect squares, the difference of perfect squares",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p7_q16",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 7,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Example 6: Factor using the difference of perfect squares formula: a2 −b2 = (a + b)(a − b).",
+    "expression": "b)*(a - b).",
+    "book_answer": null,
+    "steps": [
+      "x2 −4",
+      "Step 1: Factor both terms in the expression to see if they are perfect squares.",
+      "2",
+      "4 = 2 × 2 = 22"
+    ],
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "b)*(a - b).",
+    "answer": "b)*(a - b).",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p7_q17",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 7,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factoring Cubic Expressions When working with expressions containing perfect cubes, the sum of cubes and difference of",
+    "expression": "When working with expressions containing perfect cubes, the sum of cubes and difference of",
+    "book_answer": null,
+    "steps": [
+      "cubes formulas can be used. If the cubed terms are being added, use the sum of cubes formula.",
+      "If the cubed terms are being subtracted, use the difference of cubes formula.",
+      "The Sum and Difference of Cubes Formulas",
+      "Sum of Cubes"
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "When working with expressions containing perfect cubes, the sum of cubes and difference of",
+    "answer": "When working with expressions containing perfect cubes, the sum of cubes and difference of",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p8_q18",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 8,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Example 8: Factor this expression using the SOFAS method. x9 + 216",
+    "expression": "x^9 + 216",
+    "book_answer": null,
+    "steps": [
+      "Step 1: Cube root both terms to obtain the first factor.",
+      "Note: The second factor is dependent on the terms in the first factor.",
+      "9",
+      "3"
+    ],
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(x^3 + 6)*(x^6 - 6*x^3 + 36)",
+    "answer": "(x^3 + 6)*(x^6 - 6*x^3 + 36)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p9_q19",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 9,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factoring by Substitution Substitution is used to factor expressions with large exponents. The goal is to simplify the",
+    "expression": "Substitution is used to factor expressions with large exponents. The goal is to simplify the",
+    "book_answer": null,
+    "steps": [
+      "Substitution Steps",
+      "1. Identify the largest variable that is squared or cubed.",
+      "2. Substitute that term with a different variable.",
+      "4. Reverse the substitution."
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Substitution is used to factor expressions with large exponents. The goal is to simplify the",
+    "answer": "Substitution is used to factor expressions with large exponents. The goal is to simplify the",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p9_q20",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 9,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Example 9: Factor the following expression using substitution. x4 − 4x2 − 45",
+    "expression": "x^4 - 4*x^2 - 45",
+    "book_answer": null,
+    "steps": [],
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 3)*(x + 3)*(x^2 + 5)",
+    "answer": "(x - 3)*(x + 3)*(x^2 + 5)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p10_q21",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 10,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factors Multiply to c",
+    "expression": "Multiply to c",
+    "book_answer": null,
+    "steps": [
+      "1",
+      "-45 1 × (−45) = −45",
+      "-1",
+      "45"
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Multiply to c",
+    "answer": "Multiply to c",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p10_q22",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 10,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Factors Sum to b",
+    "expression": "Sum to b",
+    "book_answer": null,
+    "steps": [
+      "5 -9 5 + (−9) = −4",
+      "u2 −9u + 5u −45",
+      "(u2 −9u) + (5u − 45)",
+      "u(u − 9) + 5(u − 9)"
+    ],
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Sum to b",
+    "answer": "Sum to b",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_methods_p12_q23",
+    "source": {
+      "file": "Factoring_Methods.pdf",
+      "page": 12,
+      "section": "Factoring Methods Guide"
+    },
+    "raw_text": "Sample Problems: 1. 2x2 − 18",
+    "expression": "1. 2*x^2 - 18",
+    "book_answer": null,
+    "steps": [
+      "23. x2 − 4x + 3",
+      "2. 3y2 − 48",
+      "24. n2 + 5n + 6",
+      "3. a4 − 16"
+    ],
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "1. 2*x^2 - 18",
+    "answer": "1. 2*x^2 - 18",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secI_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "I. Greatest Common Factor (GCF)"
+    },
+    "raw_text": "1. 12, 18",
+    "expression": "12, 18",
+    "book_answer": "6",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "gcf_calculation",
+    "calculated_answer": "6",
+    "answer": "6",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secI_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "I. Greatest Common Factor (GCF)"
+    },
+    "raw_text": "2. 10, 35",
+    "expression": "10, 35",
+    "book_answer": "5",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "gcf_calculation",
+    "calculated_answer": "5",
+    "answer": "5",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secI_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "I. Greatest Common Factor (GCF)"
+    },
+    "raw_text": "3. 8, 30",
+    "expression": "8, 30",
+    "book_answer": "2",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "gcf_calculation",
+    "calculated_answer": "2",
+    "answer": "2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secI_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "I. Greatest Common Factor (GCF)"
+    },
+    "raw_text": "4. 16, 24",
+    "expression": "16, 24",
+    "book_answer": "8",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "gcf_calculation",
+    "calculated_answer": "8",
+    "answer": "8",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secI_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "I. Greatest Common Factor (GCF)"
+    },
+    "raw_text": "5. 28, 49",
+    "expression": "28, 49",
+    "book_answer": "7",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "gcf_calculation",
+    "calculated_answer": "7",
+    "answer": "7",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secI_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "I. Greatest Common Factor (GCF)"
+    },
+    "raw_text": "6. 27, 63",
+    "expression": "27, 63",
+    "book_answer": "9",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "gcf_calculation",
+    "calculated_answer": "9",
+    "answer": "9",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secI_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "I. Greatest Common Factor (GCF)"
+    },
+    "raw_text": "7. 30, 45",
+    "expression": "30, 45",
+    "book_answer": "15",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "gcf_calculation",
+    "calculated_answer": "15",
+    "answer": "15",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secI_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "I. Greatest Common Factor (GCF)"
+    },
+    "raw_text": "8. 48, 72",
+    "expression": "48, 72",
+    "book_answer": "24",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "gcf_calculation",
+    "calculated_answer": "24",
+    "answer": "24",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "1. 6\u0002 \u0003 3",
+    "expression": "6*x + 3",
+    "book_answer": "(x + 1)*(x - 1",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "3*(2*x + 1)",
+    "answer": "(x + 1)*(x - 1",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "2. 24\u0002\u0007 \b 8\u0002",
+    "expression": "24*x^2 - 8*x",
+    "book_answer": "(x + 3)*(x - 3",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "8*x*(3*x - 1)",
+    "answer": "(x + 3)*(x - 3",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "3. 6\u0002 \b 12",
+    "expression": "6*x - 12",
+    "book_answer": "prime",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "6*(x - 2)",
+    "answer": "prime",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "4. 2\u0002\u0007 \u0003 8\u0002",
+    "expression": "2*x^2 + 8*x",
+    "book_answer": "(x + 5)*(x - 5",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "2*x*(x + 4)",
+    "answer": "(x + 5)*(x - 5",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "5. 4\u0002 \u0003 10",
+    "expression": "4*x + 10",
+    "book_answer": "(3",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "2*(2*x + 5)",
+    "answer": "(3",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "6. 10\u0002\u0007 \u0003 35\u0002",
+    "expression": "10*x^2 + 35*x",
+    "book_answer": "(2*x + 5)*(2*x - 5",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "5*x*(2*x + 7)",
+    "answer": "(2*x + 5)*(2*x - 5",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "7. 10\u0002\u0007",
+    "expression": "10*x^2",
+    "book_answer": "(3*x + 1)*(3*x - 1",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "10*x^2",
+    "answer": "(3*x + 1)*(3*x - 1",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "8. 12\u0002\u0007 \b 9\u0002 \u0003 15",
+    "expression": "12*x^2 - 9*x + 15",
+    "book_answer": "(\u0014 + x)*(\u0014 - x",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "3*(4*x^2 - 3*x + 5)",
+    "answer": "(\u0014 + x)*(\u0014 - x",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "9. 3\u000f\u0010 \b 12\u000f\u0007 \b 30\u000f",
+    "expression": "3\u000f\u0010 - 12\u000f^2 - 30\u000f",
+    "book_answer": "(5 + \u0011)*(5 - \u0011",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "3\u000f\u0010 - 12\u000f^2 - 30\u000f",
+    "answer": "(5 + \u0011)*(5 - \u0011",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "10. 9\u0011\u0007 \b 4\u000f \u0003 12",
+    "expression": "9\u0011^2 - 4\u000f + 12",
+    "book_answer": ")*(x - 4",
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "9\u0011^2 - 4\u000f + 12",
+    "answer": ")*(x - 4",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secII_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "11. 2\u0002\u0010 \b 3\u0002\u0007 \u0003 5\u0002",
+    "expression": "2*x\u0010 - 3*x^2 + 5*x",
+    "book_answer": null,
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "2*x\u0010 - 3*x^2 + 5*x",
+    "answer": "2*x\u0010 - 3*x^2 + 5*x",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secII_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "12. 13\u0011 \u0003 26\u0011\u0007 \b 39\u0011\u0010",
+    "expression": "13\u0011 + 26\u0011^2 - 39\u0011\u0010",
+    "book_answer": null,
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "13\u0011 + 26\u0011^2 - 39\u0011\u0010",
+    "answer": "13\u0011 + 26\u0011^2 - 39\u0011\u0010",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secII_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "13. 17\u0002\u0007 \u0003 34\u0002 \u0003 51",
+    "expression": "17*x^2 + 34*x + 51",
+    "book_answer": null,
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "17*(x^2 + 2*x + 3)",
+    "answer": "17*(x^2 + 2*x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secII_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "II. Greatest Common Monomial Factor"
+    },
+    "raw_text": "14. 18\u0011\u0007\u000f\u0013 \b 12\u0011\u0007\u000f\u0010 \u0003 24\u0011\u0007\u000f\u0007",
+    "expression": "18\u0011^2\u000f\u0013 - 12\u0011^2\u000f\u0010 + 24\u0011^2\u000f^2",
+    "book_answer": null,
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "18\u0011^2\u000f\u0013 - 12\u0011^2\u000f\u0010 + 24\u0011^2\u000f^2",
+    "answer": "18\u0011^2\u000f\u0013 - 12\u0011^2\u000f\u0010 + 24\u0011^2\u000f^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "1. \u0002\u0007 \b 1",
+    "expression": "x^2 - 1",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 1)*(x + 1)",
+    "answer": "(x - 1)*(x + 1)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "2. \u0002\u0007 \b 9",
+    "expression": "x^2 - 9",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 3)*(x + 3)",
+    "answer": "(x - 3)*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "3. \u0002\u0007 \u0003 4",
+    "expression": "x^2 + 4",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "x^2 + 4",
+    "answer": "x^2 + 4",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "4. \u0002\u0007 \b 25",
+    "expression": "x^2 - 25",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 5)*(x + 5)",
+    "answer": "(x - 5)*(x + 5)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "5. 9",
+    "expression": "x^2 - 9",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 3)*(x + 3)",
+    "answer": "(x - 3)*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "6. 4\u0002\u0007 \b 25",
+    "expression": "4*x^2 - 25",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(2*x - 5)*(2*x + 5)",
+    "answer": "(2*x - 5)*(2*x + 5)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "7. 9\u0002\u0007 \b 1",
+    "expression": "9*x^2 - 1",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(3*x - 1)*(3*x + 1)",
+    "answer": "(3*x - 1)*(3*x + 1)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "8. \u0014\u0007 \b \u0002\u0007",
+    "expression": "\u0014^2 - x^2",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014^2 - x^2",
+    "answer": "\u0014^2 - x^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "9. 25 \b \u0011\u0007",
+    "expression": "25 - \u0011^2",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "25 - \u0011^2",
+    "answer": "25 - \u0011^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "10. \u0002\u0007 \b 16",
+    "expression": "x^2 - 16",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 4)*(x + 4)",
+    "answer": "(x - 4)*(x + 4)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "11. 25\u0011\u0007 \b \u000f\u0007",
+    "expression": "25\u0011^2 - \u000f^2",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "25\u0011^2 - \u000f^2",
+    "answer": "25\u0011^2 - \u000f^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "12. – \u0002\u0007 \u0003 16",
+    "expression": "- x^2 + 16",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "-(x - 4)*(x + 4)",
+    "answer": "-(x - 4)*(x + 4)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "13. 36\u0011\u0007 \b 121",
+    "expression": "36\u0011^2 - 121",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "36\u0011^2 - 121",
+    "answer": "36\u0011^2 - 121",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "14. 2\u0002\u0007 \b 8",
+    "expression": "2*x^2 - 8",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "2*(x - 2)*(x + 2)",
+    "answer": "2*(x - 2)*(x + 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q15",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "15. 25 \u0003 4\u0002\u0007",
+    "expression": "25 + 4*x^2",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "4*x^2 + 25",
+    "answer": "4*x^2 + 25",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q16",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "16. 4\u0014\u0007 \b 81\u0016\u0007",
+    "expression": "4\u0014^2 - 81\u0016^2",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "4\u0014^2 - 81\u0016^2",
+    "answer": "4\u0014^2 - 81\u0016^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q17",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "17. 12\u0002\u0007 \b 75",
+    "expression": "12*x^2 - 75",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "3*(2*x - 5)*(2*x + 5)",
+    "answer": "3*(2*x - 5)*(2*x + 5)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q18",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "18. \u0014\u0007\u0016 \b \u0016\u0010",
+    "expression": "\u0014^2\u0016 - \u0016\u0010",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014^2\u0016 - \u0016\u0010",
+    "answer": "\u0014^2\u0016 - \u0016\u0010",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q19",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "19. \b98 \u0003 2\u0002\u0007",
+    "expression": "-98 + 2*x^2",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "2*(x - 7)*(x + 7)",
+    "answer": "2*(x - 7)*(x + 7)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q20",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "20. 5\u0002\u0007 \b 45",
+    "expression": "5*x^2 - 45",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "5*(x - 3)*(x + 3)",
+    "answer": "5*(x - 3)*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q21",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "21. 9\u0002\u0013 \b 4",
+    "expression": "9*x\u0013 - 4",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "9*x\u0013 - 4",
+    "answer": "9*x\u0013 - 4",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIII_q22",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 1,
+      "section": "III. Factoring the Difference of Two Squares"
+    },
+    "raw_text": "22. 16\u0002\u0013 \b",
+    "expression": "16*x\u0013 -",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "16*x\u0013 -",
+    "answer": "16*x\u0013 -",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIV_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "1. \u0002\u0007 \u0003 8\u0002 \u0003 16",
+    "expression": "x^2 + 8*x + 16",
+    "book_answer": "(x + 4)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(x + 4)^2",
+    "answer": "(x + 4)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "2. \u0002\u0007 \b 16\u0002 \u0003 64",
+    "expression": "x^2 - 16*x + 64",
+    "book_answer": "(x - 8)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 8)^2",
+    "answer": "(x - 8)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "3. \u0007 \u0003 12",
+    "expression": "^2 + 12",
+    "book_answer": "(",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 + 12",
+    "answer": "(",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "4. \u0014\u0007 \b 10\u0014 \u0003 25",
+    "expression": "\u0014^2 - 10\u0014 + 25",
+    "book_answer": "(\u0014 - 5)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014^2 - 10\u0014 + 25",
+    "answer": "(\u0014 - 5)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "5. 16",
+    "expression": "x^2 - 16",
+    "book_answer": "(4",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 4)*(x + 4)",
+    "answer": "(4",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "6. 9\u0002\u0007 \b 6\u0002 \u0003 1",
+    "expression": "9*x^2 - 6*x + 1",
+    "book_answer": "(3*x - 1)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(3*x - 1)^2",
+    "answer": "(3*x - 1)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "7. 25\u0002\u0007 \u0003 10\u0002 \u0003 1",
+    "expression": "25*x^2 + 10*x + 1",
+    "book_answer": "(5*x + 1)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(5*x + 1)^2",
+    "answer": "(5*x + 1)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "8. \u000f\u0007 \b 14\u000f \u0003 49",
+    "expression": "\u000f^2 - 14\u000f + 49",
+    "book_answer": "(\u000f - 7)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "\u000f^2 - 14\u000f + 49",
+    "answer": "(\u000f - 7)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "9. 81\u0002\u0007 \b 90\u0002 \u0003 25",
+    "expression": "81*x^2 - 90*x + 25",
+    "book_answer": "(9*x - 5)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(9*x - 5)^2",
+    "answer": "(9*x - 5)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "10. 4",
+    "expression": "x^2 - 4",
+    "book_answer": "- 5)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 2)*(x + 2)",
+    "answer": "- 5)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "11. 25\u0014\u0007 \u0003 60\u0014 \u0003 36",
+    "expression": "25\u0014^2 + 60\u0014 + 36",
+    "book_answer": null,
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "25\u0014^2 + 60\u0014 + 36",
+    "answer": "25\u0014^2 + 60\u0014 + 36",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIV_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "12. 16 \u0003 40\u0002 \u0003 25\u0002\u0007",
+    "expression": "16 + 40*x + 25*x^2",
+    "book_answer": null,
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(5*x + 4)^2",
+    "answer": "(5*x + 4)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIV_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "13. 16\u0002\u0007 \u0003 24\u0002 \u0003 9",
+    "expression": "16*x^2 + 24*x + 9",
+    "book_answer": null,
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(4*x + 3)^2",
+    "answer": "(4*x + 3)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIV_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "14. 49\u0002\u0007 \b 14\u0002 \u0003 1",
+    "expression": "49*x^2 - 14*x + 1",
+    "book_answer": null,
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(7*x - 1)^2",
+    "answer": "(7*x - 1)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIV_q15",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "15. 9",
+    "expression": "x^2 - 9",
+    "book_answer": "- 5)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 3)*(x + 3)",
+    "answer": "- 5)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIV_q16",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "16. \u000f\u0007 \u0003 2\u000f \u0003 4",
+    "expression": "\u000f^2 + 2\u000f + 4",
+    "book_answer": null,
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "\u000f^2 + 2\u000f + 4",
+    "answer": "\u000f^2 + 2\u000f + 4",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIV_q17",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "17. \u0016\u0007 \u0003 2\u0016 \u0003 1",
+    "expression": "\u0016^2 + 2\u0016 + 1",
+    "book_answer": null,
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0016^2 + 2\u0016 + 1",
+    "answer": "\u0016^2 + 2\u0016 + 1",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIV_q18",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "18. 36\u0002\u0007 \u0003 84\u0002 \u0003 49",
+    "expression": "36*x^2 + 84*x + 49",
+    "book_answer": null,
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(6*x + 7)^2",
+    "answer": "(6*x + 7)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIV_q19",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "19. 81 \b 18\u0002 \u0003 \u0002\u0007",
+    "expression": "81 - 18*x + x^2",
+    "book_answer": null,
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 9)^2",
+    "answer": "(x - 9)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIV_q20",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "IV. Factoring Perfect Square Trinomials"
+    },
+    "raw_text": "20. 4 \b 12",
+    "expression": "4 - 12",
+    "book_answer": "- 2)^2",
+    "category_code": "perfect_square",
+    "category": "完全平方公式 (Perfect Square Trinomial)",
+    "question_type": "factorization",
+    "calculated_answer": "-8",
+    "answer": "- 2)^2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "1. \u0014\u0007 \b 36",
+    "expression": "\u0014^2 - 36",
+    "book_answer": "(x + 4)*(x + 2",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014^2 - 36",
+    "answer": "(x + 4)*(x + 2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "2. 9\u0002\u0007 \b 49",
+    "expression": "9*x^2 - 49",
+    "book_answer": "(0 + 2)*(0 + 3",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "(3*x - 7)*(3*x + 7)",
+    "answer": "(0 + 2)*(0 + 3",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "3. 169\u0011\u0007 \b 4(\u0007",
+    "expression": "169\u0011^2 - 4*(^2",
+    "book_answer": "(",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "169\u0011^2 - 4*(^2",
+    "answer": "(",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "4. \u0002\u0007",
+    "expression": "x^2",
+    "book_answer": "(x - 8)*(x - 2",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "x^2",
+    "answer": "(x - 8)*(x - 2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "5. *",
+    "expression": "*",
+    "book_answer": "(\u0014 + 9)*(\u0014 + 3",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "*",
+    "answer": "(\u0014 + 9)*(\u0014 + 3",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "6. *",
+    "expression": "*",
+    "book_answer": "(x - 12)*(x - 2",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "*",
+    "answer": "(x - 12)*(x - 2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "7. 64 \b \u0014\u0013\u0016\u0013",
+    "expression": "64 - \u0014\u0013\u0016\u0013",
+    "book_answer": "(x - 12)*(x - 3",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "64 - \u0014\u0013\u0016\u0013",
+    "answer": "(x - 12)*(x - 3",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "8. , \b 100",
+    "expression": ", - 100",
+    "book_answer": "(",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": ", - 100",
+    "answer": "(",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "9. \u0013",
+    "expression": "\u0013",
+    "book_answer": "prime",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0013",
+    "answer": "prime",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "10. . \b 81",
+    "expression": ". - 81",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": ". - 81",
+    "answer": ". - 81",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secV_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "11. 1 \b 8( \u0003 16(\u0007",
+    "expression": "1 - 8*( + 16*(^2",
+    "book_answer": "- 8)*(",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "1 - 8*( + 16*(^2",
+    "answer": "- 8)*(",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "12. \u0014\u0007\u0016\u0007 \u0003 6\u0014\u0016 \u0003 9",
+    "expression": "\u0014^2\u0016^2 + 6\u0014\u0016 + 9",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014^2\u0016^2 + 6\u0014\u0016 + 9",
+    "answer": "\u0014^2\u0016^2 + 6\u0014\u0016 + 9",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secV_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "13. \u0002\u0007 \u0003 2\u0002",
+    "expression": "x^2 + 2*x",
+    "book_answer": "+ 6)*(",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "x*(x + 2)",
+    "answer": "+ 6)*(",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "14. 4\u0002\u0007 \u0003 12\u0002",
+    "expression": "4*x^2 + 12*x",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "4*x*(x + 3)",
+    "answer": "4*x*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secV_q15",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "15. 100/\u0007 \u0003 20/ \u0003 1",
+    "expression": "100/^2 + 20/ + 1",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "100/^2 + 20/ + 1",
+    "answer": "100/^2 + 20/ + 1",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secV_q16",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "16. 9\u0014\u0007 \b 24\u0014 \u0003 16",
+    "expression": "9\u0014^2 - 24\u0014 + 16",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "9\u0014^2 - 24\u0014 + 16",
+    "answer": "9\u0014^2 - 24\u0014 + 16",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secV_q17",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "17. 4\u0014\u0010 \u0003 8\u0014\u0007 \u0003 4\u0014",
+    "expression": "4\u0014\u0010 + 8\u0014^2 + 4\u0014",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "4\u0014\u0010 + 8\u0014^2 + 4\u0014",
+    "answer": "4\u0014\u0010 + 8\u0014^2 + 4\u0014",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secV_q18",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "18. 50 \u0003 200\u0007 \u0003 200\u0010",
+    "expression": "50 + 200^2 + 200\u0010",
+    "book_answer": "+ 7)*(",
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "50 + 200^2 + 200\u0010",
+    "answer": "+ 7)*(",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secV_q19",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "19. %\u0002 \u0003 4&\u0007 \b %",
+    "expression": "(x + 4)^2 - (",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "(x + 4)^2 - (",
+    "answer": "(x + 4)^2 - (",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secV_q20",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "V. Special Factoring – Challenge"
+    },
+    "raw_text": "20. %\u0002 \b 1&\u0007 \b 10%\u0002 \b 1& \u0003 25",
+    "expression": "(x - 1)^2 - 10*(x - 1) + 25",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 6)^2",
+    "answer": "(x - 6)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "1. \u0002\u0007 \u0003 6\u0002 \u0003 8",
+    "expression": "x^2 + 6*x + 8",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x + 2)*(x + 4)",
+    "answer": "(x + 2)*(x + 4)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "2. 0\u0007 \u0003 50 \u0003 6",
+    "expression": "0^2 + 50 + 6",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "56",
+    "answer": "56",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "3. \u0007 \b 9",
+    "expression": "^2 - 9",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 - 9",
+    "answer": "^2 - 9",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "4. \u0002\u0007 \b 10\u0002 \u0003 16",
+    "expression": "x^2 - 10*x + 16",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 8)*(x - 2)",
+    "answer": "(x - 8)*(x - 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "5. \u0014\u0007 \u0003 12\u0014 \u0003 27",
+    "expression": "\u0014^2 + 12\u0014 + 27",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014^2 + 12\u0014 + 27",
+    "answer": "\u0014^2 + 12\u0014 + 27",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "6. \u0002\u0007 \b 14\u0002 \u0003 24",
+    "expression": "x^2 - 14*x + 24",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 12)*(x - 2)",
+    "answer": "(x - 12)*(x - 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "7. \u0002\u0007 \b 15\u0002 \u0003 36",
+    "expression": "x^2 - 15*x + 36",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 12)*(x - 3)",
+    "answer": "(x - 12)*(x - 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "8. \u0007 \u0003 21",
+    "expression": "^2 + 21",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 + 21",
+    "answer": "^2 + 21",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "9. \u0011\u0007 \u0003 13\u0011 \b 36",
+    "expression": "\u0011^2 + 13\u0011 - 36",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0011^2 + 13\u0011 - 36",
+    "answer": "\u0011^2 + 13\u0011 - 36",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "10. \u0002\u0007 \b 8\u0002 \u0003 15",
+    "expression": "x^2 - 8*x + 15",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 5)*(x - 3)",
+    "answer": "(x - 5)*(x - 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "11. \u0007 \b 4",
+    "expression": "^2 - 4",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 - 4",
+    "answer": "^2 - 4",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "12. \u0002\u0007 \b \u0002 \b 6",
+    "expression": "x^2 - x - 6",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 3)*(x + 2)",
+    "answer": "(x - 3)*(x + 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "13. \u0007 \u0003 3",
+    "expression": "^2 + 3",
+    "book_answer": null,
+    "category_code": "sum_diff_cubes",
+    "category": "立方和与立方差公式 (Sum and Difference of Cubes)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 + 3",
+    "answer": "^2 + 3",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "14. \u0016\u0007 \u0003 7\u0016 \b 18",
+    "expression": "\u0016^2 + 7\u0016 - 18",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0016^2 + 7\u0016 - 18",
+    "answer": "\u0016^2 + 7\u0016 - 18",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q15",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "15. \u0014\u0007 \u0003 \u0014 \b 56",
+    "expression": "\u0014^2 + \u0014 - 56",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014^2 + \u0014 - 56",
+    "answer": "\u0014^2 + \u0014 - 56",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q16",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "16. 0\u0007 \b 40 \b 12",
+    "expression": "0^2 - 40 - 12",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "-52",
+    "answer": "-52",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q17",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "17. \u0002\u0007 \b 9\u0002 \b 36",
+    "expression": "x^2 - 9*x - 36",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 12)*(x + 3)",
+    "answer": "(x - 12)*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q18",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "18. \u0007 \u0003 4",
+    "expression": "^2 + 4",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 + 4",
+    "answer": "^2 + 4",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q19",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "19. \u0002\u0007 \b 22\u0002 \b 75",
+    "expression": "x^2 - 22*x - 75",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 25)*(x + 3)",
+    "answer": "(x - 25)*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q20",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "20. \u0002\u0007 \b 3\u0002 \b 40",
+    "expression": "x^2 - 3*x - 40",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 8)*(x + 5)",
+    "answer": "(x - 8)*(x + 5)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q21",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "21. 45 \u0003 14",
+    "expression": "45 + 14",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "59",
+    "answer": "59",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVI_q22",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 2,
+      "section": "VI. Factoring Trinomials: x2 + bx + c"
+    },
+    "raw_text": "22. \u0002\u0007 \b 13\u0002 \u0003 36",
+    "expression": "x^2 - 13*x + 36",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 9)*(x - 4)",
+    "answer": "(x - 9)*(x - 4)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "1. \u0002\u0007 \u0003 7\u0002 \u0003 12",
+    "expression": "x^2 + 7*x + 12",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x + 3)*(x + 4)",
+    "answer": "(x + 3)*(x + 4)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "2. \u0011\u0007 \u0003 10\u0011 \u0003 21",
+    "expression": "\u0011^2 + 10\u0011 + 21",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0011^2 + 10\u0011 + 21",
+    "answer": "\u0011^2 + 10\u0011 + 21",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "3. \u0007 \b 7",
+    "expression": "^2 - 7",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 - 7",
+    "answer": "^2 - 7",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "4. \u0002\u0007 \b 6\u0002 \u0003 5",
+    "expression": "x^2 - 6*x + 5",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 5)*(x - 1)",
+    "answer": "(x - 5)*(x - 1)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "5. \u0002\u0007 \u0003 4\u0002 \b 32",
+    "expression": "x^2 + 4*x - 32",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 4)*(x + 8)",
+    "answer": "(x - 4)*(x + 8)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "6. \u0002\u0007 \b 2\u0002 \b 15",
+    "expression": "x^2 - 2*x - 15",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 5)*(x + 3)",
+    "answer": "(x - 5)*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "7. \u0002\u0007 \b 6\u0002 \u0003 8",
+    "expression": "x^2 - 6*x + 8",
+    "book_answer": null,
+    "category_code": "trinomial_a1",
+    "category": "首项系数为1的二次三项式 (Quadratic Trinomial a=1)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 4)*(x - 2)",
+    "answer": "(x - 4)*(x - 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "8. \u0007 \u0003 9",
+    "expression": "^2 + 9",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 + 9",
+    "answer": "^2 + 9",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "9. 3 \b 44 \u0003 4\u0007",
+    "expression": "3 - 44 + 4^2",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "-25",
+    "answer": "-25",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "10. 5\u0007 \u0003 125 \u0003 20",
+    "expression": "5^2 + 125 + 20",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "170",
+    "answer": "170",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "11. 51 \b 206 \u0003 6\u0007",
+    "expression": "51 - 206 + 6^2",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "-119",
+    "answer": "-119",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "12. \u0014\u0007 \b 14\u0014\u0016 \u0003 24\u0016\u0007",
+    "expression": "\u0014^2 - 14\u0014\u0016 + 24\u0016^2",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014^2 - 14\u0014\u0016 + 24\u0016^2",
+    "answer": "\u0014^2 - 14\u0014\u0016 + 24\u0016^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "13. \u0007 \u0003 6",
+    "expression": "^2 + 6",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 + 6",
+    "answer": "^2 + 6",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "14. \u0002\u0007 \b 11\u0002",
+    "expression": "x^2 - 11*x",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "x*(x - 11)",
+    "answer": "x*(x - 11)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q15",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "15. 157\u0007 \u0003 278 \b 8\u0007",
+    "expression": "157^2 + 278 - 8^2",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "24863",
+    "answer": "24863",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q16",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "16. 3\u0002\u0007 \u0003 21\u0002",
+    "expression": "3*x^2 + 21*x",
+    "book_answer": null,
+    "category_code": "sum_diff_cubes",
+    "category": "立方和与立方差公式 (Sum and Difference of Cubes)",
+    "question_type": "factorization",
+    "calculated_answer": "3*x*(x + 7)",
+    "answer": "3*x*(x + 7)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q17",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "17. \u0002\u0007 \b 5\u0002",
+    "expression": "x^2 - 5*x",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "x*(x - 5)",
+    "answer": "x*(x - 5)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q18",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "18. \u0002\u0007 \u0003 8\u0002",
+    "expression": "x^2 + 8*x",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "x*(x + 8)",
+    "answer": "x*(x + 8)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q19",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "19. \u0007 \b 7\u0002",
+    "expression": "^2 - 7*x",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "^2 - 7*x",
+    "answer": "^2 - 7*x",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVII_q20",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VII. …More Factoring Trinomials: x2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "20. \u0014\u0007 \b 11\u0014\u0016 \b 60\u0016\u0007",
+    "expression": "\u0014^2 - 11\u0014\u0016 - 60\u0016^2",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014^2 - 11\u0014\u0016 - 60\u0016^2",
+    "answer": "\u0014^2 - 11\u0014\u0016 - 60\u0016^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "1. 2\u0002\u0007 \b 5\u0002 \b 3",
+    "expression": "2*x^2 - 5*x - 3",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 3)*(2*x + 1)",
+    "answer": "(x - 3)*(2*x + 1)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "2. 3\u0002\u0007 \u0003 10\u0002 \b 8",
+    "expression": "3*x^2 + 10*x - 8",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(x + 4)*(3*x - 2)",
+    "answer": "(x + 4)*(3*x - 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "3. 2",
+    "expression": "x^2 - 2",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "x^2 - 2",
+    "answer": "x^2 - 2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "4. 7\u0014\u0007 \b 11\u0014 \u0003 4",
+    "expression": "7\u0014^2 - 11\u0014 + 4",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "7\u0014^2 - 11\u0014 + 4",
+    "answer": "7\u0014^2 - 11\u0014 + 4",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "5. 5\u000f\u0007 \u0003 17\u000f \u0003 6",
+    "expression": "5\u000f^2 + 17\u000f + 6",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "5\u000f^2 + 17\u000f + 6",
+    "answer": "5\u000f^2 + 17\u000f + 6",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "6. 4",
+    "expression": "x^2 - 4",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 2)*(x + 2)",
+    "answer": "(x - 2)*(x + 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "7. 3\u0002\u0007 \u0003 4\u0002 \b 7",
+    "expression": "3*x^2 + 4*x - 7",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 1)*(3*x + 7)",
+    "answer": "(x - 1)*(3*x + 7)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "8. 2\u0002\u0007 \u0003 13\u0002 \u0003 15",
+    "expression": "2*x^2 + 13*x + 15",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(x + 5)*(2*x + 3)",
+    "answer": "(x + 5)*(2*x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "9. 9",
+    "expression": "x^2 - 9",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "(x - 3)*(x + 3)",
+    "answer": "(x - 3)*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "10. 6\u0002\u0007 \b 7\u0002 \b 20",
+    "expression": "6*x^2 - 7*x - 20",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(2*x - 5)*(3*x + 4)",
+    "answer": "(2*x - 5)*(3*x + 4)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "11. 2\u000f\u0007 \b 3\u000f \b 14",
+    "expression": "2\u000f^2 - 3\u000f - 14",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "2\u000f^2 - 3\u000f - 14",
+    "answer": "2\u000f^2 - 3\u000f - 14",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "12. 5\u000f\u0007 \u0003 2\u000f \u0003 7",
+    "expression": "5\u000f^2 + 2\u000f + 7",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "5\u000f^2 + 2\u000f + 7",
+    "answer": "5\u000f^2 + 2\u000f + 7",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "13. 10\u0002\u0007 \u0003 13\u0002 \b 30",
+    "expression": "10*x^2 + 13*x - 30",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(2*x + 5)*(5*x - 6)",
+    "answer": "(2*x + 5)*(5*x - 6)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "14. 12",
+    "expression": "x^2 - 12",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "x^2 - 12",
+    "answer": "x^2 - 12",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q15",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "15. 2\u000f\u0007 \u0003 9\u000f \b 5",
+    "expression": "2\u000f^2 + 9\u000f - 5",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "2\u000f^2 + 9\u000f - 5",
+    "answer": "2\u000f^2 + 9\u000f - 5",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q16",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "16. 2\u0002\u0007 \u0003 7\u0002 \u0003 6",
+    "expression": "2*x^2 + 7*x + 6",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(x + 2)*(2*x + 3)",
+    "answer": "(x + 2)*(2*x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q17",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "17. 5\u0014\u0007 \b 42\u0014 \b 27",
+    "expression": "5\u0014^2 - 42\u0014 - 27",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "5\u0014^2 - 42\u0014 - 27",
+    "answer": "5\u0014^2 - 42\u0014 - 27",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q18",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "18. 15\u0002\u0007 \b 28\u0002 \b 32",
+    "expression": "15*x^2 - 28*x - 32",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(3*x - 8)*(5*x + 4)",
+    "answer": "(3*x - 8)*(5*x + 4)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q19",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "19. 8\u0014\u0007 \b 10\u0014 \u0003 3",
+    "expression": "8\u0014^2 - 10\u0014 + 3",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "8\u0014^2 - 10\u0014 + 3",
+    "answer": "8\u0014^2 - 10\u0014 + 3",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secVIII_q20",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "VIII. Factoring Trinomials: ax2 + bx + c Factor, write prime if prime."
+    },
+    "raw_text": "20. 2",
+    "expression": "x^2 - 2",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "x^2 - 2",
+    "answer": "x^2 - 2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIX_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "1. 3\u0002\u0007 \u0003 4\u0002 \u0003 \u0002",
+    "expression": "3*x^2 + 4*x + x",
+    "book_answer": "(x + 2)*(x +",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "x*(3*x + 5)",
+    "answer": "(x + 2)*(x +",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "2. 5)\u0007 \u0003 7) \u0003 2",
+    "expression": "5)^2 + 7) + 2",
+    "book_answer": "(\u0014 - 2)*(3\u0014 + \u0016",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "5)^2 + 7) + 2",
+    "answer": "(\u0014 - 2)*(3\u0014 + \u0016",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "3. 2\u000f\u0007 \b 11\u000f \u0003 5",
+    "expression": "2\u000f^2 - 11\u000f + 5",
+    "book_answer": "(4 - 1)*(4^2 + 2",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "2\u000f^2 - 11\u000f + 5",
+    "answer": "(4 - 1)*(4^2 + 2",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "4. 3)\u0007 \u0003 ) \b 2",
+    "expression": "3)^2 + ) - 2",
+    "book_answer": "(5 + 4)*(2 - 8",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "3)^2 + ) - 2",
+    "answer": "(5 + 4)*(2 - 8",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "5. 5/\u0007 \b 2/ \b 7",
+    "expression": "5/^2 - 2/ - 7",
+    "book_answer": "(0 + 7)*A",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "5/^2 - 2/ - 7",
+    "answer": "(0 + 7)*A",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "6. 88\u0007 \b 1084 \u0003 34\u0007",
+    "expression": "88^2 - 1084 + 34^2",
+    "book_answer": "(2*( + 1)*(2*( + 5",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "7816",
+    "answer": "(2*( + 1)*(2*( + 5",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "7. 6\u0002\u0007 \u0003 19\u0002 \u0003 15",
+    "expression": "6*x^2 + 19*x + 15",
+    "book_answer": "(: + 3)*(\u0014 - :",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(2*x + 3)*(3*x + 5)",
+    "answer": "(: + 3)*(\u0014 - :",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "8. 28\u0014\u0007 \u0003 5\u0014\u0016 \b 12\u0016\u0007",
+    "expression": "28\u0014^2 + 5\u0014\u0016 - 12\u0016^2",
+    "book_answer": "(\u000f + 2)*(\u000f + 3\u0011",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "28\u0014^2 + 5\u0014\u0016 - 12\u0016^2",
+    "answer": "(\u000f + 2)*(\u000f + 3\u0011",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "9. 2\u0014\u0007 \u0003 7\u0014\u0016 \b 15\u0016\u0007",
+    "expression": "2\u0014^2 + 7\u0014\u0016 - 15\u0016^2",
+    "book_answer": "(x -",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "2\u0014^2 + 7\u0014\u0016 - 15\u0016^2",
+    "answer": "(x -",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "10. 12\u0002\u0007 \u0003 17\u0002 \u0003 6",
+    "expression": "12*x^2 + 17*x + 6",
+    "book_answer": ")*() +",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(3*x + 2)*(4*x + 3)",
+    "answer": ")*() +",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "11. 4\u0014\u0007 \b 4\u0014\u0016 \b 5\u0016\u0007",
+    "expression": "4\u0014^2 - 4\u0014\u0016 - 5\u0016^2",
+    "book_answer": "- 1)*(",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "4\u0014^2 - 4\u0014\u0016 - 5\u0016^2",
+    "answer": "- 1)*(",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secIX_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "12. 56",
+    "expression": "x^2 - 56",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "x^2 - 56",
+    "answer": "x^2 - 56",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIX_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "13. 12\u0002\u0007 \b 29\u0002",
+    "expression": "12*x^2 - 29*x",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "x*(12*x - 29)",
+    "answer": "x*(12*x - 29)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIX_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "14. 64\u0002\u0007 \u0003 32\u0002",
+    "expression": "64*x^2 + 32*x",
+    "book_answer": null,
+    "category_code": "sum_diff_cubes",
+    "category": "立方和与立方差公式 (Sum and Difference of Cubes)",
+    "question_type": "factorization",
+    "calculated_answer": "32*x*(2*x + 1)",
+    "answer": "32*x*(2*x + 1)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIX_q15",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "15. 16\u0002\u0007 \u0003 56\u0002",
+    "expression": "16*x^2 + 56*x",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "8*x*(2*x + 7)",
+    "answer": "8*x*(2*x + 7)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secIX_q16",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 3,
+      "section": "IX. …More Factoring Trinomials: ax2 + bx + c"
+    },
+    "raw_text": "16. 18\u0002\u0007 \b 57\u0002 \u0003 35",
+    "expression": "18*x^2 - 57*x + 35",
+    "book_answer": "XI. …More Factoring: Putting It All Together",
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "(3*x - 7)*(6*x - 5)",
+    "answer": "XI. …More Factoring: Putting It All Together",
+    "is_calculated_answer": false
+  },
+  {
+    "id": "factoring_practice_secX_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "1. 2\u0002\u0007 \b 8",
+    "expression": "2*x^2 - 8",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "2*(x - 2)*(x + 2)",
+    "answer": "2*(x - 2)*(x + 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "2. 2\u0002\u0007 \u0003 8\u0002 \u0003 6",
+    "expression": "2*x^2 + 8*x + 6",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "2*(x + 1)*(x + 3)",
+    "answer": "2*(x + 1)*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "3. 3\u000f\u0007 \u0003 9\u000f \b 30",
+    "expression": "3\u000f^2 + 9\u000f - 30",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "3\u000f^2 + 9\u000f - 30",
+    "answer": "3\u000f^2 + 9\u000f - 30",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "4. 6\u0002\u0007 \b 26\u0002 \b 20",
+    "expression": "6*x^2 - 26*x - 20",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "2*(x - 5)*(3*x + 2)",
+    "answer": "2*(x - 5)*(3*x + 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "5. 2\u0002\u0007 \u0003 12\u0002 \b 80",
+    "expression": "2*x^2 + 12*x - 80",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "2*(x - 4)*(x + 10)",
+    "answer": "2*(x - 4)*(x + 10)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "6. 54\u0007 \u0003 154 \u0003 10",
+    "expression": "54^2 + 154 + 10",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "3080",
+    "answer": "3080",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "7. 8\u000f\u0007 \b 18",
+    "expression": "8\u000f^2 - 18",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "8\u000f^2 - 18",
+    "answer": "8\u000f^2 - 18",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "8. 14\u0002\u0007 \u0003 7\u0002 \b 21",
+    "expression": "14*x^2 + 7*x - 21",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "7*(x - 1)*(2*x + 3)",
+    "answer": "7*(x - 1)*(2*x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "9. 4\u0002\u0007 \u0003 16\u0002 \u0003 16",
+    "expression": "4*x^2 + 16*x + 16",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "4*(x + 2)^2",
+    "answer": "4*(x + 2)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "10. 18\u0002 \u0003 12\u0002\u0007 \u0003 2\u0002\u0010",
+    "expression": "18*x + 12*x^2 + 2*x\u0010",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "18*x + 12*x^2 + 2*x\u0010",
+    "answer": "18*x + 12*x^2 + 2*x\u0010",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "11. 2\u0002 \b 2\u0002",
+    "expression": "2*x - 2*x",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "0",
+    "answer": "0",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "12. 34\u0010 \b 274",
+    "expression": "34\u0010 - 274",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "34\u0010 - 274",
+    "answer": "34\u0010 - 274",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "13. 24\u0014\u0007 \b 30\u0014 \u0003 9",
+    "expression": "24\u0014^2 - 30\u0014 + 9",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "24\u0014^2 - 30\u0014 + 9",
+    "answer": "24\u0014^2 - 30\u0014 + 9",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "14. 10\u0002\u0007 \u0003 15\u0002 \b 10",
+    "expression": "10*x^2 + 15*x - 10",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "5*(x + 2)*(2*x - 1)",
+    "answer": "5*(x + 2)*(2*x - 1)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q15",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "15. 3\u0002\u0007 \b 42\u0002 \u0003 147",
+    "expression": "3*x^2 - 42*x + 147",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "3*(x - 7)^2",
+    "answer": "3*(x - 7)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secX_q16",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "X. Factoring: Putting It All Together"
+    },
+    "raw_text": "16. 4\u0002\u0013 \b 4\u0002\u0007",
+    "expression": "4*x\u0013 - 4*x^2",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "4*x\u0013 - 4*x^2",
+    "answer": "4*x\u0013 - 4*x^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "1. 16\u0002\u0007 \b 40\u0002 \b 24",
+    "expression": "16*x^2 - 40*x - 24",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "8*(x - 3)*(2*x + 1)",
+    "answer": "8*(x - 3)*(2*x + 1)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "2. 27\u0002\u0007 \b 36\u0002 \u0003 12",
+    "expression": "27*x^2 - 36*x + 12",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "3*(3*x - 2)^2",
+    "answer": "3*(3*x - 2)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "3. 5\u0002\u0007 \b 60\u0002 \b 140",
+    "expression": "5*x^2 - 60*x - 140",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "5*(x - 14)*(x + 2)",
+    "answer": "5*(x - 14)*(x + 2)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "4. 6\u0011\u0010 \u0003 54\u0011\u0007 \b 6\u0011",
+    "expression": "6\u0011\u0010 + 54\u0011^2 - 6\u0011",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "6\u0011\u0010 + 54\u0011^2 - 6\u0011",
+    "answer": "6\u0011\u0010 + 54\u0011^2 - 6\u0011",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "5. 56\u0013 \u0003 86\u0010 \b 46\u0007",
+    "expression": "56\u0013 + 86\u0010 - 46^2",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "56\u0013 + 86\u0010 - 46^2",
+    "answer": "56\u0013 + 86\u0010 - 46^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "6. \u0002\u0007",
+    "expression": "x^2",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "x^2",
+    "answer": "x^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "7. \u0013 \b 6",
+    "expression": "\u0013 - 6",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0013 - 6",
+    "answer": "\u0013 - 6",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "8. \u0002\u0013 \b 3\u0002\u0007 \b 4",
+    "expression": "x\u0013 - 3*x^2 - 4",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "x\u0013 - 3*x^2 - 4",
+    "answer": "x\u0013 - 3*x^2 - 4",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "9. /\u0007 \b %\u0014\u0007 \b 6\u0014 \u0003 9&",
+    "expression": "/^2 - (\u0014^2 - 6\u0014 + 9",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "/^2 - (\u0014^2 - 6\u0014 + 9",
+    "answer": "/^2 - (\u0014^2 - 6\u0014 + 9",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "10. 81\u0002\u0013 \b 16",
+    "expression": "81*x\u0013 - 16",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "81*x\u0013 - 16",
+    "answer": "81*x\u0013 - 16",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "11. 4\u0011\u000f\u0007 \b 4\u0011\u0007\u000f\u0007 \u0003 \u0011\u0010\u000f\u0007",
+    "expression": "4\u0011\u000f^2 - 4\u0011^2\u000f^2 + \u0011\u0010\u000f^2",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "4\u0011\u000f^2 - 4\u0011^2\u000f^2 + \u0011\u0010\u000f^2",
+    "answer": "4\u0011\u000f^2 - 4\u0011^2\u000f^2 + \u0011\u0010\u000f^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "12. %2\u0014 \u0003 3&\u0007 \b %\u0014 \b 1&\u0007",
+    "expression": "(2\u0014 + 3)^2 - (\u0014 - 1)^2",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "(2\u0014 + 3)^2 - (\u0014 - 1)^2",
+    "answer": "(2\u0014 + 3)^2 - (\u0014 - 1)^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "13. 16:. \b 8:\u0013 \u0003 1",
+    "expression": "16:. - 8:\u0013 + 1",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "16:. - 8:\u0013 + 1",
+    "answer": "16:. - 8:\u0013 + 1",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "14. \u0002\u0007%\u0002\u0007 \b 4& \u0003 4\u0002%\u0002\u0007 \b 4& \u0003 4%\u0002\u0007 \b 4&",
+    "expression": "x^2*(x^2 - 4) + 4*x(x^2 - 4) + 4*(x^2 - 4",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "x^2*(x^2 - 4) + 4*x(x^2 - 4) + 4*(x^2 - 4",
+    "answer": "x^2*(x^2 - 4) + 4*x(x^2 - 4) + 4*(x^2 - 4",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q1",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "1. \u0002\u0007 \u0003 2\u0002 \u0003 \u0002",
+    "expression": "x^2 + 2*x + x",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "x*(x + 3)",
+    "answer": "x*(x + 3)",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q2",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "2. 3\u0014\u0007 \b 2\u0016 \b 6\u0014 \u0003 \u0014\u0016",
+    "expression": "3\u0014^2 - 2\u0016 - 6\u0014 + \u0014\u0016",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "3\u0014^2 - 2\u0016 - 6\u0014 + \u0014\u0016",
+    "answer": "3\u0014^2 - 2\u0016 - 6\u0014 + \u0014\u0016",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q3",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "3. 4\u0010 \b 4\u0007 \u0003 4 \b 1  Hint: 4 \b 1 \u0019 1%4 \b 1&",
+    "expression": "4\u0010 - 4^2 + 4 - 1  Hint: 4 - 1 \u0019 1*(4 - 1",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "4\u0010 - 4^2 + 4 - 1  Hint: 4 - 1 \u0019 1*(4 - 1",
+    "answer": "4\u0010 - 4^2 + 4 - 1  Hint: 4 - 1 \u0019 1*(4 - 1",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q4",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "4. 10 \u0003 24 \b 58 \b 84",
+    "expression": "10 + 24 - 58 - 84",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "-108",
+    "answer": "-108",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q5",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "5. \u0007",
+    "expression": "^2",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "^2",
+    "answer": "^2",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q6",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "6. 4(\u0007 \u0003 5 \u0003 2(5 \u0003 2(",
+    "expression": "4*(^2 + 5 + 2*(5 + 2*(",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "4*(^2 + 5 + 2*(5 + 2*(",
+    "answer": "4*(^2 + 5 + 2*(5 + 2*(",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q7",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "7. \u0014: \u0003 3\u0014 \b :\u0007 \b 3:",
+    "expression": "\u0014: + 3\u0014 - :^2 - 3:",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014: + 3\u0014 - :^2 - 3:",
+    "answer": "\u0014: + 3\u0014 - :^2 - 3:",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q8",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "8. \u000f\u0007 \u0003 2\u000f \u0003 3\u0011\u000f \u0003 6\u0011",
+    "expression": "\u000f^2 + 2\u000f + 3\u0011\u000f + 6\u0011",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "\u000f^2 + 2\u000f + 3\u0011\u000f + 6\u0011",
+    "answer": "\u000f^2 + 2\u000f + 3\u0011\u000f + 6\u0011",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q9",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "9. 2\u0014\u0002\u0007 \u0003 \u0016\u0002\u0007 \b 2\u0014",
+    "expression": "2\u0014x^2 + \u0016x^2 - 2\u0014",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "2\u0014x^2 + \u0016x^2 - 2\u0014",
+    "answer": "2\u0014x^2 + \u0016x^2 - 2\u0014",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q10",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "10. )\u0007 \b",
+    "expression": ")^2 -",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": ")^2 -",
+    "answer": ")^2 -",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q11",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "11. \u0010 \b",
+    "expression": "\u0010 -",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0010 -",
+    "answer": "\u0010 -",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q12",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "12. \u0002\u0007\u0014 \u0003 \u0002\u0007\u0016 \b 16\u0014 \b 16\u0016",
+    "expression": "x^2\u0014 + x^2\u0016 - 16\u0014 - 16\u0016",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "x^2\u0014 + x^2\u0016 - 16\u0014 - 16\u0016",
+    "answer": "x^2\u0014 + x^2\u0016 - 16\u0014 - 16\u0016",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q13",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "13. \u0002\u0010 \u0003 \u0002\u0007 \b \u0002 \b 1",
+    "expression": "x\u0010 + x^2 - x - 1",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "x\u0010 + x^2 - x - 1",
+    "answer": "x\u0010 + x^2 - x - 1",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factoring_practice_secXI_q14",
+    "source": {
+      "file": "Factoring_Practice.pdf",
+      "page": 4,
+      "section": "XI. …More Factoring: Putting It All Together"
+    },
+    "raw_text": "14. \u0014\u0010 \b \u0014\u0007 \b 8\u0014 \u0003 8",
+    "expression": "\u0014\u0010 - \u0014^2 - 8\u0014 + 8",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "\u0014\u0010 - \u0014^2 - 8\u0014 + 8",
+    "answer": "\u0014\u0010 - \u0014^2 - 8\u0014 + 8",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factorisation_times_p6_q1",
+    "source": {
+      "file": "Factorisation.pdf",
+      "page": 6,
+      "section": "Exercise Page 6"
+    },
+    "raw_text": "Factor 3a",
+    "expression": "3*a",
+    "book_answer": null,
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "3*a",
+    "answer": "3*a",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factorisation_times_p6_q2",
+    "source": {
+      "file": "Factorisation.pdf",
+      "page": 6,
+      "section": "Exercise Page 6"
+    },
+    "raw_text": "Factoring can give us useful information regarding an expression as the following",
+    "expression": "ing can give us useful information regarding an expression as the following",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "ing can give us useful information regarding an expression as the following",
+    "answer": "ing can give us useful information regarding an expression as the following",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factorisation_times_p6_q3",
+    "source": {
+      "file": "Factorisation.pdf",
+      "page": 6,
+      "section": "EXERCISE 1"
+    },
+    "raw_text": "Factorise the expression xy – 5x – 2y + 10 and state conditions on x, y such that when",
+    "expression": "ise the expression xy - 5*x - 2*y + 10 and state conditions on x, y such that when",
+    "book_answer": null,
+    "category_code": "grouping",
+    "category": "分组分解法 (Factoring by Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "ise the expression xy - 5*x - 2*y + 10 and state conditions on x, y such that when",
+    "answer": "ise the expression xy - 5*x - 2*y + 10 and state conditions on x, y such that when",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factorisation_times_p10_q1",
+    "source": {
+      "file": "Factorisation.pdf",
+      "page": 10,
+      "section": "EXERCISE 2"
+    },
+    "raw_text": "Factor 6x",
+    "expression": "6*x",
+    "book_answer": null,
+    "category_code": "common_factoring",
+    "category": "提取公因式 (Common Factoring)",
+    "question_type": "factorization",
+    "calculated_answer": "6*x",
+    "answer": "6*x",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factorisation_times_p14_q1",
+    "source": {
+      "file": "Factorisation.pdf",
+      "page": 14,
+      "section": "EXERCISE 3"
+    },
+    "raw_text": "c\t \u0007Factor x",
+    "expression": "c\t ^2*Factor x",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "c\t ^2*Factor x",
+    "answer": "c\t ^2*Factor x",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factorisation_times_p15_q1",
+    "source": {
+      "file": "Factorisation.pdf",
+      "page": 15,
+      "section": "EXERCISE 4"
+    },
+    "raw_text": "Factoring is a part of algebra and so its history belongs to the history of algebra covered in",
+    "expression": "ing is a part of algebra and so its history belongs to the history of algebra covered in",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "ing is a part of algebra and so its history belongs to the history of algebra covered in",
+    "answer": "ing is a part of algebra and so its history belongs to the history of algebra covered in",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "factorisation_times_p16_q1",
+    "source": {
+      "file": "Factorisation.pdf",
+      "page": 16,
+      "section": "Exercise Page 16"
+    },
+    "raw_text": "Find all positive integer solutions to ab + 2a + 5b = 38.",
+    "expression": "all positive integer solutions to ab + 2*a + 5*b = 38.",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "all positive integer solutions to ab + 2*a + 5*b = 38.",
+    "answer": "all positive integer solutions to ab + 2*a + 5*b = 38.",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p5_q1",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 5,
+      "section": "Activity 1"
+    },
+    "raw_text": "Activity 1 Let’s look at this pattern:",
+    "expression": "Let’s look at this pattern:",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Let’s look at this pattern:",
+    "answer": "Let’s look at this pattern:",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p5_q2",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 5,
+      "section": "Activity 2"
+    },
+    "raw_text": "Activity 2 The pattern below is made up of squares, made from lines, as shown below.",
+    "expression": "The pattern below is made up of squares, made from lines, as shown below.",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "The pattern below is made up of squares, made from lines, as shown below.",
+    "answer": "The pattern below is made up of squares, made from lines, as shown below.",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p6_q3",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 6,
+      "section": "Activity 3"
+    },
+    "raw_text": "Activity 3 Ama is collecting seashells on the beach. On her first day, she collected 1",
+    "expression": "Ama is collecting seashells on the beach. On her first day, she collected 1",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Ama is collecting seashells on the beach. On her first day, she collected 1",
+    "answer": "Ama is collecting seashells on the beach. On her first day, she collected 1",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p9_q4",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 9,
+      "section": "Activity 4"
+    },
+    "raw_text": "Activity 4 Expand ​(​2x + 3​)​(​x – 4​)​",
+    "expression": "Expand ​(​2*x + 3​)​(​x - 4​)​",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "Expand ​(​2*x + 3​)​(​x - 4​)​",
+    "answer": "Expand ​(​2*x + 3​)​(​x - 4​)​",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p11_q5",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 11,
+      "section": "Activity 5"
+    },
+    "raw_text": "Activity 5 Solve ​x + ​(​ − 2​)​ = 5 ​using the algebraic tiles",
+    "expression": "Solve ​x + ​(​ - 2​)​ = 5 ​using the algebraic tiles",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "Solve ​x + ​(​ - 2​)​ = 5 ​using the algebraic tiles",
+    "answer": "Solve ​x + ​(​ - 2​)​ = 5 ​using the algebraic tiles",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p12_q6",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 12,
+      "section": "Activity 6"
+    },
+    "raw_text": "Activity 6 Example: Factorise the expression: ​x​ 2​ + 5x + 6​",
+    "expression": "Example: Factorise the expression: ​x​ 2​ + 5*x + 6​",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "Example: Factorise the expression: ​x​ 2​ + 5*x + 6​",
+    "answer": "Example: Factorise the expression: ​x​ 2​ + 5*x + 6​",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p13_q7",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 13,
+      "section": "Activity 7"
+    },
+    "raw_text": "Activity 7 Example: ​x​ 2​ − 4​",
+    "expression": "Example: ​x​ 2​ - 4​",
+    "book_answer": null,
+    "category_code": "diff_squares",
+    "category": "平方差公式 (Difference of Squares)",
+    "question_type": "factorization",
+    "calculated_answer": "Example: ​x​ 2​ - 4​",
+    "answer": "Example: ​x​ 2​ - 4​",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p15_q8",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 15,
+      "section": "Activity 8"
+    },
+    "raw_text": "Activity 8 Let’s factorise ​x​ 2​ + x− 6​ using trinomial algebraic tiles:",
+    "expression": "Let’s factorise ​x​ 2​ + x- 6​ using trinomial algebraic tiles:",
+    "book_answer": null,
+    "category_code": "trinomial_a_neq1",
+    "category": "首项系数不为1的二次三项式 (Quadratic Trinomial a≠1 / Cross-Multiplication)",
+    "question_type": "factorization",
+    "calculated_answer": "Let’s factorise ​x​ 2​ + x- 6​ using trinomial algebraic tiles:",
+    "answer": "Let’s factorise ​x​ 2​ + x- 6​ using trinomial algebraic tiles:",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p19_q9",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 19,
+      "section": "Activity 9"
+    },
+    "raw_text": "Activity 9 Given:",
+    "expression": "Given:",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Given:",
+    "answer": "Given:",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p20_q10",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 20,
+      "section": "Activity 10"
+    },
+    "raw_text": "Activity 10 List the first 5 consecutive odd numbers.",
+    "expression": "List the first 5 consecutive odd numbers.",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "List the first 5 consecutive odd numbers.",
+    "answer": "List the first 5 consecutive odd numbers.",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p21_q11",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 21,
+      "section": "Activity 11"
+    },
+    "raw_text": "Activity 11 1. \t Take a graph or squared paper and draw a square on it with a side length",
+    "expression": "1. \t Take a graph or squared paper and draw a square on it with a side length",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "1. \t Take a graph or squared paper and draw a square on it with a side length",
+    "answer": "1. \t Take a graph or squared paper and draw a square on it with a side length",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p22_q12",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 22,
+      "section": "Activity 12"
+    },
+    "raw_text": "Activity 12 Let’s consider two perfect squares, say:",
+    "expression": "Let’s consider two perfect squares, say:",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Let’s consider two perfect squares, say:",
+    "answer": "Let’s consider two perfect squares, say:",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p27_q13",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 27,
+      "section": "Activity 13"
+    },
+    "raw_text": "Activity 13 Step 1: Identify the denominators of the two fractions. They are a and b.",
+    "expression": "Step 1: Identify the denominators of the two fractions. They are a and b.",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Step 1: Identify the denominators of the two fractions. They are a and b.",
+    "answer": "Step 1: Identify the denominators of the two fractions. They are a and b.",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p29_q14",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 29,
+      "section": "Activity 14"
+    },
+    "raw_text": "Activity 14 Work through the following examples with a classmate to make sure you fully",
+    "expression": "Work through the following examples with a classmate to make sure you fully",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Work through the following examples with a classmate to make sure you fully",
+    "answer": "Work through the following examples with a classmate to make sure you fully",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p31_q15",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 31,
+      "section": "Activity 15"
+    },
+    "raw_text": "Activity 15 Simplify the expression ​ 12xy",
+    "expression": "the expression ​ 12*xy",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "the expression ​ 12*xy",
+    "answer": "the expression ​ 12*xy",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p34_q16",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 34,
+      "section": "Activity 16"
+    },
+    "raw_text": "Activity 16 Note:",
+    "expression": "Note:",
+    "book_answer": null,
+    "category_code": "complex_grouping",
+    "category": "多变量/高阶复合分解 (Complex Grouping)",
+    "question_type": "factorization",
+    "calculated_answer": "Note:",
+    "answer": "Note:",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p37_q17",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 37,
+      "section": "REVIEW QUESTIONS"
+    },
+    "raw_text": "REVIEW QUESTIONS Review Questions 3.1",
+    "expression": "Review Questions 3.1",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "Review Questions 3.1",
+    "answer": "Review Questions 3.1",
+    "is_calculated_answer": true
+  },
+  {
+    "id": "lm_maths_sec3_p40_q18",
+    "source": {
+      "file": "LM-maths-section-3-Tversion-1.pdf",
+      "page": 40,
+      "section": "ANSWERS TO REVIEW QUESTIONS"
+    },
+    "raw_text": "ANSWERS TO REVIEW QUESTIONS Review Questions 3.1",
+    "expression": "Review Questions 3.1",
+    "book_answer": null,
+    "category_code": "putting_together",
+    "category": "综合应用 (Putting It All Together)",
+    "question_type": "factorization",
+    "calculated_answer": "Review Questions 3.1",
+    "answer": "Review Questions 3.1",
+    "is_calculated_answer": true
+  }
+]

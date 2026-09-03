@@ -1,0 +1,21 @@
+{
+  "total_questions": 254,
+  "by_file": {
+    "Factoring_Methods.pdf": 23,
+    "Factoring_Practice.pdf": 206,
+    "Factorisation.pdf": 7,
+    "LM-maths-section-3-Tversion-1.pdf": 18
+  },
+  "by_category": {
+    "complex_grouping": 24,
+    "trinomial_a_neq1": 50,
+    "diff_squares": 48,
+    "grouping": 2,
+    "common_factoring": 25,
+    "sum_diff_cubes": 4,
+    "perfect_square": 20,
+    "putting_together": 66,
+    "trinomial_a1": 15
+  },
+  "generated_at": "2026-08-07T22:38:34.540999"
+}

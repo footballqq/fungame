@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数论探索：同余世界（Modulo Explorer）</title>
+  <meta name="description" content="面向青少年与竞赛选手的初等数论同余互动学习系统，包含姐姐与妹妹启发式对话、生动比喻、Canvas 动态实验台、母题精解与随堂闯关。">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- KaTeX CSS & JS (MathType Standard) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  
+  <!-- App Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <!-- 顶部导航栏 -->
+    <header class="app-header">
+      <div class="header-left">
+        <button id="btn-toggle-sidebar" class="icon-btn" title="切换目录">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <div class="brand">
+          <span class="brand-badge">MODULO</span>
+          <span class="brand-title">同余之美 · 初等数论交互课件</span>
+        </div>
+      </div>
+      
+      <div class="header-center">
+        <span id="current-chapter-indicator" class="chapter-indicator">第 1 讲：带余除法与时钟算术</span>
+      </div>
+
+      <div class="header-right">
+        <div class="progress-bar-mini" title="总体进度">
+          <div id="global-progress-fill" class="progress-fill" style="width: 8%;"></div>
+        </div>
+        <span id="global-progress-text" class="progress-label">1 / 12</span>
+        <button id="btn-theme-toggle" class="icon-btn" title="切换深浅主题">
+          <span class="theme-icon">🌓</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 主体视口区域 -->
+    <div class="main-layout">
+      <!-- 侧边栏目录 -->
+      <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+          <h3>课程导航</h3>
+          <span class="sidebar-subtitle">4 篇章 · 12 讲精粹</span>
+        </div>
+        <nav id="chapter-nav-list" class="chapter-nav-list">
+          <!-- 动态生成章节列表 -->
+        </nav>
+      </aside>
+      <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+      <!-- 核心教学内容呈现区 -->
+      <main id="content-viewport" class="content-viewport">
+        <!-- 章节标题横幅 -->
+        <section class="section-banner">
+          <div class="volume-badge" id="sec-vol-badge">篇章一 · 基础篇</div>
+          <h1 id="sec-title" class="sec-title">第 1 讲：带余除法与时钟算术</h1>
+          <p id="sec-subtitle" class="sec-subtitle">余数的诞生与钟表上的循环算术</p>
+        </section>
+
+        <!-- 动态 Block 渲染容器 -->
+        <div id="blocks-container" class="blocks-container">
+          <!-- 动态渲染 dialogue / story / canvas / concept / example / quiz -->
+        </div>
+
+        <!-- 底部推进行动栏 -->
+        <footer class="interaction-footer">
+          <div class="footer-left">
+            <button id="btn-prev-section" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              上一讲
+            </button>
+          </div>
+          <div class="footer-center">
+            <button id="btn-next-block" class="btn btn-primary btn-pulse">
+              <span>继续探索</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="footer-right">
+            <button id="btn-next-section" class="btn btn-secondary">
+              下一讲
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <!-- ES Module 入口 -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

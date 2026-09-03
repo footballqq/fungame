@@ -1,0 +1,339 @@
+/* components.css */
+
+/* --- 按钮通用 --- */
+.btn {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-base);
+  transition: all var(--duration-fast) var(--ease-in-out);
+  background-color: var(--color-primary-700);
+  color: var(--text-primary);
+  border: 1px solid var(--color-primary-600);
+}
+
+.btn:hover:not(:disabled) {
+  background-color: var(--color-primary-600);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  padding: var(--space-2);
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: none;
+}
+
+.btn-icon:hover {
+  background-color: var(--color-primary-700);
+  transform: none;
+  box-shadow: none;
+}
+
+/* --- 卡片通用 --- */
+.card {
+  background-color: var(--color-primary-700);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-6);
+}
+
+/* --- DialogueBox --- */
+.dialogue-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.dialogue-message {
+  display: none; /* js 控制显示 */
+  align-items: flex-start;
+  gap: var(--space-3);
+  max-width: 85%;
+}
+
+.dialogue-message.visible {
+  display: flex;
+  animation: popIn var(--duration-normal) var(--ease-out-back);
+}
+
+.dialogue-avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary-600);
+}
+
+.dialogue-bubble {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+}
+
+.role-sister {
+  align-self: flex-start;
+}
+
+.role-sister .dialogue-avatar img {
+  border-color: var(--color-sister-border);
+}
+
+.role-sister .dialogue-bubble {
+  background-color: var(--color-sister-bg);
+  border-top-left-radius: var(--space-1);
+}
+
+.role-younger {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.role-younger .dialogue-avatar img {
+  border-color: var(--color-younger-border);
+}
+
+.role-younger .dialogue-bubble {
+  background-color: var(--color-younger-bg);
+  border-top-right-radius: var(--space-1);
+}
+
+.dialogue-action {
+  text-align: center;
+  margin-top: var(--space-2);
+}
+
+.btn-continue {
+  background-color: transparent;
+  color: var(--color-accent-300);
+  font-size: var(--text-sm);
+}
+.btn-continue:hover {
+  color: var(--color-accent-400);
+}
+
+/* --- ConceptBox (四色盒子) --- */
+.concept-box {
+  border-radius: var(--radius-md);
+  border-left: 4px solid transparent;
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.box-header {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.box-blue {
+  background-color: var(--box-blue-bg);
+  border-left-color: var(--box-blue-border);
+}
+.box-blue .box-header { color: var(--box-blue-border); }
+
+.box-green {
+  background-color: var(--box-green-bg);
+  border-left-color: var(--box-green-border);
+}
+.box-green .box-header { color: var(--box-green-border); }
+
+.box-orange {
+  background-color: var(--box-orange-bg);
+  border-left-color: var(--box-orange-border);
+}
+.box-orange .box-header { color: var(--box-orange-border); }
+
+.box-gray {
+  background-color: var(--box-gray-bg);
+  border-left-color: var(--box-gray-border);
+}
+.box-gray .box-header { color: var(--text-muted); cursor: pointer; }
+.box-gray .box-body { display: none; margin-top: var(--space-2); }
+.box-gray.expanded .box-body { display: block; animation: fadeIn var(--duration-normal) var(--ease-in-out); }
+
+/* --- QuizCard --- */
+.quiz-card {
+  background-color: var(--color-primary-800);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+  border: 1px solid var(--color-primary-700);
+}
+
+.quiz-header {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent-300);
+  margin-bottom: var(--space-4);
+}
+
+.quiz-question {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.quiz-option {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary-700);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-in-out);
+}
+
+.quiz-option:hover {
+  background-color: var(--color-primary-600);
+}
+
+.quiz-option.selected {
+  border-color: var(--color-accent-400);
+  background-color: hsla(225, 60%, 55%, 0.1);
+}
+
+.quiz-option.correct {
+  border-color: var(--color-correct);
+  background-color: var(--color-correct-bg);
+  box-shadow: var(--glow-correct);
+}
+
+.quiz-option.wrong {
+  border-color: var(--color-wrong);
+  background-color: var(--color-wrong-bg);
+  animation: shake 0.4s;
+}
+
+.quiz-feedback {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary-700);
+  animation: slideDown var(--duration-normal) var(--ease-out-back);
+}
+.quiz-feedback.hidden { display: none; }
+.quiz-feedback.correct-text { color: var(--color-correct); }
+.quiz-feedback.wrong-text { color: var(--color-wrong); }
+
+/* --- StoryCard --- */
+.story-card {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background-color: transparent;
+}
+.story-icon { font-size: 24px; }
+.story-content p {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+.story-content p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- ProgressBar --- */
+.progress-bar-container {
+  height: 6px;
+  background-color: var(--color-primary-800);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin: var(--space-4) 0;
+}
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--color-accent-400);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* --- Toast --- */
+.toast-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 居中显示 */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  pointer-events: none; /* 防止遮挡点击 */
+}
+.achievement-toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background-color: var(--color-primary-800);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  border: 1px solid var(--color-accent-400);
+  font-size: 1.2rem;
+  animation: popIn var(--duration-normal) var(--ease-out-back) forwards;
+}
+.toast-icon { font-size: 24px; }
+.toast-text { color: var(--text-primary); font-weight: var(--font-weight-medium); }
+
+/* --- Modal --- */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.modal-container.hidden {
+  display: none;
+}
+.modal-dialog {
+  background-color: var(--color-primary-800);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-primary-600);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: popIn var(--duration-fast) var(--ease-out-back);
+}
+.modal-title {
+  color: var(--color-accent-400);
+  margin-bottom: var(--space-3);
+}
+.modal-text {
+  color: var(--text-muted);
+  margin-bottom: var(--space-6);
+}
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+/* Utility Classes */
+.hidden { display: none !important; }

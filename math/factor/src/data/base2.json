@@ -1,0 +1,146 @@
+{
+  "id": "base2",
+  "title": "前置营地 2：单项式乘多项式",
+  "blocks": [
+    {
+      "type": "story",
+      "text": "干得漂亮！现在你已经对多项式的加减了如指掌。接下来我们要进入乘法的领域。\n\n第一个挑战是：当一个单项式遇到一个多项式（被括号包围）时，该怎么相乘？"
+    },
+    {
+      "type": "concept",
+      "color": "green",
+      "title": "乘法分配律 (Distributive Property)",
+      "content": [
+        "核心口诀：**外面的项要“雨露均沾”地乘遍括号里的每一项！**",
+        "公式：$a(b + c - d) = ab + ac - ad$",
+        "这其实就是因式分解中“提取公因式”的逆运算！把 $ab + ac - ad$ 提出 $a$，就回去了。",
+        "**完整运算步骤分解：**",
+        "计算：$2x(3x^2 - 4x + 1)$",
+        "**步骤一 (分别相乘)**：$= (2x \\cdot 3x^2) + (2x \\cdot -4x) + (2x \\cdot 1)$",
+        "**步骤二 (指数法则相加)**：$= (2 \\cdot 3)x^{1+2} + (2 \\cdot -4)x^{1+1} + (2 \\cdot 1)x$",
+        "**步骤三 (得出结果)**：$= 6x^3 - 8x^2 + 2x$"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "一步一测：展开 $3a(2a^2 - 5b)$",
+      "options": [
+        {
+          "text": "$6a^3 - 5b$",
+          "isCorrect": false,
+          "explanation": "你漏乘了第二项！外面的 $3a$ 也要乘给 $-5b$。"
+        },
+        {
+          "text": "$6a^3 - 15ab$",
+          "isCorrect": true,
+          "explanation": "完全正确！$(3a)(2a^2) + (3a)(-5b) = 6a^3 - 15ab$。"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "red",
+      "title": "避坑指南 ☢️：当外面带负号时",
+      "content": [
+        "当括号外面的单项式**带有负号**时，乘进去的每一项符号都要**翻转**！",
+        "例题计算：$-3xy(2x - 4y)$",
+        "**绝不省略的步骤：**",
+        "$= (-3xy) \\cdot (2x) + (-3xy) \\cdot (-4y)$",
+        "（看这里，负号乘以负号会变成什么？）",
+        "$= (-3 \\cdot 2)x^2y + (-3 \\cdot -4)xy^2$",
+        "$= -6x^2y + 12xy^2$ （原来括号里的减号，变成了加号！）"
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "一步一测：展开 $-x^2(x - 4)$",
+      "options": [
+        {
+          "text": "$-x^3 - 4x^2$",
+          "isCorrect": false,
+          "explanation": "负负得正！$(-x^2) \\times (-4)$ 应该是 $+4x^2$。"
+        },
+        {
+          "text": "$-x^3 + 4x^2$",
+          "isCorrect": true,
+          "explanation": "很好！注意到了负负得正，第二项变成了加号。"
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "color": "blue",
+      "title": "综合实战：展开并合并",
+      "content": [
+        "更复杂的代数式往往需要我们先用**乘法分配律**展开括号，然后再用**合并同类项**收尾。",
+        "例题：$2x(x + 3) - 3(x^2 - x)$",
+        "**步骤一（左边展开）**：$2x^2 + 6x$",
+        "**步骤二（右边带符号展开）**：$(-3)x^2 + (-3)(-x) = -3x^2 + 3x$",
+        "**步骤三（全部写下来）**：$2x^2 + 6x - 3x^2 + 3x$",
+        "**步骤四（合并同类项）**：$(2 - 3)x^2 + (6 + 3)x = -x^2 + 9x$"
+      ]
+    }
+  ],
+  "challengeQuizzes": [
+    {
+      "question": "综合展开：$2a^2(3a - 1)$",
+      "options": [
+        {
+          "text": "$6a^3 - 1$",
+          "isCorrect": false,
+          "explanation": "分配律需要乘遍每一项，$-1$ 也要乘 $2a^2$。"
+        },
+        {
+          "text": "$6a^3 - 2a^2$",
+          "isCorrect": true,
+          "explanation": "正确！$(2a^2)(3a) - (2a^2)(1) = 6a^3 - 2a^2$。"
+        },
+        {
+          "text": "$5a^3 - 2a^2$",
+          "isCorrect": false,
+          "explanation": "系数是相乘不是相加，$2 \\times 3 = 6$。"
+        }
+      ]
+    },
+    {
+      "question": "含负号分配陷阱：$-2m(m^2 - 3m + 4)$",
+      "options": [
+        {
+          "text": "$-2m^3 - 6m^2 + 8m$",
+          "isCorrect": false,
+          "explanation": "中间项负负得正 $(-2m)(-3m) = +6m^2$。最后一项负正得负 $(-2m)(4) = -8m$。"
+        },
+        {
+          "text": "$-2m^3 + 6m^2 - 8m$",
+          "isCorrect": true,
+          "explanation": "完美变号！每一项的符号都翻转了。"
+        },
+        {
+          "text": "$-2m^3 + 3m - 4$",
+          "isCorrect": false,
+          "explanation": "$-2m$ 必须乘进每一项，不仅改变符号，系数也要相乘。"
+        }
+      ]
+    },
+    {
+      "question": "展开后合并：$x(2x - 3) - x(x + 1)$",
+      "options": [
+        {
+          "text": "$x^2 - 4x$",
+          "isCorrect": true,
+          "explanation": "展开得 $2x^2 - 3x - x^2 - x$。合并得 $(2-1)x^2 + (-3-1)x = x^2 - 4x$。"
+        },
+        {
+          "text": "$x^2 - 2x$",
+          "isCorrect": false,
+          "explanation": "右边展开时 $-x(1) = -x$，合并是 $-3x - x = -4x$。"
+        },
+        {
+          "text": "$3x^2 - 2x$",
+          "isCorrect": false,
+          "explanation": "右边是减号，不是相加！"
+        }
+      ]
+    }
+  ]
+}

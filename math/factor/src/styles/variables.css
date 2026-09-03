@@ -1,0 +1,32 @@
+:root {
+  --color-primary-950: #0f172a; /* 深邃宇宙背景 */
+  --color-primary-900: #1e293b; /* 模块背景 */
+  --color-primary-800: #334155; /* 较浅模块背景 */
+  --color-primary-600: #475569; /* 边框与静默态 */
+  --color-primary-400: #94a3b8; /* 次要文本 */
+
+  /* 因式分解主题色：紫橙相间 */
+  --color-accent-400: #a855f7; /* 核心紫色 */
+  --color-accent-500: #9333ea;
+  --color-secondary-400: #fb923c; /* 橙色（代表系数/常数） */
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  --color-success: #22c55e;
+  --color-wrong: #ef4444;
+  --color-star: #fbbf24;
+
+  --font-main: 'Noto Sans SC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-math: 'KaTeX_Math', 'Times New Roman', serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+}

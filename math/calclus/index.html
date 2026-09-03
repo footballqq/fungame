@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>姐姐妹妹学微积分</title>
+    <meta name="description" content="面向小学生的微积分互动学习网页">
+
+    <!-- 1. Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- 2. KaTeX for Math -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    
+    <!-- 3. CSS Styles -->
+    <link rel="stylesheet" href="css/variables.css?v=23">
+    <link rel="stylesheet" href="css/base.css?v=23">
+    <link rel="stylesheet" href="css/layout.css?v=23">
+    <link rel="stylesheet" href="css/components.css?v=23">
+    <link rel="stylesheet" href="css/animations.css?v=23">
+    <link rel="stylesheet" href="css/views.css?v=23">
+</head>
+<body>
+    <!-- 全局导航栏 -->
+    <nav class="global-nav">
+        <div class="nav-brand">
+            <span class="material-symbols-rounded">explore</span>
+            <h1>数学星球探险</h1>
+        </div>
+        <div class="nav-actions">
+            <div class="xp-display">⭐ <span id="nav-xp">0</span></div>
+            <a href="#/generator" class="btn btn-icon" title="试卷出题器">
+                <span class="material-symbols-rounded">print</span>
+            </a>
+            <a href="#/toc" class="btn btn-icon" title="全书目录">
+                <span class="material-symbols-rounded">menu_book</span>
+            </a>
+            <a href="#/profile" class="btn btn-icon" title="学习档案">
+                <span class="material-symbols-rounded">account_circle</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- SPA 主视图容器 -->
+    <main id="app-root" class="app-container">
+        <!-- 路由内容将被动态注入到这里 -->
+        <div class="loading-spinner">正在准备星际跃迁...</div>
+    </main>
+
+    <!-- 全局弹窗层 (成就、提示等) -->
+    <div id="toast-container" class="toast-container"></div>
+    <div id="modal-container" class="modal-container hidden"></div>
+
+    <!-- KaTeX Scripts (Defer) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    
+    <!-- 4. JS Application -->
+    <script type="module" src="js/app.js?v=23"></script>
+</body>
+</html>
