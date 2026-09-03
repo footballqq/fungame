@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>LYNGK 中文规则说明书</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #222;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: none;
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .intro {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-left: 4px solid #444;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            background-color: #222;
+            color: #fff;
+            display: inline-block;
+            padding: 5px 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        ul, ol {
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .diagram-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .diagram-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .diagram-caption {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px;
+            text-align: left;
+            padding: 0 10px;
+        }
+        .note {
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .cover-img {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .cover-img img {
+            max-width: 60%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cover-img">
+            <img src="cover.png" alt="LYNGK 封面">
+        </div>
+        <h1>LYNGK</h1>
+        <div class="subtitle">
+            全在于连结……<br>
+            终章：星盘计划（GIPF project）的第七款游戏。双人游戏。
+        </div>
+
+        <div class="intro">
+            尽管星盘计划（GIPF project）最初只打算包含6款游戏，但作为系列第七作的 LYNGK，是整个计划的集大成之作。如果说《星盘（GIPF）》是该计划的基石，那么《LYNGK》就是统领全局的华盖。它通过融合系列中每款游戏的标志性元素和机制，将这6款游戏完美地串联在一起。
+        </div>
+
+        <div class="section">
+            <div class="section-title">A 游戏配件 (CONTENTS)</div>
+            <ul>
+                <li>1 块游戏版图</li>
+                <li>3 枚白色杂色棋子（代表 GIPF）</li>
+                <li>9 枚象牙色棋子（代表 TZAAR）</li>
+                <li>9 枚蓝色棋子（代表 ZÈRTZ）</li>
+                <li>9 枚红色棋子（代表 DVONN）</li>
+                <li>9 枚绿色棋子（代表 PÜNCT）</li>
+                <li>9 枚黑色棋子（代表 YINSH）</li>
+                <li>1 个收纳袋</li>
+                <li>1 份说明书</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">B 游戏目标 (AIM OF THE GAME)</div>
+            <p>LYNGK 包含6种不同颜色的棋子，每种颜色代表星盘计划中的一款游戏。实际上，游戏中只有5种主动颜色，因为第6种颜色（白色杂色，以下简称“白色”）本身不属于任何阵营；它可以作为其他5种颜色中的任意一种来使用。在游戏开始时，其他5种颜色的棋子都是中立的，属于双方玩家。</p>
+            <p>在游戏过程中，每位玩家必须认领2种颜色——这意味着从那一刻起，对手将不能再移动这些颜色的棋子。游戏的目标是堆叠出由5种不同颜色的5枚棋子组成的棋堆。在游戏结束时，拥有最多5层棋堆的玩家将获得胜利。</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">C 游戏准备 (PREPARATION)</div>
+            <ol>
+                <li>将每种颜色的8枚棋子和3枚白色棋子随机放置在版图上，确保每个点（即线条的交叉处）都被占满。</li>
+                <li>将剩余的棋子（1枚象牙色、1枚蓝色、1枚红色、1枚黑色和1枚绿色）排列在版图旁。（见图1）</li>
+                <li>抽签决定起始玩家。</li>
+            </ol>
+            <div class="grid-2">
+                <div class="diagram-container">
+                    <img src="diagram1.png" alt="图1：随机起始布局">
+                    <div class="diagram-caption">
+                        <strong>图1</strong>：随机的起始布局，版图旁放置着5枚棋子，代表游戏开始时的5种中立颜色。由于双方都还不知道自己将认领哪些颜色，因此随机的布局不会对任何一方产生倾斜优势。
+                    </div>
+                </div>
+                <div class="diagram-container">
+                    <img src="diagram2.png" alt="图2：认领颜色">
+                    <div class="diagram-caption">
+                        <strong>图2</strong>：玩家A认领了红色。他必须在移动之前进行认领，因为一旦他在版图上移动了棋子或棋堆，回合就将交还给对手；此时对手也可以在移动之前认领颜色。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">D 百搭棋子、中立棋子与认领棋子</div>
+            <ol>
+                <li>这3枚白色棋子必须被视作“百搭（Jokers）”，即它们可以代表5种主动颜色中的任意一种。这些百搭棋子是被动的，不能主动用来进行移动；它们只能作为棋堆的一部分被移动。</li>
+                <li>游戏开始时，版图上的所有棋子都是中立的。它们不属于任何一方，这意味着除了被动的百搭棋子外，双方都可以移动它们。</li>
+                <li>在游戏过程中，每位玩家可以认领2种颜色。一旦某颜色的棋子被玩家认领，它们便不再是中立的。从那一刻起，只有认领该颜色的玩家才能移动这些棋子。<br>
+                <span class="note">注意：版图旁的5枚棋子仅用于认领颜色。它们不能被放入游戏中。</span></li>
+                <li>玩家可以在游戏的任何阶段认领颜色，但必须在自己回合的<strong>移动之前</strong>进行。要认领一种颜色，玩家必须拿走版图旁所需颜色的棋子，并将其放在自己面前的这一侧。（见图2）</li>
+                <li>玩家一次只能认领一种颜色。因此，不允许在同一回合内同时认领2种颜色。</li>
+                <li>当双方玩家都认领了各自的2种颜色后，最后剩下的（第5种）颜色保持中立。在剩余的游戏中，双方玩家都可以继续使用这种中立颜色的棋子。</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <div class="section-title">E 移动规则 (A MOVE)</div>
+            <ol>
+                <li>双方轮流进行回合。在每回合中，玩家必须移动一枚棋子或一个棋堆。玩家可以选择中立颜色或自己认领颜色的任意棋子/棋堆进行移动。</li>
+                <li>移动棋堆时，必须将其作为一个整体移动。棋堆顶部的棋子决定了该棋堆是中立的，还是属于某位玩家。</li>
+                <li>无论是移动中立颜色还是认领颜色的棋子/棋堆，移动的终点必须是一个被占据的位置，即必须落在另一个棋子或棋堆之上。棋子可以移动到相邻的棋子/棋堆上，也可以在直线上越过空交叉点，移动到直线上的第一个棋子/棋堆上。<strong>不允许跳过任何棋子或棋堆。</strong></li>
+                <li>游戏中还有一种额外的移动方式，这将在下方“F. LYNGK 规则”中单独说明。</li>
+                <li>一个棋堆最多包含5枚棋子。核心规则是：<strong>一个棋堆只能由不同颜色的棋子组成</strong>，同种颜色的2枚（或更多）棋子绝不能出现在同一个棋堆中。然而，2枚甚至所有3枚白色棋子可以同时存在于一个棋堆中。如上所述，白色棋子是百搭而非独立颜色，它可以被视为该棋堆中缺失的任何颜色。（见图3）</li>
+            </ol>
+            
+            <div class="grid-2">
+                <div class="diagram-container">
+                    <img src="diagram3.png" alt="图3：组成棋堆">
+                    <div class="diagram-caption">
+                        <strong>图3</strong>：玩家A组成了一个4层棋堆，包含1枚红色棋子、1枚象牙色棋子和2枚百搭棋子。他可以将这2枚百搭棋子视为棋堆中尚未出现的任何两种颜色的组合：绿/蓝、蓝/黑 或 黑/绿。
+                    </div>
+                </div>
+                <div class="diagram-container">
+                    <img src="diagram4.png" alt="图4：中立棋子的移动">
+                    <div class="diagram-caption">
+                        <strong>图4</strong>：红色棋子和棋堆属于玩家A。其他4种颜色仍为中立。当轮到玩家B时，她可以移动任何中立棋子或顶部为中立棋子的棋堆。例如，箭头指示了她可以移动这枚蓝色棋子的路线。该蓝色棋子不能移动到黑色棋堆上，原因有两点：(1) 该棋堆中已经包含了一枚蓝色棋子；(2) 该棋堆的高度高于这枚单枚的中立棋子。
+                    </div>
+                </div>
+            </div>
+
+            <ol start="6">
+                <li><strong>一枚单独的中立棋子</strong>（即尚未被认领颜色的单枚棋子）只能移动到<strong>另一枚单独的棋子</strong>上（颜色不限）。换句话说，它可以跳跃到百搭棋子上、其他中立颜色的棋子上，或是被任意玩家认领的颜色棋子上。单独的中立棋子不能移动到棋堆上。（见图4）</li>
+                <li><strong>顶部为中立颜色的棋堆</strong>可以移动到任何单独的棋子上，或是高度不高于自己的棋堆上。它不能移动到比自己高的棋堆上。例如，一个顶部为中立颜色的2层棋堆，可以移动到单枚棋子或另一个2层棋堆上，但不能移动到3层棋堆上。</li>
+                <li><strong>一枚认领颜色的单独棋子，或是顶部为认领颜色的棋堆</strong>，可以移动到任何其他棋子或棋堆上。（前提是移动后的棋堆高度不超过5层，且所有棋子颜色均不相同）。</li>
+                <li>当玩家完成了一个5层的棋堆，且顶部棋子的颜色属于他们所认领的颜色时，该玩家必须将整个棋堆移出版图，并放置在自己的一侧，确保对手随时可见。在游戏结束时，每一个移出的棋堆价值1分。</li>
+                <li>当玩家完成了一个5层的棋堆，且顶部棋子的颜色为中立颜色时，该棋堆将作为障碍物留在版图上。这个棋堆不属于任何玩家的得分。</li>
+                <li>除非玩家没有任何可行的移动，否则不允许跳过回合（Pass）。</li>
+                <li>如果一名玩家无法再进行移动，另一名玩家必须继续进行游戏，直到他也无法移动为止。如果一名已经跳过回合的玩家由于局势变化再次获得了移动机会，那么该玩家必须进行移动。</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <div class="section-title">F LYNGK 规则 (THE LYNGK-RULE)</div>
+            <p>在接下来的内容中，单独棋子和棋堆将统称为“棋子”，因为 LYNGK 规则对两者同样适用。</p>
+            <ol>
+                <li>LYNGK 规则<strong>仅在移动已认领颜色的棋子时</strong>才可使用。</li>
+                <li>该规则规定，同一种已认领颜色的棋子之间是相互连接的，前提是它们可以通过常规移动触达彼此。玩家可以利用这些认领颜色的棋子作为“中转站”，进行二连跳、甚至三连跳或四连跳。因此，每种认领颜色都可以被视为一张多重移动的专属网络，而对手无法使用这张网络。</li>
+                <li>该规则的应用方式如下：你可以将一枚认领颜色的棋子移动向同色的另一枚棋子，但<strong>不能停留在其上方</strong>；相反，你需要将到达的棋子作为一个“LYNGK 节点（LYNGK-point）”，这意味着你必须从该节点进行第二次移动。因此，你必须从该节点继续向相邻的棋子，或在直线上可达的棋子移动。如果颜色符合要求，你移动的棋子最终必须停留在该棋子的上方。然而，如果这第二个目标棋子仍然是相同的已认领颜色，你必须从该点进行第三次移动，以此类推，直到移动的棋子落在可以停留的棋子上。（见图5）</li>
+                <li>不允许将百搭棋子作为 LYNGK 节点。</li>
+                <li>在同一回合内，不允许将同一个 LYNGK 节点使用多次。</li>
+            </ol>
+            <p><span class="note">注意：当使用棋堆作为 LYNGK 节点时，只有顶部棋子的颜色才起作用，棋堆中的其他颜色无关紧要。</span></p>
+
+            <div class="diagram-container" style="max-width: 500px; margin: 20px auto;">
+                <img src="diagram5.png" alt="图5：LYNGK规则多重跳跃">
+                <div class="diagram-caption">
+                    <strong>图5</strong>：玩家A已经领先获得了一个5层棋堆，但玩家B有机会将局势扳平。首先她认领了黑色 (1)，接着她进行了一次三连跳 (2) 并完成了一个5层棋堆。要进行这样的多重移动，所有途经的 LYNGK 节点必须是同一种已认领的颜色。（注意，到目前为止双方都只认领了一种颜色。）
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">G 游戏结束 (END OF THE GAME)</div>
+            <ol>
+                <li>当场上无法进行任何合法的移动时，游戏结束。拥有最多5层（5种不同颜色）棋堆的玩家获得胜利。</li>
+                <li>如果出现平局，版图上拥有最多4层棋堆的玩家获胜。如果依然平局，则计算3层棋堆的数量，依此类推。</li>
+                <li>最终，如果连单枚棋子的数量都完全相等，则游戏以平局告终。</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <div class="section-title">H 变体规则：6层棋堆 (VARIANT: STACK OF 6 PIECES)</div>
+            <p><strong>建议：</strong>仅在您对上述标准游戏有足够经验后，再尝试此变体规则。上述规则始终是标准游戏的基础。</p>
+            <p>然而，在LYNGK的最终规则敲定之前，这种变体玩法一直都在候选之列。这种玩法的游戏时间通常较短，因为它增加了一个特殊的设定。该设定是一种“即死（sudden-death）”机制：一旦有玩家完成一个6层棋堆，即刻赢得游戏。如果没有足够的经验，这种机制往往会导致太多巧合性的胜利，也就是在没有刻意谋划的情况下，突然获得了获胜的机会。然而，完全抛弃这个机制未免可惜，因此我们将其作为变体规则提供在此。</p>
+            <p>玩家应遵守标准游戏的所有规则，并附加以下规定：</p>
+            <ol>
+                <li>5层的棋堆必须留在版图上。</li>
+                <li>百搭棋子现在具有双重功能：除了像标准游戏中那样作为其他5种颜色使用外，它也代表“白色”，即一种独立的颜色。<br>
+                <span class="note">注意：尽管在此变体中百搭棋子也代表一种颜色，但它仍然是被动棋子。“白色”不能被认领，也不能主动用来进行移动。百搭棋子依然只能作为棋堆的一部分被移动。</span></li>
+                <li>显然，要组成一个6层棋堆，玩家需要在包含其他5种颜色的棋堆中至少拥有一枚百搭棋子。这一枚百搭棋子必须代表棋堆中的“白色”，但与标准游戏一样，第二枚甚至第三枚百搭棋子可以用来替代棋堆中缺失的其他颜色。</li>
+                <li>成功组成一个6层棋堆，且顶部为自己已认领颜色的玩家，<strong>立刻赢得游戏</strong>。</li>
+                <li>如果玩家碰巧完成了一个6层棋堆，但顶部是中立颜色的棋子，则不计算为胜利。</li>
+                <li>如果无路可走且没有任何玩家成功完成6层棋堆，那么版图上拥有最多5层棋堆的玩家赢得游戏。如果仍不能决定胜负，则计算包含4种颜色的棋堆数量，依此类推。</li>
+            </ol>
+            <p style="text-align: center; font-size: 1.5em; font-weight: bold; margin-top: 30px;">祝您玩得愉快！(Enjoy it!)</p>
+        </div>
+    </div>
+</body>
+</html>

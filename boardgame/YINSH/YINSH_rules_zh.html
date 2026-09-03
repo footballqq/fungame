@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YINSH 游戏规则 — 中文版</title>
+    <style>
+        /* ===== 全局设置 ===== */
+        :root {
+            --primary: #3a6ea5;
+            --primary-dark: #2c5580;
+            --accent: #c8a84e;
+            --bg-light: #f0f4f8;
+            --bg-card: #ffffff;
+            --text-main: #2d3436;
+            --text-secondary: #636e72;
+            --border: #dfe6e9;
+            --shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Serif SC", "Source Han Serif SC", "思源宋体", "SimSun", serif;
+            background: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.85;
+            font-size: 16px;
+        }
+
+        /* ===== 页面容器 ===== */
+        .page-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ===== 封面 ===== */
+        .cover {
+            background: linear-gradient(135deg, #4a90b8 0%, #2c5580 50%, #1a3a5c 100%);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .cover-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            gap: 30px;
+        }
+
+        .cover-text {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+            color: white;
+        }
+
+        .cover-text h1 {
+            font-size: 3.2em;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .cover-text .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .cover-text .sub2 {
+            font-size: 1.05em;
+            opacity: 0.75;
+        }
+
+        .cover-img {
+            flex: 0 0 320px;
+        }
+
+        .cover-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        /* ===== 引言区 ===== */
+        .intro-quote {
+            background: linear-gradient(135deg, #f8f9fa, #e8ecf0);
+            border-left: 5px solid var(--primary);
+            border-radius: 0 12px 12px 0;
+            padding: 24px 30px;
+            margin-bottom: 36px;
+            font-style: italic;
+            font-size: 1.08em;
+            color: var(--text-secondary);
+            line-height: 2;
+        }
+
+        /* ===== 章节卡片 ===== */
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 28px;
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 14px 24px;
+            font-size: 1.25em;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-header .section-id {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.25);
+            border-radius: 50%;
+            font-size: 0.85em;
+            font-weight: 900;
+        }
+
+        .section-body {
+            padding: 24px 28px;
+        }
+
+        .section-body p {
+            margin-bottom: 14px;
+            text-align: justify;
+        }
+
+        .section-body ol, .section-body ul {
+            margin-bottom: 14px;
+            padding-left: 1.5em;
+        }
+
+        .section-body li {
+            margin-bottom: 8px;
+        }
+
+        /* ===== 内容列表 ===== */
+        .contents-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contents-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px dotted var(--border);
+        }
+
+        .contents-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* ===== 配件列表 ===== */
+        .component-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .component-list li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .component-list li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* ===== 规则列表 ===== */
+        .rule-list {
+            list-style: none;
+            padding: 0;
+            counter-reset: rule-counter;
+        }
+
+        .rule-list > li {
+            counter-increment: rule-counter;
+            padding: 6px 0 6px 32px;
+            position: relative;
+        }
+
+        .rule-list > li::before {
+            content: counter(rule-counter) "/";
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .sub-rules {
+            list-style: none;
+            padding: 0;
+            margin-top: 8px;
+        }
+
+        .sub-rules li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+        }
+
+        .sub-rules li::before {
+            content: "–";
+            position: absolute;
+            left: 2px;
+            color: var(--primary);
+        }
+
+        /* ===== 图示区域 ===== */
+        .diagram-box {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .diagram-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .diagram-box.small img {
+            max-width: 420px;
+        }
+
+        .diagram-box.medium img {
+            max-width: 550px;
+        }
+
+        .diagram-caption {
+            margin-top: 10px;
+            font-size: 0.92em;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* ===== 提示框 ===== */
+        .tip-box {
+            background: #fff8e1;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 14px 20px;
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+
+        .tip-box strong {
+            color: #b8860b;
+        }
+
+        .note-box {
+            background: #e8f4fd;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+            padding: 14px 20px;
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+
+        .note-box strong {
+            color: var(--primary-dark);
+        }
+
+        .warn-box {
+            background: #fff3e0;
+            border-left: 4px solid #e65100;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 20px;
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+
+        .warn-box strong {
+            color: #bf360c;
+        }
+
+        /* ===== 游戏照片 ===== */
+        .game-photo-section {
+            text-align: center;
+            margin: 36px 0;
+        }
+
+        .game-photo-section img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        /* ===== 页脚 ===== */
+        .footer {
+            text-align: center;
+            padding: 28px;
+            color: var(--text-secondary);
+            font-size: 0.88em;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* ===== 关键词高亮 ===== */
+        .keyword {
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .bold-rule {
+            font-weight: 700;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 640px) {
+            .page-wrapper {
+                padding: 12px;
+            }
+
+            .cover-inner {
+                padding: 24px 16px;
+            }
+
+            .cover-text h1 {
+                font-size: 2.2em;
+            }
+
+            .section-body {
+                padding: 16px 18px;
+            }
+
+            .cover-img {
+                flex: 0 0 260px;
+            }
+        }
+
+        /* ===== 目录 ===== */
+        .toc {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 30px;
+        }
+
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .toc-item .toc-dots {
+            flex: 1;
+            border-bottom: 1px dotted #bbb;
+            min-width: 20px;
+            margin-bottom: 4px;
+        }
+
+        .toc-item .toc-page {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .toc {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- ========== 封面 ========== -->
+    <div class="cover">
+        <div class="cover-inner">
+            <div class="cover-text">
+                <h1>Y I N S H</h1>
+                <div class="subtitle">—— 中文规则书 ——</div>
+                <div class="sub2">GIPF 系列第六款 · 二人对弈</div>
+                <div class="sub2" style="margin-top: 6px; opacity: 0.6;">设计：Kris Burm</div>
+            </div>
+            <div class="cover-img">
+                <img src="images/cover_art.png" alt="YINSH 封面">
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 引言 ========== -->
+    <div class="intro-quote">
+        你是否能在混沌之中寻得一丝秩序？<br>
+        有时你会觉得棋盘上尽是纷乱——你刚刚排好几枚棋子，转眼间它们就变了颜色！棋盘上的棋子越多，局面就越难以预判。但机遇也正蕴藏其中！所以不必忧虑：你的机会终将到来。只需保持警觉，你便能在混沌之中开辟出属于自己的小小秩序！
+    </div>
+
+    <!-- ========== A 内容物 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">A</span> 内容物
+        </div>
+        <div class="section-body">
+            <ul class="component-list">
+                <li>游戏棋盘 × 1</li>
+                <li>白色圆环 × 5，黑色圆环 × 5</li>
+                <li>双面标记物 × 51（一面白色，一面黑色）</li>
+                <li>收纳袋 × 1</li>
+                <li>本规则书</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== B 游戏目标 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">B</span> 游戏目标
+        </div>
+        <div class="section-body">
+            <p>双方各以 5 枚圆环开始游戏。每当你用己方颜色朝上的标记物排成一行 5 枚，便可取走一枚己方圆环。<span class="keyword">率先取走 3 枚己方圆环的玩家获胜</span>——换言之，你需要排成 3 行己方颜色的 5 枚标记物才能赢得比赛。</p>
+            <div class="tip-box">
+                <strong>提示：</strong>如果你偏好短局快战，可以尝试<strong>闪电模式</strong>。详见本规则末尾的 J 节。闪电模式也非常适合作为学习 YINSH 的入门方式。
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== C 游戏准备 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">C</span> 游戏准备
+        </div>
+        <div class="section-body">
+            <ol class="rule-list">
+                <li>将棋盘竖直放置于两位玩家之间（即标有字母的线段从一位玩家朝向另一位）。每位玩家一侧应有 3 个圆环存放位。</li>
+                <li>抽签决定先手。先手执<strong>白色</strong>，拿取 5 枚白色圆环；后手拿取 5 枚黑色圆环。</li>
+                <li>将标记物放在棋盘旁，确保双方都能方便取用。这些标记物构成"公共备用池"。</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- ========== D 初始布局 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">D</span> 初始布局
+        </div>
+        <div class="section-body">
+            <ol class="rule-list">
+                <li>开局时棋盘为空。</li>
+                <li>首先，双方需要将各自的圆环放上棋盘。双方<strong>轮流放置</strong>，每次放置一枚。交叉点即为可用的棋位，<strong>包括边缘上的交叉点</strong>均可放置。</li>
+                <li>当双方都将 5 枚圆环放上棋盘后，初始布局即告完成。（见图示 1）</li>
+            </ol>
+
+            <div class="diagram-box small">
+                <img src="images/dia1_start.png" alt="图示1：初始布局">
+                <div class="diagram-caption">
+                    <strong>图示 1：</strong>双方各放置了 5 枚圆环。现在游戏正式开始。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== E 移动圆环 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">E</span> 移动圆环
+        </div>
+        <div class="section-body">
+            <ol class="rule-list">
+                <li>每一步行动开始时，从公共备用池中取一枚标记物。</li>
+                <li>然后选择你想要移动的一枚己方圆环，将标记物<strong>以己方颜色朝上</strong>放入该圆环中，使标记物与圆环占据同一位置。（见图示 2）</li>
+                <li>接下来，你必须按照以下规则移动放入了标记物的那枚圆环：
+                    <ul class="sub-rules">
+                        <li>移动圆环时，<strong>标记物留在原位</strong>不随之移动。（见图示 2）</li>
+                        <li>圆环必须沿<strong>直线</strong>移动，且必须移至一个<strong>空位</strong>。</li>
+                        <li>圆环可以经过一个或多个空位。</li>
+                        <li>圆环可以<strong>跳过</strong>一枚或多枚连续排列的标记物（无论颜色），但跳过后必须落在这些标记物<strong>正后方的第一个空位</strong>上。换言之，若跳过标记物，标记物之间不能有空隙。</li>
+                        <li>圆环可以先经过一个或多个空位，然后接着跳过一枚或多枚标记物。但如上所述，<strong>跳过标记物之后不能再经过任何空位</strong>。</li>
+                        <li><span class="bold-rule">圆环只能跳过标记物，不能跳过其他圆环。</span></li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="diagram-box">
+                <img src="images/dia2_move.png" alt="图示2：移动过程">
+                <div class="diagram-caption">
+                    <strong>图示 2：</strong>一次移动的过程。首先将己方颜色朝上的标记物放入一枚己方圆环中，然后移动该圆环。注意：只移动圆环，不移动标记物！
+                </div>
+            </div>
+
+            <div class="diagram-box small">
+                <img src="images/dia3_valid_moves.png" alt="图示3：合法移动">
+                <div class="diagram-caption">
+                    <strong>图示 3：</strong>图中标示的黑色圆环可以移动到所有标记位置中的任意一个。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== F 翻转标记物 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">F</span> 翻转标记物
+        </div>
+        <div class="section-body">
+            <ol class="rule-list">
+                <li>如果你的圆环仅经过空位而未跳过任何标记物，当圆环落入新位置后，你的回合即结束。</li>
+                <li>如果你跳过了一枚或多枚标记物，你<strong>必须将所有被跳过的标记物翻转</strong>。这同时适用于己方和对方的标记物。因此，被跳过的白色标记物变为黑色，黑色变为白色！（见图示 4）
+                    <div class="note-box" style="margin-top: 10px;">
+                        <strong>注意：</strong>不要在移动圆环的过程中翻转标记物——应先完成圆环的移动，然后再翻转标记物。
+                    </div>
+                </li>
+                <li>不要翻转你在移动前放入圆环中的那枚标记物——那枚标记物并未被跳过。</li>
+                <li>标记物只能被翻转，不能被移动。</li>
+            </ol>
+
+            <div class="diagram-box small">
+                <img src="images/dia4_flipped.png" alt="图示4：翻转效果">
+                <div class="diagram-caption">
+                    <strong>图示 4：</strong>与图示 3 相同的局面，但这是黑方行动之后的状态。黑色圆环跳过了 3 枚白色标记物和 2 枚黑色标记物，因此它们全部被翻转，现在显示的是相反颜色。（注意放入圆环中的那枚标记物仍然是黑色！）
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== G 排成一行 / 取走圆环 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">G</span> 排成一行 / 取走圆环
+        </div>
+        <div class="section-body">
+            <ol class="rule-list">
+                <li>通过移动圆环和翻转标记物，你的目标是用己方颜色排成<strong>一行 5 枚标记物</strong>。这 5 枚标记物必须相邻且在一条直线上。<strong>圆环不计入行列。</strong>
+                    <div class="note-box" style="margin-top:10px;">
+                        为叙述简便，以下将"同色5枚标记物排成一行"简称为<strong>"成行"</strong>。
+                    </div>
+                </li>
+                <li>成行后，你必须将该行的 5 枚标记物从棋盘上取回，放回公共备用池。</li>
+                <li>取走成行标记物后，你还必须<strong>取走一枚己方圆环</strong>。这枚圆环用以标记你已经成功组成（并移除）了一行。选择己方任意一枚圆环，将其放在你一侧的 3 个存放位之一。（见图示 5）</li>
+                <li>如果你排成了<strong>超过 5 枚</strong>标记物的行，你可以自行选择取走其中哪 5 枚——但所选的 5 枚必须连续相邻。（见图示 6）</li>
+                <li>一步行动可能同时形成 <strong>2 行（或更多）</strong>。如果这些行<strong>不相交</strong>，你必须全部取走，并相应取走多枚圆环。如果<strong>相交</strong>，你可以选择取走其中一行；取走后，另一行将不再完整，因此剩余棋子留在棋盘上，此时你只需取走 1 枚圆环。（见图示 6）</li>
+                <li>你可以帮对手成行。此时<strong>对手</strong>必须在其下一步行动前取走该行标记物并取走一枚己方圆环。对手可自由选择取走哪一枚圆环。</li>
+                <li>如果你的一步行动同时为自己和对手各形成一行，那么先处理你自己的行（照常取走标记物和圆环），然后对手再处理其行（如上所述取走标记物和圆环）。</li>
+            </ol>
+
+            <div class="diagram-box medium">
+                <img src="images/dia5_row.png" alt="图示5：成行与取走圆环">
+                <div class="diagram-caption">
+                    <strong>图示 5：</strong>黑方排成了一行 5 枚标记物。首先，他必须将这 5 枚标记物放回备用池。然后他必须取走一枚己方圆环，将其放在他一侧的存放位上，以标示已成功组成一行。
+                </div>
+            </div>
+
+            <div class="diagram-box medium">
+                <img src="images/dia6_situations.png" alt="图示6：特殊情况">
+                <div class="diagram-caption">
+                    <strong>图示 6</strong><br>
+                    <strong>情况 1：</strong>黑方可以取走两条相交行中的任一条，但无论取走哪一条，剩余的那一条都将不再完整。因此这只算作成了一行！<br>
+                    <strong>情况 2：</strong>黑方的一行包含 7 枚标记物。黑方可以选择取走其中哪 5 枚，但所选的 5 枚必须相邻连续。<br>
+                    <strong>情况 3：</strong>此行不完整，因为圆环不算作标记物。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== H 游戏结束 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">H</span> 游戏结束
+        </div>
+        <div class="section-body">
+            <ol class="rule-list">
+                <li>当一位玩家取走了 <strong>3 枚圆环</strong>后，游戏立即结束。这意味着他已成功排成了 3 行 5 枚标记物，因此他是<strong>胜者</strong>。</li>
+                <li>如果你的一步行动同时形成了己方和对方的第三行，<strong>你获胜</strong>——因为你优先取走自己的第三枚圆环。</li>
+                <li>如果在任何一方获胜前，所有标记物均已放上棋盘，则<strong>取走圆环数较多的一方获胜</strong>。若双方取走圆环数相同，则比赛以<strong>平局</strong>告终。</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- ========== I 策略要诀 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">I</span> 策略要诀
+        </div>
+        <div class="section-body">
+            <p>如果你熟悉 GIPF，一定会注意到 GIPF 与 YINSH 有诸多相通之处。排成一行并将其从棋盘上移除只是其中之二。更为微妙、但一旦领悟便意义深远的共性，是两款游戏中都蕴含的"矛盾性"：</p>
+            <p><strong>在此情此景下正确的走法，换一个局面可能恰恰是最糟糕的选择。</strong></p>
+            <p>玩 YINSH 时务必牢记这一点，尤其是在思考游戏目标时。排成一行 5 枚标记物固然使你离胜利更近，但同时也意味着失去一枚圆环，这当然会限制你后续的行动空间。你可以为对手排成一行——迫使对手少一枚圆环继续游戏——但这也可能恰好助对手踏上通往胜利的坦途。</p>
+            <p>所以，一步棋的好坏完全取决于当时的局面。你需要在<strong>主动出击</strong>与<strong>以退为进</strong>之间找到精妙的平衡。请始终铭记：<span class="keyword">决定胜负的是第三行！</span></p>
+        </div>
+    </div>
+
+    <!-- ========== J 闪电模式 ========== -->
+    <div class="section-card">
+        <div class="section-header">
+            <span class="section-id">J</span> 闪电模式
+        </div>
+        <div class="section-body">
+            <p>这是 YINSH 的一种短促而快节奏的玩法。规则与上述完全相同，但目标更简单：<strong>只需排成一行即可获胜</strong>。率先将 5 枚己方颜色的标记物排成一行的玩家赢得比赛！就是这么简单，你觉得呢？</p>
+            <p style="text-align: center; font-size: 1.2em; margin-top: 20px; color: var(--primary);">
+                <strong>祝你游戏愉快！</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- ========== 游戏实景 ========== -->
+    <div class="game-photo-section">
+        <img src="images/game_photo.png" alt="YINSH 游戏实景">
+        <div class="diagram-caption" style="margin-top: 12px;">
+            YINSH 游戏实景
+        </div>
+    </div>
+
+    <!-- ========== 页脚 ========== -->
+    <div class="footer">
+        <p>YINSH — GIPF 系列第六款游戏</p>
+        <p>设计：Kris Burm &nbsp;|&nbsp; 3D 美术：Andreas Resch &nbsp;|&nbsp; 编辑：Simon Hopp</p>
+        <p>© 2016 Rio Grande Games &nbsp;·&nbsp; © 2016 HUCH! &amp; friends</p>
+        <p style="margin-top: 8px; font-size: 0.85em; opacity: 0.7;">
+            中文翻译仅供学习交流使用
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
