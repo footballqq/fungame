@@ -1,0 +1,98 @@
+<!-- codex: 2026-09-09 奇偶棋子谜题（6x6国际象棋数学大题）网页游戏主页面 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>奇偶棋子谜题 - 6×6 国际象棋棋盘数学挑战</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+  <header>
+    <div class="title-wrap">
+      <h1>♟️ 奇偶棋子谜题</h1>
+    </div>
+    <p class="subtitle">
+      题目：在棋盘中放入棋子（每格最多1枚），使<span class="highlight">每行都有偶数（>0）枚</span>，<span class="highlight">每列都有奇数枚</span>。至少需要多少枚棋子？
+    </p>
+    <div class="toolbar-top">
+      <button class="size-btn" data-size="4">4×4 入门</button>
+      <button class="size-btn active" data-size="6">6×6 经典 (原题)</button>
+      <button class="size-btn" data-size="8">8×8 大师</button>
+      <button class="sound-toggle-btn" id="btnSoundToggle">🔊 音效: 开</button>
+    </div>
+  </header>
+
+  <main class="game-container">
+    <!-- 棋盘主体与指示区 -->
+    <section class="board-wrapper" aria-label="棋盘交互区域">
+      <div class="col-indicators" id="colIndicators"></div>
+      <div class="board-middle">
+        <div class="row-labels" id="rowLabels"></div>
+        <div class="board-grid" id="boardGrid"></div>
+        <div class="row-indicators" id="rowIndicators"></div>
+      </div>
+    </section>
+
+    <!-- 侧边信息与控制台 -->
+    <aside class="sidebar">
+      <div class="card">
+        <h2 class="card-title">📊 状态与指标</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-label">当前棋子数</div>
+            <div class="stat-value" id="currentPieces">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">理论最少目标</div>
+            <div class="stat-value highlight" id="minPiecesTarget">12</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">行达标 (偶数>0)</div>
+            <div class="stat-value" id="validRowsCount">0/6</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">列达标 (奇数>0)</div>
+            <div class="stat-value" id="validColsCount">0/6</div>
+          </div>
+        </div>
+
+        <div class="status-banner" id="statusBanner">
+          点击棋盘格子放置或移除棋子
+        </div>
+
+        <div class="hint-box" id="hintBox"></div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">🎮 操作与解题工具</h2>
+        <div class="btn-grid">
+          <button class="btn btn-secondary" id="btnUndo" disabled>↩ 撤销</button>
+          <button class="btn btn-secondary" id="btnRedo" disabled>↪ 重做</button>
+          <button class="btn btn-secondary" id="btnHint">💡 智能提示</button>
+          <button class="btn btn-secondary" id="btnClear">🗑️ 清空棋盘</button>
+          <button class="btn btn-primary btn-full" id="btnShowSolution">✨ 演示官方最优解 (12枚)</button>
+          <button class="btn btn-secondary btn-full" id="btnProof">📖 查看原理解析与数学证明</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- 数学原理解析模态框 -->
+  <div class="modal-overlay" id="proofModal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="proofCloseBtn" aria-label="关闭">&times;</button>
+      <h3 class="modal-title">📐 数学原理解析与证明</h3>
+      <div id="proofStepsContainer"></div>
+    </div>
+  </div>
+
+  <!-- 胜利纸屑特效画布 -->
+  <canvas id="celebrationCanvas"></canvas>
+
+  <script src="audio_fx.js"></script>
+  <script src="solver.js"></script>
+  <script src="board.js"></script>
+</body>
+</html>
