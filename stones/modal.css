@@ -1,4 +1,4 @@
-/* codex: 2026-09-09 奇偶棋子谜题模态弹窗、状态提示与动效样式 */
+/* codex: 2026-09-09 奇偶棋子谜题模态弹窗、数学证明表格与多端适配样式 */
 
 /* 达成状态提示条 */
 .status-banner {
@@ -42,8 +42,8 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(5px);
   display: none;
   align-items: center;
   justify-content: center;
@@ -55,12 +55,12 @@
   background: #342a21;
   border: 2px solid var(--accent-gold);
   border-radius: 14px;
-  max-width: 580px;
+  max-width: 720px;
   width: 100%;
-  max-height: 85vh;
+  max-height: 88vh;
   overflow-y: auto;
   padding: 24px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
   position: relative;
 }
 
@@ -70,9 +70,11 @@
   right: 16px;
   background: transparent;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--text-dim);
   cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
 }
 
 .modal-close-btn:hover {
@@ -80,17 +82,42 @@
 }
 
 .modal-title {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   color: var(--accent-gold);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   text-align: center;
+}
+
+/* 核心问答高亮提问区 */
+.proof-question-box {
+  background: rgba(229, 179, 88, 0.12);
+  border: 1px solid rgba(229, 179, 88, 0.4);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.proof-question-title {
+  color: var(--accent-gold);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.proof-question-desc {
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 1.55;
 }
 
 .proof-step {
   margin-bottom: 14px;
   background: rgba(0, 0, 0, 0.25);
   border-left: 3px solid var(--accent-gold);
-  padding: 10px 14px;
+  padding: 12px 14px;
   border-radius: 0 8px 8px 0;
 }
 
@@ -98,13 +125,55 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .proof-step-content {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-dim);
-  line-height: 1.5;
+  line-height: 1.55;
+}
+
+/* 总结表格样式 */
+.proof-table-wrap {
+  margin-top: 18px;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #564739;
+}
+
+.proof-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.proof-table th,
+.proof-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.proof-table th {
+  background: #251c14;
+  color: var(--accent-gold);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.proof-table tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.proof-table td:nth-child(2) {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.proof-table td:nth-child(3) {
+  white-space: nowrap;
+  color: var(--accent-gold);
 }
 
 /* 庆祝特效 Canvas */
@@ -113,4 +182,24 @@
   inset: 0;
   pointer-events: none;
   z-index: 999;
+}
+
+/* 移动端与平板适配 */
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 16px 12px;
+    max-width: 95vw;
+  }
+  .modal-title {
+    font-size: 1.15rem;
+    padding-right: 24px;
+  }
+  .proof-step {
+    padding: 10px;
+  }
+  .proof-table th,
+  .proof-table td {
+    padding: 8px 6px;
+    font-size: 0.78rem;
+  }
 }

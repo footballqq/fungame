@@ -17,9 +17,18 @@
       题目：在棋盘中放入棋子（每格最多1枚），使<span class="highlight">每行都有偶数（>0）枚</span>，<span class="highlight">每列都有奇数枚</span>。至少需要多少枚棋子？
     </p>
     <div class="toolbar-top">
-      <button class="size-btn" data-size="4">4×4 入门</button>
-      <button class="size-btn active" data-size="6">6×6 经典 (原题)</button>
-      <button class="size-btn" data-size="8">8×8 大师</button>
+      <div class="toolbar-group">
+        <span class="group-label">规格:</span>
+        <button class="size-btn" data-size="4">4×4</button>
+        <button class="size-btn active" data-size="6">6×6 经典</button>
+        <button class="size-btn" data-size="8">8×8</button>
+      </div>
+      <div class="toolbar-group" id="zoomControls">
+        <span class="group-label">棋盘尺寸:</span>
+        <button class="zoom-btn" data-zoom="normal">标准</button>
+        <button class="zoom-btn active" data-zoom="large">加大</button>
+        <button class="zoom-btn" data-zoom="xlarge">特大</button>
+      </div>
       <button class="sound-toggle-btn" id="btnSoundToggle">🔊 音效: 开</button>
     </div>
   </header>

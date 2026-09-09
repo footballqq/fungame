@@ -11,10 +11,12 @@
   class ParityGame {
     constructor() {
       this.size = 6;
+      this.zoomLevel = 'large'; // 默认电脑屏幕使用“加大”模式，高分辨率清晰可辨
       this.board = [];
       this.history = [];
       this.redoStack = [];
       this.isSolved = false;
+      this.resizeTimer = null;
 
       this.initElements();
       this.bindEvents();
@@ -22,6 +24,7 @@
     }
 
     initElements() {
+      this.elBoardWrapper = document.querySelector('.board-wrapper');
       this.elColIndicators = document.getElementById('colIndicators');
       this.elRowLabels = document.getElementById('rowLabels');
       this.elBoardGrid = document.getElementById('boardGrid');
@@ -51,12 +54,25 @@
     }
 
     bindEvents() {
+      // 规格选择 (4x4, 6x6, 8x8)
       document.querySelectorAll('.size-btn').forEach(btn => {
         btn.addEventListener('click', e => {
           const newSize = parseInt(e.target.dataset.size, 10);
           document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
           e.target.classList.add('active');
           this.setBoardSize(newSize);
+        });
+      });
+
+      // 缩放尺寸选择 (标准, 加大, 特大)
+      document.querySelectorAll('.zoom-btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+          this.zoomLevel = e.target.dataset.zoom;
+          document.querySelectorAll('.zoom-btn').forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          this.renderBoardStructure();
+          this.refreshBoardCells();
+          this.updateState();
         });
       });
 
@@ -76,6 +92,41 @@
         SoundFX.enabled = !SoundFX.enabled;
         this.btnSoundToggle.textContent = SoundFX.enabled ? '🔊 音效: 开' : '🔈 音效: 关';
       });
+
+      // 视口改变自动适配重绘
+      window.addEventListener('resize', () => {
+        clearTimeout(this.resizeTimer);
+        this.resizeTimer = setTimeout(() => {
+          this.renderBoardStructure();
+          this.refreshBoardCells();
+        }, 120);
+      });
+    }
+
+    // 计算当前设备与缩放比例下的单格像素尺寸
+    computeCellSize(size, zoomLevel) {
+      const screenWidth = window.innerWidth;
+      if (screenWidth <= 600) {
+        // 手机屏幕：根据屏幕宽度动态自适应计算
+        const availableWidth = screenWidth - (size === 8 ? 84 : 96);
+        return Math.max(34, Math.min(52, Math.floor(availableWidth / size)));
+      }
+      if (screenWidth <= 1024) {
+        // 平板屏幕 (iPad)：适度舒展方便手指点击
+        const padMap = {
+          normal: { 4: 72, 6: 58, 8: 46 },
+          large:  { 4: 86, 6: 68, 8: 52 },
+          xlarge: { 4: 98, 6: 76, 8: 60 },
+        };
+        return padMap[zoomLevel]?.[size] || 60;
+      }
+      // PC 电脑屏幕：针对 1080p, 2K/4K 高分屏提供充分的视觉放大
+      const pcMap = {
+        normal: { 4: 78, 6: 64, 8: 50 },
+        large:  { 4: 98, 6: 82, 8: 64 },   // 加大（PC高分屏推荐）
+        xlarge: { 4: 120, 6: 100, 8: 78 }, // 特大（2K/4K大屏清晰震撼）
+      };
+      return pcMap[zoomLevel]?.[size] || 82;
     }
 
     setBoardSize(size) {
@@ -98,7 +149,12 @@
 
     renderBoardStructure() {
       const size = this.size;
-      const cellSize = size === 4 ? 66 : size === 6 ? 52 : 40;
+      const cellSize = this.computeCellSize(size, this.zoomLevel);
+
+      // 设置 CSS 自定义变量，驱动棋盘、指示框与字体整体缩放
+      if (this.elBoardWrapper) {
+        this.elBoardWrapper.style.setProperty('--cell-size', `${cellSize}px`);
+      }
 
       // 1. 顶部列指示器
       this.elColIndicators.style.gridTemplateColumns = `repeat(${size}, ${cellSize}px)`;
@@ -137,8 +193,6 @@
           const cell = document.createElement('div');
           const isLight = (r + c) % 2 === 0;
           cell.className = `cell ${isLight ? 'light' : 'dark'}`;
-          cell.style.width = `${cellSize}px`;
-          cell.style.height = `${cellSize}px`;
           cell.dataset.row = r;
           cell.dataset.col = c;
           cell.id = `cell-${r}-${c}`;
@@ -153,7 +207,6 @@
       for (let r = 0; r < size; r++) {
         const rowDiv = document.createElement('div');
         rowDiv.className = 'indicator-row';
-        rowDiv.style.height = `${cellSize}px`;
         rowDiv.id = `rowInd-${r}`;
         rowDiv.innerHTML = `
           <span class="indicator-target">偶</span>
@@ -202,10 +255,13 @@
         const isValid = res.rowValid[r];
         if (isValid) validRows++;
 
-        document.getElementById(`rowCount-${r}`).textContent = count;
-        const badge = document.getElementById(`rowBadge-${r}`);
-        badge.className = `indicator-badge ${isValid ? 'badge-valid' : 'badge-invalid'}`;
-        badge.textContent = isValid ? '✓' : '×';
+        const countEl = document.getElementById(`rowCount-${r}`);
+        const badgeEl = document.getElementById(`rowBadge-${r}`);
+        if (countEl) countEl.textContent = count;
+        if (badgeEl) {
+          badgeEl.className = `indicator-badge ${isValid ? 'badge-valid' : 'badge-invalid'}`;
+          badgeEl.textContent = isValid ? '✓' : '×';
+        }
       }
       this.elValidRowsCount.textContent = `${validRows}/${this.size}`;
 
@@ -215,10 +271,13 @@
         const isValid = res.colValid[c];
         if (isValid) validCols++;
 
-        document.getElementById(`colCount-${c}`).textContent = count;
-        const badge = document.getElementById(`colBadge-${c}`);
-        badge.className = `indicator-badge ${isValid ? 'badge-valid' : 'badge-invalid'}`;
-        badge.textContent = isValid ? '✓' : '×';
+        const countEl = document.getElementById(`colCount-${c}`);
+        const badgeEl = document.getElementById(`colBadge-${c}`);
+        if (countEl) countEl.textContent = count;
+        if (badgeEl) {
+          badgeEl.className = `indicator-badge ${isValid ? 'badge-valid' : 'badge-invalid'}`;
+          badgeEl.textContent = isValid ? '✓' : '×';
+        }
       }
       this.elValidColsCount.textContent = `${validCols}/${this.size}`;
 
@@ -329,13 +388,26 @@
         SoundFX.playWoodClick();
         this.updateState();
         idx++;
-      }, 100);
+      }, 90);
     }
 
     openProofModal() {
-      const explanation = ParitySolver.getMathExplanation(this.size);
+      const exp = ParitySolver.getMathExplanation(this.size);
       this.proofStepsContainer.innerHTML = '';
-      explanation.steps.forEach(step => {
+
+      // 1. 核心问答横幅
+      if (exp.highlightQuestion) {
+        const qBox = document.createElement('div');
+        qBox.className = 'proof-question-box';
+        qBox.innerHTML = `
+          <div class="proof-question-title">${exp.highlightQuestion}</div>
+          <div class="proof-question-desc">${exp.coreConclusion}</div>
+        `;
+        this.proofStepsContainer.appendChild(qBox);
+      }
+
+      // 2. 分步数学证明
+      exp.steps.forEach(step => {
         const div = document.createElement('div');
         div.className = 'proof-step';
         div.innerHTML = `
@@ -344,6 +416,38 @@
         `;
         this.proofStepsContainer.appendChild(div);
       });
+
+      // 3. 任意阶 n 总结对比表
+      if (exp.table && exp.table.length > 0) {
+        const tableWrap = document.createElement('div');
+        tableWrap.className = 'proof-table-wrap';
+        let tableHtml = `
+          <table class="proof-table">
+            <thead>
+              <tr>
+                <th>棋盘规模</th>
+                <th>是否有解</th>
+                <th>理论最少棋子数</th>
+                <th>依据与理由</th>
+              </tr>
+            </thead>
+            <tbody>
+        `;
+        exp.table.forEach(row => {
+          tableHtml += `
+            <tr>
+              <td><strong>${row.n}</strong></td>
+              <td>${row.valid}</td>
+              <td>${row.min}</td>
+              <td>${row.reason}</td>
+            </tr>
+          `;
+        });
+        tableHtml += '</tbody></table>';
+        tableWrap.innerHTML = tableHtml;
+        this.proofStepsContainer.appendChild(tableWrap);
+      }
+
       this.proofModal.style.display = 'flex';
     }
 

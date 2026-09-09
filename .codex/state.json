@@ -1,21 +1,17 @@
 {
-  "current_task": "完成 stones 6×6 奇偶棋盘谜题网页游戏及算法测试",
+  "current_task": "完成 stones 数学原理解析与大屏/移动端多端适配",
   "last_changes": [
     "stones/index.html",
     "stones/style.css",
     "stones/modal.css",
-    "stones/audio_fx.js",
     "stones/solver.js",
     "stones/board.js",
-    "stones/parity_math.py",
     "stones/README.md",
-    "tests/test_stones_parity_puzzle.py",
-    "stones/solver.test.js",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "向用户展示开发结果与游戏使用指南"
+    "向用户展示数学原理解析集成与屏幕适配成果"
   ],
-  "notes": "已完成 stones 网页游戏开发，纯原生零依赖，模块化单文件<500行，通过全部 pytest 与 Node 单测"
+  "notes": "已将数学解答（奇数无解、n=2无解、n>=4严格2n及总结表格）完整加入原理解析弹窗，并上线棋盘尺寸调节器（标准/加大/特大），全面适配手机、Pad与PC高分屏"
 }
