@@ -1,12 +1,16 @@
 {
-  "current_task": "将 stones 奇偶棋子谜题加入总入口 index.html 并提交推送",
+  "current_task": "完成分块循环矩阵构造算法与三重合法性保证证明",
   "last_changes": [
-    "index.html",
+    "stones/solver.js",
+    "stones/board.js",
+    "stones/modal.css",
+    "stones/parity_math.py",
+    "stones/README.md",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git add, git commit 并 git push"
+    "git commit 并 push 到远端仓库"
   ],
-  "notes": "已将 stones 加入主入口 index.html，完成自动化测试并通过，准备提交并推送到远端"
+  "notes": "已重构原理解析：详细呈现分块矩阵公式 A = [[I_k+P_k, 0], [I_k, I_k]]、落子坐标通式、三重数学保证（无格冲突、行偶全为2、列奇且容量充裕）及 0-1 矩阵直观图解"
 }

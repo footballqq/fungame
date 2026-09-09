@@ -113,6 +113,78 @@
   line-height: 1.55;
 }
 
+/* 分块矩阵算法展示与三重保证卡片 */
+.proof-algorithm-box {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid #705842;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.proof-algo-title {
+  color: var(--accent-gold);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.proof-algo-desc {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.proof-formula-list {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-left: 3px solid #e5b358;
+}
+
+.proof-formula-item {
+  font-size: 0.85rem;
+  color: #fff;
+  line-height: 1.6;
+  font-family: monospace;
+}
+
+.proof-matrix-pre {
+  background: #201710;
+  color: #f7c978;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #564030;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  overflow-x: auto;
+  margin-bottom: 14px;
+}
+
+.proof-guarantee-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid var(--color-success);
+  border-radius: 0 6px 6px 0;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+.proof-guarantee-name {
+  font-weight: 700;
+  color: #70e000;
+  font-size: 0.88rem;
+  margin-bottom: 4px;
+}
+
+.proof-guarantee-detail {
+  font-size: 0.84rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
 .proof-step {
   margin-bottom: 14px;
   background: rgba(0, 0, 0, 0.25);

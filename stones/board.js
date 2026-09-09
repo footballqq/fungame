@@ -406,7 +406,29 @@
         this.proofStepsContainer.appendChild(qBox);
       }
 
-      // 2. 分步数学证明
+      // 2. 分块矩阵构造算法与三重保证（保证能放下）
+      if (exp.blockMatrixTitle) {
+        const algoBox = document.createElement('div');
+        algoBox.className = 'proof-algorithm-box';
+        const formulasHtml = exp.formulas.map(f => `<div class="proof-formula-item">${f}</div>`).join('');
+        const guaranteesHtml = exp.guarantees.map(g => `
+          <div class="proof-guarantee-card">
+            <div class="proof-guarantee-name">✓ ${g.name}</div>
+            <div class="proof-guarantee-detail">${g.detail}</div>
+          </div>
+        `).join('');
+
+        algoBox.innerHTML = `
+          <div class="proof-algo-title">📐 ${exp.blockMatrixTitle}</div>
+          <div class="proof-algo-desc">${exp.blockMatrixDesc}</div>
+          <div class="proof-formula-list">${formulasHtml}</div>
+          <pre class="proof-matrix-pre">${exp.matrixAscii}</pre>
+          ${guaranteesHtml}
+        `;
+        this.proofStepsContainer.appendChild(algoBox);
+      }
+
+      // 3. 分步数学推导与边界分类
       exp.steps.forEach(step => {
         const div = document.createElement('div');
         div.className = 'proof-step';
@@ -417,7 +439,7 @@
         this.proofStepsContainer.appendChild(div);
       });
 
-      // 3. 任意阶 n 总结对比表
+      // 4. 任意阶 n 总结对比表
       if (exp.table && exp.table.length > 0) {
         const tableWrap = document.createElement('div');
         tableWrap.className = 'proof-table-wrap';
