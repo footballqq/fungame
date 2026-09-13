@@ -1,0 +1,520 @@
+/* pyxorDittle / Dittle 规则书样式表 - 参考 Tzaar 经典桌游视觉风格 */
+body {
+    background-color: #081E48;
+    color: #FFFFFF;
+    font-family: Georgia, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 20px 10px;
+}
+
+a {
+    color: #FFFFC1;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #FFA500;
+}
+
+.page-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #04044A;
+    border: 1px solid #1E3A8A;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+}
+
+.header-banner {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #1E3A8A;
+    margin-bottom: 30px;
+}
+
+.game-title {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    margin: 10px 0 5px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.game-subtitle {
+    font-size: 20px;
+    color: #FFFFC1;
+    margin: 0 0 15px 0;
+    font-style: italic;
+}
+
+.game-intro-quote {
+    font-size: 18px;
+    color: #FFFFE3;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #FFFFC1;
+    padding: 12px 20px;
+    margin: 20px 0;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-bottom: 1px solid #2B4C7E;
+    padding-bottom: 6px;
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+
+.subsection-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFC1;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.accent-text {
+    color: #FFFFE3;
+}
+
+.highlight {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.dia-container {
+    margin: 16px 0 20px 0;
+    text-align: center;
+}
+
+.dia-img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #2C4270;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    background-color: #000000;
+}
+
+.dia-caption {
+    font-size: 14px;
+    color: #FFFFE3;
+    font-style: italic;
+    margin-top: 8px;
+    display: block;
+}
+
+.img-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.img-col {
+    flex: 1 1 280px;
+    max-width: 420px;
+    text-align: center;
+}
+
+.rule-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid #334E7B;
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 20px 0;
+}
+
+.rule-box-danger {
+    background: rgba(220, 53, 69, 0.12);
+    border: 1px solid #A83232;
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 20px 0;
+}
+
+.rule-box-clash {
+    background: rgba(255, 193, 7, 0.08);
+    border: 1px solid #856404;
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 20px 0;
+}
+
+ul, ol {
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 6px;
+}
+
+.tag-basic {
+    background: #1E3A8A;
+    color: #FFFFFF;
+}
+
+.tag-variant {
+    background: #B45309;
+    color: #FFFFFF;
+}
+
+.tag-warning {
+    background: #991B1B;
+    color: #FFFFFF;
+}
+
+.footer {
+    border-top: 1px solid #1E3A8A;
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #A0AEC0;
+}
+
+.collapsible-trigger {
+    cursor: pointer;
+    background: #11224D;
+    color: #FFFFC1;
+    padding: 10px 15px;
+    border: 1px solid #2B4C7E;
+    border-radius: 4px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 20px 15px;
+    }
+    .game-title {
+        font-size: 32px;
+    }
+    .img-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-col {
+        max-width: 100%;
+    }
+}
+
+/* 操作控制栏 */
+.action-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0d285f;
+    border: 1px solid #2B4C7E;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.action-toolbar .btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    background: #1E3A8A;
+    color: #FFFFFF;
+    border: 1px solid #3B82F6;
+    border-radius: 4px;
+    padding: 7px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-btn:hover {
+    background: #2563EB;
+    border-color: #60A5FA;
+}
+
+.action-btn.active {
+    background: #F59E0B;
+    border-color: #D97706;
+    color: #000000;
+    font-weight: bold;
+}
+
+.action-toolbar .hint-text {
+    font-size: 13px;
+    color: #FFFFC1;
+}
+
+/* 纯黑白打印模式（屏幕预览与手动切换） */
+body.print-mode {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    padding: 10px 0 !important;
+}
+
+body.print-mode .page-wrapper {
+    max-width: 820px !important;
+    width: 95% !important;
+    background-color: #FFFFFF !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 10px 15px !important;
+    color: #000000 !important;
+}
+
+body.print-mode .action-toolbar {
+    background: #F3F4F6 !important;
+    border: 1px solid #9CA3AF !important;
+    box-shadow: none !important;
+}
+
+body.print-mode .action-toolbar .hint-text {
+    color: #4B5563 !important;
+}
+
+body.print-mode .action-btn {
+    background: #E5E7EB !important;
+    color: #111827 !important;
+    border: 1px solid #6B7280 !important;
+}
+
+body.print-mode .action-btn.active {
+    background: #111827 !important;
+    color: #FFFFFF !important;
+    border-color: #000000 !important;
+}
+
+body.print-mode a {
+    color: #000000 !important;
+}
+
+body.print-mode .header-banner {
+    border-bottom: 2px solid #000000 !important;
+    padding-bottom: 12px !important;
+    margin-bottom: 20px !important;
+}
+
+body.print-mode .game-title {
+    color: #000000 !important;
+    text-shadow: none !important;
+    font-size: 30px !important;
+}
+
+body.print-mode .game-subtitle {
+    color: #374151 !important;
+    font-size: 16px !important;
+}
+
+body.print-mode .game-intro-quote {
+    color: #1F2937 !important;
+    background: #F9FAFB !important;
+    border-left: 4px solid #4B5563 !important;
+}
+
+body.print-mode .section-title {
+    color: #000000 !important;
+    border-bottom: 1.5px solid #000000 !important;
+    margin-top: 25px !important;
+    margin-bottom: 12px !important;
+    font-size: 20px !important;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+body.print-mode .subsection-title {
+    color: #111827 !important;
+    font-size: 17px !important;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+body.print-mode .accent-text {
+    color: #374151 !important;
+}
+
+body.print-mode .highlight {
+    color: #000000 !important;
+    text-decoration: underline;
+}
+
+body.print-mode .rule-box,
+body.print-mode .rule-box-danger,
+body.print-mode .rule-box-clash {
+    background: #FFFFFF !important;
+    border: 1.5px solid #000000 !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    padding: 12px 16px !important;
+    margin: 14px 0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+body.print-mode .dia-img {
+    border: 1px solid #4B5563 !important;
+    box-shadow: none !important;
+    background-color: #FFFFFF !important;
+}
+
+body.print-mode .dia-caption {
+    color: #374151 !important;
+}
+
+body.print-mode .footer {
+    border-top: 1px solid #9CA3AF !important;
+    color: #4B5563 !important;
+    margin-top: 25px !important;
+    padding-top: 15px !important;
+}
+
+/* 原生打印媒体查询（Ctrl+P 自动适用纯黑白精简排版） */
+@media print {
+    .action-toolbar {
+        display: none !important;
+    }
+
+    body {
+        background-color: #FFFFFF !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 11pt !important;
+        line-height: 1.5 !important;
+    }
+
+    .page-wrapper {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background-color: #FFFFFF !important;
+        color: #000000 !important;
+    }
+
+    .header-banner {
+        border-bottom: 2px solid #000000 !important;
+        padding-bottom: 8px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .game-title {
+        color: #000000 !important;
+        font-size: 24pt !important;
+        text-shadow: none !important;
+        margin: 4px 0 !important;
+    }
+
+    .game-subtitle {
+        color: #222222 !important;
+        font-size: 12pt !important;
+        margin: 2px 0 8px 0 !important;
+    }
+
+    .game-intro-quote {
+        background: #F3F4F6 !important;
+        color: #222222 !important;
+        border-left: 3px solid #000000 !important;
+        padding: 8px 12px !important;
+        margin: 10px 0 !important;
+        font-size: 10.5pt !important;
+    }
+
+    .section-title {
+        color: #000000 !important;
+        border-bottom: 1.5px solid #000000 !important;
+        margin-top: 16px !important;
+        margin-bottom: 8px !important;
+        font-size: 14pt !important;
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    .subsection-title {
+        color: #000000 !important;
+        font-size: 12pt !important;
+        margin-top: 12px !important;
+        margin-bottom: 6px !important;
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    .accent-text {
+        color: #333333 !important;
+    }
+
+    .highlight {
+        color: #000000 !important;
+        text-decoration: underline;
+    }
+
+    .rule-box,
+    .rule-box-danger,
+    .rule-box-clash {
+        background: #FFFFFF !important;
+        border: 1.5px solid #000000 !important;
+        color: #000000 !important;
+        box-shadow: none !important;
+        padding: 10px 14px !important;
+        margin: 10px 0 !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .dia-container,
+    .img-row {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin: 10px 0 !important;
+    }
+
+    .dia-img {
+        border: 1px solid #000000 !important;
+        box-shadow: none !important;
+        max-height: 200px !important;
+    }
+
+    .dia-caption {
+        color: #333333 !important;
+        font-size: 9pt !important;
+        margin-top: 4px !important;
+    }
+
+    .footer {
+        border-top: 1px solid #000000 !important;
+        color: #444444 !important;
+        font-size: 8.5pt !important;
+        margin-top: 15px !important;
+        padding-top: 8px !important;
+    }
+
+    a {
+        color: #000000 !important;
+        text-decoration: none !important;
+    }
+}

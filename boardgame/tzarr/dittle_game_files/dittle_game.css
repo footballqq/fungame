@@ -1,0 +1,381 @@
+/* codex: 2026-09-13 调亮棋盘与单元格色调，增强温暖木质质感与黑白骰子辨识度 */
+:root {
+    --bg-main: #0c1427;
+    --card-bg: #13203f;
+    --card-border: #1e3a6c;
+    --accent-gold: #f59e0b;
+    --accent-cyan: #06b6d4;
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+    --board-wood: #3a2214;
+    --cell-bg: #462c1b;
+    --cell-border: #633e26;
+    --text-main: #f8fafc;
+    --text-sub: #94a3b8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    touch-action: manipulation;
+}
+
+/* 主容器 */
+.game-app {
+    width: 100%;
+    max-width: 980px;
+    padding: 10px 14px 20px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* 顶部通用导航栏 */
+.top-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.mode-badge {
+    font-size: 12px;
+    background: var(--accent-gold);
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-icon {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-icon:hover {
+    background: #334155;
+    border-color: #64748b;
+}
+
+.btn-icon.active {
+    background: #065f46;
+    border-color: #10b981;
+    color: #ecfdf5;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+/* 游戏舞台区域（上下两名玩家 + 中间棋盘） */
+.stage-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* 玩家信息卡片 */
+.player-bar {
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
+    padding: 10px 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.player-bar.active-turn {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.45);
+    background: #172852;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.die-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.die-avatar.white {
+    background: #f8fafc;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+}
+
+.die-avatar.black {
+    background: #18181b;
+    color: #f8fafc;
+    border: 1px solid #52525b;
+}
+
+.player-name-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.player-sub {
+    font-size: 12px;
+    color: var(--text-sub);
+}
+
+/* 棋钟显示卡片 */
+.clock-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #090e1a;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 6px 14px;
+}
+
+.clock-digits {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #38bdf8;
+}
+
+.clock-card.low-time {
+    border-color: var(--accent-red);
+    animation: clockPulse 1s infinite alternate;
+}
+
+.clock-card.low-time .clock-digits {
+    color: var(--accent-red);
+}
+
+@keyframes clockPulse {
+    from { box-shadow: 0 0 4px rgba(239, 68, 68, 0.3); }
+    to { box-shadow: 0 0 14px rgba(239, 68, 68, 0.9); }
+}
+
+/* 黑方 180度 翻转对战模式（手机端两人面对面） */
+.player-bar-black.flipped {
+    transform: rotate(180deg);
+}
+
+/* 棋盘外框 */
+.board-wrapper {
+    position: relative;
+    padding: 12px;
+    background: var(--board-wood);
+    border: 4px solid #57331e;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55), inset 0 2px 6px rgba(255, 255, 255, 0.15);
+    touch-action: none;
+    transform-origin: 50% 65%;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+}
+
+/* 7x7 棋盘网格 */
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 6px;
+    width: min(85vw, 540px);
+    height: min(85vw, 540px);
+    background: #24130a;
+    padding: 6px;
+    border-radius: 10px;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.75);
+}
+
+/* 棋盘单元格（微暖木质高对比明亮风格） */
+.cell {
+    background: linear-gradient(145deg, #482e1d 0%, #382012 100%);
+    border: 1px solid #5f3a23;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.12), 0 1px 3px rgba(0, 0, 0, 0.4);
+    transition: all 0.15s ease;
+}
+
+.cell:hover {
+    background: linear-gradient(145deg, #543723 0%, #422616 100%);
+    border-color: #8c5836;
+}
+
+/* 底线特殊标识（金色边界线与微亮底行） */
+.cell.black-base {
+    background: linear-gradient(145deg, #50321f 0%, #3d2315 100%);
+    border-top: 3px solid #f59e0b;
+}
+
+.cell.white-base {
+    background: linear-gradient(145deg, #50321f 0%, #3d2315 100%);
+    border-bottom: 3px solid #f59e0b;
+}
+
+/* 移动高亮指示点 */
+.cell.highlight-tilt::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.85);
+    box-shadow: 0 0 10px #10b981;
+    pointer-events: none;
+    animation: popIn 0.2s ease;
+}
+
+.cell.highlight-jump::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(6, 182, 212, 0.85);
+    box-shadow: 0 0 10px #06b6d4;
+    pointer-events: none;
+    animation: popIn 0.2s ease;
+}
+
+.cell.highlight-tilt-jump::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.85);
+    box-shadow: 0 0 10px #f59e0b;
+    pointer-events: none;
+    animation: popIn 0.2s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* 3D 骰子与棋盘立体化样式详见 dittle_components.css */
+
+/* 底部状态栏与快捷说明 */
+.bottom-bar {
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 8px 14px;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.move-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-group {
+    display: flex;
+    gap: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--text-sub);
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* 移动端与小屏媒体查询 */
+@media (max-width: 600px) {
+    .game-app { padding: 6px 8px 16px 8px; }
+    .top-nav { padding: 6px 10px; }
+    .brand-title { font-size: 16px; }
+    .player-bar { padding: 8px 12px; }
+    .clock-digits { font-size: 20px; }
+    .legend-group { display: none; }
+}

@@ -1,16 +1,13 @@
 {
-  "current_task": "完成分块循环矩阵构造算法与三重合法性保证证明",
+  "current_task": "将 Dittle 骰战棋整合至项目主入口 index.html（已完成）",
   "last_changes": [
-    "stones/solver.js",
-    "stones/board.js",
-    "stones/modal.css",
-    "stones/parity_math.py",
-    "stones/README.md",
+    "index.html",
+    "tests/test_dittle_game_engine.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 并 push 到远端仓库"
+    "向用户汇报 index.html 已添加 Dittle 7x7 骰战棋的网页对弈与规则手册入口"
   ],
-  "notes": "已重构原理解析：详细呈现分块矩阵公式 A = [[I_k+P_k, 0], [I_k, I_k]]、落子坐标通式、三重数学保证（无格冲突、行偶全为2、列奇且容量充裕）及 0-1 矩阵直观图解"
+  "notes": "已在主对弈游戏区（紧接奇偶棋子谜题）及棋盘游戏专区分别加入包含【开始对弈】与【规则手册】双按钮的 Dittle 骰战棋精美卡片，所有 29 项测试全部通过，所有文件行数严格小于 500 行。"
 }

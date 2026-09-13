@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dittle 骰战棋 - 网页对弈版 (Dice Battle & Clash)</title>
+    <link rel="stylesheet" href="./dittle_game_files/dittle_game.css">
+    <link rel="stylesheet" href="./dittle_game_files/dittle_components.css">
+</head>
+<body>
+
+<div class="game-app">
+
+    <!-- 顶部控制与功能导航栏 -->
+    <header class="top-nav">
+        <div class="brand-area">
+            <span class="brand-title">🎲 Dittle 骰战棋</span>
+            <span class="mode-badge" id="modeBadge">标准骰战棋</span>
+        </div>
+        <div class="nav-buttons">
+            <!-- 电脑端放大/缩小控制条 -->
+            <div class="zoom-controls" title="缩放棋盘大小（适合高分屏电脑显示）">
+                <button class="zoom-btn" id="zoomOutBtn" type="button" title="缩小">-</button>
+                <span class="zoom-val" id="zoomVal">100%</span>
+                <button class="zoom-btn" id="zoomInBtn" type="button" title="放大">+</button>
+                <button class="zoom-btn" id="zoomResetBtn" type="button" title="重置">1:1</button>
+            </div>
+            <!-- 3D 立体斜视角 / 2D 平面俯视切换 -->
+            <button class="btn-icon" id="viewModeBtn" type="button" title="切换 3D 立体斜视角 / 2D 平面俯视（3D视角下可清晰看见骰子三个面）">
+                <span>📐 3D视角</span>
+            </button>
+            <!-- 手机端面对面 180° 翻转按钮 -->
+            <button class="btn-icon" id="flipBlackBtn" type="button" title="180°翻转黑方显示（两人面对面持机下棋）">
+                <span>🔄 翻转黑方</span>
+            </button>
+            <!-- 全屏、音乐与音效控制 -->
+            <button class="btn-icon" id="fullscreenBtn" type="button" title="全屏显示">⛶</button>
+            <button class="btn-icon" id="musicToggleBtn" type="button" title="背景音乐开关（轻柔禅意氛围音乐）">🎵 音乐</button>
+            <button class="btn-icon active" id="soundToggleBtn" type="button" title="走棋音效开关">🔊 音效</button>
+            <!-- 游戏设置 / 规则选择 -->
+            <button class="btn-icon" id="openSettingsBtn" type="button" title="对局设置与规则选择">⚙️ 游戏设置</button>
+            <!-- 规则书跳转 -->
+            <a class="btn-icon" href="pyxorDittle_rules_zh.html" target="_blank" style="text-decoration: none;">📖 规则</a>
+        </div>
+    </header>
+
+    <!-- 错误与规则提示浮动横幅 -->
+    <div class="toast-banner" id="toastBanner">
+        <span>⚠️</span> <span id="toastText">提示信息</span>
+    </div>
+
+    <!-- 游戏主舞台（黑方玩家卡片 + 7x7 棋盘 + 白方玩家卡片） -->
+    <main class="stage-container" id="stageContainer">
+
+        <!-- 黑方（黑骰）信息卡与棋钟 -->
+        <section class="player-bar player-bar-black" id="blackPlayerBar">
+            <div class="player-info">
+                <div class="die-avatar black">⚅</div>
+                <div class="player-name-wrap">
+                    <span class="player-title" id="blackName">黑方 (玩家2 / AI)</span>
+                    <span class="player-sub">初始底线：第 1 行 (远端)</span>
+                </div>
+            </div>
+            <div class="clock-card" title="黑方剩余思考时间">
+                <span>⏱️</span>
+                <span class="clock-digits" id="blackClock">05:00</span>
+            </div>
+        </section>
+
+        <!-- 7x7 棋盘容器 -->
+        <div class="board-wrapper" id="boardWrapper">
+            <div class="board-grid" id="boardGrid">
+                <!-- 动态生成 49 个单元格 -->
+            </div>
+        </div>
+
+        <!-- 白方（白骰）信息卡与棋钟 -->
+        <section class="player-bar player-bar-white active-turn" id="whitePlayerBar">
+            <div class="player-info">
+                <div class="die-avatar white">⚅</div>
+                <div class="player-name-wrap">
+                    <span class="player-title" id="whiteName">白方 (玩家1 / 先手)</span>
+                    <span class="player-sub">初始底线：第 7 行 (近端)</span>
+                </div>
+            </div>
+            <div class="clock-card" title="白方剩余思考时间">
+                <span>⏱️</span>
+                <span class="clock-digits" id="whiteClock">05:00</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 底部状态指示与图例说明 -->
+    <footer class="bottom-bar">
+        <div class="move-indicator">
+            <span>👉</span> <strong id="turnIndicator">当前回合：白方行动</strong>
+        </div>
+        <div class="legend-group">
+            <span class="legend-item"><span class="legend-dot" style="background:#10b981;"></span> 翻滚1格</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#06b6d4;"></span> 连续跳跃</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#f59e0b;"></span> 翻滚+跳跃</span>
+        </div>
+    </footer>
+
+</div>
+
+<!-- 游戏设置与规则选择弹窗 -->
+<div class="modal-backdrop" id="settingsModal">
+    <div class="modal-window">
+        <div class="modal-title">
+            <span>⚙️ 游戏设置与规则选择</span>
+            <button class="btn-icon" id="closeSettingsBtn" type="button">✕</button>
+        </div>
+
+        <!-- 1. 游戏规则选择 -->
+        <div class="setting-group">
+            <span class="setting-label">1. 选择游戏规则模式</span>
+            <div class="options-row" id="modeOptions">
+                <button class="opt-btn active" data-val="battle" type="button">
+                    <strong>标准骰战棋 (Battle)</strong><br><small style="font-size:11px;opacity:0.8;">翻滚+跳跃/占满底线终局/算分比拼</small>
+                </button>
+                <button class="opt-btn" data-val="clash" type="button">
+                    <strong>冲突淘汰变体 (Clash)</strong><br><small style="font-size:11px;opacity:0.8;">仅翻滚/正交吃子/单子达阵即胜</small>
+                </button>
+            </div>
+        </div>
+
+        <!-- 2. 对弈模式 -->
+        <div class="setting-group">
+            <span class="setting-label">2. 对弈对手</span>
+            <div class="options-row" id="oppOptions">
+                <button class="opt-btn active" data-val="ai" type="button">人机对战 (人 vs AI)</button>
+                <button class="opt-btn" data-val="human" type="button">双人面对面 (本地人人对弈)</button>
+            </div>
+        </div>
+
+        <!-- 3. AI 难度 -->
+        <div class="setting-group" id="diffGroup">
+            <span class="setting-label">3. AI 难度级别</span>
+            <div class="options-row" id="diffOptions">
+                <button class="opt-btn" data-val="easy" type="button">初级 (新手启蒙)</button>
+                <button class="opt-btn active" data-val="medium" type="button">中级 (战术博弈)</button>
+                <button class="opt-btn" data-val="hard" type="button">高级 (深度推演)</button>
+            </div>
+        </div>
+
+        <!-- 4. 棋钟时长设置（支持独立设置） -->
+        <div class="setting-group">
+            <span class="setting-label">4. 棋钟时间控制（双方可独立设置）</span>
+            <div class="options-row" id="clockOptions">
+                <button class="opt-btn" data-val="1m" type="button">1分钟超快棋</button>
+                <button class="opt-btn" data-val="3m" type="button">3分钟快棋</button>
+                <button class="opt-btn active" data-val="5m" type="button">5分钟标准</button>
+                <button class="opt-btn" data-val="10m" type="button">10分钟慢棋</button>
+                <button class="opt-btn" data-val="unlimited" type="button">不限时</button>
+                <button class="opt-btn" data-val="custom" type="button">自定义</button>
+            </div>
+
+            <!-- 独立时长输入区（让时/让步配置） -->
+            <div class="time-custom-wrap" style="margin-top: 8px;">
+                <div class="time-input-box">
+                    <label for="customWhiteMin">白方时长 (分钟):</label>
+                    <input type="number" id="customWhiteMin" value="5" min="1" max="120">
+                </div>
+                <div class="time-input-box">
+                    <label for="customBlackMin">黑方时长 (分钟):</label>
+                    <input type="number" id="customBlackMin" value="5" min="1" max="120">
+                </div>
+                <div class="time-input-box">
+                    <label for="clockIncSec">每步加秒 (秒):</label>
+                    <input type="number" id="clockIncSec" value="0" min="0" max="60">
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 声音与背景音乐设置 -->
+        <div class="setting-group">
+            <span class="setting-label">5. 音效与背景音乐</span>
+            <div class="options-row">
+                <button class="opt-btn active" id="modalSoundBtn" type="button">🔊 走棋音效: 开启</button>
+                <button class="opt-btn" id="modalMusicBtn" type="button">🎵 背景音乐: 关闭</button>
+            </div>
+        </div>
+
+        <!-- 保存按钮 -->
+        <div class="modal-actions">
+            <button class="btn-primary" id="saveSettingsBtn" type="button">确认设置并开始新局</button>
+        </div>
+    </div>
+</div>
+
+<!-- 终局结算弹窗 -->
+<div class="modal-backdrop" id="gameOverModal">
+    <div class="modal-window" style="text-align: center;">
+        <h2 id="winnerTitle" style="color: var(--accent-gold); font-size: 26px;">恭喜白方获得胜利！</h2>
+        <p id="winnerReason" style="margin: 12px 0; font-size: 15px; color: #e2e8f0; line-height: 1.6;"></p>
+
+        <!-- 标准模式得分明细 -->
+        <div id="battleScoreBreakdown" style="display: none; background: #1e293b; padding: 12px; border-radius: 8px; margin: 10px 0; text-align: left; font-size: 13px; line-height: 1.8;">
+            <strong style="color: var(--accent-cyan);">📊 净得分结算明细（底线点数之和 - 10 × 滞留己方底线数）：</strong>
+            <div id="whiteScoreDetail" style="color: #fff;"></div>
+            <div id="blackScoreDetail" style="color: #fff;"></div>
+        </div>
+
+        <div class="modal-actions" style="margin-top: 16px;">
+            <button class="btn-primary" id="playAgainBtn" type="button">再来一局</button>
+        </div>
+    </div>
+</div>
+
+<!-- 引入脚本模块 -->
+<script src="./dittle_game_files/sound.js"></script>
+<script src="./dittle_game_files/clock.js"></script>
+<script src="./dittle_game_files/dice_math.js"></script>
+<script src="./dittle_game_files/engine.js"></script>
+<script src="./dittle_game_files/ai.js"></script>
+<script src="./dittle_game_files/animator.js"></script>
+<script src="./dittle_game_files/ui.js"></script>
+
+</body>
+</html>

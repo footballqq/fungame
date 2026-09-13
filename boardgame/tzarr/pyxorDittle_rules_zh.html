@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dittle: 游戏规则 (Dice Battle 与 Clash 变体)</title>
+    <link rel="stylesheet" href="./pyxorDittle_files/style.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- 快捷操作与打印模式控制栏 -->
+    <div class="action-toolbar" id="actionToolbar">
+        <div class="btn-group">
+            <button class="action-btn" id="togglePrintBtn" type="button" onclick="togglePrintMode()">
+                <span id="togglePrintIcon">🖨️</span> <span id="togglePrintText">切换为纯黑白打印版</span>
+            </button>
+            <button class="action-btn" type="button" onclick="window.print()">
+                <span>📄</span> <span>调起系统打印 / 导出PDF</span>
+            </button>
+            <a class="action-btn" href="dittle_game.html" style="text-decoration:none;">
+                <span>🎲</span> <span>开始网页对弈游戏</span>
+            </a>
+        </div>
+        <div class="hint-text" id="toolbarHint">
+            适合 A4 / Letter 打印装订与纯黑白阅读
+        </div>
+    </div>
+
+    <!-- 顶部标题与概述 -->
+    <div class="header-banner">
+        <div style="margin-bottom: 12px;">
+            <img src="./pyxorDittle_files/dittle_cover_icon.png" alt="Dittle 7x7 棋盘与骰子图标" style="height: 38px; vertical-align: middle;">
+        </div>
+        <h1 class="game-title">Dittle: 骰战棋</h1>
+        <div class="game-subtitle">Dittle Dice Battle &amp; Dittle Clash variant</div>
+        <div class="game-intro-quote">
+            “是翻滚改变顶面点数，还是凭借跳跃奇袭直插敌阵？”——纯粹优雅的 7×7 六面骰抽象策略棋。
+        </div>
+    </div>
+
+    <!-- A. 游戏配件 -->
+    <h2 class="section-title">A. 游戏配件（Equipment）</h2>
+    <div class="rule-box">
+        <ul>
+            <li><strong>1 块 7×7 网格棋盘</strong>（共 49 个方格点位）</li>
+            <li><strong>7 颗白色标准六面骰子</strong></li>
+            <li><strong>7 颗黑色标准六面骰子</strong></li>
+            <li><strong>1 本规则小册子</strong>（即本规则书）</li>
+        </ul>
+    </div>
+
+    <!-- B. 游戏准备 -->
+    <h2 class="section-title">B. 游戏准备（Setting Up the Game）</h2>
+    <p>
+        1. 将 7×7 棋盘平放在两名玩家之间，每位玩家正对着棋盘的一侧。
+    </p>
+    <p>
+        2. 每位玩家取己方颜色的 7 颗骰子，整齐摆放在<strong>距离自己最近的一整行</strong>中。这一行即为该玩家的<span class="highlight">“底线”（Base Row）</span>。
+    </p>
+    <p>
+        3. <span class="highlight">初始朝向要求：</span>所有 7 颗骰子在摆放时，<strong>顶面必须朝上显示点数 6</strong>，同时<strong>朝向玩家自己的一面必须显示点数 3</strong>（见下方图 1）。
+    </p>
+    <div class="dia-container">
+        <img class="dia-img" src="./pyxorDittle_files/dittle_setup.png" alt="图 1：游戏初始摆放图" style="max-width: 650px;">
+        <span class="dia-caption">图 1：初始对局布局。白方底线在近端（顶面朝上为 6，朝向玩家面为 3）；黑方底线在远端（顶面朝上同样为 6，朝向黑方玩家面为 3）。</span>
+    </div>
+
+    <!-- C. 游戏玩法与行动规则 -->
+    <h2 class="section-title">C. 游戏玩法（How to Play）</h2>
+    <p>
+        抽签或协商决定由哪位玩家先手行动。玩家轮流进行回合，在成功完成以下<span class="highlight">三种走法之一</span>后，回合结束并轮到对手行动：
+    </p>
+
+    <!-- 走法 1：翻滚 -->
+    <h3 class="subsection-title">1. 翻滚（Tilt）</h3>
+    <p>
+        一颗骰子可以在棋盘上向<strong>正前方（朝对手方向）</strong>或向<strong>侧面（左或右）</strong>翻滚 <span class="highlight">1 格</span>。
+    </p>
+    <p class="accent-text">
+        <em>规则要点：</em>翻滚是将骰子向相邻空格倾斜翻转 90 度。随着骰子的翻滚，朝上的顶面点数会随之发生数学改变（例如：初始状态顶面为 6、朝向玩家面为 3，若向前翻滚 1 格，则朝向玩家的 3 会转到顶面；若向侧面翻滚，则侧面的点数转到顶面）。
+    </p>
+    <div class="img-row">
+        <div class="img-col">
+            <img class="dia-img" src="./pyxorDittle_files/dittle_tilt_forward.png" alt="图 2A：向前翻滚">
+            <span class="dia-caption">图 2A：手指将白色骰子向前翻滚 1 格，顶面点数发生改变。</span>
+        </div>
+        <div class="img-col">
+            <img class="dia-img" src="./pyxorDittle_files/dittle_tilt_sideways.png" alt="图 2B：向侧面翻滚">
+            <span class="dia-caption">图 2B：手指将黑色骰子向左侧翻滚 1 格，顶面点数发生改变。</span>
+        </div>
+    </div>
+
+    <!-- 走法 2：跳跃 -->
+    <h3 class="subsection-title">2. 跳跃（Jump）</h3>
+    <p>
+        在<strong>没有预先翻滚</strong>骰子的情况下，一颗骰子可以向前或向侧面跳过其他骰子（无论属于己方还是对手）：
+    </p>
+    <ul>
+        <li><span class="highlight">单次只能跳过 1 颗棋子：</span><strong>每次跳跃只能且必须越过 1 颗棋子，严禁一次性跳过大于等于两个连续棋子！</strong>（跨越的第 1 格必须有且仅有 1 颗棋子，第 2 格必须是空格作为着陆点）。</li>
+        <li><strong>连续跳跃与落脚空格要求：</strong>一颗骰子可以在单次回合中完成<strong>多重连续跳跃</strong>，但每跳过 1 颗棋子，骰子之间都必须存在可以作为落脚点的<strong>空格</strong>（一跳一落，落入空格后再起跳下一颗）。</li>
+        <li><span class="highlight">点数保持不变：</span>移动中的骰子在跳跃过程中，其<strong>顶面朝上的点数绝对不能发生改变</strong>（直接平移腾空落入空格，不发生滚动）。</li>
+    </ul>
+    <div class="img-row">
+        <div class="img-col">
+            <img class="dia-img" src="./pyxorDittle_files/dittle_jump_forward.png" alt="图 3A：向前连续跳跃">
+            <span class="dia-caption">图 3A：红圈中的白色骰子向前跳过己方白骰，落入空格后继续向前跳过黑骰。</span>
+        </div>
+        <div class="img-col">
+            <img class="dia-img" src="./pyxorDittle_files/dittle_jump_sideways.png" alt="图 3B：向侧面跳跃">
+            <span class="dia-caption">图 3B：红圈中的黑色骰子向左跳过白骰，落入空格后再次向左跳过另一黑骰。</span>
+        </div>
+    </div>
+
+    <!-- 走法 3：翻滚并跳跃 -->
+    <h3 class="subsection-title">3. 翻滚并跳跃（Tilt &amp; Jump）</h3>
+    <p>
+        单次合法的<strong>翻滚 1 格</strong>之后，可以<strong>紧接着执行任意次数的合法跳跃</strong>！
+    </p>
+    <p class="accent-text">
+        <em>规则要点：</em>先翻滚 1 格（骰子顶面点数随之改变），随后该骰子可以从新位置出发，向前或向侧面连续跳过其他骰子（跳跃期间顶面点数保持翻滚后的新数值不变）。
+    </p>
+    <div class="img-row">
+        <div class="img-col">
+            <img class="dia-img" src="./pyxorDittle_files/dittle_tilt_jump_1.png" alt="图 4A：翻滚后向侧面连续跳跃">
+            <span class="dia-caption">图 4A：黑色骰子向前翻滚 1 格，随后向左连续跳过两颗棋子。</span>
+        </div>
+        <div class="img-col">
+            <img class="dia-img" src="./pyxorDittle_files/dittle_tilt_jump_2.png" alt="图 4B：侧向翻滚后向前跳跃">
+            <span class="dia-caption">图 4B：黑色骰子向左侧翻滚 1 格，随后向前连续跳跃进击。</span>
+        </div>
+        <div class="img-col">
+            <img class="dia-img" src="./pyxorDittle_files/dittle_tilt_jump_3.png" alt="图 4C：翻滚后折线连续跳跃">
+            <span class="dia-caption">图 4C：白色骰子向前翻滚 1 格，紧接着向前跳过黑骰，再转向左侧连续跳跃！</span>
+        </div>
+    </div>
+
+    <!-- D. 禁止规则 -->
+    <h2 class="section-title">D. 禁止规则（You Cannot）</h2>
+    <div class="rule-box-danger">
+        <p>为了避免误解与争议，以下行为被严格禁止：</p>
+        <ul>
+            <li><strong>严禁向后退或沿对角线斜向移动</strong>（所有合法移动只能严格向前、向左或向右正交进行）。</li>
+            <li><strong>严禁以“单次翻滚 1 格”之外的任何方式改变骰子顶面的点数</strong>。</li>
+            <li><strong>严禁水平旋转骰子</strong>以企图人为操纵翻滚后朝上的点数（翻滚必须自然向前或向侧面翻倒 90 度，绝不允许在原地转动方向后再翻）。</li>
+        </ul>
+    </div>
+
+    <!-- E. 游戏结束与胜负判定 -->
+    <h2 class="section-title">E. 游戏结束与胜负判定（End of Game &amp; Winning）</h2>
+    <div class="rule-box">
+        <h3 class="subsection-title" style="margin-top: 0;">1. 常规终局与胜负计分（标准规则）</h3>
+        <p><span class="highlight">终局条件：</span>一旦有一位玩家将其骰子<strong>完全占满对手的底线</strong>（即该玩家的全部 7 颗骰子均成功抵达对手最初摆子的整行底线），游戏立即宣告结束。</p>
+        <p><span class="highlight">胜负计算：</span>将每位玩家位于对手底线的所有骰子<strong>顶面朝上的点数相加</strong>，<span class="highlight">总和最高者赢得整场游戏！</span></p>
+        <p class="accent-text">
+            <em>战术提示：</em>虽然率先将 7 颗骰子全部送入对方底线能强制触发终局，但最终胜利取决于底线骰子顶面点数的总和！因此在推进过程中，如何通过精确翻滚获得更高的顶面点数，是制胜的核心战术。
+        </p>
+    </div>
+
+    <!-- 例外情况补充规则 -->
+    <div class="rule-box" style="border-left: 4px solid #FFD700; background: rgba(255, 215, 0, 0.08);">
+        <h3 class="subsection-title" style="margin-top: 0; color: #FFD700;">2. 例外情况处理：消极防守与底线填满规则（Anti-Stalling Rule）</h3>
+        <p>
+            <strong>【例外情况分析】</strong>在基础对决模式中，由于没有吃子机制且棋子不可重叠，若某位玩家为了阻止对手达成“完全占满底线”，故意一直保留 1 颗或多颗骰子停留在自己的起始区域（己方底线）始终不动，会导致对手无论如何也无法占满该行的 7 个格子，从而造成游戏死锁或消极防守。
+        </p>
+        <p>
+            <strong>【补充规则（例外处理机制）】</strong>为彻底杜绝消极防守，引入以下底线填满终局与惩罚机制：
+        </p>
+        <ul>
+            <li><strong>底线填满且至少含有一颗对手棋子即终局：</strong>只要任意一位玩家的起始底线（整行 7 格）被<strong>完全填满无任何空格</strong>，并且该底线中<strong>必须至少包含 1 颗攻入的对手棋子</strong>，<span class="highlight">游戏立即宣告结束！</span><br><em style="color:#FFFFE3; font-size:13px;">（特别说明：若某方底线虽然占满 7 格但全都是该方原封不动的己方棋子，属于开局正常对峙，绝不触发终局；只有当对手成功攻入棋子，与滞留防守的棋子共同将该行 7 格全部填满堵死时，才触发此反消极终局判定）。</em></li>
+            <li><strong>滞留惩罚扣分（每子扣 10 分）：</strong>在终局计算双方得分时，滞留在自己区域（己方底线）未走出的<strong>每一个己方棋子，直接扣除 10 分！</strong></li>
+            <li><strong>最终净得分计算公式：</strong><br>
+                <div style="background: rgba(0, 0, 0, 0.35); padding: 8px 14px; margin: 8px 0; border-radius: 4px; font-family: monospace; color: #FFFFC1; border: 1px solid #334E7B;">
+                    玩家最终净得分 = （攻入对手底线的己方骰子顶面点数之和） - （10 × 滞留在自己底线的己方骰子数）
+                </div>
+                双方按最终净得分裁定胜负，<strong>净得分最高者获胜</strong>。该例外规则完全消除了消极堵门战术的收益。
+            </li>
+        </ul>
+    </div>
+
+    <!-- F. Dittle Clash 冲突变体 -->
+    <h2 class="section-title">F. 变体规则：Dittle 冲突变体（Dittle Clash variant）</h2>
+    <div class="rule-box-clash">
+        <p>
+            如果你想要体验节奏更快、充满吃子与淘汰刺激感的玩法，可以尝试 <strong>Dittle Clash</strong>！在这一变体中，你只需要将<strong>任意 1 颗骰子</strong>送达对方底线即可获胜；但必须时刻警惕——因为当骰子发生“碰撞/冲突”时，它们会被淘汰出局！
+        </p>
+        <p>本变体遵循 Dittle 基础规则，但包含以下关键区别：</p>
+        <ul>
+            <li><strong>只能翻滚，禁止跳跃：</strong>骰子只能通过翻滚移动 1 格，严禁进行任何形式的跳跃！</li>
+            <li><strong>单对单碰撞吃子：</strong>如果一颗骰子在移动结束时，与对手的一颗骰子正交相邻（上下左右），则<strong>顶面点数较低的那颗骰子被移出棋盘淘汰</strong>！</li>
+            <li><strong>单对多碰撞吃子：</strong>如果一颗骰子在移动结束时与<strong>多颗</strong>对手骰子相邻，则以<strong>对手所有相邻骰子顶面点数的总和</strong>与该移动骰子的点数进行比拼（若移动骰子点数低于该总和则被消灭；若高于该总和，则对手的所有这些相邻骰子全部被消灭）。</li>
+            <li><strong>平局同归于尽（Elimination）：</strong>
+                <div style="margin-top: 6px; padding-left: 10px;">
+                    如果一颗骰子发生以下任一情况：
+                    <ul>
+                        <li>与一颗顶面点数<strong>相同</strong>的对手骰子发生冲突；或者</li>
+                        <li>与多颗对手骰子冲突，且其顶面点数恰好<strong>等于对手相邻骰子的点数总和</strong>；</li>
+                    </ul>
+                    则<strong>所有卷入该冲突的骰子全部同归于尽，一同淘汰出局！</strong>
+                </div>
+            </li>
+        </ul>
+        <div style="border-top: 1px dashed #856404; margin-top: 14px; padding-top: 12px;">
+            <p><span class="highlight" style="font-size: 18px;">★ 变体获胜条件（Winning —— 仅需 1 子达阵即可获胜）：</span></p>
+            <p>
+                <strong>是的！与基础模式截然不同：在吃子模式（Dittle Clash）中，完全不需要所有骰子都到达底线，更不需要计分比拼。</strong><br>
+                <span class="highlight" style="font-size: 16px;">★ 只要有任意 1 颗骰子成功抵达对手的底线（对方区域最内行），游戏立即宣告结束，该骰子的拥有者直接赢得整场比赛的最终胜利！</span>
+            </p>
+            <p class="accent-text" style="margin-top: 8px;">
+                <em>战术说明：</em>吃子模式属于高烈度的“刺杀速攻”机制。在吃子模式下，无需担心对手在自己底线消极死守不动，因为移动骰子可以直接贴近对手正交相邻的防守骰子，利用点数优势或合围将其直接“吃子消灭”；同时只要撕开防守缺口，哪怕仅有 1 颗骰子突破进对方底线，即可一击制胜！
+            </p>
+        </div>
+    </div>
+
+    <!-- G. 实体小册子折叠指南 -->
+    <h2 class="section-title">G. 附录：便携小册子折叠指南（PocketMod Guide）</h2>
+    <div class="rule-box">
+        <p>
+            本规则原本被排版为可打印在一张标准 Letter（或 A4）单面纸上，并通过经典的 <strong>PocketMod</strong> 8页折纸法折叠成一本小巧的口袋微型规则书。
+        </p>
+        <p class="accent-text">
+            <em>折叠技巧提示：</em>在原版打印件中并没有印刷裁切线或虚线，这是因为按照下方步骤 2 先完成正反折叠压痕，再将纸张展开后沿长边对折，可以最精准地找到中心剪切线。稍加练习，您就能折出一本装帧工整的掌上规则书！
+        </p>
+        <div class="dia-container">
+            <img class="dia-img" src="./pyxorDittle_files/pocketmod_folding.png" alt="图 5：PocketMod 标准 6 步折叠图解" style="max-width: 600px; background-color: #FFFFFF;">
+            <span class="dia-caption">图 5：PocketMod 8合1折纸法 6 步图解（PocketMod.com &copy; 2005-2006）。</span>
+        </div>
+        <ol>
+            <li><strong>步骤 1：</strong>将印有封面（F）的一面朝上，封面置于左上角，背面朝下平铺。</li>
+            <li><strong>步骤 2：</strong>横向与纵向依次对折，压出 8 个均匀矩形页面的清晰折痕。</li>
+            <li><strong>步骤 3：</strong>将纸张横向对折，用剪刀沿中心两页间的连接线剪开一条切口（注意仅剪开中间横跨两格的长度，切勿剪通外边缘）。</li>
+            <li><strong>步骤 4：</strong>将纸张展开后沿长边纵向对折，向两端相对挤压，使中心切口撑开呈菱形十字开口。</li>
+            <li><strong>步骤 5：</strong>继续向内侧挤压压平，使 4 组折页自然形成十字形辐射状排列。</li>
+            <li><strong>步骤 6：</strong>横向折叠合拢，将封面（F）翻在最外层作为正面，封底翻在背面。压实书脊即可随身携带！</li>
+        </ol>
+    </div>
+
+    <!-- 底部参考与原版文件链接 -->
+    <div class="footer">
+        <p>
+            Dittle / Pyxor Dittle 规则翻译整理自原版规则小册子：<a href="pyxorDittle_rules_booklet_v1.pdf" target="_blank">pyxorDittle_rules_booklet_v1.pdf</a>
+        </p>
+        <p>
+            参考排版格式：<a href="Tzaar_%20I%20play%20the%20game_zh.html" target="_blank">Tzaar: 游戏规则中文版</a>
+        </p>
+        <p style="color: #6C7A89; font-size: 11px; margin-top: 8px;">
+            版面设计 &copy; fungame / BoardGame Collection. 内容保留所有原版权利。
+        </p>
+    </div>
+
+</div>
+
+<script>
+    function togglePrintMode() {
+        const isPrint = document.body.classList.toggle('print-mode');
+        const btn = document.getElementById('togglePrintBtn');
+        const text = document.getElementById('togglePrintText');
+        const icon = document.getElementById('togglePrintIcon');
+        const hint = document.getElementById('toolbarHint');
+
+        if (isPrint) {
+            btn.classList.add('active');
+            icon.textContent = '🎨';
+            text.textContent = '恢复原版深蓝主题';
+            hint.textContent = '当前为纯黑白打印视图（适合纸张阅读与打印预览）';
+        } else {
+            btn.classList.remove('active');
+            icon.textContent = '🖨️';
+            text.textContent = '切换为纯黑白打印版';
+            hint.textContent = '适合 A4 / Letter 打印装订与纯黑白阅读';
+        }
+    }
+</script>
+
+</body>
+</html>
