@@ -1,6 +1,14 @@
 // codex: 2026-09-14 Quixo界面渲染与交互管理 - 实现推入指示箭头、DOM操作与WebAudio音效
 'use strict';
 
+/** 推入方向的中文标签（描述屏幕上棋子被推动的方向） */
+const DIRECTION_LABELS = Object.freeze({
+    up: '向上',
+    down: '向下',
+    left: '向左',
+    right: '向右',
+});
+
 /**
  * GameUI - 负责页面交互、DOM 渲染、动画与音频反馈
  */
@@ -215,6 +223,75 @@ class GameUI {
         this.arrowOverlayEl.innerHTML = '';
     }
 
+    /** 计算推入方向对应的新棋子插入位置 */
+    insertPosition(move) {
+        const last = this.boardSize - 1;
+        switch (move.direction) {
+            case Direction.DOWN: return { row: 0, col: move.col };
+            case Direction.UP: return { row: last, col: move.col };
+            case Direction.RIGHT: return { row: move.row, col: 0 };
+            case Direction.LEFT: return { row: move.row, col: last };
+            default: return { row: move.row, col: move.col };
+        }
+    }
+
+    /**
+     * 播放推入滑动动画：须在棋盘已按移动后状态渲染完毕时调用。
+     * 被推动的棋子先无过渡地摆到"来自相邻格"的起点，再平滑滑入最终位置；
+     * 新推入的棋子做翻面入场动画（模拟把积木翻转为己方面孔）。
+     * @returns {number} 动画时长（毫秒），调用方据此延迟后续结算
+     */
+    playSlideAnimation(model, move) {
+        const last = this.boardSize - 1;
+        const moved = [];
+        // 与 GameRules.applyMove 的位移范围严格对应：内容来自哪个邻居，就从哪边滑入
+        switch (move.direction) {
+            case Direction.DOWN:
+                for (let r = 1; r <= move.row; r++) moved.push({ row: r, col: move.col, dx: 0, dy: -1 });
+                break;
+            case Direction.UP:
+                for (let r = move.row; r <= last - 1; r++) moved.push({ row: r, col: move.col, dx: 0, dy: 1 });
+                break;
+            case Direction.RIGHT:
+                for (let c = 1; c <= move.col; c++) moved.push({ row: move.row, col: c, dx: -1, dy: 0 });
+                break;
+            case Direction.LEFT:
+                for (let c = move.col; c <= last - 1; c++) moved.push({ row: move.row, col: c, dx: 1, dy: 0 });
+                break;
+        }
+
+        const gap = parseFloat(getComputedStyle(this.boardGridEl).columnGap) || 0;
+        moved.forEach(m => {
+            const el = this.boardGridEl.querySelector(`[data-row="${m.row}"][data-col="${m.col}"]`);
+            if (!el) return;
+            const size = el.getBoundingClientRect().width;
+            m.el = el;
+            el.classList.add('slide-init');
+            el.style.transform = `translate(${m.dx * (size + gap)}px, ${m.dy * (size + gap)}px)`;
+        });
+
+        // 强制回流，确保起始位移先生效，再开启过渡归位
+        void this.boardGridEl.offsetWidth;
+
+        moved.forEach(m => {
+            m.el.classList.remove('slide-init');
+            m.el.classList.add('slide-shift');
+            m.el.style.transform = '';
+        });
+
+        const ip = this.insertPosition(move);
+        const insertEl = this.boardGridEl.querySelector(`[data-row="${ip.row}"][data-col="${ip.col}"]`);
+        if (insertEl) insertEl.classList.add('cube-insert');
+
+        // 动画结束后清理辅助类，避免残留过渡样式影响后续交互与选中动效
+        setTimeout(() => {
+            moved.forEach(m => m.el && m.el.classList.remove('slide-shift'));
+            if (insertEl) insertEl.classList.remove('cube-insert');
+        }, 560);
+
+        return 500;
+    }
+
     /** 高亮胜利连线 */
     highlightWinLine(winLine) {
         if (!winLine || !winLine.cells) return;
@@ -224,8 +301,8 @@ class GameUI {
         });
     }
 
-    /** 更新玩家行动状态栏 */
-    updateStatus(model, isAiTurn = false) {
+    /** 更新玩家行动状态栏（aiStage: ''思考中 | 'picked'已取子待推入） */
+    updateStatus(model, isAiTurn = false, aiStage = '', move = null) {
         const p1Active = model.currentPlayer === CellState.CIRCLE;
         this.player1Card.classList.toggle('active', p1Active);
         this.player2Card.classList.toggle('active', !p1Active);
@@ -237,8 +314,15 @@ class GameUI {
         }
 
         if (isAiTurn) {
-            this.statusTextEl.textContent = 'AI 正在推演棋局...';
-            this.stepIndicatorEl.textContent = '请稍候';
+            if (aiStage === 'picked' && move) {
+                const dirLabel = DIRECTION_LABELS[move.direction] || '';
+                this.statusTextEl.textContent = 'AI 已取出棋子，正在推入...';
+                this.stepIndicatorEl.textContent =
+                    `AI 取出第 ${move.row + 1} 行第 ${move.col + 1} 列棋子，${dirLabel}推入`;
+            } else {
+                this.statusTextEl.textContent = 'AI 正在推演棋局...';
+                this.stepIndicatorEl.textContent = '请稍候';
+            }
             return;
         }
 

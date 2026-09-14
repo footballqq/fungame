@@ -1,4 +1,5 @@
 <!-- codex: 2026-09-14 修复quixo连珠棋两个致命bug并完善配色与多端适配 -->
+- [X] 体验: `boardgame/quixo连珠棋/` 推子动作可视化——被推棋子平滑滑动、新子翻面入场动画；AI 行动三阶段放慢（思考→取子播报“第x行第y列，向x推入”→推入动画）并引入 moveToken 防滞后回调误结算，玩家可完整看清电脑每一步
 - [X] 文档: 沉淀 `boardgame/quixo连珠棋/DEBUGGING.md` 本地调试文档，完整保留两个致命 bug 的排查过程、根因机理、修复方案、回归防线与调试环境踩坑经验（启发式缓存/自动化点击超时/截图伪影/布局断言清单/调试方法论）
 - [X] 修复: `boardgame/quixo连珠棋/` 致命bug① `game-rules.js`/`game-ai.js` 顶层 `var { CellState }` 提升后与 `game-model.js` 全局 `const` 冲突，浏览器端两脚本整体 SyntaxError 失效导致游戏无法初始化（Node CommonJS 测试因函数作用域无法发现）；改为仅 CommonJS 环境经 `globalThis` 注入
 - [X] 修复: 致命bug② 选子后 `renderBoard` 重建棋格使被点棋子脱离文档，其点击冒泡被"点击外部取消选子"监听器误判，选子瞬间被取消、点击完全无响应；判定抽为 `shouldCancelSelection` 静态方法并跳过 `isConnected=false` 游离目标；另修复 AI 走子后悔棋按钮未解锁

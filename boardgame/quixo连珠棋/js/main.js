@@ -4,6 +4,13 @@
 /** 棋盘格子尺寸的本地存储键（保存用户手动设置的像素值） */
 const BOARD_SIZE_STORAGE_KEY = 'quixo-board-cell-size';
 
+/** AI 思考停顿（毫秒）：营造推演节奏 */
+const AI_THINK_DELAY_MS = 650;
+/** AI 取子高亮展示时长（毫秒）：让玩家看清它从哪里取子 */
+const AI_PICK_HOLD_MS = 800;
+/** 推入滑动动画时长（毫秒）：与 css .cell.slide-shift 过渡时长匹配 */
+const SLIDE_ANIM_MS = 500;
+
 /**
  * QuixoGameController - 控制游戏整体生命周期与用户交互流转
  */
@@ -19,6 +26,7 @@ class QuixoGameController {
         this.humanPlayer = CellState.CIRCLE; // 人机模式中人类玩家所执棋子
         this.isProcessing = false;      // 防止快速连击或 AI 运算期间误操作
         this.resizeTimer = null;        // 窗口变化防抖计时器
+        this.moveToken = 0;             // 对局令牌：重新开始后使滞后的 AI/动画回调自动失效
 
         this.initEvents();
         this.initSizeControl();
@@ -191,6 +199,7 @@ class QuixoGameController {
 
     /** 开始一局新游戏 */
     startNewGame() {
+        this.moveToken += 1; // 使尚未触发的 AI/动画结算回调全部失效
         this.model.reset();
         this.isProcessing = false;
         this.ui.hideGameOver();
@@ -237,8 +246,9 @@ class QuixoGameController {
         }
     }
 
-    /** 取消当前选中的棋子 */
+    /** 取消当前选中的棋子（动画/AI 运算期间禁止取消，避免干扰进行中的演出） */
     cancelSelection() {
+        if (this.isProcessing) return;
         this.model.selectedPos = null;
         this.model.phase = GamePhase.PICK;
         this.ui.clearArrows();
@@ -253,19 +263,31 @@ class QuixoGameController {
         this.executeMove(row, col, direction, this.model.currentPlayer);
     }
 
-    /** 执行移动并结算状态 */
+    /** 执行移动：先落定规则状态，再以滑动动画呈现，动画结束后结算胜负与回合 */
     executeMove(row, col, direction, player) {
         this.isProcessing = true;
+        const token = this.moveToken;
         this.ui.clearArrows();
         this.ui.playPushSound();
 
-        // 记录移动
+        // 记录移动（快照为移动前棋盘，供悔棋使用），随后应用滑动
         this.model.recordMove(row, col, direction, player);
-
-        // 应用滑动
         this.rules.applyMove(this.model.board, row, col, direction, player);
         this.model.selectedPos = null;
 
+        // 按移动后棋盘渲染，并让被推动的棋子平滑滑入、新子翻面入场
+        this.ui.renderBoard(this.model, this.rules, (r, c) => this.handleCellClick(r, c));
+        this.ui.playSlideAnimation(this.model, { row, col, direction });
+
+        // 动画播完再结算，确保玩家看清全过程
+        setTimeout(() => {
+            if (token !== this.moveToken) return;
+            this.settleMove(player);
+        }, SLIDE_ANIM_MS);
+    }
+
+    /** 滑动动画结束后的结算：自杀规则判负、回合切换与 AI 接力 */
+    settleMove(player) {
         // 检测胜负（严格按照自杀规则）
         const result = this.rules.checkWinner(this.model.board, player);
 
@@ -303,14 +325,18 @@ class QuixoGameController {
         }
     }
 
-    /** 触发 AI 行动 */
+    /** 触发 AI 行动：思考 → 取子高亮展示 → 推入动画，三阶段放慢便于玩家看清 */
     triggerAiMove() {
         this.isProcessing = true;
-        this.ui.updateStatus(this.model, true);
+        this.ui.updateStatus(this.model, true, 'thinking');
+        // AI 回合期间禁用悔棋，避免状态栏与按钮可用性不一致
+        const undoBtn = document.getElementById('undoBtn');
+        if (undoBtn) undoBtn.disabled = true;
 
+        const token = this.moveToken;
         // 人性化延时，让玩家看清棋盘变化并感受思考节奏
         setTimeout(() => {
-            if (this.model.phase === GamePhase.GAME_OVER) {
+            if (token !== this.moveToken || this.model.phase === GamePhase.GAME_OVER) {
                 this.isProcessing = false;
                 return;
             }
@@ -318,20 +344,23 @@ class QuixoGameController {
             const aiPlayer = this.model.currentPlayer;
             const move = this.ai.getMove(this.model.board, aiPlayer, this.aiDifficulty);
 
-            if (move) {
-                // 先高亮 AI 取出的棋子
-                this.model.selectedPos = { row: move.row, col: move.col };
-                this.ui.playPickSound();
-                this.ui.renderBoard(this.model, this.rules, (r, c) => this.handleCellClick(r, c));
-
-                // 稍微停顿后执行推入
-                setTimeout(() => {
-                    this.executeMove(move.row, move.col, move.direction, aiPlayer);
-                }, 400);
-            } else {
+            if (!move) {
                 this.isProcessing = false;
+                return;
             }
-        }, 500);
+
+            // 阶段一：高亮 AI 取出的棋子并播报，停留一段时间让玩家看清取子位置
+            this.model.selectedPos = { row: move.row, col: move.col };
+            this.ui.playPickSound();
+            this.ui.renderBoard(this.model, this.rules, (r, c) => this.handleCellClick(r, c));
+            this.ui.updateStatus(this.model, true, 'picked', move);
+
+            // 阶段二：停留后执行带滑动动画的推入
+            setTimeout(() => {
+                if (token !== this.moveToken) return;
+                this.executeMove(move.row, move.col, move.direction, aiPlayer);
+            }, AI_PICK_HOLD_MS);
+        }, AI_THINK_DELAY_MS);
     }
 
     /** 处理悔棋 */

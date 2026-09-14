@@ -1,13 +1,16 @@
 {
-  "current_task": "quixo连珠棋 沉淀本地调试文档 DEBUGGING.md（已完成）",
+  "current_task": "quixo连珠棋 推子动作可视化与 AI 慢动作（已完成）",
   "last_changes": [
-    "boardgame/quixo连珠棋/DEBUGGING.md",
-    "boardgame/quixo连珠棋/README.md",
+    "boardgame/quixo连珠棋/js/main.js",
+    "boardgame/quixo连珠棋/js/game-ui.js",
+    "boardgame/quixo连珠棋/css/style.css",
+    "boardgame/quixo连珠棋/index.html",
     "boardgame/quixo连珠棋/CODEx_TODO.md",
+    "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "如需继续调试 quixo，先读 boardgame/quixo连珠棋/DEBUGGING.md 的方法论与踩坑记录"
+    "向用户汇报动画效果与 AI 三阶段节奏，已完成提交推送"
   ],
-  "notes": "已新增 boardgame/quixo连珠棋/DEBUGGING.md：完整保留两个致命bug（浏览器全局var与const冲突致脚本失效、重渲染游离目标点击被误判取消）的排查过程、根因机理、修复方案、回归防线，以及调试环境踩坑经验（启发式缓存掩盖修复、无限动画致自动化点击超时、截图合成器伪影判定、evaluate传参形式、多视口布局断言清单）与调试方法论总结。"
+  "notes": "新增 playSlideAnimation：被推棋子从来源方向平滑滑入（slide-init→slide-shift 两段式过渡，避免基类 transition 干扰）、新子 cube-flip-in 翻面入场；AI 改为 650ms 思考→800ms 取子高亮（播报第x行第y列，向x推入）→500ms 推入动画三阶段；moveToken 令牌使重新开始后的滞后 AI/动画回调自动失效；动画期间 isProcessing 锁操作，cancelSelection 加锁防演出被打断。浏览器程序化验证：滑动中间帧 matrix 偏移 86px、结束归位、类清理、三阶段播报文本、悔棋按钮状态全部正确。"
 }
