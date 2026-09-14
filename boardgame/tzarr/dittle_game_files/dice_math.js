@@ -1,12 +1,13 @@
-// codex: 2026-09-13 3D standard 6-sided dice orientation math & rotation physics
+// codex: 2026-09-14 设定双方默认均为6向上、3面向对面（白方朝北为3/迎面为4，黑方朝南为3/迎面为3）
 class DittleDie {
     constructor(color, top = 6, front = null, right = 2) {
         this.color = color; // 'white' or 'black'
         this.top = top;
-        // For White: front faces South (row 6 / player)
-        // For Black: front faces South (so Black's own player face North is 7 - front)
+        // 双方默认均为 6 是 top，3 面向对面：
+        // 白方底线在南端 (Row 6)，面向对面（北端 Row 0）为 3，因此朝向玩家自己的南面 (front) 为 4
+        // 黑方底线在北端 (Row 0)，面向对面（南端 Row 6）为 3，因此朝向对面的南面 (front) 为 3
         if (front === null) {
-            this.front = color === 'white' ? 3 : 4;
+            this.front = color === 'white' ? 4 : 3;
         } else {
             this.front = front;
         }

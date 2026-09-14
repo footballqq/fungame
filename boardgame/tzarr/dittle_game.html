@@ -33,6 +33,8 @@
             <button class="btn-icon" id="flipBlackBtn" type="button" title="180°翻转黑方显示（两人面对面持机下棋）">
                 <span>🔄 翻转黑方</span>
             </button>
+            <!-- 对局历史记录侧栏切换 -->
+            <button class="btn-icon active" id="openLogBtn" type="button" title="展开/收起对局记录与点数变化（支持一键复制发给AI）">📜 记录</button>
             <!-- 全屏、音乐与音效控制 -->
             <button class="btn-icon" id="fullscreenBtn" type="button" title="全屏显示">⛶</button>
             <button class="btn-icon" id="musicToggleBtn" type="button" title="背景音乐开关（轻柔禅意氛围音乐）">🎵 音乐</button>
@@ -49,47 +51,80 @@
         <span>⚠️</span> <span id="toastText">提示信息</span>
     </div>
 
-    <!-- 游戏主舞台（黑方玩家卡片 + 7x7 棋盘 + 白方玩家卡片） -->
-    <main class="stage-container" id="stageContainer">
-
-        <!-- 黑方（黑骰）信息卡与棋钟 -->
-        <section class="player-bar player-bar-black" id="blackPlayerBar">
-            <div class="player-info">
-                <div class="die-avatar black">⚅</div>
-                <div class="player-name-wrap">
-                    <span class="player-title" id="blackName">黑方 (玩家2 / AI)</span>
-                    <span class="player-sub">初始底线：第 1 行 (远端)</span>
-                </div>
-            </div>
-            <div class="clock-card" title="黑方剩余思考时间">
-                <span>⏱️</span>
-                <span class="clock-digits" id="blackClock">05:00</span>
-            </div>
-        </section>
-
-        <!-- 7x7 棋盘容器 -->
-        <div class="board-wrapper" id="boardWrapper">
-            <div class="board-grid" id="boardGrid">
-                <!-- 动态生成 49 个单元格 -->
-            </div>
+    <!-- 终局检视浮动横幅（点击“查看当前棋盘”后显示，不强制开新局） -->
+    <div class="game-over-review-banner" id="gameOverReviewBanner" style="display: none;">
+        <div class="banner-content">
+            <span class="banner-title">🏆 终局检视模式：</span>
+            <span class="banner-reason" id="reviewReasonText">白方获得胜利</span>
         </div>
+        <div class="banner-btns">
+            <button class="btn-sm" id="reopenModalBtn" type="button">📊 查看结算明细</button>
+            <button class="btn-sm btn-primary" id="bannerNewGameBtn" type="button">🔄 再来一局</button>
+        </div>
+    </div>
 
-        <!-- 白方（白骰）信息卡与棋钟 -->
-        <section class="player-bar player-bar-white active-turn" id="whitePlayerBar">
-            <div class="player-info">
-                <div class="die-avatar white">⚅</div>
-                <div class="player-name-wrap">
-                    <span class="player-title" id="whiteName">白方 (玩家1 / 先手)</span>
-                    <span class="player-sub">初始底线：第 7 行 (近端)</span>
+    <!-- 游戏主舞台与对局记录侧栏容器 -->
+    <div class="game-main-content">
+        <!-- 游戏主舞台（黑方玩家卡片 + 7x7 棋盘 + 白方玩家卡片） -->
+        <main class="stage-container" id="stageContainer">
+
+            <!-- 黑方（黑骰）信息卡与棋钟 -->
+            <section class="player-bar player-bar-black" id="blackPlayerBar">
+                <div class="player-info">
+                    <div class="die-avatar black">⚅</div>
+                    <div class="player-name-wrap">
+                        <span class="player-title" id="blackName">黑方 (玩家2 / AI)</span>
+                        <span class="player-sub">初始底线：第 1 行 (远端)</span>
+                    </div>
+                </div>
+                <div class="clock-card" title="黑方剩余思考时间">
+                    <span>⏱️</span>
+                    <span class="clock-digits" id="blackClock">05:00</span>
+                </div>
+            </section>
+
+            <!-- 7x7 棋盘容器 -->
+            <div class="board-wrapper" id="boardWrapper">
+                <div class="board-grid" id="boardGrid">
+                    <!-- 动态生成 49 个单元格 -->
                 </div>
             </div>
-            <div class="clock-card" title="白方剩余思考时间">
-                <span>⏱️</span>
-                <span class="clock-digits" id="whiteClock">05:00</span>
-            </div>
-        </section>
 
-    </main>
+            <!-- 白方（白骰）信息卡与棋钟 -->
+            <section class="player-bar player-bar-white active-turn" id="whitePlayerBar">
+                <div class="player-info">
+                    <div class="die-avatar white">⚅</div>
+                    <div class="player-name-wrap">
+                        <span class="player-title" id="whiteName">白方 (玩家1 / 先手)</span>
+                        <span class="player-sub">初始底线：第 7 行 (近端)</span>
+                    </div>
+                </div>
+                <div class="clock-card" title="白方剩余思考时间">
+                    <span>⏱️</span>
+                    <span class="clock-digits" id="whiteClock">05:00</span>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- 右侧对局历史与调试记录面板（可折叠、可一键复制） -->
+        <aside class="game-log-sidebar" id="gameLogSidebar">
+            <div class="log-header">
+                <div class="log-title-wrap">
+                    <span class="log-title">📜 对局记录</span>
+                    <span class="log-count-badge" id="logCountBadge">0 步</span>
+                </div>
+                <div class="log-header-actions">
+                    <button class="btn-icon-sm" id="copyLogBtn" type="button" title="一键复制对局记录到剪贴板">📋 复制</button>
+                    <button class="btn-icon-sm" id="clearLogBtn" type="button" title="清空历史记录">🗑️</button>
+                    <button class="btn-icon-sm" id="toggleLogBtn" type="button" title="收起对局记录侧栏">✕</button>
+                </div>
+            </div>
+            <div class="log-list" id="gameLogList">
+                <div class="log-empty">暂无走棋记录。<br>走棋后此处将实时记录翻滚方向、坐标与骰子点数变化。</div>
+            </div>
+        </aside>
+    </div>
 
     <!-- 底部状态指示与图例说明 -->
     <footer class="bottom-bar">
@@ -192,7 +227,8 @@
 
 <!-- 终局结算弹窗 -->
 <div class="modal-backdrop" id="gameOverModal">
-    <div class="modal-window" style="text-align: center;">
+    <div class="modal-window" style="text-align: center; position: relative;">
+        <button class="btn-icon" id="closeGameOverModalBtn" type="button" style="position: absolute; right: 14px; top: 14px; font-size: 16px; border: none; background: transparent; cursor: pointer; color: #94a3b8;" title="关闭弹窗（查看棋盘）">✕</button>
         <h2 id="winnerTitle" style="color: var(--accent-gold); font-size: 26px;">恭喜白方获得胜利！</h2>
         <p id="winnerReason" style="margin: 12px 0; font-size: 15px; color: #e2e8f0; line-height: 1.6;"></p>
 
@@ -203,8 +239,9 @@
             <div id="blackScoreDetail" style="color: #fff;"></div>
         </div>
 
-        <div class="modal-actions" style="margin-top: 16px;">
-            <button class="btn-primary" id="playAgainBtn" type="button">再来一局</button>
+        <div class="modal-actions" style="margin-top: 16px; display: flex; gap: 12px; justify-content: center;">
+            <button class="btn-secondary" id="reviewBoardBtn" type="button" title="关闭弹窗，留在当前棋盘画面查看终局状态">🔍 查看当前棋盘</button>
+            <button class="btn-primary" id="playAgainBtn" type="button">🔄 再来一局</button>
         </div>
     </div>
 </div>
@@ -216,6 +253,7 @@
 <script src="./dittle_game_files/engine.js"></script>
 <script src="./dittle_game_files/ai.js"></script>
 <script src="./dittle_game_files/animator.js"></script>
+<script src="./dittle_game_files/logger.js"></script>
 <script src="./dittle_game_files/ui.js"></script>
 
 </body>

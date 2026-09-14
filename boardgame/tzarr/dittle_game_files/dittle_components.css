@@ -434,22 +434,33 @@
     animation: dieHopArc 0.38s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* 翻滚倾斜过渡动效 */
-@keyframes dieTiltRoll {
-    0% {
-        transform: rotateX(-24deg) rotateY(-28deg) scale(1);
-    }
-    50% {
-        transform: rotateX(-12deg) rotateY(-14deg) translateY(-8px) translateZ(8px) scale(1.08);
-    }
-    100% {
-        transform: rotateX(-24deg) rotateY(-28deg) scale(1);
-    }
+/* 翻滚倾斜过渡动效（支持东/西/南/北真实 3D 侧向与纵向翻滚） */
+@keyframes dieTiltNorth {
+    0% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
+    40% { transform: rotateX(42deg) rotateY(-28deg) translateY(-14px) translateZ(12px) scale(1.08); }
+    100% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
+}
+@keyframes dieTiltSouth {
+    0% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
+    40% { transform: rotateX(-80deg) rotateY(-28deg) translateY(12px) translateZ(12px) scale(1.08); }
+    100% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
+}
+@keyframes dieTiltEast {
+    0% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
+    40% { transform: rotateX(-18deg) rotateY(36deg) translateX(14px) translateY(-10px) translateZ(12px) scale(1.08); }
+    100% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
+}
+@keyframes dieTiltWest {
+    0% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
+    40% { transform: rotateX(-18deg) rotateY(-92deg) translateX(-14px) translateY(-10px) translateZ(12px) scale(1.08); }
+    100% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
 }
 
-.die-cube.anim-tilt {
-    animation: dieTiltRoll 0.32s ease forwards;
-}
+.die-cube.anim-tilt-north { animation: dieTiltNorth 0.32s cubic-bezier(0.2, 0.9, 0.4, 1) forwards; }
+.die-cube.anim-tilt-south { animation: dieTiltSouth 0.32s cubic-bezier(0.2, 0.9, 0.4, 1) forwards; }
+.die-cube.anim-tilt-east  { animation: dieTiltEast  0.32s cubic-bezier(0.2, 0.9, 0.4, 1) forwards; }
+.die-cube.anim-tilt-west  { animation: dieTiltWest  0.32s cubic-bezier(0.2, 0.9, 0.4, 1) forwards; }
+.die-cube.anim-tilt       { animation: dieTiltNorth 0.32s cubic-bezier(0.2, 0.9, 0.4, 1) forwards; }
 
 /* 起始格轨迹高亮（琥珀金虚线框） */
 .cell.last-move-from {
@@ -477,5 +488,3 @@
     pointer-events: none;
     z-index: 2;
 }
-
-

@@ -1,4 +1,4 @@
-// codex: 2026-09-13 跳跃规则修正：单次跳跃只能越过 1 颗棋子，严禁越过 >= 2 颗连续棋子
+// codex: 2026-09-14 设定黑白双方棋子默认均为6向上、3面向对面（两军对垒，双方3互相对视）
 class DittleEngine {
     constructor(mode = 'battle') {
         this.mode = mode; // 'battle' (标准骰战棋) or 'clash' (冲突变体)
@@ -16,10 +16,11 @@ class DittleEngine {
     initBoard() {
         this.board = Array(7).fill(null).map(() => Array(7).fill(null));
         for (let c = 0; c < 7; c++) {
-            // Row 0: Black base row (facing North/Black player is 3 -> front faces South is 4)
-            this.board[0][c] = new DittleDie('black', 6, 4, 2);
-            // Row 6: White base row (facing South/White player is 3 -> front is 3)
-            this.board[6][c] = new DittleDie('white', 6, 3, 2);
+            // 双方默认均为 6 是 top，3 面向对面：
+            // Row 0 黑方底线：面向对面（南端 Row 6）为 3 -> front 为 3
+            this.board[0][c] = new DittleDie('black', 6, 3, 2);
+            // Row 6 白方底线：面向对面（北端 Row 0）为 3 -> front (朝向玩家南面) 为 4
+            this.board[6][c] = new DittleDie('white', 6, 4, 2);
         }
         this.turn = 'white';
         this.moveHistory = [];
@@ -277,11 +278,14 @@ class DittleEngine {
 
         this.moveHistory.push(moveRecord);
 
-        // Check game over
+        // Switch turn FIRST so checkGameOver evaluates the NEXT player's legal moves
+        this.turn = this.turn === 'white' ? 'black' : 'white';
+
+        // Check game over (now this.turn is the next-to-move player)
         this.checkGameOver();
 
-        // Switch turn if game not over
-        if (!this.gameOver) {
+        // If game ended, revert turn to indicate who made the winning/last move
+        if (this.gameOver) {
             this.turn = this.turn === 'white' ? 'black' : 'white';
         }
 

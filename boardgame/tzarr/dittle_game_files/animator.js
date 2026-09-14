@@ -1,4 +1,4 @@
-// codex: 2026-09-13 Move transition & step-by-step animation controller for Dittle
+// codex: 2026-09-14 支持东/西/南/北多向真实 3D 翻滚动画与落子即时变点动效
 class DittleAnimator {
     constructor(ui) {
         this.ui = ui;
@@ -88,7 +88,20 @@ class DittleAnimator {
 
                 const cube = dieEl.querySelector('.die-cube');
                 if (cube) {
-                    const animClass = isJump ? 'anim-hop' : 'anim-tilt';
+                    let animClass = 'anim-hop';
+                    if (!isJump) {
+                        const stepDr = next[0] - curr[0];
+                        const stepDc = next[1] - curr[1];
+                        if (stepDc > 0) animClass = 'anim-tilt-east';      // 向右翻滚
+                        else if (stepDc < 0) animClass = 'anim-tilt-west'; // 向左翻滚
+                        else if (stepDr < 0) animClass = 'anim-tilt-north';// 向北翻滚
+                        else animClass = 'anim-tilt-south';                // 向南翻滚
+
+                        // 翻滚着陆时立即呈现翻滚后的新面点数
+                        if (move.resultingDie && this.ui.updateDieContent) {
+                            this.ui.updateDieContent(dieEl, move.resultingDie);
+                        }
+                    }
                     cube.classList.add(animClass);
                     this.schedule(() => cube.classList.remove(animClass), 360);
                 }

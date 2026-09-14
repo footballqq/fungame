@@ -60,11 +60,11 @@
         2. 每位玩家取己方颜色的 7 颗骰子，整齐摆放在<strong>距离自己最近的一整行</strong>中。这一行即为该玩家的<span class="highlight">“底线”（Base Row）</span>。
     </p>
     <p>
-        3. <span class="highlight">初始朝向要求：</span>所有 7 颗骰子在摆放时，<strong>顶面必须朝上显示点数 6</strong>，同时<strong>朝向玩家自己的一面必须显示点数 3</strong>（见下方图 1）。
+        3. <span class="highlight">初始朝向要求：</span>所有 7 颗骰子在摆放时，<strong>顶面必须朝上显示点数 6</strong>，同时<strong>朝向对面（对手）的一面必须显示点数 3</strong>（白方朝向黑方为 3，黑方朝向白方为 3，两军对垒，双方 3 互相对视，见下方图 1）。
     </p>
     <div class="dia-container">
         <img class="dia-img" src="./pyxorDittle_files/dittle_setup.png" alt="图 1：游戏初始摆放图" style="max-width: 650px;">
-        <span class="dia-caption">图 1：初始对局布局。白方底线在近端（顶面朝上为 6，朝向玩家面为 3）；黑方底线在远端（顶面朝上同样为 6，朝向黑方玩家面为 3）。</span>
+        <span class="dia-caption">图 1：初始对局布局。白方底线在近端（顶面朝上为 6，朝向对面为 3）；黑方底线在远端（顶面朝上同样为 6，朝向对面为 3）。</span>
     </div>
 
     <!-- C. 游戏玩法与行动规则 -->
@@ -79,7 +79,7 @@
         一颗骰子可以在棋盘上向<strong>正前方（朝对手方向）</strong>或向<strong>侧面（左或右）</strong>翻滚 <span class="highlight">1 格</span>。
     </p>
     <p class="accent-text">
-        <em>规则要点：</em>翻滚是将骰子向相邻空格倾斜翻转 90 度。随着骰子的翻滚，朝上的顶面点数会随之发生数学改变（例如：初始状态顶面为 6、朝向玩家面为 3，若向前翻滚 1 格，则朝向玩家的 3 会转到顶面；若向侧面翻滚，则侧面的点数转到顶面）。
+        <em>规则要点：</em>无论向前、向左或向右移动，均为将骰子沿对应边缘向相邻空格翻滚 90 度（严禁后退或斜向移动）。向左或向右移动同样是真实的 3D 翻滚动作，会将侧面的点数翻转为顶面。在游戏中，可悬浮鼠标查看各方向翻滚点数预判，并可通过右侧展开的“对局记录”实时追踪每步翻滚与点数流转。
     </p>
     <div class="img-row">
         <div class="img-col">

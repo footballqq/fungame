@@ -41,3 +41,5 @@ removal_log.txt
 remove
 tweets.sqbpro
 todayurl.json
+# 忽略所有pytest缓存目录
+.pytest_cache/

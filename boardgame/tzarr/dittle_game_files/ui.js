@@ -1,10 +1,11 @@
-// codex: 2026-09-13 增加沉浸式对弈音乐(BGM)与拾起/放下/开局/非法操作音效系统(SFX)
+// codex: 2026-09-14 支持左/右翻滚、终局复盘检视与对局历史记录导出
 class DittleUI {
     constructor() {
         this.engine = new DittleEngine('battle');
         this.ai = new DittleAI('medium');
         this.clock = new ChessClock();
         this.animator = new DittleAnimator(this);
+        this.logger = new DittleLogger(this);
 
         this.gameMode = 'battle'; // 'battle' or 'clash'
         this.opponentType = 'ai'; // 'ai' or 'human'
@@ -12,7 +13,7 @@ class DittleUI {
         this.selectedCoord = null;
         this.legalMoves = [];
         this.currentScale = 1.0;
-        this.is3DView = true; // 默认开启 3D 立体斜视角
+        this.is3DView = true;
         this.isBlackFlipped = false;
         this.isAiThinking = false;
         this.isAnimating = false;
@@ -41,6 +42,8 @@ class DittleUI {
         this.settingsModal = document.getElementById('settingsModal');
         this.gameOverModal = document.getElementById('gameOverModal');
         this.viewModeBtn = document.getElementById('viewModeBtn');
+        this.reviewBanner = document.getElementById('gameOverReviewBanner');
+        this.reviewReasonText = document.getElementById('reviewReasonText');
     }
 
     setupClockCallbacks() {
@@ -59,18 +62,27 @@ class DittleUI {
     }
 
     bindEvents() {
-        // Zoom controls
-        document.getElementById('zoomInBtn').onclick = () => this.setZoom(this.currentScale + 0.15);
-        document.getElementById('zoomOutBtn').onclick = () => this.setZoom(this.currentScale - 0.15);
-        document.getElementById('zoomResetBtn').onclick = () => this.setZoom(1.0);
+        const clickMap = {
+            zoomInBtn: () => this.setZoom(this.currentScale + 0.15),
+            zoomOutBtn: () => this.setZoom(this.currentScale - 0.15),
+            zoomResetBtn: () => this.setZoom(1.0),
+            fullscreenBtn: () => this.toggleFullscreen(),
+            flipBlackBtn: () => this.toggleBlackFlip(),
+            openSettingsBtn: () => this.openSettingsModal(),
+            closeSettingsBtn: () => this.closeSettingsModal(),
+            saveSettingsBtn: () => this.saveSettings(),
+            playAgainBtn: () => { this.closeGameOverModal(); this.startNewGame(); },
+            reviewBoardBtn: () => { this.closeGameOverModal(); this.showReviewBanner(); },
+            closeGameOverModalBtn: () => { this.closeGameOverModal(); this.showReviewBanner(); },
+            reopenModalBtn: () => this.gameOverModal.classList.add('open'),
+            bannerNewGameBtn: () => this.startNewGame(),
+            viewModeBtn: () => this.toggle3DView()
+        };
+        for (const [id, fn] of Object.entries(clickMap)) {
+            const el = document.getElementById(id);
+            if (el) el.onclick = fn;
+        }
 
-        // Fullscreen toggle
-        document.getElementById('fullscreenBtn').onclick = () => this.toggleFullscreen();
-
-        // Pass-and-play 180° flip for mobile
-        document.getElementById('flipBlackBtn').onclick = () => this.toggleBlackFlip();
-
-        // Sound & Music toggle
         const soundBtn = document.getElementById('soundToggleBtn');
         if (soundBtn) {
             soundBtn.onclick = () => {
@@ -78,11 +90,8 @@ class DittleUI {
                 soundBtn.classList.toggle('active', enabled);
                 soundBtn.textContent = enabled ? '🔊 音效' : '🔇 静音';
                 this.showToast(enabled ? '走棋音效已开启 🔊' : '走棋音效已静音 🔇', 'info');
-                const modalSound = document.getElementById('modalSoundBtn');
-                if (modalSound) {
-                    modalSound.classList.toggle('active', enabled);
-                    modalSound.textContent = enabled ? '🔊 走棋音效: 开启' : '🔊 走棋音效: 关闭';
-                }
+                const ms = document.getElementById('modalSoundBtn');
+                if (ms) { ms.classList.toggle('active', enabled); ms.textContent = enabled ? '🔊 走棋音效: 开启' : '🔊 走棋音效: 关闭'; }
             };
         }
 
@@ -93,34 +102,13 @@ class DittleUI {
                 musicBtn.classList.toggle('active', enabled);
                 musicBtn.textContent = enabled ? '🎵 音乐:开' : '🔇 音乐:关';
                 this.showToast(enabled ? '背景音乐已开启 🎵' : '背景音乐已静音 🔇', 'info');
-                const modalMusic = document.getElementById('modalMusicBtn');
-                if (modalMusic) {
-                    modalMusic.classList.toggle('active', enabled);
-                    modalMusic.textContent = enabled ? '🎵 背景音乐: 开启' : '🎵 背景音乐: 关闭';
-                }
+                const mm = document.getElementById('modalMusicBtn');
+                if (mm) { mm.classList.toggle('active', enabled); mm.textContent = enabled ? '🎵 背景音乐: 开启' : '🎵 背景音乐: 关闭'; }
             };
         }
+        document.getElementById('modalSoundBtn')?.addEventListener('click', () => soundBtn && soundBtn.click());
+        document.getElementById('modalMusicBtn')?.addEventListener('click', () => musicBtn && musicBtn.click());
 
-        const modalSound = document.getElementById('modalSoundBtn');
-        if (modalSound) modalSound.onclick = () => soundBtn && soundBtn.click();
-        const modalMusic = document.getElementById('modalMusicBtn');
-        if (modalMusic) modalMusic.onclick = () => musicBtn && musicBtn.click();
-
-        // Modals
-        document.getElementById('openSettingsBtn').onclick = () => this.openSettingsModal();
-        document.getElementById('closeSettingsBtn').onclick = () => this.closeSettingsModal();
-        document.getElementById('saveSettingsBtn').onclick = () => this.saveSettings();
-        document.getElementById('playAgainBtn').onclick = () => {
-            this.closeGameOverModal();
-            this.startNewGame();
-        };
-
-        // 3D View toggle
-        if (this.viewModeBtn) {
-            this.viewModeBtn.onclick = () => this.toggle3DView();
-        }
-
-        // Setting modal option buttons
         this.setupModalOptionButtons();
     }
 
@@ -167,9 +155,7 @@ class DittleUI {
         this.toastText.textContent = msg;
         this.toastBanner.className = `toast-banner show ${type}`;
         if (this.toastTimeout) clearTimeout(this.toastTimeout);
-        this.toastTimeout = setTimeout(() => {
-            this.toastBanner.classList.remove('show');
-        }, 2600);
+        this.toastTimeout = setTimeout(() => this.toastBanner.classList.remove('show'), 2600);
     }
 
     renderBoard() {
@@ -183,7 +169,6 @@ class DittleUI {
                 cellEl.dataset.r = r;
                 cellEl.dataset.c = c;
 
-                // Check highlight
                 if (this.selectedCoord) {
                     const matchMove = this.legalMoves.find(m => m.to[0] === r && m.to[1] === c);
                     if (matchMove) {
@@ -193,7 +178,6 @@ class DittleUI {
                     }
                 }
 
-                // Render Die if present
                 const die = this.engine.board[r][c];
                 if (die) {
                     const dieEl = this.createDieElement(die, r, c);
@@ -207,9 +191,7 @@ class DittleUI {
                 this.boardGrid.appendChild(cellEl);
             }
         }
-        if (this.animator) {
-            this.animator.applyLastMoveHighlights();
-        }
+        if (this.animator) this.animator.applyLastMoveHighlights();
     }
 
     createDieElement(die, r, c) {
@@ -218,16 +200,15 @@ class DittleUI {
         wrap.dataset.r = r;
         wrap.dataset.c = c;
         const colorName = die.color === 'white' ? '白骰' : '黑骰';
-        wrap.title = `${colorName} [顶面:${die.top} | 迎面:${die.front} | 右面:${die.right}] (向前翻滚顶面将变为:${die.color === 'white' ? die.front : 7 - die.front})`;
+        const fwdNewTop = die.color === 'white' ? die.front : 7 - die.front;
+        const leftNewTop = die.right;
+        const rightNewTop = 7 - die.right;
+        wrap.title = `${colorName} [顶面:${die.top} | 迎面:${die.front} | 右面:${die.right}]\n翻滚后顶面将变为: 前->${fwdNewTop} | 左->${leftNewTop} | 右->${rightNewTop}`;
 
         const cube = document.createElement('div');
         cube.className = 'die-cube';
-
-        // 顶面 (Top Face)
         cube.appendChild(this.createFaceElement('face-top', die.top));
-        // 正面/迎面 (South Face - 迎向镜头/玩家视角，纯净数字微标)
         cube.appendChild(this.createFaceElement('face-front', die.front, `${die.front}`));
-        // 右侧面/东面 (Right Face - 迎向右侧，纯净数字微标)
         cube.appendChild(this.createFaceElement('face-right', die.right, `${die.right}`));
 
         wrap.appendChild(cube);
@@ -237,23 +218,10 @@ class DittleUI {
     createFaceElement(faceClass, value, badgeText = '') {
         const faceEl = document.createElement('div');
         faceEl.className = `die-face ${faceClass}`;
-
         const grid = document.createElement('div');
         grid.className = 'pips-grid';
-        const pipIndices = this.getPipPositionsForNumber(value);
-
-        for (let i = 0; i < 9; i++) {
-            const pipSlot = document.createElement('div');
-            pipSlot.className = 'pip-slot';
-            if (pipIndices.includes(i)) {
-                const pipDot = document.createElement('div');
-                pipDot.className = 'pip';
-                pipSlot.appendChild(pipDot);
-            }
-            grid.appendChild(pipSlot);
-        }
+        this.fillPipGrid(grid, value);
         faceEl.appendChild(grid);
-
         if (badgeText) {
             const badge = document.createElement('span');
             badge.className = 'face-badge';
@@ -261,6 +229,49 @@ class DittleUI {
             faceEl.appendChild(badge);
         }
         return faceEl;
+    }
+
+    fillPipGrid(grid, value) {
+        grid.innerHTML = '';
+        const pipIndices = this.getPipPositionsForNumber(value);
+        for (let i = 0; i < 9; i++) {
+            const slot = document.createElement('div');
+            slot.className = 'pip-slot';
+            if (pipIndices.includes(i)) {
+                const pipDot = document.createElement('div');
+                pipDot.className = 'pip';
+                slot.appendChild(pipDot);
+            }
+            grid.appendChild(slot);
+        }
+    }
+
+    updateDieContent(dieEl, die) {
+        if (!dieEl || !die) return;
+        const cube = dieEl.querySelector('.die-cube');
+        if (!cube) return;
+        const topFace = cube.querySelector('.face-top');
+        const frontFace = cube.querySelector('.face-front');
+        const rightFace = cube.querySelector('.face-right');
+        if (topFace) this.refreshFace(topFace, die.top);
+        if (frontFace) this.refreshFace(frontFace, die.front, `${die.front}`);
+        if (rightFace) this.refreshFace(rightFace, die.right, `${die.right}`);
+    }
+
+    refreshFace(faceEl, value, badgeText = '') {
+        const grid = faceEl.querySelector('.pips-grid');
+        if (grid) this.fillPipGrid(grid, value);
+        let badge = faceEl.querySelector('.face-badge');
+        if (badgeText) {
+            if (!badge) {
+                badge = document.createElement('span');
+                badge.className = 'face-badge';
+                faceEl.appendChild(badge);
+            }
+            badge.textContent = badgeText;
+        } else if (badge) {
+            badge.remove();
+        }
     }
 
     getPipPositionsForNumber(num) {
@@ -273,8 +284,6 @@ class DittleUI {
         if (this.opponentType === 'ai' && this.engine.turn === this.aiColor) return;
 
         const clickedDie = this.engine.board[r][c];
-
-        // 1. If clicking own die -> select it (or deselect if clicking same)
         if (clickedDie && clickedDie.color === this.engine.turn) {
             if (this.selectedCoord && this.selectedCoord[0] === r && this.selectedCoord[1] === c) {
                 this.selectedCoord = null;
@@ -290,16 +299,12 @@ class DittleUI {
             return;
         }
 
-        // 2. If already selected a die and clicked a cell
         if (this.selectedCoord) {
             const [fr, fc] = this.selectedCoord;
             const validation = this.engine.validateMoveAttempt(fr, fc, r, c);
-
             if (validation.valid) {
-                // Execute move with transition animation!
                 this.executeMove(validation.move);
             } else {
-                // Show friendly error hint explaining why!
                 window.soundManager.playIllegal();
                 this.showToast(validation.reason, 'danger');
             }
@@ -307,13 +312,19 @@ class DittleUI {
     }
 
     executeMove(move) {
+        const [fr, fc] = move.from;
+        const beforeDie = this.engine.board[fr][fc] ? this.engine.board[fr][fc].clone() : null;
         this.selectedCoord = null;
         this.legalMoves = [];
         this.renderBoard();
 
-        // 启动平滑分步过场动画（防瞬移，步步清晰可见）
         this.animator.animateMove(move, () => {
             const moveRecord = this.engine.makeMove(move);
+            const resultingDie = move.resultingDie ? move.resultingDie.clone() : (beforeDie ? beforeDie.clone() : null);
+
+            if (this.logger && beforeDie && resultingDie) {
+                this.logger.logMove(move, beforeDie, resultingDie, moveRecord?.clashResult);
+            }
 
             if (moveRecord && moveRecord.clashResult) {
                 window.soundManager.playClash();
@@ -330,11 +341,9 @@ class DittleUI {
             this.renderBoard();
             this.updatePlayerCards();
 
-            // Switch clock
             if (!this.engine.gameOver) {
                 this.clock.switchTurn(this.engine.turn);
                 window.soundManager.playTurn();
-                // Trigger AI if it's AI turn
                 if (this.opponentType === 'ai' && this.engine.turn === this.aiColor) {
                     this.triggerAiTurn();
                 }
@@ -348,7 +357,6 @@ class DittleUI {
     triggerAiTurn() {
         this.isAiThinking = true;
         this.turnIndicator.textContent = '🤖 AI 正在思考中...';
-        // 增加 450ms 思考过场停顿，让玩家看清回合切换
         setTimeout(() => {
             this.ai.findBestMove(this.engine, (bestMove) => {
                 this.isAiThinking = false;
@@ -364,24 +372,24 @@ class DittleUI {
         const isWhite = this.engine.turn === 'white';
         this.whitePlayerBar.classList.toggle('active-turn', isWhite && !this.engine.gameOver);
         this.blackPlayerBar.classList.toggle('active-turn', !isWhite && !this.engine.gameOver);
-
-        this.turnIndicator.textContent = this.engine.gameOver
-            ? '对局结束'
-            : (isWhite ? '当前回合：白方行动' : '当前回合：黑方行动');
+        this.turnIndicator.textContent = this.engine.gameOver ? '对局结束' : (isWhite ? '当前回合：白方行动' : '当前回合：黑方行动');
     }
 
     handleGameOver(winner, reason) {
-        document.getElementById('winnerTitle').textContent =
-            winner === 'draw' ? '棋局平局！' : `${winner === 'white' ? '白方' : '黑方'} 获得胜利！`;
+        if (this.reviewReasonText) {
+            const winnerText = winner === 'draw' ? '平局' : (winner === 'white' ? '白方获胜' : '黑方获胜');
+            this.reviewReasonText.textContent = `${winnerText} - ${reason}`;
+        }
+        if (this.logger) this.logger.logGameOver(winner, reason);
+
+        document.getElementById('winnerTitle').textContent = winner === 'draw' ? '棋局平局！' : `${winner === 'white' ? '白方' : '黑方'} 获得胜利！`;
         document.getElementById('winnerReason').textContent = reason;
 
         const scoreBox = document.getElementById('battleScoreBreakdown');
         if (this.engine.mode === 'battle' && this.engine.scores) {
             scoreBox.style.display = 'block';
-            document.getElementById('whiteScoreDetail').textContent =
-                `白方：底线点数 ${this.engine.scores.whiteBaseSum || 0} - 滞留惩罚 ${this.engine.scores.whitePenalty || 0} = 净得分 ${this.engine.scores.white}`;
-            document.getElementById('blackScoreDetail').textContent =
-                `黑方：底线点数 ${this.engine.scores.blackBaseSum || 0} - 滞留惩罚 ${this.engine.scores.blackPenalty || 0} = 净得分 ${this.engine.scores.black}`;
+            document.getElementById('whiteScoreDetail').textContent = `白方：底线点数 ${this.engine.scores.whiteBaseSum || 0} - 滞留惩罚 ${this.engine.scores.whitePenalty || 0} = 净得分 ${this.engine.scores.white}`;
+            document.getElementById('blackScoreDetail').textContent = `黑方：底线点数 ${this.engine.scores.blackBaseSum || 0} - 滞留惩罚 ${this.engine.scores.blackPenalty || 0} = 净得分 ${this.engine.scores.black}`;
         } else {
             scoreBox.style.display = 'none';
         }
@@ -399,7 +407,16 @@ class DittleUI {
         this.gameOverModal.classList.remove('open');
     }
 
+    showReviewBanner() {
+        if (this.reviewBanner) this.reviewBanner.style.display = 'flex';
+    }
+
+    hideReviewBanner() {
+        if (this.reviewBanner) this.reviewBanner.style.display = 'none';
+    }
+
     startNewGame() {
+        this.hideReviewBanner();
         if (this.animator) {
             this.animator.cancelPending();
             this.animator.clearLastMoveHighlights();
@@ -413,6 +430,7 @@ class DittleUI {
         this.clock.start('white');
         this.renderBoard();
         this.updatePlayerCards();
+        if (this.logger) this.logger.clear();
         this.showToast('新对局已开始！白方先行。', 'info');
         window.soundManager.playGameStart();
 
@@ -430,50 +448,28 @@ class DittleUI {
     }
 
     setupModalOptionButtons() {
-        const setupGroup = (containerId, onSelect) => {
-            const container = document.getElementById(containerId);
-            if (!container) return;
-            const buttons = container.querySelectorAll('.opt-btn');
-            buttons.forEach(btn => {
+        ['modeOptions', 'oppOptions', 'diffOptions', 'clockOptions'].forEach(id => {
+            document.getElementById(id)?.querySelectorAll('.opt-btn').forEach(btn => {
                 btn.onclick = () => {
-                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.parentElement.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-                    onSelect(btn.dataset.val);
                 };
             });
-        };
-
-        setupGroup('modeOptions', val => this.selectedMode = val);
-        setupGroup('oppOptions', val => this.selectedOpp = val);
-        setupGroup('diffOptions', val => this.selectedDiff = val);
-        setupGroup('clockOptions', val => this.selectedClockPreset = val);
+        });
     }
 
     saveSettings() {
-        const modeBtn = document.querySelector('#modeOptions .opt-btn.active');
-        const oppBtn = document.querySelector('#oppOptions .opt-btn.active');
-        const diffBtn = document.querySelector('#diffOptions .opt-btn.active');
-        const clockBtn = document.querySelector('#clockOptions .opt-btn.active');
+        this.gameMode = document.querySelector('#modeOptions .opt-btn.active')?.dataset.val || 'battle';
+        this.opponentType = document.querySelector('#oppOptions .opt-btn.active')?.dataset.val || 'ai';
+        const diff = document.querySelector('#diffOptions .opt-btn.active')?.dataset.val || 'medium';
+        this.ai.setDifficulty(diff);
 
-        if (modeBtn) this.gameMode = modeBtn.dataset.val;
-        if (oppBtn) this.opponentType = oppBtn.dataset.val;
-        if (diffBtn) this.ai.setDifficulty(diffBtn.dataset.val);
-
-        // Configure clocks
-        const preset = clockBtn ? clockBtn.dataset.val : '5m';
-        let wSec = 300, bSec = 300, unlimited = false;
+        const preset = document.querySelector('#clockOptions .opt-btn.active')?.dataset.val || '5m';
         const presets = { '1m': 60, '3m': 180, '5m': 300, '10m': 600 };
-        if (presets[preset]) {
-            wSec = bSec = presets[preset];
-        } else if (preset === 'unlimited') {
-            unlimited = true;
-        } else if (preset === 'custom') {
-            wSec = (parseInt(document.getElementById('customWhiteMin').value) || 5) * 60;
-            bSec = (parseInt(document.getElementById('customBlackMin').value) || 5) * 60;
-        }
-
+        const wSec = preset === 'custom' ? (parseInt(document.getElementById('customWhiteMin').value) || 5) * 60 : (presets[preset] || 300);
+        const bSec = preset === 'custom' ? (parseInt(document.getElementById('customBlackMin').value) || 5) * 60 : (presets[preset] || 300);
         const incSec = parseInt(document.getElementById('clockIncSec').value) || 0;
-        this.clock.setTimes(wSec, bSec, incSec, incSec, unlimited);
+        this.clock.setTimes(wSec, bSec, incSec, incSec, preset === 'unlimited');
 
         this.modeBadge.textContent = this.gameMode === 'battle' ? '标准骰战棋' : '冲突淘汰变体';
         this.closeSettingsModal();

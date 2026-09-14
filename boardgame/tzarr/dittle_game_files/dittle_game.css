@@ -344,33 +344,107 @@ body {
     margin-top: 6px;
     font-size: 13px;
 }
+.move-indicator { display: flex; align-items: center; gap: 6px; }
+.legend-group { display: flex; gap: 12px; }
+.legend-item { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--text-sub); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; }
 
-.move-indicator {
+/* 双栏主容器（棋盘舞台 + 右侧对局历史与调试记录） */
+.game-main-content {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+}
+
+/* 终局检视浮动横幅 */
+.game-over-review-banner {
+    width: 100%;
+    max-width: 580px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border: 1px solid var(--accent-gold);
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+    border-radius: 10px;
+    padding: 8px 14px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
-
-.legend-group {
-    display: flex;
-    gap: 12px;
+.banner-content { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.banner-title { color: var(--accent-gold); font-weight: bold; }
+.banner-reason { color: #f8fafc; }
+.banner-btns { display: flex; gap: 8px; }
+.btn-sm {
+    background: #334155;
+    border: 1px solid #475569;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
 }
+.btn-sm.btn-primary { background: #0284c7; border-color: #38bdf8; font-weight: bold; }
 
-.legend-item {
+/* 右侧对局记录与历史面板 */
+.game-log-sidebar {
+    width: 280px;
+    min-width: 260px;
+    max-height: 560px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
     display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+.game-log-sidebar.collapsed { display: none; }
+.log-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 4px;
-    font-size: 11px;
-    color: var(--text-sub);
+    padding: 10px 12px;
+    background: #101b35;
+    border-bottom: 1px solid var(--card-border);
 }
-
-.legend-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
+.log-title-wrap { display: flex; align-items: center; gap: 6px; }
+.log-title { font-size: 14px; font-weight: bold; color: #f8fafc; }
+.log-count-badge { font-size: 11px; background: var(--accent-gold); color: #000; padding: 1px 6px; border-radius: 10px; font-weight: bold; }
+.log-header-actions { display: flex; align-items: center; gap: 4px; }
+.btn-icon-sm { background: #1e293b; border: 1px solid #334155; color: #f8fafc; padding: 3px 7px; border-radius: 4px; font-size: 11px; cursor: pointer; }
+.btn-icon-sm:hover { background: #334155; }
+.log-list { flex: 1; overflow-y: auto; padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+.log-empty { color: var(--text-sub); font-size: 12px; text-align: center; padding: 24px 12px; line-height: 1.6; }
+.log-item { background: #0d152a; border: 1px solid #1c2b50; border-radius: 6px; padding: 6px 8px; font-size: 12px; display: flex; flex-direction: column; gap: 3px; }
+.log-item.white { border-left: 3px solid #cbd5e1; }
+.log-item.black { border-left: 3px solid #f59e0b; }
+.log-item.log-game-over { border-left: 3px solid #10b981; background: #062e24; }
+.log-item-header { display: flex; justify-content: space-between; align-items: center; }
+.log-step-tag { font-weight: bold; color: #fff; font-size: 11px; }
+.log-action-badge { font-size: 10px; padding: 1px 5px; border-radius: 4px; }
+.type-tilt { background: #065f46; color: #a7f3d0; }
+.type-jump { background: #164e63; color: #a5f3fc; }
+.type-tilt_jump { background: #78350f; color: #fde68a; }
+.log-time { font-size: 10px; color: #64748b; }
+.log-path { color: #cbd5e1; font-family: monospace; font-size: 11px; }
+.log-pips { font-size: 11px; }
+.pip-highlight { color: var(--accent-gold); font-weight: bold; }
+.pip-sub { color: #94a3b8; font-size: 10px; }
+.clash-badge { font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-top: 2px; }
+.clash-badge.win { background: #064e3b; color: #6ee7b7; }
+.clash-badge.loss { background: #7f1d1d; color: #fca5a5; }
+.clash-badge.draw { background: #713f12; color: #fde047; }
 
 /* 移动端与小屏媒体查询 */
+@media (max-width: 900px) {
+    .game-main-content { flex-direction: column; align-items: center; }
+    .game-log-sidebar { width: 100%; max-width: 580px; max-height: 260px; }
+}
 @media (max-width: 600px) {
     .game-app { padding: 6px 8px 16px 8px; }
     .top-nav { padding: 6px 10px; }
