@@ -1,13 +1,13 @@
-// codex: 2026-09-14 设定双方默认均为6向上、3面向对面（白方朝北为3/迎面为4，黑方朝南为3/迎面为3）
+// codex: 2026-09-14 修正：3朝向玩家自己（白方3朝南front=3，黑方3朝北back=3即front=4）
 class DittleDie {
     constructor(color, top = 6, front = null, right = 2) {
         this.color = color; // 'white' or 'black'
         this.top = top;
-        // 双方默认均为 6 是 top，3 面向对面：
-        // 白方底线在南端 (Row 6)，面向对面（北端 Row 0）为 3，因此朝向玩家自己的南面 (front) 为 4
-        // 黑方底线在北端 (Row 0)，面向对面（南端 Row 6）为 3，因此朝向对面的南面 (front) 为 3
+        // 双方默认均为 6 是 top，3 面向玩家自己：
+        // 白方坐在南端 (Row 6)，3 朝向自己（南面 front）→ front = 3
+        // 黑方坐在北端 (Row 0)，3 朝向自己（北面 back）→ front = 4
         if (front === null) {
-            this.front = color === 'white' ? 4 : 3;
+            this.front = color === 'white' ? 3 : 4;
         } else {
             this.front = front;
         }

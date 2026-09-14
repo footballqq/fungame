@@ -10,7 +10,8 @@ class PythonDittleDie:
         self.color = color
         self.top = top
         if front is None:
-            self.front = 4 if color == 'white' else 3
+            # 3 朝向玩家自己：白方 front=3（南面），黑方 front=4（back=3 朝北）
+            self.front = 3 if color == 'white' else 4
         else:
             self.front = front
         self.right = right
@@ -81,8 +82,8 @@ def test_dice_3d_rotation_kinematics():
     # Test 1: Initial state of White die: top=6, facing opposite (back/North)=3, facing player (front/South)=4, right=2
     die = PythonDittleDie('white')
     assert die.top == 6
-    assert die.front == 4, "Facing player (South) is 4"
-    assert die.get_back() == 3, "Facing opposite (North) is 3"
+    assert die.front == 3, "Facing player (South) is 3"
+    assert die.get_back() == 4, "Facing opposite (North) is 4"
     assert die.right == 2
     assert die.get_bottom() == 1
     assert die.get_left() == 5
@@ -90,24 +91,26 @@ def test_dice_3d_rotation_kinematics():
     # Test 1B: Initial state of Black die: top=6, facing opposite (front/South)=3, facing player (back/North)=4, right=2
     b_die = PythonDittleDie('black')
     assert b_die.top == 6
-    assert b_die.front == 3, "Facing opposite (South) is 3"
-    assert b_die.get_back() == 4, "Facing player (North) is 4"
+    assert b_die.front == 4, "Facing player (North) is 4"
+    assert b_die.get_back() == 3, "Facing opposite (South) is 3"
 
-    # Test 2: Tilting North (Forward for white) rolls South face (4) to top
+    # Test 2: Roll North (tilt forward)
+    # White player pushes the die towards the opponent. 
+    # South face (3) goes to Top.
     die.tilt('north')
-    assert die.top == 4, "Tilting forward rolls rear face (4) to top"
+    assert die.top == 3, "Front face (3) should become Top when tilting North"
     assert die.front == 1, "Bottom (1) rolls to front"
     assert die.right == 2, "Lateral face remains unchanged"
 
     # Test 3: 4 full tilts in same direction completes 360-degree rotation back to initial
     die.tilt('north').tilt('north').tilt('north')
-    assert die.top == 6 and die.front == 4 and die.right == 2
+    assert die.top == 6 and die.front == 3 and die.right == 2
 
     # Test 4: Lateral tilt East
     die.tilt('east')
     assert die.top == 5, "Tilting East brings left face (5) to top"
     assert die.right == 6, "Old top (6) rolls to right"
-    assert die.front == 4, "Front face remains unchanged"
+    assert die.front == 3, "Front face remains unchanged"
 
 def test_clash_resolution_logic():
     # Case A: 1 vs 1 clash, attacker higher
@@ -306,7 +309,7 @@ def test_lateral_rolling_and_directional_animations():
     # Rolling east: left face (7 - 2 = 5) rolls to top, old top (6) rolls to right
     assert die_east.top == 5, "Rolling East brings West face (5) to top"
     assert die_east.right == 6, "Rolling East moves Top face (6) to right"
-    assert die_east.front == 4, "Front face remains unchanged during lateral roll"
+    assert die_east.front == 3, "Front face remains unchanged during lateral roll"
 
     # 2. White die rolling West (to the left): top=6, right=2
     die_west = PythonDittleDie('white')
@@ -314,7 +317,7 @@ def test_lateral_rolling_and_directional_animations():
     # Rolling west: right face (2) rolls to top, old top (6) rolls to left (right becomes 7 - 6 = 1)
     assert die_west.top == 2, "Rolling West brings East face (2) to top"
     assert die_west.right == 1, "Rolling West moves Top face (6) to left (right becomes 1)"
-    assert die_west.front == 4, "Front face remains unchanged during lateral roll"
+    assert die_west.front == 3, "Front face remains unchanged during lateral roll"
 
     # 3. Verify CSS has directional tilt roll keyframes
     css_path = os.path.join(GAME_DIR, "dittle_game_files", "dittle_components.css")
