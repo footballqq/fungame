@@ -361,6 +361,105 @@ def test_game_logger_sidebar_and_copy():
     assert 'id="gameLogList"' in html, "HTML must include gameLogList container"
     assert 'id="copyLogBtn"' in html, "HTML must include copyLogBtn"
     assert 'id="openLogBtn"' in html, "HTML must include openLogBtn"
+def test_bug1_stalemate_checks_next_player():
+    """Bug 1: checkGameOver must evaluate the NEXT player's legal moves, not current.
+
+    After makeMove, this.turn should switch BEFORE checkGameOver runs,
+    so stalemate detection targets the correct player.
+    """
+    engine_path = os.path.join(GAME_DIR, "dittle_game_files", "engine.js")
+    with open(engine_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    # Turn must switch BEFORE checkGameOver
+    switch_idx = code.index("Switch turn FIRST")
+    check_idx = code.index("Check game over (now this.turn is the next-to-move player)")
+    assert switch_idx < check_idx, "Turn switch must happen BEFORE checkGameOver"
+    # After game over, turn reverts to show who made the last move
+    revert_idx = code.index("revert turn to indicate who made the winning/last move")
+    assert revert_idx > check_idx, "Turn revert must happen AFTER checkGameOver"
+
+
+def test_bug2_ai_no_move_handler():
+    """Bug 2: UI must handle AI returning null (no legal moves) without freezing."""
+    ui_path = os.path.join(GAME_DIR, "dittle_game_files", "ui.js")
+    with open(ui_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    # Must have an else branch for when bestMove is null/falsy
+    assert "AI 无合法走法" in code, "UI must handle AI with no legal moves"
+    assert "handleGameOver" in code, "UI must call handleGameOver when AI has no moves"
+
+
+def test_bug3_clash_touchdown_before_clash():
+    """Bug 3: In Clash mode, touchdown (reaching opponent base row) must be checked
+    BEFORE clash resolution to prevent the arriving die from being killed."""
+    engine_path = os.path.join(GAME_DIR, "dittle_game_files", "engine.js")
+    with open(engine_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    # Touchdown check must appear before resolveClash call
+    touchdown_idx = code.index("达阵即胜优先于碰撞")
+    resolve_idx = code.index("resolveClash(tr, tc)")
+    assert touchdown_idx < resolve_idx, "Touchdown must be checked before clash resolution"
+    assert "isTouchdown" in code, "Must have touchdown detection variable"
+
+
+def test_bug4_bfs_visited_includes_start():
+    """Bug 4a: BFS visited set must include start position to prevent zero-displacement loops."""
+    engine_path = os.path.join(GAME_DIR, "dittle_game_files", "engine.js")
+    with open(engine_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    assert "new Set([`${startR},${startC}`])" in code, \
+        "BFS visited must be initialized with start coordinate"
+
+
+def test_bug4_direct_jump_clears_origin():
+    """Bug 4b: Direct jump must use temp board with origin cleared."""
+    engine_path = os.path.join(GAME_DIR, "dittle_game_files", "engine.js")
+    with open(engine_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    # Find the direct jump section and verify it creates temp board
+    direct_jump_section = code[code.index("Direct Jump moves"):]
+    assert "jumpBoard" in direct_jump_section or "tempBoard" in direct_jump_section, \
+        "Direct jump must use a temp board copy"
+    assert "jumpBoard[r][c] = null" in direct_jump_section or \
+           "tempBoard[r][c] = null" in direct_jump_section, \
+        "Direct jump must clear origin cell in temp board"
+
+
+def test_bug5_score_panel_requires_full_data():
+    """Bug 5: Score breakdown panel must only show when whiteBaseSum is defined."""
+    ui_path = os.path.join(GAME_DIR, "dittle_game_files", "ui.js")
+    with open(ui_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    assert "whiteBaseSum !== undefined" in code, \
+        "Score panel must check whiteBaseSum !== undefined before displaying"
+
+
+def test_bug6_diagonal_any_distance():
+    """Bug 6: Diagonal check must cover any distance, not just step-1."""
+    engine_path = os.path.join(GAME_DIR, "dittle_game_files", "engine.js")
+    with open(engine_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    # The old buggy pattern had: Math.abs(dr) === 1 && Math.abs(dc) === 1
+    assert "Math.abs(dr) === 1 && Math.abs(dc) === 1" not in code, \
+        "Diagonal check must not be limited to step-1 only"
+    # Verify the simplified pattern exists
+    assert "Math.abs(dr) > 0 && Math.abs(dc) > 0" in code, \
+        "Diagonal check must detect any non-zero dr AND dc"
+
+
+def test_bug7_no_double_init():
+    """Bug 7: Constructor must not call renderBoard/updatePlayerCards since startNewGame does."""
+    ui_path = os.path.join(GAME_DIR, "dittle_game_files", "ui.js")
+    with open(ui_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    # Find constructor body (between 'constructor()' and next method)
+    ctor_start = code.index("constructor()")
+    ctor_end = code.index("initDOM()")
+    ctor_body = code[ctor_start:ctor_end]
+    assert "this.renderBoard()" not in ctor_body, \
+        "Constructor should not call renderBoard (startNewGame does it)"
+    assert "this.updatePlayerCards()" not in ctor_body, \
+        "Constructor should not call updatePlayerCards (startNewGame does it)"
 
 
 

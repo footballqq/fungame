@@ -22,8 +22,6 @@ class DittleUI {
         this.setupClockCallbacks();
         this.bindEvents();
         this.updateBoardTransform();
-        this.renderBoard();
-        this.updatePlayerCards();
     }
 
     initDOM() {
@@ -363,6 +361,16 @@ class DittleUI {
                 if (bestMove) {
                     this.turnIndicator.textContent = '🤖 AI 正在走子...';
                     this.executeMove(bestMove);
+                } else {
+                    // AI 无合法走法 → 人类获胜
+                    const humanColor = this.aiColor === 'white' ? 'black' : 'white';
+                    this.engine.gameOver = true;
+                    this.engine.winner = humanColor;
+                    this.engine.winReason = `AI（${this.aiColor === 'white' ? '白方' : '黑方'}）已无任何合法移动，判负！`;
+                    this.clock.stop();
+                    this.renderBoard();
+                    this.updatePlayerCards();
+                    this.handleGameOver(humanColor, this.engine.winReason);
                 }
             });
         }, 450);
@@ -386,10 +394,10 @@ class DittleUI {
         document.getElementById('winnerReason').textContent = reason;
 
         const scoreBox = document.getElementById('battleScoreBreakdown');
-        if (this.engine.mode === 'battle' && this.engine.scores) {
+        if (this.engine.mode === 'battle' && this.engine.scores && this.engine.scores.whiteBaseSum !== undefined) {
             scoreBox.style.display = 'block';
-            document.getElementById('whiteScoreDetail').textContent = `白方：底线点数 ${this.engine.scores.whiteBaseSum || 0} - 滞留惩罚 ${this.engine.scores.whitePenalty || 0} = 净得分 ${this.engine.scores.white}`;
-            document.getElementById('blackScoreDetail').textContent = `黑方：底线点数 ${this.engine.scores.blackBaseSum || 0} - 滞留惩罚 ${this.engine.scores.blackPenalty || 0} = 净得分 ${this.engine.scores.black}`;
+            document.getElementById('whiteScoreDetail').textContent = `白方：底线点数 ${this.engine.scores.whiteBaseSum} - 滞留惩罚 ${this.engine.scores.whitePenalty} = 净得分 ${this.engine.scores.white}`;
+            document.getElementById('blackScoreDetail').textContent = `黑方：底线点数 ${this.engine.scores.blackBaseSum} - 滞留惩罚 ${this.engine.scores.blackPenalty} = 净得分 ${this.engine.scores.black}`;
         } else {
             scoreBox.style.display = 'none';
         }

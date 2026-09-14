@@ -93,7 +93,7 @@ class DittleEngine {
     // Explore all reachable jump destinations (multi-jump sequences)
     getReachableJumps(startR, startC, color, currentBoard) {
         const results = [];
-        const visited = new Set();
+        const visited = new Set([`${startR},${startC}`]);
         const queue = [{ r: startR, c: startC, path: [[startR, startC]] }];
 
         while (queue.length > 0) {
@@ -163,7 +163,10 @@ class DittleEngine {
 
         // 2. Direct Jump moves (Battle mode only, no tilt first)
         if (this.mode === 'battle') {
-            const directJumps = this.getReachableJumps(r, c, die.color, this.board);
+            // 清空起点格避免跳跃者自身成为障碍物（与 tilt_jump 保持一致）
+            const jumpBoard = this.board.map(row => [...row]);
+            jumpBoard[r][c] = null;
+            const directJumps = this.getReachableJumps(r, c, die.color, jumpBoard);
             for (const dj of directJumps) {
                 moves.push({
                     from: [r, c],
@@ -209,7 +212,7 @@ class DittleEngine {
         if (dr * forwardDr < 0 && Math.abs(dr) > 0) {
             return { valid: false, reason: '规则禁止：骰子严禁向后退移（只能向前、向左或向右）。' };
         }
-        if (Math.abs(dr) > 0 && Math.abs(dc) > 0 && Math.abs(dr) === 1 && Math.abs(dc) === 1) {
+        if (Math.abs(dr) > 0 && Math.abs(dc) > 0) {
             return { valid: false, reason: '规则禁止：骰子严禁沿对角线斜向移动。' };
         }
 
@@ -270,8 +273,18 @@ class DittleEngine {
             clashResult: null
         };
 
-        // If Clash Mode: resolve orthogonal clashes
+        // If Clash Mode: check touchdown FIRST (达阵即胜优先于碰撞)
         if (this.mode === 'clash') {
+            const movingColor = resultingDie.color;
+            const isTouchdown = (movingColor === 'white' && tr === 0) || (movingColor === 'black' && tr === 6);
+            if (isTouchdown) {
+                // 达阵即胜：不再执行碰撞裁决
+                this.gameOver = true;
+                this.winner = movingColor;
+                this.winReason = `${movingColor === 'white' ? '白方' : '黑方'}骰子成功抵达对方底线，直接获得胜利！`;
+                this.moveHistory.push(moveRecord);
+                return moveRecord;
+            }
             const clashInfo = this.resolveClash(tr, tc);
             moveRecord.clashResult = clashInfo;
         }
