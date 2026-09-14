@@ -1,0 +1,9 @@
+{
+  "name": "ice-sliding-chess",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "桌游滑冰棋 HTML 游戏，支持人人与人机对战",
+  "scripts": {
+    "test": "node tests/test_js_engine.js"
+  }
+}

@@ -1,0 +1,524 @@
+/* codex: 2026-09-14 编写滑冰棋现代冰霜拟物风格与响应式交互样式表 */
+:root {
+  --bg-main: #0b1528;
+  --bg-gradient: radial-gradient(circle at 50% 30%, #152b4d 0%, #0a1324 75%, #050a14 100%);
+  --panel-bg: rgba(18, 35, 62, 0.72);
+  --panel-border: rgba(148, 197, 255, 0.22);
+  --accent-cyan: #38bdf8;
+  --accent-gold: #fbbf24;
+  --color-red: #f43f5e;
+  --color-blue: #0284c7;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* 顶部导航与标题 */
+header {
+  width: 100%;
+  max-width: 1200px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--panel-border);
+  backdrop-filter: blur(10px);
+}
+
+.title-area h1 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 50%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-area p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.toolbar-quick {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 工具栏控制面板 */
+.controls-bar {
+  width: 100%;
+  max-width: 1200px;
+  padding: 12px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--panel-bg);
+  border-bottom: 1px solid var(--panel-border);
+  backdrop-filter: blur(8px);
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.control-group label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+select, button {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--panel-border);
+  background: rgba(30, 58, 102, 0.6);
+  color: var(--text-main);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+select:hover, button:hover:not(:disabled) {
+  background: rgba(56, 189, 248, 0.25);
+  border-color: var(--accent-cyan);
+}
+
+select option {
+  background: #0f1d36;
+  color: #f1f5f9;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  border-color: #38bdf8;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.5);
+}
+
+/* 状态提示横幅 */
+.status-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 12px 24px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.status-card {
+  width: 100%;
+  max-width: 680px;
+  background: rgba(15, 29, 54, 0.85);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 12px 20px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.status-card h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.status-card p {
+  font-size: 13px;
+  color: #bfdbfe;
+}
+
+.text-red { color: var(--color-red); }
+.text-blue { color: var(--accent-cyan); }
+
+/* 主对局视窗 */
+main {
+  width: 100%;
+  max-width: 1200px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  position: relative;
+}
+
+.game-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.board-wrapper {
+  flex: 1;
+  max-width: 750px;
+  height: 560px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+}
+
+.log-panel {
+  width: 300px;
+  background: rgba(15, 29, 54, 0.85);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+}
+
+.log-header {
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid var(--panel-border);
+  font-weight: 600;
+  color: var(--accent-cyan);
+  border-radius: 12px 12px 0 0;
+}
+
+.log-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.log-item {
+  font-size: 13px;
+  color: #e2e8f0;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+  padding-bottom: 4px;
+}
+
+/* SVG 元素样式 */
+.hex-tile polygon {
+  fill: #142a4a;
+  stroke: #2b5585;
+  stroke-width: 1.5;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.hex-tile-inner {
+  fill: #19345c;
+  stroke: rgba(147, 197, 253, 0.15);
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+.hex-tile:hover polygon {
+  fill: #1b3d6c;
+  stroke: #4d89c9;
+}
+
+/* 处于可移除状态的底座高亮 */
+.tile-removable polygon {
+  stroke: var(--accent-gold);
+  stroke-width: 2.5;
+  cursor: pointer;
+  animation: pulseGold 1.6s infinite ease-in-out;
+}
+
+.tile-removable:hover polygon {
+  fill: #3b2a1a;
+  stroke: #fde047;
+}
+
+/* 正在被取下悬浮的底座 */
+.tile-selected-lift polygon {
+  fill: #0c4a6e;
+  stroke: var(--accent-cyan);
+  stroke-width: 3;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.7));
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(1.06);
+}
+
+/* 新底座放置候选点 */
+.placement-target-marker polygon {
+  fill: rgba(14, 116, 144, 0.2);
+  stroke: var(--accent-cyan);
+  stroke-width: 2;
+  stroke-dasharray: 4 3;
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: pulseCyan 1.5s infinite ease-in-out;
+}
+
+.placement-target-marker:hover polygon {
+  fill: rgba(14, 116, 144, 0.6);
+  stroke-width: 2.5;
+  stroke: #7dd3fc;
+}
+
+.placement-plus {
+  fill: var(--accent-cyan);
+  font-size: 18px;
+  font-weight: bold;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+/* 滑冰冰刀轨迹 */
+.slide-trail-line {
+  stroke: var(--accent-cyan);
+  stroke-width: 2.5;
+  stroke-dasharray: 5 4;
+  opacity: 0.8;
+  animation: dashAnimation 1s linear infinite;
+  pointer-events: none;
+}
+
+/* 滑冰落点指示器 */
+.slide-target-marker circle {
+  fill: rgba(56, 189, 248, 0.35);
+  stroke: #7dd3fc;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: pulseScale 1.4s infinite ease-in-out;
+}
+
+.slide-target-marker:hover circle {
+  fill: rgba(56, 189, 248, 0.75);
+  stroke-width: 3;
+}
+
+/* 棋子 */
+.chess-piece {
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.piece-shadow {
+  fill: rgba(0, 0, 0, 0.45);
+  filter: blur(2px);
+}
+
+.piece-p1 .piece-body {
+  fill: url(#grad-piece-red);
+  stroke: #fda4af;
+  stroke-width: 1.5;
+}
+
+.piece-p2 .piece-body {
+  fill: url(#grad-piece-blue);
+  stroke: #bae6fd;
+  stroke-width: 1.5;
+}
+
+.piece-glint {
+  fill: rgba(255, 255, 255, 0.75);
+  transition: transform 0.2s;
+}
+
+.piece-body {
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.piece-shadow {
+  fill: rgba(0, 0, 0, 0.45);
+  filter: blur(2px);
+  transition: transform 0.2s, opacity 0.2s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.piece-movable:hover .piece-body,
+.piece-movable:hover .piece-glint {
+  transform: translateY(-3px);
+}
+
+.piece-movable:hover .piece-body {
+  filter: drop-shadow(0 4px 10px rgba(56, 189, 248, 0.6));
+}
+
+.piece-movable:hover .piece-shadow {
+  transform: scale(0.85);
+  opacity: 0.7;
+}
+
+.piece-selected .piece-body {
+  stroke: #ffffff;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.9));
+}
+
+.hex-coord-label {
+  fill: rgba(148, 163, 184, 0.6);
+  font-size: 11px;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+/* 胜利铁三角连线光效 */
+.victory-triangle-fx {
+  fill: rgba(251, 191, 36, 0.2);
+  stroke: #fbbf24;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 16px rgba(251, 191, 36, 0.9));
+  animation: pulseGold 1.5s infinite alternate;
+}
+
+/* 弹窗样式 */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(4, 9, 20, 0.75);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #0f2038;
+  border: 1px solid var(--accent-cyan);
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 24px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.modal-content h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #e0f2fe;
+}
+
+.modal-content p, .modal-content li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.rules-rule-box {
+  background: rgba(15, 36, 66, 0.7);
+  border-left: 4px solid var(--accent-cyan);
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.rules-rule-box h4 {
+  color: #7dd3fc;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+/* 动画帧定义 */
+@keyframes pulseGold {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes pulseCyan {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.85; }
+}
+
+@keyframes pulseScale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes dashAnimation {
+  to { stroke-dashoffset: -18; }
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  header { padding: 12px 16px; }
+  .controls-bar { padding: 10px 16px; gap: 8px; }
+  .game-container { flex-direction: column; }
+  .board-wrapper { height: 400px; }
+  .log-panel { width: 100%; height: 200px; }
+}
+
+/* 2D 扁平模式 (2D Mode) */
+.theme-2d .hex-tile polygon {
+  fill: #1e3a5f;
+  stroke: #4b5563;
+  stroke-width: 1;
+}
+.theme-2d .hex-tile-inner {
+  display: none;
+}
+.theme-2d .piece-shadow, .theme-2d .piece-glint {
+  display: none;
+}
+.theme-2d .piece-p1 .piece-body {
+  fill: #f43f5e;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+.theme-2d .piece-p2 .piece-body {
+  fill: #38bdf8;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
