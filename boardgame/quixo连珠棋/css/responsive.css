@@ -1,0 +1,244 @@
+/* codex: 2026-09-14 新增多端响应式适配：手机/Pad/PC断点布局与横屏矮窗口优化 */
+/* 说明：棋盘格子尺寸由 style.css 的 --cell-size（clamp流式）驱动，
+   用户还可通过底部"棋盘大小"滑杆手动覆盖，本文件只负责布局断点。 */
+
+/* ==================== 平板 / 窄窗口 (≤ 900px) ==================== */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 10px 14px;
+    }
+
+    .title-group h1 {
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    .header-controls {
+        justify-content: center;
+    }
+
+    /* 窄屏下状态栏纵向堆叠：回合提示置顶，两张玩家卡片并列 */
+    .status-bar {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 14px;
+        gap: 8px;
+    }
+
+    .round-info {
+        grid-column: 1 / -1;
+        order: -1;
+    }
+
+    .player-card {
+        justify-content: center;
+        padding: 6px 10px;
+    }
+
+    .player-card .badge {
+        font-size: 24px;
+    }
+
+    .player-name {
+        font-size: 13px;
+    }
+
+    .player-role {
+        font-size: 11px;
+    }
+
+    .bottom-panel {
+        justify-content: center;
+    }
+}
+
+/* ==================== 手机 (≤ 560px) ==================== */
+@media (max-width: 560px) {
+    body {
+        padding: 8px;
+    }
+
+    .game-container {
+        gap: 10px;
+    }
+
+    header {
+        padding: 8px 10px;
+    }
+
+    .title-group h1 {
+        font-size: 19px;
+        letter-spacing: 1px;
+        gap: 6px;
+    }
+
+    .title-group .subtitle {
+        font-size: 11px;
+    }
+
+    .header-controls .btn {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    /* 状态栏全部单列堆叠，保证小屏可读性 */
+    .status-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .round-info .instruction-text {
+        font-size: 14px;
+    }
+
+    .round-info .step-indicator {
+        font-size: 11px;
+    }
+
+    /* 底部控制面板纵向排列 */
+    .bottom-panel {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 12px;
+    }
+
+    .mode-select-group {
+        justify-content: center;
+        font-size: 13px;
+    }
+
+    .mode-select-group select {
+        flex: 1;
+        min-width: 0;
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    .actions-group {
+        justify-content: center;
+    }
+
+    .actions-group .btn {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .size-control {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .size-control input[type="range"] {
+        flex: 1;
+        max-width: none;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        padding: 16px 14px;
+        max-height: 88vh;
+    }
+
+    .modal-header h2 {
+        font-size: 17px;
+    }
+
+    .rule-section {
+        font-size: 13px;
+    }
+
+    .win-modal-content {
+        padding: 26px 16px;
+    }
+
+    .win-title {
+        font-size: 22px;
+    }
+
+    .win-desc {
+        font-size: 14px;
+    }
+
+    .win-icon {
+        font-size: 52px;
+    }
+}
+
+/* ==================== 横屏矮窗口（手机横持等） ==================== */
+/* 策略：保持单列流，但全面压缩纵向空间；棋盘格子由 --cell-size 的 vh 分量自动缩小 */
+@media (max-height: 480px) and (orientation: landscape) {
+    body {
+        padding: 6px;
+    }
+
+    .game-container {
+        gap: 6px;
+    }
+
+    header {
+        padding: 4px 12px;
+    }
+
+    .title-group h1 {
+        font-size: 16px;
+    }
+
+    .title-group .subtitle {
+        display: none;
+    }
+
+    .header-controls .btn {
+        padding: 4px 9px;
+        font-size: 12px;
+        min-height: 28px;
+    }
+
+    .status-bar {
+        padding: 4px 12px;
+        gap: 6px;
+    }
+
+    .player-card {
+        padding: 2px 10px;
+    }
+
+    .player-card .badge {
+        font-size: 18px;
+    }
+
+    .player-name {
+        font-size: 12px;
+    }
+
+    .player-role {
+        display: none;
+    }
+
+    .instruction-text {
+        font-size: 13px;
+        min-height: 18px;
+    }
+
+    .step-indicator {
+        margin-top: 1px;
+        font-size: 11px;
+    }
+
+    .board-wrapper {
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+    .bottom-panel {
+        padding: 4px 12px;
+    }
+
+    .modal-content {
+        max-height: 92vh;
+        padding: 14px;
+    }
+}

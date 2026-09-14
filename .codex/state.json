@@ -1,13 +1,13 @@
 {
-  "current_task": "将 Dittle 骰战棋整合至项目主入口 index.html（已完成）",
+  "current_task": "quixo连珠棋 沉淀本地调试文档 DEBUGGING.md（已完成）",
   "last_changes": [
-    "index.html",
-    "tests/test_dittle_game_engine.py",
-    "CODEx_TODO.md",
+    "boardgame/quixo连珠棋/DEBUGGING.md",
+    "boardgame/quixo连珠棋/README.md",
+    "boardgame/quixo连珠棋/CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "向用户汇报 index.html 已添加 Dittle 7x7 骰战棋的网页对弈与规则手册入口"
+    "如需继续调试 quixo，先读 boardgame/quixo连珠棋/DEBUGGING.md 的方法论与踩坑记录"
   ],
-  "notes": "已在主对弈游戏区（紧接奇偶棋子谜题）及棋盘游戏专区分别加入包含【开始对弈】与【规则手册】双按钮的 Dittle 骰战棋精美卡片，所有 29 项测试全部通过，所有文件行数严格小于 500 行。"
+  "notes": "已新增 boardgame/quixo连珠棋/DEBUGGING.md：完整保留两个致命bug（浏览器全局var与const冲突致脚本失效、重渲染游离目标点击被误判取消）的排查过程、根因机理、修复方案、回归防线，以及调试环境踩坑经验（启发式缓存掩盖修复、无限动画致自动化点击超时、截图合成器伪影判定、evaluate传参形式、多视口布局断言清单）与调试方法论总结。"
 }

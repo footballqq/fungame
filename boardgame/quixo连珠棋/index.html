@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- codex: 2026-09-14 Quixo立方体战棋HTML游戏主页面 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quixo 立方体战棋 (扭转战棋)</title>
+    <link rel="stylesheet" href="css/style.css?v=20260914e">
+    <link rel="stylesheet" href="css/modal.css?v=20260914e">
+    <link rel="stylesheet" href="css/responsive.css?v=20260914e">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 顶部导航栏 -->
+        <header>
+            <div class="title-group">
+                <h1>🎲 Quixo 立方体战棋</h1>
+                <span class="subtitle">滑动移位 · 空间博弈 · 经典五子</span>
+            </div>
+            <div class="header-controls">
+                <button id="soundBtn" class="btn">🔊 音效: 开</button>
+                <button id="rulesBtn" class="btn">📖 规则说明</button>
+                <button id="restartBtn" class="btn">🔄 重新开始</button>
+            </div>
+        </header>
+
+        <!-- 玩家对弈状态栏 -->
+        <div class="status-bar">
+            <!-- 玩家 1 (○) -->
+            <div id="player1Card" class="player-card p1 active">
+                <span class="badge">○</span>
+                <div class="player-info">
+                    <span class="player-name">先手玩家</span>
+                    <span class="player-role">执 ○ 棋子</span>
+                </div>
+            </div>
+
+            <!-- 当前回合操作提示 -->
+            <div class="round-info">
+                <div id="instructionText" class="instruction-text">轮到玩家 [ ○ ] 行动</div>
+                <div id="stepIndicator" class="step-indicator">第 1 步：从棋盘外围取出一枚空白棋子或己方棋子</div>
+            </div>
+
+            <!-- 玩家 2 (×) -->
+            <div id="player2Card" class="player-card p2">
+                <span class="badge">×</span>
+                <div class="player-info">
+                    <span class="player-name">后手玩家 / AI</span>
+                    <span class="player-role">执 × 棋子</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 核心对弈棋盘与推入指示层 -->
+        <div class="board-wrapper">
+            <div id="boardOuter" class="board-outer">
+                <div id="boardGrid" class="board-grid">
+                    <!-- 5x5 棋格由 JS 动态生成渲染 -->
+                </div>
+                <!-- 推入方向箭头覆盖层 -->
+                <div id="pushArrowOverlay" class="push-arrow-overlay"></div>
+            </div>
+        </div>
+
+        <!-- 底部控制面板 -->
+        <div class="bottom-panel">
+            <div class="mode-select-group">
+                <label for="gameModeSelect">对弈模式：</label>
+                <select id="gameModeSelect">
+                    <option value="pve" selected>人机对战 (PvE)</option>
+                    <option value="pvp">双人同屏 (PvP)</option>
+                </select>
+
+                <label for="aiDifficultySelect" style="margin-left: 10px;">AI 难度：</label>
+                <select id="aiDifficultySelect">
+                    <option value="easy">休闲入门 (随机)</option>
+                    <option value="medium" selected>棋力适中 (评估)</option>
+                    <option value="hard">大师推演 (Minimax)</option>
+                </select>
+            </div>
+
+            <div class="actions-group">
+                <!-- 棋盘大小手动调节：滑杆覆盖 --cell-size 变量，"自动"恢复流式适配 -->
+                <div class="size-control">
+                    <label for="boardSizeRange">🔍 棋盘大小</label>
+                    <input type="range" id="boardSizeRange" min="40" max="96" step="2" value="68" aria-label="调节棋盘格子大小">
+                    <button id="boardSizeAutoBtn" class="btn btn-ghost" title="恢复自动适配屏幕大小">自动</button>
+                </div>
+                <button id="undoBtn" class="btn" disabled>↩️ 悔棋</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 游戏结算弹窗 -->
+    <div id="winModal" class="modal">
+        <div class="modal-content win-modal-content">
+            <div id="winIcon" class="win-icon">🏆</div>
+            <h2 id="winTitle" class="win-title">玩家获胜！</h2>
+            <p id="winDesc" class="win-desc">恭喜完成 5 连！</p>
+            <button id="modalRestartBtn" class="btn" style="padding: 10px 24px; font-size: 16px;">再来一局</button>
+        </div>
+    </div>
+
+    <!-- 规则说明弹窗 -->
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📖 Quixo (扭转战棋) 规则与精妙博弈</h2>
+                <button id="closeRulesBtn" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="rule-section">
+                    <h3>1. 棋盘与棋子</h3>
+                    <p>棋盘为 5×5 凹槽木盘，共有 25 块正方体积木。每个积木有一面为 ○，对面为 ×，其余 4 面为空白。开局时所有积木空白面朝上。</p>
+                </div>
+
+                <div class="rule-section">
+                    <h3>2. 回合流程（两步强制操作）</h3>
+                    <ul>
+                        <li><strong>第一步：取子（边缘判定）</strong>：只能从棋盘最外圈（共 16 个位置）取出一枚空白棋子或自身图案朝上的棋子，严禁抽取内部 3×3 棋子或对手棋子。</li>
+                        <li><strong>第二步：推入（滑动移位）</strong>：将取出的棋子翻转为己方图案，从留有空位的该行或该列端点推入，整行/列其余 4 块棋子朝空位平推一格。</li>
+                        <li><strong>推入方向</strong>：角位可沿构成该角的 2 条边推入；边位可沿 3 种方向推入。<strong>严禁原位放回</strong>。</li>
+                    </ul>
+                </div>
+
+                <div class="rule-section">
+                    <h3>3. 胜负判定与自杀规则</h3>
+                    <p>横向、纵向或对角线任意方向率先排成连续 5 个自己的图案即获胜。</p>
+                    <div class="highlight-box">
+                        ⚠️ <strong>“自杀”负判定（极其关键）</strong>：如果某步推入导致双方同时达成 5 连，或者推入后只让对手达成了 5 连，无论如何，<strong>行动方直接判负，对手获胜</strong>！
+                    </div>
+                </div>
+
+                <div class="rule-section">
+                    <h3>4. 为什么是 25 个（5×5 奇数）？</h3>
+                    <ul>
+                        <li><strong>操作边界是偶数（16 格）</strong>：双方合法接触的外部资源点完全对称。</li>
+                        <li><strong>棋子所有权动态流动</strong>：可以重复抽取已属于自己的棋子重新推入，棋子总数非守恒。</li>
+                        <li><strong>唯一的中心点 (2,2)</strong>：天然打破偶数镜像策略，中心需两次跨行列位移才能重回边缘，是战略“保险箱”。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入游戏逻辑脚本（?v 版本号防止旧版缓存导致规则脚本失效） -->
+    <script src="js/game-model.js?v=20260914e"></script>
+    <script src="js/game-rules.js?v=20260914e"></script>
+    <script src="js/game-ai.js?v=20260914e"></script>
+    <script src="js/game-ui.js?v=20260914e"></script>
+    <script src="js/main.js?v=20260914e"></script>
+</body>
+</html>
