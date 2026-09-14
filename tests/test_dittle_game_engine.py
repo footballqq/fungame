@@ -10,8 +10,8 @@ class PythonDittleDie:
         self.color = color
         self.top = top
         if front is None:
-            # 3 朝向玩家自己：白方 front=3（南面），黑方 front=4（back=3 朝北）
-            self.front = 3 if color == 'white' else 4
+            # 6 顶面朝上、3 面向对面玩家：白方 front=4（南面朝自己，北面 back=3 面向对面），黑方 front=3（南面面向对面）
+            self.front = 4 if color == 'white' else 3
         else:
             self.front = front
         self.right = right
@@ -42,6 +42,7 @@ def test_game_files_exist_and_under_500_lines():
     files = [
         os.path.join(GAME_DIR, "dittle_game.html"),
         os.path.join(GAME_DIR, "dittle_game_files", "dice_math.js"),
+        os.path.join(GAME_DIR, "dittle_game_files", "dice_view.js"),
         os.path.join(GAME_DIR, "dittle_game_files", "engine.js"),
         os.path.join(GAME_DIR, "dittle_game_files", "ai.js"),
         os.path.join(GAME_DIR, "dittle_game_files", "animator.js"),
@@ -73,44 +74,49 @@ def test_html_includes_all_required_scripts_and_styles():
         "ai.js",
         "animator.js",
         "logger.js",
+        "dice_view.js",
         "ui.js"
     ]
     for asset in expected_assets:
         assert asset in html, f"HTML must include {asset}"
 
+    # 静态资源必须带 ?v= 版本号，防止浏览器缓存旧 JS/CSS（曾导致"改了但看不到效果"）
+    refs = re.findall(r'dittle_game_files/[\w.]+\?v=[\w]+', html)
+    assert len(refs) >= 11, f"All css/js references must be cache-busted with ?v=, found {len(refs)}"
+
 def test_dice_3d_rotation_kinematics():
-    # Test 1: Initial state of White die: top=6, facing opposite (back/North)=3, facing player (front/South)=4, right=2
+    # Test 1: Initial state of White die: top=6, facing opponent (back/North)=3, facing player (front/South)=4, right=2
     die = PythonDittleDie('white')
-    assert die.top == 6
-    assert die.front == 3, "Facing player (South) is 3"
-    assert die.get_back() == 4, "Facing opposite (North) is 4"
+    assert die.top == 6, "Top face must be 6"
+    assert die.front == 4, "Facing player (South) is 4"
+    assert die.get_back() == 3, "Facing opposite player (North) is 3"
     assert die.right == 2
     assert die.get_bottom() == 1
     assert die.get_left() == 5
 
-    # Test 1B: Initial state of Black die: top=6, facing opposite (front/South)=3, facing player (back/North)=4, right=2
+    # Test 1B: Initial state of Black die: top=6, facing opponent (front/South)=3, facing player (back/North)=4
     b_die = PythonDittleDie('black')
-    assert b_die.top == 6
-    assert b_die.front == 4, "Facing player (North) is 4"
-    assert b_die.get_back() == 3, "Facing opposite (South) is 3"
+    assert b_die.top == 6, "Top face must be 6"
+    assert b_die.front == 3, "Facing opposite player (South) is 3"
+    assert b_die.get_back() == 4, "Facing player (North) is 4"
 
     # Test 2: Roll North (tilt forward)
-    # White player pushes the die towards the opponent. 
-    # South face (3) goes to Top.
+    # White player pushes the die towards the opponent.
+    # Front/South face (4) goes to Top.
     die.tilt('north')
-    assert die.top == 3, "Front face (3) should become Top when tilting North"
+    assert die.top == 4, "Front face (4) should become Top when tilting North"
     assert die.front == 1, "Bottom (1) rolls to front"
     assert die.right == 2, "Lateral face remains unchanged"
 
     # Test 3: 4 full tilts in same direction completes 360-degree rotation back to initial
     die.tilt('north').tilt('north').tilt('north')
-    assert die.top == 6 and die.front == 3 and die.right == 2
+    assert die.top == 6 and die.front == 4 and die.right == 2
 
     # Test 4: Lateral tilt East
     die.tilt('east')
     assert die.top == 5, "Tilting East brings left face (5) to top"
     assert die.right == 6, "Old top (6) rolls to right"
-    assert die.front == 3, "Front face remains unchanged"
+    assert die.front == 4, "Front face remains unchanged"
 
 def test_clash_resolution_logic():
     # Case A: 1 vs 1 clash, attacker higher
@@ -162,10 +168,13 @@ def test_3d_perspective_and_three_face_dice_structure():
     html_path = os.path.join(GAME_DIR, "dittle_game.html")
     css_path = os.path.join(GAME_DIR, "dittle_game_files", "dittle_components.css")
     ui_path = os.path.join(GAME_DIR, "dittle_game_files", "ui.js")
+    dice_view_path = os.path.join(GAME_DIR, "dittle_game_files", "dice_view.js")
 
     with open(html_path, "r", encoding="utf-8") as f:
         html = f.read()
     assert "viewModeBtn" in html, "HTML must provide 3D/2D view toggle button"
+    assert "dice_view.js" in html, "HTML must load dice_view.js before ui.js"
+    assert html.index("dice_view.js") < html.index("ui.js"), "dice_view.js must load before ui.js"
 
     with open(css_path, "r", encoding="utf-8") as f:
         css = f.read()
@@ -177,11 +186,22 @@ def test_3d_perspective_and_three_face_dice_structure():
 
     with open(ui_path, "r", encoding="utf-8") as f:
         ui_code = f.read()
-    assert "createFaceElement" in ui_code, "UI must generate multi-face elements"
+    assert "DittleDiceView" in ui_code, "UI must use DittleDiceView for die rendering"
     assert "updateBoardTransform" in ui_code, "UI must update 3D board perspective transform"
     assert "is3DView" in ui_code, "UI must track 3D view state"
 
-    # Verify 3D surface normal projection: all 3 faces (top, front, right) must have positive Z normals (facing viewer)
+    with open(dice_view_path, "r", encoding="utf-8") as f:
+        dice_view_code = f.read()
+    assert "createFaceElement" in dice_view_code, "Dice view must generate multi-face elements"
+    # 视觉面值映射：face-front 是视觉顶面须填 top；face-top 是视觉朝北面须填 7-front；face-right 填 right
+    assert "createFaceElement('face-front', die.top)" in dice_view_code, \
+        "Visual TOP face (CSS face-front) must display die.top so 6 shows on top"
+    assert "createFaceElement('face-top', 7 - die.front" in dice_view_code, \
+        "CSS face-top (visually North-facing) must display the back face 7-front"
+    assert "createFaceElement('face-right', die.right" in dice_view_code, \
+        "CSS face-right (visually East-facing) must display die.right"
+
+    # Verify 3D surface normal projection after cube rotateX(-24deg) rotateY(-28deg)
     def rot_x(v, deg):
         r = math.radians(deg)
         return [v[0], v[1]*math.cos(r) - v[2]*math.sin(r), v[1]*math.sin(r) + v[2]*math.cos(r)]
@@ -189,18 +209,33 @@ def test_3d_perspective_and_three_face_dice_structure():
         r = math.radians(deg)
         return [v[0]*math.cos(r) + v[2]*math.sin(r), v[1], -v[0]*math.sin(r) + v[2]*math.cos(r)]
 
-    top_n = rot_x([0, 0, 1], 90) # (0, -1, 0)
-    front_n = [0, 0, 1]
-    right_n = rot_y([0, 0, 1], 90) # (1, 0, 0)
+    top_css_n = rot_x([0, 0, 1], 90)   # CSS face-top normal  -> (0,-1,0)
+    front_n = [0, 0, 1]                # CSS face-front normal -> +Z (out of board)
+    right_n = rot_y([0, 0, 1], 90)     # CSS face-right normal -> (1,0,0)
 
-    # Cube rotation: rotateX(-24deg) rotateY(-28deg)
-    top_z = rot_x(rot_y(top_n, -28), -24)[2]
-    front_z = rot_x(rot_y(front_n, -28), -24)[2]
-    right_z = rot_x(rot_y(right_n, -28), -24)[2]
+    top_v = rot_x(rot_y(top_css_n, -28), -24)
+    front_v = rot_x(rot_y(front_n, -28), -24)
+    right_v = rot_x(rot_y(right_n, -28), -24)
 
-    assert top_z > 0, f"Top face must face towards viewer (Z={top_z:.3f} > 0)"
-    assert front_z > 0, f"Front face must face towards viewer (Z={front_z:.3f} > 0)"
-    assert right_z > 0, f"Right face must face towards viewer (Z={right_z:.3f} > 0)"
+    # 视觉顶面必须是 face-front(+Z 朝观众上方)：其 Z 分量最大
+    assert front_v[2] > 0, f"face-front must face towards viewer (Z={front_v[2]:.3f} > 0)"
+    assert front_v[2] > top_v[2] and front_v[2] > right_v[2], \
+        "face-front must be the most viewer-facing surface (the visual TOP of the die)"
+    # CSS face-top 法向朝北（棋盘上方边缘），是面向对面玩家一侧的背面
+    assert top_v[1] < -0.9, f"face-top must visually point North (Y={top_v[1]:.3f} < -0.9)"
+
+def test_initial_board_orientation_faces_opponent():
+    """initBoard: black row0 front=3 (faces south opponent), white row6 front=4 (back=3 faces north opponent)."""
+    engine_path = os.path.join(GAME_DIR, "dittle_game_files", "engine.js")
+    with open(engine_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    assert "new DittleDie('black', 6, 3, 2)" in code, "Black dice: top=6, front=3 facing the opponent (south)"
+    assert "new DittleDie('white', 6, 4, 2)" in code, "White dice: top=6, back=7-4=3 facing the opponent (north)"
+    dice_math_path = os.path.join(GAME_DIR, "dittle_game_files", "dice_math.js")
+    with open(dice_math_path, "r", encoding="utf-8") as f:
+        dice_code = f.read()
+    assert "this.front = color === 'white' ? 4 : 3" in dice_code, \
+        "Default orientation: white front=4 (back=3 to opponent), black front=3 (to opponent)"
 
 def test_jump_restriction_strictly_one_piece_cannot_jump_two_or_more():
     """Verify that jumping can ONLY jump over 1 piece, and CANNOT jump over >= 2 contiguous pieces."""
@@ -309,7 +344,7 @@ def test_lateral_rolling_and_directional_animations():
     # Rolling east: left face (7 - 2 = 5) rolls to top, old top (6) rolls to right
     assert die_east.top == 5, "Rolling East brings West face (5) to top"
     assert die_east.right == 6, "Rolling East moves Top face (6) to right"
-    assert die_east.front == 3, "Front face remains unchanged during lateral roll"
+    assert die_east.front == 4, "Front face remains unchanged during lateral roll"
 
     # 2. White die rolling West (to the left): top=6, right=2
     die_west = PythonDittleDie('white')
@@ -317,7 +352,7 @@ def test_lateral_rolling_and_directional_animations():
     # Rolling west: right face (2) rolls to top, old top (6) rolls to left (right becomes 7 - 6 = 1)
     assert die_west.top == 2, "Rolling West brings East face (2) to top"
     assert die_west.right == 1, "Rolling West moves Top face (6) to left (right becomes 1)"
-    assert die_west.front == 3, "Front face remains unchanged during lateral roll"
+    assert die_west.front == 4, "Front face remains unchanged during lateral roll"
 
     # 3. Verify CSS has directional tilt roll keyframes
     css_path = os.path.join(GAME_DIR, "dittle_game_files", "dittle_components.css")
@@ -327,6 +362,36 @@ def test_lateral_rolling_and_directional_animations():
     assert ".anim-tilt-west" in css, "CSS must support westward lateral roll animation"
     assert ".anim-tilt-north" in css, "CSS must support forward/north roll animation"
     assert ".anim-tilt-south" in css, "CSS must support southward roll animation"
+
+    # 4. 东西向翻滚必须绕南北水平轴(rotateY)真实翻面；rotateZ 是绕竖直轴自旋（观感像转盘，禁止）
+    for name in ("dieTiltEast", "dieTiltWest"):
+        m = re.search(r"@keyframes " + name + r"\s*\{(.*?)\n\}", css, re.S)
+        assert m, f"CSS must define @keyframes {name}"
+        body = m.group(1)
+        assert "rotateY(" in body, f"{name} must rotate around the Y axis (real lateral roll)"
+        assert "rotateZ(" not in body, f"{name} must NOT use rotateZ (spins like a turntable, not a roll)"
+
+def test_ui_race_guards_for_ai_and_game_over():
+    """UI must invalidate stale AI timers / animation callbacks across new games and timeouts."""
+    ui_path = os.path.join(GAME_DIR, "dittle_game_files", "ui.js")
+    with open(ui_path, "r", encoding="utf-8") as f:
+        code = f.read()
+
+    # 对局序号令牌：开新局自增，滞后回调失效
+    assert "this.gameSeq" in code, "UI must keep a gameSeq token"
+    assert "this.gameSeq++" in code, "startNewGame must bump gameSeq"
+    # AI 思考定时器句柄：开新局时清除，回调内校验令牌与终局
+    assert "clearTimeout(this.aiTimer)" in code, "startNewGame/triggerAiTurn must clear pending aiTimer"
+    assert "seqAtSchedule !== this.gameSeq" in code, "AI callbacks must verify the gameSeq token"
+    # handleGameOver 必须同步引擎终局状态并停掉挂起动画（超时路径此前漏设，致终局后仍可走子）
+    hg_start = code.index("handleGameOver(winner, reason)")
+    hg_body = code[hg_start:code.index("closeGameOverModal()", hg_start)]
+    assert "this.engine.gameOver = true" in hg_body, "handleGameOver must sync engine.gameOver (timeout path)"
+    assert "cancelPending" in hg_body, "handleGameOver must cancel pending animations"
+    # executeMove 完成回调须校验令牌与终局
+    em_start = code.index("executeMove(move)")
+    em_body = code[em_start:code.index("triggerAiTurn()", em_start)]
+    assert "seqAtStart !== this.gameSeq" in em_body, "animation onFinish must verify gameSeq token"
 
 def test_game_over_review_board_unblocked():
     """Verify game over modal allows reviewing the final board position without forced restart."""

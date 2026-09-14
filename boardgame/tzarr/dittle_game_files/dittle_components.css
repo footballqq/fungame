@@ -445,15 +445,16 @@
     40% { transform: rotateX(-80deg) rotateY(-28deg) translateY(12px) translateZ(12px) scale(1.08); }
     100% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
 }
+/* codex: 2026-09-14 恢复东西向翻滚绕南北水平轴(rotateY)真实翻面：rotateZ 是绕竖直轴自旋，观感像转盘而非翻滚 */
 @keyframes dieTiltEast {
-    0% { transform: rotateX(-24deg) rotateY(-28deg) rotateZ(0deg) scale(1); }
-    40% { transform: rotateX(-24deg) rotateY(-28deg) rotateZ(70deg) translateX(14px) translateY(-10px) translateZ(12px) scale(1.08); }
-    100% { transform: rotateX(-24deg) rotateY(-28deg) rotateZ(0deg) scale(1); }
+    0% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
+    40% { transform: rotateX(-18deg) rotateY(36deg) translateX(14px) translateY(-10px) translateZ(12px) scale(1.08); }
+    100% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
 }
 @keyframes dieTiltWest {
-    0% { transform: rotateX(-24deg) rotateY(-28deg) rotateZ(0deg) scale(1); }
-    40% { transform: rotateX(-24deg) rotateY(-28deg) rotateZ(-70deg) translateX(-14px) translateY(-10px) translateZ(12px) scale(1.08); }
-    100% { transform: rotateX(-24deg) rotateY(-28deg) rotateZ(0deg) scale(1); }
+    0% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
+    40% { transform: rotateX(-18deg) rotateY(-92deg) translateX(-14px) translateY(-10px) translateZ(12px) scale(1.08); }
+    100% { transform: rotateX(-24deg) rotateY(-28deg) scale(1); }
 }
 
 .die-cube.anim-tilt-north { animation: dieTiltNorth 0.32s cubic-bezier(0.2, 0.9, 0.4, 1) forwards; }

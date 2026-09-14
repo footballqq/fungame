@@ -1,4 +1,4 @@
-// codex: 2026-09-14 修正：3朝向玩家自己（白方front=3，黑方front=4）
+// codex: 2026-09-14 修正初始朝向：双方均 6 顶面朝上、3 面向对面玩家（两军 3 互相对视）
 class DittleEngine {
     constructor(mode = 'battle') {
         this.mode = mode; // 'battle' (标准骰战棋) or 'clash' (冲突变体)
@@ -16,11 +16,11 @@ class DittleEngine {
     initBoard() {
         this.board = Array(7).fill(null).map(() => Array(7).fill(null));
         for (let c = 0; c < 7; c++) {
-            // 双方默认均为 6 是 top，3 朝向玩家自己：
-            // Row 0 黑方底线：黑方坐北端，3 朝北(自己) → back=3 → front=4
-            this.board[0][c] = new DittleDie('black', 6, 4, 2);
-            // Row 6 白方底线：白方坐南端，3 朝南(自己) → front=3
-            this.board[6][c] = new DittleDie('white', 6, 3, 2);
+            // 双方均为 6 顶面朝上、3 面向对面玩家：
+            // Row 0 黑方底线：面向对面（南端 Row 6）为 3 → front = 3
+            this.board[0][c] = new DittleDie('black', 6, 3, 2);
+            // Row 6 白方底线：面向对面（北端 Row 0）为 3 → back=3 → front=4
+            this.board[6][c] = new DittleDie('white', 6, 4, 2);
         }
         this.turn = 'white';
         this.moveHistory = [];

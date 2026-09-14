@@ -1,4 +1,4 @@
-// codex: 2026-09-14 支持东/西/南/北多向真实 3D 翻滚动画与落子即时变点动效
+// codex: 2026-09-14 翻滚点数改为动画中段交换：骰面侧立最模糊时切换为落点新点数，观感如真实翻面
 class DittleAnimator {
     constructor(ui) {
         this.ui = ui;
@@ -97,9 +97,9 @@ class DittleAnimator {
                         else if (stepDr < 0) animClass = 'anim-tilt-north';// 向北翻滚
                         else animClass = 'anim-tilt-south';                // 向南翻滚
 
-                        // 翻滚着陆时立即呈现翻滚后的新面点数
+                        // 翻滚进行到中段(约150ms，骰面侧立)再呈现翻滚后的新三面点数
                         if (move.resultingDie && this.ui.updateDieContent) {
-                            this.ui.updateDieContent(dieEl, move.resultingDie);
+                            this.schedule(() => this.ui.updateDieContent(dieEl, move.resultingDie), 150);
                         }
                     }
                     cube.classList.add(animClass);

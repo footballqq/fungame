@@ -1,4 +1,4 @@
-// codex: 2026-09-14 支持左/右翻滚、终局复盘检视与对局历史记录导出
+// codex: 2026-09-14 骰子视觉拆分至 dice_view.js 修正顶面映射；新增 gameSeq/aiTimer 竞态守卫防跨局走子
 class DittleUI {
     constructor() {
         this.engine = new DittleEngine('battle');
@@ -6,6 +6,7 @@ class DittleUI {
         this.clock = new ChessClock();
         this.animator = new DittleAnimator(this);
         this.logger = new DittleLogger(this);
+        this.diceView = new DittleDiceView(); // 骰子三面视觉渲染（顶面映射修正后的独立模块）
 
         this.gameMode = 'battle'; // 'battle' or 'clash'
         this.opponentType = 'ai'; // 'ai' or 'human'
@@ -17,6 +18,8 @@ class DittleUI {
         this.isBlackFlipped = false;
         this.isAiThinking = false;
         this.isAnimating = false;
+        this.gameSeq = 0;    // 对局序号令牌：开新局后使滞后的 AI/动画回调自动失效
+        this.aiTimer = null; // AI 思考 setTimeout 句柄，开新局时清除防跨局走子
 
         this.initDOM();
         this.setupClockCallbacks();
@@ -178,7 +181,7 @@ class DittleUI {
 
                 const die = this.engine.board[r][c];
                 if (die) {
-                    const dieEl = this.createDieElement(die, r, c);
+                    const dieEl = this.diceView.createDieElement(die, r, c);
                     if (this.selectedCoord && this.selectedCoord[0] === r && this.selectedCoord[1] === c) {
                         dieEl.classList.add('selected');
                     }
@@ -192,89 +195,9 @@ class DittleUI {
         if (this.animator) this.animator.applyLastMoveHighlights();
     }
 
-    createDieElement(die, r, c) {
-        const wrap = document.createElement('div');
-        wrap.className = `die-3d-wrap ${die.color}`;
-        wrap.dataset.r = r;
-        wrap.dataset.c = c;
-        const colorName = die.color === 'white' ? '白骰' : '黑骰';
-        const fwdNewTop = die.color === 'white' ? die.front : 7 - die.front;
-        const leftNewTop = die.right;
-        const rightNewTop = 7 - die.right;
-        wrap.title = `${colorName} [顶面:${die.top} | 迎面:${die.front} | 右面:${die.right}]\n翻滚后顶面将变为: 前->${fwdNewTop} | 左->${leftNewTop} | 右->${rightNewTop}`;
-
-        const cube = document.createElement('div');
-        cube.className = 'die-cube';
-        cube.appendChild(this.createFaceElement('face-top', die.top));
-        cube.appendChild(this.createFaceElement('face-front', die.front, `${die.front}`));
-        cube.appendChild(this.createFaceElement('face-right', die.right, `${die.right}`));
-
-        wrap.appendChild(cube);
-        return wrap;
-    }
-
-    createFaceElement(faceClass, value, badgeText = '') {
-        const faceEl = document.createElement('div');
-        faceEl.className = `die-face ${faceClass}`;
-        const grid = document.createElement('div');
-        grid.className = 'pips-grid';
-        this.fillPipGrid(grid, value);
-        faceEl.appendChild(grid);
-        if (badgeText) {
-            const badge = document.createElement('span');
-            badge.className = 'face-badge';
-            badge.textContent = badgeText;
-            faceEl.appendChild(badge);
-        }
-        return faceEl;
-    }
-
-    fillPipGrid(grid, value) {
-        grid.innerHTML = '';
-        const pipIndices = this.getPipPositionsForNumber(value);
-        for (let i = 0; i < 9; i++) {
-            const slot = document.createElement('div');
-            slot.className = 'pip-slot';
-            if (pipIndices.includes(i)) {
-                const pipDot = document.createElement('div');
-                pipDot.className = 'pip';
-                slot.appendChild(pipDot);
-            }
-            grid.appendChild(slot);
-        }
-    }
-
+    // animator 经由 UI 转发调用骰子视觉模块（落点即时呈现翻滚后的新三面点数）
     updateDieContent(dieEl, die) {
-        if (!dieEl || !die) return;
-        const cube = dieEl.querySelector('.die-cube');
-        if (!cube) return;
-        const topFace = cube.querySelector('.face-top');
-        const frontFace = cube.querySelector('.face-front');
-        const rightFace = cube.querySelector('.face-right');
-        if (topFace) this.refreshFace(topFace, die.top);
-        if (frontFace) this.refreshFace(frontFace, die.front, `${die.front}`);
-        if (rightFace) this.refreshFace(rightFace, die.right, `${die.right}`);
-    }
-
-    refreshFace(faceEl, value, badgeText = '') {
-        const grid = faceEl.querySelector('.pips-grid');
-        if (grid) this.fillPipGrid(grid, value);
-        let badge = faceEl.querySelector('.face-badge');
-        if (badgeText) {
-            if (!badge) {
-                badge = document.createElement('span');
-                badge.className = 'face-badge';
-                faceEl.appendChild(badge);
-            }
-            badge.textContent = badgeText;
-        } else if (badge) {
-            badge.remove();
-        }
-    }
-
-    getPipPositionsForNumber(num) {
-        const pips = { 1: [4], 2: [2, 6], 3: [2, 4, 6], 4: [0, 2, 6, 8], 5: [0, 2, 4, 6, 8], 6: [0, 2, 3, 5, 6, 8] };
-        return pips[num] || [];
+        if (this.diceView) this.diceView.updateDieContent(dieEl, die);
     }
 
     handleCellClick(r, c) {
@@ -310,6 +233,8 @@ class DittleUI {
     }
 
     executeMove(move) {
+        if (this.engine.gameOver) return;
+        const seqAtStart = this.gameSeq;
         const [fr, fc] = move.from;
         const beforeDie = this.engine.board[fr][fc] ? this.engine.board[fr][fc].clone() : null;
         this.selectedCoord = null;
@@ -317,6 +242,8 @@ class DittleUI {
         this.renderBoard();
 
         this.animator.animateMove(move, () => {
+            // 开新局或超时终局后，滞后的动画完成回调直接作废
+            if (seqAtStart !== this.gameSeq || this.engine.gameOver) return;
             const moveRecord = this.engine.makeMove(move);
             const resultingDie = move.resultingDie ? move.resultingDie.clone() : (beforeDie ? beforeDie.clone() : null);
 
@@ -353,10 +280,23 @@ class DittleUI {
     }
 
     triggerAiTurn() {
+        if (this.engine.gameOver) return;
         this.isAiThinking = true;
         this.turnIndicator.textContent = '🤖 AI 正在思考中...';
-        setTimeout(() => {
+        const seqAtSchedule = this.gameSeq;
+        if (this.aiTimer) clearTimeout(this.aiTimer);
+        this.aiTimer = setTimeout(() => {
+            this.aiTimer = null;
+            // 开新局或对局已结束后，滞后的 AI 思考回调作废
+            if (seqAtSchedule !== this.gameSeq || this.engine.gameOver) {
+                this.isAiThinking = false;
+                return;
+            }
             this.ai.findBestMove(this.engine, (bestMove) => {
+                if (seqAtSchedule !== this.gameSeq || this.engine.gameOver) {
+                    this.isAiThinking = false;
+                    return;
+                }
                 this.isAiThinking = false;
                 if (bestMove) {
                     this.turnIndicator.textContent = '🤖 AI 正在走子...';
@@ -384,6 +324,15 @@ class DittleUI {
     }
 
     handleGameOver(winner, reason) {
+        // 超时等 UI 侧终局也同步引擎状态，防止滞后的走子/AI 回调在终局后继续行动
+        if (!this.engine.gameOver) {
+            this.engine.gameOver = true;
+            this.engine.winner = winner;
+            this.engine.winReason = reason;
+        }
+        if (this.animator) this.animator.cancelPending();
+        this.isAnimating = false;
+
         if (this.reviewReasonText) {
             const winnerText = winner === 'draw' ? '平局' : (winner === 'white' ? '白方获胜' : '黑方获胜');
             this.reviewReasonText.textContent = `${winnerText} - ${reason}`;
@@ -429,6 +378,9 @@ class DittleUI {
             this.animator.cancelPending();
             this.animator.clearLastMoveHighlights();
         }
+        // 作废所有滞后回调：旧局的 AI 思考定时器与动画完成回调全部失效
+        this.gameSeq++;
+        if (this.aiTimer) { clearTimeout(this.aiTimer); this.aiTimer = null; }
         this.isAnimating = false;
         this.engine = new DittleEngine(this.gameMode);
         this.selectedCoord = null;
