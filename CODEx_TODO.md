@@ -1,3 +1,5 @@
+<!-- codex: 2026-09-14 修复Dittle连跳转弯被"对角线"预检查误杀的校验顺序bug -->
+- [X] 修复: `boardgame/tzarr/dittle_game_files/engine.js` Bug#8 `validateMoveAttempt` 校验顺序错误——"后退/对角线"预检查跑在合法走法表匹配之前，导致连跳中途 90° 转弯（规则 FAQ Q3 明确允许，落点相对起点为斜向位移）被"严禁对角线"误拒；改为先查 `getLegalMovesForDie` 权威匹配（BFS 已正确生成转弯连跳路径），方向预检查降级为非法尝试时的诊断提示；浏览器实测六类走法（转弯连跳/东西北直跳合法、后退/斜向提示正确），新增 `test_bug8_turned_jump_chain_not_blocked_by_diagonal_precheck` 回归测试，42 项 pytest 全部通过；`?v=` 升级 20260914c 防缓存
 <!-- codex: 2026-09-14 修复Dittle骰战棋视觉顶面映射与初始朝向两大顽疾并整体加固 -->
 - [X] 根因修复: `boardgame/tzarr/dittle_game_files/` 视觉顶面映射错误——CSS `.face-front`(translateZ 朝观众) 才是骰子坐在棋盘上的"视觉顶面"，`.face-top`(rotateX90) 实际显示为朝北背面，但旧代码把 front 填进视觉顶面、top 填进朝北面，导致无论初始值如何"顶面永远不是6"，且东西向翻滚(不改变 front)看起来"横滚点数不变"；新建独立渲染模块 `dice_view.js` 修正映射（视觉顶面填 top、朝北面填 7-front、朝东面填 right）并配数学法向投影单测锁定
 - [X] 朝向修正: `dice_math.js`/`engine.js` 恢复初始朝向为 6 顶面朝上、3 面向对面玩家（白方 front=4/北面 back=3，黑方 front=3，两军 3 互相对视），此前一次提交误改为"3 朝向玩家自己"

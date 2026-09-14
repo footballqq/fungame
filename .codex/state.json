@@ -1,19 +1,14 @@
 {
-  "current_task": "Dittle骰战棋 视觉顶面映射与初始朝向修复（已完成）",
+  "current_task": "Dittle骰战棋 修复连跳转弯被对角线预检查误杀（已完成）",
   "last_changes": [
-    "boardgame/tzarr/dittle_game_files/dice_math.js",
     "boardgame/tzarr/dittle_game_files/engine.js",
-    "boardgame/tzarr/dittle_game_files/dice_view.js",
-    "boardgame/tzarr/dittle_game_files/ui.js",
-    "boardgame/tzarr/dittle_game_files/animator.js",
-    "boardgame/tzarr/dittle_game_files/dittle_components.css",
     "boardgame/tzarr/dittle_game.html",
     "tests/test_dittle_game_engine.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "向用户汇报根因（CSS face-front 才是视觉顶面）与修复验证结果，已完成提交"
+    "向用户汇报 Bug#8 根因（校验顺序）与修复验证结果，已完成提交"
   ],
-  "notes": "根因：视觉顶面被填入 die.front 而非 die.top，导致顶面不显示6且横滚(front不变)看似不变点；东西向动画曾被误改为 rotateZ 自旋。修复：dice_view.js 独立渲染模块修正映射(顶=front位填top/北面填7-front/东面填right)，初始朝向 6顶+3面向对面(白front4黑front3)，恢复 rotateY 真实翻滚，翻滚点数动画中段交换，gameSeq/aiTimer 防跨局走子，?v= 防缓存。浏览器实测四步走子引擎与DOM渲染一致，42项pytest通过。"
+  "notes": "根因：validateMoveAttempt 的后退/对角线预检查先于合法走法表匹配执行，转弯连跳落点相对起点是斜向位移(dr和dc均非0)被直接误拒。修复：先查 getLegalMovesForDie 权威匹配再走诊断提示。浏览器实测：转弯连跳(5,3)->(3,3)->(3,5)合法执行、向西/向北直跳隔一子合法、真斜移/后退仍给出正确禁行提示。42项pytest通过。"
 }

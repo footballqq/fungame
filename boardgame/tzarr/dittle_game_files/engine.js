@@ -204,7 +204,19 @@ class DittleEngine {
         if (die.color !== this.turn) return { valid: false, reason: `当前轮到${this.turn === 'white' ? '白方' : '黑方'}走棋，不能操作对方棋子。` };
         if (this.gameOver) return { valid: false, reason: '游戏已结束。' };
 
-        // Direction check
+        // 权威判定优先：连跳允许中途 90° 转弯（如先向前跳再向右跳），
+        // 落点相对起点是"斜向"位移，必须先查合法走法表，方向预检查只能作非法尝试时的诊断提示
+        const legalMoves = this.getLegalMovesForDie(fr, fc);
+        const match = legalMoves.find(m => m.to[0] === tr && m.to[1] === tc);
+        if (match) {
+            return { valid: true, move: match };
+        }
+
+        if (this.board[tr][tc] !== null) {
+            return { valid: false, reason: '目标方格已被占用，骰子必须着陆在空格中。' };
+        }
+
+        // Direction diagnostics (only reached for genuinely illegal attempts)
         const dr = tr - fr;
         const dc = tc - fc;
         const forwardDr = die.color === 'white' ? -1 : +1;
@@ -214,16 +226,6 @@ class DittleEngine {
         }
         if (Math.abs(dr) > 0 && Math.abs(dc) > 0) {
             return { valid: false, reason: '规则禁止：骰子严禁沿对角线斜向移动。' };
-        }
-
-        if (this.board[tr][tc] !== null) {
-            return { valid: false, reason: '目标方格已被占用，骰子必须着陆在空格中。' };
-        }
-
-        const legalMoves = this.getLegalMovesForDie(fr, fc);
-        const match = legalMoves.find(m => m.to[0] === tr && m.to[1] === tc);
-        if (match) {
-            return { valid: true, move: match };
         }
 
         if (this.mode === 'clash') {

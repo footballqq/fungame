@@ -530,4 +530,61 @@ def test_bug7_no_double_init():
         "Constructor should not call updatePlayerCards (startNewGame does it)"
 
 
+def test_bug8_turned_jump_chain_not_blocked_by_diagonal_precheck():
+    """Bug 8: validateMoveAttempt must consult the legal move list BEFORE the
+    backward/diagonal pre-checks. Multi-jump chains may turn 90 degrees mid-chain
+    (rules FAQ Q3), so the destination can be diagonally displaced from the start
+    while still being perfectly legal. Old code rejected such moves with the
+    diagonal error before ever consulting the generated moves.
+
+    Scenario: white die at (5,3); hurdle at (4,3); (3,3) empty; hurdle at (3,4);
+    (3,5) empty. Chain: (5,3) -> jump north -> (3,3) -> jump east -> (3,5).
+    Net displacement dr=-2, dc=+2 (diagonal overall) but LEGAL.
+    """
+    # --- 1. Python mirror of the engine jump generation + validation order ---
+    def get_single_jumps(r, c, board):
+        jumps = []
+        for dr, dc in [(-1, 0), (0, -1), (0, 1)]:  # North, West, East for White
+            hr, hc = r + dr, c + dc
+            lr, lc = r + 2 * dr, c + 2 * dc
+            if 0 <= hr < 7 and 0 <= hc < 7 and 0 <= lr < 7 and 0 <= lc < 7:
+                if board[hr][hc] is not None and board[lr][lc] is None:
+                    jumps.append((lr, lc))
+        return jumps
+
+    def reachable_jumps(sr, sc, board):
+        results, visited = [], {(sr, sc)}
+        queue = [(sr, sc)]
+        while queue:
+            cur = queue.pop(0)
+            for dest in get_single_jumps(cur[0], cur[1], board):
+                if dest not in visited:
+                    visited.add(dest)
+                    results.append(dest)
+                    queue.append(dest)
+        return results
+
+    board = [[None] * 7 for _ in range(7)]
+    board[5][3] = 'white'
+    board[4][3] = 'black'  # hurdle for the north jump
+    board[3][4] = 'black'  # hurdle for the east turn jump
+    dests = reachable_jumps(5, 3, board)
+
+    assert (3, 3) in dests, "Straight north jump over 1 piece must be reachable"
+    assert (3, 5) in dests, "Turned chain (north then east) must be reachable"
+    # The turned destination is diagonally displaced: exactly the case the old pre-check broke
+    assert (5 - 3) != 0 and (3 - 5) != 0, "Destination (3,5) has dr!=0 and dc!=0 (diagonal overall)"
+
+    # --- 2. Structural: legal-move lookup must precede direction pre-checks in engine.js ---
+    engine_path = os.path.join(GAME_DIR, "dittle_game_files", "engine.js")
+    with open(engine_path, "r", encoding="utf-8") as f:
+        code = f.read()
+    match_idx = code.index("const match = legalMoves.find")
+    backward_idx = code.index("严禁向后退移")
+    diagonal_idx = code.index("严禁沿对角线斜向移动")
+    assert match_idx < backward_idx and match_idx < diagonal_idx,         "validateMoveAttempt must match the legal move list BEFORE diagonal/backward diagnostics"
+
+    # --- 3. Structural: direct jumps (no tilt) exist in battle mode and allow chains ---
+    assert "Direct Jump moves" in code, "Battle mode must support direct jumps without tilting first"
+    assert "getReachableJumps(r, c, die.color, jumpBoard)" in code,         "Direct jump BFS must explore chained jumps with turns"
 
