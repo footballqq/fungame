@@ -1,3 +1,11 @@
+<!-- codex: 2026-09-14 修复quixo连珠棋两个致命bug并完善配色与多端适配 -->
+- [X] 文档: 沉淀 `boardgame/quixo连珠棋/DEBUGGING.md` 本地调试文档，完整保留两个致命 bug 的排查过程、根因机理、修复方案、回归防线与调试环境踩坑经验（启发式缓存/自动化点击超时/截图伪影/布局断言清单/调试方法论）
+- [X] 修复: `boardgame/quixo连珠棋/` 致命bug① `game-rules.js`/`game-ai.js` 顶层 `var { CellState }` 提升后与 `game-model.js` 全局 `const` 冲突，浏览器端两脚本整体 SyntaxError 失效导致游戏无法初始化（Node CommonJS 测试因函数作用域无法发现）；改为仅 CommonJS 环境经 `globalThis` 注入
+- [X] 修复: 致命bug② 选子后 `renderBoard` 重建棋格使被点棋子脱离文档，其点击冒泡被"点击外部取消选子"监听器误判，选子瞬间被取消、点击完全无响应；判定抽为 `shouldCancelSelection` 静态方法并跳过 `isConnected=false` 游离目标；另修复 AI 走子后悔棋按钮未解锁
+- [X] 测试: 新增 `tests/verify_browser_scope.js`（Node vm 模拟浏览器共享全局作用域 + 游离目标判定单测）与 `tests/test_browser_scope.py`（pytest 包装），全套 7 项 pytest 通过
+- [X] 视觉: 完善配色为深漆胡桃木夜色 + 琥珀点缀，○蓝方/×红方棋子顶面分色着色、金色渐变标题、流光胜利格
+- [X] 适配: `--cell-size` 流式 clamp（vw+vh 双分量）自适应手机/Pad/PC/横屏；推入箭头随棋格等比缩放并在窗口变化时重定位；新增 `css/responsive.css` 断点；底部滑杆手动调节棋盘大小（40~96px，localStorage 持久化）+「自动」恢复
+- [X] 健壮性: 静态资源加 `?v=` 版本号防旧缓存；弹窗移除 `backdrop-filter` 规避低端 WebView 合成问题；样式拆分 `css/modal.css` 保持单文件 ≤500 行；浏览器实测手机/Pad/PC/横屏四种视口全流程通过
 <!-- codex: 2026-09-09 详述分块循环矩阵构造算法与三重合法性保证证明 -->
 - [X] 优化: `stones/` 重构原理解析，详述分块循环矩阵构造算法 $A = \begin{pmatrix} I_k + P_k & 0 \\ I_k & I_k \end{pmatrix}$、坐标通式、三重数学保证（无格重叠、行和全为2、列容量容纳3/1枚）及 0-1 矩阵图解
 <!-- codex: 2026-09-09 将 stones 奇偶棋子谜题加入项目主索引 index.html -->
@@ -71,7 +79,15 @@
 <!-- codex: 2026-09-13 将 Dittle 7x7 骰战棋对弈游戏与规则手册双向整合至主页 index.html -->
 - [X] 入口: 在项目根目录 `index.html` 的主游戏网格（紧随“奇偶棋子谜题”）与棋盘游戏专区全面加入 `dittle_game.html` 游戏对弈入口与规则手册双按钮卡片
 - [X] 测试: 在 `tests/test_dittle_game_engine.py` 补充验证 `index.html` 完整包含 `boardgame/tzarr/dittle_game.html` 链接引用，单测全部通过
-
-
-
-
+<!-- codex: 2026-09-14 设定黑白双方初始朝向均为6是top、3面向对面 -->
+- [X] 规则: 更新 `dice_math.js`、`engine.js`、`ui.js` 以及中英文规则小册子，设定双方骰子初始均为 6 顶面朝上、3 面向对面（白方朝北为 3/迎面为 4，黑方朝南为 3/迎面为 3，两军对垒双方 3 互相对视）
+- [X] 测试: 在 `tests/test_dittle_game_engine.py` 补充验证白棋与黑棋 6 朝上、3 面向对面初始状态与翻滚运动学，29 项测试全部通过
+<!-- codex: 2026-09-14 实现向左向右侧向真实3D翻滚、终局复盘检视与可折叠对局记录一键复制 -->
+- [X] 物理与动效: 在 `animator.js` 与 `dittle_components.css` 实现向左向右侧向真实 3D 翻滚动画（`anim-tilt-west` / `anim-tilt-east`）与向前向后纵向翻滚动画，并在落脚点即时呈现新顶面点数；UI 悬浮提示增加前/左/右三向翻滚点数预判
+- [X] 体验: 终局结算弹窗新增“🔍 查看当前棋盘”与右上角关闭按钮，配套 `#gameOverReviewBanner` 终局检视横幅，彻底杜绝强制重新开局，允许玩家自由查看终局棋盘、骰子三面点数并随意切换 2D/3D 视角，随时可再开新局
+- [X] 调试与记录: 新增独立模块 `logger.js` 与右侧可折叠对局记录侧栏（`#gameLogSidebar`），步步追踪走棋方、动作类型（向北/南/东/西翻滚、跳跃）、坐标路径、骰子顶/前/右三面点数变化及碰撞吃子详情，并支持一键复制完整文本记录粘贴发给 AI
+- [X] 测试: 在 `tests/test_dittle_game_engine.py` 补充侧向翻滚运动学、终局检视非阻塞性与记录器导出单测，全套 32 项 pytest 全部通过，且所有文件严格小于 500 行
+<!-- codex: 2026-09-14 完善滑冰棋 (Slide Chess) UI及体验 -->
+- [X] 体验: 修复 2D 棋盘画面跳动与缩放问题，锁定更新逻辑，加入拖拽与滑块控制纯视口缩放
+- [X] 记录: 增加对局日志拷贝、隐藏与每局自动清空功能
+- [X] 入口: 将滑冰棋链接加入根目录 index.html
