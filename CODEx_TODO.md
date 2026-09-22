@@ -1,3 +1,14 @@
+<!-- codex: 2026-09-22 开发青蛙跳跃(jumpfrog)网页游戏，支持规则介绍、表情包皮肤、蛙数扩展、自动教学演示、夸奖鼓励系统 -->
+- [X] 算法设计与单元测试（`boardgame/jumpfrog/jumpfrog_math.py`、`tests/test_jumpfrog_solver.py`），验证 1v1~5v5 最优步数（N=3最优17步且≤20步）与教学演示BFS，7项pytest全部通过
+- [X] 核心状态与求解引擎（`boardgame/jumpfrog/js/game_state.js`, `boardgame/jumpfrog/js/solver.js`），支持双向/单向规则、合法走法判定、死局检测与最优路径计算
+- [X] 表情包皮肤系统（`boardgame/jumpfrog/js/skins.js`），支持荷塘萌蛙、Pepe表情包、柴犬猫猫、魔性黄脸等多种主题与动态表情
+- [X] 夸奖与鼓励激励系统（`boardgame/jumpfrog/js/praise.js`），包含连击夸奖、越蛙赞美、死局/受挫温柔提示、通关星级与彩屑动画
+- [X] Web Audio 实时音效（`boardgame/jumpfrog/js/audio.js`），水滴/跃起/落荷/通关礼乐纯算法零外链生成
+- [X] 自动教学演示控制器（`boardgame/jumpfrog/js/demo.js`），支持播放/暂停/单步快进/倒退与详细战术解说
+- [X] 交互与渲染模块（`boardgame/jumpfrog/js/ui.js`），荷塘莲叶布局、平滑抛物线跳跃动效、提示高亮与撤销重做
+- [X] 页面与样式（`boardgame/jumpfrog/index.html`, `boardgame/jumpfrog/css/style.css`, `boardgame/jumpfrog/css/modal.css`, `boardgame/jumpfrog/css/animations.css`），严格控制单文件 ≤500 行
+- [X] 集成至主页 `index.html`，更新 `.codex/state.json` 与测试验证，12 项 pytest 全绿通过
+
 <!-- codex: 2026-09-14 修复Dittle连跳转弯被"对角线"预检查误杀的校验顺序bug -->
 - [X] 修复: `boardgame/tzarr/dittle_game_files/engine.js` Bug#8 `validateMoveAttempt` 校验顺序错误——"后退/对角线"预检查跑在合法走法表匹配之前，导致连跳中途 90° 转弯（规则 FAQ Q3 明确允许，落点相对起点为斜向位移）被"严禁对角线"误拒；改为先查 `getLegalMovesForDie` 权威匹配（BFS 已正确生成转弯连跳路径），方向预检查降级为非法尝试时的诊断提示；浏览器实测六类走法（转弯连跳/东西北直跳合法、后退/斜向提示正确），新增 `test_bug8_turned_jump_chain_not_blocked_by_diagonal_precheck` 回归测试，42 项 pytest 全部通过；`?v=` 升级 20260914c 防缓存
 <!-- codex: 2026-09-14 修复Dittle骰战棋视觉顶面映射与初始朝向两大顽疾并整体加固 -->

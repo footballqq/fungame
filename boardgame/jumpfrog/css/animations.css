@@ -1,0 +1,139 @@
+/* codex: 2026-09-22 实现青蛙抛物线跳跃、荷叶涟漪、彩屑盛典与夸奖气泡动效 */
+
+/* 荷叶轻微浮动 */
+@keyframes leafFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-4px) scale(1.02); }
+}
+
+/* 青蛙待机微呼吸 */
+@keyframes frogBreathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05, 0.96); }
+}
+
+/* 可移动青蛙招手/提示跳动 */
+@keyframes canMovePulse {
+    0%, 100% {
+        transform: translateY(0);
+        filter: drop-shadow(0 4px 6px rgba(0, 200, 83, 0.4));
+    }
+    50% {
+        transform: translateY(-8px);
+        filter: drop-shadow(0 8px 12px rgba(0, 200, 83, 0.7));
+    }
+}
+
+/* 智能提示金色呼吸光晕 */
+@keyframes hintGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px #ffb300, 0 0 20px #ffb300;
+        transform: scale(1.05);
+    }
+    50% {
+        box-shadow: 0 0 20px #ffd54f, 0 0 35px #ffb300;
+        transform: scale(1.12);
+    }
+}
+
+/* 目标空格涟漪吸入光效 */
+@keyframes targetRipple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(77, 208, 225, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 16px rgba(77, 208, 225, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(77, 208, 225, 0);
+    }
+}
+
+/* 跳跃平滑过渡 */
+.frog-wrapper {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.frog-wrapper.can-move {
+    cursor: pointer;
+    animation: canMovePulse 1.8s infinite ease-in-out;
+}
+
+.frog-wrapper.can-move:hover {
+    transform: translateY(-10px) scale(1.1);
+}
+
+.target-highlight .lotus-leaf {
+    animation: targetRipple 1.2s infinite ease-out;
+    border-color: #00e5ff !important;
+}
+
+.hint-highlight {
+    animation: hintGlow 1.2s infinite ease-in-out !important;
+    border-radius: 50%;
+}
+
+/* 飘浮夸奖弹窗气泡 */
+@keyframes toastSlideUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 20px) scale(0.9);
+    }
+    15% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1.05);
+    }
+    30% {
+        transform: translate(-50%, 0) scale(1);
+    }
+    85% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -20px) scale(0.95);
+    }
+}
+
+.praise-toast.show {
+    display: flex;
+    animation: toastSlideUp 2.4s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+/* 胜利五彩纸屑掉落 */
+@keyframes confettiFall {
+    0% {
+        opacity: 1;
+        top: -10px;
+        transform: translateX(0) rotateZ(0deg);
+    }
+    100% {
+        opacity: 0;
+        top: 105%;
+        transform: translateX(100px) rotateZ(720deg);
+    }
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    top: 0;
+    opacity: 0.9;
+    border-radius: 3px;
+    animation: confettiFall 3.2s ease-in infinite;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* 胜利星星闪烁动画 */
+@keyframes starBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3) rotate(15deg); }
+}
+
+.win-stars {
+    display: inline-block;
+    animation: starBounce 1.5s infinite ease-in-out;
+}

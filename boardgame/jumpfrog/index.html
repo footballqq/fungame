@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- codex: 2026-09-22 创建青蛙跳跃(jumpfrog)网页游戏主入口页面，支持规则图解、表情包皮肤、蛙数扩展、自动教学与夸奖系统 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青蛙跳跃 · 荷塘智力换位大挑战</title>
+    <link rel="stylesheet" href="css/animations.css?v=20260922">
+    <link rel="stylesheet" href="css/modal.css?v=20260922">
+    <link rel="stylesheet" href="css/style.css?v=20260922">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 顶栏导航与工具 -->
+        <header class="header-bar">
+            <div class="header-title">
+                <h1>🐸 荷塘跃迁 · 青蛙跳跃</h1>
+                <p>智力换位大挑战 · 黑白对调 · 考验20步极限！</p>
+            </div>
+            <div class="header-tools">
+                <button id="btnRules" class="btn-tool" title="查看游戏规则与原题">📜 规则</button>
+                <button id="btnSkins" class="btn-tool" title="更换青蛙表情包皮肤">🎨 表情包</button>
+                <button id="btnSettings" class="btn-tool" title="扩展青蛙数量与模式">⚙️ 难度设置</button>
+                <button id="btnToggleAudio" class="btn-tool" title="开启或静音音效">🔊 音效: 开</button>
+            </div>
+        </header>
+
+        <!-- 步数与目标统计卡片 -->
+        <section class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-label">当前步数</span>
+                <span id="moveCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">原题目标挑战</span>
+                <span id="stepLimit" class="stat-value highlight">20 步内</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">理论最少步数</span>
+                <span id="optimalSteps" class="stat-value">17 步</span>
+            </div>
+        </section>
+
+        <!-- 获胜目标预览提示 -->
+        <div class="target-preview-bar">
+            <span class="target-badge">🎯 终局目标</span>
+            <span id="targetDesc">将所有白蛙与黑蛙彻底互换位置，最左侧空格保持为空！</span>
+        </div>
+
+        <!-- 荷塘棋盘主体 -->
+        <main class="pond-stage">
+            <div id="pondSlots" class="pond-slots">
+                <!-- 由 ui.js 动态渲染荷叶与青蛙 -->
+            </div>
+        </main>
+
+        <!-- 玩家交互主操作栏 -->
+        <div class="action-controls">
+            <button id="btnUndo" class="btn-action btn-undo">↩️ 撤销一步</button>
+            <button id="btnHint" class="btn-action btn-hint">💡 智能提示</button>
+            <button id="btnReset" class="btn-action btn-reset">🔄 重新开始</button>
+            <button id="btnToggleDemo" class="btn-action btn-demo">🎓 自动教学演示</button>
+        </div>
+
+        <!-- 自动教学演示控制台 (折叠面板) -->
+        <section id="demoPanel" class="demo-panel hidden">
+            <div class="demo-header">
+                <span>🎓 自动教学演示课堂</span>
+                <span id="demoStatus">准备就绪</span>
+            </div>
+            <div class="demo-controls-row">
+                <button id="btnDemoPlay" class="btn-demo-ctrl">▶ 播放</button>
+                <button id="btnDemoPrev" class="btn-demo-ctrl">⏮ 上一步</button>
+                <button id="btnDemoNext" class="btn-demo-ctrl">⏭ 下一步</button>
+                <label style="font-size: 0.85rem; color: #512da8; margin-left: 4px;">
+                    速度:
+                    <select id="demoSpeedSelect" style="border-radius: 6px; padding: 2px 4px;">
+                        <option value="0.75">慢速 (0.75x)</option>
+                        <option value="1" selected>正常 (1.0x)</option>
+                        <option value="1.5">快速 (1.5x)</option>
+                        <option value="2">超快 (2.0x)</option>
+                    </select>
+                </label>
+                <button id="btnDemoExit" class="btn-demo-ctrl" style="margin-left: auto; color: #c62828;">✕ 关闭教学</button>
+            </div>
+            <div id="demoExplain" class="demo-explain-card">
+                点击播放，青蛙将逐步演示以最少步数达成目标的全部精妙走位。
+            </div>
+        </section>
+
+        <!-- 吉祥物与夸奖鼓励栏 -->
+        <footer class="mascot-section">
+            <div class="mascot-avatar">🐸</div>
+            <div id="mascotText" class="mascot-speech">
+                呱！欢迎来到荷塘！点击可以移动的青蛙试一试，看看你能否在20步内搞定！✨
+            </div>
+        </footer>
+    </div>
+
+    <!-- 浮动夸奖轻提示 -->
+    <div id="praiseToast" class="praise-toast"></div>
+
+    <!-- 规则说明模态弹窗 -->
+    <div id="ruleModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>📜 游戏规则与原题介绍</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <img src="jumpfrog.jpg" alt="青蛙跳跃原题插图" class="rule-img-preview" title="迎春杯/经典数学益智题图">
+            <div class="rule-content">
+                <p><strong>【题目背景】</strong> 本题出自经典益智数学思维题（题图如上）：6只训练有素的白青蛙和黑青蛙学会了一种奇妙的本领。</p>
+                <p><strong>【基本移动】</strong></p>
+                <ul>
+                    <li>1. <strong>平移步</strong>：青蛙可以跳到任意一个相邻的空方格（没有青蛙）中。</li>
+                    <li>2. <strong>飞跃步</strong>：也可以越过紧邻的一只青蛙，跳到另一侧的空方格中。</li>
+                </ul>
+                <p><strong>【获胜条件】</strong> 经过若干次跳跃后，原来是白青蛙的位置换成了黑青蛙，原来是黑青蛙的位置换成了白青蛙，而空着的方格仍然空着，则判定胜利！</p>
+                <p><strong>【极限挑战】</strong> 题图原题要求必须在 <strong>20 步以内（含 20 步）</strong> 完成！通过数学广度优先搜索验证，该布局的绝对理论极限为 <strong>17 步</strong>！</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 表情包皮肤选择弹窗 -->
+    <div id="skinModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>🎨 选择青蛙表情包皮肤</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="skin-grid">
+                <div class="skin-card active" data-skin="classic_frog">
+                    <h3>荷塘萌蛙 🐸</h3>
+                    <p style="font-size:0.8rem; color:#666;">原版白蛙与黑蛙（还原题图画风）</p>
+                    <div class="skin-preview-row">🟢 ⚪ ⚫</div>
+                </div>
+                <div class="skin-card" data-skin="meme_pepe">
+                    <h3>Pepe 表情包 🥳</h3>
+                    <p style="font-size:0.8rem; color:#666;">搞怪喜悦蛙 vs 墨镜大佬</p>
+                    <div class="skin-preview-row">🤪 🕶️</div>
+                </div>
+                <div class="skin-card" data-skin="pet_party">
+                    <h3>柴犬 vs 酷猫 🐶🐱</h3>
+                    <p style="font-size:0.8rem; color:#666;">元气柴柴与暗夜酷猫</p>
+                    <div class="skin-preview-row">🐕 🐈‍⬛</div>
+                </div>
+                <div class="skin-card" data-skin="emoji_fun">
+                    <h3>魔性黄脸表情 😊😈</h3>
+                    <p style="font-size:0.8rem; color:#666;">经典滑稽与小恶魔</p>
+                    <div class="skin-preview-row">😏 😈</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 游戏设置与扩展青蛙数量弹窗 -->
+    <div id="settingsModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>⚙️ 游戏设置与青蛙数量扩展</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label for="settingWhiteFrogs">白蛙数量 (1 ~ 5 只):</label>
+                    <input type="number" id="settingWhiteFrogs" min="1" max="5" value="3">
+                </div>
+                <div class="setting-group">
+                    <label for="settingBlackFrogs">黑蛙数量 (1 ~ 5 只):</label>
+                    <input type="number" id="settingBlackFrogs" min="1" max="5" value="3">
+                </div>
+                <div class="setting-group">
+                    <label for="settingEmptyPos">初始空格位置:</label>
+                    <select id="settingEmptyPos">
+                        <option value="left" selected>最左侧（原题布局：空格+白蛙+黑蛙）</option>
+                        <option value="center">中间（经典对称：白蛙+空格+黑蛙）</option>
+                        <option value="right">最右侧（白蛙+黑蛙+空格）</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label for="settingAllowBack">允许双向移动（自由跳跃模式）:</label>
+                    <input type="checkbox" id="settingAllowBack" checked>
+                </div>
+                <p style="font-size:0.82rem; color:#777; margin-top:8px;">
+                    注：勾选“允许双向移动”为原题规则；取消勾选则为经典单向模式（白蛙只准右行，黑蛙只准左行，一旦两同色青蛙并排可能陷入死局）。
+                </p>
+                <div style="margin-top: 16px; text-align: right;">
+                    <button id="btnApplySettings" class="btn-action btn-hint" style="padding:8px 20px;">应用设置并开新局</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 胜利庆祝弹窗 -->
+    <div id="winModal" class="modal-overlay hidden">
+        <div id="confettiContainer"></div>
+        <div class="modal-card" style="text-align:center;">
+            <div class="win-content">
+                <div class="win-trophy">🏆</div>
+                <div id="winStars" class="win-stars">⭐⭐⭐</div>
+                <div id="winBadge" class="win-badge">荷塘神算子 · 极限大师</div>
+                <div style="font-size: 1.1rem; color: #1b5e20;">
+                    通关步数: <strong id="winSteps" style="font-size:1.6rem; color:#e65100;">17</strong> 步
+                </div>
+                <p id="winText" class="win-text">
+                    太不可思议了！你以理论极限最少步数完成了挑战！
+                </p>
+                <div style="margin-top: 12px; display: flex; justify-content: center; gap: 10px;">
+                    <button id="btnWinRestart" class="btn-action btn-reset">再来一局 🔄</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 脚本引用 -->
+    <script src="js/game_state.js?v=20260922"></script>
+    <script src="js/solver.js?v=20260922"></script>
+    <script src="js/skins.js?v=20260922"></script>
+    <script src="js/audio.js?v=20260922"></script>
+    <script src="js/praise.js?v=20260922"></script>
+    <script src="js/demo.js?v=20260922"></script>
+    <script src="js/ui.js?v=20260922"></script>
+</body>
+</html>

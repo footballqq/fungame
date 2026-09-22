@@ -1,0 +1,385 @@
+/* codex: 2026-09-22 实现青蛙跳跃荷塘视觉主题、响应式棋盘与控制面板样式（弹窗已拆分至modal.css） */
+
+:root {
+    --bg-water: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+    --card-bg: rgba(255, 255, 255, 0.94);
+    --primary-color: #2e7d32;
+    --primary-hover: #1b5e20;
+    --accent-color: #ff9800;
+    --text-main: #263238;
+    --text-muted: #546e7a;
+    --leaf-color: #43a047;
+    --leaf-edge: #2e7d32;
+    --empty-slot-bg: rgba(255, 255, 255, 0.25);
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --border-radius: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg-water);
+    min-height: 100vh;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px 8px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 960px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    backdrop-filter: blur(12px);
+}
+
+/* 顶栏 */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 2px solid #e0f2f1;
+    padding-bottom: 14px;
+}
+
+.header-title h1 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-title p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.header-tools {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-tool {
+    background: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    color: #2e7d32;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-tool:hover {
+    background: #c8e6c9;
+    transform: translateY(-2px);
+}
+
+/* 统计数据栏 */
+.stats-bar {
+    display: flex;
+    justify-content: space-around;
+    background: #f1f8e9;
+    border: 1px solid #dcedc8;
+    border-radius: 12px;
+    padding: 12px;
+    gap: 10px;
+    text-align: center;
+}
+
+.stat-item .stat-label {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+.stat-item .stat-value {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+.stat-item .stat-value.highlight {
+    color: #e65100;
+}
+
+/* 目标对比条 */
+.target-preview-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #e0f2f1;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: #004d40;
+}
+
+.target-badge {
+    font-weight: bold;
+    background: #00796b;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+}
+
+/* 荷塘棋盘容器 */
+.pond-stage {
+    background: radial-gradient(circle, #80deea 0%, #26a69a 80%, #00796b 100%);
+    border-radius: 20px;
+    padding: 30px 16px;
+    box-shadow: inset 0 4px 16px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow-x: auto;
+    border: 4px solid #80cbc4;
+}
+
+.pond-slots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-width: max-content;
+    padding: 10px 0;
+}
+
+/* 单个荷叶格子 */
+.pond-slot {
+    width: 84px;
+    height: 84px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.lotus-leaf {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #66bb6a 30%, #388e3c 100%);
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    border: 3px solid #81c784;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 4px;
+}
+
+/* 荷叶豁口纹理 */
+.lotus-leaf::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 14px solid #26a69a;
+    transform: translateX(-50%);
+}
+
+.slot-number {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* 空格状态 */
+.pond-slot.empty-slot .lotus-leaf {
+    background: radial-gradient(circle, #a5d6a7 20%, #4caf50 90%);
+    opacity: 0.65;
+    border-style: dashed;
+}
+
+/* 青蛙元素包装 */
+.frog-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 76px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frog-avatar-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frog-svg {
+    width: 68px;
+    height: 68px;
+    filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.25));
+}
+
+.meme-face {
+    font-size: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.meme-sub {
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    margin-top: 2px;
+}
+
+/* 控制按钮栏 */
+.action-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    padding: 11px 22px;
+    border-radius: 24px;
+    font-size: 0.96rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-undo { background: #e0e0e0; color: #424242; }
+.btn-undo:hover { background: #d6d6d6; }
+
+.btn-hint { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
+.btn-hint:hover { background: #ffe0b2; }
+
+.btn-reset { background: #ffebee; color: #c62828; border: 1px solid #ffcdd2; }
+.btn-reset:hover { background: #ffcdd2; }
+
+.btn-demo { background: #e8eaf6; color: #283593; border: 1px solid #c5cae9; }
+.btn-demo:hover { background: #c5cae9; }
+
+/* 教学演示面板 */
+.demo-panel {
+    background: #ede7f6;
+    border: 2px solid #b39ddb;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.demo-panel.hidden { display: none; }
+
+.demo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #4527a0;
+}
+
+.demo-controls-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-demo-ctrl {
+    padding: 6px 12px;
+    border-radius: 16px;
+    border: 1px solid #9575cd;
+    background: white;
+    color: #512da8;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.btn-demo-ctrl:hover { background: #d1c4e9; }
+
+.demo-explain-card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #311b92;
+    border-left: 4px solid #7e57c2;
+}
+
+/* 吉祥物导师鼓励栏 */
+.mascot-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #f1f8e9;
+    border: 1px solid #c5e1a5;
+    border-radius: 14px;
+    padding: 12px 18px;
+}
+
+.mascot-avatar {
+    font-size: 2.2rem;
+    animation: leafFloat 3s infinite ease-in-out;
+}
+
+.mascot-speech {
+    font-size: 0.92rem;
+    color: #2e7d32;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .game-container { padding: 16px 12px; }
+    .pond-slot { width: 62px; height: 62px; }
+    .lotus-leaf { width: 58px; height: 58px; }
+    .frog-wrapper { width: 56px; height: 56px; }
+    .frog-svg { width: 50px; height: 50px; }
+    .meme-face { font-size: 1.7rem; }
+    .btn-action { padding: 9px 14px; font-size: 0.88rem; }
+}
