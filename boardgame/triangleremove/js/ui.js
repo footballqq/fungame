@@ -70,6 +70,12 @@
         });
       }
 
+      // 辅助作弊：点三角形数切换
+      const btnToggleDegrees = document.getElementById('btnToggleDegrees');
+      if (btnToggleDegrees) {
+        btnToggleDegrees.addEventListener('click', () => this.toggleDegreesAssist());
+      }
+
       // 重置棋盘
       document.getElementById('btnReset').addEventListener('click', () => {
         this.engine.clearRemoved();
@@ -81,50 +87,33 @@
         this.updateUI();
       });
 
-      // 提交判定
-      document.getElementById('btnCheck').addEventListener('click', () => {
-        this.checkCurrentSolution();
-      });
+      const on = (id, fn) => { const el = document.getElementById(id); if (el) el.addEventListener('click', fn); };
+      on('btnCheck', () => this.checkCurrentSolution());
+      on('btnAnswerDemo', () => this.openAnswerDemo());
+      on('btnTeaching', () => this.openTeachingModal());
+      on('btnStory', () => this.openStoryModal());
+      on('btnHistory', () => this.openHistoryModal());
+      on('btnRules', () => this.openModal('modalRules'));
+      on('btnBookmark', () => this.promptBookmark());
+      on('btnDemoPlay', () => this.demo.togglePlay());
+      on('btnDemoPrev', () => this.demo.step(-1));
+      on('btnDemoNext', () => this.demo.step(1));
+      on('btnDemoReset', () => this.demo.open());
+      on('btnDemoClose', () => this.demo.close());
+      on('btnTeachReturn', () => this.openTeachingModal());
+      on('btnTeachExit', () => this._hideTeachBanner());
+      on('btnTeachPrev', () => this.updateTeachingStep(this.teaching.currentStep - 1));
+      on('btnTeachNext', () => this.updateTeachingStep(this.teaching.currentStep + 1));
+      on('btnStoryPrev', () => this.storyPrev());
+      on('btnStoryNext', () => this.storyNext());
+      on('btnPrevTri', () => this.navFocusedTriangle(-1));
+      on('btnNextTri', () => this.navFocusedTriangle(1));
 
-      // 答案演示、启发式教学、剧情模式、历史记录、规则图解、收藏解法
-      document.getElementById('btnAnswerDemo').addEventListener('click', () => this.openAnswerDemo());
-      document.getElementById('btnTeaching').addEventListener('click', () => this.openTeachingModal());
-      document.getElementById('btnStory').addEventListener('click', () => this.openStoryModal());
-      document.getElementById('btnHistory').addEventListener('click', () => this.openHistoryModal());
-      document.getElementById('btnRules').addEventListener('click', () => this.openModal('modalRules'));
-      document.getElementById('btnBookmark').addEventListener('click', () => this.promptBookmark());
+      const demoSel = document.getElementById('demoSolSelect');
+      if (demoSel) demoSel.addEventListener('change', (e) => this.demo.setSolutionIndex(parseInt(e.target.value, 10)));
 
-      // 答案演示控制按钮
-      document.getElementById('btnDemoPlay').addEventListener('click', () => this.demo.togglePlay());
-      document.getElementById('btnDemoPrev').addEventListener('click', () => this.demo.step(-1));
-      document.getElementById('btnDemoNext').addEventListener('click', () => this.demo.step(1));
-      document.getElementById('btnDemoReset').addEventListener('click', () => this.demo.open());
-      document.getElementById('btnDemoClose').addEventListener('click', () => this.demo.close());
-      document.getElementById('demoSolSelect').addEventListener('change', (e) => {
-        this.demo.setSolutionIndex(parseInt(e.target.value, 10));
-      });
-
-      // 教学横幅返回与恢复
-      document.getElementById('btnTeachReturn').addEventListener('click', () => this.openTeachingModal());
-      document.getElementById('btnTeachExit').addEventListener('click', () => this._hideTeachBanner());
-
-
-      // 教学弹窗上下步
-      document.getElementById('btnTeachPrev').addEventListener('click', () => {
-        this.updateTeachingStep(this.teaching.currentStep - 1);
-      });
-      document.getElementById('btnTeachNext').addEventListener('click', () => {
-        this.updateTeachingStep(this.teaching.currentStep + 1);
-      });
-
-      // 剧情弹窗上下步
-      document.getElementById('btnStoryPrev').addEventListener('click', () => this.storyPrev());
-      document.getElementById('btnStoryNext').addEventListener('click', () => this.storyNext());
-
-      // 剩余三角形排查导航（上一个 / 下一个 / 清空聚焦）
-      document.getElementById('btnPrevTri').addEventListener('click', () => this.navFocusedTriangle(-1));
-      document.getElementById('btnNextTri').addEventListener('click', () => this.navFocusedTriangle(1));
-      document.getElementById('btnClearFocus').addEventListener('click', () => {
+      // 剩余三角形聚焦清空
+      on('btnClearFocus', () => {
         this.canvas.setFocusedTriangle(null);
         this.focusedTriangleIndex = -1;
         this.updateFocusNavUI();
@@ -391,6 +380,17 @@
       this.canvas.setDisjointMode(false);
       this.canvas.setFocusedTriangle(null);
       this.canvas.draw();
+    }
+
+    toggleDegreesAssist() {
+      const btn = document.getElementById('btnToggleDegrees');
+      const shown = this.canvas.toggleDegreesDisplay();
+      if (btn) {
+        btn.classList.toggle('active', shown);
+        btn.textContent = shown ? '🎯 点三角形数: 开' : '🎯 点三角形数: 关';
+      }
+      this.audio.playTap();
+      return shown;
     }
 
     _showTeachBanner(text) {

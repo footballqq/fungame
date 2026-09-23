@@ -427,6 +427,9 @@
     padding: 9px 6px;
     font-size: 12px;
   }
+  .board-actions #btnBookmark {
+    grid-column: span 2;
+  }
   .level-info-card {
     padding: 10px 12px;
   }

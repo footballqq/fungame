@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>星芒阵封印 · 15点阵正三角形极值解谜</title>
-  <link rel="stylesheet" href="css/style.css?v=20260923b">
-  <link rel="stylesheet" href="css/board.css?v=20260923b">
-  <link rel="stylesheet" href="css/modal.css?v=20260923b">
+  <link rel="stylesheet" href="css/style.css?v=20260923c">
+  <link rel="stylesheet" href="css/board.css?v=20260923c">
+  <link rel="stylesheet" href="css/modal.css?v=20260923c">
 </head>
 <body>
   <!-- 顶部导航 -->
@@ -115,11 +115,12 @@
 
         <div class="canvas-wrapper">
           <canvas id="triangleCanvas"></canvas>
-          <div class="canvas-hint">💡 点击星石即可熄灭/点亮 · 实时连线指出剩余正三角形</div>
+          <div class="canvas-hint" id="canvasHint">💡 点击星石即可熄灭/点亮 · 连线实时排查 · 可开启【🎯 点三角形数】作弊辅助</div>
         </div>
 
         <div class="board-actions">
           <button class="btn btn-primary" id="btnToggleLines">⚡ 连线已开启</button>
+          <button class="btn btn-subtle" id="btnToggleDegrees" title="辅助作弊：显示每个点当前决定的正三角形数（影响权重/超图度数）">🎯 点三角形数: 关</button>
           <button class="btn btn-secondary" id="btnCheck">🔍 提交判定</button>
           <button class="btn btn-subtle" id="btnReset">🔄 重置星阵</button>
           <button class="btn btn-subtle" id="btnBookmark">⭐ 收藏当前解法</button>
@@ -266,15 +267,15 @@
   </div>
 
   <!-- 脚本载入 -->
-  <script src="js/config.js?v=20260923b"></script>
-  <script src="js/engine.js?v=20260923b"></script>
-  <script src="js/audio.js?v=20260923b"></script>
-  <script src="js/canvas.js?v=20260923b"></script>
-  <script src="js/story.js?v=20260923b"></script>
-  <script src="js/teaching.js?v=20260923b"></script>
-  <script src="js/history.js?v=20260923b"></script>
-  <script src="js/demo_player.js?v=20260923b"></script>
-  <script src="js/ui.js?v=20260923b"></script>
+  <script src="js/config.js?v=20260923c"></script>
+  <script src="js/engine.js?v=20260923c"></script>
+  <script src="js/audio.js?v=20260923c"></script>
+  <script src="js/canvas.js?v=20260923c"></script>
+  <script src="js/story.js?v=20260923c"></script>
+  <script src="js/teaching.js?v=20260923c"></script>
+  <script src="js/history.js?v=20260923c"></script>
+  <script src="js/demo_player.js?v=20260923c"></script>
+  <script src="js/ui.js?v=20260923c"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       window.gameUI = new GameUI();

@@ -1,16 +1,17 @@
 {
-  "current_task": "正三角形点阵移除(triangleremove)答案演示与教学去遮挡化重构（已完成）",
+  "current_task": "正三角形点阵移除(triangleremove)点度数作弊辅助与超图度数教学系统（已完成）",
   "last_changes": [
     "boardgame/triangleremove/index.html",
     "boardgame/triangleremove/css/board.css",
-    "boardgame/triangleremove/js/demo_player.js",
+    "boardgame/triangleremove/js/canvas.js",
     "boardgame/triangleremove/js/ui.js",
+    "boardgame/triangleremove/js/teaching.js",
     "tests/test_triangle_game.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 与 git push 推送答案演示去遮挡化成果"
+    "git commit 与 git push 推送点度数作弊辅助功能"
   ],
-  "notes": "解决全屏遮罩导致演示看不见棋盘的问题：移除阻塞式 modalAnswer 模态窗，改为在棋盘卡片内直接嵌入半透明毛玻璃停靠面板 #demoDockPanel 与 #teachDockBanner。演示时无需遮挡画布，用户可直接观察星石被移除/复原、粒子爆发以及 35 个正三角形连线被逐一消除的动态过程；支持 3 组最优解切换、单步/播放控制与讲解提示。"
+  "notes": "新增辅助作弊功能与超图度数教学：1. 控制栏新增【🎯 点三角形数】切换按钮；2. canvas.js 在星石右上角动态绘制度数徽标（红≥7高危交汇点、黄≥4中频、蓝<4、绿0已安全）；3. 随着玩家移除星石，周边点的剩余正三角形数实时递减，归 0 即剪枝；4. 启发式教学第3阶深度解析点度数（内圈3个中心点度数高达9，边中点8，边其余点7，顶角4，总度数105/3=35，证明最优解必全取3个中心点）；全套 65 项单测全绿通过。"
 }

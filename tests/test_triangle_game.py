@@ -171,6 +171,7 @@ def test_index_html_elements():
     # 验证关键元素
     assert '<canvas id="triangleCanvas">' in content
     assert 'id="btnToggleLines"' in content
+    assert 'id="btnToggleDegrees"' in content
     assert 'id="remainingList"' in content
     assert 'id="modalRules"' in content
     assert 'id="modalTeaching"' in content
@@ -181,6 +182,35 @@ def test_index_html_elements():
     # 验证核心 JS 模块完整引入
     for js_file in ["config.js", "engine.js", "audio.js", "canvas.js", "story.js", "teaching.js", "history.js", "demo_player.js", "ui.js"]:
         assert js_file in content
+
+def test_vertex_degrees_mathematical_properties():
+    """测试顶点度数（超图权重）数学特性与动态剩余计算"""
+    pts = generate_lattice(5)
+    tris = find_all_equilateral_triangles(pts)
+    degs = get_vertex_degrees(tris, len(pts))
+
+    # 1. 验证总度数和为 35 * 3 = 105
+    assert sum(degs) == 105
+
+    # 2. 验证3个顶角 (0,0), (4,0), (4,4) 度数严格为 4
+    corners = [0, 10, 14]
+    for c in corners:
+        assert degs[c] == 4
+
+    # 3. 验证3个中心内点 (2,1), (3,1), (3,2) 度数严格为 9（最高度数交汇点）
+    centers = [4, 7, 8]
+    for c in centers:
+        assert degs[c] == 9
+
+    # 4. 验证3条边中点 (2,0), (2,2), (4,2) 度数严格为 8
+    edge_mids = [3, 5, 12]
+    for m in edge_mids:
+        assert degs[m] == 8
+
+    # 5. 验证其余6个边上邻近点度数严格为 7
+    edge_others = [1, 2, 6, 9, 11, 13]
+    for o in edge_others:
+        assert degs[o] == 7
 
 def test_root_index_html_integration():
     """测试主页 index.html 正确链接至新游戏"""

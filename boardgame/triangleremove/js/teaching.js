@@ -88,8 +88,18 @@
                 </div>
               </div>
               <div class="teach-box mt-3">
-                <div class="teach-box-title">🔍 顶点度数（所属正三角形数）分析</div>
-                <p>点阵中心点 (2,1) 属于多达 <strong>12 个正三角形</strong>，是全场枢纽；而角点 (0,0) 只属于 4 个正三角形。即便贪心选度数最大的点，也会因为倾斜三角形与倒立三角形的交叉锁定而留下死角！</p>
+                <div class="teach-box-title">🔍 辅助作弊原理：超图顶点度数（正三角形权重）</div>
+                <p>开启【🎯 点三角形数】后，每个点边上显示的数字即为该点所属的正三角形数量（数学上称<strong>超图度数</strong>）。15点阵度数分布极具规律：</p>
+                <ul>
+                  <li><strong>内圈3个中心点</strong> (2,1)、(3,1)、(3,2) 各属于 <strong>9个</strong> 正三角形（高危交汇点，所有最优解必须包含它们！）</li>
+                  <li><strong>3条边的中点</strong> (2,0)、(2,2)、(4,2) 各属于 <strong>8个</strong> 正三角形</li>
+                  <li><strong>边上其余点</strong> 各属于 <strong>7个</strong> 正三角形</li>
+                  <li><strong>3个尖顶角</strong> (0,0)、(4,0)、(4,4) 仅属于 <strong>4个</strong> 正三角形</li>
+                </ul>
+                <p class="text-muted mt-2">💡 贪心启发策略：优先消灭度数为 9 的核心交汇点能瞬间瓦解大半网络；当某个点数字动态降为 0 时，说明已无三角形依赖它，绝不需要再动它！</p>
+                <div class="teach-actions mt-2">
+                  <button class="btn btn-sm btn-subtle" onclick="window.gameUI.toggleDegreesAssist()">🎯 在棋盘开启/关闭点三角形数徽标</button>
+                </div>
               </div>
               <p class="teach-tip">🎯 答案锁定：既然 ≤ 6 个点均无解，那么最少点数必然<strong>至少为 7 个</strong>！</p>
             `

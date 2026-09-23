@@ -12,6 +12,7 @@
         focusedTriangleId: null,
         highlightedTriangleIds: null, // Set of ids or null
         disjointMode: false,
+        showDegrees: false,
         onPointClick: null
       }, options);
 
@@ -349,6 +350,8 @@
 
     _drawStarNodes(ctx) {
       const pts = this.pointScreenCoords;
+      const showDegs = this.options.showDegrees;
+      const degs = showDegs ? this.engine.getVertexDegrees(true) : null;
       const focusedId = this.options.focusedTriangleId;
       const focusedTri = focusedId !== null ? this.engine.triangles.find(t => t.id === focusedId) : null;
       const focusedVertices = focusedTri ? new Set(focusedTri.vertices) : new Set();
@@ -424,6 +427,28 @@
         ctx.textBaseline = 'top';
         ctx.fillText(`(${pt.row},${pt.col})`, pt.x, pt.y + 15);
 
+        // 辅助作弊：绘制该点决定的剩余正三角形数量徽标
+        if (!isRemoved && showDegs && degs) {
+          const deg = degs[pt.id] || 0;
+          const bx = pt.x + 11, by = pt.y - 11;
+          const bg = deg === 0 ? '#10b981' : (deg >= 7 ? '#ef4444' : (deg >= 4 ? '#f59e0b' : '#38bdf8'));
+          ctx.beginPath();
+          ctx.arc(bx, by, 8.5, 0, Math.PI * 2);
+          ctx.fillStyle = bg;
+          ctx.shadowColor = bg;
+          ctx.shadowBlur = 5;
+          ctx.fill();
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = 1;
+          ctx.stroke();
+          ctx.fillStyle = '#ffffff';
+          ctx.font = 'bold 9px monospace, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.shadowBlur = 0;
+          ctx.fillText(deg, bx, by + 0.5);
+        }
+
         ctx.restore();
       }
     }
@@ -449,6 +474,12 @@
     toggleLinesDisplay() {
       this.options.showAllRemainingLines = !this.options.showAllRemainingLines;
       return this.options.showAllRemainingLines;
+    }
+
+    toggleDegreesDisplay() {
+      this.options.showDegrees = !this.options.showDegrees;
+      this.draw();
+      return this.options.showDegrees;
     }
 
     setDisjointMode(active) {
