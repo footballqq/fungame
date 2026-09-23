@@ -116,7 +116,7 @@
       const isMobile = this.cssWidth < 520;
       const paddingX = isMobile ? 18 : 36;
       const paddingTop = isMobile ? 22 : 40;
-      const paddingBottom = isMobile ? 26 : 40;
+      const paddingBottom = isMobile ? 38 : 52;
 
       const availW = Math.max(100, this.cssWidth - paddingX * 2);
       const availH = Math.max(100, this.cssHeight - (paddingTop + paddingBottom));
