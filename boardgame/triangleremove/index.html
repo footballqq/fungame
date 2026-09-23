@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>星芒阵封印 · 15点阵正三角形极值解谜</title>
-  <link rel="stylesheet" href="css/style.css?v=20260923">
-  <link rel="stylesheet" href="css/board.css?v=20260923">
-  <link rel="stylesheet" href="css/modal.css?v=20260923">
+  <link rel="stylesheet" href="css/style.css?v=20260923b">
+  <link rel="stylesheet" href="css/board.css?v=20260923b">
+  <link rel="stylesheet" href="css/modal.css?v=20260923b">
 </head>
 <body>
   <!-- 顶部导航 -->
@@ -65,6 +65,51 @@
           <div class="hud-item">
             <span class="hud-label">剩余正三角形</span>
             <span class="hud-val" id="remainingCount">35</span>
+          </div>
+        </div>
+
+        <!-- 嵌入式答案演示控制面板（直接停靠在棋盘上方，彻底消除遮挡问题） -->
+        <div class="demo-dock-panel" id="demoDockPanel" style="display: none;">
+          <div class="demo-dock-header">
+            <div class="demo-dock-title">
+              <span>🎬 7点最优解分步演示</span>
+              <select class="demo-select" id="demoSolSelect">
+                <option value="0">方案 1：顶部顶角破局 (0,0)</option>
+                <option value="1">方案 2：左下顶角破局 (4,0)</option>
+                <option value="2">方案 3：右下顶角破局 (4,4)</option>
+              </select>
+            </div>
+            <div class="demo-dock-actions">
+              <span class="hud-val" id="demoStepText" style="font-size: 13px;">第 0 / 7 步</span>
+              <button class="btn btn-sm btn-subtle" id="btnDemoClose" title="退出演示">✖ 退出</button>
+            </div>
+          </div>
+
+          <div class="demo-progress-track">
+            <div class="demo-progress-bar" id="demoProgressBar"></div>
+          </div>
+
+          <div class="demo-explanation-box" id="demoExplanation">
+            准备执行 7 点最优破局演示...
+          </div>
+
+          <div class="demo-btn-row">
+            <button class="btn btn-sm btn-subtle" id="btnDemoReset">🔄 重置</button>
+            <button class="btn btn-sm btn-secondary" id="btnDemoPrev">◀ 单步后退</button>
+            <button class="btn btn-sm btn-primary" id="btnDemoPlay">▶️ 自动播放</button>
+            <button class="btn btn-sm btn-secondary" id="btnDemoNext">单步前进 ▶</button>
+          </div>
+        </div>
+
+        <!-- 教学棋盘检视浮动横幅 -->
+        <div class="teach-dock-banner" id="teachDockBanner" style="display: none;">
+          <div class="teach-dock-content">
+            <span>💡</span>
+            <span id="teachDockText">正在棋盘检视</span>
+          </div>
+          <div class="teach-dock-actions">
+            <button class="btn btn-sm btn-primary" id="btnTeachReturn">📖 返回教学</button>
+            <button class="btn btn-sm btn-subtle" id="btnTeachExit">✖ 恢复正常</button>
           </div>
         </div>
 
@@ -180,40 +225,6 @@
     </div>
   </div>
 
-  <!-- 模态框 4：答案演示播放器 -->
-  <div class="modal-overlay" id="modalAnswer">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3>🎬 7点最优解分步动态演示</h3>
-        <button class="modal-close">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="demo-controls-bar">
-          <label>选择方案：</label>
-          <select class="demo-select" id="demoSolSelect">
-            <option value="0">最优解 1：顶部顶角破局 (0,0)</option>
-            <option value="1">最优解 2：左下顶角破局 (4,0)</option>
-            <option value="2">最优解 3：右下顶角破局 (4,4)</option>
-          </select>
-          <span class="hud-val" id="demoStepText" style="font-size: 14px;">第 0 / 7 步</span>
-        </div>
-
-        <div class="demo-progress-track">
-          <div class="demo-progress-bar" id="demoProgressBar"></div>
-        </div>
-
-        <div class="demo-explanation-box" id="demoExplanation">
-          准备执行 7 点最优破局演示...
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-subtle" id="btnDemoReset">🔄 从头开始</button>
-        <button class="btn btn-secondary" id="btnDemoPrev">◀ 单步后退</button>
-        <button class="btn btn-primary" id="btnDemoPlay">▶️ 自动播放</button>
-        <button class="btn btn-secondary" id="btnDemoNext">单步前进 ▶</button>
-      </div>
-    </div>
-  </div>
 
   <!-- 模态框 5：作答历史与收藏 -->
   <div class="modal-overlay" id="modalHistory">
@@ -255,15 +266,15 @@
   </div>
 
   <!-- 脚本载入 -->
-  <script src="js/config.js?v=20260923"></script>
-  <script src="js/engine.js?v=20260923"></script>
-  <script src="js/audio.js?v=20260923"></script>
-  <script src="js/canvas.js?v=20260923"></script>
-  <script src="js/story.js?v=20260923"></script>
-  <script src="js/teaching.js?v=20260923"></script>
-  <script src="js/history.js?v=20260923"></script>
-  <script src="js/demo_player.js?v=20260923"></script>
-  <script src="js/ui.js?v=20260923"></script>
+  <script src="js/config.js?v=20260923b"></script>
+  <script src="js/engine.js?v=20260923b"></script>
+  <script src="js/audio.js?v=20260923b"></script>
+  <script src="js/canvas.js?v=20260923b"></script>
+  <script src="js/story.js?v=20260923b"></script>
+  <script src="js/teaching.js?v=20260923b"></script>
+  <script src="js/history.js?v=20260923b"></script>
+  <script src="js/demo_player.js?v=20260923b"></script>
+  <script src="js/ui.js?v=20260923b"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       window.gameUI = new GameUI();

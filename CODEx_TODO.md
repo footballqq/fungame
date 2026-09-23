@@ -10,6 +10,7 @@
 - [X] 页面结构与自适应样式（`boardgame/triangleremove/index.html`, `boardgame/triangleremove/css/style.css`, `css/board.css`, `css/modal.css`），单文件严格 ≤ 500 行
 - [X] 项目根目录主页 `index.html` 游戏导航集成与全流程单测验证，64项pytest全部绿灯通过
 - [X] 移动端体验专项适配：修复 `touchend` 触摸坐标丢失与手势穿透Bug，优化移动端顶栏横向滑动紧凑排版，动态自适应画布比例与点击命中热区半径，排查雷达面板移动端解除全屏锁定，模态弹窗与2x2按钮自适应小屏，64项单测全绿通过
+- [X] 答案演示与教学检视去遮挡化重构：解决原全屏模态遮罩导致棋盘不可见的问题，改为半透明毛玻璃浮动停靠面板（`#demoDockPanel` 与 `#teachDockBanner`），用户点击“答案演示”或“教学在棋盘检视”时，视野完全聚焦棋盘，实时直观观看星石点亮/熄灭、星石破碎粒子以及剩余三角形连线由 35 条逐条消除至 0 条的动态全过程，64项单测全绿通过
 
 
 - [X] 核心状态与求解引擎（`boardgame/jumpfrog/js/game_state.js`, `boardgame/jumpfrog/js/solver.js`），支持双向/单向规则、合法走法判定、死局检测与最优路径计算

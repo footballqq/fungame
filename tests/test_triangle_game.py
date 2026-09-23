@@ -175,7 +175,7 @@ def test_index_html_elements():
     assert 'id="modalRules"' in content
     assert 'id="modalTeaching"' in content
     assert 'id="modalStory"' in content
-    assert 'id="modalAnswer"' in content
+    assert 'id="demoDockPanel"' in content
     assert 'id="modalHistory"' in content
 
     # 验证核心 JS 模块完整引入

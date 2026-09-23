@@ -99,9 +99,15 @@
       document.getElementById('btnDemoPrev').addEventListener('click', () => this.demo.step(-1));
       document.getElementById('btnDemoNext').addEventListener('click', () => this.demo.step(1));
       document.getElementById('btnDemoReset').addEventListener('click', () => this.demo.open());
+      document.getElementById('btnDemoClose').addEventListener('click', () => this.demo.close());
       document.getElementById('demoSolSelect').addEventListener('change', (e) => {
         this.demo.setSolutionIndex(parseInt(e.target.value, 10));
       });
+
+      // 教学横幅返回与恢复
+      document.getElementById('btnTeachReturn').addEventListener('click', () => this.openTeachingModal());
+      document.getElementById('btnTeachExit').addEventListener('click', () => this._hideTeachBanner());
+
 
       // 教学弹窗上下步
       document.getElementById('btnTeachPrev').addEventListener('click', () => {
@@ -316,24 +322,22 @@
       const cfg = window.GAME_CONFIG.LEVELS[this.currentLevelIndex];
       const removedCount = this.engine.removedPoints.size;
       const isOpt = removedCount <= cfg.minRemove;
-
       const titleEl = document.getElementById('vicTitle');
       const msgEl = document.getElementById('vicMessage');
       if (titleEl && msgEl) {
-        if (isOpt) {
-          titleEl.textContent = '🏆 封印达成：极值数学大师！';
-          msgEl.innerHTML = `太不可思议了！你成功用 <strong>${removedCount} 个点</strong>（理论最少）消除了全部正三角形！完全参透了该阵列的深层几何！`;
-        } else {
-          titleEl.textContent = '🎉 成功封印！继续挑战极值！';
-          msgEl.innerHTML = `你去掉了 <strong>${removedCount} 个点</strong> 成功消灭了所有正三角形！不过理论最少只需 <strong>${cfg.minRemove} 个点</strong> 哦，想挑战最少点数吗？`;
-        }
+        titleEl.textContent = isOpt ? '🏆 封印达成：极值数学大师！' : '🎉 成功封印！继续挑战极值！';
+        msgEl.innerHTML = isOpt
+          ? `太不可思议了！你成功用 <strong>${removedCount} 个点</strong>（理论最少）消除了全部正三角形！`
+          : `你去掉了 <strong>${removedCount} 个点</strong> 成功消灭了所有正三角形！理论最少只需 <strong>${cfg.minRemove} 个点</strong> 哦。`;
       }
       this.openModal('modalVictory');
     }
 
+
     openAnswerDemo() {
+      this.closeAllModals();
+      this._hideTeachBanner();
       this.demo.open();
-      this.openModal('modalAnswer');
     }
 
     applyOptimalSolution(solIndex) {
@@ -370,18 +374,38 @@
         this.audio.playHighlight();
         this.canvas.draw();
       }
+      this.closeAllModals();
+      const names = { upright: '正立正三角形', inverted: '倒立正三角形', tilted: '倾斜正三角形' };
+      this._showTeachBanner(`正在棋盘检视：【${names[cat] || cat}】（点击右侧卡片可切换）`);
     }
 
     showDisjointMode() {
       this.canvas.setDisjointMode(true);
       this.audio.playAlert();
       this.canvas.draw();
+      this.closeAllModals();
+      this._showTeachBanner('正在棋盘检视：【5 组互不相交正三角形】（鸽巢原理下界证明）');
     }
 
     resetBoardView() {
       this.canvas.setDisjointMode(false);
       this.canvas.setFocusedTriangle(null);
       this.canvas.draw();
+    }
+
+    _showTeachBanner(text) {
+      const b = document.getElementById('teachDockBanner');
+      const t = document.getElementById('teachDockText');
+      if (b && t) {
+        t.textContent = text;
+        b.style.display = 'flex';
+      }
+    }
+
+    _hideTeachBanner() {
+      const b = document.getElementById('teachDockBanner');
+      if (b) b.style.display = 'none';
+      this.resetBoardView();
     }
 
     openStoryModal(chapterIndex = null) {
@@ -423,7 +447,6 @@
       this.openModal('modalHistory');
     }
 
-
     loadHistoricalAttempt(removedPoints) {
       if (Array.isArray(removedPoints)) {
         this.engine.setRemovedPoints(removedPoints);
@@ -436,10 +459,7 @@
 
     promptBookmark() {
       const removed = this.engine.getRemovedPoints();
-      if (removed.length === 0) {
-        alert('请先在棋盘上移除点后再进行收藏！');
-        return;
-      }
+      if (removed.length === 0) return alert('请先在棋盘上移除点后再进行收藏！');
       const title = prompt('请输入该解法的名称：', `我的 ${removed.length} 点消除方案`);
       if (title) {
         const cfg = window.GAME_CONFIG.LEVELS[this.currentLevelIndex];
@@ -452,7 +472,7 @@
     deleteBookmark(id) {
       if (confirm('确认删除该条收藏解法吗？')) {
         this.historyStorage.deleteBookmark(id);
-        this._renderBookmarksList();
+        this.historyStorage.renderBookmarks(document.getElementById('bookmarksList'));
       }
     }
 

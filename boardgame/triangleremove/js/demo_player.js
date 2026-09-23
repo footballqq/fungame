@@ -35,7 +35,24 @@
       this.stop();
       this.currentStep = 0;
       this.solutionIndex = 0;
+      const panel = document.getElementById('demoDockPanel');
+      if (panel) {
+        panel.style.display = 'flex';
+        panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      const sel = document.getElementById('demoSolSelect');
+      if (sel) sel.value = '0';
       this._applyStep();
+    }
+
+    close() {
+      this.stop();
+      const panel = document.getElementById('demoDockPanel');
+      if (panel) panel.style.display = 'none';
+      this.engine.clearRemoved();
+      if (typeof this.onStepChange === 'function') {
+        this.onStepChange();
+      }
     }
 
     step(delta) {
@@ -91,6 +108,16 @@
       const sol = this.getCurrentSolution();
       const activePts = sol.slice(0, this.currentStep);
       this.engine.setRemovedPoints(activePts);
+
+      if (this.currentStep > 0 && this.canvas) {
+        const lastPtId = sol[this.currentStep - 1];
+        const sc = this.canvas.pointScreenCoords[lastPtId];
+        if (sc) {
+          this.canvas._spawnParticles(sc.x, sc.y, '#38bdf8');
+        }
+        if (this.audio) this.audio.playRemove();
+      }
+
 
       const stepTextEl = document.getElementById('demoStepText');
       const progressEl = document.getElementById('demoProgressBar');

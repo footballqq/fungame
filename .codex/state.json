@@ -1,15 +1,16 @@
 {
-  "current_task": "正三角形点阵移除(triangleremove)移动端体验专项适配（已完成）",
+  "current_task": "正三角形点阵移除(triangleremove)答案演示与教学去遮挡化重构（已完成）",
   "last_changes": [
-    "boardgame/triangleremove/js/canvas.js",
-    "boardgame/triangleremove/css/style.css",
+    "boardgame/triangleremove/index.html",
     "boardgame/triangleremove/css/board.css",
-    "boardgame/triangleremove/css/modal.css",
+    "boardgame/triangleremove/js/demo_player.js",
+    "boardgame/triangleremove/js/ui.js",
+    "tests/test_triangle_game.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 与 git push 推送移动端适配成果"
+    "git commit 与 git push 推送答案演示去遮挡化成果"
   ],
-  "notes": "完成手机端深度适配：1. 修复 canvas.js 在 touchend 时 e.touches 为空导致的 undefined 报错与点击失效，改为读取 changedTouches 并拦截 450ms 内合成鼠标点击防穿透；2. 增加 touch-action: none 规避手势缩放干扰，手机端扩大星石点击热区至 27px 并收紧左右边距；3. 顶栏在手机屏幕改为横向单行滑动，隐藏冗余副标题；4. 棋盘操作按钮改为手机端 2x2 网格紧凑排列；5. 画布高度由 440px 调整为 clamp(280px, 75vw, 330px)，消除上下空隙；6. 排查雷达在移动端解除 position:sticky 全屏吸顶锁定；7. 模态窗与对比图表适配竖屏单列。全套 64 项单测全绿。"
+  "notes": "解决全屏遮罩导致演示看不见棋盘的问题：移除阻塞式 modalAnswer 模态窗，改为在棋盘卡片内直接嵌入半透明毛玻璃停靠面板 #demoDockPanel 与 #teachDockBanner。演示时无需遮挡画布，用户可直接观察星石被移除/复原、粒子爆发以及 35 个正三角形连线被逐一消除的动态过程；支持 3 组最优解切换、单步/播放控制与讲解提示。"
 }

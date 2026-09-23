@@ -296,6 +296,93 @@
   font-size: 38px;
 }
 
+/* 嵌入式答案演示控制面板（半透明毛玻璃，直接停靠在棋盘上方，完全不遮挡棋盘） */
+.demo-dock-panel {
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.2);
+  animation: slideDown 0.25s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.demo-dock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.demo-dock-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #ffffff;
+}
+
+.demo-dock-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.demo-btn-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.demo-btn-row .btn {
+  flex: 1;
+  min-width: 75px;
+}
+
+/* 教学棋盘检视浮动横幅 */
+.teach-dock-banner {
+  background: rgba(14, 165, 233, 0.22);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.2s ease;
+}
+
+.teach-dock-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.teach-dock-actions {
+  display: flex;
+  gap: 6px;
+}
+
+
 /* 移动端与平板响应式适配 */
 @media (max-width: 1024px) {
   .inspector-panel {
