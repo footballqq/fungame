@@ -413,3 +413,52 @@
   gap: 6px;
   margin-top: 6px;
 }
+
+/* 移动端模态窗自适应 */
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 8px;
+  }
+  .modal-card {
+    max-height: 95vh;
+    border-radius: var(--radius-md);
+  }
+  .modal-header {
+    padding: 12px 14px;
+  }
+  .modal-header h3 {
+    font-size: 15px;
+  }
+  .modal-body {
+    padding: 14px;
+    font-size: 13px;
+    gap: 12px;
+  }
+  .modal-footer {
+    padding: 10px 14px;
+    flex-wrap: wrap;
+  }
+  .modal-footer .btn {
+    flex: 1;
+    min-width: 70px;
+    padding: 7px 8px;
+    font-size: 12px;
+  }
+  .teach-compare {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .teach-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .demo-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .demo-select {
+    width: 100%;
+  }
+}
+

@@ -1,28 +1,15 @@
 {
-  "current_task": "正三角形点阵移除(triangleremove)网页游戏开发（已全部完成）",
+  "current_task": "正三角形点阵移除(triangleremove)移动端体验专项适配（已完成）",
   "last_changes": [
-    "boardgame/triangleremove/index.html",
-    "boardgame/triangleremove/triangle_math.py",
+    "boardgame/triangleremove/js/canvas.js",
     "boardgame/triangleremove/css/style.css",
     "boardgame/triangleremove/css/board.css",
     "boardgame/triangleremove/css/modal.css",
-    "boardgame/triangleremove/js/config.js",
-    "boardgame/triangleremove/js/engine.js",
-    "boardgame/triangleremove/js/audio.js",
-    "boardgame/triangleremove/js/canvas.js",
-    "boardgame/triangleremove/js/story.js",
-    "boardgame/triangleremove/js/teaching.js",
-    "boardgame/triangleremove/js/history.js",
-    "boardgame/triangleremove/js/demo_player.js",
-    "boardgame/triangleremove/js/ui.js",
-    "tests/test_triangle_game.py",
-    "tests/test_stones_parity_puzzle.py",
-    "index.html",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "向用户汇报功能实现、数学原理严密证明、游戏特色与使用指引"
+    "git commit 与 git push 推送移动端适配成果"
   ],
-  "notes": "题图原题为 15 点三角形点阵中至少去掉几个点不再出现以图中点为顶点的正三角形（答案为7）。已实现：启发式教学系统（5阶段探究+鸽巢原理下界证明+阶梯关卡）、星阵守望者故事剧情（打字机对白+角色立绘微标）、连线指出剩余正三角形排查雷达（支持上一个/下一个遍历与独立高亮）、localStorage持久化与历史复盘/自定义收藏、3组7点最优解分步动态演示播放器、纯算法Web Audio音效。所有代码文件单文件严格<=500行，全套64项pytest单元测试全部绿灯通过。"
+  "notes": "完成手机端深度适配：1. 修复 canvas.js 在 touchend 时 e.touches 为空导致的 undefined 报错与点击失效，改为读取 changedTouches 并拦截 450ms 内合成鼠标点击防穿透；2. 增加 touch-action: none 规避手势缩放干扰，手机端扩大星石点击热区至 27px 并收紧左右边距；3. 顶栏在手机屏幕改为横向单行滑动，隐藏冗余副标题；4. 棋盘操作按钮改为手机端 2x2 网格紧凑排列；5. 画布高度由 440px 调整为 clamp(280px, 75vw, 330px)，消除上下空隙；6. 排查雷达在移动端解除 position:sticky 全屏吸顶锁定；7. 模态窗与对比图表适配竖屏单列。全套 64 项单测全绿。"
 }

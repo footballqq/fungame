@@ -26,10 +26,19 @@
     }
 
     _initEvents() {
+      let lastTouchTime = 0;
+
       const getPos = (e) => {
         const rect = this.canvas.getBoundingClientRect();
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        let clientX = e.clientX;
+        let clientY = e.clientY;
+        if (e.changedTouches && e.changedTouches.length > 0) {
+          clientX = e.changedTouches[0].clientX;
+          clientY = e.changedTouches[0].clientY;
+        } else if (e.touches && e.touches.length > 0) {
+          clientX = e.touches[0].clientX;
+          clientY = e.touches[0].clientY;
+        }
         return {
           x: clientX - rect.left,
           y: clientY - rect.top
@@ -46,10 +55,12 @@
       };
 
       const handleClick = (e) => {
+        if (e.type === 'click' && Date.now() - lastTouchTime < 450) {
+          return;
+        }
         const pos = getPos(e);
         const hitId = this._hitTest(pos.x, pos.y);
         if (hitId !== null) {
-          // 触发粒子
           const pt = this.pointScreenCoords[hitId];
           if (pt) {
             this._spawnParticles(pt.x, pt.y, this.engine.removedPoints.has(hitId) ? '#38bdf8' : '#f43f5e');
@@ -67,14 +78,18 @@
       });
       this.canvas.addEventListener('click', handleClick);
 
-      // 移动端触摸适配
+      // 移动端触摸适配：支持 changedTouches 并阻止默认手势干扰
       this.canvas.addEventListener('touchstart', (e) => {
+        lastTouchTime = Date.now();
         handleMove(e);
       }, { passive: true });
+
       this.canvas.addEventListener('touchend', (e) => {
+        lastTouchTime = Date.now();
+        if (e.cancelable) e.preventDefault();
         handleClick(e);
         this.hoveredPointId = null;
-      });
+      }, { passive: false });
 
       window.addEventListener('resize', () => this.resize());
     }
@@ -97,12 +112,13 @@
     _calculateLayout() {
       const pts = this.engine.points;
       const n = this.engine.nRows;
-      const paddingX = 40;
-      const paddingTop = 45;
-      const paddingBottom = 45;
+      const isMobile = this.cssWidth < 520;
+      const paddingX = isMobile ? 18 : 36;
+      const paddingTop = isMobile ? 22 : 40;
+      const paddingBottom = isMobile ? 26 : 40;
 
-      const availW = this.cssWidth - paddingX * 2;
-      const availH = this.cssHeight - (paddingTop + paddingBottom);
+      const availW = Math.max(100, this.cssWidth - paddingX * 2);
+      const availH = Math.max(100, this.cssHeight - (paddingTop + paddingBottom));
 
       // 正三角形高宽比
       const maxColSpan = Math.max(1, n - 1);
@@ -123,7 +139,7 @@
       });
 
       this.spacing = spacing;
-      this.hitRadius = Math.max(22, spacing * 0.32);
+      this.hitRadius = Math.max(isMobile ? 27 : 22, spacing * 0.38);
     }
 
     _hitTest(x, y) {

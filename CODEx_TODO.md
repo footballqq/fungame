@@ -9,6 +9,8 @@
 - [X] 答案演示与交互控制器（`boardgame/triangleremove/js/demo_player.js`, `boardgame/triangleremove/js/ui.js`），支持 3 组最优解单步/连续播放演示、剩余三角形列表交互、撤销重置、帮助弹窗
 - [X] 页面结构与自适应样式（`boardgame/triangleremove/index.html`, `boardgame/triangleremove/css/style.css`, `css/board.css`, `css/modal.css`），单文件严格 ≤ 500 行
 - [X] 项目根目录主页 `index.html` 游戏导航集成与全流程单测验证，64项pytest全部绿灯通过
+- [X] 移动端体验专项适配：修复 `touchend` 触摸坐标丢失与手势穿透Bug，优化移动端顶栏横向滑动紧凑排版，动态自适应画布比例与点击命中热区半径，排查雷达面板移动端解除全屏锁定，模态弹窗与2x2按钮自适应小屏，64项单测全绿通过
+
 
 - [X] 核心状态与求解引擎（`boardgame/jumpfrog/js/game_state.js`, `boardgame/jumpfrog/js/solver.js`），支持双向/单向规则、合法走法判定、死局检测与最优路径计算
 - [X] 表情包皮肤系统（`boardgame/jumpfrog/js/skins.js`），支持荷塘萌蛙、Pepe表情包、柴犬猫猫、魔性黄脸等多种主题与动态表情
