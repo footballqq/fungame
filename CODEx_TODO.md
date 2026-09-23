@@ -1,5 +1,15 @@
-<!-- codex: 2026-09-22 开发青蛙跳跃(jumpfrog)网页游戏，支持规则介绍、表情包皮肤、蛙数扩展、自动教学演示、夸奖鼓励系统 -->
-- [X] 算法设计与单元测试（`boardgame/jumpfrog/jumpfrog_math.py`、`tests/test_jumpfrog_solver.py`），验证 1v1~5v5 最优步数（N=3最优17步且≤20步）与教学演示BFS，7项pytest全部通过
+<!-- codex: 2026-09-23 开发正三角形点阵移除(triangleremove)网页游戏，支持启发式教学、规则图解、星阵故事、连线指示剩余三角形、历史记录、答案演示与Web Audio音效 -->
+- [X] 算法设计与单元测试（`boardgame/triangleremove/triangle_math.py`, `tests/test_triangle_game.py`），全量验证 15 点 35 个正三角形分类、严格 7 点下界与 3 组对称最优解、以及 3/6/10 点阶梯关卡，6项pytest全绿通过
+- [X] 核心数据与几何拓扑引擎（`boardgame/triangleremove/js/config.js`, `boardgame/triangleremove/js/engine.js`），支持点阵拓扑、正/倒/倾斜正三角形判定、实时剩余三角形计算与分类统计
+- [X] 纯算法 Web Audio 实时音效系统（`boardgame/triangleremove/js/audio.js`），支持星石点按、消除、复原、剩余三角形警示连线弦音与胜利华彩
+- [X] 动态画布与剩余正三角形高亮连线渲染引擎（`boardgame/triangleremove/js/canvas.js`），实现星石发光质感、动态连线描绘所有或选定剩余正三角形、动画过渡
+- [X] 启发式教学系统与阶梯关卡（`boardgame/triangleremove/js/teaching.js`），5 阶段教学（认知35个三角形/鸽巢原理5下界/为什么6点不够/7点最优构造/3~15点阶梯关卡）
+- [X] 沉浸式星阵封印故事系统（`boardgame/triangleremove/js/story.js`），星辰守望者剧情、打字机对话、章节推进与角色羁绊
+- [X] 本地持久化与历史复盘系统（`boardgame/triangleremove/js/history.js`），localStorage 保存尝试历史、自定义收藏解法、一键载入棋盘复盘
+- [X] 答案演示与交互控制器（`boardgame/triangleremove/js/demo_player.js`, `boardgame/triangleremove/js/ui.js`），支持 3 组最优解单步/连续播放演示、剩余三角形列表交互、撤销重置、帮助弹窗
+- [X] 页面结构与自适应样式（`boardgame/triangleremove/index.html`, `boardgame/triangleremove/css/style.css`, `css/board.css`, `css/modal.css`），单文件严格 ≤ 500 行
+- [X] 项目根目录主页 `index.html` 游戏导航集成与全流程单测验证，64项pytest全部绿灯通过
+
 - [X] 核心状态与求解引擎（`boardgame/jumpfrog/js/game_state.js`, `boardgame/jumpfrog/js/solver.js`），支持双向/单向规则、合法走法判定、死局检测与最优路径计算
 - [X] 表情包皮肤系统（`boardgame/jumpfrog/js/skins.js`），支持荷塘萌蛙、Pepe表情包、柴犬猫猫、魔性黄脸等多种主题与动态表情
 - [X] 夸奖与鼓励激励系统（`boardgame/jumpfrog/js/praise.js`），包含连击夸奖、越蛙赞美、死局/受挫温柔提示、通关星级与彩屑动画

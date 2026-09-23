@@ -1,26 +1,28 @@
 {
-  "current_task": "青蛙跳跃(jumpfrog)网页游戏开发（已全部完成）",
+  "current_task": "正三角形点阵移除(triangleremove)网页游戏开发（已全部完成）",
   "last_changes": [
-    "boardgame/jumpfrog/index.html",
-    "boardgame/jumpfrog/jumpfrog_math.py",
-    "boardgame/jumpfrog/css/style.css",
-    "boardgame/jumpfrog/css/modal.css",
-    "boardgame/jumpfrog/css/animations.css",
-    "boardgame/jumpfrog/js/game_state.js",
-    "boardgame/jumpfrog/js/solver.js",
-    "boardgame/jumpfrog/js/skins.js",
-    "boardgame/jumpfrog/js/audio.js",
-    "boardgame/jumpfrog/js/praise.js",
-    "boardgame/jumpfrog/js/demo.js",
-    "boardgame/jumpfrog/js/ui.js",
-    "tests/test_jumpfrog_solver.py",
-    "tests/test_jumpfrog_html.py",
+    "boardgame/triangleremove/index.html",
+    "boardgame/triangleremove/triangle_math.py",
+    "boardgame/triangleremove/css/style.css",
+    "boardgame/triangleremove/css/board.css",
+    "boardgame/triangleremove/css/modal.css",
+    "boardgame/triangleremove/js/config.js",
+    "boardgame/triangleremove/js/engine.js",
+    "boardgame/triangleremove/js/audio.js",
+    "boardgame/triangleremove/js/canvas.js",
+    "boardgame/triangleremove/js/story.js",
+    "boardgame/triangleremove/js/teaching.js",
+    "boardgame/triangleremove/js/history.js",
+    "boardgame/triangleremove/js/demo_player.js",
+    "boardgame/triangleremove/js/ui.js",
+    "tests/test_triangle_game.py",
+    "tests/test_stones_parity_puzzle.py",
     "index.html",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "向用户汇报功能实现、原题数学解验证与游戏特色"
+    "向用户汇报功能实现、数学原理严密证明、游戏特色与使用指引"
   ],
-  "notes": "题图原题为 3 白蛙 3 黑蛙 + 左侧空格，目标为交换黑白蛙位置且空格仍在原位，要求 20 步以内。BFS 理论证明最少步数为 17 步。已实现：规则图解模态弹窗、4套表情包皮肤、1v1~5v5可扩展青蛙与空格位置、自动教学演示（带播放速度和战术解说）、夸奖鼓励系统（连击/飞跃赞美/受挫安慰/通关星级）、纯算法Web Audio音效。12项pytest单测全绿通过，所有代码文件严格<=500行。"
+  "notes": "题图原题为 15 点三角形点阵中至少去掉几个点不再出现以图中点为顶点的正三角形（答案为7）。已实现：启发式教学系统（5阶段探究+鸽巢原理下界证明+阶梯关卡）、星阵守望者故事剧情（打字机对白+角色立绘微标）、连线指出剩余正三角形排查雷达（支持上一个/下一个遍历与独立高亮）、localStorage持久化与历史复盘/自定义收藏、3组7点最优解分步动态演示播放器、纯算法Web Audio音效。所有代码文件单文件严格<=500行，全套64项pytest单元测试全部绿灯通过。"
 }

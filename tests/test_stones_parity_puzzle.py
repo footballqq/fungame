@@ -1,5 +1,13 @@
 # codex: 2026-09-09 编写 6x6 奇偶棋盘谜题单测覆盖数学定理、构造解与求解器
+import os
+import sys
 import pytest
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
+
 from stones.parity_math import (
     compute_theoretical_min_pieces,
     validate_board,
@@ -7,6 +15,7 @@ from stones.parity_math import (
     solve_parity_puzzle,
     find_hint,
 )
+
 
 
 def test_theoretical_min_pieces():

@@ -1,0 +1,296 @@
+/* codex: 2026-09-23 星阵画布视口、棋盘HUD指标、剩余正三角形排查雷达与卡片样式 */
+.board-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.level-info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: var(--shadow-sm);
+}
+
+.level-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.level-info-header h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.ongoing {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.status-badge.success {
+  background: rgba(34, 197, 94, 0.18);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.status-badge.optimal {
+  background: rgba(253, 224, 71, 0.2);
+  color: var(--accent-gold);
+  border: 1px solid rgba(253, 224, 71, 0.5);
+  box-shadow: 0 0 12px rgba(253, 224, 71, 0.3);
+}
+
+.level-info-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* 画布主卡片与HUD指标 */
+.canvas-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.hud-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.hud-item {
+  background: rgba(10, 14, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.hud-label {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.hud-val {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hud-val.highlight {
+  color: var(--accent-gold);
+}
+
+.hud-val.danger {
+  color: #f87171;
+}
+
+.canvas-wrapper {
+  width: 100%;
+  height: 440px;
+  background: radial-gradient(circle at 50% 50%, rgba(30, 41, 70, 0.5) 0%, rgba(10, 14, 26, 0.9) 100%);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+#triangleCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.canvas-hint {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+/* 控制按钮栏 */
+.board-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.board-actions .btn {
+  flex: 1;
+  min-width: 110px;
+}
+
+/* 右侧排查雷达面板 */
+.inspector-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100vh - 120px);
+  position: sticky;
+  top: 80px;
+  box-shadow: var(--shadow-md);
+}
+
+.inspector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 10px;
+}
+
+.inspector-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 逐个排查导航条 */
+.inspector-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: rgba(10, 14, 26, 0.5);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.inspector-nav span {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.inspector-nav-btns {
+  display: flex;
+  gap: 4px;
+}
+
+/* 剩余三角形列表卡片 */
+.remaining-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 4px;
+}
+
+.remaining-list::-webkit-scrollbar {
+  width: 5px;
+}
+.remaining-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.tri-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tri-card:hover {
+  background: rgba(30, 41, 65, 0.85);
+  border-color: var(--primary);
+  transform: translateX(-2px);
+}
+
+.tri-card.focused {
+  background: rgba(234, 179, 8, 0.15);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.25);
+}
+
+.tri-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tri-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.tri-idx {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.tri-coords {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.empty-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 40px 16px;
+  color: var(--text-muted);
+}
+
+.empty-icon {
+  font-size: 38px;
+}

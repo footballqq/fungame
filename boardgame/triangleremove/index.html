@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- codex: 2026-09-23 正三角形点阵移除(triangleremove)网页游戏主入口，支持启发式教学、星阵故事、连线排查剩余正三角形、历史记录与答案演示 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>星芒阵封印 · 15点阵正三角形极值解谜</title>
+  <link rel="stylesheet" href="css/style.css?v=20260923">
+  <link rel="stylesheet" href="css/board.css?v=20260923">
+  <link rel="stylesheet" href="css/modal.css?v=20260923">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="top-header">
+    <div class="brand">
+      <a href="../../index.html" class="btn-home" title="返回游戏大厅">🏠 大厅</a>
+      <div class="brand-icon">✨</div>
+      <div class="brand-text">
+        <h1>星芒阵封印 · 三角形极值解谜</h1>
+        <p>15点阵最少去掉几个点不再出现正三角形？</p>
+      </div>
+    </div>
+    <div class="nav-tools">
+      <button class="btn btn-secondary btn-sm" id="btnTeaching">💡 启发式教学</button>
+      <button class="btn btn-secondary btn-sm" id="btnStory">📜 星阵故事</button>
+      <button class="btn btn-secondary btn-sm" id="btnAnswerDemo">🎬 答案演示</button>
+      <button class="btn btn-subtle btn-sm" id="btnRules">📖 规则图解</button>
+      <button class="btn btn-subtle btn-sm" id="btnHistory">🕒 历史/收藏</button>
+      <button class="btn btn-subtle btn-sm" id="btnSound">🔊 音效</button>
+    </div>
+  </header>
+
+  <!-- 主体工作区 -->
+  <main class="main-wrapper">
+    <!-- 左侧棋盘区 -->
+    <div class="board-container">
+      <!-- 关卡阶梯选择条 -->
+      <nav class="level-bar">
+        <button class="level-btn" data-level="1">阶梯 1 (3点)</button>
+        <button class="level-btn" data-level="2">阶梯 2 (6点)</button>
+        <button class="level-btn" data-level="3">阶梯 3 (10点)</button>
+        <button class="level-btn active" data-level="4">原题大考 (15点)</button>
+      </nav>
+
+      <!-- 关卡信息卡片 -->
+      <section class="level-info-card">
+        <div class="level-info-header">
+          <h2 id="levelTitle">关卡 4：十五星宿·终极挑战 (15点)</h2>
+          <span class="status-badge ongoing" id="statusBadge">⚡ 仍有 35 个正三角形共鸣中</span>
+        </div>
+        <p id="levelDesc">题图原题：共 15 个点、35 个正三角形。点击星石将其熄灭/移除，使其不再出现以图中点为顶点的正三角形！</p>
+      </section>
+
+      <!-- 画布与HUD -->
+      <section class="canvas-card">
+        <div class="hud-bar">
+          <div class="hud-item">
+            <span class="hud-label">已熄灭星石</span>
+            <span class="hud-val danger" id="removedCount">0</span>
+          </div>
+          <div class="hud-item">
+            <span class="hud-label">理论极值最少</span>
+            <span class="hud-val highlight" id="minTarget">7</span>
+          </div>
+          <div class="hud-item">
+            <span class="hud-label">剩余正三角形</span>
+            <span class="hud-val" id="remainingCount">35</span>
+          </div>
+        </div>
+
+        <div class="canvas-wrapper">
+          <canvas id="triangleCanvas"></canvas>
+          <div class="canvas-hint">💡 点击星石即可熄灭/点亮 · 实时连线指出剩余正三角形</div>
+        </div>
+
+        <div class="board-actions">
+          <button class="btn btn-primary" id="btnToggleLines">⚡ 连线已开启</button>
+          <button class="btn btn-secondary" id="btnCheck">🔍 提交判定</button>
+          <button class="btn btn-subtle" id="btnReset">🔄 重置星阵</button>
+          <button class="btn btn-subtle" id="btnBookmark">⭐ 收藏当前解法</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- 右侧排查雷达区 -->
+    <aside class="inspector-panel">
+      <div class="inspector-header">
+        <h3>📡 剩余正三角形排查雷达</h3>
+      </div>
+      <div class="inspector-nav">
+        <span id="focusNavText">共 35 个未消除</span>
+        <div class="inspector-nav-btns">
+          <button class="btn btn-sm btn-subtle" id="btnPrevTri" title="上一个">◀</button>
+          <button class="btn btn-sm btn-subtle" id="btnNextTri" title="下一个">▶</button>
+          <button class="btn btn-sm btn-subtle" id="btnClearFocus" title="取消单体高亮">✖</button>
+        </div>
+      </div>
+      <div class="remaining-list" id="remainingList">
+        <!-- 动态渲染剩余三角形卡片 -->
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer-note">
+    <span>奥数思维与极值图论启发式互动 · 原题真题解析与鸽巢原理构造证明</span>
+  </footer>
+
+  <!-- 模态框 1：规则图解 -->
+  <div class="modal-overlay" id="modalRules">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>📖 规则图解与原题背景</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="teach-box">
+          <div class="teach-box-title">【原题呈现】</div>
+          <p>“如图是由 15 个点组成的正三角形点阵，在右图中至少去掉 ( ) 个点，就不会再出现以图中的点为顶点的正三角形了。”</p>
+          <p><strong>选项：A. 6 &nbsp;&nbsp;&nbsp;&nbsp; B. 7 &nbsp;&nbsp;&nbsp;&nbsp; C. 8 &nbsp;&nbsp;&nbsp;&nbsp; D. 9</strong></p>
+        </div>
+        <h4>什么是“以图中的点为顶点的正三角形”？</h4>
+        <p>很多同学常误以为只有正向摆放的小三角形，实际上包含以下三大家族：</p>
+        <ul>
+          <li><strong>正立正三角形：</strong>底边水平，顶点朝上（边长 1、2、3、4，共 20 个）。</li>
+          <li><strong>倒立正三角形：</strong>顶边水平，顶点朝下（边长 1、2，共 7 个）。</li>
+          <li><strong>倾斜正三角形：</strong>各边均不与水平线平行，通过 60°/120° 旋转形成（边长 √3 倾斜 6 个、边长 √7 倾斜 2 个，共 8 个）！</li>
+        </ul>
+        <p class="teach-tip">只要三边长度相等（即内角皆为 60°），就属于必须被消除的目标！</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary modal-close">我知道了</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 模态框 2：启发式教学 -->
+  <div class="modal-overlay" id="modalTeaching">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="teachTitle">💡 启发式递进教学</h3>
+        <span class="status-badge optimal" id="teachBadge">认知全貌</span>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="teach-step-indicator">
+          <div class="step-dot active">1</div>
+          <div class="step-dot">2</div>
+          <div class="step-dot">3</div>
+          <div class="step-dot">4</div>
+          <div class="step-dot">5</div>
+        </div>
+        <div id="teachBody">
+          <!-- 动态加载教学内容 -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-subtle" id="btnTeachPrev">◀ 上一步</button>
+        <button class="btn btn-primary" id="btnTeachNext">下一步 ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 模态框 3：星阵故事剧情 -->
+  <div class="modal-overlay" id="modalStory">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="storyChapter">📜 星阵传说：星辰守望者</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="story-dialogue-wrap">
+          <div class="story-speaker-tag" id="storySpeaker">🧙‍♂️ 艾尔 (星学者学徒)</div>
+          <div class="story-text-body" id="storyText">正在接收星辰信号...</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-subtle" id="btnStoryPrev">上一句</button>
+        <button class="btn btn-primary" id="btnStoryNext">下一句 ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 模态框 4：答案演示播放器 -->
+  <div class="modal-overlay" id="modalAnswer">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>🎬 7点最优解分步动态演示</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="demo-controls-bar">
+          <label>选择方案：</label>
+          <select class="demo-select" id="demoSolSelect">
+            <option value="0">最优解 1：顶部顶角破局 (0,0)</option>
+            <option value="1">最优解 2：左下顶角破局 (4,0)</option>
+            <option value="2">最优解 3：右下顶角破局 (4,4)</option>
+          </select>
+          <span class="hud-val" id="demoStepText" style="font-size: 14px;">第 0 / 7 步</span>
+        </div>
+
+        <div class="demo-progress-track">
+          <div class="demo-progress-bar" id="demoProgressBar"></div>
+        </div>
+
+        <div class="demo-explanation-box" id="demoExplanation">
+          准备执行 7 点最优破局演示...
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-subtle" id="btnDemoReset">🔄 从头开始</button>
+        <button class="btn btn-secondary" id="btnDemoPrev">◀ 单步后退</button>
+        <button class="btn btn-primary" id="btnDemoPlay">▶️ 自动播放</button>
+        <button class="btn btn-secondary" id="btnDemoNext">单步前进 ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 模态框 5：作答历史与收藏 -->
+  <div class="modal-overlay" id="modalHistory">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>🕒 作答历史与解法收藏</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4>⭐ 我的专属收藏解法</h4>
+        <div id="bookmarksList"></div>
+
+        <h4 style="margin-top: 14px;">📜 最近作答记录</h4>
+        <div id="historyList"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-close">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 模态框 6：通关庆贺 -->
+  <div class="modal-overlay" id="modalVictory">
+    <div class="modal-card" style="max-width: 480px; text-align: center;">
+      <div class="modal-header">
+        <h3 id="vicTitle">🏆 恭喜通关！</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" style="align-items: center;">
+        <div style="font-size: 54px; margin: 10px 0;">🌟✨🎊</div>
+        <p id="vicMessage" style="font-size: 15px; color: #ffffff; line-height: 1.6;">
+          所有正三角形已彻底消除！
+        </p>
+      </div>
+      <div class="modal-footer" style="justify-content: center;">
+        <button class="btn btn-primary modal-close">太棒了！</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 脚本载入 -->
+  <script src="js/config.js?v=20260923"></script>
+  <script src="js/engine.js?v=20260923"></script>
+  <script src="js/audio.js?v=20260923"></script>
+  <script src="js/canvas.js?v=20260923"></script>
+  <script src="js/story.js?v=20260923"></script>
+  <script src="js/teaching.js?v=20260923"></script>
+  <script src="js/history.js?v=20260923"></script>
+  <script src="js/demo_player.js?v=20260923"></script>
+  <script src="js/ui.js?v=20260923"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.gameUI = new GameUI();
+    });
+  </script>
+</body>
+</html>
