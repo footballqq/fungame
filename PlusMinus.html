@@ -1,184 +1,232 @@
+<!-- codex: 2026-09-24 适配手机端速算答题体验：内置触控数字小键盘、防原生软键盘遮挡题目、大字号算式与自适应视口排版 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>一位数加减法速算测试</title>
   <style>
     :root {
-      --primary: #4a90e2;
-      --primary-hover: #357abd;
-      --success: #2ecc71;
-      --danger: #e74c3c;
-      --bg: #f5f7fa;
-      --card: #ffffff;
-      --text: #2c3e50;
-      --text-light: #7f8c8d;
+      --primary: #3b82f6; --primary-hover: #2563eb; --primary-light: #eff6ff;
+      --success: #10b981; --danger: #ef4444; --bg: #f8fafc;
+      --card: #ffffff; --text: #1e293b; --text-light: #64748b; --border: #e2e8f0;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
-      font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg); color: var(--text); display: flex; justify-content: center;
+      align-items: center; min-height: 100vh; min-height: 100dvh; padding: 12px; touch-action: manipulation;
     }
     .container {
-      background: var(--card);
-      width: 100%;
-      max-width: 500px;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      text-align: center;
+      background: var(--card); width: 100%; max-width: 480px; padding: 22px 18px; border-radius: 20px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      text-align: center; display: flex; flex-direction: column;
     }
-    h1 { font-size: 1.5rem; margin-bottom: 10px; }
-    .timer {
-      font-size: 1.1rem;
-      color: var(--text-light);
-      margin-bottom: 20px;
-      font-variant-numeric: tabular-nums;
+    @media (max-width: 400px) { .container { padding: 16px 12px; border-radius: 16px; } }
+    .header-bar { margin-bottom: 8px; }
+    h1 { font-size: clamp(1.15rem, 4.5vw, 1.4rem); font-weight: 700; color: #0f172a; line-height: 1.35; }
+    .status-row {
+      display: flex; justify-content: space-between; align-items: center; background: #f1f5f9;
+      padding: 8px 14px; border-radius: 10px; margin: 8px 0 12px 0; font-size: 0.95rem;
+      font-variant-numeric: tabular-nums; color: var(--text-light);
     }
+    .status-item { display: flex; align-items: center; gap: 4px; font-weight: 600; color: var(--text); }
     .btn {
-      padding: 12px 24px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s;
-      margin: 5px;
+      padding: 12px 24px; font-size: 1.05rem; font-weight: 600; border: none; border-radius: 12px;
+      cursor: pointer; transition: all 0.15s ease; touch-action: manipulation; user-select: none;
+      -webkit-user-select: none;
     }
-    .btn-primary { background: var(--primary); color: white; }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary { background: var(--primary); color: white; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
     .btn-primary:hover { background: var(--primary-hover); }
-    .btn-secondary { background: #e0e0e0; color: #333; }
-    .btn-secondary:hover { background: #d0d0d0; }
-    
-    #gameArea { margin-top: 20px; }
-    .problem {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin: 20px 0;
-      letter-spacing: 2px;
-      word-break: break-all;
-    }
-    .input-group {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 15px;
-    }
-    #answerInput {
-      width: 100px;
-      padding: 10px;
-      font-size: 1.2rem;
-      text-align: center;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      outline: none;
-    }
-    #answerInput:focus { border-color: var(--primary); }
-    .progress { color: var(--text-light); font-size: 0.9rem; }
+    .btn-secondary { background: #e2e8f0; color: #334155; }
+    .btn-secondary:hover { background: #cbd5e1; }
 
-    #resultArea { margin-top: 20px; text-align: left; }
+    /* 答题区与题目显示 */
+    #gameArea { display: flex; flex-direction: column; gap: 10px; }
+    .problem-box {
+      background: #f8fafc; border: 2px solid var(--border); border-radius: 14px;
+      padding: 12px 8px; display: flex; flex-direction: column; justify-content: center; min-height: 64px;
+    }
+    .problem-text {
+      font-size: clamp(1.15rem, 5vw, 1.55rem); font-weight: 700; letter-spacing: 1px;
+      color: #1e293b; line-height: 1.45; word-break: break-word;
+    }
+
+    /* 答案输入与显示 */
+    .answer-row { display: flex; justify-content: center; align-items: center; position: relative; }
+    .answer-display {
+      width: 160px; height: 46px; background: #ffffff; border: 2px solid var(--primary);
+      border-radius: 12px; font-size: 1.55rem; font-weight: 700; color: #0f172a;
+      display: flex; align-items: center; justify-content: center; letter-spacing: 2px;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15); cursor: pointer; user-select: none;
+      -webkit-user-select: none;
+    }
+    .answer-placeholder { color: #94a3b8; font-size: 0.95rem; font-weight: 400; letter-spacing: 0; }
+    .cursor {
+      display: inline-block; width: 2px; height: 22px; background: var(--primary);
+      margin-left: 2px; animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    #answerInput { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+
+    /* 自定义触控数字小键盘（置于题目下方，绝不遮挡） */
+    .keypad {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 100%;
+      max-width: 360px; margin: 0 auto; user-select: none; -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    .key-btn {
+      height: 48px; font-size: 1.35rem; font-weight: 600; border: 1px solid #cbd5e1;
+      background: #ffffff; color: #1e293b; border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04); display: flex; align-items: center;
+      justify-content: center; cursor: pointer; touch-action: manipulation;
+      transition: background-color 0.1s, transform 0.08s, box-shadow 0.1s;
+    }
+    .key-btn:active, .key-btn.pressed {
+      background: #e2e8f0; transform: scale(0.95); box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    .key-btn.action-btn { background: #f1f5f9; color: #475569; font-size: 1.1rem; }
+    .key-btn.action-btn:active, .key-btn.action-btn.pressed { background: #e2e8f0; }
+    .key-btn.submit-btn {
+      grid-column: span 3; height: 46px; background: var(--primary); color: #ffffff;
+      border: none; font-size: 1.15rem; font-weight: 700;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.28); margin-top: 2px;
+    }
+    .key-btn.submit-btn:active, .key-btn.submit-btn.pressed {
+      background: var(--primary-hover); transform: scale(0.97);
+    }
+
+    /* 结算结果区 */
+    #resultArea { margin-top: 10px; text-align: left; }
     .stats {
-      background: #f8f9fa;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      text-align: center;
+      background: #f8fafc; border: 1px solid var(--border); padding: 14px;
+      border-radius: 12px; margin-bottom: 14px; text-align: center;
     }
-    .stats p { margin: 5px 0; font-size: 1.05rem; }
-    .details-list { list-style: none; padding: 0; }
+    .stats p { margin: 6px 0; font-size: 1.05rem; }
+    .details-list {
+      list-style: none; padding: 0; max-height: 260px; overflow-y: auto; -webkit-overflow-scrolling: touch;
+    }
     .details-list li {
-      padding: 10px;
-      margin-bottom: 8px;
-      border-radius: 6px;
-      background: #fafafa;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1rem;
+      padding: 9px 12px; margin-bottom: 8px; border-radius: 8px; background: #fafafa;
+      display: flex; justify-content: space-between; align-items: center; font-size: 0.92rem;
+      border-left: 4px solid transparent;
     }
-    .correct { color: var(--success); border-left: 4px solid var(--success); }
-    .wrong { color: var(--danger); border-left: 4px solid var(--danger); }
-    .correct-ans { font-weight: bold; margin-left: 8px; }
-    .time-tag { color: var(--text-light); font-size: 0.85rem; margin-left: auto; padding-left: 10px; }
+    .correct { color: #047857; border-left-color: var(--success) !important; background: #ecfdf5 !important; }
+    .wrong { color: #b91c1c; border-left-color: var(--danger) !important; background: #fef2f2 !important; }
+    .correct-ans { font-weight: bold; margin-left: 6px; }
+    .time-tag { color: var(--text-light); font-size: 0.85rem; margin-left: auto; padding-left: 8px; }
     
     #congrats {
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: var(--success);
-      margin-top: 20px;
-      animation: pop 0.5s ease-out;
+      text-align: center; font-size: 1.5rem; font-weight: bold; color: var(--success);
+      margin: 16px 0; animation: pop 0.4s ease-out;
     }
-    @keyframes pop {
-      0% { transform: scale(0.8); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
+    @keyframes pop { 0% { transform: scale(0.85); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
     .hidden { display: none !important; }
+
+    /* 横屏小屏幕自适应 (防止高度不足，双列并排) */
+    @media (orientation: landscape) and (max-height: 500px) {
+      body { padding: 6px; }
+      .container { max-width: 620px; padding: 10px 14px; }
+      .header-bar { margin-bottom: 4px; }
+      h1 { font-size: 1.05rem; }
+      .status-row { padding: 4px 10px; margin: 4px 0 8px 0; font-size: 0.85rem; }
+      #gameArea { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; }
+      .left-panel { display: flex; flex-direction: column; gap: 6px; }
+      .problem-box { min-height: 48px; padding: 6px; }
+      .problem-text { font-size: 1.1rem; }
+      .answer-display { height: 38px; font-size: 1.3rem; }
+      .keypad { gap: 6px; }
+      .key-btn { height: 36px; font-size: 1.15rem; border-radius: 8px; }
+      .key-btn.action-btn { font-size: 0.95rem; }
+      .key-btn.submit-btn { height: 36px; font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🔢 一位数加减法速算测试（版权花姐姐)</h1>
-    <div class="timer" id="timerDisplay">时间: 0.00s</div>
-    
+    <div class="header-bar">
+      <h1>🔢 一位数加减法速算测试（版权花姐姐）</h1>
+    </div>
+
+    <!-- 顶栏状态信息：时间与题号 -->
+    <div class="status-row" id="statusRow">
+      <div class="status-item">
+        <span>⏱️</span>
+        <span id="timerDisplay">时间: 0.00s</span>
+      </div>
+      <div class="status-item">
+        <span id="progressDisplay">第 1 / 5 题</span>
+      </div>
+    </div>
+
+    <!-- 开始与重试主按钮 -->
     <button class="btn btn-primary" id="startBtn">开始答题</button>
     <button class="btn btn-secondary hidden" id="restartBtn">重来一局</button>
 
+    <!-- 答题游戏区：题目与输入位于上方，小键盘位于下方，绝不遮挡题目 -->
     <div id="gameArea" class="hidden">
-      <div class="problem" id="problemDisplay"></div>
-      <div class="input-group">
-        <input type="text" id="answerInput" inputmode="numeric" placeholder="答案" autocomplete="off">
-        <button class="btn btn-primary" id="submitBtn">提交</button>
+      <div class="left-panel">
+        <div class="problem-box">
+          <div class="problem-text" id="problemDisplay"></div>
+        </div>
+        <div class="answer-row">
+          <div class="answer-display" id="answerDisplay" role="textbox" aria-label="当前输入答案">
+            <span id="answerVal" class="answer-placeholder">输入答案</span>
+            <span class="cursor" id="cursor"></span>
+          </div>
+          <!-- 隐藏但保留的 input 元素，设置 inputmode="none" 与 readonly 杜绝原生软键盘弹出 -->
+          <input type="text" id="answerInput" readonly inputmode="none" autocomplete="off" tabindex="-1">
+        </div>
       </div>
-      <div class="progress" id="progressDisplay">第 1 / 5 题</div>
+
+      <!-- 专属触控数字小键盘 -->
+      <div class="keypad" id="keypad" role="group" aria-label="数字小键盘">
+        <button type="button" class="key-btn" data-key="1">1</button>
+        <button type="button" class="key-btn" data-key="2">2</button>
+        <button type="button" class="key-btn" data-key="3">3</button>
+        <button type="button" class="key-btn" data-key="4">4</button>
+        <button type="button" class="key-btn" data-key="5">5</button>
+        <button type="button" class="key-btn" data-key="6">6</button>
+        <button type="button" class="key-btn" data-key="7">7</button>
+        <button type="button" class="key-btn" data-key="8">8</button>
+        <button type="button" class="key-btn" data-key="9">9</button>
+        <button type="button" class="key-btn action-btn" data-action="toggle-sign" aria-label="正负号切换">± / -</button>
+        <button type="button" class="key-btn" data-key="0">0</button>
+        <button type="button" class="key-btn action-btn" data-action="backspace" aria-label="退格删除">⌫</button>
+        <button type="button" class="key-btn submit-btn" data-action="submit" id="submitBtn">确认提交 ↵</button>
+      </div>
     </div>
 
+    <!-- 结算结果区 -->
     <div id="resultArea" class="hidden">
       <div class="stats" id="statsDisplay"></div>
       <ul class="details-list" id="detailsDisplay"></ul>
-      <div id="congrats" class="hidden">🎉 Congratulations祝贺 🎉</div>
+      <div id="congrats" class="hidden">🎉 恭喜全部答对！太棒了 🎉</div>
     </div>
   </div>
 
   <script>
-    // DOM 元素
-    const startBtn = document.getElementById('startBtn');
-    const restartBtn = document.getElementById('restartBtn');
-    const gameArea = document.getElementById('gameArea');
-    const resultArea = document.getElementById('resultArea');
-    const problemDisplay = document.getElementById('problemDisplay');
-    const answerInput = document.getElementById('answerInput');
-    const submitBtn = document.getElementById('submitBtn');
-    const progressDisplay = document.getElementById('progressDisplay');
-    const timerDisplay = document.getElementById('timerDisplay');
-    const statsDisplay = document.getElementById('statsDisplay');
-    const detailsDisplay = document.getElementById('detailsDisplay');
-    const congratsDisplay = document.getElementById('congrats');
+    // DOM 元素引用与工具函数
+    const $ = (id) => document.getElementById(id);
+    const startBtn = $('startBtn'), restartBtn = $('restartBtn'), gameArea = $('gameArea'),
+      resultArea = $('resultArea'), problemDisplay = $('problemDisplay'), answerDisplay = $('answerDisplay'),
+      answerVal = $('answerVal'), answerInput = $('answerInput'), submitBtn = $('submitBtn'),
+      keypad = $('keypad'), progressDisplay = $('progressDisplay'), timerDisplay = $('timerDisplay'),
+      statsDisplay = $('statsDisplay'), detailsDisplay = $('detailsDisplay'), congratsDisplay = $('congrats');
 
-    // 状态变量
-    let problems = [];
-    let currentIndex = 0;
-    let results = [];
-    let startTime = 0;
-    let problemStartTime = 0;
-    let timerInterval = null;
-    let isPlaying = false;
+    // 答题状态
+    let problems = [], currentIndex = 0, results = [];
+    let startTime = 0, problemStartTime = 0, timerInterval = null;
+    let isPlaying = false, currentInput = '';
 
-    // 生成题目：10个1-9的整数，混合加减
+    // 生成速算题目：10个1-9的整数，9个混合加减号
     function generateProblems() {
       problems = [];
       for (let i = 0; i < 5; i++) {
         const nums = Array.from({ length: 10 }, () => Math.floor(Math.random() * 9) + 1);
         const ops = Array.from({ length: 9 }, () => Math.random() < 0.5 ? '+' : '-');
-        
-        let expr = nums[0].toString();
-        let ans = nums[0];
+        let expr = nums[0].toString(), ans = nums[0];
         for (let j = 0; j < 9; j++) {
           expr += ops[j] + nums[j + 1];
           ans = ops[j] === '+' ? ans + nums[j + 1] : ans - nums[j + 1];
@@ -187,7 +235,29 @@
       }
     }
 
-    // 更新计时器显示
+    // 格式化算式排版，符号间自动填充间距以便手机端清晰阅读
+    function formatExpression(expr) {
+      return expr.replace(/([+-])/g, ' $1 ') + ' = ?';
+    }
+
+    // 刷新答案显示框
+    function updateAnswerDisplay() {
+      if (currentInput === '' || currentInput === '-') {
+        if (currentInput === '-') {
+          answerVal.textContent = '-';
+          answerVal.classList.remove('answer-placeholder');
+        } else {
+          answerVal.textContent = '输入答案';
+          answerVal.classList.add('answer-placeholder');
+        }
+      } else {
+        answerVal.textContent = currentInput;
+        answerVal.classList.remove('answer-placeholder');
+      }
+      answerInput.value = currentInput;
+    }
+
+    // 更新全局耗时计时器
     function updateTimer() {
       const elapsed = (Date.now() - startTime) / 1000;
       timerDisplay.textContent = `时间: ${elapsed.toFixed(2)}s`;
@@ -199,7 +269,6 @@
       currentIndex = 0;
       results = [];
       startTime = Date.now();
-      problemStartTime = Date.now();
       isPlaying = true;
 
       startBtn.classList.add('hidden');
@@ -214,26 +283,55 @@
 
     // 显示当前题目
     function showProblem() {
-      problemDisplay.textContent = `${problems[currentIndex].expression} = ?`;
+      problemDisplay.textContent = formatExpression(problems[currentIndex].expression);
       progressDisplay.textContent = `第 ${currentIndex + 1} / 5 题`;
-      answerInput.value = '';
-      answerInput.focus();
+      currentInput = '';
+      updateAnswerDisplay();
       problemStartTime = Date.now();
+    }
+
+    // 小键盘操作：输入数字、符号切换、退格、清空
+    function appendDigit(digit) {
+      if (!isPlaying || currentInput.length >= 4) return;
+      if (currentInput === '0') currentInput = digit;
+      else if (currentInput === '-0') currentInput = '-' + digit;
+      else currentInput += digit;
+      updateAnswerDisplay();
+      navigator.vibrate?.(8);
+    }
+    function toggleSign() {
+      if (!isPlaying) return;
+      if (currentInput === '') currentInput = '-';
+      else if (currentInput === '-') currentInput = '';
+      else if (currentInput.startsWith('-')) currentInput = currentInput.slice(1);
+      else currentInput = '-' + currentInput;
+      updateAnswerDisplay();
+      navigator.vibrate?.(10);
+    }
+    function backspace() {
+      if (!isPlaying || !currentInput.length) return;
+      currentInput = currentInput.slice(0, -1);
+      updateAnswerDisplay();
+      navigator.vibrate?.(8);
+    }
+    function clearInput() {
+      if (!isPlaying) return;
+      currentInput = '';
+      updateAnswerDisplay();
     }
 
     // 提交答案
     function submitAnswer() {
       if (!isPlaying) return;
-      const val = answerInput.value.trim();
-      if (val === '') {
-        alert('请输入答案！');
+      const val = currentInput.trim();
+      if (val === '' || val === '-') {
+        answerDisplay.style.borderColor = 'var(--danger)';
+        setTimeout(() => { answerDisplay.style.borderColor = 'var(--primary)'; }, 400);
+        navigator.vibrate?.([30, 50, 30]);
         return;
       }
       const userAns = parseInt(val, 10);
-      if (isNaN(userAns)) {
-        alert('请输入有效的整数！');
-        return;
-      }
+      if (isNaN(userAns)) return;
 
       const timeTaken = Date.now() - problemStartTime;
       results.push({
@@ -251,7 +349,7 @@
       }
     }
 
-    // 结束游戏并显示结果
+    // 结束游戏并显示详细成绩
     function endGame() {
       isPlaying = false;
       clearInterval(timerInterval);
@@ -277,7 +375,7 @@
         if (!isCorrect) allCorrect = false;
         const statusClass = isCorrect ? 'correct' : 'wrong';
         const icon = isCorrect ? '✅' : '❌';
-        const correctInfo = isCorrect ? '' : `<span class="correct-ans">正确答案: ${r.correctAns}</span>`;
+        const correctInfo = isCorrect ? '' : `<span class="correct-ans">正确: ${r.correctAns}</span>`;
         
         detailsHTML += `
           <li class="${statusClass}">
@@ -297,21 +395,89 @@
     function restartGame() {
       clearInterval(timerInterval);
       isPlaying = false;
+      currentInput = '';
       timerDisplay.textContent = '时间: 0.00s';
+      progressDisplay.textContent = '第 1 / 5 题';
       resultArea.classList.add('hidden');
       gameArea.classList.add('hidden');
       startBtn.classList.remove('hidden');
       restartBtn.classList.add('hidden');
       congratsDisplay.classList.add('hidden');
+      updateAnswerDisplay();
     }
 
-    // 事件绑定
+    // 触控小键盘事件委托
+    keypad.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn || !isPlaying) return;
+      const key = btn.dataset.key;
+      const action = btn.dataset.action;
+      if (key !== undefined) {
+        appendDigit(key);
+      } else if (action === 'toggle-sign') {
+        toggleSign();
+      } else if (action === 'backspace') {
+        backspace();
+      } else if (action === 'submit') {
+        submitAnswer();
+      }
+    });
+
+    // 键盘按键视觉按压效果
+    function flashKeyButton(selector) {
+      const btn = keypad.querySelector(selector);
+      if (btn) {
+        btn.classList.add('pressed');
+        setTimeout(() => btn.classList.remove('pressed'), 120);
+      }
+    }
+
+    // PC 实体物理键盘支持（0-9、负号、退格、回车）
+    window.addEventListener('keydown', (e) => {
+      if (!isPlaying) return;
+      if (e.key >= '0' && e.key <= '9') {
+        appendDigit(e.key);
+        flashKeyButton(`[data-key="${e.key}"]`);
+        e.preventDefault();
+      } else if (e.key === '-' || e.key === '_') {
+        toggleSign();
+        flashKeyButton('[data-action="toggle-sign"]');
+        e.preventDefault();
+      } else if (e.key === 'Backspace') {
+        backspace();
+        flashKeyButton('[data-action="backspace"]');
+        e.preventDefault();
+      } else if (e.key === 'Enter') {
+        submitAnswer();
+        flashKeyButton('[data-action="submit"]');
+        e.preventDefault();
+      } else if (e.key === 'Escape' || e.key.toLowerCase() === 'c') {
+        clearInput();
+        e.preventDefault();
+      }
+    });
+
+    // 退格键长按清空
+    let backspaceTimer = null;
+    const backspaceBtn = keypad.querySelector('[data-action="backspace"]');
+    if (backspaceBtn) {
+      const startLongPress = () => {
+        backspaceTimer = setTimeout(() => {
+          clearInput();
+          navigator.vibrate?.([20, 30]);
+        }, 500);
+      };
+      const cancelLongPress = () => {
+        if (backspaceTimer) clearTimeout(backspaceTimer);
+      };
+      backspaceBtn.addEventListener('pointerdown', startLongPress);
+      backspaceBtn.addEventListener('pointerup', cancelLongPress);
+      backspaceBtn.addEventListener('pointercancel', cancelLongPress);
+    }
+
+    // 主按钮事件监听
     startBtn.addEventListener('click', startGame);
     restartBtn.addEventListener('click', restartGame);
-    submitBtn.addEventListener('click', submitAnswer);
-    answerInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') submitAnswer();
-    });
   </script>
 </body>
 </html>

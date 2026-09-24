@@ -1,17 +1,13 @@
 {
-  "current_task": "正三角形点阵移除(triangleremove)点度数作弊辅助与超图度数教学系统（已完成）",
+  "current_task": "PlusMinus.html 手机适配与答题触控数字小键盘开发（已完成）",
   "last_changes": [
-    "boardgame/triangleremove/index.html",
-    "boardgame/triangleremove/css/board.css",
-    "boardgame/triangleremove/js/canvas.js",
-    "boardgame/triangleremove/js/ui.js",
-    "boardgame/triangleremove/js/teaching.js",
-    "tests/test_triangle_game.py",
+    "PlusMinus.html",
+    "tests/test_plusminus_html.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 与 git push 推送点度数作弊辅助功能"
+    "git commit + git push 推送代码至远程仓库"
   ],
-  "notes": "新增辅助作弊功能与超图度数教学：1. 控制栏新增【🎯 点三角形数】切换按钮；2. canvas.js 在星石右上角动态绘制度数徽标（红≥7高危交汇点、黄≥4中频、蓝<4、绿0已安全）；3. 随着玩家移除星石，周边点的剩余正三角形数实时递减，归 0 即剪枝；4. 启发式教学第3阶深度解析点度数（内圈3个中心点度数高达9，边中点8，边其余点7，顶角4，总度数105/3=35，证明最优解必全取3个中心点）；全套 65 项单测全绿通过。"
+  "notes": "成功完成 PlusMinus.html 手机全面适配与数字小键盘开发：1. 增加内置触控数字小键盘（0-9、±、⌫、提交）；2. input 添加 readonly 与 inputmode='none'，彻底杜绝手机原生软键盘弹出导致遮挡题目的痛点；3. 算式优化排版（间距自动美化），支持 100dvh 无滚动视口及横屏双列自适应；4. PC实体键盘与手机振动触觉反馈无缝兼容；5. 编写 tests/test_plusminus_html.py，全套 72 项单测全绿通过，单文件行数严格小于 500 行（483行）。"
 }

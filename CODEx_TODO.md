@@ -1,3 +1,9 @@
+<!-- codex: 2026-09-24 适配 PlusMinus.html 手机端速算答题体验：内置触控数字小键盘、防原生软键盘遮挡题目、大字号算式与自适应视口排版 -->
+- [X] 体验重构: `PlusMinus.html` 手机端全面适配——内置触控数字小键盘（0-9、±、⌫、提交），输入框增加 `readonly` 与 `inputmode="none"` 彻底防止原生软键盘弹出遮挡题目，算式自动填充间隙自适应换行，全卡片严格适配 100dvh 无需滚动，横屏自动切换双列并排，触控支持振动反馈与长按退格清空，严格控制总行数 ≤ 500 行（483 行）
+- [X] 测试验证: 编写 `tests/test_plusminus_html.py` 自动化测试，验证文件存在与行数限制、移动端 Viewport、小键盘按键完备性（0-9、±、⌫、确认）、防软键盘弹出属性、横竖屏自适应媒体查询、Node.js 算式与正负数退格状态机、内嵌脚本语法编译测试，7 项测试全绿通过（全项目 72 项单测全过）
+- [X] 提交推送: 更新 CODEx_TODO.md、.codex/state.json 并执行 git commit + git push
+
+
 <!-- codex: 2026-09-23 开发正三角形点阵移除(triangleremove)网页游戏，支持启发式教学、规则图解、星阵故事、连线指示剩余三角形、历史记录、答案演示与Web Audio音效 -->
 - [X] 算法设计与单元测试（`boardgame/triangleremove/triangle_math.py`, `tests/test_triangle_game.py`），全量验证 15 点 35 个正三角形分类、严格 7 点下界与 3 组对称最优解、以及 3/6/10 点阶梯关卡，6项pytest全绿通过
 - [X] 核心数据与几何拓扑引擎（`boardgame/triangleremove/js/config.js`, `boardgame/triangleremove/js/engine.js`），支持点阵拓扑、正/倒/倾斜正三角形判定、实时剩余三角形计算与分类统计
