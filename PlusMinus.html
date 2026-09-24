@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一位数加减法速算测试</title>
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --primary-hover: #357abd;
+      --success: #2ecc71;
+      --danger: #e74c3c;
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --text: #2c3e50;
+      --text-light: #7f8c8d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background: var(--card);
+      width: 100%;
+      max-width: 500px;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 10px; }
+    .timer {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      font-variant-numeric: tabular-nums;
+    }
+    .btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin: 5px;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary { background: #e0e0e0; color: #333; }
+    .btn-secondary:hover { background: #d0d0d0; }
+    
+    #gameArea { margin-top: 20px; }
+    .problem {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 20px 0;
+      letter-spacing: 2px;
+      word-break: break-all;
+    }
+    .input-group {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    #answerInput {
+      width: 100px;
+      padding: 10px;
+      font-size: 1.2rem;
+      text-align: center;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+    }
+    #answerInput:focus { border-color: var(--primary); }
+    .progress { color: var(--text-light); font-size: 0.9rem; }
+
+    #resultArea { margin-top: 20px; text-align: left; }
+    .stats {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .stats p { margin: 5px 0; font-size: 1.05rem; }
+    .details-list { list-style: none; padding: 0; }
+    .details-list li {
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      background: #fafafa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+    }
+    .correct { color: var(--success); border-left: 4px solid var(--success); }
+    .wrong { color: var(--danger); border-left: 4px solid var(--danger); }
+    .correct-ans { font-weight: bold; margin-left: 8px; }
+    .time-tag { color: var(--text-light); font-size: 0.85rem; margin-left: auto; padding-left: 10px; }
+    
+    #congrats {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--success);
+      margin-top: 20px;
+      animation: pop 0.5s ease-out;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔢 一位数加减法速算测试（版权花姐姐)</h1>
+    <div class="timer" id="timerDisplay">时间: 0.00s</div>
+    
+    <button class="btn btn-primary" id="startBtn">开始答题</button>
+    <button class="btn btn-secondary hidden" id="restartBtn">重来一局</button>
+
+    <div id="gameArea" class="hidden">
+      <div class="problem" id="problemDisplay"></div>
+      <div class="input-group">
+        <input type="text" id="answerInput" inputmode="numeric" placeholder="答案" autocomplete="off">
+        <button class="btn btn-primary" id="submitBtn">提交</button>
+      </div>
+      <div class="progress" id="progressDisplay">第 1 / 5 题</div>
+    </div>
+
+    <div id="resultArea" class="hidden">
+      <div class="stats" id="statsDisplay"></div>
+      <ul class="details-list" id="detailsDisplay"></ul>
+      <div id="congrats" class="hidden">🎉 Congratulations祝贺 🎉</div>
+    </div>
+  </div>
+
+  <script>
+    // DOM 元素
+    const startBtn = document.getElementById('startBtn');
+    const restartBtn = document.getElementById('restartBtn');
+    const gameArea = document.getElementById('gameArea');
+    const resultArea = document.getElementById('resultArea');
+    const problemDisplay = document.getElementById('problemDisplay');
+    const answerInput = document.getElementById('answerInput');
+    const submitBtn = document.getElementById('submitBtn');
+    const progressDisplay = document.getElementById('progressDisplay');
+    const timerDisplay = document.getElementById('timerDisplay');
+    const statsDisplay = document.getElementById('statsDisplay');
+    const detailsDisplay = document.getElementById('detailsDisplay');
+    const congratsDisplay = document.getElementById('congrats');
+
+    // 状态变量
+    let problems = [];
+    let currentIndex = 0;
+    let results = [];
+    let startTime = 0;
+    let problemStartTime = 0;
+    let timerInterval = null;
+    let isPlaying = false;
+
+    // 生成题目：10个1-9的整数，混合加减
+    function generateProblems() {
+      problems = [];
+      for (let i = 0; i < 5; i++) {
+        const nums = Array.from({ length: 10 }, () => Math.floor(Math.random() * 9) + 1);
+        const ops = Array.from({ length: 9 }, () => Math.random() < 0.5 ? '+' : '-');
+        
+        let expr = nums[0].toString();
+        let ans = nums[0];
+        for (let j = 0; j < 9; j++) {
+          expr += ops[j] + nums[j + 1];
+          ans = ops[j] === '+' ? ans + nums[j + 1] : ans - nums[j + 1];
+        }
+        problems.push({ expression: expr, answer: ans });
+      }
+    }
+
+    // 更新计时器显示
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      timerDisplay.textContent = `时间: ${elapsed.toFixed(2)}s`;
+    }
+
+    // 开始游戏
+    function startGame() {
+      generateProblems();
+      currentIndex = 0;
+      results = [];
+      startTime = Date.now();
+      problemStartTime = Date.now();
+      isPlaying = true;
+
+      startBtn.classList.add('hidden');
+      restartBtn.classList.remove('hidden');
+      gameArea.classList.remove('hidden');
+      resultArea.classList.add('hidden');
+      congratsDisplay.classList.add('hidden');
+
+      timerInterval = setInterval(updateTimer, 50);
+      showProblem();
+    }
+
+    // 显示当前题目
+    function showProblem() {
+      problemDisplay.textContent = `${problems[currentIndex].expression} = ?`;
+      progressDisplay.textContent = `第 ${currentIndex + 1} / 5 题`;
+      answerInput.value = '';
+      answerInput.focus();
+      problemStartTime = Date.now();
+    }
+
+    // 提交答案
+    function submitAnswer() {
+      if (!isPlaying) return;
+      const val = answerInput.value.trim();
+      if (val === '') {
+        alert('请输入答案！');
+        return;
+      }
+      const userAns = parseInt(val, 10);
+      if (isNaN(userAns)) {
+        alert('请输入有效的整数！');
+        return;
+      }
+
+      const timeTaken = Date.now() - problemStartTime;
+      results.push({
+        problem: problems[currentIndex].expression,
+        correctAns: problems[currentIndex].answer,
+        userAns: userAns,
+        timeTaken: timeTaken
+      });
+
+      currentIndex++;
+      if (currentIndex < 5) {
+        showProblem();
+      } else {
+        endGame();
+      }
+    }
+
+    // 结束游戏并显示结果
+    function endGame() {
+      isPlaying = false;
+      clearInterval(timerInterval);
+      const totalTime = Date.now() - startTime;
+      const avgTime = totalTime / 5;
+      const correctCount = results.filter(r => r.userAns === r.correctAns).length;
+      const accuracy = (correctCount / 5 * 100).toFixed(0);
+
+      gameArea.classList.add('hidden');
+      resultArea.classList.remove('hidden');
+      timerDisplay.textContent = `总用时: ${(totalTime / 1000).toFixed(2)}s`;
+
+      statsDisplay.innerHTML = `
+        <p>✅ 正确率: <strong>${accuracy}%</strong> (${correctCount}/5)</p>
+        <p>⏱️ 总时间: <strong>${(totalTime / 1000).toFixed(2)} 秒</strong></p>
+        <p>⏱️ 平均每题: <strong>${(avgTime / 1000).toFixed(2)} 秒</strong></p>
+      `;
+
+      let detailsHTML = '';
+      let allCorrect = true;
+      results.forEach((r, i) => {
+        const isCorrect = r.userAns === r.correctAns;
+        if (!isCorrect) allCorrect = false;
+        const statusClass = isCorrect ? 'correct' : 'wrong';
+        const icon = isCorrect ? '✅' : '❌';
+        const correctInfo = isCorrect ? '' : `<span class="correct-ans">正确答案: ${r.correctAns}</span>`;
+        
+        detailsHTML += `
+          <li class="${statusClass}">
+            <span>${icon} 第${i + 1}题: ${r.problem} = ${r.userAns} ${correctInfo}</span>
+            <span class="time-tag">${(r.timeTaken / 1000).toFixed(2)}s</span>
+          </li>
+        `;
+      });
+      detailsDisplay.innerHTML = detailsHTML;
+
+      if (allCorrect) {
+        congratsDisplay.classList.remove('hidden');
+      }
+    }
+
+    // 重来一局
+    function restartGame() {
+      clearInterval(timerInterval);
+      isPlaying = false;
+      timerDisplay.textContent = '时间: 0.00s';
+      resultArea.classList.add('hidden');
+      gameArea.classList.add('hidden');
+      startBtn.classList.remove('hidden');
+      restartBtn.classList.add('hidden');
+      congratsDisplay.classList.add('hidden');
+    }
+
+    // 事件绑定
+    startBtn.addEventListener('click', startGame);
+    restartBtn.addEventListener('click', restartGame);
+    submitBtn.addEventListener('click', submitAnswer);
+    answerInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') submitAnswer();
+    });
+  </script>
+</body>
+</html>
