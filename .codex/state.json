@@ -1,15 +1,13 @@
 {
-  "current_task": "根目录 index.html 现代化美化重构与 5 大科学专区交互升级（已完成）",
+  "current_task": "根目录 index.html 架构说明与新游戏接入开发文档 INDEX_GUIDE.md 产出与全库测试（已完成）",
   "last_changes": [
-    "index.html",
-    "css/index.css",
-    "js/index.js",
+    "INDEX_GUIDE.md",
     "tests/test_index_hub.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 并 git push 到远程 origin/main 分支，向用户汇报主页重构详情"
+    "git commit 并 git push 到远程 origin/main 分支，向用户汇报 INDEX_GUIDE.md 核心要点"
   ],
-  "notes": "1. 架构重构：拆分为 index.html (321行)、css/index.css (416行)、js/index.js (110行)，所有文件严格 <= 500 行；2. 5大分类专区：去重后收录全量 39 个独立互动程序（数学概念7个/奥数谜题9个/棋盘对弈10个/英语词汇4个/生活素养9个）；3. 体验升级：吸顶实时搜索栏（支持 '/' 聚焦与 Esc 清空）、分类胶囊选项卡、特色小徽章、卡片 flex 底部对齐与无结果友好空状态；4. 链接规范化：修正所有 Windows 反斜杠为标准 Web 正斜杠；5. 测试保证：新建 tests/test_index_hub.py，全库 94 项 pytest 全部通过。"
+  "notes": "在根目录新增 INDEX_GUIDE.md（143行，严格 <= 500行），详细总结：1. index.html、css/index.css 与 js/index.js 三层解耦架构；2. 5大分类专区收录定位与对应徽章推荐；3. 未来新游戏接入的 6 步标准作业流程（SOP：产物确认 -> 定位专区 -> HTML 卡片模板套用 -> data-keywords/徽章配置 -> 胶囊与 Hero 统计数字更新 -> pytest 门禁验证）；4. 单按钮与多按钮（挑战/规则/数学/文档）完整代码模板与 FAQ 排错指南；5. 扩充 tests/test_index_hub.py 覆盖新文档，全库 94 项单测全绿通过。"
 }

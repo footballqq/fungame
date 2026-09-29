@@ -8,11 +8,12 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INDEX_HTML = os.path.join(PROJECT_ROOT, "index.html")
 CSS_FILE = os.path.join(PROJECT_ROOT, "css", "index.css")
 JS_FILE = os.path.join(PROJECT_ROOT, "js", "index.js")
+GUIDE_FILE = os.path.join(PROJECT_ROOT, "INDEX_GUIDE.md")
 
 
 def test_files_exist_and_under_line_limits():
-    """验证主页三件套文件存在且单文件 <= 500 行安全边界"""
-    for file_path in [INDEX_HTML, CSS_FILE, JS_FILE]:
+    """验证主页三件套与说明文档文件存在且单文件 <= 500 行安全边界"""
+    for file_path in [INDEX_HTML, CSS_FILE, JS_FILE, GUIDE_FILE]:
         assert os.path.isfile(file_path), f"文件必须存在: {file_path}"
         with open(file_path, "r", encoding="utf-8") as f:
             lines = len(f.readlines())
