@@ -98,6 +98,7 @@ def test_file_line_limits_under_500():
         os.path.join(SQUARE_DIR, "js", "math_engine.js"),
         os.path.join(SQUARE_DIR, "js", "game_state.js"),
         os.path.join(SQUARE_DIR, "js", "drag_drop.js"),
+        os.path.join(SQUARE_DIR, "js", "confetti.js"),
         os.path.join(SQUARE_DIR, "js", "ui.js"),
     ]
 
@@ -109,7 +110,7 @@ def test_file_line_limits_under_500():
 
 
 def test_html_structure_and_accessibility():
-    """验证 HTML 页面骨架、核心组件与移动端视口设置"""
+    """验证 HTML 页面骨架、核心组件、缩放控制与移动端视口设置"""
     html_path = os.path.join(SQUARE_DIR, "index.html")
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
@@ -123,12 +124,15 @@ def test_html_structure_and_accessibility():
     assert 'id="confettiCanvas"' in content, "必须包含彩屑画布"
     assert 'id="trashZone"' in content, "必须包含垃圾桶区域"
     assert 'id="greetingToast"' in content, "必须包含问候浮层"
+    assert 'id="btnZoomIn"' in content, "必须包含放大按钮"
+    assert 'id="btnZoomOut"' in content, "必须包含缩小按钮"
+    assert 'id="zoomPercent"' in content, "必须包含缩放百分比显示"
 
 
 def test_js_syntax_validation():
     """使用 Node.js 校验所有前端脚本语法合法性"""
     js_dir = os.path.join(SQUARE_DIR, "js")
-    js_files = ["i18n.js", "audio.js", "math_engine.js", "game_state.js", "drag_drop.js", "ui.js"]
+    js_files = ["i18n.js", "audio.js", "math_engine.js", "game_state.js", "drag_drop.js", "confetti.js", "ui.js"]
 
     for js_name in js_files:
         js_path = os.path.join(js_dir, js_name)

@@ -1,4 +1,4 @@
-// codex: 2026-09-29 ui.js 界面控制、粒子彩屑、问候激励与模态弹窗系统
+// codex: 2026-09-29 ui.js 界面控制、暗格网格重绘、画面缩放放大与全屏控制
 (function (global) {
   'use strict';
 
@@ -10,10 +10,10 @@
       this.ghostEl = null;
       this.trashEl = null;
       this.confettiCanvas = null;
-      this.confettiCtx = null;
-      this.particles = [];
-      this.animId = null;
       this.hasShownCelebrationForCurrentBoard = false;
+
+      const savedZoom = parseFloat(localStorage.getItem('square_puzzle_zoom'));
+      this.zoomScale = (!isNaN(savedZoom) && savedZoom >= 0.7 && savedZoom <= 2.2) ? savedZoom : 1.0;
     }
 
     init() {
@@ -23,24 +23,23 @@
       this.ghostEl = document.getElementById('placementGhost');
       this.trashEl = document.getElementById('trashZone');
       this.confettiCanvas = document.getElementById('confettiCanvas');
-      if (this.confettiCanvas) {
-        this.confettiCtx = this.confettiCanvas.getContext('2d');
+
+      if (global.SquareConfetti && this.confettiCanvas) {
+        global.SquareConfetti.init(this.confettiCanvas);
       }
 
       this.bindToolbarButtons();
+      this.bindZoomControls();
       this.bindModals();
       this.bindTargetSelector();
       this.bindCustomControls();
 
-      // 初始化拖拽引擎
       global.SquareDragDrop.init(this.boardEl, this.ghostEl, this.trashEl);
 
-      // 监听状态改变
       window.addEventListener('gameStateChanged', () => this.onGameStateChanged());
       window.addEventListener('languageChanged', () => this.onLanguageChanged());
       window.addEventListener('resize', () => this.updateBoardDimensions());
 
-      // 初始加载 10x10 关卡
       this.switchTarget(10);
       this.showGreetingToast();
     }
@@ -85,6 +84,56 @@
       });
     }
 
+    bindZoomControls() {
+      const btnZoomIn = document.getElementById('btnZoomIn');
+      const btnZoomOut = document.getElementById('btnZoomOut');
+      const btnZoomReset = document.getElementById('btnZoomReset');
+      const btnFullscreen = document.getElementById('btnFullscreen');
+
+      if (btnZoomIn) {
+        btnZoomIn.addEventListener('click', () => {
+          this.setZoom(this.zoomScale + 0.15);
+          global.SquareAudio.playClick();
+        });
+      }
+
+      if (btnZoomOut) {
+        btnZoomOut.addEventListener('click', () => {
+          this.setZoom(this.zoomScale - 0.15);
+          global.SquareAudio.playClick();
+        });
+      }
+
+      if (btnZoomReset) {
+        btnZoomReset.addEventListener('click', () => {
+          this.setZoom(1.0);
+          global.SquareAudio.playClick();
+        });
+      }
+
+      if (btnFullscreen) {
+        btnFullscreen.addEventListener('click', () => {
+          this.toggleFullscreen();
+          global.SquareAudio.playClick();
+        });
+      }
+    }
+
+    setZoom(scale) {
+      this.zoomScale = Math.max(0.7, Math.min(2.2, Math.round(scale * 100) / 100));
+      localStorage.setItem('square_puzzle_zoom', this.zoomScale.toString());
+      this.updateBoardDimensions();
+      this.renderTiles();
+    }
+
+    toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+
     updateSoundButtonUI(muted) {
       const btnSound = document.getElementById('btnSound');
       if (btnSound) {
@@ -101,8 +150,9 @@
             modal.classList.add('open');
             global.SquareAudio.playClick();
           });
-          const closeBtns = modal.querySelectorAll('.btn-modal-close');
-          closeBtns.forEach(cb => cb.addEventListener('click', () => modal.classList.remove('open')));
+          modal.querySelectorAll('.btn-modal-close').forEach(cb => {
+            cb.addEventListener('click', () => modal.classList.remove('open'));
+          });
           modal.addEventListener('click', (e) => {
             if (e.target === modal) modal.classList.remove('open');
           });
@@ -113,7 +163,6 @@
       setupModal('btnMath', 'mathModal');
       setupModal('btnGreetings', 'greetingsModal');
 
-      // 数学弹窗标签切换
       const tabBtns = document.querySelectorAll('.math-tab-btn');
       tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -167,22 +216,34 @@
     }
 
     updateBoardDimensions() {
-      const boardContainer = document.querySelector('.board-container');
-      if (!boardContainer || !this.boardEl) return;
-
+      if (!this.boardEl) return;
       const N = global.SquareGameState.N;
-      const rect = boardContainer.getBoundingClientRect();
-      const pad = 24;
-      const availWidth = rect.width - pad;
-      const availHeight = rect.height - pad;
+
+      const isDesktop = window.innerWidth >= 900;
+      const headerOffset = 180;
+      const trayOffset = 190;
+      const pad = 36;
+
+      const availWidth = Math.min(window.innerWidth - pad, isDesktop ? 1040 : window.innerWidth - 20);
+      const availHeight = Math.max(340, window.innerHeight - headerOffset - trayOffset);
       const minDimension = Math.min(availWidth, availHeight);
 
-      const cellSize = Math.floor(Math.max(24, Math.min(72, minDimension / N)));
-      this.boardEl.style.setProperty('--cell-size', `${cellSize}px`);
-      this.boardEl.style.setProperty('--grid-n', N.toString());
+      // Windows 桌面环境默认将格子基数设大（52~82px），显著增强大屏沉浸感
+      const baseCell = isDesktop
+        ? Math.max(52, Math.min(82, Math.floor(minDimension / N)))
+        : Math.max(28, Math.min(62, Math.floor(minDimension / N)));
 
-      this.boardEl.style.width = `${cellSize * N}px`;
-      this.boardEl.style.height = `${cellSize * N}px`;
+      const finalCellSize = Math.round(baseCell * this.zoomScale);
+
+      this.boardEl.style.setProperty('--cell-size', `${finalCellSize}px`);
+      this.boardEl.style.setProperty('--grid-n', N.toString());
+      this.boardEl.style.width = `${finalCellSize * N}px`;
+      this.boardEl.style.height = `${finalCellSize * N}px`;
+
+      const zoomPercentEl = document.getElementById('zoomPercent');
+      if (zoomPercentEl) {
+        zoomPercentEl.textContent = `${Math.round(this.zoomScale * 100)}%`;
+      }
     }
 
     renderGridBackground() {
@@ -220,7 +281,6 @@
           <button class="btn-tile-remove" title="移除纸片">×</button>
         `;
 
-        // 移除按钮
         const removeBtn = tileEl.querySelector('.btn-tile-remove');
         removeBtn.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -228,14 +288,12 @@
           global.SquareAudio.playRemove();
         });
 
-        // 双击或长按移除
         tileEl.addEventListener('dblclick', (e) => {
           e.stopPropagation();
           state.removeTile(t.id);
           global.SquareAudio.playRemove();
         });
 
-        // 挂载拖拽引擎移动盘内纸片
         tileEl.addEventListener('pointerdown', (e) => {
           if (e.target === removeBtn) return;
           global.SquareDragDrop.onBoardTilePointerDown(e, t, tileEl);
@@ -288,7 +346,6 @@
         }
       }
 
-      // 更新撤销/重做按钮状态
       const btnUndo = document.getElementById('btnUndo');
       const btnRedo = document.getElementById('btnRedo');
       if (btnUndo) btnUndo.disabled = !global.SquareGameState.canUndo();
@@ -306,7 +363,7 @@
 
     triggerCelebration(metrics) {
       global.SquareAudio.playVictory();
-      this.fireConfetti();
+      if (global.SquareConfetti) global.SquareConfetti.fire();
 
       const modal = document.getElementById('congratModal');
       const starsEl = document.getElementById('congratStars');
@@ -335,66 +392,7 @@
         `;
       }
 
-      if (modal) {
-        modal.classList.add('open');
-      }
-    }
-
-    fireConfetti() {
-      if (!this.confettiCanvas || !this.confettiCtx) return;
-      this.confettiCanvas.width = window.innerWidth;
-      this.confettiCanvas.height = window.innerHeight;
-      this.confettiCanvas.style.display = 'block';
-
-      this.particles = [];
-      const colors = ['#ff4d4f', '#ff7a45', '#ffa940', '#ffec3d', '#73d13d', '#36cfc9', '#4096ff', '#9254de', '#f759ab'];
-
-      for (let i = 0; i < 120; i++) {
-        this.particles.push({
-          x: window.innerWidth * (0.2 + 0.6 * Math.random()),
-          y: window.innerHeight * 0.45,
-          vx: (Math.random() - 0.5) * 14,
-          vy: -Math.random() * 12 - 4,
-          size: Math.random() * 10 + 6,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          rotation: Math.random() * 360,
-          rotSpeed: (Math.random() - 0.5) * 10,
-          opacity: 1
-        });
-      }
-
-      if (this.animId) cancelAnimationFrame(this.animId);
-      const updateFrame = () => {
-        this.confettiCtx.clearRect(0, 0, this.confettiCanvas.width, this.confettiCanvas.height);
-        let active = 0;
-
-        for (const p of this.particles) {
-          p.x += p.vx;
-          p.y += p.vy;
-          p.vy += 0.35; // 重力
-          p.rotation += p.rotSpeed;
-          p.opacity -= 0.008;
-
-          if (p.opacity > 0 && p.y < this.confettiCanvas.height) {
-            active++;
-            this.confettiCtx.save();
-            this.confettiCtx.translate(p.x, p.y);
-            this.confettiCtx.rotate((p.rotation * Math.PI) / 180);
-            this.confettiCtx.fillStyle = p.color;
-            this.confettiCtx.globalAlpha = Math.max(0, p.opacity);
-            this.confettiCtx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
-            this.confettiCtx.restore();
-          }
-        }
-
-        if (active > 0) {
-          this.animId = requestAnimationFrame(updateFrame);
-        } else {
-          this.confettiCanvas.style.display = 'none';
-        }
-      };
-
-      this.animId = requestAnimationFrame(updateFrame);
+      if (modal) modal.classList.add('open');
     }
 
     handleHintClick() {

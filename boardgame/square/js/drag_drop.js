@@ -1,4 +1,4 @@
-// codex: 2026-09-29 drag_drop.js 统一跨平台拖拽与点选触控交互引擎
+// codex: 2026-09-29 drag_drop.js 修复坐标对齐、消除偏移动画与高精度网格吸附
 (function (global) {
   'use strict';
 
@@ -8,13 +8,15 @@
       this.ghostEl = null;
       this.trashEl = null;
       this.floatingDragEl = null;
+      this.activeSourceEl = null;
 
-      // 状态
+      // 拖拽与点选状态
       this.selectedTraySize = null;
       this.isDragging = false;
       this.dragSource = null; // 'tray' | 'board'
-      this.dragTileData = null; // { s, id?, colorIndex }
-      this.startPos = { x: 0, y: 0 };
+      this.dragTileData = null; // { s, id?, colorIndex, originR?, originC? }
+      this.grabOffsetX = 0;
+      this.grabOffsetY = 0;
       this.currentGridPos = null; // { r, c }
       this.isValidPlacement = false;
     }
@@ -29,14 +31,18 @@
       this.bindGlobalPointerEvents();
     }
 
+    getCellSize() {
+      if (!this.boardEl) return 42;
+      const rect = this.boardEl.getBoundingClientRect();
+      const N = global.SquareGameState.N;
+      return rect.width / N;
+    }
+
     bindTrayEvents() {
       const trayItems = document.querySelectorAll('.tray-item');
       trayItems.forEach(item => {
-        // Pointer down 启动拖拽
         item.addEventListener('pointerdown', (e) => this.onTrayPointerDown(e, item));
-
-        // 点击切换选中状态（手机端点选-放置模式）
-        item.addEventListener('click', (e) => {
+        item.addEventListener('click', () => {
           if (this.isDragging) return;
           const s = parseInt(item.getAttribute('data-size'), 10);
           this.toggleSelectTrayItem(s, item);
@@ -64,6 +70,13 @@
       if (e.button !== 0 && e.pointerType === 'mouse') return;
 
       const size = parseInt(item.getAttribute('data-size'), 10);
+      const cellSize = this.getCellSize();
+      const tilePixelSize = size * cellSize;
+
+      // 托盘抓取默认将光标置于中心
+      this.grabOffsetX = tilePixelSize / 2;
+      this.grabOffsetY = tilePixelSize / 2;
+
       this.startDrag(e, {
         source: 'tray',
         s: size,
@@ -74,6 +87,15 @@
     onBoardTilePointerDown(e, tileData, tileEl) {
       if (e.button !== 0 && e.pointerType === 'mouse') return;
       e.stopPropagation();
+
+      const rect = this.boardEl.getBoundingClientRect();
+      const cellSize = this.getCellSize();
+      const tileLeft = rect.left + tileData.c * cellSize;
+      const tileTop = rect.top + tileData.r * cellSize;
+
+      // 精确记录点击点相对于纸片左上角的像素偏移，彻底消除跳动与视差
+      this.grabOffsetX = Math.max(0, Math.min(tileData.s * cellSize, e.clientX - tileLeft));
+      this.grabOffsetY = Math.max(0, Math.min(tileData.s * cellSize, e.clientY - tileTop));
 
       this.startDrag(e, {
         source: 'board',
@@ -89,39 +111,46 @@
       this.isDragging = true;
       this.dragSource = tileInfo.source;
       this.dragTileData = tileInfo;
-      this.startPos = { x: e.clientX, y: e.clientY };
+      this.activeSourceEl = sourceElement;
 
       if (global.SquareAudio) global.SquareAudio.playPick();
 
-      // 创建跟随光标/手指的悬浮克隆节点
+      // 创建完全同比例悬浮克隆节点（无放大缩放、无偏移动画，100%对齐）
       this.createFloatingDragElement(tileInfo.s, tileInfo.colorIndex, e.clientX, e.clientY);
 
-      // 如果来自棋盘，隐藏原棋子
+      // 若拖动盘内纸片，隐藏原纸片避免重影混淆
       if (tileInfo.source === 'board' && sourceElement) {
-        sourceElement.style.opacity = '0.35';
+        sourceElement.style.visibility = 'hidden';
       }
 
       if (this.trashEl) {
         this.trashEl.classList.add('trash-active');
       }
+
+      // 立即触发一次悬停判定
+      this.updateGhostOnBoard(e.clientX, e.clientY);
     }
 
     createFloatingDragElement(s, colorIndex, x, y) {
       if (this.floatingDragEl) this.floatingDragEl.remove();
 
+      const cellSize = this.getCellSize();
+      const pixelWidth = s * cellSize;
+
       const el = document.createElement('div');
       el.className = `floating-drag-tile tile-size-${s} tile-color-${colorIndex}`;
-      el.style.width = `calc(var(--cell-size) * ${s})`;
-      el.style.height = `calc(var(--cell-size) * ${s})`;
+      el.style.width = `${pixelWidth}px`;
+      el.style.height = `${pixelWidth}px`;
       el.style.position = 'fixed';
-      el.style.left = `${x}px`;
-      el.style.top = `${y}px`;
-      el.style.transform = 'translate(-50%, -50%) scale(1.05)';
+      el.style.left = `${x - this.grabOffsetX}px`;
+      el.style.top = `${y - this.grabOffsetY}px`;
       el.style.zIndex = '9999';
       el.style.pointerEvents = 'none';
-      el.style.boxShadow = '0 12px 28px rgba(0,0,0,0.35)';
-      el.textContent = `${s}×${s}`;
+      el.style.transform = 'none';
+      el.style.opacity = '0.92';
+      el.style.boxShadow = '0 8px 20px rgba(0,0,0,0.45)';
 
+      el.innerHTML = `<span class="tile-badge">${s}×${s}</span>`;
       document.body.appendChild(this.floatingDragEl = el);
     }
 
@@ -129,14 +158,13 @@
       window.addEventListener('pointermove', (e) => {
         if (!this.isDragging || !this.floatingDragEl) return;
 
-        // 更新跟随节点坐标
-        this.floatingDragEl.style.left = `${e.clientX}px`;
-        this.floatingDragEl.style.top = `${e.clientY}px`;
+        // 跟随光标移动，保持左上角与抓取点一致
+        this.floatingDragEl.style.left = `${e.clientX - this.grabOffsetX}px`;
+        this.floatingDragEl.style.top = `${e.clientY - this.grabOffsetY}px`;
 
-        // 判定是否悬停在棋盘上方
         this.updateGhostOnBoard(e.clientX, e.clientY);
 
-        // 判定是否悬停在垃圾桶上方
+        // 垃圾桶判定
         if (this.trashEl) {
           const trashRect = this.trashEl.getBoundingClientRect();
           const isOverTrash = (
@@ -156,46 +184,54 @@
       window.addEventListener('pointercancel', handlePointerUp);
     }
 
-    getGridCellFromCoords(clientX, clientY) {
-      if (!this.boardEl) return null;
-      const rect = this.boardEl.getBoundingClientRect();
-      if (
-        clientX < rect.left || clientX > rect.right ||
-        clientY < rect.top || clientY > rect.bottom
-      ) {
-        return null;
-      }
-
-      const N = global.SquareGameState.N;
-      const cellWidth = rect.width / N;
-      const cellHeight = rect.height / N;
-
-      const c = Math.floor((clientX - rect.left) / cellWidth);
-      const r = Math.floor((clientY - rect.top) / cellHeight);
-
-      if (r >= 0 && r < N && c >= 0 && c < N) {
-        return { r, c };
-      }
-      return null;
-    }
-
     updateGhostOnBoard(clientX, clientY) {
-      const cell = this.getGridCellFromCoords(clientX, clientY);
-      if (!cell || !this.dragTileData) {
+      if (!this.boardEl || !this.dragTileData) {
         this.hideGhost();
         this.currentGridPos = null;
         this.isValidPlacement = false;
         return;
       }
 
+      const rect = this.boardEl.getBoundingClientRect();
+      const N = global.SquareGameState.N;
+      const cellSize = rect.width / N;
       const s = this.dragTileData.s;
-      const excludeId = this.dragSource === 'board' ? this.dragTileData.id : null;
-      const canPlace = global.SquareGameState.canPlace(cell.r, cell.c, s, excludeId);
 
-      this.currentGridPos = cell;
+      // 基于悬浮纸片左上角坐标计算目标网格位置
+      const floatingLeft = clientX - this.grabOffsetX;
+      const floatingTop = clientY - this.grabOffsetY;
+
+      // 如果悬浮纸片完全远离棋盘则不显示幽灵
+      if (
+        floatingLeft + s * cellSize < rect.left - cellSize ||
+        floatingLeft > rect.right + cellSize ||
+        floatingTop + s * cellSize < rect.top - cellSize ||
+        floatingTop > rect.bottom + cellSize
+      ) {
+        this.hideGhost();
+        this.currentGridPos = null;
+        this.isValidPlacement = false;
+        return;
+      }
+
+      // 最近网格吸附
+      const c = Math.round((floatingLeft - rect.left) / cellSize);
+      const r = Math.round((floatingTop - rect.top) / cellSize);
+
+      // 判定是否在网格边界内
+      const isWithinBounds = (r >= 0 && c >= 0 && r + s <= N && c + s <= N);
+      const excludeId = this.dragSource === 'board' ? this.dragTileData.id : null;
+      const canPlace = isWithinBounds && global.SquareGameState.canPlace(r, c, s, excludeId);
+
+      this.currentGridPos = { r, c };
       this.isValidPlacement = canPlace;
 
-      this.showGhost(cell.r, cell.c, s, canPlace);
+      // 只要在棋盘合法范围内就展示对齐幽灵
+      if (r >= 0 && c >= 0 && r + s <= N && c + s <= N) {
+        this.showGhost(r, c, s, canPlace);
+      } else {
+        this.hideGhost();
+      }
     }
 
     showGhost(r, c, s, isValid) {
@@ -221,7 +257,6 @@
       const gridPos = this.currentGridPos;
       const isValid = this.isValidPlacement;
 
-      // 检查是否丢入垃圾桶或拖出棋盘
       let droppedOnTrash = false;
       if (this.trashEl) {
         const trashRect = this.trashEl.getBoundingClientRect();
@@ -232,16 +267,17 @@
       }
 
       if (source === 'board') {
-        if (droppedOnTrash || !gridPos) {
-          // 从棋盘移除该纸片
+        if (droppedOnTrash || !gridPos || gridPos.r < 0 || gridPos.c < 0) {
+          // 移出棋盘或扔进垃圾桶直接删除
           global.SquareGameState.removeTile(tileData.id);
           if (global.SquareAudio) global.SquareAudio.playRemove();
         } else if (isValid) {
-          // 移动到新网格位置
+          // 精确移动到新网格
           const moved = global.SquareGameState.moveTile(tileData.id, gridPos.r, gridPos.c);
           if (moved && global.SquareAudio) global.SquareAudio.playDrop();
         } else {
-          // 非法位置，还原原位
+          // 位置不合法恢复原位置
+          if (this.activeSourceEl) this.activeSourceEl.style.visibility = 'visible';
           if (global.SquareAudio) global.SquareAudio.playCollide();
           global.SquareGameState.notifyUpdate();
         }
@@ -254,7 +290,6 @@
         }
       }
 
-      // 清理状态
       this.cleanupDrag();
     }
 
@@ -270,26 +305,34 @@
         this.floatingDragEl = null;
       }
       this.hideGhost();
+      if (this.activeSourceEl) {
+        this.activeSourceEl.style.visibility = 'visible';
+        this.activeSourceEl = null;
+      }
       if (this.trashEl) {
         this.trashEl.classList.remove('trash-active', 'trash-hover');
       }
     }
 
     bindBoardEvents() {
-      // 棋盘点击事件（支持点选模式）
       this.boardEl.addEventListener('click', (e) => {
         if (this.isDragging) return;
         if (!this.selectedTraySize) return;
 
-        const cell = this.getGridCellFromCoords(e.clientX, e.clientY);
-        if (!cell) return;
+        const rect = this.boardEl.getBoundingClientRect();
+        const N = global.SquareGameState.N;
+        const cellSize = rect.width / N;
+        const c = Math.floor((e.clientX - rect.left) / cellSize);
+        const r = Math.floor((e.clientY - rect.top) / cellSize);
 
         const s = this.selectedTraySize;
-        if (global.SquareGameState.canPlace(cell.r, cell.c, s)) {
-          global.SquareGameState.placeTile(cell.r, cell.c, s, s);
-          if (global.SquareAudio) global.SquareAudio.playDrop();
-        } else {
-          if (global.SquareAudio) global.SquareAudio.playCollide();
+        if (r >= 0 && c >= 0 && r + s <= N && c + s <= N) {
+          if (global.SquareGameState.canPlace(r, c, s)) {
+            global.SquareGameState.placeTile(r, c, s, s);
+            if (global.SquareAudio) global.SquareAudio.playDrop();
+          } else {
+            if (global.SquareAudio) global.SquareAudio.playCollide();
+          }
         }
       });
     }

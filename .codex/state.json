@@ -1,24 +1,18 @@
 {
-  "current_task": "正方形拼图挑战(square tiling)网页游戏开发（已完成）",
+  "current_task": "正方形拼图挑战：对齐修复、加入暗格细分、Windows 画面放大与缩放控制（已完成）",
   "last_changes": [
-    "boardgame/square/index.html",
-    "boardgame/square/css/style.css",
-    "boardgame/square/css/board.css",
-    "boardgame/square/css/modal.css",
-    "boardgame/square/js/i18n.js",
-    "boardgame/square/js/audio.js",
-    "boardgame/square/js/math_engine.js",
-    "boardgame/square/js/game_state.js",
     "boardgame/square/js/drag_drop.js",
+    "boardgame/square/css/board.css",
+    "boardgame/square/css/style.css",
+    "boardgame/square/index.html",
     "boardgame/square/js/ui.js",
-    "boardgame/square/square_math.py",
+    "boardgame/square/js/confetti.js",
     "tests/test_square_game.py",
-    "index.html",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "执行 git commit 并向用户汇报成果"
+    "git commit 并向用户汇报成果"
   ],
-  "notes": "成功将 readme.txt（10x10 正方形使用 1x1, 2x2, 3x3, 4x4 纸片无重叠无空隙拼接）转化为高质量网页游戏：1. 支持多目标选择（5x5~12x12及自定义）；2. 规则图解与星级评定；3. 跨端拖拽吸附与移动端点选放置双模式；4. 适配PC/手机/平板（自适应clamp/dvh）；5. Web Audio 纯算法拟真音效；6. 问候语、夸奖激励与彩屑粒子祝贺系统；7. 4大标签深度数学原理解析（面积不等式、抽屉原理、边界矛盾、11块唯一尺寸构成证明）；8. 中英双语一键无缝热切换；9. 所有源文件严格 <= 500 行，全库 82 项 pytest 单测全部绿灯通过。"
+  "notes": "针对用户反馈完成三项专项升级：1. 彻底解决对齐与重影问题：精确定位拖拽点与纸片左上角像素偏移量，悬浮节点与吸附幽灵 100% 同比例对齐，移除拖动物件时的半透明重影与 scale 缩放形变；2. 加入暗格：棋盘背景绘制深灰棋盘暗格单元，同时在所有 4x4、3x3、2x2 纸片上绘制清晰的 1x1 暗格细分分割线，几何单位一目了然；3. Windows 画面放大：大幅提升桌面端默认网格基数（54~82px），新增 [🔍 -] [100%] [🔍 +] [🔄] [⛶] 画面自由缩放与全屏控制；拆分 confetti.js 保持所有单文件严格 <= 500 行，全库 82 项 pytest 单测全部通过。"
 }

@@ -5,6 +5,7 @@
 - [X] 全端通用拖拽与触控交互引擎（`boardgame/square/js/drag_drop.js`）：支持 Pointer Events 与 Drag&Drop 双引擎，盘外拖入吸附、盘内二次移动、拖出棋盘/垃圾桶删除，兼顾手机平板点击选中-点格放置双模式
 - [X] 交互控制器、夸奖激励与问候语系统（`boardgame/square/js/ui.js`）：动态问候语、彩屑烟花画布粒子系统、星级评价、胜利大吉、提示/演示控制器
 - [X] 页面结构与高阶自适应样式（`boardgame/square/index.html`, `boardgame/square/css/style.css`, `css/board.css`, `css/modal.css`）：纸艺折纸质感UI，Windows PC/iPad/手机完全自适应（clamp/dvh），数学原理多标签图文深度拆解弹窗，严格控制单文件 ≤ 500 行
+- [X] 修复吸附对齐偏差、加入棋盘与正方形暗格细分、新增 Windows 画面缩放放大控制（`drag_drop.js`, `board.css`, `style.css`, `ui.js`, `confetti.js`, `index.html`）：消除悬浮节点与吸附幽灵的半格位移和原纸片重影，画板及所有 4x4/3x3/2x2 纸片加入清晰 1x1 暗格纹理，增加 🔍-/+/🔄 放大缩小重置与全屏控制（桌面端默认大方居中），全套 82 项单测全绿通过
 - [X] 项目根目录主页 `index.html` 游戏导航卡片集成与全流程单测验证，全套 82 项 pytest 全部绿灯通过
 
 <!-- codex: 2026-09-24 适配 PlusMinus.html 手机端速算答题体验：内置触控数字小键盘、防原生软键盘遮挡题目、大字号算式与自适应视口排版 -->

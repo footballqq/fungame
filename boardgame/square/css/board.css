@@ -1,31 +1,32 @@
-/* codex: 2026-09-29 board.css 棋盘网格、纸片质感、吸附幽灵与备料托盘样式 */
+/* codex: 2026-09-29 board.css 棋盘暗格网格、纸片细分暗格、严丝合缝对齐与悬浮无损拖拽 */
 
 .board-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 10px;
+  padding: 14px;
+  overflow: visible;
+  transition: all 0.2s ease;
 }
 
-/* 棋盘实体 */
+/* 棋盘实体外框 */
 .board {
   position: relative;
   display: grid;
   grid-template-columns: repeat(var(--grid-n), var(--cell-size));
   grid-template-rows: repeat(var(--grid-n), var(--cell-size));
-  background: #090d16;
-  border: 4px solid #334155;
-  border-radius: 12px;
+  background: #090e1a;
+  border: 3px solid #334155;
+  border-radius: 6px;
   box-shadow:
-    0 16px 36px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.1),
-    inset 0 0 20px rgba(0, 0, 0, 0.6);
+    0 18px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
   user-select: none;
   touch-action: none;
 }
 
-/* 棋盘背景网格层 */
+/* 棋盘背景暗格层 (明确绘制每一个1x1格子) */
 .grid-background {
   position: absolute;
   top: 0;
@@ -36,15 +37,18 @@
   grid-template-columns: repeat(var(--grid-n), var(--cell-size));
   grid-template-rows: repeat(var(--grid-n), var(--cell-size));
   pointer-events: none;
+  background: #0b1120;
 }
 
 .grid-cell {
-  border-right: 1px dashed rgba(255, 255, 255, 0.1);
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(30, 41, 59, 0.25);
+  box-sizing: border-box;
 }
 
 .grid-cell:nth-child(even) {
-  background: rgba(255, 255, 255, 0.015);
+  background: rgba(30, 41, 59, 0.45);
 }
 
 /* 棋子放置层 */
@@ -60,27 +64,29 @@
   pointer-events: none;
 }
 
-/* 正方形纸片基础视觉：纸艺立体折痕与微投影 */
-.board-tile {
+/* 正方形纸片：加入暗格分割线，严丝合缝贴合，无外缩变形 */
+.board-tile, .floating-drag-tile {
   pointer-events: auto;
   position: relative;
-  border-radius: 6px;
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.35),
-    inset 0 1px 1px rgba(255, 255, 255, 0.4),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.25);
-  cursor: grab;
+  border-radius: 2px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
   user-select: none;
   overflow: hidden;
+  /* 核心：加入暗格细分网格线，使多尺寸正方形内部清晰呈现 1x1 暗格单元 */
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.28) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.28) 1px, transparent 1px);
+  background-size: var(--cell-size) var(--cell-size);
 }
 
-.board-tile:hover {
-  transform: scale(0.985);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+.board-tile {
+  cursor: grab;
+  /* 移除 scale 缩小形变，杜绝视觉缝隙与重影错觉 */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 .board-tile:active {
@@ -89,63 +95,56 @@
 
 /* 尺寸与色调映射 */
 .tile-size-4, .tile-color-4 {
-  background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
-  border: 1.5px solid #a5b4fc;
+  background-color: #4f46e5;
+  border-color: #818cf8;
 }
 
 .tile-size-3, .tile-color-3 {
-  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
-  border: 1.5px solid #6ee7b7;
+  background-color: #059669;
+  border-color: #34d399;
 }
 
 .tile-size-2, .tile-color-2 {
-  background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
-  border: 1.5px solid #fde68a;
+  background-color: #d97706;
+  border-color: #fbbf24;
 }
 
 .tile-size-1, .tile-color-1 {
-  background: linear-gradient(135deg, #f43f5e 0%, #be123c 100%);
-  border: 1.5px solid #fecdd3;
-}
-
-/* 折纸质感纹理与折痕 */
-.board-tile::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, transparent 50%, rgba(0, 0, 0, 0.15) 100%);
-  pointer-events: none;
+  background-color: #e11d48;
+  border-color: #fb7185;
 }
 
 .tile-badge {
-  font-size: clamp(0.75rem, 2vw, 1.05rem);
+  font-size: clamp(0.72rem, 1.8vw, 0.95rem);
   font-weight: 800;
   color: #fff;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1px 5px;
+  border-radius: 4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   pointer-events: none;
+  z-index: 2;
 }
 
 .btn-tile-remove {
   position: absolute;
-  top: 3px;
-  right: 3px;
-  width: 20px;
-  height: 20px;
+  top: 2px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   border: none;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.15s ease, background 0.15s ease;
+  z-index: 5;
 }
 
 .board-tile:hover .btn-tile-remove {
@@ -156,52 +155,50 @@
   background: #ef4444;
 }
 
-/* 吸附幽灵预览 */
+/* 吸附幽灵预览（像素级严密对齐网格） */
 .placement-ghost {
   display: none;
   position: relative;
-  border-radius: 6px;
+  box-sizing: border-box;
+  border-radius: 2px;
   pointer-events: none;
   z-index: 10;
-  transition: all 0.08s ease;
 }
 
 .ghost-valid {
-  background: rgba(52, 211, 153, 0.35);
-  border: 2px dashed #34d399;
-  box-shadow: 0 0 16px rgba(52, 211, 153, 0.5);
+  background: rgba(52, 211, 153, 0.3);
+  border: 2px solid #34d399;
 }
 
 .ghost-invalid {
   background: rgba(239, 68, 68, 0.35);
-  border: 2px dashed #ef4444;
-  box-shadow: 0 0 16px rgba(239, 68, 68, 0.5);
+  border: 2px solid #ef4444;
 }
 
 .ghost-hint-pulse {
   background: rgba(251, 191, 36, 0.4);
   border: 2px solid #fbbf24;
-  box-shadow: 0 0 20px rgba(251, 191, 36, 0.8);
-  animation: pulse-glow 1.2s infinite ease-in-out;
+  animation: pulse-glow 1s infinite alternate ease-in-out;
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.6; transform: scale(0.97); }
-  50% { opacity: 1; transform: scale(1.02); }
+  0% { opacity: 0.5; }
+  100% { opacity: 0.95; }
 }
 
 /* 纸片备料区与垃圾桶 */
 .tray-wrapper {
   width: 100%;
-  max-width: 640px;
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  margin-top: 4px;
 }
 
 .tray-title-text {
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
   text-align: center;
 }
@@ -213,15 +210,15 @@
   gap: 16px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  padding: 12px 20px;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 12px 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
   flex-wrap: wrap;
 }
 
 .tray-item {
   position: relative;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: grab;
   display: flex;
   flex-direction: column;
@@ -229,15 +226,19 @@
   justify-content: center;
   color: #fff;
   font-weight: 800;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
   touch-action: none;
   user-select: none;
+  box-sizing: border-box;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 1px, transparent 1px);
 }
 
 .tray-item:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
 }
 
 .tray-item:active {
@@ -246,14 +247,14 @@
 
 .tray-item.selected {
   outline: 3px solid #38bdf8;
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.8);
-  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.7);
+  transform: translateY(-2px);
 }
 
-.tray-size-4 { width: 68px; height: 68px; font-size: 1rem; }
-.tray-size-3 { width: 56px; height: 56px; font-size: 0.9rem; }
-.tray-size-2 { width: 44px; height: 44px; font-size: 0.8rem; }
-.tray-size-1 { width: 34px; height: 34px; font-size: 0.72rem; }
+.tray-size-4 { width: 72px; height: 72px; font-size: 1rem; background-size: 18px 18px; }
+.tray-size-3 { width: 60px; height: 60px; font-size: 0.9rem; background-size: 20px 20px; }
+.tray-size-2 { width: 48px; height: 48px; font-size: 0.82rem; background-size: 24px 24px; }
+.tray-size-1 { width: 36px; height: 36px; font-size: 0.75rem; background-size: 36px 36px; }
 
 /* 丢弃垃圾桶区域 */
 .trash-zone {
@@ -261,26 +262,24 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  background: rgba(239, 68, 68, 0.1);
-  border: 1.5px dashed rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.12);
+  border: 1.5px dashed rgba(239, 68, 68, 0.35);
   color: #fca5a5;
-  padding: 6px 18px;
+  padding: 6px 20px;
   border-radius: 8px;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
-  opacity: 0.65;
+  opacity: 0.75;
   transition: all 0.2s ease;
 }
 
 .trash-active {
   opacity: 1;
   border-color: #ef4444;
-  background: rgba(239, 68, 68, 0.25);
-  transform: scale(1.02);
+  background: rgba(239, 68, 68, 0.28);
 }
 
 .trash-hover {
-  background: rgba(239, 68, 68, 0.5);
-  box-shadow: 0 0 18px rgba(239, 68, 68, 0.7);
-  transform: scale(1.08);
+  background: rgba(239, 68, 68, 0.55);
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.75);
 }
