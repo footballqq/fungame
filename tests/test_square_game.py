@@ -100,6 +100,9 @@ def test_file_line_limits_under_500():
         os.path.join(SQUARE_DIR, "js", "drag_drop.js"),
         os.path.join(SQUARE_DIR, "js", "confetti.js"),
         os.path.join(SQUARE_DIR, "js", "ui.js"),
+        os.path.join(SQUARE_DIR, "README.md"),
+        os.path.join(SQUARE_DIR, "DEVELOPMENT.md"),
+        os.path.join(SQUARE_DIR, "DESIGN.md"),
     ]
 
     for fpath in files_to_check:
@@ -211,20 +214,26 @@ def test_grid_subdivisions_percentage_accuracy():
 
 
 def test_documentation_and_manual_completeness():
-    """验证项目包含完备的用户使用说明文档 README.md 与开发经验文档 DEVELOPMENT.md"""
+    """验证项目包含完备的用户使用说明文档 README.md、开发经验文档 DEVELOPMENT.md 与美工设计规范 DESIGN.md"""
     readme_path = os.path.join(SQUARE_DIR, "README.md")
     dev_path = os.path.join(SQUARE_DIR, "DEVELOPMENT.md")
+    design_path = os.path.join(SQUARE_DIR, "DESIGN.md")
 
     assert os.path.isfile(readme_path), "必须存在说明文档 README.md"
     assert os.path.isfile(dev_path), "必须存在开发经验文档 DEVELOPMENT.md"
+    assert os.path.isfile(design_path), "必须存在美工设计规范文档 DESIGN.md"
 
     with open(readme_path, "r", encoding="utf-8") as f:
         readme = f.read()
-    assert "10×10" in readme and "游戏规则" in readme and "数学原理" in readme
+    assert "10×10" in readme and "游戏规则" in readme and "数学原理" in readme and "鸡兔同笼" in readme
 
     with open(dev_path, "r", encoding="utf-8") as f:
         dev = f.read()
-    assert "4K" in dev and "踩坑" in dev and "架构" in dev
+    assert "4K" in dev and "踩坑" in dev and "架构" in dev and "鸡兔同笼" in dev
+
+    with open(design_path, "r", encoding="utf-8") as f:
+        design = f.read()
+    assert "色谱" in design and "米白" in design and "暗格" in design and "粒子" in design
 
 
 def test_math_formula_formatting_no_raw_latex():
