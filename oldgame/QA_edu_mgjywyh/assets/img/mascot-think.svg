@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150">
+  <!-- 吉祥物：思考（手托下巴 + 问号） -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="58" cy="142" rx="30" ry="6" fill="#000" opacity=".25"/>
+    <path d="M50 118 L50 134" stroke="#d9a06b" stroke-width="9" fill="none"/>
+    <path d="M68 118 L68 134" stroke="#d9a06b" stroke-width="9" fill="none"/>
+    <ellipse cx="49" cy="138" rx="9" ry="5" fill="#35e0e6" stroke="#1fa9ae" stroke-width="2"/>
+    <ellipse cx="69" cy="138" rx="9" ry="5" fill="#35e0e6" stroke="#1fa9ae" stroke-width="2"/>
+    <path d="M46 82 L36 122 Q59 130 82 122 L72 82 Z" fill="#ff5aa2" stroke="#c93a78" stroke-width="2.5"/>
+    <path d="M40 112 Q59 120 78 112" fill="none" stroke="#fff" stroke-width="4" opacity=".85"/>
+    <!-- 后手臂（叉腰） -->
+    <path d="M88 84 Q98 94 92 104" fill="none" stroke="#d9a06b" stroke-width="9"/>
+    <!-- 头（微倾） -->
+    <g transform="rotate(-4 59 46)">
+      <circle cx="59" cy="46" r="34" fill="#ffe3c9" stroke="#d9a06b" stroke-width="2.5"/>
+      <path d="M25 46 Q22 10 59 8 Q96 10 93 46 Q93 54 88 56 Q92 34 78 28 Q66 40 40 30 Q28 36 30 56 Q25 54 25 46 Z"
+            fill="#ffd94a" stroke="#e0a80f" stroke-width="2.5"/>
+      <path d="M27 42 Q24 62 32 72 Q36 60 33 44 Z" fill="#ffd94a" stroke="#e0a80f" stroke-width="2"/>
+      <path d="M91 42 Q94 62 86 72 Q82 60 85 44 Z" fill="#ffd94a" stroke="#e0a80f" stroke-width="2"/>
+      <!-- 眼睛向上看 -->
+      <path d="M42 50 Q47 45 52 50" fill="none" stroke="#141826" stroke-width="3"/>
+      <path d="M66 50 Q71 45 76 50" fill="none" stroke="#141826" stroke-width="3"/>
+      <ellipse cx="39" cy="60" rx="5" ry="3" fill="#ffb3c9" opacity=".85"/>
+      <ellipse cx="79" cy="60" rx="5" ry="3" fill="#ffb3c9" opacity=".85"/>
+      <path d="M54 64 Q59 66 64 64" fill="none" stroke="#b3552e" stroke-width="2.5"/>
+    </g>
+    <!-- 前手臂托下巴 -->
+    <path d="M32 84 Q40 96 50 92" fill="none" stroke="#d9a06b" stroke-width="9"/>
+    <circle cx="52" cy="90" r="7" fill="#ffe3c9" stroke="#d9a06b" stroke-width="2"/>
+    <path d="M53 76 L59 80 L65 76 L65 84 L59 88 L53 84 Z" fill="#35e0e6" stroke="#1fa9ae" stroke-width="1.5"/>
+    <!-- 大问号 -->
+    <text x="98" y="34" font-family="Arial, sans-serif" font-size="34" font-weight="bold"
+          fill="#35e0e6" stroke="#0e6f73" stroke-width="1" transform="rotate(12 98 34)">?</text>
+    <circle cx="112" cy="44" r="3.4" fill="#35e0e6"/>
+  </g>
+</svg>

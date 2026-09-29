@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150">
+  <!-- 民國教育委員會 网页版吉祥物：待机（挥手） -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- 影子 -->
+    <ellipse cx="58" cy="142" rx="30" ry="6" fill="#000" opacity=".25"/>
+    <!-- 后侧手臂（举起挥手） -->
+    <path d="M88 78 Q108 62 104 44" fill="none" stroke="#d9a06b" stroke-width="9"/>
+    <circle cx="104" cy="42" r="7" fill="#ffe3c9" stroke="#d9a06b" stroke-width="2"/>
+    <!-- 腿 -->
+    <path d="M50 118 L50 134" stroke="#d9a06b" stroke-width="9" fill="none"/>
+    <path d="M68 118 L68 134" stroke="#d9a06b" stroke-width="9" fill="none"/>
+    <ellipse cx="49" cy="138" rx="9" ry="5" fill="#35e0e6" stroke="#1fa9ae" stroke-width="2"/>
+    <ellipse cx="69" cy="138" rx="9" ry="5" fill="#35e0e6" stroke="#1fa9ae" stroke-width="2"/>
+    <!-- 连衣裙 -->
+    <path d="M46 82 L36 122 Q59 130 82 122 L72 82 Z" fill="#ff5aa2" stroke="#c93a78" stroke-width="2.5"/>
+    <path d="M40 112 Q59 120 78 112" fill="none" stroke="#fff" stroke-width="4" opacity=".85"/>
+    <!-- 前侧手臂 -->
+    <path d="M32 84 Q22 96 26 106" fill="none" stroke="#d9a06b" stroke-width="9"/>
+    <circle cx="27" cy="108" r="7" fill="#ffe3c9" stroke="#d9a06b" stroke-width="2"/>
+    <!-- 头 -->
+    <circle cx="59" cy="46" r="34" fill="#ffe3c9" stroke="#d9a06b" stroke-width="2.5"/>
+    <!-- 头发 -->
+    <path d="M25 46 Q22 10 59 8 Q96 10 93 46 Q93 54 88 56 Q92 34 78 28 Q66 40 40 30 Q28 36 30 56 Q25 54 25 46 Z"
+          fill="#ffd94a" stroke="#e0a80f" stroke-width="2.5"/>
+    <!-- 侧发 -->
+    <path d="M27 42 Q24 62 32 72 Q36 60 33 44 Z" fill="#ffd94a" stroke="#e0a80f" stroke-width="2"/>
+    <path d="M91 42 Q94 62 86 72 Q82 60 85 44 Z" fill="#ffd94a" stroke="#e0a80f" stroke-width="2"/>
+    <!-- 眼睛 -->
+    <circle cx="47" cy="52" r="5" fill="#141826"/>
+    <circle cx="71" cy="52" r="5" fill="#141826"/>
+    <circle cx="48.8" cy="50.2" r="1.7" fill="#fff"/>
+    <circle cx="72.8" cy="50.2" r="1.7" fill="#fff"/>
+    <!-- 腮红 -->
+    <ellipse cx="39" cy="60" rx="5" ry="3" fill="#ffb3c9" opacity=".85"/>
+    <ellipse cx="79" cy="60" rx="5" ry="3" fill="#ffb3c9" opacity=".85"/>
+    <!-- 微笑 -->
+    <path d="M53 63 Q59 69 65 63" fill="none" stroke="#b3552e" stroke-width="2.5"/>
+    <!-- 领结 -->
+    <path d="M53 76 L59 80 L65 76 L65 84 L59 88 L53 84 Z" fill="#35e0e6" stroke="#1fa9ae" stroke-width="1.5"/>
+    <!-- 挥手星光 -->
+    <path d="M112 34 L114 40 L120 42 L114 44 L112 50 L110 44 L104 42 L110 40 Z" fill="#ffd94a"/>
+  </g>
+</svg>

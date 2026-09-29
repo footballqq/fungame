@@ -1,5 +1,5 @@
 {
-  "current_task": "分类归位: 将「奇偶棋子谜题」从奥数专区迁移至「策略棋盘与人机对弈」博弈弈棋专区（已完成）",
+  "current_task": "主页集成: 将经典街机益智问答游戏「民國教育委員會」接入根目录 index.html（已完成）",
   "last_changes": [
     "index.html",
     "INDEX_GUIDE.md",
@@ -8,7 +8,7 @@
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 并 git push 到远程 origin/main 分支，向用户汇报奇偶棋子谜题博弈弈棋归类完成"
+    "git commit 并 git push 到远程 origin/main 分支，向用户汇报民國教育委員會主页集成成果"
   ],
-  "notes": "1. 遵照用户指引，将基于国际象棋盘的『奇偶棋子谜题』从奥数谜题专区迁移至策略棋盘对弈（博弈弈棋）专区；2. 卡片设置 data-category='boardgame'，置于 #sec-boardgame 紧随小马逛集市，徽章设为『国际象棋盘』，配备『开始挑战』与『原理解析』双入口；3. 校准顶栏分类胶囊计数（奥数 9->8，棋盘 10->11，全量 39 保持严格平衡）；4. 同步更新 INDEX_GUIDE.md 分类范例表；5. 扩充 tests/test_index_hub.py 验证卡片归属与专区数量匹配，全库 96 项单测 100% 绿灯，单文件严格保持 <= 500 行。"
+  "notes": "1. 遵循 INDEX_GUIDE.md 标准 6 步 SOP，将 oldgame/QA_edu_mgjywyh/index.html 顺利接入主页 index.html；2. 归入『生活数学与启蒙素养』专区（data-category='life'），徽章为『街机百科问答』，附带全科题库（1987题）与繁简双语支持介绍；3. 同步将全站独立程序总数由 39 更新至 40 个，生活素养胶囊计数由 9 项更新至 10 项；4. 同步更新 INDEX_GUIDE.md 收录范例表；5. 扩充 tests/test_index_hub.py 验证文件存在性、卡片类别与全站 40 张卡片总数约束，全库 97 项单测 100% 绿灯，单文件严格保持 <= 500 行。"
 }

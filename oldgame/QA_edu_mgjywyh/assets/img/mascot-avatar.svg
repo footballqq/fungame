@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <!-- 吉祥物头像（顶栏 / 称号图标） -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="4" width="88" height="88" rx="20" fill="#232a45" stroke="#3d4776" stroke-width="3"/>
+    <circle cx="48" cy="52" r="28" fill="#ffe3c9" stroke="#d9a06b" stroke-width="2"/>
+    <path d="M20 52 Q18 22 48 20 Q78 22 76 52 Q76 58 72 60 Q75 42 64 36 Q54 46 34 38 Q24 44 25 60 Q20 58 20 52 Z"
+          fill="#ffd94a" stroke="#e0a80f" stroke-width="2"/>
+    <path d="M22 48 Q20 64 26 72 Q29 62 27 50 Z" fill="#ffd94a" stroke="#e0a80f" stroke-width="1.6"/>
+    <path d="M74 48 Q76 64 70 72 Q67 62 69 50 Z" fill="#ffd94a" stroke="#e0a80f" stroke-width="1.6"/>
+    <circle cx="39" cy="56" r="4" fill="#141826"/>
+    <circle cx="57" cy="56" r="4" fill="#141826"/>
+    <circle cx="40.4" cy="54.6" r="1.4" fill="#fff"/>
+    <circle cx="58.4" cy="54.6" r="1.4" fill="#fff"/>
+    <ellipse cx="32.5" cy="63" rx="4" ry="2.4" fill="#ffb3c9"/>
+    <ellipse cx="63.5" cy="63" rx="4" ry="2.4" fill="#ffb3c9"/>
+    <path d="M43 67 Q48 71.5 53 67" fill="none" stroke="#b3552e" stroke-width="2.2"/>
+    <!-- 领结 -->
+    <path d="M43 78 L48 81 L53 78 L53 84.5 L48 88 L43 84.5 Z" fill="#35e0e6" stroke="#1fa9ae" stroke-width="1.2"/>
+  </g>
+</svg>

@@ -17,6 +17,7 @@
 - [X] 产出主页接入与维护说明文档（`INDEX_GUIDE.md`, `tests/test_index_hub.py`）：在根目录编写详尽指南，阐明三层解耦架构、五大分类专区收录规范、未来新游戏接入的 6 步标准作业流程（SOP）、HTML 卡片模板与按钮规范，全套 94 项 pytest 全绿通过
 - [X] 修复自定义模式（如选边长 10、最大纸片 6）未自动求解导致理论极限与评价显示错误 Bug（`math_engine.js`, `game_state.js`, `ui.js`, `test_square_game.py`）：`SquareMathEngine` 引入剪枝回溯求解器 `solveMinTiling(N, maxTile)` 与内存结果缓存池，动态求解出 10×10 在最大纸片 6 时的严格理论极值为 4 块（四块 5×5 拼合）；`game_state.js` 与 `ui.js` 全量升级为双参数获取 `getPreset(N, maxTile)`，彻底解决结算弹窗中误将 4 块当成 11 块并出现“已用 8 块却显示理论极限 11 误评 3 星”的逻辑矛盾，同时为自定义关卡注入最优解动画演示与一步提示能力，增加完成时理论极值防穿透安全保护，自动化单测扩充至 95 项 pytest 100% 绿灯通过
 - [X] 分类归位: 将「奇偶棋子谜题」从奥数谜题专区迁移至「策略棋盘与人机对弈」博弈弈棋专区（`index.html`, `INDEX_GUIDE.md`, `tests/test_index_hub.py`）：卡片类别更新为 `data-category="boardgame"` 并移入 `#sec-boardgame` 紧随国际象棋小马卡片，徽章定制为「国际象棋盘」，配套提供「开始挑战」与「原理解析」双入口；同步校准分类胶囊计数（奥数 8、棋盘 11），同步更新指南文档与自动化测试，全套 96 项 pytest 100% 绿灯通过
+- [X] 主页集成: 将经典街机益智问答游戏「民國教育委員會」接入根目录 `index.html`（`index.html`, `INDEX_GUIDE.md`, `tests/test_index_hub.py`）：归入「🌍 生活数学与启蒙素养」专区（`data-category="life"`），收录 1993 NAKANIHON 街机原版 1987 道全科真题（语文/数学/历史/地理/理科/社会/艺术），支持繁简双语与原版音效；更新 Hero 独立程序总数为 40 个、生活素养胶囊计数为 10 项，自动化单测扩充至 97 项 pytest 100% 绿灯通过
 
 
 

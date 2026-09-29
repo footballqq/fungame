@@ -135,3 +135,32 @@ def test_stones_parity_puzzle_in_boardgame_category():
         actual_cnt = len(sec.find_all("div", class_="game-card"))
         assert actual_cnt == expected_cnt, f"专区 {cat} 卡片数 ({actual_cnt}) 与胶囊指示 ({expected_cnt}) 不一致"
 
+
+def test_qa_edu_mgjywyh_integrated_in_life():
+    """验证民國教育委員會街机问答游戏成功接入生活素养专区且总数达到 40 项"""
+    with open(INDEX_HTML, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # 验证游戏卡片存在
+    qa_link = soup.find("a", href="oldgame/QA_edu_mgjywyh/index.html")
+    assert qa_link is not None, "必须包含民國教育委員會游戏入口链接"
+    qa_card = qa_link.find_parent("div", class_="game-card")
+    assert qa_card is not None
+    assert qa_card.get("data-category") == "life", "民國教育委員會类别必须为 life"
+
+    # 验证所在父专区
+    parent_sec = qa_card.find_parent("section", class_="category-section")
+    assert parent_sec is not None
+    assert parent_sec.get("data-section-category") == "life", "必须坐落在生活数学与启蒙素养专区内"
+
+    # 验证实体文件存在
+    target_html = os.path.join(PROJECT_ROOT, "oldgame", "QA_edu_mgjywyh", "index.html")
+    assert os.path.isfile(target_html), f"游戏入口文件必须实际存在: {target_html}"
+
+    # 验证全站总卡片数达到 40 项
+    cards = soup.find_all("div", class_="game-card")
+    assert len(cards) == 40, f"全站独立卡片数应为 40，实为 {len(cards)}"
+
+

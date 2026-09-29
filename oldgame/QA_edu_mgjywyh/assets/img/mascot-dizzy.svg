@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150">
+  <!-- 吉祥物：答错发晕（波浪嘴 + 汗滴 + 晕圈） -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="58" cy="142" rx="30" ry="6" fill="#000" opacity=".25"/>
+    <path d="M34 82 Q28 96 34 106" fill="none" stroke="#d9a06b" stroke-width="9"/>
+    <circle cx="35" cy="108" r="7" fill="#ffe3c9" stroke="#d9a06b" stroke-width="2"/>
+    <path d="M86 82 Q92 96 86 106" fill="none" stroke="#d9a06b" stroke-width="9"/>
+    <circle cx="85" cy="108" r="7" fill="#ffe3c9" stroke="#d9a06b" stroke-width="2"/>
+    <path d="M50 118 L50 134" stroke="#d9a06b" stroke-width="9" fill="none"/>
+    <path d="M68 118 L68 134" stroke="#d9a06b" stroke-width="9" fill="none"/>
+    <ellipse cx="49" cy="138" rx="9" ry="5" fill="#35e0e6" stroke="#1fa9ae" stroke-width="2"/>
+    <ellipse cx="69" cy="138" rx="9" ry="5" fill="#35e0e6" stroke="#1fa9ae" stroke-width="2"/>
+    <path d="M46 82 L36 122 Q59 130 82 122 L72 82 Z" fill="#ff5aa2" stroke="#c93a78" stroke-width="2.5"/>
+    <path d="M40 112 Q59 120 78 112" fill="none" stroke="#fff" stroke-width="4" opacity=".85"/>
+    <!-- 头歪 -->
+    <g transform="rotate(-8 59 46)">
+      <circle cx="59" cy="46" r="34" fill="#ffe3c9" stroke="#d9a06b" stroke-width="2.5"/>
+      <path d="M25 46 Q22 10 59 8 Q96 10 93 46 Q93 54 88 56 Q92 34 78 28 Q66 40 40 30 Q28 36 30 56 Q25 54 25 46 Z"
+            fill="#ffd94a" stroke="#e0a80f" stroke-width="2.5"/>
+      <path d="M27 42 Q24 62 32 72 Q36 60 33 44 Z" fill="#ffd94a" stroke="#e0a80f" stroke-width="2"/>
+      <path d="M91 42 Q94 62 86 72 Q82 60 85 44 Z" fill="#ffd94a" stroke="#e0a80f" stroke-width="2"/>
+      <!-- 螺旋晕眼 -->
+      <path d="M47 52 m0 0 a3 3 0 1 1 -3 -3 a5 5 0 1 1 5 5 a7 7 0 1 1 -7 7"
+            fill="none" stroke="#141826" stroke-width="2.4"/>
+      <path d="M71 52 m0 0 a3 3 0 1 1 -3 -3 a5 5 0 1 1 5 5 a7 7 0 1 1 -7 7"
+            fill="none" stroke="#141826" stroke-width="2.4"/>
+      <ellipse cx="39" cy="61" rx="5" ry="3" fill="#ffb3c9" opacity=".85"/>
+      <ellipse cx="79" cy="61" rx="5" ry="3" fill="#ffb3c9" opacity=".85"/>
+      <!-- 波浪嘴 -->
+      <path d="M52 64 Q55 61 58 64 Q61 67 64 64" fill="none" stroke="#b3552e" stroke-width="2.5"/>
+    </g>
+    <path d="M53 76 L59 80 L65 76 L65 84 L59 88 L53 84 Z" fill="#35e0e6" stroke="#1fa9ae" stroke-width="1.5"/>
+    <!-- 汗滴 -->
+    <path d="M96 24 Q102 32 96 36 Q90 32 96 24 Z" fill="#35e0e6" stroke="#1fa9ae" stroke-width="1.5"/>
+    <!-- 晕圈星星 -->
+    <path d="M20 28 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 Z" fill="#ffd94a" opacity=".9"/>
+  </g>
+</svg>

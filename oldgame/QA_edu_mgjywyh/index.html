@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#141826">
+<title>民國教育委員會 — 網頁版</title>
+<link rel="stylesheet" href="css/style.css?v=20260929d">
+<link rel="icon" href="assets/img/mascot-avatar.svg">
+</head>
+<body>
+<div id="app" class="app">
+  <!-- top bar -->
+  <header class="topbar">
+    <img class="topbar__logo" src="assets/img/mascot-avatar.svg" alt=""
+         onerror="this.style.visibility='hidden'">
+    <div class="topbar__titles">
+      <img class="topbar__title" src="assets/img/title-zh.svg" alt="民國教育委員會"
+           onerror="this.outerHTML='<span class=&quot;topbar__title-text&quot;>民國教育委員會</span>'">
+      <span class="topbar__sub">QUIZ CHANNEL QUESTION · 網頁版</span>
+    </div>
+    <button id="btn-lang" class="icon-btn lang-btn" type="button" aria-label="语言切换">简</button>
+    <button id="btn-sound" class="icon-btn" type="button" aria-label="音效開關">🔊</button>
+  </header>
+
+  <main id="screen" class="screen" aria-live="polite"></main>
+
+  <footer class="footbar">
+    <span id="storage-status" class="footbar__hint"></span>
+    <span class="footbar__credit">街機原作 © 1993 NAKANIHON / LAXAN · 資料自街機 ROM 提取</span>
+  </footer>
+</div>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="data/questions.js?v=20260929d"></script>
+<script src="js/storage.js?v=20260929d"></script>
+<script src="js/audio.js?v=20260929d"></script>
+<script src="js/game.js?v=20260929d"></script>
+<script src="js/ui.js?v=20260929d"></script>
+<script src="js/main.js?v=20260929d"></script>
+</body>
+</html>
