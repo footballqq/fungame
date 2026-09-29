@@ -247,3 +247,23 @@ def test_math_formula_formatting_no_raw_latex():
     assert "0 ≤ <em>a</em> ≤ 4" in i18n_text or "0 ≤ a ≤ 4" in i18n_text, "应包含使用标准小于等于号 ≤ 渲染的公式"
 
 
+def test_styled_clear_modal_and_no_native_dialogs():
+    """验证清空棋盘采用游戏风格模态框，彻底杜绝浏览器原生 alert() 和 confirm()"""
+    html_path = os.path.join(SQUARE_DIR, "index.html")
+    js_path = os.path.join(SQUARE_DIR, "js", "ui.js")
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    assert 'id="clearModal"' in html, "必须包含清空确认模态弹窗 #clearModal"
+    assert 'id="btnConfirmClear"' in html, "必须包含确认清空按键 #btnConfirmClear"
+    assert 'id="btnCancelClear"' in html, "必须包含取消清空按键 #btnCancelClear"
+
+    with open(js_path, "r", encoding="utf-8") as f:
+        js = f.read()
+
+    assert not re.search(r"\balert\(", js), "ui.js 中不应使用浏览器原生 alert()"
+    assert not re.search(r"\bconfirm\(", js), "ui.js 中不应使用浏览器原生 confirm()"
+
+
+

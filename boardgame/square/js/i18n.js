@@ -31,6 +31,12 @@
       btn_demo: '▶ 最优解演示',
       btn_stop_demo: '⏹ 停止演示',
       btn_clear: '🗑 清空棋盘',
+      btn_cancel: '取消',
+      btn_confirm_clear: '确认清空',
+      clear_modal_title: '🗑️ 清空棋盘确认',
+      clear_modal_question: '确定要清空棋盘上的所有纸片吗？',
+      clear_modal_desc: '当前棋盘的所有摆放进度将被清除。清空后仍可使用「↩ 撤销」按键随时复原。',
+      toast_board_cleared: '已清空棋盘，可点击「↩ 撤销」恢复',
       btn_close: '关闭',
       btn_restart: '再试一次',
       btn_next_level: '下一关',
@@ -102,6 +108,11 @@
         <p>既然 4×4 纸片最多只能用 4 块，我们列出面积不定方程：</p>
         <div class="math-formula">16<em>a</em> + 9<em>b</em> + 4<em>c</em> + <em>d</em> = 100 &nbsp;&nbsp; (0 ≤ <em>a</em> ≤ 4)</div>
         <p>其中 <em>a, b, c, d</em> 分别代表 4×4, 3×3, 2×2, 1×1 的数量。要使总块数 <em>K</em> = <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em> ≤ 10：</p>
+        <div class="math-highlight" style="font-size: 0.92rem; font-weight: normal; line-height: 1.7; margin: 12px 0;">
+          <strong>💡 趣味联想：这其实是高维的「鸡兔同笼」问题！</strong><br>
+          如果把每块纸片看作动物（总块数 <em>K</em> 是“总头数”），面积看作“脚数”：1×1 是 1 腿独角兽、2×2 是 4 腿兔子、3×3 是 9 腿怪兽、4×4 是 16 腿巨象。拼满 100 面积正是经典的“四元鸡兔同笼”！<br>
+          <strong>升维区别：</strong>传统鸡兔同笼只要代数算通就能装进笼子；而本题即便代数算通（如 <em>K</em>=8 时 4头巨象+4只怪兽），在二维刚性几何空间中依然会发生排布重叠冲突！
+        </div>
         <ul>
           <li><strong>若 <em>K</em> = 8：</strong>唯一非负整数解为 <em>a</em>=4, <em>b</em>=4, <em>c</em>=0, <em>d</em>=0（即四个 4×4 和四个 3×3）。
           <br><em>几何矛盾：</em> 10×10 的四条边界长度为 10，仅用 4 和 3 分割 10 的唯一方式为 4 + 3 + 3 = 10。这意味着每条边只能有 1 个 4。四个 4×4 必须分布在四条边的中间，四个角必须是四个 3×3。但这样四个 4×4 在中心交汇区必须占满到中心坐标，导致中心必然发生重叠冲突，因此 8 块无解！</li>
@@ -173,6 +184,12 @@
       btn_demo: '▶ Optimal Demo',
       btn_stop_demo: '⏹ Stop Demo',
       btn_clear: '🗑 Clear Board',
+      btn_cancel: 'Cancel',
+      btn_confirm_clear: 'Clear Board',
+      clear_modal_title: '🗑️ Clear Board Confirmation',
+      clear_modal_question: 'Are you sure you want to clear all tiles?',
+      clear_modal_desc: 'All tiles currently on the board will be removed. You can undo this action at any time.',
+      toast_board_cleared: 'Board cleared. Click "↩ Undo" to restore.',
       btn_close: 'Close',
       btn_restart: 'Try Again',
       btn_next_level: 'Next Level',
@@ -244,6 +261,11 @@
         <p>Since the number of 4×4 squares <em>a</em> ≤ 4, consider the Diophantine area equation:</p>
         <div class="math-formula">16<em>a</em> + 9<em>b</em> + 4<em>c</em> + <em>d</em> = 100 &nbsp;&nbsp; (0 ≤ <em>a</em> ≤ 4)</div>
         <p>Looking for total pieces <em>K</em> = <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em> ≤ 10:</p>
+        <div class="math-highlight" style="font-size: 0.92rem; font-weight: normal; line-height: 1.7; margin: 12px 0;">
+          <strong>💡 Mathematical Analogy: A High-Dimensional "Chicken and Rabbit" Problem!</strong><br>
+          If each square is viewed as an animal (total pieces <em>K</em> = "heads"), and area as "legs": 1×1 is a 1-legged creature, 2×2 is a 4-legged rabbit, 3×3 is a 9-legged monster, and 4×4 is a 16-legged elephant. Solving 16<em>a</em> + 9<em>b</em> + 4<em>c</em> + <em>d</em> = 100 is an algebraic Chicken-and-Rabbit Diophantine system!<br>
+          <strong>Crucial Geometric Extension:</strong> Unlike ordinary Chicken-and-Rabbit where any integer solution is physical, here rigid 2D planar packing prevents algebraic solutions (like <em>K</em>=8) from fitting without overlapping!
+        </div>
         <ul>
           <li><strong>If <em>K</em> = 8:</strong> The only algebraic solution is <em>a</em>=4, <em>b</em>=4, <em>c</em>=0, <em>d</em>=0 (four 4×4 and four 3×3).
           <br><em>Boundary Contradiction:</em> Along each outer boundary of length 10, the only way to partition 10 using 4 and 3 is 4 + 3 + 3 = 10. This requires each boundary to have exactly one 4. The four corners must be 3×3, forcing all four 4×4 squares into the edge centers. Their inner corners will heavily collide at the central 2×2 square, making <em>K</em>=8 physically impossible!</li>

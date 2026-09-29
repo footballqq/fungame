@@ -71,10 +71,10 @@
         btnUndo: () => { global.SquareGameState.undo(); global.SquareAudio.playClick(); },
         btnRedo: () => { global.SquareGameState.redo(); global.SquareAudio.playClick(); },
         btnClear: () => {
-          if (confirm(global.SquareI18n.t('confirm_clear'))) {
-            global.SquareGameState.clearBoard();
-            global.SquareAudio.playRemove();
-            this.hideReviewBanner();
+          const clearModal = document.getElementById('clearModal');
+          if (clearModal) {
+            clearModal.classList.add('open');
+            global.SquareAudio.playClick();
           }
         },
         btnHint: () => this.handleHintClick(),
@@ -167,6 +167,19 @@
           this.hideReviewBanner();
           global.SquareGameState.clearBoard();
           global.SquareAudio.playLevelChange();
+        });
+      }
+
+      // 清空确认弹窗：“确认清空”
+      const btnConfirmClear = document.getElementById('btnConfirmClear');
+      if (btnConfirmClear) {
+        btnConfirmClear.addEventListener('click', () => {
+          const cm = document.getElementById('clearModal');
+          if (cm) closeModal(cm);
+          global.SquareGameState.clearBoard();
+          global.SquareAudio.playRemove();
+          this.hideReviewBanner();
+          this.showToast(global.SquareI18n.t('toast_board_cleared'));
         });
       }
 
@@ -386,16 +399,16 @@
       const metrics = state.getMetrics();
 
       if (metrics.isOptimal) {
-        alert(i18n.t('hint_already_optimal'));
+        this.showToast(i18n.t('hint_already_optimal'));
         return;
       }
       const hint = engine.findHint(state.N, state.maxTile, state.tiles, metrics.minOptimal);
       if (hint.found && hint.nextTile) {
         const { r, c, s } = hint.nextTile;
         this.highlightGridHint(r, c, s);
-        alert(i18n.t('hint_next_step', { r: r + 1, c: c + 1, s }));
+        this.showToast(i18n.t('hint_next_step', { r: r + 1, c: c + 1, s }));
       } else {
-        alert(i18n.t('hint_no_solution_from_here'));
+        this.showToast(i18n.t('hint_no_solution_from_here'));
       }
     }
 
@@ -429,17 +442,22 @@
       });
     }
 
-    showGreetingToast() {
+    showToast(text, duration = 3800) {
       const toast = document.getElementById('greetingToast');
       if (!toast) return;
+      toast.textContent = text;
+      toast.classList.add('show');
+      if (this.toastTimer) clearTimeout(this.toastTimer);
+      this.toastTimer = setTimeout(() => toast.classList.remove('show'), duration);
+    }
+
+    showGreetingToast() {
       const hour = new Date().getHours();
       const i18n = global.SquareI18n;
       let text = i18n.t('greeting_morning');
       if (hour >= 12 && hour < 18) text = i18n.t('greeting_afternoon');
       else if (hour >= 18 || hour < 5) text = i18n.t('greeting_evening');
-      toast.textContent = text;
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 4500);
+      this.showToast(text, 4500);
     }
   }
 

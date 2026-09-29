@@ -226,6 +226,25 @@
     </div>
   </div>
 
+  <!-- 清空棋盘确认弹窗（符合游戏纸艺与米白风格） -->
+  <div id="clearModal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 440px; text-align: center;">
+      <div class="modal-header">
+        <h2 class="modal-title" data-i18n="clear_modal_title">🗑️ 清空棋盘确认</h2>
+        <button class="modal-close-btn btn-modal-close" title="取消">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 24px 20px;">
+        <div style="font-size: 3rem; margin-bottom: 12px; filter: drop-shadow(0 4px 8px rgba(239, 68, 68, 0.25));">🗑️</div>
+        <p style="font-size: 1.05rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px;" data-i18n="clear_modal_question">确定要清空棋盘上的所有纸片吗？</p>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;" data-i18n="clear_modal_desc">当前棋盘的所有摆放进度将被清除。清空后仍可使用「↩ 撤销」按键随时复原。</p>
+      </div>
+      <div class="modal-footer" style="justify-content: center; gap: 12px;">
+        <button id="btnCancelClear" class="btn-action btn-modal-close" data-i18n="btn_cancel">取消</button>
+        <button id="btnConfirmClear" class="btn-action btn-danger" data-i18n="btn_confirm_clear">确认清空</button>
+      </div>
+    </div>
+  </div>
+
   <!-- 核心逻辑脚本引入 -->
   <script src="js/i18n.js?v=20260929b"></script>
   <script src="js/audio.js?v=20260929b"></script>
