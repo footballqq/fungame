@@ -1,15 +1,14 @@
 {
-  "current_task": "修复自定义模式（如选边长 10、最大纸片 6）未自动求解导致理论极限与评价显示错误 Bug（已完成）",
+  "current_task": "分类归位: 将「奇偶棋子谜题」从奥数专区迁移至「策略棋盘与人机对弈」博弈弈棋专区（已完成）",
   "last_changes": [
-    "boardgame/square/js/math_engine.js",
-    "boardgame/square/js/game_state.js",
-    "boardgame/square/js/ui.js",
-    "tests/test_square_game.py",
+    "index.html",
+    "INDEX_GUIDE.md",
+    "tests/test_index_hub.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 并 git push 到远程 origin/main 分支，向用户汇报自定义动态求解与指标判定修复成果"
+    "git commit 并 git push 到远程 origin/main 分支，向用户汇报奇偶棋子谜题博弈弈棋归类完成"
   ],
-  "notes": "1. 定位并彻底修复自定义参数求解问题：此前 getPreset 仅以 N 为 key 查写死的 8 个预设关卡，当用户设定 N=10, maxTile=6 时返回了原题 maxTile=4 的 minCount=11，导致用户用 8 块拼完后出现『本次使用 8 块，理论最优 11 块，达成理论最少(3星)』的逻辑荒谬矛盾；2. 在 MathEngine 实现 solveMinTiling 剪枝回溯求解器与缓存池，自动求解出 10x10 在 maxTile=6 时的严格理论极值为 4 块（四块 5x5）；3. game_state.js 与 ui.js 全量对齐 getPreset(N, maxTile)，终局评价与仪表盘理论最少精准呈现（8 块评为 1 星并提示最少 4 块，4 块评为 3 星）；4. 加入 isComplete 状态下理论极值防穿透安全守卫；5. 扩充 tests/test_square_game.py，95 项单测 100% 绿灯，单文件严格保持 <= 500 行。"
+  "notes": "1. 遵照用户指引，将基于国际象棋盘的『奇偶棋子谜题』从奥数谜题专区迁移至策略棋盘对弈（博弈弈棋）专区；2. 卡片设置 data-category='boardgame'，置于 #sec-boardgame 紧随小马逛集市，徽章设为『国际象棋盘』，配备『开始挑战』与『原理解析』双入口；3. 校准顶栏分类胶囊计数（奥数 9->8，棋盘 10->11，全量 39 保持严格平衡）；4. 同步更新 INDEX_GUIDE.md 分类范例表；5. 扩充 tests/test_index_hub.py 验证卡片归属与专区数量匹配，全库 96 项单测 100% 绿灯，单文件严格保持 <= 500 行。"
 }

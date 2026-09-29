@@ -29,8 +29,8 @@ fungame/
 | 专区标识 (`data-section-category`) | 专区名称 | 推荐徽章 (`.badge`) | 包含典型范例 |
 | :--- | :--- | :--- | :--- |
 | `concepts` | 📐 **数学概念与直觉可视化** | `.badge-math` | 微积分披萨、同余小学习、因式分解、方程卷子、速算挑战 |
-| `olympiad` | 🧩 **奥数思维与组合极值谜题** | `.badge-olympiad` | 正方形拼图挑战、星芒阵封印、奇偶棋子、青蛙跳跃、齿轮谜题 |
-| `boardgame` | ♟️ **策略棋盘与人机对弈** | `.badge-ai` / `.badge-touch` | Dittle 骰战棋、Quixo 战棋、滑冰棋、狐狸和鹅、GIPF 系列 |
+| `olympiad` | 🧩 **奥数思维与组合极值谜题** | `.badge-olympiad` | 正方形拼图挑战、星芒阵封印、青蛙跳跃、齿轮谜题、切分三角形 |
+| `boardgame` | ♟️ **策略棋盘与人机对弈** | `.badge-ai` / `.badge-touch` | Dittle 骰战棋、Quixo 战棋、滑冰棋、奇偶棋子谜题、狐狸和鹅、GIPF 系列 |
 | `language` | 📖 **英语与双语词汇** | `.badge-lang` | 单词拼写游戏、RAZ 分级阅读测试、数学英语学习 |
 | `life` | 🌍 **生活数学与启蒙素养** | `.badge-life` | 烙饼运筹、机车调度、立方配色、数组求和、莫比乌斯带 |
 

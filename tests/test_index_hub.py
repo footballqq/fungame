@@ -97,3 +97,41 @@ def test_search_and_empty_state_present():
     assert 'id="hubSearchInput"' in html, "必须包含搜索输入框 #hubSearchInput"
     assert 'id="btnClearSearch"' in html, "必须包含清空搜索按键 #btnClearSearch"
     assert 'id="hubEmptyState"' in html, "必须包含空状态容器 #hubEmptyState"
+
+
+def test_stones_parity_puzzle_in_boardgame_category():
+    """验证奇偶棋子谜题归属于策略棋盘专区 (boardgame) 且配置了原理解析入口"""
+    with open(INDEX_HTML, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # 验证奇偶棋子谜题卡片属性
+    stones_link = soup.find("a", href="stones/index.html")
+    assert stones_link is not None, "必须包含奇偶棋子谜题入口"
+    stones_card = stones_link.find_parent("div", class_="game-card")
+    assert stones_card is not None
+    assert stones_card.get("data-category") == "boardgame", "奇偶棋子谜题类别必须为 boardgame"
+
+    # 验证所在父专区
+    parent_sec = stones_card.find_parent("section", class_="category-section")
+    assert parent_sec is not None
+    assert parent_sec.get("data-section-category") == "boardgame", "奇偶棋子谜题必须坐落在策略棋盘专区内"
+
+    # 验证双动作按钮：挑战 + 原理解析
+    stones_hrefs = [a["href"] for a in stones_card.find_all("a")]
+    assert "stones/README.md" in stones_hrefs, "必须包含原理解析文档直达按键"
+
+    # 验证各分类卡片数与胶囊指示一致
+    pills = soup.find_all("button", class_="pill-btn")
+    for p in pills:
+        cat = p.get("data-category")
+        count_span = p.find("span", class_="pill-count")
+        if not count_span or cat == "all":
+            continue
+        expected_cnt = int(count_span.get_text(strip=True))
+        sec = soup.find("section", attrs={"data-section-category": cat})
+        assert sec is not None
+        actual_cnt = len(sec.find_all("div", class_="game-card"))
+        assert actual_cnt == expected_cnt, f"专区 {cat} 卡片数 ({actual_cnt}) 与胶囊指示 ({expected_cnt}) 不一致"
+
