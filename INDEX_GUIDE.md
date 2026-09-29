@@ -6,7 +6,7 @@
 
 ## 一、主页设计定位与三层解耦架构
 
-本项目遵循**高内聚、低耦合、关注点分离与单文件 $\le 500$ 行**的工程规范。主入口由三层解耦构成：
+本项目遵循**高内聚、低耦合、关注点分离**的工程规范。主入口由三层解耦构成：
 
 ```
 fungame/
@@ -44,7 +44,7 @@ fungame/
 在集成前，请确认新项目符合以下标准：
 1. 具备独立的入口网页（通常为 `index.html` 或 `mygame.html`）。
 2. （可选）具备独立的说明文档或规则手册（如 `README.md` 或 `rules_zh.html`）。
-3. 单文件代码严格遵循 $\le 500$ 行规范。
+3. 单文件代码遵循高内聚低耦合规范，逻辑清晰。
 
 ### 步骤 2：选择归属专区并定位代码位置
 打开根目录 [`index.html`](file:///E:/users/kpan/BaiduSyncdisk/program/aigc/fungame/index.html)，找到对应专区的 `<section>` 标签：
@@ -124,7 +124,7 @@ python -m pytest tests/test_index_hub.py
 python -m pytest tests/
 ```
 测试会自动校验：
-- `index.html`、`css/index.css`、`js/index.js` 单文件均 $\le 500$ 行；
+- `index.html`、`css/index.css`、`js/index.js` 等核心文件均完备且正常加载；
 - 无任何重复卡片标题；
 - 无任何 Windows 反斜杠破损路径；
 - 5 大分类专区与检索容器完整无缺。
@@ -139,5 +139,5 @@ python -m pytest tests/
 ### Q2：为什么我的卡片按钮与其他卡片底部不在同一水平线上？
 **排查**：确保卡片的底部按键包裹在 `<div class="card-actions">...</div>` 中。该容器设置了 `margin-top: auto`，无论上方文字描述多长，都会自动撑满并将按钮钉在卡片最底部。
 
-### Q3：如果 `index.html` 超过了 500 行怎么办？
-**排查**：如果未来项目持续增加使 `index.html` 逼近 500 行，切勿堆叠内联样式或逻辑；可将卡片数据提炼为静态 JSON 配置（如 `data/games.json`），或分拆子模板。
+### Q3：如果卡片数量持续大幅增加怎么办？
+**建议**：如果未来项目持续增加使 `index.html` 卡片极多，可将卡片数据提炼为静态 JSON 配置（如 `data/games.json`），或进一步通过模板渲染挂载。

@@ -38,7 +38,7 @@ class PythonDittleDie:
             self.right = 7 - old_top
         return self
 
-def test_game_files_exist_and_under_500_lines():
+def test_game_files_exist_and_non_empty():
     files = [
         os.path.join(GAME_DIR, "dittle_game.html"),
         os.path.join(GAME_DIR, "dittle_game_files", "dice_math.js"),
@@ -57,7 +57,7 @@ def test_game_files_exist_and_under_500_lines():
         assert os.path.exists(file_path), f"Missing file: {file_path}"
         with open(file_path, "r", encoding="utf-8") as f:
             lines = len(f.readlines())
-        assert lines <= 500, f"File {os.path.basename(file_path)} exceeds 500 lines ({lines} lines)"
+        assert lines > 0, f"File {os.path.basename(file_path)} is unexpectedly empty"
 
 def test_html_includes_all_required_scripts_and_styles():
     html_path = os.path.join(GAME_DIR, "dittle_game.html")

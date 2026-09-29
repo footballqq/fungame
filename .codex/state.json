@@ -1,14 +1,20 @@
 {
-  "current_task": "主页集成: 将经典街机益智问答游戏「民國教育委員會」接入根目录 index.html（已完成）",
+  "current_task": "规范升级: 全面取消单文件 <= 500 行硬性限制并更新对应规则、指南与测试套件（已完成）",
   "last_changes": [
-    "index.html",
+    "AGENTS.md",
+    ".agent/rules/coding.md",
     "INDEX_GUIDE.md",
     "tests/test_index_hub.py",
+    "tests/test_square_game.py",
+    "tests/test_dittle_game_engine.py",
+    "tests/test_triangle_game.py",
+    "tests/test_jumpfrog_html.py",
+    "tests/test_plusminus_html.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 并 git push 到远程 origin/main 分支，向用户汇报民國教育委員會主页集成成果"
+    "执行 git commit 与 git push 推送至远程 main 分支，向用户汇报规范与测试解除 500 行限制成果"
   ],
-  "notes": "1. 遵循 INDEX_GUIDE.md 标准 6 步 SOP，将 oldgame/QA_edu_mgjywyh/index.html 顺利接入主页 index.html；2. 归入『生活数学与启蒙素养』专区（data-category='life'），徽章为『街机百科问答』，附带全科题库（1987题）与繁简双语支持介绍；3. 同步将全站独立程序总数由 39 更新至 40 个，生活素养胶囊计数由 9 项更新至 10 项；4. 同步更新 INDEX_GUIDE.md 收录范例表；5. 扩充 tests/test_index_hub.py 验证文件存在性、卡片类别与全站 40 张卡片总数约束，全库 97 项单测 100% 绿灯，单文件严格保持 <= 500 行。"
+  "notes": "1. 根据用户指示（LLM能力已大幅提升，取消教条式单文件行数限制），彻底删除 AGENTS.md 与 .agent/rules/coding.md 中单文件 <= 500 行的硬性规则，转向倡导模块化解耦、高内聚低耦合与自然可维护性；2. 同步清理根目录 INDEX_GUIDE.md 中涉及 500 行的叙述与 FAQ 答疑；3. 重构 6 个测试文件中涉及行数限制的断言（assert <= 500 -> assert > 0，保留存在性与非空校验）；4. 全套 97 项 pytest 自动化测试 100% 绿灯全过。"
 }

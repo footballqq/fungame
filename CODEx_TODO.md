@@ -1,3 +1,7 @@
+<!-- codex: 2026-09-29 取消单文件严格 <= 500 行的硬性限制，全面拥抱高质量模块化与高内聚设计 -->
+- [X] 规则与规范升级（`AGENTS.md`, `.agent/rules/coding.md`, `INDEX_GUIDE.md`）：全面移除单文件严格 ≤ 500 行的硬性教条限制，转向倡导模块化解耦、单一职责与清晰架构的工程规范；在根目录接入指南 `INDEX_GUIDE.md` 中同步更新解耦定位与 FAQ，消除已废弃的 500 行约束描述
+- [X] 测试套件解绑与加固（`tests/test_index_hub.py`, `tests/test_square_game.py`, `tests/test_dittle_game_engine.py`, `tests/test_triangle_game.py`, `tests/test_jumpfrog_html.py`, `tests/test_plusminus_html.py`）：移除所有测试中针对 `assert lines <= 500` 的行数硬限制断言，调整为检验文件真实存在且内容非空（`assert lines > 0`），全库全量 97 项 pytest 100% 绿灯通过
+
 <!-- codex: 2026-09-29 开发正方形拼图挑战(square tiling)网页游戏，支持多目标选关(10x10/9x9等)、规则图解、拖拽吸附与多端触控、全端适配、Web Audio音效、问候语与祝贺系统、深度数学原理解析与中英双语切换 -->
 - [X] 算法设计与数学证明（`boardgame/square/square_math.py`, `tests/test_square_game.py`）：形式化证明 10×10 在纸片尺寸限定 1~4 时的理论最少块数 11，证明 4×4 纸片最多容纳 4 块，求解 5×5~12×12 各关卡理论下界，编写 pytest 全覆盖测试
 - [X] 国际化多语言系统与音效引擎（`boardgame/square/js/i18n.js`, `boardgame/square/js/audio.js`）：中英文双语全覆盖与即时热切换，Web Audio 零外链纯算法音效（拾起、吸附、撞击碰撞、移除撕纸、胜利礼乐、钟鸣）
