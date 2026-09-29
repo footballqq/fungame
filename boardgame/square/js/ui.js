@@ -1,4 +1,4 @@
-// codex: 2026-09-29 ui.js 界面控制、暗格网格重绘、4K超清适配与缩放全屏控制
+// codex: 2026-09-29 ui.js 界面控制、米白/暗色主题切换、棋盘检视横幅、弹窗双控关闭与4K缩放
 (function (global) {
   'use strict';
 
@@ -12,6 +12,9 @@
       this.confettiCanvas = null;
       this.hasShownCelebrationForCurrentBoard = false;
 
+      const savedTheme = localStorage.getItem('square_puzzle_theme');
+      this.currentTheme = savedTheme === 'dark' ? 'dark' : 'beige';
+
       const savedZoom = parseFloat(localStorage.getItem('square_puzzle_zoom'));
       this.zoomScale = (!isNaN(savedZoom) && savedZoom >= 0.6 && savedZoom <= 2.8) ? savedZoom : 1.0;
     }
@@ -24,9 +27,9 @@
       this.trashEl = document.getElementById('trashZone');
       this.confettiCanvas = document.getElementById('confettiCanvas');
 
-      if (global.SquareConfetti && this.confettiCanvas) {
-        global.SquareConfetti.init(this.confettiCanvas);
-      }
+      if (global.SquareConfetti && this.confettiCanvas) global.SquareConfetti.init(this.confettiCanvas);
+      this.applyTheme(this.currentTheme);
+      if (global.SquareI18n) global.SquareI18n.updateDOM();
 
       this.bindToolbarButtons();
       this.bindZoomControls();
@@ -35,7 +38,6 @@
       this.bindCustomControls();
 
       global.SquareDragDrop.init(this.boardEl, this.ghostEl, this.trashEl);
-
       window.addEventListener('gameStateChanged', () => this.onGameStateChanged());
       window.addEventListener('languageChanged', () => this.onLanguageChanged());
       window.addEventListener('resize', () => this.updateBoardDimensions());
@@ -44,78 +46,59 @@
       this.showGreetingToast();
     }
 
+    applyTheme(theme) {
+      this.currentTheme = theme === 'dark' ? 'dark' : 'beige';
+      document.body.classList.remove('theme-beige', 'theme-dark');
+      document.body.classList.add(`theme-${this.currentTheme}`);
+      localStorage.setItem('square_puzzle_theme', this.currentTheme);
+      this.updateThemeButtonUI();
+    }
+
+    toggleTheme() {
+      this.applyTheme(this.currentTheme === 'dark' ? 'beige' : 'dark');
+      global.SquareAudio.playClick();
+    }
+
+    updateThemeButtonUI() {
+      const btn = document.getElementById('btnTheme');
+      if (btn && global.SquareI18n) {
+        btn.textContent = global.SquareI18n.t(this.currentTheme === 'dark' ? 'btn_theme_dark' : 'btn_theme_beige');
+      }
+    }
+
     bindToolbarButtons() {
-      const btnUndo = document.getElementById('btnUndo');
-      const btnRedo = document.getElementById('btnRedo');
-      const btnClear = document.getElementById('btnClear');
-      const btnHint = document.getElementById('btnHint');
-      const btnDemo = document.getElementById('btnDemo');
-      const btnSound = document.getElementById('btnSound');
-      const btnLang = document.getElementById('btnLang');
-
-      if (btnUndo) btnUndo.addEventListener('click', () => {
-        global.SquareGameState.undo();
-        global.SquareAudio.playClick();
-      });
-
-      if (btnRedo) btnRedo.addEventListener('click', () => {
-        global.SquareGameState.redo();
-        global.SquareAudio.playClick();
-      });
-
-      if (btnClear) btnClear.addEventListener('click', () => {
-        const i18n = global.SquareI18n;
-        if (confirm(i18n.t('confirm_clear'))) {
-          global.SquareGameState.clearBoard();
-          global.SquareAudio.playRemove();
-        }
-      });
-
-      if (btnHint) btnHint.addEventListener('click', () => this.handleHintClick());
-      if (btnDemo) btnDemo.addEventListener('click', () => this.handleDemoClick());
-
-      if (btnSound) btnSound.addEventListener('click', () => {
-        const muted = global.SquareAudio.toggleMute();
-        this.updateSoundButtonUI(muted);
-      });
-
-      if (btnLang) btnLang.addEventListener('click', () => {
-        global.SquareI18n.toggle();
-      });
+      const actions = {
+        btnUndo: () => { global.SquareGameState.undo(); global.SquareAudio.playClick(); },
+        btnRedo: () => { global.SquareGameState.redo(); global.SquareAudio.playClick(); },
+        btnClear: () => {
+          if (confirm(global.SquareI18n.t('confirm_clear'))) {
+            global.SquareGameState.clearBoard();
+            global.SquareAudio.playRemove();
+            this.hideReviewBanner();
+          }
+        },
+        btnHint: () => this.handleHintClick(),
+        btnDemo: () => this.handleDemoClick(),
+        btnSound: () => this.updateSoundButtonUI(global.SquareAudio.toggleMute()),
+        btnLang: () => global.SquareI18n.toggle(),
+        btnTheme: () => this.toggleTheme()
+      };
+      for (const [id, fn] of Object.entries(actions)) {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('click', fn);
+      }
     }
 
     bindZoomControls() {
-      const btnZoomIn = document.getElementById('btnZoomIn');
-      const btnZoomOut = document.getElementById('btnZoomOut');
-      const btnZoomReset = document.getElementById('btnZoomReset');
-      const btnFullscreen = document.getElementById('btnFullscreen');
-
-      if (btnZoomIn) {
-        btnZoomIn.addEventListener('click', () => {
-          this.setZoom(this.zoomScale + 0.15);
-          global.SquareAudio.playClick();
-        });
-      }
-
-      if (btnZoomOut) {
-        btnZoomOut.addEventListener('click', () => {
-          this.setZoom(this.zoomScale - 0.15);
-          global.SquareAudio.playClick();
-        });
-      }
-
-      if (btnZoomReset) {
-        btnZoomReset.addEventListener('click', () => {
-          this.setZoom(1.0);
-          global.SquareAudio.playClick();
-        });
-      }
-
-      if (btnFullscreen) {
-        btnFullscreen.addEventListener('click', () => {
-          this.toggleFullscreen();
-          global.SquareAudio.playClick();
-        });
+      const binds = [
+        ['btnZoomIn', () => this.setZoom(this.zoomScale + 0.15)],
+        ['btnZoomOut', () => this.setZoom(this.zoomScale - 0.15)],
+        ['btnZoomReset', () => this.setZoom(1.0)],
+        ['btnFullscreen', () => this.toggleFullscreen()]
+      ];
+      for (const [id, fn] of binds) {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('click', () => { fn(); global.SquareAudio.playClick(); });
       }
     }
 
@@ -127,46 +110,70 @@
     }
 
     toggleFullscreen() {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(() => {});
-      } else if (document.exitFullscreen) {
-        document.exitFullscreen();
-      }
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
+      else if (document.exitFullscreen) document.exitFullscreen();
     }
 
     updateSoundButtonUI(muted) {
       const btnSound = document.getElementById('btnSound');
-      if (btnSound) {
+      if (btnSound && global.SquareI18n) {
         btnSound.textContent = global.SquareI18n.t(muted ? 'btn_sound_off' : 'btn_sound_on');
       }
     }
 
     bindModals() {
-      const setupModal = (btnId, modalId) => {
-        const btn = document.getElementById(btnId);
-        const modal = document.getElementById(modalId);
-        if (btn && modal) {
-          btn.addEventListener('click', () => {
-            modal.classList.add('open');
-            global.SquareAudio.playClick();
-          });
-          modal.querySelectorAll('.btn-modal-close').forEach(cb => {
-            cb.addEventListener('click', () => modal.classList.remove('open'));
-          });
-          modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.classList.remove('open');
-          });
-        }
+      const openModal = (id) => {
+        const m = document.getElementById(id);
+        if (m) { m.classList.add('open'); global.SquareAudio.playClick(); }
+      };
+      const closeModal = (m) => {
+        m.classList.remove('open');
+        if (m.id === 'congratModal' && global.SquareConfetti) global.SquareConfetti.stop();
       };
 
-      setupModal('btnRules', 'rulesModal');
-      setupModal('btnMath', 'mathModal');
-      setupModal('btnGreetings', 'greetingsModal');
+      const triggers = { btnRules: 'rulesModal', btnMath: 'mathModal', btnGreetings: 'greetingsModal' };
+      for (const [btnId, modalId] of Object.entries(triggers)) {
+        const btn = document.getElementById(btnId);
+        if (btn) btn.addEventListener('click', () => openModal(modalId));
+      }
 
-      const tabBtns = document.querySelectorAll('.math-tab-btn');
-      tabBtns.forEach(btn => {
+      // 全局绑定所有弹窗的关闭按钮与遮罩点击事件
+      document.querySelectorAll('.modal-overlay').forEach(modal => {
+        modal.querySelectorAll('.btn-modal-close').forEach(cb => {
+          cb.addEventListener('click', () => { closeModal(modal); global.SquareAudio.playClick(); });
+        });
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal); });
+      });
+
+      // 祝贺弹窗：“查看当前棋盘”
+      const btnReview = document.getElementById('btnReviewBoard');
+      if (btnReview) {
+        btnReview.addEventListener('click', () => {
+          const cm = document.getElementById('congratModal');
+          if (cm) closeModal(cm);
+          this.showReviewBanner();
+          global.SquareAudio.playClick();
+        });
+      }
+
+      // 检视横幅：“查看评价结果”
+      const btnReopen = document.getElementById('btnReopenCongrat');
+      if (btnReopen) btnReopen.addEventListener('click', () => { this.hideReviewBanner(); openModal('congratModal'); });
+
+      // 检视横幅：“再来一局”
+      const btnPlayAgain = document.getElementById('btnPlayAgain');
+      if (btnPlayAgain) {
+        btnPlayAgain.addEventListener('click', () => {
+          this.hideReviewBanner();
+          global.SquareGameState.clearBoard();
+          global.SquareAudio.playLevelChange();
+        });
+      }
+
+      // 数学原理选项卡切换
+      document.querySelectorAll('.math-tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.math-tab-btn').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
           const targetTab = btn.getAttribute('data-tab');
           document.querySelectorAll('.math-tab-content').forEach(c => {
@@ -177,36 +184,52 @@
       });
     }
 
-    bindTargetSelector() {
-      const selector = document.getElementById('targetSelect');
-      if (!selector) return;
-
-      selector.addEventListener('change', (e) => {
-        const val = e.target.value;
-        if (val === 'custom') {
-          document.getElementById('customControlPanel').style.display = 'flex';
-        } else {
-          document.getElementById('customControlPanel').style.display = 'none';
-          this.switchTarget(parseInt(val, 10));
-        }
-      });
+    showReviewBanner() {
+      const banner = document.getElementById('reviewBoardBanner');
+      if (!banner) return;
+      banner.style.display = 'flex';
+      this.updateReviewBannerText();
     }
 
-    bindCustomControls() {
-      const btnApplyCustom = document.getElementById('btnApplyCustom');
-      if (btnApplyCustom) {
-        btnApplyCustom.addEventListener('click', () => {
-          const nVal = parseInt(document.getElementById('customNInput').value, 10) || 10;
-          const maxVal = parseInt(document.getElementById('customMaxInput').value, 10) || 4;
-          const clampedN = Math.max(4, Math.min(12, nVal));
-          const clampedMax = Math.max(1, Math.min(clampedN - 1, maxVal));
-          this.switchTarget(clampedN, clampedMax);
+    hideReviewBanner() {
+      const banner = document.getElementById('reviewBoardBanner');
+      if (banner) banner.style.display = 'none';
+    }
+
+    updateReviewBannerText() {
+      const textEl = document.getElementById('reviewBannerText');
+      if (textEl && global.SquareI18n) {
+        const m = global.SquareGameState.getMetrics();
+        textEl.textContent = global.SquareI18n.t('banner_review_text', {
+          pieces: m.tileCount,
+          optimal: m.minOptimal
         });
       }
     }
 
+    bindTargetSelector() {
+      const selector = document.getElementById('targetSelect');
+      if (!selector) return;
+      selector.addEventListener('change', (e) => {
+        const isCustom = e.target.value === 'custom';
+        document.getElementById('customControlPanel').style.display = isCustom ? 'flex' : 'none';
+        if (!isCustom) this.switchTarget(parseInt(e.target.value, 10));
+      });
+    }
+
+    bindCustomControls() {
+      const btn = document.getElementById('btnApplyCustom');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const n = Math.max(4, Math.min(12, parseInt(document.getElementById('customNInput').value, 10) || 10));
+        const maxT = Math.max(1, Math.min(n - 1, parseInt(document.getElementById('customMaxInput').value, 10) || 4));
+        this.switchTarget(n, maxT);
+      });
+    }
+
     switchTarget(N, maxTile = 4) {
       this.hasShownCelebrationForCurrentBoard = false;
+      this.hideReviewBanner();
       global.SquareGameState.initLevel(N, maxTile);
       this.updateBoardDimensions();
       this.renderGridBackground();
@@ -218,45 +241,31 @@
     updateBoardDimensions() {
       if (!this.boardEl) return;
       const N = global.SquareGameState.N;
-
       const is4K = window.innerWidth >= 1920;
       const isDesktop = window.innerWidth >= 900;
-      const headerOffset = is4K ? 220 : 180;
-      const trayOffset = is4K ? 230 : 190;
-      const pad = 36;
+      const availW = Math.min(window.innerWidth - 36, is4K ? 1500 : (isDesktop ? 1040 : window.innerWidth - 20));
+      const availH = Math.max(340, window.innerHeight - (is4K ? 450 : 370));
+      const minDim = Math.min(availW, availH);
 
-      const availWidth = Math.min(window.innerWidth - pad, is4K ? 1500 : (isDesktop ? 1040 : window.innerWidth - 20));
-      const availHeight = Math.max(340, window.innerHeight - headerOffset - trayOffset);
-      const minDimension = Math.min(availWidth, availHeight);
-
-      // Windows 4K/2K 超高清与普通桌面默认提供大网格
       let baseCell = 42;
-      if (is4K) {
-        baseCell = Math.max(70, Math.min(125, Math.floor(minDimension / N)));
-      } else if (isDesktop) {
-        baseCell = Math.max(52, Math.min(84, Math.floor(minDimension / N)));
-      } else {
-        baseCell = Math.max(28, Math.min(62, Math.floor(minDimension / N)));
-      }
+      if (is4K) baseCell = Math.max(70, Math.min(125, Math.floor(minDim / N)));
+      else if (isDesktop) baseCell = Math.max(52, Math.min(84, Math.floor(minDim / N)));
+      else baseCell = Math.max(28, Math.min(62, Math.floor(minDim / N)));
 
       const finalCellSize = Math.round(baseCell * this.zoomScale);
-
       this.boardEl.style.setProperty('--cell-size', `${finalCellSize}px`);
       this.boardEl.style.setProperty('--grid-n', N.toString());
       this.boardEl.style.width = `${finalCellSize * N}px`;
       this.boardEl.style.height = `${finalCellSize * N}px`;
 
-      const zoomPercentEl = document.getElementById('zoomPercent');
-      if (zoomPercentEl) {
-        zoomPercentEl.textContent = `${Math.round(this.zoomScale * 100)}%`;
-      }
+      const zoomEl = document.getElementById('zoomPercent');
+      if (zoomEl) zoomEl.textContent = `${Math.round(this.zoomScale * 100)}%`;
     }
 
     renderGridBackground() {
       if (!this.gridBgEl) return;
       this.gridBgEl.innerHTML = '';
       const N = global.SquareGameState.N;
-
       for (let r = 0; r < N; r++) {
         for (let c = 0; c < N; c++) {
           const cell = document.createElement('div');
@@ -281,28 +290,14 @@
         tileEl.style.gridColumnStart = (t.c + 1).toString();
         tileEl.style.gridColumnEnd = `span ${t.s}`;
         tileEl.setAttribute('data-id', t.id);
-
-        tileEl.innerHTML = `
-          <span class="tile-badge">${t.s}×${t.s}</span>
-          <button class="btn-tile-remove" title="移除纸片">×</button>
-        `;
+        tileEl.innerHTML = `<span class="tile-badge">${t.s}×${t.s}</span><button class="btn-tile-remove" title="移除纸片">×</button>`;
 
         const removeBtn = tileEl.querySelector('.btn-tile-remove');
-        removeBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          state.removeTile(t.id);
-          global.SquareAudio.playRemove();
-        });
-
-        tileEl.addEventListener('dblclick', (e) => {
-          e.stopPropagation();
-          state.removeTile(t.id);
-          global.SquareAudio.playRemove();
-        });
-
+        const doRemove = (e) => { e.stopPropagation(); state.removeTile(t.id); global.SquareAudio.playRemove(); };
+        removeBtn.addEventListener('click', doRemove);
+        tileEl.addEventListener('dblclick', doRemove);
         tileEl.addEventListener('pointerdown', (e) => {
-          if (e.target === removeBtn) return;
-          global.SquareDragDrop.onBoardTilePointerDown(e, t, tileEl);
+          if (e.target !== removeBtn) global.SquareDragDrop.onBoardTilePointerDown(e, t, tileEl);
         });
 
         this.tilesContainerEl.appendChild(tileEl);
@@ -313,42 +308,39 @@
       this.renderTiles();
       this.updateMetricsUI();
       this.checkCompletion();
+      if (document.getElementById('reviewBoardBanner')?.style.display === 'flex') this.updateReviewBannerText();
     }
 
     onLanguageChanged() {
       this.updateMetricsUI();
       this.updateSoundButtonUI(global.SquareAudio.isMuted());
+      this.updateThemeButtonUI();
+      this.updateReviewBannerText();
     }
 
     updateMetricsUI() {
-      const metrics = global.SquareGameState.getMetrics();
+      const m = global.SquareGameState.getMetrics();
       const i18n = global.SquareI18n;
 
-      const pieceCountEl = document.getElementById('metricPieceCount');
-      const minCountEl = document.getElementById('metricMinCount');
-      const coverageEl = document.getElementById('metricCoverage');
-      const statusBadgeEl = document.getElementById('statusBadge');
-      const bestRecordEl = document.getElementById('metricBestRecord');
+      const setT = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+      setT('metricPieceCount', m.tileCount);
+      setT('metricMinCount', m.minOptimal);
+      setT('metricCoverage', `${m.coveragePercent}%`);
 
-      if (pieceCountEl) pieceCountEl.textContent = metrics.tileCount;
-      if (minCountEl) minCountEl.textContent = metrics.minOptimal;
-      if (coverageEl) coverageEl.textContent = `${metrics.coveragePercent}%`;
+      const best = global.SquareGameState.getBestRecord();
+      setT('metricBestRecord', best !== null ? best : '--');
 
-      if (bestRecordEl) {
-        const best = global.SquareGameState.getBestRecord();
-        bestRecordEl.textContent = best !== null ? best : '--';
-      }
-
-      if (statusBadgeEl) {
-        if (metrics.isOptimal) {
-          statusBadgeEl.className = 'status-badge badge-optimal';
-          statusBadgeEl.textContent = i18n.t('status_optimal');
-        } else if (metrics.isComplete) {
-          statusBadgeEl.className = 'status-badge badge-complete';
-          statusBadgeEl.textContent = i18n.t('status_can_optimize');
+      const statusBadge = document.getElementById('statusBadge');
+      if (statusBadge && i18n) {
+        if (m.isOptimal) {
+          statusBadge.className = 'status-badge badge-optimal';
+          statusBadge.textContent = i18n.t('status_optimal');
+        } else if (m.isComplete) {
+          statusBadge.className = 'status-badge badge-complete';
+          statusBadge.textContent = i18n.t('status_can_optimize');
         } else {
-          statusBadgeEl.className = 'status-badge badge-progress';
-          statusBadgeEl.textContent = i18n.t('status_unfilled');
+          statusBadge.className = 'status-badge badge-progress';
+          statusBadge.textContent = i18n.t('status_unfilled');
         }
       }
 
@@ -359,15 +351,15 @@
     }
 
     checkCompletion() {
-      const metrics = global.SquareGameState.getMetrics();
-      if (metrics.isComplete && !this.hasShownCelebrationForCurrentBoard && !global.SquareGameState.isDemoPlaying) {
+      const m = global.SquareGameState.getMetrics();
+      if (m.isComplete && !this.hasShownCelebrationForCurrentBoard && !global.SquareGameState.isDemoPlaying) {
         this.hasShownCelebrationForCurrentBoard = true;
-        global.SquareGameState.saveBestRecord(metrics.tileCount);
-        this.triggerCelebration(metrics);
+        global.SquareGameState.saveBestRecord(m.tileCount);
+        this.triggerCelebration(m);
       }
     }
 
-    triggerCelebration(metrics) {
+    triggerCelebration(m) {
       global.SquareAudio.playVictory();
       if (global.SquareConfetti) global.SquareConfetti.fire();
 
@@ -377,27 +369,13 @@
       const statsEl = document.getElementById('congratStatsInfo');
       const i18n = global.SquareI18n;
 
-      if (starsEl) {
-        starsEl.innerHTML = '⭐'.repeat(metrics.starRating) + '☆'.repeat(3 - metrics.starRating);
+      if (starsEl) starsEl.innerHTML = '⭐'.repeat(m.starRating) + '☆'.repeat(3 - m.starRating);
+      if (textEl && i18n) {
+        textEl.textContent = m.isOptimal ? i18n.t('congrat_perfect') : (m.starRating === 2 ? i18n.t('congrat_good') : i18n.t('congrat_ok'));
       }
-
-      if (textEl) {
-        if (metrics.isOptimal) {
-          textEl.textContent = i18n.t('congrat_perfect');
-        } else if (metrics.starRating === 2) {
-          textEl.textContent = i18n.t('congrat_good');
-        } else {
-          textEl.textContent = i18n.t('congrat_ok');
-        }
+      if (statsEl && i18n) {
+        statsEl.innerHTML = `<p><strong>${i18n.t('stats_pieces_used')}</strong> ${m.tileCount}</p><p><strong>${i18n.t('stats_optimal_min')}</strong> ${m.minOptimal}</p>`;
       }
-
-      if (statsEl) {
-        statsEl.innerHTML = `
-          <p><strong>${i18n.t('stats_pieces_used')}</strong> ${metrics.tileCount}</p>
-          <p><strong>${i18n.t('stats_optimal_min')}</strong> ${metrics.minOptimal}</p>
-        `;
-      }
-
       if (modal) modal.classList.add('open');
     }
 
@@ -411,7 +389,6 @@
         alert(i18n.t('hint_already_optimal'));
         return;
       }
-
       const hint = engine.findHint(state.N, state.maxTile, state.tiles, metrics.minOptimal);
       if (hint.found && hint.nextTile) {
         const { r, c, s } = hint.nextTile;
@@ -430,11 +407,8 @@
       this.ghostEl.style.gridColumnStart = (c + 1).toString();
       this.ghostEl.style.gridColumnEnd = `span ${s}`;
       this.ghostEl.className = 'placement-ghost ghost-hint-pulse';
-
       setTimeout(() => {
-        if (!global.SquareDragDrop.isDragging) {
-          this.ghostEl.style.display = 'none';
-        }
+        if (!global.SquareDragDrop.isDragging) this.ghostEl.style.display = 'none';
       }, 3000);
     }
 
@@ -442,16 +416,13 @@
       const state = global.SquareGameState;
       const btnDemo = document.getElementById('btnDemo');
       const i18n = global.SquareI18n;
-
       if (state.isDemoPlaying) {
         state.stopDemo();
         btnDemo.textContent = i18n.t('btn_demo');
         return;
       }
-
       const preset = global.SquareMathEngine.getPreset(state.N);
       if (!preset || !preset.solution) return;
-
       btnDemo.textContent = i18n.t('btn_stop_demo');
       state.startDemo(preset.solution, null, () => {
         btnDemo.textContent = i18n.t('btn_demo');
@@ -461,13 +432,11 @@
     showGreetingToast() {
       const toast = document.getElementById('greetingToast');
       if (!toast) return;
-
       const hour = new Date().getHours();
       const i18n = global.SquareI18n;
       let text = i18n.t('greeting_morning');
       if (hour >= 12 && hour < 18) text = i18n.t('greeting_afternoon');
       else if (hour >= 18 || hour < 5) text = i18n.t('greeting_evening');
-
       toast.textContent = text;
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 4500);

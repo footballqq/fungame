@@ -168,3 +168,61 @@ def test_root_index_html_integration():
         html = f.read()
     assert "boardgame/square/index.html" in html, "主页应包含正方形拼图挑战的链接"
     assert "正方形拼图挑战" in html, "主页应包含正方形拼图挑战的中文标题"
+
+
+def test_ui_theme_beige_default_and_dark_mode():
+    """验证默认米白色主题与暗色主题切换样式配置"""
+    html_path = os.path.join(SQUARE_DIR, "index.html")
+    css_path = os.path.join(SQUARE_DIR, "css", "style.css")
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        html = f.read()
+    assert 'class="theme-beige"' in html, "HTML body 默认应应用 theme-beige 米白风格"
+    assert 'id="btnTheme"' in html, "顶栏必须包含主题风格切换按钮 #btnTheme"
+
+    with open(css_path, "r", encoding="utf-8") as f:
+        css = f.read()
+    assert "body.theme-beige" in css, "CSS 必须定义 body.theme-beige 米白样式规则"
+    assert "body.theme-dark" in css, "CSS 必须定义 body.theme-dark 暗色样式规则"
+
+
+def test_review_board_and_dual_modal_buttons():
+    """验证通关弹窗双按键（查看当前棋盘 + 关闭）与终局检视浮动横幅"""
+    html_path = os.path.join(SQUARE_DIR, "index.html")
+    with open(html_path, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    assert 'id="reviewBoardBanner"' in html, "必须包含终局检视横幅 #reviewBoardBanner"
+    assert 'id="btnReviewBoard"' in html, "祝贺弹窗内必须包含“查看当前棋盘”按钮"
+    assert 'id="btnCloseCongrat"' in html, "祝贺弹窗内必须包含“关闭”按钮"
+    assert 'id="btnReopenCongrat"' in html, "检视横幅必须包含“查看评价”按钮"
+    assert 'id="btnPlayAgain"' in html, "检视横幅必须包含“再来一局”按钮"
+
+
+def test_grid_subdivisions_percentage_accuracy():
+    """验证纸片暗格细分使用严格百分比布局，杜绝4x4在超高清下出现格数不符"""
+    board_css_path = os.path.join(SQUARE_DIR, "css", "board.css")
+    with open(board_css_path, "r", encoding="utf-8") as f:
+        css = f.read()
+
+    assert "25% 25%" in css, "4x4 纸片必须使用 25% 25% 严格百分比背景尺寸"
+    assert "33.333" in css, "3x3 纸片必须使用 33.333% 背景尺寸"
+    assert "50% 50%" in css, "2x2 纸片必须使用 50% 50% 背景尺寸"
+
+
+def test_documentation_and_manual_completeness():
+    """验证项目包含完备的用户使用说明文档 README.md 与开发经验文档 DEVELOPMENT.md"""
+    readme_path = os.path.join(SQUARE_DIR, "README.md")
+    dev_path = os.path.join(SQUARE_DIR, "DEVELOPMENT.md")
+
+    assert os.path.isfile(readme_path), "必须存在说明文档 README.md"
+    assert os.path.isfile(dev_path), "必须存在开发经验文档 DEVELOPMENT.md"
+
+    with open(readme_path, "r", encoding="utf-8") as f:
+        readme = f.read()
+    assert "10×10" in readme and "游戏规则" in readme and "数学原理" in readme
+
+    with open(dev_path, "r", encoding="utf-8") as f:
+        dev = f.read()
+    assert "4K" in dev and "踩坑" in dev and "架构" in dev
+

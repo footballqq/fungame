@@ -1,12 +1,14 @@
 {
-  "current_task": "正方形拼图挑战：对齐修复、加入暗格细分、Windows 画面放大与缩放控制（已完成）",
+  "current_task": "正方形拼图挑战：米白风格、通关双按钮与检视横幅、暗格等比细分、规则初始渲染、开发说明文档（已完成）",
   "last_changes": [
-    "boardgame/square/js/drag_drop.js",
-    "boardgame/square/css/board.css",
-    "boardgame/square/css/style.css",
     "boardgame/square/index.html",
+    "boardgame/square/css/style.css",
+    "boardgame/square/css/board.css",
+    "boardgame/square/css/modal.css",
+    "boardgame/square/js/i18n.js",
     "boardgame/square/js/ui.js",
-    "boardgame/square/js/confetti.js",
+    "boardgame/square/README.md",
+    "boardgame/square/DEVELOPMENT.md",
     "tests/test_square_game.py",
     "CODEx_TODO.md",
     ".codex/state.json"
@@ -14,5 +16,5 @@
   "next_actions": [
     "git commit 并向用户汇报成果"
   ],
-  "notes": "针对用户反馈完成三项专项升级：1. 彻底解决对齐与重影问题：精确定位拖拽点与纸片左上角像素偏移量，悬浮节点与吸附幽灵 100% 同比例对齐，移除拖动物件时的半透明重影与 scale 缩放形变；2. 加入暗格：棋盘背景绘制深灰棋盘暗格单元，同时在所有 4x4、3x3、2x2 纸片上绘制清晰的 1x1 暗格细分分割线，几何单位一目了然；3. Windows 画面放大：大幅提升桌面端默认网格基数（54~82px），新增 [🔍 -] [100%] [🔍 +] [🔄] [⛶] 画面自由缩放与全屏控制；拆分 confetti.js 保持所有单文件严格 <= 500 行，全库 82 项 pytest 单测全部通过。"
+  "notes": "针对用户五项反馈全面升级：1. 修复通关弹窗无法返回与关闭无反应：全局事件委托绑定 .btn-modal-close 与遮罩点击，祝贺弹窗提供“🔍 查看当前棋盘”与“关闭”双按钮，并在棋盘上方弹出终局检视横幅（支持自由检视、重看评价与再来一局）；2. 画面风格升级：默认温暖优雅的米白色（Warm Beige）折纸手作质感，暗格亮度大幅提升，顶栏支持一键切换暗夜风格（Dark Slate）并本地持久化；3. 纸片切分等比一致：纸片细分暗格改用 25% 严格百分比（4x4 严格显示 4x4=16 格，杜绝超高清下 6 格问题）；4. 规则初始展示：修复因首次加载未调用 updateDOM 导致的规则空白；5. 完备文档：产出使用说明 README.md 与开发经验 DEVELOPMENT.md；全套 86 项 pytest 全部通过，所有文件严格 <= 500 行。"
 }

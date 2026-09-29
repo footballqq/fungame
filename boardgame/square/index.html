@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/board.css?v=20260929b">
   <link rel="stylesheet" href="css/modal.css?v=20260929b">
 </head>
-<body>
+<body class="theme-beige">
   <!-- 问候 Toast 悬浮通知 -->
   <div id="greetingToast" class="greeting-toast"></div>
 
@@ -23,6 +23,7 @@
       <span class="problem-badge" data-i18n="original_problem_badge">奥数原题挑战</span>
     </div>
     <div class="top-actions">
+      <button id="btnTheme" class="btn-icon" data-i18n="btn_theme_dark">🌙 暗色风格</button>
       <button id="btnRules" class="btn-icon" data-i18n="btn_rules">📜 游戏规则</button>
       <button id="btnMath" class="btn-icon" data-i18n="btn_math">📐 数学原理</button>
       <button id="btnGreetings" class="btn-icon" data-i18n="btn_greetings">💬 每日问候</button>
@@ -199,17 +200,28 @@
     </div>
   </div>
 
+  <!-- 终局检视浮动横幅（查看当前棋盘时展示） -->
+  <div id="reviewBoardBanner" class="review-board-banner">
+    <span id="reviewBannerText" class="review-banner-text">🎉 恭喜通关！</span>
+    <button id="btnReopenCongrat" class="btn-action btn-primary" style="padding: 4px 10px; font-size: 0.82rem;" data-i18n="btn_reopen_modal">🏆 查看评价</button>
+    <button id="btnPlayAgain" class="btn-action" style="padding: 4px 10px; font-size: 0.82rem;" data-i18n="btn_play_again">🔄 再来一局</button>
+  </div>
+
   <!-- 胜利祝贺庆祝弹窗 -->
   <div id="congratModal" class="modal-overlay">
     <div class="modal-card congrat-card">
-      <div class="modal-body" style="padding-top: 28px;">
+      <div class="modal-header">
+        <h2 class="modal-title" data-i18n="congrat_title">🎉 恭喜通关！完美拼接！</h2>
+        <button class="modal-close-btn btn-modal-close" title="关闭弹窗">&times;</button>
+      </div>
+      <div class="modal-body" style="padding-top: 18px;">
         <div id="congratStars" class="congrat-stars">⭐⭐⭐</div>
-        <h2 class="congrat-title" data-i18n="congrat_title">🎉 恭喜通关！完美拼接！</h2>
         <p id="congratPraiseText" class="congrat-praise-text"></p>
         <div id="congratStatsInfo" class="congrat-stats"></div>
       </div>
-      <div class="modal-footer" style="justify-content: center; gap: 12px;">
-        <button class="btn-action btn-primary btn-modal-close" data-i18n="btn_close">太棒了！</button>
+      <div class="modal-footer" style="justify-content: center; gap: 12px; flex-wrap: wrap;">
+        <button id="btnReviewBoard" class="btn-action" data-i18n="btn_review_board">🔍 查看当前棋盘</button>
+        <button id="btnCloseCongrat" class="btn-action btn-primary btn-modal-close" data-i18n="btn_close">关闭</button>
       </div>
     </div>
   </div>
