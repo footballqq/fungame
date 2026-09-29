@@ -1,13 +1,24 @@
 {
-  "current_task": "PlusMinus.html 手机适配与答题触控数字小键盘开发（已完成）",
+  "current_task": "正方形拼图挑战(square tiling)网页游戏开发（已完成）",
   "last_changes": [
-    "PlusMinus.html",
-    "tests/test_plusminus_html.py",
+    "boardgame/square/index.html",
+    "boardgame/square/css/style.css",
+    "boardgame/square/css/board.css",
+    "boardgame/square/css/modal.css",
+    "boardgame/square/js/i18n.js",
+    "boardgame/square/js/audio.js",
+    "boardgame/square/js/math_engine.js",
+    "boardgame/square/js/game_state.js",
+    "boardgame/square/js/drag_drop.js",
+    "boardgame/square/js/ui.js",
+    "boardgame/square/square_math.py",
+    "tests/test_square_game.py",
+    "index.html",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit + git push 推送代码至远程仓库"
+    "执行 git commit 并向用户汇报成果"
   ],
-  "notes": "成功完成 PlusMinus.html 手机全面适配与数字小键盘开发：1. 增加内置触控数字小键盘（0-9、±、⌫、提交）；2. input 添加 readonly 与 inputmode='none'，彻底杜绝手机原生软键盘弹出导致遮挡题目的痛点；3. 算式优化排版（间距自动美化），支持 100dvh 无滚动视口及横屏双列自适应；4. PC实体键盘与手机振动触觉反馈无缝兼容；5. 编写 tests/test_plusminus_html.py，全套 72 项单测全绿通过，单文件行数严格小于 500 行（483行）。"
+  "notes": "成功将 readme.txt（10x10 正方形使用 1x1, 2x2, 3x3, 4x4 纸片无重叠无空隙拼接）转化为高质量网页游戏：1. 支持多目标选择（5x5~12x12及自定义）；2. 规则图解与星级评定；3. 跨端拖拽吸附与移动端点选放置双模式；4. 适配PC/手机/平板（自适应clamp/dvh）；5. Web Audio 纯算法拟真音效；6. 问候语、夸奖激励与彩屑粒子祝贺系统；7. 4大标签深度数学原理解析（面积不等式、抽屉原理、边界矛盾、11块唯一尺寸构成证明）；8. 中英双语一键无缝热切换；9. 所有源文件严格 <= 500 行，全库 82 项 pytest 单测全部绿灯通过。"
 }

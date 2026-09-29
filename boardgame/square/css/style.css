@@ -1,0 +1,292 @@
+/* codex: 2026-09-29 style.css 全局自适应布局、主题色彩与工具栏控件 */
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: rgba(30, 41, 59, 0.85);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-gold: #fbbf24;
+  --accent-blue: #38bdf8;
+  --accent-green: #34d399;
+  --accent-red: #f87171;
+
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --cell-size: 42px;
+  --grid-n: 10;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-family);
+  background: radial-gradient(circle at 50% 15%, #1e293b 0%, #0f172a 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+/* 顶部标题栏 */
+.header-bar {
+  width: 100%;
+  max-width: 1080px;
+  padding: 12px 18px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-title {
+  font-size: clamp(1.2rem, 3.2vw, 1.6rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #facc15 0%, #fb923c 50%, #f43f5e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
+
+.problem-badge {
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(225, 29, 72, 0.4);
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-icon {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.btn-icon:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-icon:active {
+  transform: translateY(0);
+}
+
+/* 控制栏与仪表盘 */
+.dashboard-bar {
+  width: 100%;
+  max-width: 1080px;
+  padding: 6px 18px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.target-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.target-select {
+  background: #0f172a;
+  color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-controls {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-card);
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.custom-input {
+  width: 46px;
+  background: #0f172a;
+  border: 1px solid var(--border-color);
+  color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+.metrics-panel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--bg-card);
+  padding: 6px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 0.88rem;
+}
+
+.metric-item strong {
+  color: var(--accent-gold);
+  font-size: 1.05rem;
+  margin-left: 2px;
+}
+
+.status-badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.badge-optimal {
+  background: rgba(52, 211, 153, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+}
+
+.badge-complete {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.badge-progress {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* 主操作按钮组 */
+.toolbar-bar {
+  width: 100%;
+  max-width: 1080px;
+  padding: 4px 18px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-action {
+  background: #334155;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-action:hover:not(:disabled) {
+  background: #475569;
+  transform: translateY(-1px);
+}
+
+.btn-action:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border-color: #60a5fa;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+}
+
+.btn-danger {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+
+.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.35);
+}
+
+/* 游戏核心区域容器 */
+.game-layout {
+  width: 100%;
+  max-width: 1080px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px 14px;
+  gap: 16px;
+}
+
+/* 移动端与竖屏断点适配 */
+@media (max-width: 640px) {
+  .header-bar, .dashboard-bar, .toolbar-bar {
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+  }
+
+  .metrics-panel {
+    width: 100%;
+    justify-content: space-around;
+    padding: 6px 8px;
+    font-size: 0.82rem;
+  }
+
+  .btn-action {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}

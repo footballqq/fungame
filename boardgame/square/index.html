@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- codex: 2026-09-29 index.html 正方形拼图挑战网页游戏主入口 -->
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>正方形拼图挑战 - Mrs. Perkins 拼布与最少纸片拼接</title>
+  <link rel="stylesheet" href="css/style.css?v=20260929">
+  <link rel="stylesheet" href="css/board.css?v=20260929">
+  <link rel="stylesheet" href="css/modal.css?v=20260929">
+</head>
+<body>
+  <!-- 问候 Toast 悬浮通知 -->
+  <div id="greetingToast" class="greeting-toast"></div>
+
+  <!-- 庆祝彩屑画布 -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- 顶部标题与功能按钮栏 -->
+  <header class="header-bar">
+    <div class="brand-section">
+      <h1 class="brand-title" data-i18n="game_title">正方形拼图挑战</h1>
+      <span class="problem-badge" data-i18n="original_problem_badge">奥数原题挑战</span>
+    </div>
+    <div class="top-actions">
+      <button id="btnRules" class="btn-icon" data-i18n="btn_rules">📜 游戏规则</button>
+      <button id="btnMath" class="btn-icon" data-i18n="btn_math">📐 数学原理</button>
+      <button id="btnGreetings" class="btn-icon" data-i18n="btn_greetings">💬 每日问候</button>
+      <button id="btnSound" class="btn-icon" data-i18n="btn_sound_on">🔊 音效开启</button>
+      <button id="btnLang" class="btn-icon" data-i18n="btn_lang">English</button>
+    </div>
+  </header>
+
+  <!-- 目标选择与实时数据仪表盘 -->
+  <section class="dashboard-bar">
+    <div class="target-picker">
+      <label for="targetSelect" data-i18n="target_select_label">目标规格：</label>
+      <select id="targetSelect" class="target-select">
+        <option value="10" selected>⭐ 10×10（原题：理论最少11块）</option>
+        <option value="9">9×9（进阶挑战：最少9块）</option>
+        <option value="8">8×8（完美对称：最少4块）</option>
+        <option value="7">7×7（奇数巧拼：最少9块）</option>
+        <option value="6">6×6（基础九宫：最少4块）</option>
+        <option value="5">5×5（入门试炼：最少8块）</option>
+        <option value="11">11×11（大师极限：最少15块）</option>
+        <option value="12">12×12（宗师宏构：最少9块）</option>
+        <option value="custom">⚙️ 自定义模式 (Custom)</option>
+      </select>
+    </div>
+
+    <!-- 自定义关卡控制栏 -->
+    <div id="customControlPanel" class="custom-controls">
+      <label data-i18n="custom_size_label">目标边长 (N)：</label>
+      <input type="number" id="customNInput" class="custom-input" min="4" max="12" value="10">
+      <label data-i18n="custom_max_label">最大纸片：</label>
+      <input type="number" id="customMaxInput" class="custom-input" min="1" max="6" value="4">
+      <button id="btnApplyCustom" class="btn-action btn-primary" style="padding: 4px 8px;">确认</button>
+    </div>
+
+    <!-- 数据指标统计 -->
+    <div class="metrics-panel">
+      <div class="metric-item">
+        <span data-i18n="status_pieces">已用纸片：</span>
+        <strong id="metricPieceCount">0</strong>
+      </div>
+      <div class="metric-item">
+        <span data-i18n="status_target">理论最少：</span>
+        <strong id="metricMinCount">11</strong>
+      </div>
+      <div class="metric-item">
+        <span data-i18n="status_coverage">覆盖率：</span>
+        <strong id="metricCoverage">0%</strong>
+      </div>
+      <div id="statusBadge" class="status-badge badge-progress" data-i18n="status_unfilled">
+        正在拼接中...
+      </div>
+    </div>
+  </section>
+
+  <!-- 操作按钮控制栏 -->
+  <nav class="toolbar-bar">
+    <button id="btnUndo" class="btn-action" data-i18n="btn_undo" disabled>↩ 撤销</button>
+    <button id="btnRedo" class="btn-action" data-i18n="btn_redo" disabled>↪ 重做</button>
+    <button id="btnHint" class="btn-action btn-primary" data-i18n="btn_hint">💡 提示一步</button>
+    <button id="btnDemo" class="btn-action" data-i18n="btn_demo">▶ 最优解演示</button>
+    <button id="btnClear" class="btn-action btn-danger" data-i18n="btn_clear">🗑 清空棋盘</button>
+  </nav>
+
+  <!-- 游戏核心区域 -->
+  <main class="game-layout">
+    <!-- 棋盘容器 -->
+    <div class="board-container">
+      <div id="board" class="board">
+        <div id="gridBackground" class="grid-background"></div>
+        <div id="placementGhost" class="placement-ghost"></div>
+        <div id="tilesContainer" class="tiles-container"></div>
+      </div>
+    </div>
+
+    <!-- 纸片备料区与垃圾桶 -->
+    <div class="tray-wrapper">
+      <p class="tray-title-text" data-i18n="tray_tip">
+        拖动到网格摆放；亦可点选纸片后直接点击棋盘空格。双击或拖出棋盘可移除。
+      </p>
+      <div id="trayContainer" class="tray-container">
+        <div class="tray-item tray-size-4 tile-size-4" data-size="4">4×4</div>
+        <div class="tray-item tray-size-3 tile-size-3" data-size="3">3×3</div>
+        <div class="tray-item tray-size-2 tile-size-2" data-size="2">2×2</div>
+        <div class="tray-item tray-size-1 tile-size-1" data-size="1">1×1</div>
+      </div>
+      <div id="trashZone" class="trash-zone" data-i18n="trash_zone">拖至此处丢弃 🗑</div>
+    </div>
+  </main>
+
+  <!-- 规则模态弹窗 -->
+  <div id="rulesModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title" data-i18n="rules_title">正方形拼接挑战 · 游戏规则</h2>
+        <button class="modal-close-btn btn-modal-close">&times;</button>
+      </div>
+      <div class="modal-body" data-i18n-html="rules_content"></div>
+      <div class="modal-footer">
+        <button class="btn-action btn-primary btn-modal-close" data-i18n="btn_close">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 数学原理解析模态弹窗 -->
+  <div id="mathModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title" data-i18n="math_title">📐 深度数学原理解析</h2>
+        <button class="modal-close-btn btn-modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="math-tab-nav">
+          <button class="math-tab-btn active" data-tab="tabOverview" data-i18n="math_tab_overview">问题背景</button>
+          <button class="math-tab-btn" data-tab="tabBound" data-i18n="math_tab_bound">面积与抽屉原理</button>
+          <button class="math-tab-btn" data-tab="tabProof" data-i18n="math_tab_proof">10×10 为何至少 11 块</button>
+          <button class="math-tab-btn" data-tab="tabMultiset" data-i18n="math_tab_multiset">唯一构成证明</button>
+        </div>
+        <div id="tabOverview" class="math-tab-content active">
+          <h4 data-i18n="math_p1_title">一、问题渊源：Mrs. Perkins's Quilt 拼布问题</h4>
+          <div data-i18n-html="math_p1_text"></div>
+        </div>
+        <div id="tabBound" class="math-tab-content">
+          <h4 data-i18n="math_p2_title">二、理论下界推演：面积不等式与抽屉原理</h4>
+          <div data-i18n-html="math_p2_text"></div>
+        </div>
+        <div id="tabProof" class="math-tab-content">
+          <h4 data-i18n="math_p3_title">三、为什么 8 块、9 块、10 块均无解？</h4>
+          <div data-i18n-html="math_p3_text"></div>
+        </div>
+        <div id="tabMultiset" class="math-tab-content">
+          <h4 data-i18n="math_p4_title">四、11 块最优解的唯一尺寸多重集</h4>
+          <div data-i18n-html="math_p4_text"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-action btn-primary btn-modal-close" data-i18n="btn_close">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 每日问候弹窗 -->
+  <div id="greetingsModal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 520px;">
+      <div class="modal-header">
+        <h2 class="modal-title" data-i18n="greetings_title">💬 拼图大师的问候</h2>
+        <button class="modal-close-btn btn-modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #f8fafc;" data-i18n="greeting_morning">
+          🌅 早上好！晨光正好，用一场几何思维体操唤醒大脑吧！
+        </p>
+        <hr style="border: none; border-top: 1px solid var(--border-color); margin: 16px 0;">
+        <p style="color: #38bdf8; line-height: 1.7;" data-i18n="greeting_encouragement_1">
+          💡 提示：先用大纸片占住关键角与边，再用中等纸片回旋穿插！
+        </p>
+        <p style="color: #fbbf24; line-height: 1.7; margin-top: 8px;" data-i18n="greeting_encouragement_2">
+          🧠 试试挑战经典 10×10：你能只用 11 块拼完它吗？
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-action btn-primary btn-modal-close" data-i18n="btn_start_play">开始挑战</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 胜利祝贺庆祝弹窗 -->
+  <div id="congratModal" class="modal-overlay">
+    <div class="modal-card congrat-card">
+      <div class="modal-body" style="padding-top: 28px;">
+        <div id="congratStars" class="congrat-stars">⭐⭐⭐</div>
+        <h2 class="congrat-title" data-i18n="congrat_title">🎉 恭喜通关！完美拼接！</h2>
+        <p id="congratPraiseText" class="congrat-praise-text"></p>
+        <div id="congratStatsInfo" class="congrat-stats"></div>
+      </div>
+      <div class="modal-footer" style="justify-content: center; gap: 12px;">
+        <button class="btn-action btn-primary btn-modal-close" data-i18n="btn_close">太棒了！</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 核心逻辑脚本引入 -->
+  <script src="js/i18n.js?v=20260929"></script>
+  <script src="js/audio.js?v=20260929"></script>
+  <script src="js/math_engine.js?v=20260929"></script>
+  <script src="js/game_state.js?v=20260929"></script>
+  <script src="js/drag_drop.js?v=20260929"></script>
+  <script src="js/ui.js?v=20260929"></script>
+</body>
+</html>

@@ -1,3 +1,12 @@
+<!-- codex: 2026-09-29 开发正方形拼图挑战(square tiling)网页游戏，支持多目标选关(10x10/9x9等)、规则图解、拖拽吸附与多端触控、全端适配、Web Audio音效、问候语与祝贺系统、深度数学原理解析与中英双语切换 -->
+- [X] 算法设计与数学证明（`boardgame/square/square_math.py`, `tests/test_square_game.py`）：形式化证明 10×10 在纸片尺寸限定 1~4 时的理论最少块数 11，证明 4×4 纸片最多容纳 4 块，求解 5×5~12×12 各关卡理论下界，编写 pytest 全覆盖测试
+- [X] 国际化多语言系统与音效引擎（`boardgame/square/js/i18n.js`, `boardgame/square/js/audio.js`）：中英文双语全覆盖与即时热切换，Web Audio 零外链纯算法音效（拾起、吸附、撞击碰撞、移除撕纸、胜利礼乐、钟鸣）
+- [X] 核心状态与几何求解引擎（`boardgame/square/js/math_engine.js`, `boardgame/square/js/game_state.js`）：多阶关卡配置、即时回溯求解器、提示一步、最优解动画演示、覆盖率与重叠冲突检测、撤销/重做栈与本地最佳纪录
+- [X] 全端通用拖拽与触控交互引擎（`boardgame/square/js/drag_drop.js`）：支持 Pointer Events 与 Drag&Drop 双引擎，盘外拖入吸附、盘内二次移动、拖出棋盘/垃圾桶删除，兼顾手机平板点击选中-点格放置双模式
+- [X] 交互控制器、夸奖激励与问候语系统（`boardgame/square/js/ui.js`）：动态问候语、彩屑烟花画布粒子系统、星级评价、胜利大吉、提示/演示控制器
+- [X] 页面结构与高阶自适应样式（`boardgame/square/index.html`, `boardgame/square/css/style.css`, `css/board.css`, `css/modal.css`）：纸艺折纸质感UI，Windows PC/iPad/手机完全自适应（clamp/dvh），数学原理多标签图文深度拆解弹窗，严格控制单文件 ≤ 500 行
+- [X] 项目根目录主页 `index.html` 游戏导航卡片集成与全流程单测验证，全套 82 项 pytest 全部绿灯通过
+
 <!-- codex: 2026-09-24 适配 PlusMinus.html 手机端速算答题体验：内置触控数字小键盘、防原生软键盘遮挡题目、大字号算式与自适应视口排版 -->
 - [X] 体验重构: `PlusMinus.html` 手机端全面适配——内置触控数字小键盘（0-9、±、⌫、提交），输入框增加 `readonly` 与 `inputmode="none"` 彻底防止原生软键盘弹出遮挡题目，算式自动填充间隙自适应换行，全卡片严格适配 100dvh 无需滚动，横屏自动切换双列并排，触控支持振动反馈与长按退格清空，严格控制总行数 ≤ 500 行（483 行）
 - [X] 测试验证: 编写 `tests/test_plusminus_html.py` 自动化测试，验证文件存在与行数限制、移动端 Viewport、小键盘按键完备性（0-9、±、⌫、确认）、防软键盘弹出属性、横竖屏自适应媒体查询、Node.js 算式与正负数退格状态机、内嵌脚本语法编译测试，7 项测试全绿通过（全项目 72 项单测全过）
