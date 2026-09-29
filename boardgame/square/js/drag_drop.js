@@ -39,14 +39,19 @@
     }
 
     bindTrayEvents() {
-      const trayItems = document.querySelectorAll('.tray-item');
-      trayItems.forEach(item => {
-        item.addEventListener('pointerdown', (e) => this.onTrayPointerDown(e, item));
-        item.addEventListener('click', () => {
-          if (this.isDragging) return;
-          const s = parseInt(item.getAttribute('data-size'), 10);
-          this.toggleSelectTrayItem(s, item);
-        });
+      const container = document.getElementById('trayContainer');
+      if (!container || container.dataset.bound) return;
+      container.dataset.bound = 'true';
+      container.addEventListener('pointerdown', (e) => {
+        const item = e.target.closest('.tray-item');
+        if (item) this.onTrayPointerDown(e, item);
+      });
+      container.addEventListener('click', (e) => {
+        if (this.isDragging) return;
+        const item = e.target.closest('.tray-item');
+        if (!item) return;
+        const s = parseInt(item.getAttribute('data-size'), 10);
+        this.toggleSelectTrayItem(s, item);
       });
     }
 

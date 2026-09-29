@@ -234,7 +234,13 @@
       selector.addEventListener('change', (e) => {
         const isCustom = e.target.value === 'custom';
         document.getElementById('customControlPanel').style.display = isCustom ? 'flex' : 'none';
-        if (!isCustom) this.switchTarget(parseInt(e.target.value, 10));
+        if (!isCustom) {
+          this.switchTarget(parseInt(e.target.value, 10));
+        } else {
+          const n = Math.max(4, Math.min(12, parseInt(document.getElementById('customNInput').value, 10) || 10));
+          const maxT = Math.max(1, Math.min(n - 1, parseInt(document.getElementById('customMaxInput').value, 10) || 4));
+          this.switchTarget(n, maxT);
+        }
       });
     }
 
@@ -248,10 +254,23 @@
       });
     }
 
+    renderTray() {
+      const container = document.getElementById('trayContainer');
+      if (!container) return;
+      const maxTile = global.SquareGameState.maxTile || 4;
+      let html = '';
+      for (let s = maxTile; s >= 1; s--) {
+        html += `<div class="tray-item tray-size-${s} tile-size-${s}" data-size="${s}">${s}×${s}</div>`;
+      }
+      container.innerHTML = html;
+      if (global.SquareDragDrop) global.SquareDragDrop.clearSelectedTrayItem();
+    }
+
     switchTarget(N, maxTile = 4) {
       this.hasShownCelebrationForCurrentBoard = false;
       this.hideReviewBanner();
       global.SquareGameState.initLevel(N, maxTile);
+      this.renderTray();
       this.updateBoardDimensions();
       this.renderGridBackground();
       this.renderTiles();

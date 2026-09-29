@@ -275,4 +275,27 @@ def test_styled_clear_modal_and_no_native_dialogs():
     assert not re.search(r"\bconfirm\(", js), "ui.js 中不应使用浏览器原生 confirm()"
 
 
+def test_custom_tile_sizes_and_tray_render():
+    """验证自定义最大纸片至 6x6 与 5x5 时样式齐备且托盘支持动态渲染"""
+    board_css = os.path.join(SQUARE_DIR, "css", "board.css")
+    ui_js = os.path.join(SQUARE_DIR, "js", "ui.js")
+    drag_js = os.path.join(SQUARE_DIR, "js", "drag_drop.js")
+
+    with open(board_css, "r", encoding="utf-8") as f:
+        css = f.read()
+
+    assert ".tile-size-6" in css and ".tile-size-5" in css, "board.css 必须包含 6x6 和 5x5 纸片样式"
+    assert ".tray-size-6" in css and ".tray-size-5" in css, "board.css 必须包含 6x6 和 5x5 托盘尺寸"
+    assert "16.666667%" in css, "6x6 纸片必须具备 1/6 严格百分比细分暗格"
+    assert "20%" in css, "5x5 纸片必须具备 1/5 严格百分比细分暗格"
+
+    with open(ui_js, "r", encoding="utf-8") as f:
+        js = f.read()
+    assert "renderTray" in js, "ui.js 必须具备动态渲染备料托盘函数 renderTray"
+
+    with open(drag_js, "r", encoding="utf-8") as f:
+        djs = f.read()
+    assert "closest('.tray-item')" in djs, "drag_drop.js 必须通过事件委托支持动态纸片拖拽与点选"
+
+
 

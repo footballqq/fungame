@@ -386,10 +386,12 @@ body.theme-dark .btn-zoom:hover {
   .zoom-indicator { font-size: 1rem; min-width: 52px; }
   .target-select, .metrics-panel { font-size: 1.05rem; padding: 8px 18px; }
   .metric-item strong { font-size: 1.35rem; }
-  .tray-size-4 { width: 92px; height: 92px; font-size: 1.25rem; }
-  .tray-size-3 { width: 78px; height: 78px; font-size: 1.12rem; }
-  .tray-size-2 { width: 62px; height: 62px; font-size: 1.0rem; }
-  .tray-size-1 { width: 46px; height: 46px; font-size: 0.88rem; }
+  .tray-size-6 { width: 114px; height: 114px; font-size: 1.4rem; }
+  .tray-size-5 { width: 102px; height: 102px; font-size: 1.3rem; }
+  .tray-size-4 { width: 90px; height: 90px; font-size: 1.2rem; }
+  .tray-size-3 { width: 76px; height: 76px; font-size: 1.1rem; }
+  .tray-size-2 { width: 60px; height: 60px; font-size: 0.98rem; }
+  .tray-size-1 { width: 44px; height: 44px; font-size: 0.85rem; }
 }
 
 /* 移动端断点 */

@@ -92,7 +92,19 @@
 }
 
 /* 严格按比例划分纸片内部暗格：
-   4x4 严格 4 等分 (25%)，3x3 严格 3 等分 (33.333%)，2x2 严格 2 等分 (50%)，彻底解决 4x4 显示 6 个格子的 Bug */
+   6x6 严格 6 等分 (16.666667%)，5x5 严格 5 等分 (20%)，4x4 严格 4 等分 (25%)，3x3 严格 3 等分 (33.333%)，2x2 严格 2 等分 (50%) */
+.tile-size-6, .tile-color-6 {
+  background-color: #7c3aed;
+  border-color: #a78bfa;
+  background-size: 16.666667% 16.666667% !important;
+}
+
+.tile-size-5, .tile-color-5 {
+  background-color: #0891b2;
+  border-color: #38bdf8;
+  background-size: 20% 20% !important;
+}
+
 .tile-size-4, .tile-color-4 {
   background-color: #4f46e5;
   border-color: #818cf8;
@@ -254,10 +266,12 @@
   transform: translateY(-2px);
 }
 
-.tray-size-4 { width: 72px; height: 72px; font-size: 1rem; }
-.tray-size-3 { width: 60px; height: 60px; font-size: 0.9rem; }
-.tray-size-2 { width: 48px; height: 48px; font-size: 0.82rem; }
-.tray-size-1 { width: 36px; height: 36px; font-size: 0.75rem; }
+.tray-size-6 { width: 92px; height: 92px; font-size: 1.15rem; }
+.tray-size-5 { width: 80px; height: 80px; font-size: 1.05rem; }
+.tray-size-4 { width: 70px; height: 70px; font-size: 0.98rem; }
+.tray-size-3 { width: 58px; height: 58px; font-size: 0.9rem; }
+.tray-size-2 { width: 46px; height: 46px; font-size: 0.82rem; }
+.tray-size-1 { width: 34px; height: 34px; font-size: 0.75rem; }
 
 /* 丢弃垃圾桶区域 */
 .trash-zone {
