@@ -1,0 +1,416 @@
+/* ==========================================================================
+   趣味数学游戏集 - 现代化主页样式表 (css/index.css)
+   支持 5 大分类、实时检索、卡片微标签、底栏对齐与多端自适应
+   ========================================================================== */
+
+:root {
+  --primary: #0d9488;
+  --primary-hover: #0f766e;
+  --primary-light: #ccfbf1;
+  --accent: #f43f5e;
+  --accent-hover: #e11d48;
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-hover: 0 12px 24px -4px rgba(15, 23, 42, 0.12);
+  --radius-card: 14px;
+  --radius-btn: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 顶部 Hero 区域 */
+.hero-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0d9488 100%);
+  color: #ffffff;
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.6rem;
+}
+
+.hero-header p {
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  color: #cbd5e1;
+  max-width: 680px;
+  margin: 0 auto 1.4rem;
+}
+
+.hero-stats {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-chip {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* 主容器 */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* 吸顶控制条（搜索与分类筛选） */
+.sticky-control-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(248, 250, 252, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.search-box-wrapper {
+  position: relative;
+  max-width: 580px;
+  margin: 0 auto 0.9rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 2.75rem 0.75rem 2.75rem;
+  font-size: 0.96rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 9999px;
+  background: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.18);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.btn-clear-search {
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e2e8f0;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #475569;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.btn-clear-search.visible {
+  visibility: visible;
+}
+
+/* 分类胶囊选项卡 */
+.category-pills {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pill-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  color: #475569;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.pill-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.pill-btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 3px 10px rgba(13, 148, 136, 0.28);
+}
+
+.pill-count {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-size: 0.76rem;
+  margin-left: 4px;
+}
+
+.pill-btn.active .pill-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* 分类分区标题 */
+.category-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 140px;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* 卡片网格 */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 单个卡片 */
+.game-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-color);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  position: relative;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: #cbd5e1;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 0.75rem;
+}
+
+.game-card h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.badge-olympiad { background: #fee2e2; color: #b91c1c; }
+.badge-ai { background: #dbeafe; color: #1d4ed8; }
+.badge-touch { background: #dcfce7; color: #15803d; }
+.badge-math { background: #fef3c7; color: #b45309; }
+.badge-lang { background: #f3e8ff; color: #7e22ce; }
+.badge-life { background: #e0e7ff; color: #4338ca; }
+
+.game-card p {
+  font-size: 0.91rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+/* 卡片底栏操作按钮组 */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-btn);
+  transition: all 0.18s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 2px 6px rgba(13, 148, 136, 0.3);
+}
+
+.btn-secondary {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+.btn-coral {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+
+.btn-coral:hover {
+  background-color: #ee5252;
+}
+
+.btn-indigo {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+.btn-indigo:hover {
+  background-color: #4338ca;
+}
+
+.btn-amber {
+  background-color: #d97706;
+  color: #ffffff;
+}
+
+.btn-amber:hover {
+  background-color: #b45309;
+}
+
+/* 空状态提示 */
+.empty-state {
+  display: none;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  color: var(--text-muted);
+}
+
+.empty-state.visible {
+  display: block;
+}
+
+.empty-state h3 {
+  font-size: 1.3rem;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+/* 页脚 */
+footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+/* 响应式断点 */
+@media (max-width: 768px) {
+  .hero-header { padding: 2rem 1rem 1.5rem; }
+  .sticky-control-bar { padding: 0.75rem 0; margin-bottom: 1.5rem; }
+  .category-pills { overflow-x: auto; justify-content: flex-start; padding-bottom: 4px; }
+  .pill-btn { white-space: nowrap; }
+  .section-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .games-grid { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+@media (min-width: 1920px) {
+  .container { max-width: 1680px; }
+  .games-grid { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 2rem; }
+  .game-card h3 { font-size: 1.3rem; }
+  .game-card p { font-size: 1rem; }
+}

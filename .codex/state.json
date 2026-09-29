@@ -1,16 +1,15 @@
 {
-  "current_task": "正方形拼图挑战：修复自定义最大纸片尺寸至 6 时备料托盘仅显示 4x4 Bug，并完成主页分类与友好显示重构规划",
+  "current_task": "根目录 index.html 现代化美化重构与 5 大科学专区交互升级（已完成）",
   "last_changes": [
-    "boardgame/square/css/board.css",
-    "boardgame/square/css/style.css",
-    "boardgame/square/js/ui.js",
-    "boardgame/square/js/drag_drop.js",
-    "tests/test_square_game.py",
+    "index.html",
+    "css/index.css",
+    "js/index.js",
+    "tests/test_index_hub.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "向用户详尽输出 index.html 整体分类、分区、交互设计方案，以及 6x6 备料区修复成果"
+    "git commit 并 git push 到远程 origin/main 分支，向用户汇报主页重构详情"
   ],
-  "notes": "1. 根因修复：备料托盘原为 index.html 静态写死 4x4~1x1，且缺少 5x5/6x6 的 CSS 与百分比暗格；修改为由 ui.js renderTray 根据当前关卡或自定义 maxTile 动态重绘 6x6~1x1，并在 board.css/style.css 补齐紫罗兰 6x6 (16.6667%) 与天青蓝 5x5 (20%) 样式，drag_drop.js 采用父容器事件委托无缝承接动态纸片的拖拽与点选；2. 单测扩充 test_custom_tile_sizes_and_tray_render，全套 89 项 pytest 全绿通过；3. 深度梳理 index.html 全量 35+ 个程序，给出 5 大科学分类、分类筛选标签、即时搜索框、卡片徽章与响应式友好展示重构完整方案。"
+  "notes": "1. 架构重构：拆分为 index.html (321行)、css/index.css (416行)、js/index.js (110行)，所有文件严格 <= 500 行；2. 5大分类专区：去重后收录全量 39 个独立互动程序（数学概念7个/奥数谜题9个/棋盘对弈10个/英语词汇4个/生活素养9个）；3. 体验升级：吸顶实时搜索栏（支持 '/' 聚焦与 Esc 清空）、分类胶囊选项卡、特色小徽章、卡片 flex 底部对齐与无结果友好空状态；4. 链接规范化：修正所有 Windows 反斜杠为标准 Web 正斜杠；5. 测试保证：新建 tests/test_index_hub.py，全库 94 项 pytest 全部通过。"
 }

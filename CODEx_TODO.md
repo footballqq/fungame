@@ -13,6 +13,7 @@
 - [X] 更新开发说明、使用说明并新建美工设计规范（`DEVELOPMENT.md`, `README.md`, `DESIGN.md`, `tests/test_square_game.py`）：全面梳理四元鸡兔同笼升维本质、暗格百分比自适应避坑经验、温润米白纸艺/暗夜双色谱、学术数学字体排版与微动效粒子动力学设计规范，单测覆盖文档完整性，全套 88 项 pytest 全绿通过
 - [X] 主入口导航集成与全库代码仓库管理（`index.html`, `ui.js`, `.gitignore`, `ppt_materials/`）：主页双网格升级正方形拼图卡片（多动作直达按钮：开始挑战/玩法规则/数学原理/说明文档），支持 URL Hash 模态路由；配置 `.gitignore` 过滤缓存；执行全库 git commit 并推送至 GitHub
 - [X] 修复自定义最大尺寸设为 6 时托盘候选区仅显示 4x4 Bug（`ui.js`, `drag_drop.js`, `board.css`, `style.css`, `test_square_game.py`）：新增 6x6 (紫罗兰/16.667%暗格) 与 5x5 (天青蓝/20%暗格) 严格百分比细分样式，`ui.js` 新增 `renderTray` 随 `maxTile` 动态渲染备料区，`drag_drop.js` 重构为事件委托无缝支持动态规格纸片拖拽与点选，全套 89 项 pytest 全绿通过
+- [X] 主页 index.html 现代化重构与五大分类美化（`index.html`, `css/index.css`, `js/index.js`, `tests/test_index_hub.py`）：全量 39 个项目去重归并为 5 大科学专区（数学概念/奥数谜题/棋盘对弈/英语词汇/生活素养），实现吸顶即时搜索（按 / 快速聚焦）、分类胶囊筛选、卡片微标签、底栏统一对齐与无结果友好空状态，规范全量相对路径，自动化单测 94 项 pytest 100% 绿灯通过
 
 
 

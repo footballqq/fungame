@@ -1,383 +1,321 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>趣味数学游戏集</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        header {
-            background-color: #4ecdc4;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
-        }
-
-        .game-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .game-card h2 {
-            color: #ff6b6b;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .game-card p {
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-
-        .game-card a {
-            display: inline-block;
-            background-color: #4ecdc4;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .game-card a:hover {
-            background-color: #36b5ac;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>趣味数学游戏集 · 互动思维与益智对战平台</title>
+  <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <h1>趣味数学游戏集</h1>
-            <p>通过有趣的游戏学习数学概念</p>
+
+  <!-- 头部 Hero 区域 -->
+  <header class="hero-header">
+    <div class="container">
+      <h1>🎮 趣味数学游戏集</h1>
+      <p>通过生动有趣的可视化互动、逻辑推理与双人/人机对弈，启发数学之美与计算思维</p>
+      <div class="hero-stats">
+        <span class="stat-chip">✨ 39 个独立互动程序</span>
+        <span class="stat-chip">📐 5 大探索专区</span>
+        <span class="stat-chip">📱 手机 / 平板 / 4K 全端自适应</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 吸顶搜索与分类筛选控制栏 -->
+  <nav class="sticky-control-bar">
+    <div class="container">
+      <div class="search-box-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="hubSearchInput" class="search-input" placeholder="输入游戏名称、数学概念或关键字搜索（按 / 快速聚焦）..." autocomplete="off">
+        <button id="btnClearSearch" class="btn-clear-search" title="清空搜索">✕</button>
+      </div>
+      <div class="category-pills">
+        <button class="pill-btn active" data-category="all">全部项目 <span class="pill-count">39</span></button>
+        <button class="pill-btn" data-category="concepts">📐 数学概念 <span class="pill-count">7</span></button>
+        <button class="pill-btn" data-category="olympiad">🧩 奥数谜题 <span class="pill-count">9</span></button>
+        <button class="pill-btn" data-category="boardgame">♟️ 棋盘对弈 <span class="pill-count">10</span></button>
+        <button class="pill-btn" data-category="language">📖 英语词汇 <span class="pill-count">4</span></button>
+        <button class="pill-btn" data-category="life">🌍 生活素养 <span class="pill-count">9</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面主体内容区 -->
+  <main class="container">
+
+    <!-- 专区一：数学概念与直觉可视化 -->
+    <section class="category-section" data-section-category="concepts" id="sec-concepts">
+      <div class="section-header">
+        <div class="section-title">📐 数学概念与直觉可视化</div>
+        <div class="section-desc">拖拽滑块与动态演化，把微积分、同余模运算与代数方程“演”出来</div>
+      </div>
+      <div class="games-grid">
+        <div class="game-card" data-category="concepts" data-keywords="微积分 披萨 极限 割圆术 面积 圆周率 pie">
+          <div class="card-top"><h3>微积分披萨</h3><span class="badge badge-math">极限割圆</span></div>
+          <p>通过切披萨演示割圆术。动态增加切片数量，观察近似多边形如何逐渐逼近圆实际面积 πr²。</p>
+          <div class="card-actions"><a href="pie.html" class="btn-action btn-primary">开始探索</a></div>
         </div>
-    </header>
-
-    <main class="container">
-        <div class="games-grid">
-            <div class="game-card">
-                <h2>微积分披萨</h2>
-                <p>通过切披萨的方式学习微积分中的割圆术原理。这个互动演示帮助你理解极限和面积计算的基本概念。通过增加切片数量，观察近似值如何逐渐接近圆的实际面积。</p>
-                <a href="pie.html">开始游戏</a>
-            </div>
-
-            <div class="game-card">
-                <h2>单词拼写游戏</h2>
-                <p>一个有趣的单词拼写游戏，帮助提高英语词汇量和拼写能力。游戏提供丰富的词库，通过互动的方式让学习更加生动有趣。</p>
-                <a href="words.html">开始游戏</a>
-            </div>
-
-            <div class="game-card">
-                <h2>立方配色</h2>
-                <p>体验三维空间的立方配色游戏。通过旋转和调整魔方的面，学习空间思维和颜色搭配。这个游戏既能锻炼逻辑思维，又能培养空间想象力。</p>
-                <a href="cubegame.html">开始游戏</a>
-            </div>
-
-            <div class="game-card">
-                <h2>烘焙蛋糕</h2>
-                <p>一个模拟烘焙的游戏，将数学思维融入烹饪过程。通过调整配料比例和烘焙时间，学习比例、测量和时间管理的概念。</p>
-                <a href="cookcake.html">开始游戏</a>
-            </div>
-
-            <div class="game-card">
-                <h2>数组求和</h2>
-                <p>探索数组和算法的基础概念。通过可视化的方式展示数组操作和求和过程，帮助理解程序设计中的基本数据结构和算法思想。</p>
-                <a href="arraysum.html">开始游戏</a>
-            </div>
-
-            <div class="game-card">
-                <h2>机车排队</h2>
-                <p>机车没有按照顺序排队，司机很着急，现在请你帮帮他。</p>
-                <a href="train.html">开始游戏</a>
-            </div>
-
-            <div class="game-card">
-                <h2>莫比乌斯带冒险</h2>
-                <p>探索奇特的莫比乌斯带，一个只有一个面和一条边界的拓扑学结构。在这个互动冒险中，你将了解它的奇特属性，例如在不越过边界的情况下遍历整个曲面。</p>
-                <a href="mobius_adventure.html">开始游戏</a>
-            </div>
-
-            <div class="game-card">
-                <h2>烧脑齿轮谜题</h2>
-                <p>挑战一个复杂的齿轮系统谜题。通过一个可交互、分步拆解的指南，深入理解齿轮之间的转速与齿数关系，锻炼你的逻辑推理和代数运算能力。</p>
-                <a href="chilun.html">开始挑战</a>
-            </div>
-
-            <!-- <div class="game-card">
-                <h2>RAZ AA单词测试</h2>
-                <p>RAZ AA的单词小测试。未来扩展为整个RAZ</p>
-                <a href="kid_quiz.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>RAZ AA-G单词测试</h2>
-                <p>RAZ AA-G的单词小测试。未来扩展为整个RAZ</p>
-                <a href="kid_quiz2.html">开始挑战</a>
-            </div> -->
-
-
-
-            <div class="game-card">
-                <h2>数学英语学习</h2>
-                <p>小学数学常用英语单词学习和测试</p>
-                <a href="mathenglish2.html">开始挑战</a>
-            </div>
-
-
-
-            <div class="game-card">
-                <h2>敲敲桌子小游戏</h2>
-                <p>危险！赛跑、音乐、持续更新</p>
-                <a href="\Portable-objection\tap-fun\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>反向俄罗斯方块</h2>
-                <p>现在你可以为难电脑了！</p>
-                <a href="\reversetetris\index.html">开始挑战</a>
-            </div>
-
-            <div class="game-card">
-                <h2>n球放m盒？</h2>
-                <p>有几种方法</p>
-                <a href="\comb\dist\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>抓狐狸</h2>
-                <p>帮帮猎人爷爷</p>
-                <a href="\fox\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>扑克乘乘</h2>
-                <p>把4张牌乘起来，A=14</p>
-                <a href="\pokercal\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>小蜗牛大闯关！</h2>
-                <p>怎么才能躲开怪物呢</p>
-                <a href="\snail\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>小马回家！</h2>
-                <p>快帮黑马白马回家吧</p>
-                <a href="\horse\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>小马逛集市！</h2>
-                <p>小马能逛遍所有的商铺吗</p>
-                <a href="\chesshorse\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>地图大作战</h2>
-                <p>挑战你的地理常识</p>
-                <a href="\map-game\index.html">开始挑战</a>
-            </div>
-
-            <div class="game-card">
-                <h2>迎春杯题库练习</h2>
-                <p>迎春杯题库：练习/考试/浏览（静态网页）。如图片外链启用，将从 R2 加载。</p>
-                <a href="apps/yingchun/index.html?db=y2">开始挑战</a>
-            </div>
-
-            <div class="game-card">
-                <h2>旋转木马50</h2>
-                <p>SafeCracker 50 通过旋转圆环让数字让半径相加是50。</p>
-                <a href="\safecraker\index.html">开始挑战</a>
-            </div>
-
-            <div class="game-card">
-                <h2>切尔诺贝利</h2>
-                <p>核电站事故模拟器</p>
-                <a href="\Chernobyl\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>切分三角形</h2>
-                <p>木兰vs单于</p>
-                <a href="\imo2026\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>狐狸和鹅</h2>
-                <p>可千万别让狐狸抓住</p>
-                <a href="\foxchick\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>架桥</h2>
-                <p>架桥和拆桥</p>
-                <a href="\bridge\index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>奇偶棋子谜题</h2>
-                <p>6×6 国际象棋棋盘奥数大题：每行偶数（>0）枚、每列奇数枚，求最少棋子数挑战！支持4×4/6×6/8×8、最优解演示与数学原理解析。</p>
-                <a href="stones/index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>Dittle 骰战棋</h2>
-                <p>7×7 经典六面骰对弈棋！支持人机/双人对弈、内置独立双路棋钟、电脑高分屏缩放、手机长短两端面对面对战、3D立体视角、背景音乐与拟真音效。</p>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a href="boardgame/tzarr/dittle_game.html">开始对弈</a>
-                    <a href="boardgame/tzarr/pyxorDittle_rules_zh.html" style="background-color: #ff6b6b;">规则手册</a>
-                </div>
-            </div>
-            <div class="game-card">
-                <h2>Quixo 立方体战棋</h2>
-                <p>5×5 经典扭转战棋！从外圈取子翻面再推入整行/列，率先连成五子即胜（小心“帮对手连五”判负的自杀规则）。支持人机/双人同屏、三档 AI、悔棋、棋盘大小调节与手机/Pad/电脑自适应。</p>
-                <a href="boardgame/quixo连珠棋/index.html">开始对弈</a>
-            </div>
-            <div class="game-card">
-                <h2>青蛙跳跃 (荷塘换位)</h2>
-                <p>经典奥数思维题：6只黑白青蛙互换位置！支持题图20步极限挑战（理论最优17步）、自由扩展蛙数(1v1~5v5)、4套魔性表情包皮肤、自动教学演示、智能提示与充满爱意的夸奖激励系统。</p>
-                <a href="boardgame/jumpfrog/index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>星芒阵封印 (点阵正三角形)</h2>
-                <p>经典奥数几何极值原题：15点阵中至少去掉几个点不再出现正三角形？支持启发式教学、鸽巢原理5点下界图解、星阵守望者故事剧情、连线指出剩余正三角形排查雷达、玩家历史记录与3组7点最优解分步动态演示。</p>
-                <a href="boardgame/triangleremove/index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>正方形拼图挑战 (Mrs. Perkins 拼布)</h2>
-                <p>奥数经典真题：用 1×1、2×2、3×3、4×4 纸片无重叠无空隙拼接 10×10，最少需要多少块？支持多阶关卡(5×5~12×12及自定义)、米白折纸与暗夜双主题、4K 高清视差缩放、拖拽与触控双模、Web Audio 拟真音效、抽屉原理与四元鸡兔同笼升维原理解析。</p>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a href="boardgame/square/index.html">开始挑战</a>
-                    <a href="boardgame/square/index.html#rules" style="background-color: #ff6b6b;">玩法规则</a>
-                    <a href="boardgame/square/index.html#math" style="background-color: #4f46e5;">数学原理</a>
-                    <a href="boardgame/square/README.md" style="background-color: #d97706;">说明文档</a>
-                </div>
-            </div>
-
-
-            <!-- ===== 数学教学项目 ===== -->
-            <div class="game-card">
-                <h2>微积分探秘之旅</h2>
-                <p>从国师的微积分转换而来。通过交互式动画和对话，以通俗易懂的方式讲解微积分核心概念，如极限、导数和积分。</p>
-                <a href="math/calclus/index.html">开始学习</a>
-            </div>
-            <div class="game-card">
-                <h2>因式分解探险</h2>
-                <p>互动学习多项式因式分解，包含教学、练习、考试和出题器等功能。</p>
-                <a href="math/factor/dist/index.html">开始学习</a>
-            </div>
-            <div class="game-card">
-                <h2>方程卷子</h2>
-                <p>方程的随机出题。</p>
-                <a href="math/linear/index.html">开始学习</a>
-            </div>
-            <div class="game-card">
-                <h2>同余小学习</h2>
-                <p>通过交互式动画（如模时钟、剩余类抽屉等）系统讲解数论中的同余概念。</p>
-                <a href="math/tongyu/index.html">开始学习</a>
-            </div>
-
-            <!-- ===== 棋盘游戏 ===== -->
-            <div class="game-card">
-                <h2>YINSH 因什棋说明书</h2>
-                <p>GIPF 系列抽象策略棋盘游戏，通过移动棋环翻转棋子，连成五子即可得分。</p>
-                <a href="boardgame/YINSH/YINSH_rules_zh.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>LYNGK 灵可棋 说明书</h2>
-                <p>GIPF 系列棋盘游戏，通过堆叠不同颜色棋子达到 5 层来得分。</p>
-                <a href="boardgame/lyngk/lyngk_rules_zh.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>TZAAR 察尔棋 说明书</h2>
-                <p>GIPF 系列二人抽象策略游戏，保持三种棋子类型齐全，通过吃子和堆叠来获胜。</p>
-                <a href="boardgame/tzarr/Tzaar_ I play the game_zh.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>Dittle 骰战棋 说明书</h2>
-                <p>Pyxor 7×7 六面骰对弈棋中文规则书，含全套图解、消极防守判定、变体规则与一键纯黑白打印模式。</p>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a href="boardgame/tzarr/pyxorDittle_rules_zh.html">查看说明书</a>
-                    <a href="boardgame/tzarr/dittle_game.html" style="background-color: #4ecdc4;">网页对弈</a>
-                </div>
-            </div>
-
-            <div class="game-card">
-                <h2>滑冰棋 (Slide Chess)</h2>
-                <p>六边形冰面滑行对战！通过在冰面上笔直滑行并重新铺设底板，率先将己方的 3 枚棋子组成“铁三角”或连成一块即可获胜。支持 3D/2D 风格切换与智能 AI 对弈。</p>
-                <a href="boardgame/slide/index.html">开始挑战</a>
-            </div>
-
-            <div class="game-card">
-                <h2>青蛙跳跃 (荷塘换位)</h2>
-                <p>经典奥数益智棋盘：黑白青蛙互换位置！支持20步原题极限挑战（理论最优17步）、4套表情包皮肤、自由扩展蛙数(1v1~5v5)、自动教学演示与夸奖鼓励系统。</p>
-                <a href="boardgame/jumpfrog/index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>一位数速算挑战</h2>
-                <p>一位数加减法</p>
-                <a href="PlusMinus.html">开始挑战</a>
-            </div>
-            
-            <div class="game-card">
-                <h2>星芒阵封印 (点阵正三角形)</h2>
-                <p>经典奥数几何极值原题：15点阵中至少去掉几个点不再出现正三角形？支持启发式教学、鸽巢原理5点下界图解、星阵守望者故事剧情、连线指出剩余正三角形排查雷达、玩家历史记录与3组7点最优解分步动态演示。</p>
-                <a href="boardgame/triangleremove/index.html">开始挑战</a>
-            </div>
-            <div class="game-card">
-                <h2>正方形拼图挑战 (Mrs. Perkins 拼布)</h2>
-                <p>奥数经典真题：用 1×1、2×2、3×3、4×4 纸片无重叠无空隙拼接 10×10，最少需要多少块？支持多阶关卡(5×5~12×12及自定义)、米白折纸与暗夜双主题、4K 高清视差缩放、拖拽与触控双模、Web Audio 拟真音效、抽屉原理与四元鸡兔同笼升维原理解析。</p>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a href="boardgame/square/index.html">开始挑战</a>
-                    <a href="boardgame/square/index.html#rules" style="background-color: #ff6b6b;">玩法规则</a>
-                    <a href="boardgame/square/index.html#math" style="background-color: #4f46e5;">数学原理</a>
-                    <a href="boardgame/square/README.md" style="background-color: #d97706;">说明文档</a>
-                </div>
-            </div>
-
-
+        <div class="game-card" data-category="concepts" data-keywords="微积分 导数 积分 探秘之旅 calclus">
+          <div class="card-top"><h3>微积分探秘之旅</h3><span class="badge badge-math">交互动画</span></div>
+          <p>通俗易懂的交互动画与生动对话，系统拆解微积分核心基石：极限、导数斜率与积分累积。</p>
+          <div class="card-actions"><a href="math/calclus/index.html" class="btn-action btn-primary">开始学习</a></div>
         </div>
-
-
-
-    </main>
-
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 趣味数学游戏集 - 让学习更有趣 <span style="opacity: 0.6; font-size: 0.85em;">(Ver: 2026.09.29)</span></p>
+        <div class="game-card" data-category="concepts" data-keywords="同余 数论 模时钟 抽屉 tongyu">
+          <div class="card-top"><h3>同余小学习</h3><span class="badge badge-math">数论精讲</span></div>
+          <p>结合模时钟与剩余类抽屉等 12 讲系列交互课件，深入浅出讲解数论同余与周期规律。</p>
+          <div class="card-actions"><a href="math/tongyu/index.html" class="btn-action btn-primary">开始学习</a></div>
         </div>
-    </footer>
+        <div class="game-card" data-category="concepts" data-keywords="因式分解 多项式 代数 factor">
+          <div class="card-top"><h3>因式分解探险</h3><span class="badge badge-math">代数训练</span></div>
+          <p>多项式因式分解交互学习系统，内置互动教学、分级专项练习、限时考试与智能出题器。</p>
+          <div class="card-actions"><a href="math/factor/dist/index.html" class="btn-action btn-primary">开始学习</a></div>
+        </div>
+        <div class="game-card" data-category="concepts" data-keywords="方程 卷子 一元一次方程 随堂练习 linear">
+          <div class="card-top"><h3>方程卷子</h3><span class="badge badge-math">随堂测试</span></div>
+          <p>一元一次方程智能随机出题系统，支持自选难度、在线解题与即时对错智能批改。</p>
+          <div class="card-actions"><a href="math/linear/index.html" class="btn-action btn-primary">开始练习</a></div>
+        </div>
+        <div class="game-card" data-category="concepts" data-keywords="速算 加减法 口算 小键盘 plusminus">
+          <div class="card-top"><h3>一位数速算挑战</h3><span class="badge badge-touch">触控优化</span></div>
+          <p>移动端专属虚拟触控小键盘，大字号防遮挡，挑战 100dvh 下的一位数加减极速心算反应。</p>
+          <div class="card-actions"><a href="PlusMinus.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="concepts" data-keywords="迎春杯 竞赛 题库 真题 yingchun">
+          <div class="card-top"><h3>迎春杯题库练习</h3><span class="badge badge-math">奥数真题</span></div>
+          <p>小学迎春杯数学竞赛官方真题池：支持每日一题确定性随机抽题、分类自测与全卷浏览。</p>
+          <div class="card-actions"><a href="apps/yingchun/index.html?db=y2" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 专区二：奥数思维与组合极值谜题 -->
+    <section class="category-section" data-section-category="olympiad" id="sec-olympiad">
+      <div class="section-header">
+        <div class="section-title">🧩 奥数思维与组合极值谜题</div>
+        <div class="section-desc">经典奥数命题互动化：抽屉原理、组合优化、极值推演与算法演示</div>
+      </div>
+      <div class="games-grid">
+        <div class="game-card" data-category="olympiad" data-keywords="正方形 拼布 perkins 抽屉原理 极值 10x10 square">
+          <div class="card-top"><h3>正方形拼图挑战</h3><span class="badge badge-olympiad">⭐ 经典奥数</span></div>
+          <p>Mrs. Perkins 拼布奥数真题：用 1~4 纸片铺满 10×10 最少几块？四元鸡兔同笼升维几何装箱解析，米白/暗夜双主题，支持 4K 放大。</p>
+          <div class="card-actions">
+            <a href="boardgame/square/index.html" class="btn-action btn-primary">开始挑战</a>
+            <a href="boardgame/square/index.html#rules" class="btn-action btn-coral">玩法规则</a>
+            <a href="boardgame/square/index.html#math" class="btn-action btn-indigo">数学原理</a>
+            <a href="boardgame/square/README.md" class="btn-action btn-amber">说明文档</a>
+          </div>
+        </div>
+        <div class="game-card" data-category="olympiad" data-keywords="星芒阵 三角形 移除 极值 鸽巢原理 点阵 triangleremove">
+          <div class="card-top"><h3>星芒阵封印</h3><span class="badge badge-olympiad">鸽巢原理</span></div>
+          <p>15 点阵至少去掉几点不再出现正三角形？内置启发式教学、剩余三角形连线雷达与 7 点最优解演示。</p>
+          <div class="card-actions"><a href="boardgame/triangleremove/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="olympiad" data-keywords="奇偶 棋子 矩阵 6x6 证明 stones">
+          <div class="card-top"><h3>奇偶棋子谜题</h3><span class="badge badge-olympiad">极值构造</span></div>
+          <p>6×6 棋盘每行偶数、每列奇数枚，求最少棋子数！附分块循环矩阵构造算法与严密数学证明。</p>
+          <div class="card-actions"><a href="stones/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="olympiad" data-keywords="青蛙 跳跃 荷塘 换位 状态机 jumpfrog">
+          <div class="card-top"><h3>青蛙跳跃 (荷塘换位)</h3><span class="badge badge-olympiad">经典智力</span></div>
+          <p>经典奥数思维题：黑白青蛙互换位置！原题 20 步挑战（理论最优 17 步），含 4 套表情包与自动演示。</p>
+          <div class="card-actions"><a href="boardgame/jumpfrog/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="olympiad" data-keywords="齿轮 烧脑 转速 齿数 代数 chilun">
+          <div class="card-top"><h3>烧脑齿轮谜题</h3><span class="badge badge-olympiad">代数推理</span></div>
+          <p>复杂齿轮传动谜题，通过交互式分步拆解，深入理解齿轮转速、旋向与齿数反比的代数关系。</p>
+          <div class="card-actions"><a href="chilun.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="olympiad" data-keywords="切分 三角形 imo 几何 木兰 imo2026">
+          <div class="card-top"><h3>切分三角形</h3><span class="badge badge-olympiad">IMO 几何</span></div>
+          <p>IMO 2026 前瞻奥数几何切分命题（木兰 vs 单于），挑战多边形剖分与面积配比。</p>
+          <div class="card-actions"><a href="imo2026/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="olympiad" data-keywords="球 盒 组合 计数 容斥原理 comb">
+          <div class="card-top"><h3>n球放m盒？</h3><span class="badge badge-olympiad">组合计数</span></div>
+          <p>经典组合数学十二重模型：小球相同/相异、盒子相同/相异，探索无空盒、允许空盒的分配数公式。</p>
+          <div class="card-actions"><a href="comb/dist/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="olympiad" data-keywords="旋转木马 safecraker 凑数 50 密码 safecraker">
+          <div class="card-top"><h3>旋转木马50</h3><span class="badge badge-olympiad">心算凑数</span></div>
+          <p>SafeCracker 50 经典同心圆环盘：通过旋转各层圆环，使得每条辐射半径上的数字之和恰好等于 50。</p>
+          <div class="card-actions"><a href="safecraker/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="olympiad" data-keywords="扑克 乘乘 四则运算 连乘 pokercal">
+          <div class="card-top"><h3>扑克乘乘</h3><span class="badge badge-olympiad">速算拓展</span></div>
+          <p>随机抽取 4 张扑克牌计算连乘积，定义 A=14 等特殊权值，锻炼多步心算与因数分解速算力。</p>
+          <div class="card-actions"><a href="pokercal/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 专区三：策略棋盘与人机对弈 -->
+    <section class="category-section" data-section-category="boardgame" id="sec-boardgame">
+      <div class="section-header">
+        <div class="section-title">♟️ 策略棋盘与人机对弈</div>
+        <div class="section-desc">实体桌游电子化：3D 真实视界、多级 AI 博弈、对局记录与规则小册</div>
+      </div>
+      <div class="games-grid">
+        <div class="game-card" data-category="boardgame" data-keywords="dittle 骰战棋 3D 棋钟 对弈 骰子 tzarr">
+          <div class="card-top"><h3>Dittle 骰战棋</h3><span class="badge badge-ai">3D · 人机AI</span></div>
+          <p>7×7 六面骰对弈棋！真实 3D 翻滚与连跳、极小化极大 AI、独立双路棋钟、对局记录导出与规则手册。</p>
+          <div class="card-actions">
+            <a href="boardgame/tzarr/dittle_game.html" class="btn-action btn-primary">开始对弈</a>
+            <a href="boardgame/tzarr/pyxorDittle_rules_zh.html" class="btn-action btn-coral">规则手册</a>
+          </div>
+        </div>
+        <div class="game-card" data-category="boardgame" data-keywords="quixo 立方体 战棋 连五 翻面 quixo">
+          <div class="card-top"><h3>Quixo 立方体战棋</h3><span class="badge badge-ai">人机对弈</span></div>
+          <p>5×5 外圈取子推入整行战棋！率先连成五子即胜，三档战术 AI、同屏对战与防误自杀裁决。</p>
+          <div class="card-actions"><a href="boardgame/quixo连珠棋/index.html" class="btn-action btn-primary">开始对弈</a></div>
+        </div>
+        <div class="game-card" data-category="boardgame" data-keywords="滑冰棋 slide chess 六边形 冰面 对战 slide">
+          <div class="card-top"><h3>滑冰棋 (Slide Chess)</h3><span class="badge badge-ai">六边形对弈</span></div>
+          <p>六边形冰面直线滑行，取走并重铺底板，率先构成“铁三角”获胜。支持 3D/2D 切换与 AI 对弈。</p>
+          <div class="card-actions"><a href="boardgame/slide/index.html" class="btn-action btn-primary">开始对弈</a></div>
+        </div>
+        <div class="game-card" data-category="boardgame" data-keywords="抓狐狸 猎人 围堵 博弈 图论 fox">
+          <div class="card-top"><h3>抓狐狸</h3><span class="badge badge-ai">图上博弈</span></div>
+          <p>经典非对称追逃博弈：扮演猎人运用几何包围圈捕捉灵巧狐狸，考验走法规划与死角预判。</p>
+          <div class="card-actions"><a href="fox/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="boardgame" data-keywords="狐狸和鹅 围棋 经典 桌游 对战 foxchick">
+          <div class="card-top"><h3>狐狸和鹅</h3><span class="badge badge-ai">经典棋盘</span></div>
+          <p>欧洲经典古棋：一只狡猾狐狸与群鹅周旋。支持双人对战与极小化极大强力 AI 策略。</p>
+          <div class="card-actions"><a href="foxchick/index.html" class="btn-action btn-primary">开始对弈</a></div>
+        </div>
+        <div class="game-card" data-category="boardgame" data-keywords="小马回家 华容道 换位 路径规划 horse">
+          <div class="card-top"><h3>小马回家！</h3><span class="badge badge-touch">路径规划</span></div>
+          <p>黑白小马跨越阻碍互换归巢！通过限制步长与跳板协同，探寻最少步数完成拓扑换位。</p>
+          <div class="card-actions"><a href="horse/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="boardgame" data-keywords="小马 逛集市 国际象棋 骑士巡游 马走日 chesshorse">
+          <div class="card-top"><h3>小马逛集市！</h3><span class="badge badge-touch">骑士巡游</span></div>
+          <p>国际象棋“马走日”遍历整个棋盘！格子走过即变色不可重复踩，支持撤销、提示与动画演示。</p>
+          <div class="card-actions"><a href="chesshorse/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="boardgame" data-keywords="架桥 拆桥 网络流 连通图 bridge">
+          <div class="card-top"><h3>架桥与拆桥</h3><span class="badge badge-math">网络连通</span></div>
+          <p>图论网络中连通岛屿与拆毁桥梁的对抗博弈，深刻体验图的连通分量与割点战术。</p>
+          <div class="card-actions"><a href="bridge/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="boardgame" data-keywords="反向 俄罗斯方块 逆向思维 派块 reversetetris">
+          <div class="card-top"><h3>反向俄罗斯方块</h3><span class="badge badge-ai">逆向思维</span></div>
+          <p>反向给 AI 电脑派发方块！观察电脑的消行算法，想方设法塞入刁钻块型使电脑顶格封板。</p>
+          <div class="card-actions"><a href="reversetetris/index.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+        <div class="game-card" data-category="boardgame" data-keywords="gipf yinsh lyngk tzaar 说明书 规则">
+          <div class="card-top"><h3>GIPF 抽象策略棋典</h3><span class="badge badge-math">规则图解</span></div>
+          <p>世界知名抽象策略棋系列完整中文图解说明书，含因什棋、灵可棋与察尔棋经典规则。</p>
+          <div class="card-actions">
+            <a href="boardgame/YINSH/YINSH_rules_zh.html" class="btn-action btn-secondary">YINSH因什</a>
+            <a href="boardgame/lyngk/lyngk_rules_zh.html" class="btn-action btn-secondary">LYNGK灵可</a>
+            <a href="boardgame/tzarr/Tzaar_ I play the game_zh.html" class="btn-action btn-secondary">TZAAR察尔</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 专区四：英语与双语词汇 -->
+    <section class="category-section" data-section-category="language" id="sec-language">
+      <div class="section-header">
+        <div class="section-title">📖 英语与双语词汇</div>
+        <div class="section-desc">分级阅读单词拼写、学科数学常用英语词汇自测与趣味互动</div>
+      </div>
+      <div class="games-grid">
+        <div class="game-card" data-category="language" data-keywords="单词 拼写 英语 词汇 互动 words">
+          <div class="card-top"><h3>单词拼写游戏</h3><span class="badge badge-lang">拼写训练</span></div>
+          <p>交互式趣味单词拼写，涵盖丰富的基础与进阶词库，在拼字消除中强化自然拼读记忆。</p>
+          <div class="card-actions"><a href="words.html" class="btn-action btn-primary">开始拼写</a></div>
+        </div>
+        <div class="game-card" data-category="language" data-keywords="raz aa 单词 测试 分级阅读 kid_quiz">
+          <div class="card-top"><h3>RAZ AA 单词测试</h3><span class="badge badge-lang">启蒙分级</span></div>
+          <p>经典 RAZ AA 级别分级阅读核心高频词汇测试，图文结合，巩固英语起步认读。</p>
+          <div class="card-actions"><a href="kid_quiz.html" class="btn-action btn-primary">开始测试</a></div>
+        </div>
+        <div class="game-card" data-category="language" data-keywords="raz aa-g 分级阅读 词汇 扩展 kid_quiz2">
+          <div class="card-top"><h3>RAZ AA-G 词汇挑战</h3><span class="badge badge-lang">进阶进阶</span></div>
+          <p>覆盖 RAZ AA 到 G 级别的拓展分级词汇大题库，逐步进阶检验孩子自主阅读词汇储备。</p>
+          <div class="card-actions"><a href="kid_quiz2.html" class="btn-action btn-primary">开始测试</a></div>
+        </div>
+        <div class="game-card" data-category="language" data-keywords="数学英语 词汇 几何 术语 练习 mathenglish">
+          <div class="card-top"><h3>数学英语学习</h3><span class="badge badge-lang">双语学科</span></div>
+          <p>小学与初中数学高频英语术语词汇学习平台，涵盖几何形体、四则运算与代数专有词汇。</p>
+          <div class="card-actions"><a href="mathenglish2.html" class="btn-action btn-primary">开始挑战</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 专区五：生活数学与启蒙素养 -->
+    <section class="category-section" data-section-category="life" id="sec-life">
+      <div class="section-header">
+        <div class="section-title">🌍 生活数学与启蒙素养</div>
+        <div class="section-desc">统筹运筹安排、三维空间思维、拓扑奇景与计算科学算法初探</div>
+      </div>
+      <div class="games-grid">
+        <div class="game-card" data-category="life" data-keywords="烘焙 蛋糕 烙饼 统筹 时间 运筹 cookcake">
+          <div class="card-top"><h3>烘焙蛋糕 (烙饼游戏)</h3><span class="badge badge-life">运筹统筹</span></div>
+          <p>著名华罗庚统筹方法模拟：一口锅同时最多烙 2 张饼，3 张或更多饼如何安排才能用时最短？</p>
+          <div class="card-actions"><a href="cookcake.html" class="btn-action btn-primary">开始体验</a></div>
+        </div>
+        <div class="game-card" data-category="life" data-keywords="机车 排队 调度 排序 拓扑 train">
+          <div class="card-top"><h3>机车排队</h3><span class="badge badge-life">调度排序</span></div>
+          <p>单向铁轨车厢调度：利用有限侧线对乱序车厢进行调头与重排，培养拓扑排序与调度直觉。</p>
+          <div class="card-actions"><a href="train.html" class="btn-action btn-primary">开始体验</a></div>
+        </div>
+        <div class="game-card" data-category="life" data-keywords="立方 配色 魔方 三维 空间 cubegame">
+          <div class="card-top"><h3>立方配色</h3><span class="badge badge-life">空间透视</span></div>
+          <p>三维立体方块着色互动，旋转与展开六面，锻炼空间立体旋转、透视还原与配色逻辑。</p>
+          <div class="card-actions"><a href="cubegame.html" class="btn-action btn-primary">开始体验</a></div>
+        </div>
+        <div class="game-card" data-category="life" data-keywords="数组 求和 算法 数据结构 累加 arraysum">
+          <div class="card-top"><h3>数组求和</h3><span class="badge badge-life">算法启蒙</span></div>
+          <p>计算机科学与算法基础可视化：直观展现连续内存数组、指针游走与前缀和累加过程。</p>
+          <div class="card-actions"><a href="arraysum.html" class="btn-action btn-primary">开始体验</a></div>
+        </div>
+        <div class="game-card" data-category="life" data-keywords="莫比乌斯带 拓扑 单侧 单边界 mobius">
+          <div class="card-top"><h3>莫比乌斯带冒险</h3><span class="badge badge-life">拓扑奇境</span></div>
+          <p>探索只有一个面、一条边界的莫比乌斯环拓扑奇观，不越过边界漫游整个几何曲面。</p>
+          <div class="card-actions"><a href="mobius_adventure.html" class="btn-action btn-primary">开始探索</a></div>
+        </div>
+        <div class="game-card" data-category="life" data-keywords="蜗牛 闯关 扫雷 探路 imo snail">
+          <div class="card-top"><h3>小蜗牛大闯关！</h3><span class="badge badge-life">决策探路</span></div>
+          <p>IMO 2024/5 网格扫雷博弈：运用最优三次尝试策略，摸清怪物布局并安全抵达终点。</p>
+          <div class="card-actions"><a href="snail/index.html" class="btn-action btn-primary">开始体验</a></div>
+        </div>
+        <div class="game-card" data-category="life" data-keywords="地图 大作战 地理 常识 map">
+          <div class="card-top"><h3>地图大作战</h3><span class="badge badge-life">综合常识</span></div>
+          <p>趣味地理交互认知大作战，在地图交互中学习行政区划、地形轮廓与世界地理知识。</p>
+          <div class="card-actions"><a href="map-game/index.html" class="btn-action btn-primary">开始体验</a></div>
+        </div>
+        <div class="game-card" data-category="life" data-keywords="敲敲桌子 节奏 反应 tap portable">
+          <div class="card-top"><h3>敲敲桌子小游戏</h3><span class="badge badge-life">手速节拍</span></div>
+          <p>手速与节奏听觉反应互动，轻松趣味的手指节拍小游戏，随时随地开启互动减压。</p>
+          <div class="card-actions"><a href="Portable-objection/tap-fun/index.html" class="btn-action btn-primary">开始体验</a></div>
+        </div>
+        <div class="game-card" data-category="life" data-keywords="切尔诺贝利 核电站 反应堆 模拟 chernobyl">
+          <div class="card-top"><h3>切尔诺贝利模拟器</h3><span class="badge badge-life">科学仿真</span></div>
+          <p>核反应堆物理平衡与突发工况排险仿真模拟，体验控制棒、水冷循环与功率热力学平衡。</p>
+          <div class="card-actions"><a href="Chernobyl/index.html" class="btn-action btn-primary">开始体验</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 搜索无结果空状态提示 -->
+    <div id="hubEmptyState" class="empty-state">
+      <h3>🔍 未找到匹配的游戏或页面</h3>
+      <p>没有找到与 “<span id="emptyKeyword"></span>” 相关的项目，请尝试搜索其他关键字或切换分类标签。</p>
+    </div>
+
+  </main>
+
+  <!-- 页脚版权与技术标识 -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 趣味数学游戏集 · 让学习与思维更有趣 <span style="opacity: 0.6; font-size: 0.85em;">(Ver: 2026.09.29-hub)</span></p>
+      <p style="margin-top: 6px; font-size: 0.82rem; color: #64748b;">纯前端技术栈 · 零外部网络依赖 · 离线开箱即用</p>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
 </body>
-
 </html>
