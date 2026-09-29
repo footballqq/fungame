@@ -170,10 +170,19 @@ body.theme-dark .modal-close-btn:hover {
   border-left: 4px solid var(--accent-blue);
   padding: 10px 14px;
   border-radius: 8px;
-  font-family: "Cascadia Code", "Fira Code", monospace;
-  font-size: 0.95rem;
+  font-family: "Cambria Math", "Latin Modern Math", "STIX Two Math", "Georgia", "Times New Roman", serif;
+  font-size: 1.08rem;
   color: var(--text-main);
-  margin: 10px 0;
+  margin: 12px 0;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.math-formula em {
+  font-style: italic;
+  font-family: "Cambria Math", "Latin Modern Math", "Georgia", serif;
+  padding: 0 1px;
 }
 
 .math-highlight {

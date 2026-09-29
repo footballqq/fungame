@@ -226,3 +226,24 @@ def test_documentation_and_manual_completeness():
         dev = f.read()
     assert "4K" in dev and "踩坑" in dev and "架构" in dev
 
+
+def test_math_formula_formatting_no_raw_latex():
+    """验证前端 i18n 与 HTML 文本中不含未渲染的 raw LaTeX 标记（如 \\times, \\le, \\lceil）"""
+    i18n_path = os.path.join(SQUARE_DIR, "js", "i18n.js")
+    html_path = os.path.join(SQUARE_DIR, "index.html")
+
+    with open(i18n_path, "r", encoding="utf-8") as f:
+        i18n_text = f.read()
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        html_text = f.read()
+
+    forbidden_patterns = [r"\\times", r"\\le\b", r"\\ge\b", r"\\lceil", r"\\lfloor", r"\\quad"]
+    for pattern in forbidden_patterns:
+        assert not re.search(pattern, i18n_text), f"i18n.js 中不应含有未解析的 LaTeX 语法: {pattern}"
+        assert not re.search(pattern, html_text), f"index.html 中不应含有未解析的 LaTeX 语法: {pattern}"
+
+    assert "10 × 10 = 100" in i18n_text, "应包含使用标准乘号 × 渲染的公式"
+    assert "0 ≤ <em>a</em> ≤ 4" in i18n_text or "0 ≤ a ≤ 4" in i18n_text, "应包含使用标准小于等于号 ≤ 渲染的公式"
+
+

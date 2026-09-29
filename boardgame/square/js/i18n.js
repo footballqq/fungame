@@ -87,26 +87,26 @@
 
       math_p2_title: '二、理论下界推演：面积不等式与抽屉原理',
       math_p2_text: `
-        <div class="math-formula">目标总面积 $S = 10 \\times 10 = 100$</div>
+        <div class="math-formula">目标总面积 <em>S</em> = 10 × 10 = 100</div>
         <p><strong>1. 纯面积理论下界：</strong></p>
-        <p>可用纸片的最大尺寸为 $4\\times 4$，单块面积为 16。由除法原理：</p>
-        <div class="math-formula">$\\lceil 100 / 16 \\rceil = 7$</div>
+        <p>可用纸片的最大尺寸为 4×4，单块面积为 16。由除法原理：</p>
+        <div class="math-formula">⌈100 / 16⌉ = 7（块）</div>
         <p>因此仅凭面积下界，至少需要 7 块纸片。</p>
         <p><strong>2. 几何排布约束（二维鸽巢原理）：</strong></p>
-        <p>能只用 7 块吗？如果只用 7 块，只能是 6 块 $4\\times 4$（面积 96）加 1 块 $2\\times 2$（面积 4）。</p>
-        <p><strong>致命矛盾：</strong>在 $10\\times 10$ 的正方形中，任意一行最多排下 $\\lfloor 10 / 4 \\rfloor = 2$ 个 $4\\times 4$；任意一列也最多排下 2 个。因此，整个 $10\\times 10$ 正方形中<strong>至多容纳 4 个互不重叠的 $4\\times 4$ 正方形</strong>！绝不可能塞进 5 个或 6 个！</p>
+        <p>能只用 7 块吗？如果只用 7 块，只能是 6 块 4×4（面积 96）加 1 块 2×2（面积 4）。</p>
+        <p><strong>致命矛盾：</strong>在 10×10 的正方形中，任意一行最多排下 ⌊10 / 4⌋ = 2 个 4×4；任意一列也最多排下 2 个。因此，整个 10×10 正方形中<strong>至多容纳 2 × 2 = 4 个互不重叠的 4×4 正方形</strong>！绝不可能塞进 5 个或 6 个！</p>
       `,
 
       math_p3_title: '三、为什么 8 块、9 块、10 块均无解？',
       math_p3_text: `
-        <p>既然 $4\\times 4$ 纸片最多只能用 4 块，我们列出面积不定方程：</p>
-        <div class="math-formula">16a + 9b + 4c + d = 100 \\quad (0 \\le a \\le 4)</div>
-        <p>其中 $a, b, c, d$ 分别代表 $4\\times 4, 3\\times 3, 2\\times 2, 1\\times 1$ 的数量。要使总块数 $K = a + b + c + d \\le 10$：</p>
+        <p>既然 4×4 纸片最多只能用 4 块，我们列出面积不定方程：</p>
+        <div class="math-formula">16<em>a</em> + 9<em>b</em> + 4<em>c</em> + <em>d</em> = 100 &nbsp;&nbsp; (0 ≤ <em>a</em> ≤ 4)</div>
+        <p>其中 <em>a, b, c, d</em> 分别代表 4×4, 3×3, 2×2, 1×1 的数量。要使总块数 <em>K</em> = <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em> ≤ 10：</p>
         <ul>
-          <li><strong>若 K = 8：</strong>唯一非负整数解为 $a=4, b=4, c=0, d=0$（即四个 $4\\times 4$ 和四个 $3\\times 3$）。
-          <br><em>几何矛盾：</em> $10\\times 10$ 的四条边界长度为 10，仅用 4 和 3 分割 10 的唯一方式为 $4+3+3=10$。这意味着每条边只能有 1 个 4。四个 $4\\times 4$ 必须分布在四条边的中间，四个角必须是四个 $3\\times 3$。但这样四个 $4\\times 4$ 在中心交汇区必须占满到中心坐标，导致中心必然发生重叠冲突，因此 8 块无解！</li>
-          <li><strong>若 K = 9：</strong>无任何满足 $a \\le 4$ 的非负整数解！</li>
-          <li><strong>若 K = 10：</strong>唯一满足 $a \\le 4$ 的解为 $a=4, b=3, c=2, d=1$。但经全排列几何回溯验证，由于奇数尺寸正方形在 10 边长边界与角域的奇偶性冲突，不存在任何几何拼法！</li>
+          <li><strong>若 <em>K</em> = 8：</strong>唯一非负整数解为 <em>a</em>=4, <em>b</em>=4, <em>c</em>=0, <em>d</em>=0（即四个 4×4 和四个 3×3）。
+          <br><em>几何矛盾：</em> 10×10 的四条边界长度为 10，仅用 4 和 3 分割 10 的唯一方式为 4 + 3 + 3 = 10。这意味着每条边只能有 1 个 4。四个 4×4 必须分布在四条边的中间，四个角必须是四个 3×3。但这样四个 4×4 在中心交汇区必须占满到中心坐标，导致中心必然发生重叠冲突，因此 8 块无解！</li>
+          <li><strong>若 <em>K</em> = 9：</strong>无任何满足 <em>a</em> ≤ 4 的非负整数解！</li>
+          <li><strong>若 <em>K</em> = 10：</strong>唯一满足 <em>a</em> ≤ 4 的解为 <em>a</em>=4, <em>b</em>=3, <em>c</em>=2, <em>d</em>=1。但经全排列几何回溯验证，由于奇数尺寸正方形在 10 边长边界与角域的奇偶性冲突，不存在任何几何拼法！</li>
         </ul>
       `,
 
@@ -118,10 +118,10 @@
         </div>
         <p>更加惊人的是，在数学上<strong>所有 56 种能达到 11 块的最优解中，纸片的尺寸构成是绝对唯一的</strong>：</p>
         <ul>
-          <li><strong>3 块 4×4</strong>（面积 $3 \\times 16 = 48$）</li>
-          <li><strong>4 块 3×3</strong>（面积 $4 \\times 9 = 36$）</li>
-          <li><strong>4 块 2×2</strong>（面积 $4 \\times 4 = 16$）</li>
-          <li><strong>0 块 1×1</strong>（总面积刚好 $48 + 36 + 16 = 100$）</li>
+          <li><strong>3 块 4×4</strong>（面积 3 × 16 = 48）</li>
+          <li><strong>4 块 3×3</strong>（面积 4 × 9 = 36）</li>
+          <li><strong>4 块 2×2</strong>（面积 4 × 4 = 16）</li>
+          <li><strong>0 块 1×1</strong>（总面积刚好 48 + 36 + 16 = 100）</li>
         </ul>
         <p>最优解完全不需要哪怕 1 块 1×1 的碎纸片！三组尺寸严丝合缝，堪称离散几何中的奇迹构型。</p>
       `,
@@ -222,33 +222,33 @@
 
       math_p1_title: '1. Origins: Mrs. Perkins\'s Quilt Problem',
       math_p1_text: `
-        <p>This puzzle originates from British recreational mathematician Henry Dudeney's 1917 classic <em>Amusements in Mathematics</em>, known as <strong>Mrs. Perkins's Quilt</strong>: dividing a square of side $N$ into the minimum number of integer squares.</p>
+        <p>This puzzle originates from British recreational mathematician Henry Dudeney's 1917 classic <em>Amusements in Mathematics</em>, known as <strong>Mrs. Perkins's Quilt</strong>: dividing a square of side <em>N</em> into the minimum number of integer squares.</p>
         <p>In Math Olympiad competitions, a famous variant (from our <code>readme.txt</code>) states: <strong>"Given an ample supply of 1×1, 2×2, 3×3, and 4×4 squares, what is the minimum number of tiles needed to tile a 10×10 square without overlap or gaps?"</strong></p>
-        <p>If 5×5 squares were allowed, four 5×5 squares would trivially tile the 10×10 board. By restricting the maximum tile size to 4×4 ($< 10/2$), the problem turns into a deep combinatorial geometry puzzle!</p>
+        <p>If 5×5 squares were allowed, four 5×5 squares would trivially tile the 10×10 board. By restricting the maximum tile size to 4×4 (&lt; 10/2), the problem turns into a deep combinatorial geometry puzzle!</p>
       `,
 
       math_p2_title: '2. Lower Bounds: Area Inequality & 2D Pigeonhole Principle',
       math_p2_text: `
-        <div class="math-formula">Total Target Area $S = 10 \\times 10 = 100$</div>
+        <div class="math-formula">Total Target Area <em>S</em> = 10 × 10 = 100</div>
         <p><strong>1. Pure Area Bound:</strong></p>
-        <p>The largest available square is $4\\times 4$ (area 16). By the ceiling division:</p>
-        <div class="math-formula">$\\lceil 100 / 16 \\rceil = 7$</div>
+        <p>The largest available square is 4×4 (area 16). By the ceiling division:</p>
+        <div class="math-formula">⌈100 / 16⌉ = 7 (tiles)</div>
         <p>Thus, by area alone, at least 7 tiles are required.</p>
         <p><strong>2. 2D Packing Restriction (Pigeonhole Theorem):</strong></p>
-        <p>Can 7 tiles ever work? 7 tiles would mean six $4\\times 4$ (area 96) and one $2\\times 2$ (area 4).</p>
-        <p><strong>Geometric Contradiction:</strong> In a $10\\times 10$ square, any row can fit at most $\\lfloor 10 / 4 \\rfloor = 2$ non-overlapping $4\\times 4$ squares, and any column can fit at most 2. Hence, <strong>a $10\\times 10$ square can contain at most $2 \\times 2 = 4$ squares of size $4\\times 4$</strong>! Having 5 or 6 is geometrically impossible!</p>
+        <p>Can 7 tiles ever work? 7 tiles would mean six 4×4 (area 96) and one 2×2 (area 4).</p>
+        <p><strong>Geometric Contradiction:</strong> In a 10×10 square, any row can fit at most ⌊10 / 4⌋ = 2 non-overlapping 4×4 squares, and any column can fit at most 2. Hence, <strong>a 10×10 square can contain at most 2 × 2 = 4 squares of size 4×4</strong>! Having 5 or 6 is geometrically impossible!</p>
       `,
 
       math_p3_title: '3. Why 8, 9, and 10 Pieces Are Impossible',
       math_p3_text: `
-        <p>Since the number of $4\\times 4$ squares $a \\le 4$, consider the Diophantine area equation:</p>
-        <div class="math-formula">16a + 9b + 4c + d = 100 \\quad (0 \\le a \\le 4)</div>
-        <p>Looking for total pieces $K = a + b + c + d \\le 10$:</p>
+        <p>Since the number of 4×4 squares <em>a</em> ≤ 4, consider the Diophantine area equation:</p>
+        <div class="math-formula">16<em>a</em> + 9<em>b</em> + 4<em>c</em> + <em>d</em> = 100 &nbsp;&nbsp; (0 ≤ <em>a</em> ≤ 4)</div>
+        <p>Looking for total pieces <em>K</em> = <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em> ≤ 10:</p>
         <ul>
-          <li><strong>If K = 8:</strong> The only algebraic solution is $a=4, b=4, c=0, d=0$ (four $4\\times 4$ and four $3\\times 3$).
-          <br><em>Boundary Contradiction:</em> Along each outer boundary of length 10, the only way to partition 10 using 4 and 3 is $4+3+3=10$. This requires each boundary to have exactly one 4. The four corners must be $3\\times 3$, forcing all four $4\\times 4$ squares into the edge centers. Their inner corners will heavily collide at the central $2\\times 2$ square, making $K=8$ physically impossible!</li>
-          <li><strong>If K = 9:</strong> There is NO non-negative integer solution with $a \\le 4$!</li>
-          <li><strong>If K = 10:</strong> Only $a=4, b=3, c=2, d=1$ exists algebraically. Exhaustive backtracking proves parity conflicts on the boundaries prevent any valid tiling!</li>
+          <li><strong>If <em>K</em> = 8:</strong> The only algebraic solution is <em>a</em>=4, <em>b</em>=4, <em>c</em>=0, <em>d</em>=0 (four 4×4 and four 3×3).
+          <br><em>Boundary Contradiction:</em> Along each outer boundary of length 10, the only way to partition 10 using 4 and 3 is 4 + 3 + 3 = 10. This requires each boundary to have exactly one 4. The four corners must be 3×3, forcing all four 4×4 squares into the edge centers. Their inner corners will heavily collide at the central 2×2 square, making <em>K</em>=8 physically impossible!</li>
+          <li><strong>If <em>K</em> = 9:</strong> There is NO non-negative integer solution with <em>a</em> ≤ 4!</li>
+          <li><strong>If <em>K</em> = 10:</strong> Only <em>a</em>=4, <em>b</em>=3, <em>c</em>=2, <em>d</em>=1 exists algebraically. Exhaustive backtracking proves parity conflicts on the boundaries prevent any valid tiling!</li>
         </ul>
       `,
 
@@ -260,10 +260,10 @@
         </div>
         <p>Even more remarkably, across all 56 distinct 11-tile tiling arrangements, <strong>the tile size composition is universally identical</strong>:</p>
         <ul>
-          <li><strong>3 squares of 4×4</strong> (Area $3 \\times 16 = 48$)</li>
-          <li><strong>4 squares of 3×3</strong> (Area $4 \\times 9 = 36$)</li>
-          <li><strong>4 squares of 2×2</strong> (Area $4 \\times 4 = 16$)</li>
-          <li><strong>0 squares of 1×1</strong> (Total area exactly $48 + 36 + 16 = 100$)</li>
+          <li><strong>3 squares of 4×4</strong> (Area 3 × 16 = 48)</li>
+          <li><strong>4 squares of 3×3</strong> (Area 4 × 9 = 36)</li>
+          <li><strong>4 squares of 2×2</strong> (Area 4 × 4 = 16)</li>
+          <li><strong>0 squares of 1×1</strong> (Total area exactly 48 + 36 + 16 = 100)</li>
         </ul>
         <p>Zero 1×1 tiles are needed! The pieces lock together with absolute mathematical elegance.</p>
       `,

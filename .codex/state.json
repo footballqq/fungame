@@ -1,14 +1,8 @@
 {
-  "current_task": "正方形拼图挑战：米白风格、通关双按钮与检视横幅、暗格等比细分、规则初始渲染、开发说明文档（已完成）",
+  "current_task": "正方形拼图挑战：修复数学原理解析公式 LaTeX 显示问题（已完成）",
   "last_changes": [
-    "boardgame/square/index.html",
-    "boardgame/square/css/style.css",
-    "boardgame/square/css/board.css",
-    "boardgame/square/css/modal.css",
     "boardgame/square/js/i18n.js",
-    "boardgame/square/js/ui.js",
-    "boardgame/square/README.md",
-    "boardgame/square/DEVELOPMENT.md",
+    "boardgame/square/css/modal.css",
     "tests/test_square_game.py",
     "CODEx_TODO.md",
     ".codex/state.json"
@@ -16,5 +10,5 @@
   "next_actions": [
     "git commit 并向用户汇报成果"
   ],
-  "notes": "针对用户五项反馈全面升级：1. 修复通关弹窗无法返回与关闭无反应：全局事件委托绑定 .btn-modal-close 与遮罩点击，祝贺弹窗提供“🔍 查看当前棋盘”与“关闭”双按钮，并在棋盘上方弹出终局检视横幅（支持自由检视、重看评价与再来一局）；2. 画面风格升级：默认温暖优雅的米白色（Warm Beige）折纸手作质感，暗格亮度大幅提升，顶栏支持一键切换暗夜风格（Dark Slate）并本地持久化；3. 纸片切分等比一致：纸片细分暗格改用 25% 严格百分比（4x4 严格显示 4x4=16 格，杜绝超高清下 6 格问题）；4. 规则初始展示：修复因首次加载未调用 updateDOM 导致的规则空白；5. 完备文档：产出使用说明 README.md 与开发经验 DEVELOPMENT.md；全套 86 项 pytest 全部通过，所有文件严格 <= 500 行。"
+  "notes": "针对用户反馈“数学公式有问题，没有显示成数学而是 \\times 一类的latex了”彻底修复：1. 全面移除中英文双语包中的未解析 raw LaTeX 标记（如 \\times, \\le, \\lceil, \\lfloor, \\quad 以及多余的 $ 符）；2. 替换为标准的数学 Unicode 符号（×, ≤, ⌈...⌉, ⌊...⌋）和语义化 HTML（<em>变量</em>、&nbsp; 间距）；3. 在 modal.css 中升级 .math-formula 为高雅的衬线数学排版字体 Cambria Math / Latin Modern Math，并支持变量斜体与居中对齐；4. 在 tests/test_square_game.py 中新增 test_math_formula_formatting_no_raw_latex 严格断言前端不含任何未解析 LaTeX 标记；全套 87 项 pytest 全部通过，各单文件行数严格 <= 500 行。"
 }
