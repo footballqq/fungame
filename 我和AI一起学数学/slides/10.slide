@@ -1,0 +1,29 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>AI 帮我练"动脑筋"的本领</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'row', gap: 28, alignItems: 'center' }}>
+    <Box style={{ flex: 1, height: 500, background: '#FFFFFF', borderRadius: 20, padding: 24, boxShadow: '0 6px 24px rgba(51,48,46,0.10)', flexDirection: 'column' }}>
+      <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#2BB3A3' }}>机车调度 · 学"排序"</Text>
+      <Image src="assets/train.png" style={{ width: 512, height: 320, objectFit: 'cover', borderRadius: 14, marginTop: 14 }} />
+      <Text style={{ fontSize: 23, color: '#33302E', lineHeight: 1.5, marginTop: 14 }}>
+        8 辆小机车乱成一团，我要让它们按 1-8 乖乖排队，还不能对向相撞！
+      </Text>
+    </Box>
+    <Box style={{ flex: 1, height: 500, background: '#FFFFFF', borderRadius: 20, padding: 24, boxShadow: '0 6px 24px rgba(51,48,46,0.10)', flexDirection: 'column' }}>
+      <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#F97316' }}>烙饼游戏 · 学"统筹"</Text>
+      <Image src="assets/cookcake.png" style={{ width: 512, height: 320, objectFit: 'cover', borderRadius: 14, marginTop: 14 }} />
+      <Text style={{ fontSize: 23, color: '#33302E', lineHeight: 1.5, marginTop: 14 }}>
+        一口锅一次只能烙 2 张饼，怎么安排才能让时间最短？这可是大数学问！
+      </Text>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>10 / 15</Text>
+  </Box>
+</Slide>

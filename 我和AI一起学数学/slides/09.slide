@@ -1,0 +1,39 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>AI 还是我的"出题官"</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'row', gap: 40, alignItems: 'center' }}>
+    <Box style={{ flex: 1, flexDirection: 'column', gap: 22 }}>
+      <Text style={{ fontSize: 26, color: '#33302E', lineHeight: 1.55 }}>
+        练习题永远做不完？让 AI 当出题官！它做的<span style={{ fontWeight: 'bold', color: '#F97316' }}>方程出题器</span>可以：
+      </Text>
+      <Box style={{ background: 'rgba(43,179,163,0.10)', borderRadius: 16, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#2BB3A3' }}>🎲</Text>
+        <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.45 }}>想要几道题就出几道，<span style={{ fontWeight: 'bold' }}>永远不重复</span></Text>
+      </Box>
+      <Box style={{ background: 'rgba(249,115,22,0.10)', borderRadius: 16, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#F97316' }}>📈</Text>
+        <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.45 }}>难度我自己选：<span style={{ fontWeight: 'bold' }}>从简单到"进阶复杂型"</span></Text>
+      </Box>
+      <Box style={{ background: 'rgba(255,201,60,0.16)', borderRadius: 16, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#F97316' }}>🖨️</Text>
+        <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.45 }}>一键<span style={{ fontWeight: 'bold' }}>生成试卷打印出来</span>，像小老师一样考我</Text>
+      </Box>
+      <Text style={{ fontSize: 26, color: '#33302E', lineHeight: 1.5 }}>
+        每天一张小卷子，我的<span style={{ fontWeight: 'bold', color: '#2BB3A3' }}>方程</span>越解越快！
+      </Text>
+    </Box>
+    <Box style={{ width: 600, flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+      <Image src="assets/linear.png" style={{ width: 600, height: 375, objectFit: 'cover', borderRadius: 20, boxShadow: '0 6px 24px rgba(51,48,46,0.15)' }} />
+      <Text style={{ fontSize: 16, color: '#8A8580' }}>AI 生成的方程出题器：左边设难度，右边出试卷</Text>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>09 / 15</Text>
+  </Box>
+</Slide>

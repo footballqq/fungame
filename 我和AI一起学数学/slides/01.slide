@@ -1,0 +1,27 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', padding: 60, position: 'relative', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* 01 封面 · hero：左文右图，渐变大标题 */}
+  {/* 背景装饰（不占安全区） */}
+  <Box style={{ position: 'absolute', top: -60, right: -60, width: 220, height: 220, borderRadius: 110, background: '#2BB3A3', opacity: 0.12 }} />
+  <Box style={{ position: 'absolute', bottom: -80, left: -40, width: 260, height: 260, borderRadius: 130, background: '#F97316', opacity: 0.10 }} />
+  <Box style={{ position: 'absolute', top: 120, left: 420, width: 36, height: 36, borderRadius: 18, background: '#FFC93C', opacity: 0.6 }} />
+
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 56, width: '100%', height: '100%' }}>
+    {/* 左：标题区 */}
+    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 28 }}>
+      <Box style={{ alignSelf: 'flex-start', background: '#2BB3A3', borderRadius: 24, padding: '10px 28px' }}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>AI 与数学 · 主题演讲</Text>
+      </Box>
+      <Text style={{ fontSize: 78, fontWeight: 'bold', lineHeight: 1.15, backgroundImage: 'linear-gradient(135deg, #F97316 0%, #FFC93C 100%)', backgroundClip: 'text', color: 'transparent' }}>
+        我和 AI<br />一起学数学
+      </Text>
+      <Text style={{ fontSize: 27, color: '#33302E', lineHeight: 1.5 }}>
+        我在家里怎么用人工智能<br />帮助我学数学
+      </Text>
+    </Box>
+    {/* 右：封面主视觉 */}
+    <Box style={{ width: 600 }}>
+      <Image src="assets/hero_cover.png" style={{ width: 600, height: 400, objectFit: 'cover', borderRadius: 28, boxShadow: '0 8px 32px rgba(51,48,46,0.18)' }} />
+      <Text style={{ fontSize: 16, color: '#8A8580', textAlign: 'center', marginTop: 16 }}>这是我和我的 AI 学习小伙伴</Text>
+    </Box>
+  </Box>
+</Slide>

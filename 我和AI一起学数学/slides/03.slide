@@ -1,0 +1,56 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>我的"数学游戏宝库"</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'row', gap: 24 }}>
+    <Box style={{ width: 620, flexDirection: 'column', justifyContent: 'center' }}>
+      <Image src="assets/home.png" style={{ width: 620, height: 388, objectFit: 'cover', borderRadius: 20, boxShadow: '0 6px 24px rgba(51,48,46,0.15)' }} />
+      <Text style={{ fontSize: 16, color: '#8A8580', textAlign: 'center', marginTop: 12 }}>AI 帮我们生成的数学游戏网站主页</Text>
+    </Box>
+    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 18 }}>
+      <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.55 }}>
+        爸爸和我用 AI 做了一个数学游戏网站，里面的每一个小游戏都是 <span style={{ fontWeight: 'bold', color: '#F97316' }}>AI 帮忙生成的</span>，一共有四类：
+      </Text>
+      <Box style={{ flexDirection: 'row', gap: 14 }}>
+        <Box style={{ flex: 1, background: 'rgba(43,179,163,0.10)', borderRadius: 16, padding: 18, height: 170, flexDirection: 'column', justifyContent: 'space-between' }}>
+          <Box style={{ width: 16, height: 16, borderRadius: 8, background: '#F97316' }} />
+          <Box style={{ flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#33302E' }}>数学概念动画</Text>
+            <Text style={{ fontSize: 19, color: '#6B6660', lineHeight: 1.4 }}>切披萨学微积分<br />拨时钟学同余</Text>
+          </Box>
+        </Box>
+        <Box style={{ flex: 1, background: 'rgba(249,115,22,0.10)', borderRadius: 16, padding: 18, height: 170, flexDirection: 'column', justifyContent: 'space-between' }}>
+          <Box style={{ width: 16, height: 16, borderRadius: 8, background: '#2BB3A3' }} />
+          <Box style={{ flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#33302E' }}>奥数思维谜题</Text>
+            <Text style={{ fontSize: 19, color: '#6B6660', lineHeight: 1.4 }}>青蛙跳跃<br />齿轮谜题、棋子谜题</Text>
+          </Box>
+        </Box>
+      </Box>
+      <Box style={{ flexDirection: 'row', gap: 14 }}>
+        <Box style={{ flex: 1, background: 'rgba(255,201,60,0.14)', borderRadius: 16, padding: 18, height: 170, flexDirection: 'column', justifyContent: 'space-between' }}>
+          <Box style={{ width: 16, height: 16, borderRadius: 8, background: '#F97316' }} />
+          <Box style={{ flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#33302E' }}>棋盘策略游戏</Text>
+            <Text style={{ fontSize: 19, color: '#6B6660', lineHeight: 1.4 }}>骰战棋、滑冰棋<br />和电脑真刀真枪下</Text>
+          </Box>
+        </Box>
+        <Box style={{ flex: 1, background: 'rgba(43,179,163,0.10)', borderRadius: 16, padding: 18, height: 170, flexDirection: 'column', justifyContent: 'space-between' }}>
+          <Box style={{ width: 16, height: 16, borderRadius: 8, background: '#2BB3A3' }} />
+          <Box style={{ flexDirection: 'column', gap: 6 }}>
+            <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#33302E' }}>生活中的数学</Text>
+            <Text style={{ fontSize: 19, color: '#6B6660', lineHeight: 1.4 }}>烙饼怎么排最省时间<br />机车怎么排最听话</Text>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>03 / 15</Text>
+  </Box>
+</Slide>

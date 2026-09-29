@@ -1,0 +1,36 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>同学们，你们也可以！</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'column', justifyContent: 'center', gap: 26 }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 26, background: '#FFFFFF', borderRadius: 20, padding: '22px 32px', boxShadow: '0 6px 24px rgba(51,48,46,0.10)', borderLeft: '10px solid #F97316' }}>
+      <Text style={{ fontSize: 52, fontWeight: 'bold' }}>🙋</Text>
+      <Box style={{ flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 29, fontWeight: 'bold', color: '#33302E' }}>第一步：把不会的题说出来</Text>
+        <Text style={{ fontSize: 24, color: '#6B6660', lineHeight: 1.45 }}>请爸爸妈妈帮忙打开 AI，把题目读给它听，让它"演"给你看</Text>
+      </Box>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 26, background: '#FFFFFF', borderRadius: 20, padding: '22px 32px', boxShadow: '0 6px 24px rgba(51,48,46,0.10)', borderLeft: '10px solid #2BB3A3' }}>
+      <Text style={{ fontSize: 52, fontWeight: 'bold' }}>💡</Text>
+      <Box style={{ flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 29, fontWeight: 'bold', color: '#33302E' }}>第二步：大胆提出你的怪想法</Text>
+        <Text style={{ fontSize: 24, color: '#6B6660', lineHeight: 1.45 }}>"能不能把这道题做成游戏？"——我的宝库就是这么来的！</Text>
+      </Box>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 26, background: '#FFFFFF', borderRadius: 20, padding: '22px 32px', boxShadow: '0 6px 24px rgba(51,48,46,0.10)', borderLeft: '10px solid #FFC93C' }}>
+      <Text style={{ fontSize: 52, fontWeight: 'bold' }}>🧠</Text>
+      <Box style={{ flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 29, fontWeight: 'bold', color: '#33302E' }}>第三步：记住，脑子是自己的</Text>
+        <Text style={{ fontSize: 24, color: '#6B6660', lineHeight: 1.45 }}>先自己想，再问 AI；让它提示，别让它代写！</Text>
+      </Box>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>14 / 15</Text>
+  </Box>
+</Slide>

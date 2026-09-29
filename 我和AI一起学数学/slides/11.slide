@@ -1,0 +1,29 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>AI 还陪我学英语、认世界</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'row', gap: 28, alignItems: 'center' }}>
+    <Box style={{ flex: 1, height: 500, background: '#FFFFFF', borderRadius: 20, padding: 24, boxShadow: '0 6px 24px rgba(51,48,46,0.10)', flexDirection: 'column' }}>
+      <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#F97316' }}>数学英语一起学</Text>
+      <Image src="assets/matheng.png" style={{ width: 512, height: 320, objectFit: 'cover', borderRadius: 14, marginTop: 14 }} />
+      <Text style={{ fontSize: 23, color: '#33302E', lineHeight: 1.5, marginTop: 14 }}>
+        加法是 addition、分数是 fraction……AI 把数学单词做成教学和测验两种模式。
+      </Text>
+    </Box>
+    <Box style={{ flex: 1, height: 500, background: '#FFFFFF', borderRadius: 20, padding: 24, boxShadow: '0 6px 24px rgba(51,48,46,0.10)', flexDirection: 'column' }}>
+      <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#2BB3A3' }}>地图大作战 · 地理问答</Text>
+      <Image src="assets/mapgame.png" style={{ width: 512, height: 320, objectFit: 'cover', borderRadius: 14, marginTop: 14 }} />
+      <Text style={{ fontSize: 23, color: '#33302E', lineHeight: 1.5, marginTop: 14 }}>
+        在地图上点一点，找省份、找首都，答对自动加分—— geography 也不怕啦！
+      </Text>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>11 / 15</Text>
+  </Box>
+</Slide>

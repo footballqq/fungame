@@ -43,3 +43,8 @@ tweets.sqbpro
 todayurl.json
 # 忽略所有pytest缓存目录
 .pytest_cache/
+
+# 忽略临时工具与缓存目录
+.workbuddy/
+.cache/
+.slidep/

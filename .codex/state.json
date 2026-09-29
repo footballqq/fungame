@@ -1,16 +1,15 @@
 {
-  "current_task": "正方形拼图挑战：更新开发说明与使用说明，新建美工说明文档 DESIGN.md 并通过全套单测（已完成）",
+  "current_task": "正方形拼图挑战：主入口 index.html 卡片功能增强、URL Hash 路由支持、全库 git 管理与推送（已完成）",
   "last_changes": [
-    "boardgame/square/DEVELOPMENT.md",
-    "boardgame/square/README.md",
-    "boardgame/square/DESIGN.md",
-    "boardgame/square/readme.txt",
-    "tests/test_square_game.py",
+    "index.html",
+    "boardgame/square/js/ui.js",
+    ".gitignore",
+    "ppt_materials/内容分类.md",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 并向用户汇报文档更新与美工设计规范"
+    "git commit 并 git push 到远程 origin/main 分支"
   ],
-  "notes": "已完成三份核心文档的更新与新建：1. DEVELOPMENT.md（125行）：补充系统架构树、四元鸡兔同笼升维映射证明、暗格百分比自适应避坑、原生弹窗剥离与Unicode Math排版经验；2. README.md（119行）：更新米白与暗夜双主题、纸艺确认弹窗与撤销说明、终局查看棋盘横幅、以及在FAQ中深度阐明鸡兔同笼关系；3. DESIGN.md（119行）：确立温润纸艺手作感（Origami）风格，定义4x4靛蓝/3x3翠绿/2x2琥珀/1x1玫瑰四色谱、暗格百分比渐变、学术数学字体族与全屏彩屑粒子动力学；4. 扩充 tests/test_square_game.py 覆盖新文档并维持单文件 <= 500 行，全库 88 项 pytest 全部通过。"
+  "notes": "完成项目主入口与全库版本管理：1. index.html 在主游戏网格和棋盘游戏区升级了正方形拼图挑战卡片，配备四色直达功能按键（开始挑战、玩法规则、数学原理、说明文档），更新版本号；2. boardgame/square/js/ui.js 支持 URL Hash 模态直接唤起（#rules 与 #math），保持 <= 500 行；3. .gitignore 过滤 .workbuddy、.cache、.slidep 临时与工作记忆缓存；4. 全套 88 项单测全部绿灯通过；5. 执行 git commit 与 git push 完成远端同步。"
 }

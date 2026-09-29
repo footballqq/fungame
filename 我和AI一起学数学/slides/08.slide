@@ -1,0 +1,39 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>AI 是我的"讲题老师"</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'row', gap: 40, alignItems: 'center' }}>
+    <Box style={{ width: 600, flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+      <Image src="assets/stones.png" style={{ width: 600, height: 375, objectFit: 'cover', borderRadius: 20, boxShadow: '0 6px 24px rgba(51,48,46,0.15)' }} />
+      <Text style={{ fontSize: 16, color: '#8A8580' }}>奇偶棋子谜题 · 每行放偶数、每列放奇数</Text>
+    </Box>
+    <Box style={{ flex: 1, flexDirection: 'column', gap: 22 }}>
+      <Text style={{ fontSize: 26, color: '#33302E', lineHeight: 1.55 }}>
+        遇到不会做的题，AI 老师不是直接给答案，而是<span style={{ fontWeight: 'bold', color: '#F97316' }}>一步一步带我想</span>：
+      </Text>
+      <Box style={{ background: 'rgba(43,179,163,0.10)', borderRadius: 16, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2BB3A3' }}>1</Text>
+        <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.45 }}>先给一个小<span style={{ fontWeight: 'bold' }}>提示</span>，让我自己再试试</Text>
+      </Box>
+      <Box style={{ background: 'rgba(249,115,22,0.10)', borderRadius: 16, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#F97316' }}>2</Text>
+        <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.45 }}>还想不明白，它就给我<span style={{ fontWeight: 'bold' }}>讲思路和数学原理</span></Text>
+      </Box>
+      <Box style={{ background: 'rgba(255,201,60,0.16)', borderRadius: 16, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#F97316' }}>3</Text>
+        <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.45 }}>实在做不出来，才<span style={{ fontWeight: 'bold' }}>演示最优解</span>给我看</Text>
+      </Box>
+      <Text style={{ fontSize: 26, color: '#33302E', lineHeight: 1.5 }}>
+        答案是我自己想出来的，所以<span style={{ fontWeight: 'bold', color: '#2BB3A3' }}>记得特别牢</span>！
+      </Text>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>08 / 15</Text>
+  </Box>
+</Slide>

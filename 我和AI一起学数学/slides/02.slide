@@ -1,0 +1,36 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>今天我要讲三件事</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'column', justifyContent: 'center', gap: 28 }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 28, background: '#FFFFFF', borderRadius: 20, padding: '24px 32px', boxShadow: '0 6px 24px rgba(51,48,46,0.10)' }}>
+      <Text style={{ fontSize: 72, fontWeight: 'bold', color: '#FFC93C' }}>1</Text>
+      <Box style={{ flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#33302E' }}>我的"数学游戏宝库"</Text>
+        <Text style={{ fontSize: 24, color: '#6B6660', lineHeight: 1.45 }}>我和爸爸用 AI 做的一整个学习游戏网站</Text>
+      </Box>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 28, background: '#FFFFFF', borderRadius: 20, padding: '24px 32px', boxShadow: '0 6px 24px rgba(51,48,46,0.10)' }}>
+      <Text style={{ fontSize: 72, fontWeight: 'bold', color: '#2BB3A3' }}>2</Text>
+      <Box style={{ flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#33302E' }}>AI 怎么帮我学数学</Text>
+        <Text style={{ fontSize: 24, color: '#6B6660', lineHeight: 1.45 }}>把概念变成动画、把难题变成游戏、帮我出题讲题</Text>
+      </Box>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 28, background: '#FFFFFF', borderRadius: 20, padding: '24px 32px', boxShadow: '0 6px 24px rgba(51,48,46,0.10)' }}>
+      <Text style={{ fontSize: 72, fontWeight: 'bold', color: '#F97316' }}>3</Text>
+      <Box style={{ flexDirection: 'column', gap: 6 }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#33302E' }}>我的三个秘诀</Text>
+        <Text style={{ fontSize: 24, color: '#6B6660', lineHeight: 1.45 }}>同学们在家里也可以这样用 AI 学习</Text>
+      </Box>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>02 / 15</Text>
+  </Box>
+</Slide>

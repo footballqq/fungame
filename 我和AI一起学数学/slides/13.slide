@@ -1,0 +1,42 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>我用 AI 学数学的三个秘诀</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'row', gap: 26, alignItems: 'center' }}>
+    <Box style={{ flex: 1, height: 440, background: '#FFFFFF', borderRadius: 22, padding: 30, boxShadow: '0 6px 24px rgba(51,48,46,0.10)', flexDirection: 'column', justifyContent: 'space-between', borderTop: '10px solid #F97316' }}>
+      <Text style={{ fontSize: 96, fontWeight: 'bold', color: '#FFC93C', textAlign: 'center' }}>1</Text>
+      <Box style={{ flexDirection: 'column', gap: 14 }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#33302E', textAlign: 'center' }}>让它"演"给我看</Text>
+        <Text style={{ fontSize: 24, color: '#6B6660', lineHeight: 1.55, textAlign: 'center' }}>
+          看不懂的概念，请 AI 变成动画和游戏——披萨一切，极限就懂了
+        </Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1, height: 440, background: '#FFFFFF', borderRadius: 22, padding: 30, boxShadow: '0 6px 24px rgba(51,48,46,0.10)', flexDirection: 'column', justifyContent: 'space-between', borderTop: '10px solid #2BB3A3' }}>
+      <Text style={{ fontSize: 96, fontWeight: 'bold', color: '#2BB3A3', textAlign: 'center' }}>2</Text>
+      <Box style={{ flexDirection: 'column', gap: 14 }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#33302E', textAlign: 'center' }}>边玩边问</Text>
+        <Text style={{ fontSize: 24, color: '#6B6660', lineHeight: 1.55, textAlign: 'center' }}>
+          在游戏里学得最快！有不懂就问 AI，它马上演示给我看
+        </Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1, height: 440, background: '#FFFFFF', borderRadius: 22, padding: 30, boxShadow: '0 6px 24px rgba(51,48,46,0.10)', flexDirection: 'column', justifyContent: 'space-between', borderTop: '10px solid #FFC93C' }}>
+      <Text style={{ fontSize: 96, fontWeight: 'bold', color: '#F97316', textAlign: 'center' }}>3</Text>
+      <Box style={{ flexDirection: 'column', gap: 14 }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#33302E', textAlign: 'center' }}>错了再试</Text>
+        <Text style={{ fontSize: 24, color: '#6B6660', lineHeight: 1.55, textAlign: 'center' }}>
+          AI 不批评我，陪我重来一次。多试几次，我就比它还厉害
+        </Text>
+      </Box>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>13 / 15</Text>
+  </Box>
+</Slide>

@@ -137,6 +137,14 @@
         if (btn) btn.addEventListener('click', () => openModal(modalId));
       }
 
+      // 支持 URL hash 路由直接唤起模态弹窗 (#rules / #math)
+      const handleHashRoute = () => {
+        if (window.location.hash === '#rules') openModal('rulesModal');
+        else if (window.location.hash === '#math') openModal('mathModal');
+      };
+      handleHashRoute();
+      window.addEventListener('hashchange', handleHashRoute);
+
       // 全局绑定所有弹窗的关闭按钮与遮罩点击事件
       document.querySelectorAll('.modal-overlay').forEach(modal => {
         modal.querySelectorAll('.btn-modal-close').forEach(cb => {

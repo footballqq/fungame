@@ -1,0 +1,35 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>AI 把"看不懂"变成"看得见"</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'column', justifyContent: 'space-between', paddingVertical: 16 }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 20 }}>
+      <Box style={{ flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+        <Image src="assets/pie4.png" style={{ width: 470, height: 294, objectFit: 'cover', borderRadius: 18, boxShadow: '0 6px 24px rgba(51,48,46,0.15)' }} />
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#6B6660' }}>只切 4 块时</Text>
+      </Box>
+      <Text style={{ fontSize: 60, fontWeight: 'bold', color: '#2BB3A3' }}>→</Text>
+      <Box style={{ flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+        <Image src="assets/pie100.png" style={{ width: 470, height: 294, objectFit: 'cover', borderRadius: 18, boxShadow: '0 6px 24px rgba(51,48,46,0.15)' }} />
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#6B6660' }}>切 100 块时</Text>
+      </Box>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 30 }}>
+      <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#33302E' }}>算圆面积的误差：</Text>
+      <Text style={{ fontSize: 80, fontWeight: 'bold', color: '#8A8580' }}>36%</Text>
+      <Text style={{ fontSize: 60, fontWeight: 'bold', color: '#F97316' }}>→</Text>
+      <Text style={{ fontSize: 96, fontWeight: 'bold', color: '#F97316' }}>0.066%</Text>
+    </Box>
+    <Text style={{ fontSize: 26, color: '#33302E', textAlign: 'center', lineHeight: 1.5 }}>
+      披萨切得越多，每一小块就越像三角形，拼出的面积越接近真正的圆——<span style={{ fontWeight: 'bold', color: '#2BB3A3' }}>这就是"极限"！</span>
+    </Text>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>05 / 15</Text>
+  </Box>
+</Slide>

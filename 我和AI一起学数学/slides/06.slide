@@ -1,0 +1,29 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>复杂的难题，AI 也能"演"给我看</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'row', gap: 28, alignItems: 'center' }}>
+    <Box style={{ flex: 1, height: 500, background: '#FFFFFF', borderRadius: 20, padding: 24, boxShadow: '0 6px 24px rgba(51,48,46,0.10)', flexDirection: 'column' }}>
+      <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#2BB3A3' }}>星芒阵封印 · 几何极值题</Text>
+      <Image src="assets/triangleremove.png" style={{ width: 512, height: 320, objectFit: 'cover', borderRadius: 14, marginTop: 14 }} />
+      <Text style={{ fontSize: 23, color: '#33302E', lineHeight: 1.5, marginTop: 14 }}>
+        15 个点里去掉几个点，正三角形才会消失？AI 用"排查雷达"一条条连线给我看。
+      </Text>
+    </Box>
+    <Box style={{ flex: 1, height: 500, background: '#FFFFFF', borderRadius: 20, padding: 24, boxShadow: '0 6px 24px rgba(51,48,46,0.10)', flexDirection: 'column' }}>
+      <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#F97316' }}>齿轮谜题 · 一步步拆解</Text>
+      <Image src="assets/chilun.png" style={{ width: 512, height: 320, objectFit: 'cover', borderRadius: 14, marginTop: 14 }} />
+      <Text style={{ fontSize: 23, color: '#33302E', lineHeight: 1.5, marginTop: 14 }}>
+        六个齿轮转来转去好头晕？AI 把题目拆成一步一步的互动讲解。
+      </Text>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>06 / 15</Text>
+  </Box>
+</Slide>

@@ -1,0 +1,30 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>我的宝库盘点：全是 AI 帮忙做的！</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'row', gap: 30, alignItems: 'center' }}>
+    <Box style={{ flex: 1, height: 420, background: 'rgba(249,115,22,0.10)', borderRadius: 22, padding: 30, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+      <Text style={{ fontSize: 108, fontWeight: 'bold', color: '#F97316', textAlign: 'center' }}>30+</Text>
+      <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#33302E', textAlign: 'center' }}>个学习小游戏</Text>
+      <Text style={{ fontSize: 22, color: '#6B6660', textAlign: 'center', lineHeight: 1.5 }}>从微积分到地理问答<br />想学什么就做什么</Text>
+    </Box>
+    <Box style={{ flex: 1, height: 420, background: 'rgba(43,179,163,0.10)', borderRadius: 22, padding: 30, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+      <Text style={{ fontSize: 108, fontWeight: 'bold', color: '#2BB3A3', textAlign: 'center' }}>5</Text>
+      <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#33302E', textAlign: 'center' }}>大类知识</Text>
+      <Text style={{ fontSize: 22, color: '#6B6660', textAlign: 'center', lineHeight: 1.5 }}>数学概念 · 奥数谜题<br />棋盘策略 · 英语 · 生活数学</Text>
+    </Box>
+    <Box style={{ flex: 1, height: 420, background: 'rgba(255,201,60,0.16)', borderRadius: 22, padding: 30, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+      <Text style={{ fontSize: 108, fontWeight: 'bold', color: '#F97316', textAlign: 'center' }}>100%</Text>
+      <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#33302E', textAlign: 'center' }}>AI 参与制作</Text>
+      <Text style={{ fontSize: 22, color: '#6B6660', textAlign: 'center', lineHeight: 1.5 }}>AI 写程序、画动画、出题目<br />我出想法、试玩、提意见</Text>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>12 / 15</Text>
+  </Box>
+</Slide>

@@ -1,0 +1,39 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>AI 把难题变成闯关游戏</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'row', gap: 40, alignItems: 'center' }}>
+    <Box style={{ flex: 1, flexDirection: 'column', gap: 22 }}>
+      <Text style={{ fontSize: 26, color: '#33302E', lineHeight: 1.55 }}>
+        "黑白青蛙互换位置"是一道经典的<span style={{ fontWeight: 'bold', color: '#F97316' }}>奥数题</span>。AI 把它做成了可爱的闯关游戏——
+      </Text>
+      <Box style={{ background: 'rgba(43,179,163,0.10)', borderRadius: 16, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#2BB3A3' }}>💡</Text>
+        <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.45 }}>我卡住的时候，它给<span style={{ fontWeight: 'bold' }}>智能提示</span>，只提醒一小步</Text>
+      </Box>
+      <Box style={{ background: 'rgba(249,115,22,0.10)', borderRadius: 16, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#F97316' }}>🎬</Text>
+        <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.45 }}>还能<span style={{ fontWeight: 'bold' }}>自动演示</span>：看它用最少的 17 步通关！</Text>
+      </Box>
+      <Box style={{ background: 'rgba(255,201,60,0.16)', borderRadius: 16, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#F97316' }}>🎉</Text>
+        <Text style={{ fontSize: 24, color: '#33302E', lineHeight: 1.45 }}>每做对一步都会<span style={{ fontWeight: 'bold' }}>夸奖我</span>，做错了也不批评</Text>
+      </Box>
+      <Text style={{ fontSize: 26, color: '#33302E', lineHeight: 1.5 }}>
+        玩着玩着，这道奥数题我就真的<span style={{ fontWeight: 'bold', color: '#2BB3A3' }}>想明白了</span>！
+      </Text>
+    </Box>
+    <Box style={{ width: 600, flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+      <Image src="assets/jumpfrog.png" style={{ width: 600, height: 375, objectFit: 'cover', borderRadius: 20, boxShadow: '0 6px 24px rgba(51,48,46,0.15)' }} />
+      <Text style={{ fontSize: 16, color: '#8A8580' }}>青蛙跳跃 · 荷塘换位挑战</Text>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>07 / 15</Text>
+  </Box>
+</Slide>

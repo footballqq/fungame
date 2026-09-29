@@ -11,6 +11,7 @@
 - [X] 修复数学原理解析公式显示：全面消除 raw LaTeX 标记（`\times`、`\le`、`\lceil`、`\lfloor`、`\quad`、`$`），换用标准数学 Unicode 符号（`×`、`≤`、`⌈...⌉`、`⌊...⌋`、变量斜体）与语义 HTML 排版，升级公式专用衬线数学字体 `Cambria Math` / `Latin Modern Math`，补充防 raw LaTeX 回归单测，全套 87 项 pytest 全绿通过
 - [X] 游戏风格清空确认模态框与彻底去除原生弹窗（`ui.js`, `index.html`, `i18n.js`, `modal.css`）：消除浏览器原生 `confirm()` 与 `alert()`，打造纸艺质感确认弹窗 `#clearModal` 与高雅悬浮 Toast；在数学原理解析中增加与「多元鸡兔同笼」及「空间装箱拓扑约束」的深度数学类比讲解，全套 88 项单测全绿通过
 - [X] 更新开发说明、使用说明并新建美工设计规范（`DEVELOPMENT.md`, `README.md`, `DESIGN.md`, `tests/test_square_game.py`）：全面梳理四元鸡兔同笼升维本质、暗格百分比自适应避坑经验、温润米白纸艺/暗夜双色谱、学术数学字体排版与微动效粒子动力学设计规范，单测覆盖文档完整性，全套 88 项 pytest 全绿通过
+- [X] 主入口导航集成与全库代码仓库管理（`index.html`, `ui.js`, `.gitignore`, `ppt_materials/`）：主页双网格升级正方形拼图卡片（多动作直达按钮：开始挑战/玩法规则/数学原理/说明文档），支持 URL Hash 模态路由；配置 `.gitignore` 过滤缓存；执行全库 git commit 并推送至 GitHub
 
 
 

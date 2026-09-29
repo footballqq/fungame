@@ -1,0 +1,43 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFF8F0', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 120, paddingHorizontal: 60, paddingTop: 30, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ width: 8, height: 56, background: '#F97316', borderRadius: 4 }} />
+    <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#33302E' }}>这些游戏是怎么诞生的？</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ height: 540, paddingHorizontal: 60, flexDirection: 'column', justifyContent: 'center', gap: 20 }}>
+    <Text style={{ fontSize: 26, color: '#33302E', lineHeight: 1.55, textAlign: 'center' }}>
+      很多同学问我：这么多游戏是买来的吗？<span style={{ fontWeight: 'bold', color: '#F97316' }}>不是！是我们和 AI 一起"变"出来的</span>——
+    </Text>
+    <Box style={{ flexDirection: 'row', gap: 24, alignItems: 'center' }}>
+      <Box style={{ flex: 1, height: 330, background: 'rgba(43,179,163,0.10)', borderRadius: 20, padding: 28, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 88, fontWeight: 'bold', color: '#2BB3A3', textAlign: 'center' }}>1</Text>
+        <Box style={{ flexDirection: 'column', gap: 10 }}>
+          <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#33302E', textAlign: 'center' }}>我出主意</Text>
+          <Text style={{ fontSize: 23, color: '#6B6660', lineHeight: 1.5, textAlign: 'center' }}>"我想切披萨学微积分！"<br />"青蛙换位置能不能做成游戏？"</Text>
+        </Box>
+      </Box>
+      <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#F97316' }}>→</Text>
+      <Box style={{ flex: 1, height: 330, background: 'rgba(249,115,22,0.10)', borderRadius: 20, padding: 28, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 88, fontWeight: 'bold', color: '#F97316', textAlign: 'center' }}>2</Text>
+        <Box style={{ flexDirection: 'column', gap: 10 }}>
+          <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#33302E', textAlign: 'center' }}>AI 写程序</Text>
+          <Text style={{ fontSize: 23, color: '#6B6660', lineHeight: 1.5, textAlign: 'center' }}>AI 几分钟就写出游戏代码，<br />还会画动画、算答案</Text>
+        </Box>
+      </Box>
+      <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#F97316' }}>→</Text>
+      <Box style={{ flex: 1, height: 330, background: 'rgba(255,201,60,0.16)', borderRadius: 20, padding: 28, flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 88, fontWeight: 'bold', color: '#FFC93C', textAlign: 'center' }}>3</Text>
+        <Box style={{ flexDirection: 'column', gap: 10 }}>
+          <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#33302E', textAlign: 'center' }}>试玩再修改</Text>
+          <Text style={{ fontSize: 23, color: '#6B6660', lineHeight: 1.5, textAlign: 'center' }}>我试玩后提意见：<br />"字太小！""提示再多一点！"</Text>
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+  {/* C 页脚条 */}
+  <Box style={{ height: 60, paddingHorizontal: 60, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>我和 AI 一起学数学</Text>
+    <Text style={{ fontSize: 14, color: '#8A8580' }}>04 / 15</Text>
+  </Box>
+</Slide>
