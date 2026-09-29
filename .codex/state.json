@@ -1,13 +1,15 @@
 {
-  "current_task": "根目录 index.html 架构说明与新游戏接入开发文档 INDEX_GUIDE.md 产出与全库测试（已完成）",
+  "current_task": "修复自定义模式（如选边长 10、最大纸片 6）未自动求解导致理论极限与评价显示错误 Bug（已完成）",
   "last_changes": [
-    "INDEX_GUIDE.md",
-    "tests/test_index_hub.py",
+    "boardgame/square/js/math_engine.js",
+    "boardgame/square/js/game_state.js",
+    "boardgame/square/js/ui.js",
+    "tests/test_square_game.py",
     "CODEx_TODO.md",
     ".codex/state.json"
   ],
   "next_actions": [
-    "git commit 并 git push 到远程 origin/main 分支，向用户汇报 INDEX_GUIDE.md 核心要点"
+    "git commit 并 git push 到远程 origin/main 分支，向用户汇报自定义动态求解与指标判定修复成果"
   ],
-  "notes": "在根目录新增 INDEX_GUIDE.md（143行，严格 <= 500行），详细总结：1. index.html、css/index.css 与 js/index.js 三层解耦架构；2. 5大分类专区收录定位与对应徽章推荐；3. 未来新游戏接入的 6 步标准作业流程（SOP：产物确认 -> 定位专区 -> HTML 卡片模板套用 -> data-keywords/徽章配置 -> 胶囊与 Hero 统计数字更新 -> pytest 门禁验证）；4. 单按钮与多按钮（挑战/规则/数学/文档）完整代码模板与 FAQ 排错指南；5. 扩充 tests/test_index_hub.py 覆盖新文档，全库 94 项单测全绿通过。"
+  "notes": "1. 定位并彻底修复自定义参数求解问题：此前 getPreset 仅以 N 为 key 查写死的 8 个预设关卡，当用户设定 N=10, maxTile=6 时返回了原题 maxTile=4 的 minCount=11，导致用户用 8 块拼完后出现『本次使用 8 块，理论最优 11 块，达成理论最少(3星)』的逻辑荒谬矛盾；2. 在 MathEngine 实现 solveMinTiling 剪枝回溯求解器与缓存池，自动求解出 10x10 在 maxTile=6 时的严格理论极值为 4 块（四块 5x5）；3. game_state.js 与 ui.js 全量对齐 getPreset(N, maxTile)，终局评价与仪表盘理论最少精准呈现（8 块评为 1 星并提示最少 4 块，4 块评为 3 星）；4. 加入 isComplete 状态下理论极值防穿透安全守卫；5. 扩充 tests/test_square_game.py，95 项单测 100% 绿灯，单文件严格保持 <= 500 行。"
 }

@@ -15,6 +15,7 @@
 - [X] 修复自定义最大尺寸设为 6 时托盘候选区仅显示 4x4 Bug（`ui.js`, `drag_drop.js`, `board.css`, `style.css`, `test_square_game.py`）：新增 6x6 (紫罗兰/16.667%暗格) 与 5x5 (天青蓝/20%暗格) 严格百分比细分样式，`ui.js` 新增 `renderTray` 随 `maxTile` 动态渲染备料区，`drag_drop.js` 重构为事件委托无缝支持动态规格纸片拖拽与点选，全套 89 项 pytest 全绿通过
 - [X] 主页 index.html 现代化重构与五大分类美化（`index.html`, `css/index.css`, `js/index.js`, `tests/test_index_hub.py`）：全量 39 个项目去重归并为 5 大科学专区（数学概念/奥数谜题/棋盘对弈/英语词汇/生活素养），实现吸顶即时搜索（按 / 快速聚焦）、分类胶囊筛选、卡片微标签、底栏统一对齐与无结果友好空状态，规范全量相对路径，自动化单测 94 项 pytest 100% 绿灯通过
 - [X] 产出主页接入与维护说明文档（`INDEX_GUIDE.md`, `tests/test_index_hub.py`）：在根目录编写详尽指南，阐明三层解耦架构、五大分类专区收录规范、未来新游戏接入的 6 步标准作业流程（SOP）、HTML 卡片模板与按钮规范，全套 94 项 pytest 全绿通过
+- [X] 修复自定义模式（如选边长 10、最大纸片 6）未自动求解导致理论极限与评价显示错误 Bug（`math_engine.js`, `game_state.js`, `ui.js`, `test_square_game.py`）：`SquareMathEngine` 引入剪枝回溯求解器 `solveMinTiling(N, maxTile)` 与内存结果缓存池，动态求解出 10×10 在最大纸片 6 时的严格理论极值为 4 块（四块 5×5 拼合）；`game_state.js` 与 `ui.js` 全量升级为双参数获取 `getPreset(N, maxTile)`，彻底解决结算弹窗中误将 4 块当成 11 块并出现“已用 8 块却显示理论极限 11 误评 3 星”的逻辑矛盾，同时为自定义关卡注入最优解动画演示与一步提示能力，增加完成时理论极值防穿透安全保护，自动化单测扩充至 95 项 pytest 100% 绿灯通过
 
 
 

@@ -1,4 +1,4 @@
-// codex: 2026-09-29 math_engine.js 正方形拼图关卡配置与几何求解引擎
+// codex: 2026-09-29 支持自定义参数 (N, maxTile) 动态求解与极值缓存，解决非默认尺寸理论极限错误与演示缺失
 (function (global) {
   'use strict';
 
@@ -101,10 +101,118 @@
   class MathEngine {
     constructor() {
       this.presets = PRESETS;
+      this.solvedCache = {};
     }
 
-    getPreset(n) {
-      return this.presets[n] || null;
+    getPreset(n, maxTile = 4) {
+      if (maxTile === 4 && this.presets[n]) {
+        return this.presets[n];
+      }
+      return this.getOrSolve(n, maxTile);
+    }
+
+    getOrSolve(N, maxTile) {
+      const key = `${N}_${maxTile}`;
+      if (this.solvedCache[key]) {
+        return this.solvedCache[key];
+      }
+      const sol = this.solveMinTiling(N, maxTile);
+      const res = {
+        N,
+        maxTile,
+        minCount: sol ? sol.length : Math.ceil((N * N) / (maxTile * maxTile)),
+        key: `custom_${key}`,
+        solution: sol || []
+      };
+      this.solvedCache[key] = res;
+      return res;
+    }
+
+    solveMinTiling(N, maxTile) {
+      if (maxTile >= N) return [{ r: 0, c: 0, s: N }];
+      if (maxTile === 1) {
+        const sol = [];
+        for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) sol.push({ r, c, s: 1 });
+        return sol;
+      }
+      if (maxTile === 2) {
+        const k = Math.floor(N / 2);
+        const sol = [];
+        for (let r = 0; r < 2 * k; r += 2) {
+          for (let c = 0; c < 2 * k; c += 2) sol.push({ r, c, s: 2 });
+        }
+        if (N % 2 === 1) {
+          for (let r = 0; r < N; r++) sol.push({ r, c: 2 * k, s: 1 });
+          for (let c = 0; c < 2 * k; c++) sol.push({ r: 2 * k, c, s: 1 });
+        }
+        return sol;
+      }
+
+      const grid = Array.from({ length: N }, () => new Uint8Array(N));
+      let bestSol = null;
+      let bestCount = N * N + 1;
+
+      // 整除快速上界
+      for (let s = maxTile; s >= 1; s--) {
+        if (N % s === 0) {
+          const k = N / s;
+          bestCount = k * k;
+          bestSol = [];
+          for (let r = 0; r < N; r += s) {
+            for (let c = 0; c < N; c += s) bestSol.push({ r, c, s });
+          }
+          break;
+        }
+      }
+
+      const maxS2 = maxTile * maxTile;
+      let steps = 0;
+
+      function search(sol, covered) {
+        if (steps++ > 40000) return;
+        const rem = N * N - covered;
+        if (sol.length + Math.ceil(rem / maxS2) >= bestCount) return;
+
+        let emptyR = -1, emptyC = -1;
+        for (let r = 0; r < N; r++) {
+          for (let c = 0; c < N; c++) {
+            if (grid[r][c] === 0) { emptyR = r; emptyC = c; break; }
+          }
+          if (emptyR !== -1) break;
+        }
+
+        if (emptyR === -1) {
+          bestCount = sol.length;
+          bestSol = sol.slice();
+          return;
+        }
+
+        const maxS = Math.min(maxTile, N - emptyR, N - emptyC);
+        for (let s = maxS; s >= 1; s--) {
+          let canFit = true;
+          for (let i = emptyR; i < emptyR + s; i++) {
+            for (let j = emptyC; j < emptyC + s; j++) {
+              if (grid[i][j] !== 0) { canFit = false; break; }
+            }
+            if (!canFit) break;
+          }
+          if (canFit) {
+            for (let i = emptyR; i < emptyR + s; i++) {
+              for (let j = emptyC; j < emptyC + s; j++) grid[i][j] = 1;
+            }
+            sol.push({ r: emptyR, c: emptyC, s });
+            search(sol, covered + s * s);
+            sol.pop();
+            for (let i = emptyR; i < emptyR + s; i++) {
+              for (let j = emptyC; j < emptyC + s; j++) grid[i][j] = 0;
+            }
+            if (bestCount === 4) return;
+          }
+        }
+      }
+
+      search([], 0);
+      return bestSol;
     }
 
     getAllPresets() {
@@ -149,7 +257,7 @@
      */
     findHint(N, maxTile, currentTiles, targetMinCount) {
       // 如果当前为空，直接给出预设最优解的第一个放置
-      const preset = this.getPreset(N);
+      const preset = this.getPreset(N, maxTile);
       if (currentTiles.length === 0) {
         if (preset && preset.solution && preset.solution.length > 0) {
           return { found: true, nextTile: preset.solution[0] };

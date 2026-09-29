@@ -298,4 +298,86 @@ def test_custom_tile_sizes_and_tray_render():
     assert "closest('.tray-item')" in djs, "drag_drop.js 必须通过事件委托支持动态纸片拖拽与点选"
 
 
+def test_custom_level_dynamic_solver_and_metrics():
+    """验证自定义模式 (如 N=10, maxTile=6) 动态自动求解极值、评价指标与演示对接"""
+    math_js_path = os.path.join(SQUARE_DIR, "js", "math_engine.js")
+    state_js_path = os.path.join(SQUARE_DIR, "js", "game_state.js")
+    ui_js_path = os.path.join(SQUARE_DIR, "js", "ui.js")
+
+    with open(math_js_path, "r", encoding="utf-8") as f:
+        m_code = f.read()
+    assert "solveMinTiling" in m_code, "math_engine.js 必须包含 solveMinTiling 动态回溯求解器"
+    assert "solvedCache" in m_code, "math_engine.js 必须具备动态求解缓存机制"
+    assert "getPreset(n, maxTile" in m_code, "getPreset 必须支持双参数 (N, maxTile)"
+
+    with open(state_js_path, "r", encoding="utf-8") as f:
+        s_code = f.read()
+    assert "getPreset(this.N, this.maxTile)" in s_code, "game_state.js 必须向 getPreset 传入 this.maxTile"
+    assert "this.tiles.length < minOptimal" in s_code, "必须具备已完成拼图时理论极值防穿透安全保护"
+
+    with open(ui_js_path, "r", encoding="utf-8") as f:
+        u_code = f.read()
+    assert "getPreset(state.N, state.maxTile)" in u_code, "ui.js handleDemoClick 必须支持自定义规格最优解演示"
+
+    # 执行 Node.js 集成测试
+    node_test_script = """
+    const fs = require('fs');
+    const win = { dispatchEvent: () => {} };
+    global.window = win;
+    global.CustomEvent = class {};
+
+    const mathCode = fs.readFileSync('boardgame/square/js/math_engine.js', 'utf8');
+    eval(mathCode);
+    const stateCode = fs.readFileSync('boardgame/square/js/game_state.js', 'utf8');
+    eval(stateCode);
+
+    const math = win.SquareMathEngine;
+    const state = win.SquareGameState;
+
+    // 1. 自定义 10x10, max=6 动态求解
+    const p10_6 = math.getPreset(10, 6);
+    if (p10_6.minCount !== 4) process.exit(10);
+    if (!p10_6.solution || p10_6.solution.length !== 4) process.exit(11);
+
+    // 2. 默认 10x10, max=4
+    const p10_4 = math.getPreset(10, 4);
+    if (p10_4.minCount !== 11) process.exit(12);
+
+    // 3. state 指标联动
+    state.initLevel(10, 6);
+    let m = state.getMetrics();
+    if (m.minOptimal !== 4) process.exit(13);
+
+    // 4. 8 块拼满 (包含 6x6) 时的指标判定：8 块虽然完成，但理论最优为 4 块，应评 1 星
+    state.placeTile(0, 0, 6);
+    state.placeTile(0, 6, 4);
+    state.placeTile(4, 6, 2);
+    state.placeTile(4, 8, 2);
+    state.placeTile(6, 0, 4);
+    state.placeTile(6, 4, 4);
+    state.placeTile(6, 8, 2);
+    state.placeTile(8, 8, 2);
+    m = state.getMetrics();
+    if (!m.isComplete || m.tileCount !== 8 || m.minOptimal !== 4 || m.isOptimal || m.starRating !== 1) {
+      process.exit(14);
+    }
+
+    // 5. 4 块拼满 (四块 5x5) 达成极值
+    state.initLevel(10, 6);
+    state.placeTile(0, 0, 5);
+    state.placeTile(0, 5, 5);
+    state.placeTile(5, 0, 5);
+    state.placeTile(5, 5, 5);
+    m = state.getMetrics();
+    if (!m.isComplete || m.tileCount !== 4 || m.minOptimal !== 4 || !m.isOptimal || m.starRating !== 3) {
+      process.exit(15);
+    }
+
+    process.exit(0);
+    """
+    res = subprocess.run(["node", "-e", node_test_script], cwd=os.path.abspath(os.path.join(SQUARE_DIR, "..", "..")), capture_output=True, text=True)
+    assert res.returncode == 0, f"Node.js 动态求解测试失败，退出码: {res.returncode}, stderr: {res.stderr}"
+
+
+
 

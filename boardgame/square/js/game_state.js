@@ -1,4 +1,4 @@
-// codex: 2026-09-29 game_state.js 棋盘状态、纸片排布、历史撤销重做与指标统计
+// codex: 2026-09-29 支持双参数 getPreset(N, maxTile) 与极限防穿透保护，修复自定义关卡理论最少显示错误
 (function (global) {
   'use strict';
 
@@ -136,9 +136,12 @@
         coveredArea += t.s * t.s;
       }
 
-      const preset = global.SquareMathEngine.getPreset(this.N);
-      const minOptimal = preset ? preset.minCount : Math.ceil(totalArea / (this.maxTile * this.maxTile));
+      const preset = global.SquareMathEngine.getPreset(this.N, this.maxTile);
+      let minOptimal = preset ? preset.minCount : Math.ceil(totalArea / (this.maxTile * this.maxTile));
       const isComplete = coveredArea === totalArea;
+      if (isComplete && this.tiles.length < minOptimal) {
+        minOptimal = this.tiles.length;
+      }
       const isOptimal = isComplete && this.tiles.length <= minOptimal;
 
       let starRating = 0;

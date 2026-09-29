@@ -1,4 +1,4 @@
-// codex: 2026-09-29 ui.js 界面控制、米白/暗色主题切换、棋盘检视横幅、弹窗双控关闭与4K缩放
+// codex: 2026-09-29 支持自定义模式下双参数最优解演示，适配动态规格纸片与自动求解
 (function (global) {
   'use strict';
 
@@ -461,7 +461,7 @@
         btnDemo.textContent = i18n.t('btn_demo');
         return;
       }
-      const preset = global.SquareMathEngine.getPreset(state.N);
+      const preset = global.SquareMathEngine.getPreset(state.N, state.maxTile);
       if (!preset || !preset.solution) return;
       btnDemo.textContent = i18n.t('btn_stop_demo');
       state.startDemo(preset.solution, null, () => {
