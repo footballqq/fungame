@@ -1,4 +1,4 @@
-// codex: 2026-09-29 ui.js 界面控制、暗格网格重绘、画面缩放放大与全屏控制
+// codex: 2026-09-29 ui.js 界面控制、暗格网格重绘、4K超清适配与缩放全屏控制
 (function (global) {
   'use strict';
 
@@ -13,7 +13,7 @@
       this.hasShownCelebrationForCurrentBoard = false;
 
       const savedZoom = parseFloat(localStorage.getItem('square_puzzle_zoom'));
-      this.zoomScale = (!isNaN(savedZoom) && savedZoom >= 0.7 && savedZoom <= 2.2) ? savedZoom : 1.0;
+      this.zoomScale = (!isNaN(savedZoom) && savedZoom >= 0.6 && savedZoom <= 2.8) ? savedZoom : 1.0;
     }
 
     init() {
@@ -120,7 +120,7 @@
     }
 
     setZoom(scale) {
-      this.zoomScale = Math.max(0.7, Math.min(2.2, Math.round(scale * 100) / 100));
+      this.zoomScale = Math.max(0.6, Math.min(2.8, Math.round(scale * 100) / 100));
       localStorage.setItem('square_puzzle_zoom', this.zoomScale.toString());
       this.updateBoardDimensions();
       this.renderTiles();
@@ -219,19 +219,25 @@
       if (!this.boardEl) return;
       const N = global.SquareGameState.N;
 
+      const is4K = window.innerWidth >= 1920;
       const isDesktop = window.innerWidth >= 900;
-      const headerOffset = 180;
-      const trayOffset = 190;
+      const headerOffset = is4K ? 220 : 180;
+      const trayOffset = is4K ? 230 : 190;
       const pad = 36;
 
-      const availWidth = Math.min(window.innerWidth - pad, isDesktop ? 1040 : window.innerWidth - 20);
+      const availWidth = Math.min(window.innerWidth - pad, is4K ? 1500 : (isDesktop ? 1040 : window.innerWidth - 20));
       const availHeight = Math.max(340, window.innerHeight - headerOffset - trayOffset);
       const minDimension = Math.min(availWidth, availHeight);
 
-      // Windows 桌面环境默认将格子基数设大（52~82px），显著增强大屏沉浸感
-      const baseCell = isDesktop
-        ? Math.max(52, Math.min(82, Math.floor(minDimension / N)))
-        : Math.max(28, Math.min(62, Math.floor(minDimension / N)));
+      // Windows 4K/2K 超高清与普通桌面默认提供大网格
+      let baseCell = 42;
+      if (is4K) {
+        baseCell = Math.max(70, Math.min(125, Math.floor(minDimension / N)));
+      } else if (isDesktop) {
+        baseCell = Math.max(52, Math.min(84, Math.floor(minDimension / N)));
+      } else {
+        baseCell = Math.max(28, Math.min(62, Math.floor(minDimension / N)));
+      }
 
       const finalCellSize = Math.round(baseCell * this.zoomScale);
 
