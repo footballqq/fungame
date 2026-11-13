@@ -62,6 +62,11 @@ class DemoController {
         this.engine.fold(step.axis, step.line, step.direction, step.desc);
         this.audio.playFold();
         this.currentStepIdx++;
+
+        // 同步登记可能产生的新厚度成就，确保教学演示走步时成就徽章即时亮起
+        const currentThick = this.engine.getThickness().maxThickness;
+        this.ui.praiseManager.checkThickness(currentThick);
+
         this.ui.render();
         this.updateStatus();
 

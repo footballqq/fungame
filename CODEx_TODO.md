@@ -1,3 +1,10 @@
+<!-- codex: 2026-11-13 修复厚度解锁即时渲染Bug：调整调用时序，确保发现新厚度时徽章按钮与进度即时点亮 -->
+- [X] 交互响应修复（`math/fold/js/ui.js`, `math/fold/js/demo.js`, `math/fold/css/animations.css`, `tests/test_fold_game.py`）：
+  - 修复 `executeFold` 中先 `this.render()` 后 `checkThickness()` 的时序倒置缺陷，调整为先登记新厚度成就再执行 `render()`，使顶部成就徽章、计数器与提示框在折出新厚度的瞬间 100% 即时点亮更新；
+  - 在 `demo.js` 演示走步中同步加入厚度即时判定与徽章同步更新；
+  - 增加全新解锁徽章的弹入高亮微动效 `badgePopIn`；
+  - 编写 pytest 自动化单测覆盖即时解锁渲染时序。
+
 <!-- codex: 2026-11-13 增加防剧透盲盒探索模式、明牌全图鉴模式切换与一键清空收集功能 -->
 - [X] 模式与重置升级（`math/fold/index.html`, `math/fold/js/praise.js`, `math/fold/js/ui.js`, `math/fold/css/style.css`, `tests/test_fold_game.py`）：
   - 增加「🔍 盲盒探索 (防剧透模式)」与「🎯 明牌全图鉴 (公布答案模式)」双模式热切换；盲探模式隐藏总数 9 与各目标数字，仅显示已发现的成果与神秘「?」卡槽；明牌模式公开全部 9 重目标、进度与折法演示

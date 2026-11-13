@@ -73,3 +73,14 @@
 .paper-cell.has-stack {
     animation: foldFlipIn 0.25s ease-out;
 }
+
+/* 徽章解锁即时弹入与点亮高光动效 */
+@keyframes badgePopIn {
+    0% { transform: scale(0.6); opacity: 0; }
+    60% { transform: scale(1.18); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.thickness-badge.current {
+    animation: badgePopIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

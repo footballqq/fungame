@@ -230,13 +230,14 @@ class FoldUI {
     executeFold(axis, line, direction, desc) {
         this.engine.fold(axis, line, direction, desc);
         this.audio.playFold();
-        this.render();
 
         const thickInfo = this.engine.getThickness();
         const currentThick = thickInfo.maxThickness;
 
-        // 检查新成就
+        // 核心修复：必须先登记新厚度成就，再统一 render()，确保徽章按钮与进度计数立即同步点亮更新
         const isNew = this.praiseManager.checkThickness(currentThick);
+        this.render();
+
         if (isNew) {
             this.audio.playUnlock();
             this.praiseManager.fireConfetti();

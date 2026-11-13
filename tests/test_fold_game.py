@@ -155,3 +155,17 @@ def test_blind_mode_and_clear_collection_support():
     assert "fold_game_mode" in praise_js
 
 
+def test_immediate_render_on_fold_unlock():
+    """验证 ui.js 中 executeFold 时序必须先 checkThickness 再 render，保证按钮即时更新点亮"""
+    ui_js = (FOLD_DIR / "js" / "ui.js").read_text(encoding="utf-8")
+
+    # 验证 executeFold 函数体
+    assert "checkThickness(currentThick)" in ui_js
+    idx_check = ui_js.find("this.praiseManager.checkThickness(currentThick)")
+    idx_render = ui_js.find("this.render()", idx_check)
+    assert idx_check != -1, "必须调用 checkThickness"
+    assert idx_render != -1, "在 checkThickness 之后必须紧接着调用 this.render()"
+    assert idx_check < idx_render, "时序断言：checkThickness 必须先于 render 执行，防止按钮徽章延迟更新"
+
+
+
