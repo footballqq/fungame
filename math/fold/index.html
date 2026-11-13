@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!-- codex: 2026-11-13 创建 4x4 正方形网格折纸厚度探秘 (fold) 主页面，支持9重厚度全收集、3D层叠透视、折痕翻折与奥数原理解析 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4×4 网格折纸厚度探秘 · 奥数折叠大挑战</title>
+    <link rel="stylesheet" href="css/animations.css?v=20261113">
+    <link rel="stylesheet" href="css/modal.css?v=20261113">
+    <link rel="stylesheet" href="css/board.css?v=20261113">
+    <link rel="stylesheet" href="css/style.css?v=20261113">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 顶栏导航与工具 -->
+        <header class="header-bar">
+            <div class="header-title">
+                <h1>📐 4×4 网格折纸厚度探秘</h1>
+                <p>奥数经典折纸题 · 探索虚线折叠下的空间极限层数！</p>
+            </div>
+            <div class="header-tools">
+                <button id="btnRules" class="btn-tool" title="查看游戏规则与原题">📜 原题规则</button>
+                <button id="btnProof" class="btn-tool" title="查看9重厚度数学原理解析与证明">🧠 奥数题解证明</button>
+                <button id="btnSkins" class="btn-tool" title="更换纸艺皮肤">🎨 纸艺皮肤</button>
+                <button id="btnToggle3D" class="btn-tool" title="切换2D平面图与3D立体视角">🧊 3D 立体层叠</button>
+                <button id="btnToggleAudio" class="btn-tool" title="开启或静音音效">🔊 音效: 开</button>
+            </div>
+        </header>
+
+        <!-- 统计栏 -->
+        <section class="stats-bar">
+            <div class="stat-item highlight-card">
+                <span class="stat-label">当前最大厚度</span>
+                <span id="currentThickness" class="stat-value highlight">1</span>
+                <span class="stat-unit">层</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">折叠步数</span>
+                <span id="foldStepCount" class="stat-value">0</span>
+                <span class="stat-unit">步</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">当前平面规格</span>
+                <span id="currentDimensions" class="stat-value">4 × 4</span>
+            </div>
+            <div class="stat-item">
+                <span id="statProgressLabel" class="stat-label">已探索不同厚度</span>
+                <span id="collectionProgress" class="stat-value highlight-alt">1 种</span>
+            </div>
+        </section>
+
+        <!-- 厚度探索与图鉴履带 -->
+        <section class="achievement-section">
+            <div class="achievement-header">
+                <div class="achievement-title-area">
+                    <span id="achievementTitle">🔍 自由盲盒探索（自己动手折叠，探索你能发现几种厚度）：</span>
+                </div>
+                <div class="achievement-controls">
+                    <div class="mode-toggle-group">
+                        <button id="btnModeBlind" class="btn-mode-toggle active" title="防剧透模式：隐藏总数与目标列表，仅展示亲自探索出的成果">🔍 盲盒探索</button>
+                        <button id="btnModeCodex" class="btn-mode-toggle" title="明牌图鉴模式：揭晓全部9种厚度与教程演示">🎯 明牌全图鉴</button>
+                    </div>
+                    <button id="btnClearCollection" class="btn-clear-collection" title="清空已发现的所有厚度记录，从零重新探索">🗑️ 清空收集</button>
+                </div>
+            </div>
+            <div id="thicknessBadgeTrack" class="thickness-badge-track">
+                <!-- 由 ui.js 动态填充 -->
+            </div>
+        </section>
+
+        <!-- 折纸主工作台 -->
+        <main class="board-stage">
+            <div id="paperBoardContainer" class="paper-board-container skin-classic">
+                <div id="paperBoard" class="paper-board">
+                    <!-- 由 ui.js 动态渲染网格单元 -->
+                </div>
+                <!-- 交互折痕线条与翻折手柄层 -->
+                <div id="creaseControlsOverlay" class="crease-overlay">
+                    <!-- 由 ui.js 动态渲染竖向与横向折痕 -->
+                </div>
+            </div>
+        </main>
+
+        <!-- 玩家交互控制栏 -->
+        <div class="action-controls">
+            <button id="btnUndo" class="btn-action btn-undo" title="快捷键: Z">↩️ 撤销一步</button>
+            <button id="btnReset" class="btn-action btn-reset" title="快捷键: R">🔄 抚平展平</button>
+            <button id="btnHint" class="btn-action btn-hint" title="快捷键: H">💡 探索提示</button>
+            <button id="btnToggleDemo" class="btn-action btn-demo">🎓 自动教学演示</button>
+        </div>
+
+        <!-- 自动教学演示折叠控制台 -->
+        <section id="demoPanel" class="demo-panel hidden">
+            <div class="demo-header">
+                <span id="demoTitle">🎓 教学演示：折叠过程逐步拆解</span>
+                <span id="demoStatus">准备就绪</span>
+            </div>
+            <div class="demo-controls-row">
+                <button id="btnDemoPlay" class="btn-demo-ctrl">▶ 播放</button>
+                <button id="btnDemoPrev" class="btn-demo-ctrl">⏮ 上一步</button>
+                <button id="btnDemoNext" class="btn-demo-ctrl">⏭ 下一步</button>
+                <label style="font-size: 0.85rem; color: #512da8; margin-left: 4px;">
+                    速度:
+                    <select id="demoSpeedSelect" style="border-radius: 6px; padding: 2px 4px;">
+                        <option value="0.75">慢速 (0.75x)</option>
+                        <option value="1" selected>正常 (1.0x)</option>
+                        <option value="1.5">快速 (1.5x)</option>
+                        <option value="2">超快 (2.0x)</option>
+                    </select>
+                </label>
+                <button id="btnDemoExit" class="btn-demo-ctrl" style="margin-left: auto; color: #c62828;">✕ 关闭演示</button>
+            </div>
+            <div id="demoExplain" class="demo-explain-card">
+                点击播放，将逐步演示如何通过标准虚线折叠达成目标厚度。
+            </div>
+        </section>
+
+        <!-- 方格堆叠透视抽屉 -->
+        <section id="layerInspector" class="layer-inspector-section">
+            <div id="inspectorContent" class="inspector-content">
+                <!-- 由 ui.js 动态展示当前选中格子里面的所有纸层从底到顶排列 -->
+            </div>
+        </section>
+
+        <!-- 吉祥物与鼓励伴学栏 -->
+        <footer class="mascot-section">
+            <div class="mascot-avatar">🕊️</div>
+            <div id="mascotText" class="mascot-speech">
+                你好呀！我是折纸仙鹤！点击折纸边缘的金色箭头，或者直接点击虚线试试折叠吧！✨
+            </div>
+        </footer>
+    </div>
+
+    <!-- 浮动轻提示 Toast -->
+    <div id="praiseToast" class="praise-toast"></div>
+
+    <!-- 庆祝彩屑容器 -->
+    <div id="confettiContainer"></div>
+
+    <!-- 原题规则介绍弹窗 -->
+    <div id="ruleModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>📜 原题呈现与折叠规则</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="rule-img-box">
+                    <img src="e74280bc1323bf78c7447036ffdafa73.jpg" alt="4x4正方形纸片折叠原题" class="rule-orig-img">
+                </div>
+                <div class="rule-text-content">
+                    <h3>【原题题目描述】</h3>
+                    <p>
+                        如图1，<strong>4 × 4 的正方形纸片被虚线分成了 16 个一样大的小方格</strong>。现按照虚线折叠成一个平面图形（可以不折，也可以折叠多次，但每次必须按照虚线进行折叠），考虑折叠结果中每个小方格的层数，将<strong>最大层数记作该折叠结果的“厚度”</strong>。
+                    </p>
+                    <p>
+                        例如，图 2 中的“厚度”为 2；图 3 中的“厚度”为 4。显然，“厚度”最小为 1，最大为 16。
+                    </p>
+                    <p class="highlight-question">
+                        <strong>核心提问：那么所有折叠结果的不同“厚度”共有 _____ 种？</strong>
+                    </p>
+                    <hr>
+                    <h3>【折叠操作说明】</h3>
+                    <ul>
+                        <li><strong>沿虚线折叠</strong>：每次折叠只能沿当前纸片边缘小方格之间的网格线翻折。</li>
+                        <li><strong>全层翻折</strong>：纸片为一个连续整体，沿折线折叠时，折线一侧的所有重叠纸层整体翻折到另一侧（在物理上不可能只折中间某一层而不剪开）。</li>
+                        <li><strong>厚度定义</strong>：折叠完成后，平面上任意一个 1 × 1 方格位置所叠放的纸片层数，其最大值即为“厚度”。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 奥数题解与数学证明弹窗 -->
+    <div id="proofModal" class="modal-overlay hidden">
+        <div class="modal-card math-proof-modal">
+            <div class="modal-header">
+                <h2>🧠 9 重厚度原理解析与严格证明</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body proof-body">
+                <div class="proof-quiz-section">
+                    <h3>🎯 趣味互动答题：你知道共有多少种厚度吗？</h3>
+                    <div class="quiz-row">
+                        <span>我认为共有不同厚度：</span>
+                        <input type="number" id="quizAnswerInput" min="1" max="16" placeholder="输入数字">
+                        <span>种</span>
+                        <button id="btnSubmitQuiz" class="btn-action btn-hint" style="padding: 6px 14px;">验证我的答案</button>
+                    </div>
+                    <div id="quizFeedback" class="quiz-feedback"></div>
+                </div>
+
+                <div class="proof-content">
+                    <h3>一、结论答案揭晓</h3>
+                    <p class="proof-lead">
+                        所有折叠结果的不同“厚度”共有 <strong style="color: #d81b60; font-size: 1.3rem;">9</strong> 种！<br>
+                        这 9 种厚度分别是：<strong>1, 2, 3, 4, 6, 8, 9, 12, 16</strong>。
+                    </p>
+
+                    <h3>二、严格数学证明（两步分解法）</h3>
+                    <div class="proof-step-card">
+                        <h4>第一步：水平与垂直折叠沿网格完全解耦（独立笛卡尔积）</h4>
+                        <p>
+                            注意题目要求“每次必须按照虚线进行折叠成一个平面图形”。所有的折线只能是平行于坐标轴的直线（垂直网格线 <em>x</em> = <em>k</em> 或水平网格线 <em>y</em> = <em>m</em>）。<br>
+                            垂直折叠只改变方格的水平坐标 <em>x</em> 和翻转水平朝向，完全不影响方格的垂直坐标 <em>y</em>；同理，水平折叠只改变 <em>y</em> 坐标，不影响 <em>x</em> 坐标。<br>
+                            因此，若某折叠在水平方向使得 <em>T</em><sub>x</sub> 个方格重叠在同一横向区间，在垂直方向使得 <em>T</em><sub>y</sub> 个方格重叠在同一纵向区间，则重叠交叉处每个方格的层数必然为：
+                        </p>
+                        <div class="math-formula-box">
+                            <span class="math-formula"><span class="math-func">Thickness</span> = <em>T</em><sub>x</sub> × <em>T</em><sub>y</sub></span>
+                        </div>
+                    </div>
+
+                    <div class="proof-step-card">
+                        <h4>第二步：一维 4 连方纸条的可能厚度只有 {1, 2, 3, 4}</h4>
+                        <p>
+                            考虑一维长为 4 的纸条，沿 3 条虚线折叠：
+                        </p>
+                        <ul>
+                            <li><strong>不折叠</strong>：厚度为 <strong>1</strong>。</li>
+                            <li><strong>对折 1 次</strong>：沿边线折叠，厚度为 <strong>2</strong>。</li>
+                            <li><strong>包折 2 次</strong>：先折第 1 格（叠在第 2 格上），再折一次使前 2 格叠在第 3 格上，形成 <strong>3</strong> 层！</li>
+                            <li><strong>全折叠</strong>：将 4 格完全合拢，厚度为 <strong>4</strong>。</li>
+                        </ul>
+                        <p>因此一维纸条能达到的最大层数集合严格为：<em>S</em><sub>1</sub> = {1, 2, 3, 4}。</p>
+                    </div>
+
+                    <div class="proof-step-card">
+                        <h4>第三步：求二维厚度集合 <em>S</em><sub>2</sub> = <em>S</em><sub>1</sub> × <em>S</em><sub>1</sub></h4>
+                        <p>
+                            任意二维折叠的厚度，等价于从集合 {1, 2, 3, 4} 中任选一个 <em>T</em><sub>x</sub>，再任选一个 <em>T</em><sub>y</sub> 的乘积：
+                        </p>
+                        <table class="proof-table">
+                            <thead>
+                                <tr>
+                                    <th><em>T</em><sub>x</sub> \ <em>T</em><sub>y</sub></th>
+                                    <th>1 层</th>
+                                    <th>2 层</th>
+                                    <th>3 层</th>
+                                    <th>4 层</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>1 层</strong></td><td><strong>1</strong></td><td><strong>2</strong></td><td><strong>3</strong></td><td><strong>4</strong></td></tr>
+                                <tr><td><strong>2 层</strong></td><td><strong>2</strong></td><td><strong>4</strong></td><td><strong>6</strong></td><td><strong>8</strong></td></tr>
+                                <tr><td><strong>3 层</strong></td><td><strong>3</strong></td><td><strong>6</strong></td><td><strong>9</strong></td><td><strong>12</strong></td></tr>
+                                <tr><td><strong>4 层</strong></td><td><strong>4</strong></td><td><strong>8</strong></td><td><strong>12</strong></td><td><strong>16</strong></td></tr>
+                            </tbody>
+                        </table>
+                        <p style="margin-top: 10px;">
+                            将表格中的所有乘积去重后，恰好得到 <strong>9 个数</strong>：<br>
+                            {1, 2, 3, 4, 6, 8, 9, 12, 16}。
+                        </p>
+                    </div>
+
+                    <div class="proof-step-card">
+                        <h4>四、为什么 5, 7, 10, 11, 13, 14, 15 是绝对不可能达到的？</h4>
+                        <p>
+                            因为任何沿整条网格线的折叠，层数都必须因式分解为 <em>T</em><sub>x</sub> × <em>T</em><sub>y</sub>，其中 1 ≤ <em>T</em><sub>x</sub>, <em>T</em><sub>y</sub> ≤ 4。<br>
+                            质数 5、7、11、13 无法分解为两个 ≤ 4 的正整数之积；合数 10（需 2 × 5）、14（需 2 × 7）、15（需 3 × 5）均需要大于 4 的单向层数，但在 4×4 的纸片中单向最多只有 4 格，因此这些厚度在数学拓扑上<strong>绝对无法形成</strong>！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 纸艺皮肤选择弹窗 -->
+    <div id="skinModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>🎨 选择纸艺皮肤</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="skin-grid">
+                <div class="skin-card active" data-skin="classic">
+                    <h3>经典网格 📜</h3>
+                    <p style="font-size:0.8rem; color:#666;">还原试卷与方格纸质感，清晰坐标与数字标识</p>
+                    <div class="skin-preview-row">
+                        <span style="background:#fdfbf7; border:1px solid #ccc; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#eae4d8; border:1px solid #ccc; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#bcaaa4; border:1px solid #ccc; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                    </div>
+                </div>
+                <div class="skin-card" data-skin="origami">
+                    <h3>和风彩纸 🌸</h3>
+                    <p style="font-size:0.8rem; color:#666;">柔和粉樱与淡竹马卡龙色调</p>
+                    <div class="skin-preview-row">
+                        <span style="background:#ffebee; border:1px solid #ef9a9a; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#e8f5e9; border:1px solid #a5d6a7; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#e1bee7; border:1px solid #ce93d8; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                    </div>
+                </div>
+                <div class="skin-card" data-skin="cyber">
+                    <h3>极客蓝图 🌌</h3>
+                    <p style="font-size:0.8rem; color:#666;">深空暗色工程蓝图与荧光青线</p>
+                    <div class="skin-preview-row">
+                        <span style="background:#102a43; border:1px solid #48c7f2; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#0b1d30; border:1px solid #48c7f2; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#48c7f2; border:1px solid #fff; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                    </div>
+                </div>
+                <div class="skin-card" data-skin="rainbow">
+                    <h3>彩虹色谱 🌈</h3>
+                    <p style="font-size:0.8rem; color:#666;">16 方格独立光谱色，追踪轨迹最直观</p>
+                    <div class="skin-preview-row">
+                        <span style="background:#ef5350; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#ffca28; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#42a5f5; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#66bb6a; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9重厚度大满贯全收集庆祝弹窗 -->
+    <div id="winModal" class="modal-overlay hidden">
+        <div class="modal-card" style="text-align:center;">
+            <div class="win-content">
+                <div class="win-trophy">🏆</div>
+                <div class="win-stars">⭐⭐⭐⭐⭐⭐⭐⭐⭐</div>
+                <div class="win-badge">折纸大宗师 · 9重厚度全集齐</div>
+                <p class="win-desc">
+                    恭喜你！你已经成功探索并折出了全部 <strong>9 种理论极限厚度</strong>：<br>
+                    <strong>1, 2, 3, 4, 6, 8, 9, 12, 16 层！</strong><br>
+                    不仅完美解答了奥数原题，更掌握了折纸在空间几何拓扑中的深邃奥秘！
+                </p>
+                <div style="margin-top: 20px;">
+                    <button class="btn-action btn-reset modal-close" style="padding: 10px 24px;">继续自由探索 📐</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 清空收集确认模态弹窗 -->
+    <div id="clearConfirmModal" class="modal-overlay hidden">
+        <div class="modal-card" style="max-width: 440px; text-align: center;">
+            <div class="modal-header">
+                <h2>🗑️ 清空收集确认</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" style="padding: 24px 20px;">
+                <p style="font-size: 1.05rem; line-height: 1.6; color: #4e342e;">
+                    确定要<strong>清空已发现的所有厚度记录</strong>吗？<br>
+                    <span style="font-size: 0.88rem; color: #8d6e63;">（重置后将回到仅有初始 1 层状态，方便您或朋友从头重新探索推导！）</span>
+                </p>
+                <div style="margin-top: 20px; display: flex; justify-content: center; gap: 14px;">
+                    <button id="btnConfirmClear" class="btn-action btn-reset" style="background:#d32f2f; color:#fff;">确认清空重置</button>
+                    <button class="btn-action btn-undo modal-close">取消返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 脚本引用 -->
+    <script src="js/fold_math.js?v=20261113"></script>
+    <script src="js/solver.js?v=20261113"></script>
+    <script src="js/audio.js?v=20261113"></script>
+    <script src="js/skins.js?v=20261113"></script>
+    <script src="js/praise.js?v=20261113"></script>
+    <script src="js/demo.js?v=20261113"></script>
+    <script src="js/ui.js?v=20261113"></script>
+</body>
+</html>

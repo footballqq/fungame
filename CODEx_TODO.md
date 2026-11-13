@@ -1,3 +1,21 @@
+<!-- codex: 2026-11-13 增加防剧透盲盒探索模式、明牌全图鉴模式切换与一键清空收集功能 -->
+- [X] 模式与重置升级（`math/fold/index.html`, `math/fold/js/praise.js`, `math/fold/js/ui.js`, `math/fold/css/style.css`, `tests/test_fold_game.py`）：
+  - 增加「🔍 盲盒探索 (防剧透模式)」与「🎯 明牌全图鉴 (公布答案模式)」双模式热切换；盲探模式隐藏总数 9 与各目标数字，仅显示已发现的成果与神秘「?」卡槽；明牌模式公开全部 9 重目标、进度与折法演示
+  - 增加「🗑️ 清空收集」功能与专属质感确认弹窗，允许玩家从头重新探索
+  - 编写 pytest 覆盖双模式切换状态、清空收集逻辑与防剧透断言
+
+<!-- codex: 2026-11-13 修复 4x4 网格折纸数学公式排版：全面消除 raw LaTeX 标记，升级为 MathType 风格数学衬线字体与语义 HTML 公式排版 -->
+- [X] 公式排版修复（`math/fold/index.html`, `math/fold/css/modal.css`, `tests/test_fold_game.py`）：全面清理 raw LaTeX 标记（`$$\text{Thickness} = T_x \times T_y$$`、`\times`、`\le`、`$`），换用 MathType 风格标准数学排版（专用衬线字体 Cambria Math、斜体变量 `<em>T</em><sub>x</sub>`、标准乘号 `×` 与小于等于号 `≤`），编写防 raw LaTeX 回归单测并通过全套测试
+
+<!-- codex: 2026-11-13 开发 4x4 网格折纸厚度探秘 (fold) 网页游戏，支持9重厚度收集、3D层叠透视、折痕拖拽交互、自动演示与深度奥数原理解析 -->
+- [X] 算法设计与单元测试（`math/fold/fold_math.py`, `tests/test_fold_game.py`）：形式化证明 4x4 纸片按虚线平面折叠的厚度仅能为 {1, 2, 3, 4, 6, 8, 9, 12, 16} 共 9 种，证明 1D 独立分解定理与 2D 笛卡尔积，编写求解器与 pytest 全覆盖测试
+- [X] 核心折纸拓扑与求解引擎（`math/fold/js/fold_math.js`, `math/fold/js/solver.js`）：多层追踪网格坐标与法向朝向、折叠算子、层数热力图与 9 种厚度最优折叠序列生成
+- [X] 纯算法 Web Audio 折纸音效系统（`math/fold/js/audio.js`）：纸张翻折刷刷声、折痕压平声、撤销展开脆响、厚度勋章与通关礼乐纯算法零外链合成
+- [X] 纸艺皮肤、成就夸奖与教学演示控制器（`math/fold/js/skins.js`, `math/fold/js/praise.js`, `math/fold/js/demo.js`）：4 款纸艺皮肤、9 重厚度点亮成就系统、折纸鹤吉祥物与逐步演示播放器
+- [X] 界面交互控制器与 3D 透视渲染（`math/fold/js/ui.js`）：折痕线点击/方向按键/拖拽折叠交互、2D热力图/3D立体层叠视角切换、方格层叠层级悬浮透视卡片
+- [X] 页面结构与高阶自适应样式（`math/fold/index.html`, `math/fold/css/style.css`, `css/board.css`, `css/modal.css`, `css/animations.css`）：纸艺质感UI、多端自适应、原题原理解析模态弹窗（展示原题图与详细证明）
+- [X] 项目根目录主页 `index.html` 游戏导航集成与全套 pytest 自动化验证
+
 <!-- codex: 2026-09-29 取消单文件严格 <= 500 行的硬性限制，全面拥抱高质量模块化与高内聚设计 -->
 - [X] 规则与规范升级（`AGENTS.md`, `.agent/rules/coding.md`, `INDEX_GUIDE.md`）：全面移除单文件严格 ≤ 500 行的硬性教条限制，转向倡导模块化解耦、单一职责与清晰架构的工程规范；在根目录接入指南 `INDEX_GUIDE.md` 中同步更新解耦定位与 FAQ，消除已废弃的 500 行约束描述
 - [X] 测试套件解绑与加固（`tests/test_index_hub.py`, `tests/test_square_game.py`, `tests/test_dittle_game_engine.py`, `tests/test_triangle_game.py`, `tests/test_jumpfrog_html.py`, `tests/test_plusminus_html.py`）：移除所有测试中针对 `assert lines <= 500` 的行数硬限制断言，调整为检验文件真实存在且内容非空（`assert lines > 0`），全库全量 97 项 pytest 100% 绿灯通过

@@ -159,8 +159,36 @@ def test_qa_edu_mgjywyh_integrated_in_life():
     target_html = os.path.join(PROJECT_ROOT, "oldgame", "QA_edu_mgjywyh", "index.html")
     assert os.path.isfile(target_html), f"游戏入口文件必须实际存在: {target_html}"
 
-    # 验证全站总卡片数达到 40 项
+    # 验证全站总卡片数达到 41 项
     cards = soup.find_all("div", class_="game-card")
-    assert len(cards) == 40, f"全站独立卡片数应为 40，实为 {len(cards)}"
+    assert len(cards) == 41, f"全站独立卡片数应为 41，实为 {len(cards)}"
+
+
+def test_fold_origami_puzzle_in_olympiad_category():
+    """验证4x4网格折纸探秘归属于奥数谜题专区 (olympiad) 且配置了挑战与原理解析入口"""
+    with open(INDEX_HTML, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # 验证游戏卡片存在
+    fold_link = soup.find("a", href="math/fold/index.html")
+    assert fold_link is not None, "必须包含4x4网格折纸探秘入口链接"
+    fold_card = fold_link.find_parent("div", class_="game-card")
+    assert fold_card is not None
+    assert fold_card.get("data-category") == "olympiad", "4x4网格折纸探秘类别必须为 olympiad"
+
+    # 验证所在父专区
+    parent_sec = fold_card.find_parent("section", class_="category-section")
+    assert parent_sec is not None
+    assert parent_sec.get("data-section-category") == "olympiad", "必须坐落在奥数思维与组合极值谜题专区内"
+
+    # 验证实体文件存在
+    target_html = os.path.join(PROJECT_ROOT, "math", "fold", "index.html")
+    assert os.path.isfile(target_html), f"游戏入口文件必须实际存在: {target_html}"
+
+    # 验证双动作按钮：开始挑战 + 原理解析
+    fold_hrefs = [a["href"] for a in fold_card.find_all("a")]
+    assert "math/fold/README.md" in fold_hrefs, "必须包含原理解析文档直达按键"
 
 

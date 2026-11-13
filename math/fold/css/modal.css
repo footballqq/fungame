@@ -1,0 +1,319 @@
+/* codex: 2026-11-13 模态弹窗系统样式，含原题图解、奥数证明数学公式排版与答题互动卡片 */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 20, 15, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 680px;
+    max-height: 88vh;
+    border-radius: 18px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: modalPopIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-card.math-proof-modal {
+    max-width: 780px;
+}
+
+@keyframes modalPopIn {
+    0% { transform: scale(0.92); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 22px;
+    background: #fbf9f6;
+    border-bottom: 1px solid #e8e0d8;
+}
+
+.modal-header h2 {
+    font-size: 1.25rem;
+    color: #4e342e;
+    font-weight: 800;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #8d6e63;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+    transition: color 0.15s ease;
+}
+
+.modal-close:hover {
+    color: #d81b60;
+}
+
+.modal-body {
+    padding: 20px 24px;
+    overflow-y: auto;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #3e2723;
+}
+
+/* 原题图解展示 */
+.rule-img-box {
+    text-align: center;
+    margin-bottom: 16px;
+    background: #f5efe8;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.rule-orig-img {
+    max-width: 100%;
+    max-height: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.rule-text-content h3 {
+    font-size: 1.05rem;
+    color: #5d4037;
+    margin: 12px 0 6px;
+}
+
+.rule-text-content p {
+    margin-bottom: 8px;
+}
+
+.highlight-question {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin: 12px 0;
+}
+
+/* 奥数证明弹窗样式 */
+.proof-quiz-section {
+    background: #fce4ec;
+    border: 1.5px solid #f8bbd0;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+}
+
+.proof-quiz-section h3 {
+    color: #ad1457;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.quiz-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.quiz-row input {
+    width: 90px;
+    padding: 6px 10px;
+    border: 1px solid #c2185b;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.quiz-feedback {
+    margin-top: 10px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: none;
+}
+
+.quiz-feedback.success {
+    display: block;
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #81c784;
+}
+
+.quiz-feedback.error {
+    display: block;
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.proof-lead {
+    font-size: 1.05rem;
+    background: #fdfaf6;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ebdcd0;
+    margin-bottom: 16px;
+}
+
+.proof-step-card {
+    background: #faf8f5;
+    border: 1px solid #e0d7ce;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+}
+
+.proof-step-card h4 {
+    color: #4a148c;
+    margin-bottom: 8px;
+    font-size: 0.98rem;
+}
+
+.math-formula-box {
+    text-align: center;
+    margin: 12px 0;
+}
+
+.math-formula {
+    display: inline-block;
+    text-align: center;
+    font-family: "Cambria Math", "Latin Modern Math", "STIX Two Math", "Georgia", "Times New Roman", serif;
+    font-size: 1.4rem;
+    color: #b71c1c;
+    font-weight: 700;
+    padding: 10px 24px;
+    background: #fff8e1;
+    border: 1.5px solid #ffe082;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    letter-spacing: 0.5px;
+}
+
+.math-formula em {
+    font-style: italic;
+    font-family: "Cambria Math", "Latin Modern Math", "Times New Roman", serif;
+}
+
+.math-formula sub {
+    font-size: 0.75em;
+    font-style: normal;
+    vertical-align: sub;
+}
+
+.math-func {
+    font-style: normal;
+    font-family: inherit;
+    font-weight: 800;
+    color: #4a148c;
+}
+
+.proof-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.proof-table th, .proof-table td {
+    border: 1px solid #d7ccc8;
+    padding: 8px;
+}
+
+.proof-table th {
+    background: #efebe9;
+    color: #4e342e;
+}
+
+/* 皮肤选择网格 */
+.skin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    padding: 16px 20px;
+}
+
+.skin-card {
+    background: #fcfbf9;
+    border: 2px solid #e0d7ce;
+    border-radius: 12px;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skin-card:hover {
+    border-color: #8d6e63;
+    transform: translateY(-2px);
+}
+
+.skin-card.active {
+    border-color: #d81b60;
+    background: #fff5f8;
+    box-shadow: 0 4px 12px rgba(216, 27, 96, 0.2);
+}
+
+.skin-preview-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+/* 胜利弹窗 */
+.win-content {
+    padding: 30px 24px;
+}
+
+.win-trophy {
+    font-size: 4rem;
+    animation: bounce 1.2s infinite;
+}
+
+.win-stars {
+    font-size: 1.6rem;
+    margin: 8px 0;
+    color: #ffb300;
+}
+
+.win-badge {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 12px;
+}
+
+.win-desc {
+    color: #4e342e;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
