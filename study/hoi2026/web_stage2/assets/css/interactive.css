@@ -1,0 +1,442 @@
+/* ==========================================================================
+   海淀信息学第二赛段 · 专属交互沙盒与可视化专用样式
+   视觉风格：温暖米纸学术风（Warm Beige Academic Sandbox）
+   排版特性：字号调大、操作区宽敞通透、触觉交互直观
+   ========================================================================== */
+
+.interactive-sandbox {
+  background-color: var(--bg-subtle);
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin: 32px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.sandbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--border-soft);
+}
+
+.sandbox-badge {
+  display: inline-block;
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 6px;
+  border: 1px solid var(--color-primary-border);
+}
+
+.sandbox-title {
+  font-size: 1.32rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.sandbox-desc {
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.sandbox-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.sandbox-log {
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 1rem;
+  line-height: 1.7;
+  min-height: 52px;
+  margin-top: 18px;
+  color: var(--ink-secondary);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.sandbox-meta {
+  font-size: 0.98rem;
+  color: var(--ink-muted);
+}
+.sandbox-meta b {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   1. 汉诺塔互动演练场 (Towers of Hanoi)
+   -------------------------------------------------------------------------- */
+.hanoi-stage {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 230px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  padding: 20px 24px 0;
+  position: relative;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.hanoi-peg-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 28px;
+  transition: transform 0.15s ease;
+}
+
+.hanoi-peg-wrap:hover .peg-pole {
+  background-color: var(--color-primary);
+}
+
+.hanoi-peg-wrap:hover .peg-base {
+  background-color: #B59E87;
+}
+
+/* 竖直立柱 */
+.peg-pole {
+  width: 10px;
+  height: 150px;
+  background-color: #C8B8A6;
+  border-radius: 5px 5px 0 0;
+  position: absolute;
+  bottom: 28px;
+  z-index: 1;
+  transition: background-color 0.2s;
+}
+
+/* 底座 */
+.peg-base {
+  width: 100%;
+  height: 12px;
+  background-color: #D6C8B8;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 16px;
+  z-index: 2;
+  transition: background-color 0.2s;
+}
+
+.peg-label {
+  position: absolute;
+  bottom: -4px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--ink-secondary);
+}
+
+/* 盘子容器 */
+.hanoi-discs {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 28px;
+  z-index: 3;
+}
+
+.hanoi-disc {
+  height: 24px;
+  border-radius: 6px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-weight: 800;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.hanoi-disc.selected {
+  transform: translateY(-20px);
+  box-shadow: 0 6px 14px rgba(140, 83, 43, 0.45);
+  filter: brightness(1.15);
+}
+
+/* 盘子尺寸与典雅配色 */
+.disc-1 { width: 34%; background: #C45543; } /* 陶土红 */
+.disc-2 { width: 48%; background: #D48B30; } /* 琥珀金 */
+.disc-3 { width: 64%; background: #487D56; } /* 月桂绿 */
+.disc-4 { width: 80%; background: #42718E; } /* 灰黛蓝 */
+.disc-5 { width: 94%; background: #755588; } /* 雅致紫 */
+
+/* --------------------------------------------------------------------------
+   2. 容斥原理韦恩图动态实验室 (Venn Diagram)
+   -------------------------------------------------------------------------- */
+.venn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  margin-bottom: 20px;
+}
+
+.venn-svg-wrap {
+  width: 100%;
+  max-width: 520px;
+  height: 220px;
+}
+
+.venn-info {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.venn-badge {
+  display: inline-block;
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary-border);
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 8px 24px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 10px;
+}
+
+.venn-formula {
+  font-size: 1.15rem;
+  color: var(--ink-secondary);
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.venn-controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+}
+
+.control-group label {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 8px;
+}
+
+.control-group label span {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  accent-color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   3. 二维矩阵内存映射沙盒 (2D Matrix Memory Visualizer)
+   -------------------------------------------------------------------------- */
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  margin: 18px 0;
+}
+
+.matrix-cell {
+  background-color: var(--bg-canvas);
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-sm);
+  padding: 16px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.matrix-cell:hover {
+  background-color: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.matrix-cell.selected {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 4px 10px rgba(140, 83, 43, 0.3);
+}
+
+.matrix-cell.selected .cell-sub {
+  color: #F8EFE6;
+}
+
+.cell-pos {
+  font-size: 1.15rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+
+.cell-sub {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   4. 带函数调用栈的 C++ 单步代码跟踪器 (.tracer2-grid)
+   -------------------------------------------------------------------------- */
+.tracer2-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin: 18px 0;
+}
+
+@media (max-width: 820px) {
+  .tracer2-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tracer-code-wrap {
+  border: 1.5px solid #332B25;
+  border-radius: var(--radius-sm);
+  background-color: #241E1A; /* 暖黑咖啡代码底色 */
+  overflow: hidden;
+}
+
+.tracer-code-header {
+  background-color: #1A1512;
+  color: #D6CBC0;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-bottom: 1px solid #332B25;
+}
+
+.tracer-code-line {
+  padding: 6px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: #EBDAC4;
+  white-space: pre;
+  transition: background-color 0.15s;
+}
+
+.tracer-code-line.active-line {
+  background-color: #4A3320;
+  color: #FFFFFF;
+  border-left: 4px solid #DF9B52;
+  font-weight: 700;
+}
+
+.tracer-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tracer-panel {
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-canvas);
+  padding: 14px;
+}
+
+.panel-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.stack-frames-list {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+  min-height: 90px;
+}
+
+.stack-frame-item {
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--ink-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stack-frame-item.top-frame {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.var-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+}
+
+.var-table th, .var-table td {
+  padding: 6px 8px;
+  border: 1px solid var(--border-soft);
+  text-align: center;
+}
+
+.var-table th {
+  background-color: var(--bg-subtle);
+  font-weight: 700;
+}

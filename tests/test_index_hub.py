@@ -1,3 +1,4 @@
+# codex: 2026-11-17 扩展测试验证 2026 海淀信奥第二赛段计算思维特训营 (HOI 2026) 接入与全站 42 卡片完备性
 # codex: 2026-09-29 根目录 index.html 现代化改版专项自动化测试：验证5大分类、无重复项、搜索结构、文件行数与相对链接有效性
 import os
 import re
@@ -159,9 +160,9 @@ def test_qa_edu_mgjywyh_integrated_in_life():
     target_html = os.path.join(PROJECT_ROOT, "oldgame", "QA_edu_mgjywyh", "index.html")
     assert os.path.isfile(target_html), f"游戏入口文件必须实际存在: {target_html}"
 
-    # 验证全站总卡片数达到 41 项
+    # 验证全站总卡片数达到 42 项
     cards = soup.find_all("div", class_="game-card")
-    assert len(cards) == 41, f"全站独立卡片数应为 41，实为 {len(cards)}"
+    assert len(cards) == 42, f"全站独立卡片数应为 42，实为 {len(cards)}"
 
 
 def test_fold_origami_puzzle_in_olympiad_category():
@@ -190,5 +191,54 @@ def test_fold_origami_puzzle_in_olympiad_category():
     # 验证双动作按钮：开始挑战 + 原理解析
     fold_hrefs = [a["href"] for a in fold_card.find_all("a")]
     assert "math/fold/README.md" in fold_hrefs, "必须包含原理解析文档直达按键"
+
+
+def test_hoi2026_stage2_in_olympiad_category():
+    """验证 2026 海淀信奥第二赛段计算思维特训营成功接入奥数谜题专区 (olympiad) 且入口齐备"""
+    with open(INDEX_HTML, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # 验证游戏卡片存在
+    hoi_link = soup.find("a", href="study/hoi2026/web_stage2/index.html")
+    assert hoi_link is not None, "必须包含 2026 海淀信奥第二赛段计算思维特训营入口链接"
+    hoi_card = hoi_link.find_parent("div", class_="game-card")
+    assert hoi_card is not None
+    assert hoi_card.get("data-category") == "olympiad", "特训营类别必须为 olympiad"
+
+    # 验证所在父专区
+    parent_sec = hoi_card.find_parent("section", class_="category-section")
+    assert parent_sec is not None
+    assert parent_sec.get("data-section-category") == "olympiad", "必须坐落在奥数思维与组合极值谜题专区内"
+
+    # 验证实体文件存在
+    target_html = os.path.join(PROJECT_ROOT, "study", "hoi2026", "web_stage2", "index.html")
+    assert os.path.isfile(target_html), f"特训营入口文件必须实际存在: {target_html}"
+
+    exam_html = os.path.join(PROJECT_ROOT, "study", "hoi2026", "web_stage2", "exam", "exam.html")
+    assert os.path.isfile(exam_html), f"模考入口文件必须实际存在: {exam_html}"
+
+    docs_html = os.path.join(PROJECT_ROOT, "study", "hoi2026", "web_stage2", "docs_reader.html")
+    assert os.path.isfile(docs_html), f"教研文档文件必须实际存在: {docs_html}"
+
+    # 验证三动作按钮：开始特训 + 全真模考 + 教研文档
+    hoi_hrefs = [a["href"] for a in hoi_card.find_all("a")]
+    assert "study/hoi2026/web_stage2/index.html" in hoi_hrefs, "必须包含特训大纲直达按键"
+    assert "study/hoi2026/web_stage2/exam/exam.html" in hoi_hrefs, "必须包含全真模考直达按键"
+    assert "study/hoi2026/web_stage2/docs_reader.html" in hoi_hrefs, "必须包含教研文档直达按键"
+
+    # 验证胶囊计数与专区卡片数精确一致
+    pills = soup.find_all("button", class_="pill-btn")
+    for p in pills:
+        cat = p.get("data-category")
+        count_span = p.find("span", class_="pill-count")
+        if not count_span or cat == "all":
+            continue
+        expected_cnt = int(count_span.get_text(strip=True))
+        sec = soup.find("section", attrs={"data-section-category": cat})
+        assert sec is not None
+        actual_cnt = len(sec.find_all("div", class_="game-card"))
+        assert actual_cnt == expected_cnt, f"专区 {cat} 卡片数 ({actual_cnt}) 与胶囊指示 ({expected_cnt}) 不一致"
 
 

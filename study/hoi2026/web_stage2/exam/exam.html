@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第二赛段 120 分钟全真机考模拟 · 2026海淀信息学特训</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/interactive.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+</head>
+<body class="bg-gray">
+
+  <!-- 顶部精简导航 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span class="brand-badge">HOI 2026</span>
+        <span class="brand-title">海淀第二赛段 · 全真模拟机考系统</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">返回首页</a>
+        <a href="../modules/01_math-logic.html" class="nav-link">模块 1</a>
+        <a href="../modules/02_elementary-algorithms.html" class="nav-link">模块 2</a>
+        <a href="../modules/03_recursion-thinking.html" class="nav-link">模块 3</a>
+        <a href="../modules/04_data-structures-adv.html" class="nav-link">模块 4</a>
+        <a href="../modules/05_code-analysis-complexity.html" class="nav-link">模块 5</a>
+        <a href="../docs_reader.html" class="nav-link">教研文档</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container section-container">
+    <!-- 顶部状态栏（倒计时、进度、交卷） -->
+    <div class="exam-sticky-bar">
+      <div class="bar-left">
+        <span class="exam-badge-icon">⏱️</span>
+        <span class="exam-title-text">考试倒计时：</span>
+        <span class="exam-timer" id="examTimer">02:00:00</span>
+      </div>
+      <div class="bar-center" id="examProgressSummary">
+        已作答 0 / 25 题
+      </div>
+      <div class="bar-right">
+        <button class="btn btn-secondary btn-sm" id="btnResetExam">清空重做</button>
+        <button class="btn btn-primary btn-sm" id="btnSubmitExam">交卷并生成诊断</button>
+      </div>
+    </div>
+
+    <!-- 主考试布局：双栏（左题目区，右答题卡导航） -->
+    <div class="exam-layout">
+      <!-- 左栏：当前题目展示区 -->
+      <main class="exam-main-pane">
+        <div class="exam-question-card" id="questionContentArea">
+          <!-- 由 exam-engine-stage2.js 动态渲染当前题目 -->
+          <div class="loading-box">正在加载全真模考试题...</div>
+        </div>
+      </main>
+
+      <!-- 右栏：答题卡悬浮面板 -->
+      <aside class="exam-sidebar-pane">
+        <div class="sheet-panel">
+          <div class="sheet-header">
+            <h3 class="sheet-title">📋 答题卡调题板</h3>
+            <div class="sheet-subtitle">共 25 题 · 满分 100 分</div>
+          </div>
+
+          <!-- 图例 -->
+          <div class="sheet-legend">
+            <span class="legend-item"><span class="legend-dot dot-unanswered"></span> 未答</span>
+            <span class="legend-item"><span class="legend-dot dot-answered"></span> 已答</span>
+            <span class="legend-item"><span class="legend-dot dot-active"></span> 当前</span>
+            <span class="legend-item"><span class="legend-dot dot-marked"></span> ★标记</span>
+          </div>
+
+          <!-- 25 题网格 -->
+          <div class="palette-grid" id="questionPalette">
+            <!-- 动态生成 25 个题号按钮 -->
+          </div>
+
+          <!-- 考试说明 -->
+          <div class="sheet-tips">
+            <strong>机考温馨提醒：</strong><br>
+            • 1~18 题为单选题（每题 4 分）；<br>
+            • 19~25 题为计算填空题（每题 4 分）；<br>
+            • 作答过程中系统会自动即时保存至浏览器缓存；<br>
+            • 遇到难题可先点“标记待复查”，稍后在右侧快速跳回！
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 五维雷达诊断与试卷评析弹窗 -->
+  <div class="exam-modal-overlay" id="examReportModal">
+    <div class="exam-modal-dialog">
+      <div class="modal-header-banner">
+        <h2>🏆 2026海淀区第二赛段 · 模拟测评五维诊断报告</h2>
+        <button class="btn-close-modal" id="btnCloseReport" title="关闭报告">×</button>
+      </div>
+
+      <div class="modal-body-content">
+        <!-- 总分与五维雷达图双列排布 -->
+        <div class="report-hero-grid">
+          <div class="score-box-center">
+            <div class="score-label">本次测评总得分</div>
+            <div class="score-huge" id="reportTotalScore">0</div>
+            <div class="score-label">/ 满分 100 分</div>
+            <div class="rank-tier-pill" id="reportRankTier">评估中...</div>
+          </div>
+
+          <div class="radar-canvas-container">
+            <canvas id="radarCanvas" width="420" height="340"></canvas>
+          </div>
+        </div>
+
+        <!-- 专家导师综合评语 -->
+        <div class="report-evaluation-comment" id="reportComment">
+          <!-- 动态评语 -->
+        </div>
+
+        <!-- 薄弱点智能处方导航 -->
+        <div id="diagnosticPrescription">
+          <!-- 动态生成薄弱项与复习链接 -->
+        </div>
+
+        <!-- 试卷全题深度解析与核对列表 -->
+        <div id="examQuestionReviewArea">
+          <!-- 动态生成 25 题答案对比与逐题解析 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 脚本加载 -->
+  <script src="../assets/js/core.js"></script>
+  <script src="../assets/js/quiz-data-stage2.js"></script>
+  <script src="../assets/js/exam-engine-stage2.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 启动 120 分钟全真模考引擎
+      window.stage2Exam = new Stage2ExamEngine({ totalMinutes: 120 });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第二赛段教研与考纲学习文档 · 2026海淀信息学特训</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/interactive.css">
+  <link rel="stylesheet" href="assets/css/quiz.css">
+  <style>
+    .doc-article {
+      display: none;
+      background-color: #FFFFFF;
+      border: 1.5px solid var(--border-line);
+      border-radius: var(--radius-lg);
+      padding: 38px 44px;
+      box-shadow: var(--shadow-sm);
+    }
+    .doc-article.active-doc {
+      display: block;
+      animation: fadeInDoc 0.25s ease;
+    }
+    @keyframes fadeInDoc {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .doc-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .doc-filename {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      font-family: var(--font-mono);
+    }
+    .doc-list {
+      list-style: disc;
+      padding-left: 24px;
+      margin-bottom: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .doc-list li {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--ink-primary);
+    }
+    .doc-subhead {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+    .doc-menu-btn {
+      display: block;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+    .doc-menu-btn:hover {
+      background-color: var(--bg-subtle);
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    .doc-menu-btn.active {
+      background-color: var(--color-primary-soft);
+      color: var(--color-primary);
+      font-weight: 800;
+      border-left: 4px solid var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部主导航 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-badge">HOI 2026</span>
+        <span class="brand-title">海淀信息学 · 第二赛段进阶挑战</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">首页大纲</a>
+        <a href="modules/01_math-logic.html" class="nav-link">1. 数学逻辑</a>
+        <a href="modules/02_elementary-algorithms.html" class="nav-link">2. 初等算法</a>
+        <a href="modules/03_recursion-thinking.html" class="nav-link">3. 递归突破</a>
+        <a href="modules/04_data-structures-adv.html" class="nav-link">4. 高级结构</a>
+        <a href="modules/05_code-analysis-complexity.html" class="nav-link">5. 代码分析</a>
+        <a href="docs_reader.html" class="nav-link active">教研文档</a>
+        <a href="exam/exam.html" class="nav-link nav-btn-highlight">120分全真模考</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container layout-with-sidebar">
+    <!-- 左侧文档切换菜单 -->
+    <aside class="sidebar-nav">
+      <div class="sidebar-title">📑 核心教研学习文档</div>
+      <ul class="sidebar-menu" id="docMenuList">
+        <li><a href="#pane-doc1" class="doc-menu-btn active" data-target="pane-doc1">01. 考纲与进阶学习方案</a></li><li><a href="#pane-doc2" class="doc-menu-btn " data-target="pane-doc2">02. 核心知识模块教学设计</a></li><li><a href="#pane-doc3" class="doc-menu-btn " data-target="pane-doc3">03. 递归与初等算法突破指南</a></li><li><a href="#pane-doc4" class="doc-menu-btn " data-target="pane-doc4">04. 综合题库与测评规范</a></li><li><a href="#pane-doc5" class="doc-menu-btn " data-target="pane-doc5">05. 网站交互架构设计</a></li><li><a href="#pane-doc6" class="doc-menu-btn " data-target="pane-doc6">06. 2025入门组原卷核对说明</a></li>
+      </ul>
+      <div class="sidebar-box">
+        <div class="box-title">排版美化说明</div>
+        <p class="box-text">已全面遵循单色米纸典雅风排版，字号调大，行间通透，数学公式采用纯净 Unicode 呈现。</p>
+      </div>
+    </aside>
+
+    <!-- 右侧文档内容展示 -->
+    <main class="main-content">
+      
+      <!-- 文档：01. 考纲与进阶学习方案 -->
+      <article class="doc-article active-doc" id="pane-doc1">
+        <div class="doc-meta-bar">
+          <span class="badge-tag">教研纲要</span>
+          <span class="doc-filename">源文件：docs_stage2/01_第二赛段考纲与进阶学情方案.md</span>
+        </div>
+        <h1 class="page-title">第二赛段考纲与进阶学习方案</h1>
+<h2 class="section-title">考纲依据</h2>
+<p>依据项目目录中的《海淀区信息学比赛考查内容参考.pdf》，第二赛段为计算思维挑战赛，采用集中笔试，时长 120 分钟。题型为单项选择（约 60%）和填空（约 40%）。考查范围如下：</p>
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>范围</th><th>具体内容</th></tr></thead><tbody>
+<tr><td>数学逻辑</td><td>集合、函数、排列组合、逻辑命题判断</td></tr>
+<tr><td>初等算法</td><td>枚举、模拟、递归思想、简单贪心策略</td></tr>
+<tr><td>数据结构</td><td>数组、字符串、队列、栈的基本操作与特性</td></tr>
+<tr><td>代码推理</td><td>代码功能、运行结果、时间复杂度推算</td></tr>
+</tbody></table></div>
+<p>本赛段强调计算思维，不等同于上机编程赛。PDF 所列第三赛段编程范围不应混入本阶段必考范围。</p>
+<h2 class="section-title">学习安排</h2>
+<ul class="doc-list">
+<li>数学逻辑与离散基础：集合计数、函数映射、分类与分步、排列组合、命题真假。</li>
+<li>初等算法与简单贪心：枚举边界、模拟状态变化、贪心策略与反例。</li>
+<li>递归思维：递归出口、规模变化、调用与回溯；用小规模实例手推。</li>
+<li>数据结构：数组与字符串下标、栈后进先出、队列先进先出。</li>
+<li>代码分析与复杂度：逐行跟踪变量、循环次数计数、常见增长级别辨析。</li>
+</ul>
+<p>每章依次进行概念教学、例题精讲、至少 5 道章节练习和错题复盘。完成章节学习后，再进行 120 分钟综合模拟。建议先限时独立作答，再逐题订正并记录错因。</p>
+<h2 class="section-title">模拟卷说明</h2>
+<p>网站模拟卷是练习材料，不是官方试卷。当前题库共 25 题（18 道选择、7 道填空），与考纲约 60%/40% 的比例略有差异。若要严格按比例编卷，应调整为 15 道选择和 10 道填空。</p>
+<p>已在 <code>temp/</code> 找到用户下载的网易文章《分享：2025海淀区中小学信息学竞赛第二赛段（入门组）题目+详细解析（文字版）》。文章列出 34 题，称考试 100 分钟、满分 100 分；结构为 20 道单选（60 分）、4 道程序阅读填空（20 分）、10 道填空（20 分）。这与本目录参考 PDF 的 120 分钟存在冲突。网站模考继续遵循当前参考 PDF 的 120 分钟要求，2025 原卷应另设 100 分钟历史试卷。</p>
+<p>文章正文没有附完整答案：只显示若干题的答案/解析，程序阅读和末尾若干题缺少完整代码、图片或答案。因此原文可作为题面来源，但缺失部分须另行求解或补齐后才能称为完整解析。不能把推导答案标成官方答案。</p>
+      </article>
+    
+      <!-- 文档：02. 核心知识模块教学设计 -->
+      <article class="doc-article " id="pane-doc2">
+        <div class="doc-meta-bar">
+          <span class="badge-tag">教研纲要</span>
+          <span class="doc-filename">源文件：docs_stage2/02_四大核心知识模块深度教学设计.md</span>
+        </div>
+        <h1 class="page-title">第二赛段核心知识模块教学设计</h1>
+<p>本设计按 PDF 中第二赛段考纲组织。集合与计数、算法、递归、数据结构、代码分析分别在网站五个章节中练习；下列内容是概念讲授提纲，题目以网站题库为准。</p>
+<h2 class="section-title">1. 数学逻辑与离散基础</h2>
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>A ∪ B</th><th>=</th><th>A</th><th>+</th><th>B</th><th>-</th><th>A ∩ B</th></tr></thead><tbody>
+</tbody></table></div>
+<ul class="doc-list">
+<li>函数要求定义域中的每个输入恰好对应一个输出；不同输入可以对应同一输出。</li>
+<li>加法原理用于互斥分类，乘法原理用于连续分步。排列考虑顺序，组合不考虑顺序。</li>
+<li>命题推理通过真值和条件逐项检查；“若 P 则 Q”的逆否命题为“若非 Q 则非 P”，两者等价。</li>
+<li>讲解时使用小集合、列表或树状图，要求学生说明分类互斥且覆盖完整。</li>
+</ul>
+<h2 class="section-title">2. 初等算法与简单贪心</h2>
+<ul class="doc-list">
+<li>枚举须保证不重不漏；根据约束缩小范围时，要能说明被剪去的情况不可能成为答案。</li>
+<li>模拟先明确状态、初值、每一步规则和停止条件，再用表格跟踪状态。</li>
+<li>贪心每步做局部选择，但局部最优不自动保证全局最优。用反例检验策略，再讨论适用条件。</li>
+<li>区间调度的经典策略是按结束时间升序选择不冲突活动；这是特定问题的结论，不可推广成所有问题都选“最早”或“最短”。</li>
+</ul>
+<h2 class="section-title">3. 递归思维</h2>
+<p>正确递归要有明确的终止条件、朝终止条件推进的子问题，以及返回时如何组合答案。用 <code>fact(n) = n * fact(n - 1)</code> 且 <code>fact(0) = 1</code> 示范调用和回溯。斐波那契朴素递归会重复计算；汉诺塔移动次数满足 <code>H(n) = 2H(n - 1) + 1</code>，故 <code>H(n) = 2ⁿ - 1</code>。请限制示例规模，避免把递归误解成无限展开。</p>
+<h2 class="section-title">4. 数据结构与代码分析</h2>
+<ul class="doc-list">
+<li>数组下标从 0 开始；长度为 n 的字符串非空连续子串数为 <code>n(n+1)/2</code>，子序列不要求连续。</li>
+<li>栈是后进先出，可用于括号匹配；队列是先进先出。循环队列需根据具体约定理解队头、队尾和空满判定。</li>
+<li>代码跟踪按语句记录变量，不跳步。复杂度描述输入规模增长趋势：单层 n 次循环通常为 <code>O(n)</code>，每次翻倍的循环通常为 <code>O(log n)</code>；嵌套循环需按真实执行次数分析。</li>
+<li>递归的额外空间通常与最大调用深度有关；运行时间和空间复杂度是不同问题。</li>
+</ul>
+<h2 class="section-title">教学闭环</h2>
+<p>每节按“先讲概念 - 手算例题 - 学生复述规则 - 至少 5 道独立练习 - 错题归因”进行。错因分为概念误解、边界遗漏、计算错误、代码跟踪跳步和策略未经证明。每章练习后安排限时小测，最后进行 120 分钟综合练习。</p>
+      </article>
+    
+      <!-- 文档：03. 递归与初等算法突破指南 -->
+      <article class="doc-article " id="pane-doc3">
+        <div class="doc-meta-bar">
+          <span class="badge-tag">教研纲要</span>
+          <span class="doc-filename">源文件：docs_stage2/03_递归与初等算法专项突破指南.md</span>
+        </div>
+        <h1 class="page-title">递归与初等算法专项练习指南</h1>
+<h2 class="section-title">递归的三个检查点</h2>
+<ul class="doc-list">
+<li>终止条件：最小子问题直接给出答案。</li>
+<li>递归推进：每次调用都向终止条件靠近。</li>
+<li>回溯合并：子问题返回后，当前层如何得到答案。</li>
+</ul>
+<p>例如阶乘定义为 <code>fact(0) = 1</code>，<code>fact(n) = n * fact(n - 1)</code>（n > 0）。计算 <code>fact(4)</code> 时先到达 <code>fact(0)</code>，再依次返回 <code>1、1、2、6、24</code>。板书时分开画“调用下行”和“结果返回”，避免把两阶段混在一起。</p>
+<h2 class="section-title">常见递归模型</h2>
+<ul class="doc-list">
+<li>线性递归：每层只调用一个规模更小的子问题，如阶乘。</li>
+<li>双分支递归：斐波那契朴素定义会重复计算同一项；不要笼统声称所有双分支递归都恰为 <code>O(2ⁿ)</code>，应结合递推式分析。</li>
+<li>汉诺塔：<code>H(1) = 1</code>，<code>H(n) = 2H(n - 1) + 1</code>，所以 <code>H(n) = 2ⁿ - 1</code>。</li>
+<li>递归与循环可表达相同计算过程，但递归调用会占用调用栈；最大递归深度决定相关额外空间。</li>
+</ul>
+<h2 class="section-title">初等算法解题步骤</h2>
+<p><strong>枚举</strong>：列出变量范围，检查边界，确保每个候选恰好检查一次。能用约束缩短范围时，写明数学依据。</p>
+<p><strong>模拟</strong>：写清状态、初始值、转换规则和结束条件；用表格记录至少前几步，随后核对最终状态。</p>
+<p><strong>贪心</strong>：明确每一步的选择规则，用小例子和反例测试。仅在题目具有相应性质或能给出证明时采用。区间调度按结束时间升序选择是经典特例；零钱面额改变后，贪心可能失效。</p>
+<h2 class="section-title">课堂训练流程</h2>
+<p>每个模型先做小规模手算，再让学生独立画调用树或状态表，最后分析复杂度和边界。练习应覆盖：递归出口辨析、调用返回值、枚举范围、模拟过程和贪心反例。发现错误后指出错在终止条件、状态更新、候选遗漏或策略假设中的哪一项。</p>
+      </article>
+    
+      <!-- 文档：04. 综合题库与测评规范 -->
+      <article class="doc-article " id="pane-doc4">
+        <div class="doc-meta-bar">
+          <span class="badge-tag">教研纲要</span>
+          <span class="doc-filename">源文件：docs_stage2/04_第二赛段综合题库与全真测评规范.md</span>
+        </div>
+        <h1 class="page-title">海淀信息学竞赛第二赛段·计算思维挑战赛</h1>
+<h2 class="section-title">04. 第二赛段综合题库与全真测评规范</h2>
+<p>---</p>
+<h3 class="doc-subhead">一、 题库结构与分布蓝图</h3>
+<p>根据参考 PDF，第二赛段为 120 分钟集中笔试，题型为单项选择（约 60%）和填空（约 40%）。本网站构建章节练习与 25 题综合模拟两层测验。模拟卷是练习卷，不代表官方试卷。</p>
+<pre class="code-box"><code>                    ┌───────────────────────────────┐
+                    │     第二赛段测评题库全景      │
+                    └───────────────┬───────────────┘
+                                    │
+        ┌───────────────────────────┴───────────────────────────┐
+        ▼                                                       ▼
+【各章节独立强化过关测验】                             【120分钟全真模拟冲刺试卷】
+- 5 大核心章节，每章至少 5 道练习题
+- 25 题综合模拟卷，满分 100 分
+- 章节练习即时反馈；模拟卷提供计时、答题卡和五维诊断</code></pre>
+<p>---</p>
+<h3 class="doc-subhead">二、 章节强化过关测验分布（每章 5 题，共 25 题）</h3>
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>章节编号</th><th>章节名称</th><th>题目考点分布</th><th>核心考查点</th></tr></thead><tbody>
+<tr><td>**Ch.01**</td><td>**数学逻辑与离散基础**</td><td>Q1. 集合交并补与子集<br>Q2. 容斥原理应用计算<br>Q3. 加乘计数与排列组合<br>Q4. 鸽巢原理（抽屉原理）<br>Q5. 逆否命题与逻辑真假推理</td><td>集合交集并集算元素个数、活动选课容斥、不重不漏计数、保证相同颜色的最少抽取数</td></tr>
+<tr><td>**Ch.02**</td><td>**初等算法与贪心策略**</td><td>Q1. 枚举算法剪枝优化<br>Q2. 二维网格走步模拟<br>Q3. 排队打水贪心模型<br>Q4. 不相交区间调度活动安排<br>Q5. 贪心反例辨析（零钱找零）</td><td>缩小循环范围、方向数组应用、总等待时间最小化、贪心结束时间最早、非最优反例识别</td></tr>
+<tr><td>**Ch.03**</td><td>**递归思维与分治神技**</td><td>Q1. 递归三要素<br>Q2. 阶乘与斐波那契调用<br>Q3. 汉诺塔步数 2ⁿ - 1<br>Q4. 递归与递推<br>Q5. 递归返回值</td><td>终止条件、重复计算、调用树、自顶向下与自底向上</td></tr>
+<tr><td>**Ch.04**</td><td>**进阶数据结构与特性**</td><td>Q1. 二维数组下标与线性映射<br>Q2. 字符串非空子串计数公式<br>Q3. 栈在括号匹配中的应用<br>Q4. 循环队列队头队尾模运算<br>Q5. 字符串子串 vs 子序列辨析</td><td>`a[r][c]` 展平公式 `r*C+c`、`n(n+1)/2` 子串公式、栈后进先出配对、循环队列 `(rear+1)%M`</td></tr>
+<tr><td>**Ch.05**</td><td>**代码分析与复杂度推导**</td><td>Q1. 双重循环变量累计追踪<br>Q2. 递归函数单步调用推算输出<br>Q3. 循环步长倍增的时间复杂度 O(log n)<br>Q4. 常见算法复杂度大小关系排序<br>Q5. 递归调用深度与空间复杂度</td><td>列草稿纸跟踪表、斐波那契递归树展开、`i*=2` 对数级时间复杂度、空间复杂度栈深度分析</td></tr>
+</tbody></table></div>
+<p>---</p>
+<h3 class="doc-subhead">三、 全真模拟考试卷（25 题组卷规范与评分细则）</h3>
+<ul class="doc-list">
+<li><strong>考试时长</strong>：严格设定为 <strong>120 分钟（2 小时）</strong>，真实还原集中笔试的时间节奏。</li>
+<li><strong>分值构成</strong>：当前题库共 25 题，每题 4 分，满分 100 分。</li>
+<li><strong>第一部分：单项选择题（18 题，共 72 分）</strong>。</li>
+<li><strong>第二部分：填空题（7 题，共 28 分）</strong>。</li>
+<li>题型数量与考纲约 60%/40% 的比例接近但不完全相同；如需严格贴合比例，应调整为 15 道选择、10 道填空。</li>
+<li>参考链接目前无法读取，故不能确认任何题目为 2025 年原题。题库中标注的“真题”仅可视为未核实的来源信息，发布前应核对原卷；已核实前请按原创练习/改编题使用。</li>
+</ul>
+<p>---</p>
+<h3 class="doc-subhead">四、 五维计算思维雷达评估模型</h3>
+<p>学员交卷后，评测引擎立即在 5 个计算思维维度上进行精准能力切片，并在 Canvas 上绘制出五维能力雷达图：</p>
+<pre class="code-box"><code>                          1. 数学逻辑与离散基础
+                                   ▲
+                                  / \
+                                 /   \
+                                /  ★  \
+ 5. 程序推导与复杂度 ◄─────────┼───────┼─────────► 2. 初等算法与贪心策略
+                                \     /
+                                 \   /
+                                  \ /
+                         4. 进阶数据结构与特性
+                                   ▲
+                                   │
+                         3. 递归思维与分治神技</code></pre>
+<ul class="doc-list">
+<li><strong>数学逻辑与离散基础</strong>：集合运算、排列组合、鸽巢抽屉原理、逻辑真假判定；</li>
+<li><strong>初等算法与贪心策略</strong>：枚举剪枝、情景模拟、贪心选择性质与反例辨析；</li>
+<li><strong>递归思维与分治神技</strong>：递归出口设置、状态转移、汉诺塔模型、递归树推算；</li>
+<li><strong>进阶数据结构与特性</strong>：二维矩阵坐标映射、子串子序列、栈应用、循环队列；</li>
+<li><strong>程序推导与复杂度</strong>：C++ 代码阅读、变量跟踪、时间复杂度大 O 阶与空间调用栈推算。</li>
+</ul>
+<h4 class="doc-subsubhead">能力等级认证称号：</h4>
+<ul class="doc-list">
+<li><strong>90 ~ 100 分</strong>：【计算思维小宗师 · 区赛金奖种子选手 🏆】</li>
+<li><strong>76 ~ 88 分</strong>：【算法进阶小极客 · 冲奖实力派 🌟】</li>
+<li><strong>60 ~ 72 分</strong>：【思维探索小达人 · 稳健通关者 🚀】</li>
+<li><strong>60 分以下</strong>：【潜能蓄力小新星 · 查漏补缺中 🌱】</li>
+</ul>
+      </article>
+    
+      <!-- 文档：05. 网站交互架构设计 -->
+      <article class="doc-article " id="pane-doc5">
+        <div class="doc-meta-bar">
+          <span class="badge-tag">教研纲要</span>
+          <span class="doc-filename">源文件：docs_stage2/05_第二赛段网站交互架构设计.md</span>
+        </div>
+        <h1 class="page-title">海淀信息学竞赛第二赛段：网站交互架构</h1>
+<h2 class="section-title">目录</h2>
+<p>网站位于 <code>web_stage2/</code>，采用原生 HTML、CSS 和 JavaScript，可直接离线打开 <code>index.html</code>。</p>
+<pre class="code-box"><code>web_stage2/
+├── index.html
+├── modules/
+│   ├── 01_math-logic.html
+│   ├── 02_elementary-algorithms.html
+│   ├── 03_recursion-thinking.html
+│   ├── 04_data-structures-adv.html
+│   └── 05_code-analysis-complexity.html
+├── exam/exam.html
+└── assets/
+    ├── css/
+    └── js/</code></pre>
+<h2 class="section-title">学习与测验</h2>
+<p>五个章节分别覆盖数学逻辑、初等算法、递归、数据结构、代码分析与复杂度。每章至少提供 5 道练习题。综合模拟卷为 120 分钟、25 题、每题 4 分；现有题库是 18 道选择题和 7 道填空题。模拟卷是练习材料，不应宣传为官方试卷。</p>
+<p>章节页提供集合容斥、方向数组、汉诺塔、二维数组等互动演示。考试页提供答题卡、计时、标记和交卷诊断。所有交互均应在离线状态下可用，学习记录保存在当前浏览器本地存储中。</p>
+<h2 class="section-title">内容边界与来源</h2>
+<p>本网站按 <code>海淀区信息学比赛考查内容参考.pdf</code> 中第二赛段的范围设计：集合、函数、排列组合、逻辑命题；枚举、模拟、递归、简单贪心；数组、字符串、队列、栈；代码功能、输出和时间复杂度推理。</p>
+<p>用户提供的网易文章链接在本次审计中无法读取，因此无法据此核实去年试题，也无法确认题库中任何题目为原题。未取得原卷前，应将带“真题”字样的内容视为来源未核验的练习或改编题。</p>
+<h2 class="section-title">运行注意</h2>
+<p>双击 <code>web_stage2/index.html</code> 可打开学习门户。若浏览器限制本地文件的脚本或存储行为，可在项目目录启动任意静态 HTTP 服务后访问。清除浏览器站点数据会删除本地学习进度和模考状态。</p>
+      </article>
+    
+      <!-- 文档：06. 2025入门组原卷核对说明 -->
+      <article class="doc-article " id="pane-doc6">
+        <div class="doc-meta-bar">
+          <span class="badge-tag">教研纲要</span>
+          <span class="doc-filename">源文件：docs_stage2/06_2025入门组原卷核对与整理说明.md</span>
+        </div>
+        <h1 class="page-title">2025 年第二赛段入门组原卷核对</h1>
+<h2 class="section-title">来源与考试结构</h2>
+<p>本地来源：<code>temp/分享：2025海淀区中小学信息学竞赛第二赛段（入门组）题目+详细解析（文字版）_值域_整数_字符串_f(x)_spiderlinebreak_网易订阅.html</code>。这是网易号转载的文字版，并非官方发布文件。</p>
+<p>文章标注考试时间 100 分钟、满分 100 分：第 1-20 题为单选题（每题 3 分，共 60 分）；第 21-24 题为程序阅读与填空（每题 5 分，共 20 分）；第 25-34 题为填空（每题 2 分，共 20 分）。这与本项目考纲 PDF 所写第二赛段 120 分钟不同。历史原卷练习应按文章所述 100 分钟计时；本年度模拟仍按 PDF 的 120 分钟设置。</p>
+<h2 class="section-title">现有章节题对应原卷</h2>
+<p>目前网站章节练习中可对应到原卷的题目如下：数学逻辑章对应 Q8-Q12、Q15；算法章对应 Q4-Q7 和 Q33；递归章对应 Q13、Q14、Q26，以及 Q18 的改编题；数据结构章对应 Q1-Q3、Q27、Q30；代码分析章对应 Q16、Q17、Q19、Q20（其中部分为改编或主题相同练习）。<code>quiz-data-stage2.js</code> 中每道题的来源字段仍需逐题对照题干，确认原题/改编后才能保留精确题号。</p>
+<h2 class="section-title">答案核验状态</h2>
+<p>文章没有提供完整答案页。题面中明确给出的少数答案包括 Q25（150、225）和 Q27（2）；其余题目需按题意自行推导。Q16、Q21-Q24 的代码在网页文字版中丢失了关键符号或代码行，Q34 依赖未包含在文字中的图形，不能据当前 HTML 还原为可靠的完整题目/答案。正式制作可答题的历史试卷前，应补齐代码截图或可复制源码及 Q34 配图。</p>
+<h2 class="section-title">Q33 删数题校验</h2>
+<p><code>1</code> 到 <code>30</code> 拼接后共 <code>9 + 21 × 2 = 51</code> 位，删去 45 位，保留 6 位。按“保留字符相对顺序不变”的最大子序列规则，结果为 <code>998930</code>。可用单调栈从左到右扫描：若当前数字大于栈顶且仍有删除额度，就删除栈顶；最后再从尾部补足剩余删除数。答案正确，但旧解析中“保留前三位为 9、9、8”说法与结果 <code>998930</code> 矛盾，已修正为应展示的保留数字是 9、9、8、9、3、0，并建议用上述完整规则演示。</p>
+<h2 class="section-title">后续整理原则</h2>
+<p>展示原卷时保留原题号和原题条件；改编题清楚标“改编练习”。解析分为“原文给出的答案”和“自行推导并核验”两类。原文缺失内容不猜补，先列为待补资料。交互版历史试卷应按 34 题、100 分钟、20 选择 + 4 程序填空 + 10 填空设计；代码题填空和 Q34 在缺少原图/源码前不计入完整可评分题目。</p>
+      </article>
+    
+    </main>
+  </div>
+
+  <!-- 网页底部 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h4>海淀区信息学比赛（HOI）第二赛段专项特训</h4>
+          <p>面向晋级学员的进阶计算思维教学与自测平台 · 典雅米纸风学术阅读排版</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">课程主页</a>
+          <a href="docs_reader.html">在线教研文档</a>
+          <a href="exam/exam.html">全真测评系统</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 海淀信息学竞赛计算思维特训系统 · 纯正米纸风 · 舒适大字号</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.doc-menu-btn');
+      const articles = document.querySelectorAll('.doc-article');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.dataset.target;
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          articles.forEach(art => {
+            art.classList.remove('active-doc');
+            if (art.id === targetId) {
+              art.classList.add('active-doc');
+            }
+          });
+
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模块一：数学逻辑与离散基础 · 2026海淀信息学特训</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/interactive.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span class="brand-badge">HOI 2026</span>
+        <span class="brand-title">海淀信息学 · 第二赛段进阶挑战</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">首页大纲</a>
+        <a href="01_math-logic.html" class="nav-link active">1. 数学逻辑</a>
+        <a href="02_elementary-algorithms.html" class="nav-link">2. 初等算法</a>
+        <a href="03_recursion-thinking.html" class="nav-link">3. 递归突破</a>
+        <a href="04_data-structures-adv.html" class="nav-link">4. 高级结构</a>
+        <a href="05_code-analysis-complexity.html" class="nav-link">5. 代码分析</a>
+        <a href="../docs_reader.html" class="nav-link">教研文档</a>
+        <a href="../exam/exam.html" class="nav-link nav-btn-highlight">120分全真模考</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container layout-with-sidebar">
+    <!-- 左侧目录导航 -->
+    <aside class="sidebar-nav">
+      <div class="sidebar-title">模块一 知识导航</div>
+      <ul class="sidebar-menu">
+        <li><a href="#sec-intro" class="sidebar-link active">1.1 模块定位与考情</a></li>
+        <li><a href="#sec-venn" class="sidebar-link">1.2 集合与容斥原理</a></li>
+        <li><a href="#sec-func" class="sidebar-link">1.3 函数映射与复合运算</a></li>
+        <li><a href="#sec-comb" class="sidebar-link">1.4 排列组合进阶三法宝</a></li>
+        <li><a href="#sec-logic" class="sidebar-link">1.5 逻辑命题与真假推理</a></li>
+        <li><a href="#sec-quiz" class="sidebar-link text-amber">1.6 模块过关测试 (真题)</a></li>
+      </ul>
+      <div class="sidebar-box">
+        <div class="box-title">真题覆盖</div>
+        <p class="box-text">包含 2025 年海淀初赛真题第 8、9、10、11、12、15 题原题与深度变式！</p>
+      </div>
+    </aside>
+
+    <!-- 右侧主体内容 -->
+    <main class="main-content">
+      <!-- 模块标题 -->
+      <div class="content-header" id="sec-intro">
+        <div class="badge-tag">模块 01 · 必考基石</div>
+        <h1 class="page-title">数学逻辑与离散基础</h1>
+        <p class="lead-text">
+          在海淀第二赛段（计算思维）中，数学逻辑类题目占比高达 <strong>30%</strong>。计算机程序的本质是离散数学模型的物理执行，本模块将带你建立严密的离散推演能力。
+        </p>
+      </div>
+
+      <!-- 1.2 集合与容斥原理 -->
+      <section class="doc-section" id="sec-venn">
+        <h2 class="section-title">1.2 集合与容斥原理（Inclusion-Exclusion Principle）</h2>
+        <p>集合是具有某种特定性质的对象聚集。在算法计数中，经常遇到“求满足条件 A 或条件 B 的元素总数”的问题。为避免对同时满足 A 和 B 的重叠部分重复计算，我们需要使用<strong>容斥原理</strong>。</p>
+
+        <div class="info-card">
+          <h4>📌 核心计算公式</h4>
+          <p><strong>两集合容斥公式：</strong></p>
+          <div class="formula-box">|A ∪ B| = |A| + |B| - |A ∩ B|</div>
+          <p><strong>三集合容斥公式：</strong></p>
+          <div class="formula-box">|A ∪ B ∪ C| = |A| + |B| + |C| - (|A ∩ B| + |B ∩ C| + |C ∩ A|) + |A ∩ B ∩ C|</div>
+          <p class="formula-tip">口诀：“奇加偶减” —— 奇数个集合的交集取正号累加，偶数个集合的交集取负号扣除。</p>
+        </div>
+
+        <!-- 容斥原理韦恩图沙盒 -->
+        <div class="interactive-sandbox">
+          <div class="sandbox-header">
+            <div>
+              <span class="sandbox-badge">互动实验 01</span>
+              <h3 class="sandbox-title">容斥原理韦恩图（Venn Diagram）动态实验室</h3>
+            </div>
+          </div>
+          <p class="sandbox-desc">拖动下方滑块调节集合 A、集合 B 以及交集 A ∩ B 的元素数量，观察重叠阴影与总并集 |A ∪ B| 的动态计算过程：</p>
+
+          <div class="venn-container">
+            <div class="venn-svg-wrap" id="vennCanvasContainer">
+              <!-- SVG 动态绘制在 viz-stage2.js 中 -->
+            </div>
+            <div class="venn-info">
+              <div class="venn-badge" id="vennTotalBadge">并集 |A ∪ B| = 70</div>
+              <div class="venn-formula" id="vennFormulaText">70 = 40 + 50 - 20</div>
+            </div>
+          </div>
+
+          <div class="venn-controls-grid">
+            <div class="control-group">
+              <label>集合 A 大小 |A|：<span id="labelValA">40</span></label>
+              <input type="range" id="inputVennA" min="10" max="100" value="40">
+            </div>
+            <div class="control-group">
+              <label>集合 B 大小 |B|：<span id="labelValB">50</span></label>
+              <input type="range" id="inputVennB" min="10" max="100" value="50">
+            </div>
+            <div class="control-group">
+              <label>交集大小 |A ∩ B|：<span id="labelValAB">20</span></label>
+              <input type="range" id="inputVennAB" min="0" max="40" value="20">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1.3 函数映射与复合运算 -->
+      <section class="doc-section" id="sec-func">
+        <h2 class="section-title">1.3 函数映射与复合运算（真题直击）</h2>
+        <p>在 2025 年海淀初赛中，连续考察了两道关于<strong>函数本质</strong>的题目。在现代数学与编程中，函数代表一种确定性规则：每个输入必须对应唯一确定的输出。</p>
+
+        <div class="grid-2-col">
+          <div class="card">
+            <div class="card-tag">真题原点 · 2025 第11题</div>
+            <h3>集合间的映射函数个数</h3>
+            <p>设集合 A = {1, 2, 3} 为定义域，B = {a, b, c} 为值域。从 A 到 B 的不同函数个数是多少？</p>
+            <div class="deduction-box">
+              <strong>思维模型：</strong><br>
+              • 元素 1 在 B 中有 3 种选择；<br>
+              • 元素 2 在 B 中有 3 种选择；<br>
+              • 元素 3 在 B 中有 3 种选择；<br>
+              根据乘法原理，总映射数 = 3 × 3 × 3 = <strong>3³ = 27 种</strong>。<br>
+              <span class="text-muted">（推广规律：若 |A| = m, |B| = n，则函数总数为 nᵐ）</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-tag">真题原点 · 2025 第12题</div>
+            <h3>复合函数运算 f(g(x))</h3>
+            <p>若已知 f(x) = 2x + 3 与 g(x) = x - 1，求 f(g(2)) 的值。</p>
+            <div class="deduction-box">
+              <strong>逐步求值法（由内向外）：</strong><br>
+              1. 先算内层：g(2) = 2 - 1 = 1；<br>
+              2. 再算外层：将结果 1 代入 f(x)，即求 f(1)；<br>
+              3. f(1) = 2 × 1 + 3 = <strong>5</strong>。<br>
+              <span class="text-tip">提示：与 Scratch 中嵌套积木积木逻辑完全一致！</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1.4 排列组合进阶三法宝 -->
+      <section class="doc-section" id="sec-comb">
+        <h2 class="section-title">1.4 排列组合进阶三法宝（捆绑、插空、隔板）</h2>
+        <p>第二赛段的计数问题往往带有复杂的限制条件（如“必须相邻”、“不能相邻”或“正整数解”）。掌握以下三大经典模型，即可秒杀此类题目：</p>
+
+        <div class="method-card">
+          <div class="method-header">
+            <span class="method-num">法宝 1</span>
+            <h3 class="method-name">捆绑法 —— 处理“必须相邻”问题</h3>
+          </div>
+          <p><strong>核心思路：</strong>将必须相邻的元素“打包捆绑”视作一个单一的大元素，先与其他元素一起全排列，最后乘上大元素内部各个小元素的排列数。</p>
+          <div class="example-box">
+            <strong>典例（2025 真题 Q9）：</strong>语文书 3 本必须相邻，数学书 1 本，英语书 2 本。<br>
+            • 把 3 本语文书捆成一个大元素 [语]，内部全排列为 A(3, 3) = 6 种；<br>
+            • [语] 与 1 本数学书进行排列，排列数为 A(2, 2) = 2 种。
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="method-header">
+            <span class="method-num">法宝 2</span>
+            <h3 class="method-name">插空法 —— 处理“不能相邻”问题</h3>
+          </div>
+          <p><strong>核心思路：</strong>先排好没有不相邻限制的普通元素，这些元素之间以及两端会形成若干个“空隙”，再将不能相邻的特殊元素插入到这些空隙中。</p>
+          <div class="example-box">
+            <strong>接上例：</strong>[语] 与 数学书 排好后（形如 <code>_ [语] _ [数] _</code>），共产生 3 个互不相邻的空隙。<br>
+            • 2 本英语书不能相邻，插入这 3 个空位中，方案数为 A(3, 2) = 3 × 2 = 6 种；<br>
+            • 乘法原理总计：6 × 2 × 6 = <strong>72 种</strong>。
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="method-header">
+            <span class="method-num">法宝 3</span>
+            <h3 class="method-name">隔板法 —— 处理“不定方程正整数解”</h3>
+          </div>
+          <p><strong>核心思路：</strong>将 n 个相同的小球排成一排，在小球之间形成的 n - 1 个空隙中插入 k - 1 块隔板，将其分成 k 份。</p>
+          <div class="example-box">
+            <strong>典例（2025 真题 Q15）：</strong>求方程 x + y + z = 12 的正整数解组数（x, y, z ≥ 1）。<br>
+            • 12 个相同小球排成一排，内部有 12 - 1 = 11 个空隙；<br>
+            • 分成 3 份需要插入 3 - 1 = 2 块隔板；<br>
+            • 解的组数等于组合数 C(11, 2) = (11 × 10) / (2 × 1) = <strong>55 组</strong>。
+          </div>
+        </div>
+      </section>
+
+      <!-- 1.5 逻辑命题与真假推理 -->
+      <section class="doc-section" id="sec-logic">
+        <h2 class="section-title">1.5 逻辑命题与真假推理（五人猜城市推演）</h2>
+        <p>逻辑推理题是初赛必考题型。解决“每人只答对一半”题型的核心是<strong>假设分析法</strong>或<strong>排除代入法</strong>。</p>
+        
+        <div class="card">
+          <div class="card-tag">2025 真题第8题 全程推演示范</div>
+          <p>五位同学猜五个城市 A、B、C、D、E（北京、天津、湖北、重庆、吉林），每人恰好猜对一半：</p>
+          <ul class="dialog-list">
+            <li><strong>甲：</strong>B 是北京，E 是天津</li>
+            <li><strong>乙：</strong>B 是湖北，D 是重庆</li>
+            <li><strong>丙：</strong>C 是湖北，D 是吉林</li>
+            <li><strong>丁：</strong>A 是重庆，E 是吉林</li>
+            <li><strong>戊：</strong>B 是天津，C 是北京</li>
+          </ul>
+
+          <div class="step-guide">
+            <div class="step-item">
+              <div class="step-badge">突破口假设</div>
+              <div class="step-desc">观察发言频率：关于 B 的猜测最多（甲说B北京，乙说B湖北，戊说B天津）。五个城市各不相同，因此 B 只能是其中之一。假设 <strong>B 是湖北</strong> 为真。</div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">连锁推导</div>
+              <div class="step-desc">
+                1. 乙前半句“B是湖北”为真，则后半句“D是重庆”必为假；<br>
+                2. 丙前半句“C是湖北”必为假（因为B已经是湖北），则后半句“D是吉林”必为真；<br>
+                3. 丁后半句“E是吉林”必为假（因为D已经是吉林），则前半句“A是重庆”必为真；<br>
+                4. 甲前半句“B是北京”必为假（B是湖北），则后半句“E是天津”必为真；<br>
+                5. 此时已确定：A=重庆, B=湖北, D=吉林, E=天津。只剩 C 未定，剩下唯一城市是北京，即 C=北京。<br>
+                6. 验证戊：B是天津(假)，C是北京(真)，恰好对一半！全部条件完美吻合！
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">结论</div>
+              <div class="step-desc text-green"><strong>A是重庆，B是湖北，C是北京，D是吉林，E是天津。</strong>（对应选项 D）</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1.6 模块过关测试 -->
+      <section class="doc-section" id="sec-quiz">
+        <div class="section-header-row">
+          <div>
+            <div class="badge-tag tag-gold">课后强化测验</div>
+            <h2 class="section-title">模块一 · 全真过关检测（共6题）</h2>
+          </div>
+          <div class="section-meta">做完点击选项即时核对标准答案与解析</div>
+        </div>
+
+        <div class="quiz-container" id="module1QuizList">
+          <!-- 题目1 -->
+          <div class="quiz-block" data-quiz-id="m1_q1" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 1 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第11题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              在数学中，函数是从定义域到值域的一种特殊对应关系，要求定义域中的每一个元素都对应值域中唯一确定的元素。设集合 A = {1, 2, 3}，B = {a, b, c}，若 A 作为定义域，B 作为值域，则从 A 到 B 的不同函数个数为（ ）。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 6</div>
+              <div class="quiz-option" data-key="B">B. 9</div>
+              <div class="quiz-option" data-key="C">C. 27</div>
+              <div class="quiz-option" data-key="D">D. 81</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              对于定义域 A 中的每一个元素，在值域 B 中都有 3 种可能的对应选择：元素 1 有 3 种选择，元素 2 有 3 种选择，元素 3 也有 3 种选择。根据乘法原理，总的映射函数个数为 3 × 3 × 3 = 3³ = 27 种。故选 C。
+            </div>
+          </div>
+
+          <!-- 题目2 -->
+          <div class="quiz-block" data-quiz-id="m1_q2" data-correct="B">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 2 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第12题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              函数是一种数学运算规则。若已知两个函数分别为 f(x) = 2x + 3 与 g(x) = x - 1，那么复合函数运算 f(g(2)) 的计算结果是多少？（ ）
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 3</div>
+              <div class="quiz-option" data-key="B">B. 5</div>
+              <div class="quiz-option" data-key="C">C. 7</div>
+              <div class="quiz-option" data-key="D">D. 9</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              第一步算内层：g(2) = 2 - 1 = 1；<br>
+              第二步算外层：f(1) = 2 × 1 + 3 = 5。故选 B。
+            </div>
+          </div>
+
+          <!-- 题目3 -->
+          <div class="quiz-block" data-quiz-id="m1_q3" data-correct="A">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 3 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第15题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              方程 x + y + z = 12 的正整数解（即要求 x ≥ 1, y ≥ 1, z ≥ 1）共有多少组？（ ）
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 55</div>
+              <div class="quiz-option" data-key="B">B. 66</div>
+              <div class="quiz-option" data-key="C">C. 121</div>
+              <div class="quiz-option" data-key="D">D. 132</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              经典隔板法模型：12 个相同小球之间有 11 个内部空隙，在 11 个空隙中插入 2 块隔板分为 3 份。选法数为组合数 C(11, 2) = (11 × 10) / (2 × 1) = 55 组。故选 A。
+            </div>
+          </div>
+
+          <!-- 题目4 -->
+          <div class="quiz-block" data-quiz-id="m1_q4" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 4 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第9题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              书架上有 6 本不同的书，其中语文书 3 本，数学书 1 本，英语书 2 本。若将这 6 本书排成一排，要求 3 本语文书必须相邻，而 2 本英语书不能相邻，则共有（ ）种不同的排法。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 36</div>
+              <div class="quiz-option" data-key="B">B. 48</div>
+              <div class="quiz-option" data-key="C">C. 72</div>
+              <div class="quiz-option" data-key="D">D. 96</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              捆绑法：3 本语文书排 A(3,3)=6 种；与数学书排 A(2,2)=2 种；产生 3 个空隙；<br>
+              插空法：2 本英语书插 3 个空隙 A(3,2)=6 种；<br>
+              总排法 = 6 × 2 × 6 = 72 种。故选 C。
+            </div>
+          </div>
+
+          <!-- 题目5 -->
+          <div class="quiz-block" data-quiz-id="m1_q5" data-correct="D">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 5 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第8题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              同学们玩猜城市游戏，地图上有标号 A、B、C、D、E 对应五座不同城市。五位同学每人只猜对了一半：<br>
+              甲说：B 是北京，E 是天津<br>
+              乙说：B 是湖北，D 是重庆<br>
+              丙说：C 是湖北，D 是吉林<br>
+              丁说：A 是重庆，E 是吉林<br>
+              戊说：B 是天津，C 是北京<br>
+              请问正确的城市对应关系是（ ）。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. A是重庆，B是天津，C是湖北，D是北京，E是吉林</div>
+              <div class="quiz-option" data-key="B">B. A是湖北，B是天津，C是重庆，D是吉林，E是北京</div>
+              <div class="quiz-option" data-key="C">C. A是重庆，B是湖北，C是北京，D是天津，E是吉林</div>
+              <div class="quiz-option" data-key="D">D. A是重庆，B是湖北，C是北京，D是吉林，E是天津</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              选项 D 中：甲对E、乙对B、丙对D、丁对A、戊对C，五人均恰好只猜对一半，且五座城市互不重复，完全成立。故选 D。
+            </div>
+          </div>
+
+          <!-- 题目6 -->
+          <div class="quiz-block" data-quiz-id="m1_q6" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 6 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第10题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              从集合 {1, 3, 5, 7} 中任取 2 个数字，从集合 {0, 2, 4, 6, 8} 中任取 2 个数字，组成没有重复数字（且无前导零）的四位数，其中能被 5 整除的数共有（ ）个。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 360</div>
+              <div class="quiz-option" data-key="B">B. 720</div>
+              <div class="quiz-option" data-key="C">C. 300</div>
+              <div class="quiz-option" data-key="D">D. 240</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              能被 5 整除末位只能是 0 或 5：<br>
+              • 末位为 0：偶数再选 1 个 C(4,1)=4，奇数选 2 个 C(4,2)=6，前三位排 A(3,3)=6，共 4×6×6 = 144 个；<br>
+              • 末位为 5：奇数再选 1 个 C(3,1)=3。若偶数含 0（C(4,1)=4，排法 2×2×1=4，计 3×4×4=48 个）；若偶数不含 0（C(4,2)=6，排法 A(3,3)=6，计 3×6×6=108 个）；合计 48+108 = 156 个；<br>
+              • 总计 = 144 + 156 = 300 个。故选 C。
+            </div>
+          </div>
+        </div>
+
+        <div class="next-module-banner">
+          <div>
+            <h4>恭喜完成模块一复习！</h4>
+            <p>点击下方按钮，继续探索下一个核心知识模块：初等算法与贪心思维。</p>
+          </div>
+          <a href="02_elementary-algorithms.html" class="btn btn-primary">前往模块二：初等算法 →</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/core.js"></script>
+  <script src="../assets/js/viz-stage2.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      HoiCoreStage2.init();
+      // 初始化韦恩图沙盒
+      HoiVizStage2.initVenn('vennCanvasContainer', 'inputVennA', 'inputVennB', 'inputVennAB', 'vennTotalBadge');
+    });
+  </script>
+</body>
+</html>

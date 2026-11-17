@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模块五：代码追踪与复杂度分析 · 2026海淀信息学特训</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/interactive.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span class="brand-badge">HOI 2026</span>
+        <span class="brand-title">海淀信息学 · 第二赛段进阶挑战</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">首页大纲</a>
+        <a href="01_math-logic.html" class="nav-link">1. 数学逻辑</a>
+        <a href="02_elementary-algorithms.html" class="nav-link">2. 初等算法</a>
+        <a href="03_recursion-thinking.html" class="nav-link">3. 递归突破</a>
+        <a href="04_data-structures-adv.html" class="nav-link">4. 高级结构</a>
+        <a href="05_code-analysis-complexity.html" class="nav-link active">5. 代码分析</a>
+        <a href="../docs_reader.html" class="nav-link">教研文档</a>
+        <a href="../exam/exam.html" class="nav-link nav-btn-highlight">120分全真模考</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container layout-with-sidebar">
+    <!-- 左侧目录导航 -->
+    <aside class="sidebar-nav">
+      <div class="sidebar-title">模块五 知识导航</div>
+      <ul class="sidebar-menu">
+        <li><a href="#sec-intro" class="sidebar-link active">5.1 模块定位与考情</a></li>
+        <li><a href="#sec-trace" class="sidebar-link">5.2 手工追踪与位运算</a></li>
+        <li><a href="#sec-bigo" class="sidebar-link">5.3 大 O 时间复杂度阶梯</a></li>
+        <li><a href="#sec-rec-tree" class="sidebar-link">5.4 递归树与组合数复杂度</a></li>
+        <li><a href="#sec-sandbox" class="sidebar-link">5.5 单步代码栈跟踪器</a></li>
+        <li><a href="#sec-quiz" class="sidebar-link text-amber">5.6 模块过关测试 (真题)</a></li>
+      </ul>
+      <div class="sidebar-box">
+        <div class="box-title">高分分水岭</div>
+        <p class="box-text">涵盖 2025 年真题第 16 题状态模拟、第 17 题异或交换、第 19 题 O(n log n) 与第 20 题组合数递归树 O(C(n, m))！</p>
+      </div>
+    </aside>
+
+    <!-- 右侧主体内容 -->
+    <main class="main-content">
+      <!-- 模块标题 -->
+      <div class="content-header" id="sec-intro">
+        <div class="badge-tag">模块 05 · 高分分水岭</div>
+        <h1 class="page-title">代码追踪与复杂度分析</h1>
+        <p class="lead-text">
+          在非上机编程的纸笔/机考测试中，纯手工阅读 C++ 代码并准确推导其变量流向与渐进复杂度，是区分“代码打字员”与“真正算法选手”的关键分水岭。
+        </p>
+      </div>
+
+      <!-- 5.2 手工追踪与位运算 -->
+      <section class="doc-section" id="sec-trace">
+        <h2 class="section-title">5.2 手工代码追踪与位运算自反性</h2>
+        <p>面对复杂的循环和判断，不要试图在脑中凭空“脑补”，而应在草稿纸上建立严谨的<strong>变量追踪表格</strong>。</p>
+
+        <div class="grid-2-col">
+          <div class="card">
+            <div class="card-tag">真题直击 · 2025 第17题</div>
+            <h3>位运算异或（XOR）自反性与无变量交换</h3>
+            <p>分析以下神奇的 C++ 函数：</p>
+            <pre><code>int calc(int x, int y) {
+    x = x ^ y;
+    y = x ^ y;
+    x = x ^ y;
+    return x;
+}</code></pre>
+            <div class="deduction-box">
+              <strong>异或核心性质：</strong><br>
+              1. 归零律：<code>a ^ a = 0</code>；<br>
+              2. 恒等律：<code>a ^ 0 = a</code>；<br>
+              3. 交换律与结合律：顺序可任意调整。<br>
+              <strong>推导演变：</strong><br>
+              • 第 1 步：x 变为 <code>x₀ ^ y₀</code>；<br>
+              • 第 2 步：y = x ^ y = (x₀ ^ y₀) ^ y₀ = x₀ ^ (y₀ ^ y₀) = x₀ ^ 0 = <strong>x₀</strong>（y 成功获得了原始的 x！）；<br>
+              • 第 3 步：x = x ^ y = (x₀ ^ y₀) ^ x₀ = (x₀ ^ x₀) ^ y₀ = 0 ^ y₀ = <strong>y₀</strong>（x 成功获得了原始的 y！）；<br>
+              • 最终返回 x，即返回<strong>原始的 y</strong>！
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>条件分支与变量累加跟踪表示范</h3>
+            <p>追踪以下循环片段的输出结果：</p>
+            <pre><code>int s = 0, i = 1;
+while (i <= 5) {
+    if (i % 2 == 1) s += i * 2;
+    else s += i;
+    i++;
+}</code></pre>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>循环轮次</th>
+                    <th>当前 i</th>
+                    <th>奇偶判断</th>
+                    <th>s 增量</th>
+                    <th>最新 s</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>1</td><td>奇数</td><td>+ 1 × 2 = 2</td><td>2</td></tr>
+                  <tr><td>2</td><td>2</td><td>偶数</td><td>+ 2</td><td>4</td></tr>
+                  <tr><td>3</td><td>3</td><td>奇数</td><td>+ 3 × 2 = 6</td><td>10</td></tr>
+                  <tr><td>4</td><td>4</td><td>偶数</td><td>+ 4</td><td>14</td></tr>
+                  <tr><td>5</td><td>5</td><td>奇数</td><td>+ 5 × 2 = 10</td><td><strong>24</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5.3 大 O 时间复杂度阶梯 -->
+      <section class="doc-section" id="sec-bigo">
+        <h2 class="section-title">5.3 大 O 渐进复杂度阶层与双重循环真题</h2>
+        <p>大 O 符号描述的是当输入规模 n 趋向无限大时，算法计算操作次数增长的<strong>渐进上界</strong>。在计算大 O 时，遵循两个原则：<br>
+        1. <strong>只保留最高阶项</strong>（低阶项在大规模时微不足道）；<br>
+        2. <strong>省略最高阶项的常数系数</strong>（如 5n² 简记为 O(n²)）。</p>
+
+        <div class="info-card">
+          <h4>📈 算法复杂度增长速度梯队排行（从优秀到灾难）</h4>
+          <div class="complexity-ladder">
+            <span class="c-badge c-1">O(1) 常数阶</span> &lt;
+            <span class="c-badge c-log">O(log n) 对数阶</span> &lt;
+            <span class="c-badge c-n">O(n) 线性阶</span> &lt;
+            <span class="c-badge c-nlog">O(n log n) 线性对数阶</span> &lt;
+            <span class="c-badge c-n2">O(n²) 平方阶</span> &lt;
+            <span class="c-badge c-exp">O(2ⁿ) 指数阶</span> &lt;
+            <span class="c-badge c-fac">O(n!) 阶乘阶</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">真题直击 · 2025 第19题</div>
+          <h3>内层翻倍循环的时间复杂度分析</h3>
+          <pre><code>for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j *= 2) {
+        sum += a[i];
+    }
+}</code></pre>
+          <div class="step-guide">
+            <div class="step-item">
+              <div class="step-badge">外层循环分析</div>
+              <div class="step-desc">变量 i 从 1 到 n，每次自增 1，共执行 <strong>n 次</strong>。</div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">内层循环分析</div>
+              <div class="step-desc">
+                变量 j 从 1 开始，每次乘以 2：<code>j = 1, 2, 4, 8, 16, ..., 2ᵏ</code>。<br>
+                循环终止条件为 2ᵏ &gt; n，即 k = log₂ n。<br>
+                因此内层循环的实际执行次数为 <strong>log₂ n 次</strong>（以 2 为底的对数阶）。
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">综合结论</div>
+              <div class="step-desc text-green">
+                外层循环每执行一次，内层循环独立执行 log n 次。总执行次数 = n · log₂ n。<br>
+                因此整体时间复杂度为 <strong>O(n log n)</strong>（对应选项 B）。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5.4 递归树与组合数复杂度 -->
+      <section class="doc-section" id="sec-rec-tree">
+        <h2 class="section-title">5.4 递归调用树与组合数递归复杂度</h2>
+        <p>评估没有记忆化数组的递归函数时，最直观的方法是画出其<strong>递归树（Recursion Tree）</strong>并统计叶子节点总数。</p>
+
+        <div class="card card-border-cyan">
+          <div class="card-tag">真题直击 · 2025 第20题 绝妙解法</div>
+          <h3>递归计算组合数 C(n, m) 的时间复杂度</h3>
+          <pre><code>int C(int n, int m) {
+    if (m == 0 || m == n) return 1;
+    return C(n - 1, m) + C(n - 1, m - 1);
+}</code></pre>
+          <div class="deduction-box">
+            <strong>核心洞察：从返回值反推递归叶子总数！</strong><br>
+            • 观察函数体：所有的实质运算，都是到达递归基时返回一个数字 <strong>1</strong>；<br>
+            • 中间所有非叶子节点，仅仅做了一件事：把左子树和右子树返回的数字相加（<code>return C(...) + C(...)</code>）；<br>
+            • 换句话说，最终函数返回的庞大组合数数值 C(n, m)，<strong>全都是由所有的递归基叶子节点“+ 1”累加而成的！</strong><br>
+            • 这意味着：整棵递归树的叶子节点个数，<strong>恰好不多不少正好等于组合数的数值 C(n, m)！</strong><br>
+            • 二叉树的总节点数与叶子数同阶。因此该递归函数的时间复杂度严格为 <strong>O(C(n, m))</strong>（对应选项 C）！
+          </div>
+        </div>
+      </section>
+
+      <!-- 5.5 单步代码栈跟踪器 -->
+      <section class="doc-section" id="sec-sandbox">
+        <h2 class="section-title">5.5 带函数调用栈的 C++ 单步代码跟踪实验室</h2>
+        <p>借助下方交互式追踪器，体验函数递归调用时<strong>调用栈的压栈（Push）与出栈（Pop）</strong>以及变量值的实时变化过程：</p>
+
+        <div class="interactive-sandbox">
+          <div class="sandbox-header">
+            <div>
+              <span class="sandbox-badge">互动实验 04</span>
+              <h3 class="sandbox-title">递归求阶乘 fact(3) 调用栈与变量追踪器</h3>
+            </div>
+          </div>
+
+          <div id="tracerContainer">
+            <!-- 由 code-tracer2.js 动态挂载 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 5.6 模块过关测试 -->
+      <section class="doc-section" id="sec-quiz">
+        <div class="section-header-row">
+          <div>
+            <div class="badge-tag tag-gold">课后强化测验</div>
+            <h2 class="section-title">模块五 · 全真过关检测（共5题）</h2>
+          </div>
+          <div class="section-meta">做完点击选项即时核对标准答案与解析</div>
+        </div>
+
+        <div class="quiz-container" id="module5QuizList">
+          <!-- 题目1 -->
+          <div class="quiz-block" data-quiz-id="m5_q1" data-correct="B">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 1 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第19题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              分析以下 C++ 核心代码段的时间复杂度（以大 O 记号表示）：<br>
+              <pre><code>for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j *= 2) {
+        sum += a[i];
+    }
+}</code></pre>
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. O(n)</div>
+              <div class="quiz-option" data-key="B">B. O(n log n)</div>
+              <div class="quiz-option" data-key="C">C. O(n log(log n))</div>
+              <div class="quiz-option" data-key="D">D. O(n²)</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              外层循环执行 n 次，内层循环 j 每次倍增执行 log₂ n 次。总计算次数为 n · log₂ n，即 O(n log n)。故选 B。
+            </div>
+          </div>
+
+          <!-- 题目2 -->
+          <div class="quiz-block" data-quiz-id="m5_q2" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 2 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第20题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              阅读以下计算组合数 C(n, m) 的递归函数，其时间复杂度为（ ）。<br>
+              <pre><code>int C(int n, int m) {
+    if (m == 0 || m == n) return 1;
+    return C(n - 1, m) + C(n - 1, m - 1);
+}</code></pre>
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. O(2ⁿ)</div>
+              <div class="quiz-option" data-key="B">B. O(2ᵐ · (n - m))</div>
+              <div class="quiz-option" data-key="C">C. O(C(n, m))</div>
+              <div class="quiz-option" data-key="D">D. O(m · (n - m))</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              每个到达的递归基叶子都返回 1，最终累加的值就是 C(n, m)。整棵树叶子节点总数严格等于 C(n, m)，总节点规模与之同阶，故时间复杂度为 O(C(n, m))。故选 C。
+            </div>
+          </div>
+
+          <!-- 题目3 -->
+          <div class="quiz-block" data-quiz-id="m5_q3" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 3 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第16题衍生</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              阅读以下程序片段，输出结果为（ ）。<br>
+              <pre><code>int s = 0, i = 1;
+while (i <= 5) {
+    if (i % 2 == 1) s += i * 2;
+    else s += i;
+    i++;
+}
+cout << s << endl;</code></pre>
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 15</div>
+              <div class="quiz-option" data-key="B">B. 20</div>
+              <div class="quiz-option" data-key="C">C. 24</div>
+              <div class="quiz-option" data-key="D">D. 25</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              跟踪累加：i=1(s=2) → i=2(s=4) → i=3(s=10) → i=4(s=14) → i=5(s=24)。最终输出 24。故选 C。
+            </div>
+          </div>
+
+          <!-- 题目4 -->
+          <div class="quiz-block" data-quiz-id="m5_q4" data-correct="B">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 4 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第17题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              若输入两个不同的正整数 x 和 y，阅读以下函数：<br>
+              <pre><code>int calc(int x, int y) {
+    x = x ^ y;
+    y = x ^ y;
+    x = x ^ y;
+    return x;
+}</code></pre>
+              该函数最终返回的结果是（ ）。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 原始的 x</div>
+              <div class="quiz-option" data-key="B">B. 原始的 y</div>
+              <div class="quiz-option" data-key="C">C. x ⊕ y</div>
+              <div class="quiz-option" data-key="D">D. 0</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              异或三步交换值：第二步 y 变为原 x，第三步 x 变为原 y，最终返回 x 即返回了原始的 y。故选 B。
+            </div>
+          </div>
+
+          <!-- 题目5 -->
+          <div class="quiz-block" data-quiz-id="m5_q5" data-correct="B">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 5 题</span>
+              <span class="quiz-source">递归调用栈深度分析</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              阅读以下二分查找的递归实现代码，当在大小为 n 的有序数组中进行查找时，该程序占用的最大调用栈空间复杂度为（ ）。<br>
+              <pre><code>int bsearch(int a[], int l, int r, int target) {
+    if (l > r) return -1;
+    int mid = l + (r - l) / 2;
+    if (a[mid] == target) return mid;
+    if (a[mid] > target) return bsearch(a, l, mid - 1, target);
+    return bsearch(a, mid + 1, r, target);
+}</code></pre>
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. O(1)</div>
+              <div class="quiz-option" data-key="B">B. O(log n)</div>
+              <div class="quiz-option" data-key="C">C. O(n)</div>
+              <div class="quiz-option" data-key="D">D. O(n log n)</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              每次二分区间折半（n → n/2 → n/4 → ... → 1），调用栈深度至多为 log₂ n + 1 层，因此其递归栈空间复杂度为 O(log n)。故选 B。
+            </div>
+          </div>
+        </div>
+
+        <div class="next-module-banner">
+          <div>
+            <h4>🎉 恭喜学完全部五大知识模块！</h4>
+            <p>已掌握海淀第二赛段全部核心算法与离散思维。现在，检验你的终极时刻到了！</p>
+          </div>
+          <a href="../docs_reader.html" class="nav-link">教研文档</a>
+        <a href="../exam/exam.html" class="btn btn-gold">进入 120 分钟全真模考 →</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/core.js"></script>
+  <script src="../assets/js/code-tracer2.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      HoiCoreStage2.init();
+
+      // 挂载阶乘单步调用栈跟踪器
+      new CodeTracerStage2({
+        containerId: 'tracerContainer',
+        varNames: ['n', 'result'],
+        codeLines: [
+          'int fact(int n) {',
+          '    if (n <= 1) return 1;',
+          '    int sub = fact(n - 1);',
+          '    return n * sub;',
+          '}'
+        ],
+        traceSteps: [
+          { line: 0, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }], vars: { n: 3, result: '?' }, note: '调用 fact(3)，压入调用栈帧' },
+          { line: 1, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }], vars: { n: 3, result: '?' }, note: '判断 3 <= 1 为假，继续向下' },
+          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }], vars: { n: 2, result: '?' }, note: '递归调用 fact(2)，第二层栈帧压栈！' },
+          { line: 1, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }], vars: { n: 2, result: '?' }, note: '判断 2 <= 1 为假，继续向下' },
+          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }, { func: 'fact(1)', vars: { n: 1, result: '?' } }], vars: { n: 1, result: '?' }, note: '递归调用 fact(1)，第三层栈帧压栈！' },
+          { line: 1, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }, { func: 'fact(1)', vars: { n: 1, result: '1' } }], vars: { n: 1, result: '1' }, note: '触碰递归基！1 <= 1 为真，准备出栈返回 1' },
+          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, sub: 1, result: '?' } }], vars: { n: 2, sub: 1 }, note: 'fact(1) 出栈返回 1，fact(2) 接收到 sub = 1' },
+          { line: 3, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: 2 } }], vars: { n: 2, result: 2 }, note: 'fact(2) 计算 2 * 1 = 2，准备出栈返回 2' },
+          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, sub: 2, result: '?' } }], vars: { n: 3, sub: 2 }, note: 'fact(2) 出栈返回 2，fact(3) 接收到 sub = 2' },
+          { line: 3, stack: [{ func: 'fact(3)', vars: { n: 3, result: 6 } }], vars: { n: 3, result: 6 }, note: 'fact(3) 计算 3 * 2 = 6，所有递归完成出栈，最终输出 6！' }
+        ]
+      });
+    });
+  </script>
+</body>
+</html>

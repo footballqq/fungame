@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模块二：初等算法与贪心思维 · 2026海淀信息学特训</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/interactive.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span class="brand-badge">HOI 2026</span>
+        <span class="brand-title">海淀信息学 · 第二赛段进阶挑战</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">首页大纲</a>
+        <a href="01_math-logic.html" class="nav-link">1. 数学逻辑</a>
+        <a href="02_elementary-algorithms.html" class="nav-link active">2. 初等算法</a>
+        <a href="03_recursion-thinking.html" class="nav-link">3. 递归突破</a>
+        <a href="04_data-structures-adv.html" class="nav-link">4. 高级结构</a>
+        <a href="05_code-analysis-complexity.html" class="nav-link">5. 代码分析</a>
+        <a href="../docs_reader.html" class="nav-link">教研文档</a>
+        <a href="../exam/exam.html" class="nav-link nav-btn-highlight">120分全真模考</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container layout-with-sidebar">
+    <!-- 左侧目录导航 -->
+    <aside class="sidebar-nav">
+      <div class="sidebar-title">模块二 知识导航</div>
+      <ul class="sidebar-menu">
+        <li><a href="#sec-intro" class="sidebar-link active">2.1 模块定位与考情</a></li>
+        <li><a href="#sec-enum" class="sidebar-link">2.2 枚举搜索与剪枝优化</a></li>
+        <li><a href="#sec-sim" class="sidebar-link">2.3 物理与博弈过程模拟</a></li>
+        <li><a href="#sec-greedy" class="sidebar-link">2.4 贪心算法与区间调度</a></li>
+        <li><a href="#sec-wood" class="sidebar-link">2.5 砍树与单调栈删数</a></li>
+        <li><a href="#sec-quiz" class="sidebar-link text-amber">2.6 模块过关测试 (真题)</a></li>
+      </ul>
+      <div class="sidebar-box">
+        <div class="box-title">真题覆盖</div>
+        <p class="box-text">聚焦 2025 年海淀初赛第 4、5、6、7、33 题，深入探究贪心局部最优到全局最优的证明逻辑！</p>
+      </div>
+    </aside>
+
+    <!-- 右侧主体内容 -->
+    <main class="main-content">
+      <!-- 模块标题 -->
+      <div class="content-header" id="sec-intro">
+        <div class="badge-tag">模块 02 · 核心算法</div>
+        <h1 class="page-title">初等算法与贪心思维</h1>
+        <p class="lead-text">
+          如果说第一赛段考查的是基础编程语法，第二赛段则直接进入<strong>算法决策</strong>的核心。本模块将重点破解枚举剪枝的临界判断、物理步长模拟以及经典贪心策略的正确性证明。
+        </p>
+      </div>
+
+      <!-- 2.2 枚举搜索与剪枝优化 -->
+      <section class="doc-section" id="sec-enum">
+        <h2 class="section-title">2.2 枚举搜索与剪枝优化（Pruning）</h2>
+        <p>枚举是计算机最强大的基本能力，但暴力盲目的枚举会导致时间复杂度爆炸。<strong>剪枝（Pruning）</strong>就是在搜索树生长过程中，利用数学条件提前判断某一分支绝不可能产生合法解，从而“咔嚓”剪掉整条子树。</p>
+
+        <div class="grid-2-col">
+          <div class="card">
+            <h3>常见剪枝策略 1：奇偶性剪枝</h3>
+            <p>在数轴移动或网格走步中，若当前点到目标点的曼哈顿距离与剩余可用步数的奇偶性不一致，则绝对无法到达！无需继续向下枚举。</p>
+            <div class="code-box">
+              <code>// 若两点差值与步数奇偶不同，立即剪枝<br>if ((abs(target - current) % 2) != (remainSteps % 2)) return;</code>
+            </div>
+          </div>
+          <div class="card">
+            <h3>常见剪枝策略 2：上下界边界剪枝</h3>
+            <p>若已枚举部分的累加和加上后续所有可能的最大上限，依然达不到目标值；或者当前累加已经超过目标限制，直接退出循环。</p>
+            <div class="code-box">
+              <code>// 超出阈值提前 break<br>if (currentSum + minPossibleRest > target) break;</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2.3 物理与博弈过程模拟 -->
+      <section class="doc-section" id="sec-sim">
+        <h2 class="section-title">2.3 物理与博弈过程模拟（2025 真题深度剖析）</h2>
+        <p>模拟题要求选手严格遵循题干给出的物理规则或游戏流程，在草稿纸上建立状态转移方程，并推导出潜在的数学周期或极值规律。</p>
+
+        <!-- 真题7：数轴步长跳跃 -->
+        <div class="card">
+          <div class="card-tag">真题直击 · 2025 第7题</div>
+          <h3>递增步长数轴跳跃模拟</h3>
+          <p><strong>题意：</strong>起点在数轴 0 点。第 1 步跳 1 单位，第 2 步跳 2 单位……第 k 步跳 k 单位。每次可选择向左或向右跳。陶陶要到 56，乐乐要到 61，分别最少跳几次？</p>
+
+          <div class="step-guide">
+            <div class="step-item">
+              <div class="step-badge">数学建模</div>
+              <div class="step-desc">
+                若前 k 步全向右跳，到达的最远点为前 k 项和：<strong>S(k) = 1 + 2 + ... + k = k(k + 1) / 2</strong>。<br>
+                若把其中某一步（例如第 i 步）改为向左跳，总位移就会从 <code>+ i</code> 变成 <code>- i</code>，总和减少了 <strong>2i</strong>（减少量永远是偶数！）。<br>
+                因此，能否到达目标 target 的充要条件是：<br>
+                <strong>1. S(k) ≥ target；</strong><br>
+                <strong>2. (S(k) - target) 必须是偶数！</strong>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">陶陶到达 56</div>
+              <div class="step-desc">
+                • k = 10：S(10) = 55 < 56，不够长；<br>
+                • k = 11：S(11) = 66 ≥ 56。差值 = 66 - 56 = 10（偶数！只需把第 5 步向右改为向左，总和恰好是 56）。<br>
+                • 因此陶陶最少跳 <strong>11 次</strong>！
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">乐乐到达 61</div>
+              <div class="step-desc">
+                • k = 11：S(11) = 66。差值 = 66 - 61 = 5（奇数，不可行）；<br>
+                • k = 12：S(12) = 78。差值 = 78 - 61 = 17（奇数，不可行）；<br>
+                • k = 13：S(13) = 91。差值 = 91 - 61 = 30（偶数！可行！只需把第 15 步……或者两步组合调头）。<br>
+                • 因此乐乐最少跳 <strong>13 次</strong>！
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2.4 贪心算法与区间调度 -->
+      <section class="doc-section" id="sec-greedy">
+        <h2 class="section-title">2.4 贪心算法与区间调度（Greedy Strategy）</h2>
+        <p>贪心算法在每一步决策时，都做出在当前看来最好的选择，而不从整体最优考虑。贪心能够得到全局最优解的前提是问题具有<strong>贪心选择性质</strong>与<strong>最优子结构</strong>。</p>
+
+        <div class="info-card">
+          <h4>🎯 经典对决：活动区间调度问题的 3 种排序策略对比</h4>
+          <p>给定若干个活动，每个活动有开始时间 s_i 和结束时间 f_i，要求互不冲突的前提下安排尽可能多的活动：</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>策略名称</th>
+                  <th>排序依据</th>
+                  <th>是否最优？</th>
+                  <th>反例或证明逻辑</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>策略 A</td>
+                  <td>按开始时间 s_i 从小到大</td>
+                  <td>❌ 错误</td>
+                  <td>若第一个活动非常长（如 [0, 100]），选了它就会导致后续所有短活动全部无法安排！</td>
+                </tr>
+                <tr>
+                  <td>策略 B</td>
+                  <td>按持续时间 f_i - s_i 从短到长</td>
+                  <td>❌ 错误</td>
+                  <td>若短活动位于中间 [4, 6]，而两侧有两个长活动 [1, 5] 和 [5, 9]，选短活动只能安排 1 个，选两侧可以安排 2 个！</td>
+                </tr>
+                <tr class="table-row-highlight">
+                  <td><strong>策略 C</strong></td>
+                  <td><strong>按结束时间 f_i 从小到大</strong></td>
+                  <td><strong>✔ 严格最优</strong></td>
+                  <td><strong>优先选择最早结束的活动，为后续所有剩余活动腾出尽可能最大的时间空间！严格数学归纳法可证。</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2.5 砍树与单调栈删数 -->
+      <section class="doc-section" id="sec-wood">
+        <h2 class="section-title">2.5 高阶贪心案例：树木砍伐与单调栈删数</h2>
+
+        <div class="grid-2-col">
+          <!-- 砍树贪心 -->
+          <div class="card">
+            <div class="card-tag">2025 真题第6题 原型</div>
+            <h3>平直道路伐木工人贪心</h3>
+            <p>10 棵树坐标为 7, 10, 12, 15, 19, 20, 53, 63, 75, 87，高度分别为 12, 2, 2, 1, 2, 1, 25, 10, 12, 1。树只能向左倒或向右倒，区间不能有其他树或被占据点。</p>
+            <div class="deduction-box">
+              <strong>最优贪心策略：</strong><br>
+              1. <strong>第 1 棵树：</strong>毫不犹豫向左倒（左边无限空地），必能砍伐；<br>
+              2. <strong>中间各树：</strong>优先向左倒（向左倒绝不会占用右边的潜在空地）；若左边被挡，尝试向右倒并记录右边界；若右边也被挡，则保持站立不砍；<br>
+              3. <strong>最后一棵树：</strong>毫不犹豫向右倒（右边无限空地），必能砍伐；<br>
+              经逐棵推演，10 棵树中只有第 6 棵受阻，最多能砍伐 <strong>9 棵</strong>！
+            </div>
+          </div>
+
+          <!-- 单调栈删数 -->
+          <div class="card">
+            <div class="card-tag">2025 真题第33题 扩展</div>
+            <h3>单调栈贪心删数求最大多位数</h3>
+            <p>将 1 到 30 拼接成一个 51 位的大数：<code>123456789101112...282930</code>。从中删去 45 个数字，剩下 6 位数字组成的新数最大是多少？</p>
+            <div class="deduction-box">
+              <strong>单调递减栈贪心法：</strong><br>
+              • 高位权重远大于低位权重！第一目标是让最高位尽量是 <strong>9</strong>；<br>
+              • 删去 1~8 共 8 个数字，让首位拿到 9；<br>
+              • 在 "19" 处再删去前面的数字，让第二位再拿到 9；<br>
+              • 在删数配额 45 的紧约束下，通过单调栈严格计算，最终留下的 6 位数为：<strong>998930</strong>！
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2.6 模块过关测试 -->
+      <section class="doc-section" id="sec-quiz">
+        <div class="section-header-row">
+          <div>
+            <div class="badge-tag tag-gold">课后强化测验</div>
+            <h2 class="section-title">模块二 · 全真过关检测（共5题）</h2>
+          </div>
+          <div class="section-meta">做完点击选项即时核对标准答案与解析</div>
+        </div>
+
+        <div class="quiz-container" id="module2QuizList">
+          <!-- 题目1 -->
+          <div class="quiz-block" data-quiz-id="m2_q1" data-correct="B">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 1 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第4题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              给定一组活动，每个活动 i 都有开始时间 s_i 和结束时间 f_i。我们要安排尽可能多的互不冲突的活动（活动之间不能重叠），正确的贪心策略是（ ）。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 按照开始时间 s_i 从小到大排序</div>
+              <div class="quiz-option" data-key="B">B. 按照结束时间 f_i 从小到大排序</div>
+              <div class="quiz-option" data-key="C">C. 按照总时长 f_i - s_i 从小到大排序</div>
+              <div class="quiz-option" data-key="D">D. 按照时间之和 f_i + s_i 从小到大排序</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              优先安排最早结束的活动可以为后续腾出最多的可用时间窗口，故按结束时间 f_i 升序贪心能够严格达到全局最优。故选 B。
+            </div>
+          </div>
+
+          <!-- 题目2 -->
+          <div class="quiz-block" data-quiz-id="m2_q2" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 2 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第6题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              沿平直道路有 10 棵树，坐标为 7, 10, 12, 15, 19, 20, 53, 63, 75, 87，高度分别为 12, 2, 2, 1, 2, 1, 25, 10, 12, 1。伐木工人砍倒一棵树可以向左或向右倒下，倒下后占据长度为高度的连续区间。区间内不能有任何其他树的坐标或已倒下的树。首尾两端外为空地。最多能砍伐（ ）棵树。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 7</div>
+              <div class="quiz-option" data-key="B">B. 8</div>
+              <div class="quiz-option" data-key="C">C. 9</div>
+              <div class="quiz-option" data-key="D">D. 10</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              第 1 棵向左倒，最后一棵向右倒；中间各棵优先向左、次优先向右贪心判定，经序列逐一检测，仅第 6 棵树（坐标 20）左右均受阻，最多可砍伐 9 棵。故选 C。
+            </div>
+          </div>
+
+          <!-- 题目3 -->
+          <div class="quiz-block" data-quiz-id="m2_q3" data-correct="D">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 3 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第7题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              跳跃规则如下：起点在数轴 0 点，第 k 次跳跃的步长恰好为 k。每次跳跃可以选择向左跳或向右跳。陶陶想到达坐标 56，乐乐想到达坐标 61，他们两人分别最少需要跳跃（ ）次。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 10, 11</div>
+              <div class="quiz-option" data-key="B">B. 11, 12</div>
+              <div class="quiz-option" data-key="C">C. 12, 13</div>
+              <div class="quiz-option" data-key="D">D. 11, 13</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              前 k 步和 S = k(k+1)/2 ≥ target 且差值为偶数。<br>
+              • 对 56：k=11 时 S=66，差 10 为偶数，最少 11 步；<br>
+              • 对 61：k=13 时 S=91，差 30 为偶数，最少 13 步。故选 D。
+            </div>
+          </div>
+
+          <!-- 题目4 -->
+          <div class="quiz-block" data-quiz-id="m2_q4" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 4 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第5题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              12 个人围成一圈，给定字符串 "LLLLRRLRRRLL" 代表每个人的攻击方向（L向左，R向右）。合法攻击规则：若只有 a 攻击 b，则 b 必须反击 a；若 a 和 c 同时攻击 b 或都不攻击 b，则 b 可任意选择。每次操作可将一个字符由 L 变 R 或由 R 变 L。使状态合法最少需要操作（ ）次。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 1</div>
+              <div class="quiz-option" data-key="B">B. 2</div>
+              <div class="quiz-option" data-key="C">C. 3</div>
+              <div class="quiz-option" data-key="D">D. 4</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              环形图论模拟中，合法环状态等价于每个连续交替方向成对匹配。通过环形动态规划比对，目标串与合法串的最小汉明距离为 3。最少需要 3 次修改。故选 C。
+            </div>
+          </div>
+
+          <!-- 题目5 -->
+          <div class="quiz-block" data-quiz-id="m2_q5" data-correct="B">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 5 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第33题衍生</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              有一个数字序列 "27493"，若从中删去 2 个数字使剩下的数字组成的新数最大，应当删去 2 和 4，得到 793。现在将数字 1 到 30 依次排列连接成一个高精度大数：123456789101112...282930。若从这个多位数中删去 45 个数字，剩下的数字从左到右组成的数最大是多少？（ ）
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 999930</div>
+              <div class="quiz-option" data-key="B">B. 998930</div>
+              <div class="quiz-option" data-key="C">C. 989930</div>
+              <div class="quiz-option" data-key="D">D. 998830</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              1 到 30 拼接总长 51 位，删去 45 位保留 6 位数。应用单调递减栈贪心，高位尽可能留 9，在删数额度耗尽前保留的前三位为 9、9、8，后三位为 9、3、0，拼出最大数为 998930。故选 B。
+            </div>
+          </div>
+        </div>
+
+        <div class="next-module-banner">
+          <div>
+            <h4>恭喜完成模块二复习！</h4>
+            <p>接下来将进入第二赛段的核心重难点分水岭：递归思想与专项突破。</p>
+          </div>
+          <a href="03_recursion-thinking.html" class="btn btn-primary">前往模块三：递归突破 →</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/core.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      HoiCoreStage2.init();
+    });
+  </script>
+</body>
+</html>

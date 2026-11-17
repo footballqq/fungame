@@ -1,0 +1,845 @@
+/* ==========================================================================
+   海淀信息学第二赛段 · 章节题卡与 120 分钟全真模考样式
+   视觉设计理念：单色米色为主（Warm Beige Academic Quiz）
+   排版特性：题目字号调大（1.15rem）、宽绰选项、清晰答案解析、护眼暖调
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. 章节强化过关小测组件 (.quiz-block)
+   -------------------------------------------------------------------------- */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.quiz-block {
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-line);
+  border-left: 5px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.quiz-block:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.quiz-badge-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.quiz-num {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+}
+
+.quiz-source {
+  background-color: var(--color-amber-soft);
+  color: var(--color-amber);
+  border: 1px solid var(--color-amber-border);
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.quiz-score {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--color-green);
+  background-color: var(--color-green-soft);
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-green-border);
+}
+
+.quiz-question-text {
+  font-size: 1.12rem; /* 题目文字舒适调大 */
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.82;
+  margin-bottom: 22px;
+}
+
+.quiz-question-text pre {
+  margin: 14px 0;
+  padding: 16px 20px;
+  background-color: #241E1A;
+  color: #F8F4EE;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  overflow-x: auto;
+}
+
+/* 选项列表 */
+.quiz-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  background-color: var(--bg-canvas);
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  font-size: 1.04rem;
+  font-weight: 500;
+  color: var(--ink-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.quiz-option:hover {
+  background-color: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.quiz-option.selected {
+  font-weight: 700;
+}
+
+.quiz-option.correct {
+  background-color: var(--color-green-soft) !important;
+  border-color: var(--color-green) !important;
+  color: var(--color-green) !important;
+}
+
+.quiz-option.wrong {
+  background-color: var(--color-accent-soft) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-accent) !important;
+}
+
+/* 答案解析抽屉 */
+.quiz-explanation {
+  background-color: var(--bg-subtle);
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: var(--ink-secondary);
+  margin-top: 18px;
+  display: none; /* 初始折叠，点击选项后展开 */
+}
+
+.quiz-explanation.show {
+  display: block;
+}
+
+.quiz-explanation strong {
+  color: var(--color-primary);
+  font-size: 1.08rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. 120 分钟全真模考主界面 (.exam-layout)
+   -------------------------------------------------------------------------- */
+.bg-gray {
+  background-color: var(--bg-canvas);
+}
+
+/* 顶部悬浮控制栏 */
+.exam-sticky-bar {
+  position: sticky;
+  top: 76px;
+  z-index: 90;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.bar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.exam-badge-icon {
+  font-size: 1.3rem;
+}
+
+.exam-title-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+}
+
+.exam-timer {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+.exam-timer.urgent {
+  color: var(--color-accent);
+  animation: pulseTimer 1s infinite;
+}
+
+@keyframes pulseTimer {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.bar-center {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  background-color: var(--bg-subtle);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+}
+
+.bar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 考试双栏排版 */
+.exam-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 920px) {
+  .exam-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 主题卡展示区 */
+.exam-question-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.exam-q-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1.5px solid var(--border-soft);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.q-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exam-q-num {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--ink-primary);
+}
+
+.exam-q-dim {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-border);
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.exam-q-score {
+  color: var(--color-green);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.btn-mark {
+  background-color: transparent;
+  border: 1.5px dashed var(--color-amber);
+  color: var(--color-amber);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-mark:hover {
+  background-color: var(--color-amber-soft);
+}
+
+.btn-mark.active {
+  background-color: var(--color-amber-soft);
+  border-style: solid;
+}
+
+.exam-q-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  margin-bottom: 14px;
+}
+
+.exam-q-body {
+  font-size: 1.12rem;
+  line-height: 1.85;
+  color: var(--ink-primary);
+  margin-bottom: 28px;
+}
+
+.exam-q-body pre {
+  margin: 16px 0;
+  padding: 18px 22px;
+  background-color: #241E1A;
+  color: #F8F4EE;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+/* 机考单选题选项列表 */
+.exam-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.exam-option-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.exam-option-item:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+}
+
+.exam-option-item.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+  box-shadow: 0 0 0 1px var(--color-primary);
+  font-weight: 700;
+}
+
+.exam-option-item input[type="radio"] {
+  accent-color: var(--color-primary);
+  width: 20px;
+  height: 20px;
+}
+
+.opt-label {
+  font-size: 1.08rem;
+  color: var(--ink-primary);
+}
+
+/* 机考填空题输入区 */
+.exam-fill-area {
+  margin-bottom: 32px;
+  padding: 24px 28px;
+  background-color: var(--bg-subtle);
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+}
+
+.exam-fill-area label {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  margin-bottom: 12px;
+}
+
+.exam-fill-input {
+  width: 100%;
+  max-width: 360px;
+  padding: 14px 18px;
+  font-size: 1.25rem;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: var(--ink-primary);
+  background-color: #FFFFFF;
+  border: 2px solid var(--border-line);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.exam-fill-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(140, 83, 43, 0.15);
+}
+
+/* 题目底部控制区 */
+.exam-q-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1.5px solid var(--border-soft);
+}
+
+.footer-status {
+  font-size: 1rem;
+  color: var(--ink-muted);
+}
+
+/* --------------------------------------------------------------------------
+   3. 答题卡导航调题面板 (.sheet-panel)
+   -------------------------------------------------------------------------- */
+.sheet-panel {
+  position: sticky;
+  top: 160px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sheet-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.sheet-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  margin: 0;
+}
+
+.sheet-subtitle {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  margin-top: 4px;
+}
+
+/* 图例 */
+.sheet-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 8px 10px;
+  background-color: var(--bg-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: var(--ink-secondary);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-unanswered { background-color: var(--bg-sand); border: 1px solid var(--border-line); }
+.dot-answered { background-color: var(--color-primary-soft); border: 1.5px solid var(--color-primary); }
+.dot-active { background-color: var(--color-primary); }
+.dot-marked { background-color: var(--color-amber); }
+
+/* 25题按钮调题板 */
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.palette-btn {
+  height: 42px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-line);
+  background-color: var(--bg-canvas);
+  color: var(--ink-secondary);
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.palette-btn:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--border-strong);
+}
+
+.palette-btn.answered {
+  background-color: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.palette-btn.active {
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(140, 83, 43, 0.2);
+  font-weight: 900;
+}
+
+.palette-btn.marked::after {
+  content: '★';
+  position: absolute;
+  top: 0px;
+  right: 3px;
+  color: var(--color-amber);
+  font-size: 11px;
+}
+
+.sheet-tips {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-soft);
+}
+
+/* --------------------------------------------------------------------------
+   4. 五维雷达诊断报告弹窗 (.exam-modal-overlay)
+   -------------------------------------------------------------------------- */
+.exam-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(43, 37, 32, 0.78); /* 暖黑咖啡毛玻璃背景 */
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+
+.exam-modal-overlay.show {
+  display: block;
+}
+
+.exam-modal-dialog {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1.5px solid var(--border-line);
+}
+
+.modal-header-banner {
+  background: linear-gradient(135deg, #2B2520 0%, #3D332B 100%);
+  color: #FFFFFF;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.modal-header-banner h2 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #F8F4EE;
+  margin: 0;
+}
+
+.btn-close-modal {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.btn-close-modal:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.modal-body-content {
+  padding: 36px;
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+/* 成绩与五维雷达展示双列 */
+.report-hero-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1.5px solid var(--border-soft);
+}
+
+@media (max-width: 768px) {
+  .report-hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.score-box-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-subtle);
+  border: 2px solid var(--border-line);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+}
+
+.score-huge {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1;
+  font-family: var(--font-mono);
+}
+
+.score-label {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin-top: 4px;
+}
+
+.rank-tier-pill {
+  margin-top: 16px;
+  padding: 8px 18px;
+  background-color: var(--color-amber-soft);
+  color: var(--color-amber);
+  border: 1.5px solid var(--color-amber-border);
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.radar-canvas-container {
+  display: flex;
+  justify-content: center;
+  background-color: #241E1A; /* 暖黑咖啡底座，衬托发光青金雷达网 */
+  border-radius: var(--radius-md);
+  padding: 16px;
+  border: 1.5px solid #3D332B;
+}
+
+.report-evaluation-comment {
+  background-color: #F4F8F5;
+  border-left: 5px solid var(--color-green);
+  padding: 18px 24px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #245035;
+}
+
+/* 处方列表 */
+.prescription-box {
+  background-color: var(--bg-subtle);
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  margin-bottom: 32px;
+}
+
+.prescription-box h4 {
+  margin: 0 0 16px 0;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.prescription-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.prescription-list li {
+  background-color: #FFFFFF;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-soft);
+}
+
+.weak-tag {
+  font-weight: 800;
+  color: var(--color-accent);
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.weak-desc {
+  font-size: 1rem;
+  color: var(--ink-secondary);
+}
+
+.weak-link {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* 全题深度解析列表 */
+.review-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-line);
+}
+
+.review-card {
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-md);
+  padding: 24px 26px;
+  margin-bottom: 22px;
+  background-color: #FFFFFF;
+}
+
+.review-card.correct {
+  border-left: 6px solid var(--color-green);
+}
+
+.review-card.wrong {
+  border-left: 6px solid var(--color-accent);
+  background-color: #FDF9F8;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-weight: 800;
+}
+
+.review-num {
+  font-size: 1.15rem;
+}
+
+.review-status.text-green {
+  color: var(--color-green);
+  font-size: 1.05rem;
+}
+
+.review-status.text-red {
+  color: var(--color-accent);
+  font-size: 1.05rem;
+}
+
+.review-dim {
+  background-color: var(--bg-subtle);
+  color: var(--ink-secondary);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.review-q-text {
+  font-size: 1.05rem;
+  color: var(--ink-primary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.review-answers-box {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.user-choice.ans-correct {
+  color: var(--color-green);
+  font-weight: 700;
+}
+
+.user-choice.ans-wrong {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.correct-choice {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.review-explanation {
+  background-color: var(--bg-canvas);
+  border-top: 1.5px solid var(--border-soft);
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--ink-secondary);
+}

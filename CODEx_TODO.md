@@ -1,3 +1,12 @@
+<!-- codex: 2026-11-17 将 2026 海淀信奥第二赛段计算思维特训营接入根目录主页 index.html 并完成验证与推送 -->
+- [X] 主页索引接入与全站升级（`index.html`, `INDEX_GUIDE.md`, `tests/test_index_hub.py`, `CODEx_TODO.md`, `.codex/state.json`）：
+  - 在根目录 `index.html` 的「奥数思维与组合极值谜题」专区（`#sec-olympiad`）新增「2026海淀信奥计算思维特训」项目卡片（`study/hoi2026/web_stage2/index.html`）；
+  - 配置直达按钮：「开始特训」（主页大纲）、「全真模考」（120分模拟测试）与「教研文档」（知识图谱）；
+  - 同步更新 Hero 统计芯片为 42 个独立互动程序、全部项目胶囊为 42、奥数谜题胶囊为 10，页脚版本升级为 `2026.11.17-hub`；
+  - 在 `INDEX_GUIDE.md` 中补充范例说明；
+  - 扩展 `tests/test_index_hub.py` 自动化测试，验证卡片归属、相对路径合法性、实体文件存在性与数量断言；
+  - 执行 `git add`、`git commit` 并推送至 GitHub 远程仓库 `origin/main`。
+
 <!-- codex: 2026-11-13 修复厚度解锁即时渲染Bug：调整调用时序，确保发现新厚度时徽章按钮与进度即时点亮 -->
 - [X] 交互响应修复（`math/fold/js/ui.js`, `math/fold/js/demo.js`, `math/fold/css/animations.css`, `tests/test_fold_game.py`）：
   - 修复 `executeFold` 中先 `this.render()` 后 `checkThickness()` 的时序倒置缺陷，调整为先登记新厚度成就再执行 `render()`，使顶部成就徽章、计数器与提示框在折出新厚度的瞬间 100% 即时点亮更新；

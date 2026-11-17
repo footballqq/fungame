@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模块三：递归思想与专项突破 · 2026海淀信息学特训</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/interactive.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span class="brand-badge">HOI 2026</span>
+        <span class="brand-title">海淀信息学 · 第二赛段进阶挑战</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">首页大纲</a>
+        <a href="01_math-logic.html" class="nav-link">1. 数学逻辑</a>
+        <a href="02_elementary-algorithms.html" class="nav-link">2. 初等算法</a>
+        <a href="03_recursion-thinking.html" class="nav-link active">3. 递归突破</a>
+        <a href="04_data-structures-adv.html" class="nav-link">4. 高级结构</a>
+        <a href="05_code-analysis-complexity.html" class="nav-link">5. 代码分析</a>
+        <a href="../docs_reader.html" class="nav-link">教研文档</a>
+        <a href="../exam/exam.html" class="nav-link nav-btn-highlight">120分全真模考</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container layout-with-sidebar">
+    <!-- 左侧目录导航 -->
+    <aside class="sidebar-nav">
+      <div class="sidebar-title">模块三 知识导航</div>
+      <ul class="sidebar-menu">
+        <li><a href="#sec-intro" class="sidebar-link active">3.1 模块定位与考情</a></li>
+        <li><a href="#sec-model" class="sidebar-link">3.2 递归两大铁律与套娃</a></li>
+        <li><a href="#sec-stack" class="sidebar-link">3.3 函数调用栈与回溯</a></li>
+        <li><a href="#sec-hanoi" class="sidebar-link">3.4 汉诺塔互动演练沙盒</a></li>
+        <li><a href="#sec-cases" class="sidebar-link">3.5 斐波那契与切平面真题</a></li>
+        <li><a href="#sec-quiz" class="sidebar-link text-amber">3.6 模块过关测试 (真题)</a></li>
+      </ul>
+      <div class="sidebar-box">
+        <div class="box-title">重难点突破</div>
+        <p class="box-text">涵盖 2025 年真题第 13 题分段递归、第 14 题斐波那契求和、第 18 题欧几里得辗转相除法与第 26 题切平面通项！</p>
+      </div>
+    </aside>
+
+    <!-- 右侧主体内容 -->
+    <main class="main-content">
+      <!-- 模块标题 -->
+      <div class="content-header" id="sec-intro">
+        <div class="badge-tag">模块 03 · 重难点专项</div>
+        <h1 class="page-title">递归思想与专项突破</h1>
+        <p class="lead-text">
+          “要理解递归，首先要理解递归。”递归不仅是一种函数编写手法，更是计算机科学中最具威力的<strong>分治建模哲学</strong>。本模块将通过调用栈模拟与可操作的汉诺塔沙盒，彻底打通你的递归直觉！
+        </p>
+      </div>
+
+      <!-- 3.2 递归两大铁律与套娃模型 -->
+      <section class="doc-section" id="sec-model">
+        <h2 class="section-title">3.2 递归的两大铁律与“俄罗斯套娃”模型</h2>
+        <p>什么是递归？递归就是一个大问题由若干个<strong>结构完全相同、但规模更小</strong>的子问题构成。想象打开一个大俄罗斯套娃，里面是一个小一号的套娃；继续打开，直到看见最里面那个实心的最小娃娃。</p>
+
+        <div class="grid-2-col">
+          <div class="card card-border-cyan">
+            <div class="card-tag">铁律 1</div>
+            <h3>必须有明确的“递归基”（Base Case）</h3>
+            <p>递归基是递归停下来的<strong>出口边界</strong>。如果缺少递归基，或者递归参数没有向着递归基收敛，函数就会无休止地无限调用自己，导致系统内存耗尽（<strong>栈溢出 Stack Overflow</strong>）。</p>
+            <div class="code-box">
+              <code>if (n == 0 || n == 1) return 1; // 递归出口！</code>
+            </div>
+          </div>
+
+          <div class="card card-border-cyan">
+            <div class="card-tag">铁律 2</div>
+            <h3>必须有严格向出口收敛的“递推关系”</h3>
+            <p>每次自我调用时，传递给子问题的参数规模必须<strong>严格缩小</strong>（如 <code>n - 1</code> 或 <code>n / 2</code>），确保在有限步内必然能够触碰到递归基。</p>
+            <div class="code-box">
+              <code>return n * fact(n - 1); // 规模从 n 缩减为 n - 1</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.3 函数调用栈与回溯 -->
+      <section class="doc-section" id="sec-stack">
+        <h2 class="section-title">3.3 函数调用栈（Call Stack）与回溯生命周期</h2>
+        <p>在计算机内部，递归并不是神话，而是依赖一种名为<strong>栈（Stack）</strong>的数据结构管理的物理流程：</p>
+
+        <div class="info-card">
+          <h4>🔄 递归调用的完整生命周期：压栈（Push）与 出栈（Pop）</h4>
+          <div class="step-guide">
+            <div class="step-item">
+              <div class="step-badge">阶段一：递推压栈（Push）</div>
+              <div class="step-desc">
+                当函数调用自己时，操作系统会开辟一个崭新的栈帧（Stack Frame），把当前的局部变量、参数以及函数执行到的代码行号（返回地址）打包“压入栈底”。函数层层向下钻取，调用栈高度不断增加。
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">阶段二：触底反弹（Base Case）</div>
+              <div class="step-desc">
+                最深层函数触碰到递归基条件，此时不再向下调用，而是第一次直接返回一个具体的确定值（如 1 或 0）。
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">阶段三：回溯出栈（Pop）</div>
+              <div class="step-desc">
+                外层函数从等待中苏醒，接收到内层函数的返回值，继续完成自己的后续计算，随后释放自己的栈帧并“弹出调用栈”。直到最外层最初的主函数拿到最终答案。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2025 真题 Q13 深度拆解 -->
+        <div class="card">
+          <div class="card-tag">真题直击 · 2025 第13题</div>
+          <h3>分段递推递归函数求 F(4) 的压栈回溯过程</h3>
+          <p>数列 F(x) 满足：x ≥ 10 时 F(x) = x - 3；x < 10 时 F(x) = F(x + 4) + 1。求 F(4)。</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>调用步骤</th>
+                  <th>当前函数帧</th>
+                  <th>条件判断</th>
+                  <th>展开表达式</th>
+                  <th>调用栈状态（从底到顶）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Step 1 (压栈)</td>
+                  <td><code>F(4)</code></td>
+                  <td>4 < 10</td>
+                  <td>等待 F(8) + 1</td>
+                  <td>[ F(4) ]</td>
+                </tr>
+                <tr>
+                  <td>Step 2 (压栈)</td>
+                  <td><code>F(8)</code></td>
+                  <td>8 < 10</td>
+                  <td>等待 F(12) + 1</td>
+                  <td>[ F(4), F(8) ]</td>
+                </tr>
+                <tr class="table-row-highlight">
+                  <td>Step 3 (触底)</td>
+                  <td><code>F(12)</code></td>
+                  <td>12 ≥ 10 (基)</td>
+                  <td>立即返回 12 - 3 = <strong>9</strong></td>
+                  <td>[ F(4), F(8), F(12) ]</td>
+                </tr>
+                <tr>
+                  <td>Step 4 (回溯)</td>
+                  <td><code>F(8) 出栈</code></td>
+                  <td>接收到 9</td>
+                  <td>F(8) = 9 + 1 = <strong>10</strong></td>
+                  <td>[ F(4) ]</td>
+                </tr>
+                <tr class="table-row-highlight">
+                  <td>Step 5 (出栈)</td>
+                  <td><code>F(4) 出栈</code></td>
+                  <td>接收到 10</td>
+                  <td>F(4) = 10 + 1 = <strong>11</strong></td>
+                  <td>栈空，输出最终结果 <strong>11</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.4 汉诺塔互动演练沙盒 -->
+      <section class="doc-section" id="sec-hanoi">
+        <h2 class="section-title">3.4 汉诺塔（Towers of Hanoi）互动演练沙盒</h2>
+        <p>汉诺塔是人类数学史上最经典的递归模型。规则：有三根柱子 A、B、C。初始时若干大小不等的圆盘穿在 A 柱上，大盘必须在下，小盘必须在上。每次只能移动一个盘子，且任何时候都不能让大盘压在小盘上方。</p>
+
+        <div class="interactive-sandbox">
+          <div class="sandbox-header">
+            <div>
+              <span class="sandbox-badge">互动实验 02</span>
+              <h3 class="sandbox-title">汉诺塔可操作试玩与自动演练场</h3>
+            </div>
+            <div class="sandbox-meta">
+              已移动步数：<b id="hanoiStepCount">0</b> 步（3 盘理论最少步数：7 步）
+            </div>
+          </div>
+
+          <!-- 汉诺塔舞台 -->
+          <div class="hanoi-stage" id="hanoiContainer">
+            <!-- 动态生成 3 根柱子和盘子 -->
+          </div>
+
+          <div class="sandbox-controls">
+            <button class="btn btn-primary" id="btnHanoiAuto">▶ 自动演示递归搬运</button>
+            <button class="btn btn-secondary" id="btnHanoiReset3">重置为 3 盘 (7步)</button>
+            <button class="btn btn-secondary" id="btnHanoiReset4">挑战 4 盘 (15步)</button>
+          </div>
+
+          <div class="sandbox-log" id="hanoiLog">
+            💡 点击柱子可以手动搬运盘子（先点源柱子选择顶盘，再点目标柱子放置）。试试看能不能在 7 步内完成！
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h4>📐 汉诺塔三步走递归推导与通项公式</h4>
+          <p>假设要将 n 个盘子从 A 柱借助 B 柱搬运到 C 柱，记最少步数为 H(n)：</p>
+          <div class="step-guide">
+            <div class="step-item">
+              <div class="step-badge">第一步</div>
+              <div class="step-desc">将上面 n - 1 个盘子从 A 柱搬到 B 柱（借助 C 柱），共需要 <strong>H(n - 1) 步</strong>；</div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">第二步</div>
+              <div class="step-desc">将 A 柱上剩下的唯一最大盘（第 n 个盘）直接一步移到 C 柱，需要 <strong>1 步</strong>；</div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">第三步</div>
+              <div class="step-desc">将 B 柱上的 n - 1 个盘子搬到 C 柱（借助 A 柱），共需要 <strong>H(n - 1) 步</strong>。</div>
+            </div>
+          </div>
+          <p><strong>递推方程：</strong>H(n) = 2 · H(n - 1) + 1，且 H(1) = 1。<br>
+          两边加 1 得：H(n) + 1 = 2(H(n - 1) + 1)，因此数列 {H(n) + 1} 是首项为 2、公比为 2 的等比数列！<br>
+          <strong>封闭通项公式：</strong><strong>H(n) = 2ⁿ - 1</strong>。（n = 3 时步数为 2³ - 1 = 7 步；n = 4 时步数为 2⁴ - 1 = 15 步）</p>
+        </div>
+      </section>
+
+      <!-- 3.5 斐波那契与切平面真题 -->
+      <section class="doc-section" id="sec-cases">
+        <h2 class="section-title">3.5 经典递推真题：斐波那契求和与平面切分</h2>
+
+        <div class="grid-2-col">
+          <!-- 斐波那契求和 -->
+          <div class="card">
+            <div class="card-tag">真题直击 · 2025 第14题</div>
+            <h3>斐波那契数列前 n 项和 S_n 表达式</h3>
+            <p>F(0)=0, F(1)=1, F(n)=F(n-1)+F(n-2)。求 S_n = F(1) + ... + F(n)。</p>
+            <div class="deduction-box">
+              <strong>移项错位相消法：</strong><br>
+              由 F(k) = F(k + 2) - F(k + 1)，累加展开：<br>
+              F(1) = F(3) - F(2)<br>
+              F(2) = F(4) - F(3)<br>
+              F(3) = F(5) - F(4)<br>
+              ...<br>
+              F(n) = F(n + 2) - F(n + 1)<br>
+              上下相加，中间所有项正负相消，得到：<br>
+              S_n = F(n + 2) - F(2) = <strong>F(n + 2) - 1</strong>。<br>
+              <span class="text-tip">验算 n=3：S_3 = 1+1+2=4，F(5)-1 = 5-1=4。完全吻合！</span>
+            </div>
+          </div>
+
+          <!-- 平面分割 -->
+          <div class="card">
+            <div class="card-tag">真题直击 · 2025 第26题</div>
+            <h3>10 条直线最多分割平面区域数</h3>
+            <p>平面上 10 条两两相交且无三线共点的直线，最多把平面分割为几个区域？</p>
+            <div class="deduction-box">
+              <strong>增量递推法：</strong><br>
+              • 0 条线：1 个区域；<br>
+              • 第 1 条线：增加 1 个区域（共 2 个）；<br>
+              • 第 2 条线：与第 1 条线交于 1 点，被分为 2 段，增加 2 个区域（共 4 个）；<br>
+              • 第 n 条线：与前面 n - 1 条线产生 n - 1 个交点，被分成 n 段，每段切出一个新区域，即：<strong>R(n) = R(n - 1) + n</strong>。<br>
+              通项公式：<strong>R(n) = 1 + n(n + 1) / 2</strong>。<br>
+              代入 n = 10：1 + 10 × 11 / 2 = 1 + 55 = <strong>56 个区域</strong>。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.6 模块过关测试 -->
+      <section class="doc-section" id="sec-quiz">
+        <div class="section-header-row">
+          <div>
+            <div class="badge-tag tag-gold">课后强化测验</div>
+            <h2 class="section-title">模块三 · 全真过关检测（共5题）</h2>
+          </div>
+          <div class="section-meta">做完点击选项即时核对标准答案与解析</div>
+        </div>
+
+        <div class="quiz-container" id="module3QuizList">
+          <!-- 题目1 -->
+          <div class="quiz-block" data-quiz-id="m3_q1" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 1 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第13题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              定义在整数集合上的递归函数 F(x) 满足：<br>
+              • 当 x ≥ 10 时，F(x) = x - 3；<br>
+              • 当 x < 10 时，F(x) = F(x + 4) + 1。<br>
+              请问 F(4) 的计算结果是多少？（ ）
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 9</div>
+              <div class="quiz-option" data-key="B">B. 10</div>
+              <div class="quiz-option" data-key="C">C. 11</div>
+              <div class="quiz-option" data-key="D">D. 12</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              展开追踪：F(4) = F(8) + 1 = (F(12) + 1) + 1。<br>
+              由于 12 ≥ 10，触碰递归基：F(12) = 12 - 3 = 9。<br>
+              回溯出栈：F(8) = 9 + 1 = 10；F(4) = 10 + 1 = 11。故选 C。
+            </div>
+          </div>
+
+          <!-- 题目2 -->
+          <div class="quiz-block" data-quiz-id="m3_q2" data-correct="D">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 2 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第14题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              斐波那契数列定义为：F(0) = 0, F(1) = 1, F(n) = F(n - 1) + F(n - 2) (n ≥ 2)。若用 S_n 表示其前 n 项之和（即 S_n = F(1) + F(2) + ... + F(n)），那么 S_n 等于（ ）。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. F(n + 1)</div>
+              <div class="quiz-option" data-key="B">B. F(n + 2)</div>
+              <div class="quiz-option" data-key="C">C. F(n + 1) - 1</div>
+              <div class="quiz-option" data-key="D">D. F(n + 2) - 1</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              由累加消元法：S_n = F(n + 2) - F(2) = F(n + 2) - 1。故选 D。
+            </div>
+          </div>
+
+          <!-- 题目3 -->
+          <div class="quiz-block" data-quiz-id="m3_q3" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 3 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第26题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              在平面上画 10 条直线，任意两条直线都相交且没有三条直线交于同一点。这 10 条直线最多可以把平面分割为（ ）个区域。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. 46</div>
+              <div class="quiz-option" data-key="B">B. 55</div>
+              <div class="quiz-option" data-key="C">C. 56</div>
+              <div class="quiz-option" data-key="D">D. 67</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              分割公式 R(n) = 1 + n(n + 1) / 2。代入 n = 10 得 1 + 55 = 56 个区域。故选 C。
+            </div>
+          </div>
+
+          <!-- 题目4 -->
+          <div class="quiz-block" data-quiz-id="m3_q4" data-correct="B">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 4 题</span>
+              <span class="quiz-source">算法思维核心题</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              汉诺塔问题中，将 n 个盘子从柱子 A 借助柱子 B 移动到柱子 C。若记移动 n 个盘子的最少步数为 H(n)，根据经典分治递推策略，下列关于 H(n) 的递推式和通项公式正确的是（ ）。
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. H(n) = H(n - 1) + 1，通项为 n</div>
+              <div class="quiz-option" data-key="B">B. H(n) = 2 · H(n - 1) + 1，通项为 2ⁿ - 1</div>
+              <div class="quiz-option" data-key="C">C. H(n) = 2 · H(n - 1)，通项为 2ⁿ</div>
+              <div class="quiz-option" data-key="D">D. H(n) = 3 · H(n - 1) - 1，通项为 3ⁿ - 2</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              将上面 n-1 个盘移到 B（H(n-1) 步），最大盘移到 C（1 步），再将 n-1 个盘从 B 移到 C（H(n-1) 步）。递推式 H(n) = 2·H(n-1) + 1，通项 H(n) = 2ⁿ - 1。故选 B。
+            </div>
+          </div>
+
+          <!-- 题目5 -->
+          <div class="quiz-block" data-quiz-id="m3_q5" data-correct="C">
+            <div class="quiz-badge-bar">
+              <span class="quiz-num">第 5 题</span>
+              <span class="quiz-source">2025海淀第二赛段真题第18题衍生</span>
+              <span class="quiz-score">4 分</span>
+            </div>
+            <div class="quiz-question-text">
+              以下是用 C++ 实现求两个正整数 a 与 b 的最大公因数的函数。若采用递推迭代写法，在横线处填入（ ）可以正确完成两数更新。<br>
+              <pre><code>int gcd(int a, int b) {
+    while (b != 0) {
+        __________;
+    }
+    return a;
+}</code></pre>
+            </div>
+            <div class="quiz-options-list">
+              <div class="quiz-option" data-key="A">A. int temp = b; b = a / b; a = temp;</div>
+              <div class="quiz-option" data-key="B">B. int temp = a; a = b / a; b = temp;</div>
+              <div class="quiz-option" data-key="C">C. int temp = b; b = a % b; a = temp;</div>
+              <div class="quiz-option" data-key="D">D. b = a % b; a = b;</div>
+            </div>
+            <div class="quiz-explanation">
+              <strong>【解题精析】</strong><br>
+              根据 gcd(a, b) = gcd(b, a % b)，新 a 应为旧 b，新 b 应为旧 a % b。必须用临时变量保存旧 b，因此选择 C：int temp = b; b = a % b; a = temp;。故选 C。
+            </div>
+          </div>
+        </div>
+
+        <div class="next-module-banner">
+          <div>
+            <h4>恭喜攻克递归专项！</h4>
+            <p>接下来将进入计算机数据管理的核心：数据结构进阶应用（二维数组与栈队列）。</p>
+          </div>
+          <a href="04_data-structures-adv.html" class="btn btn-primary">前往模块四：数据结构进阶 →</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/core.js"></script>
+  <script src="../assets/js/viz-stage2.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      HoiCoreStage2.init();
+      // 初始化汉诺塔沙盒
+      const hanoiEngine = HoiVizStage2.initHanoi('hanoiContainer', 'hanoiLog', 'hanoiStepCount');
+      if (hanoiEngine) {
+        document.getElementById('btnHanoiAuto').addEventListener('click', () => hanoiEngine.autoPlay());
+        document.getElementById('btnHanoiReset3').addEventListener('click', () => hanoiEngine.reset(3));
+        document.getElementById('btnHanoiReset4').addEventListener('click', () => hanoiEngine.reset(4));
+      }
+    });
+  </script>
+</body>
+</html>
