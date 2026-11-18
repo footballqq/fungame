@@ -1,3 +1,9 @@
+<!-- codex: 2026-11-18 增加全真模考本地做题档案管理、作答明细回显与交卷复盘模式 -->
+- [X] HOI 2026 模考做题档案与复盘回显升级（`study/hoi2026/web_stage2/exam/exam.html`, `study/hoi2026/web_stage2/assets/js/exam-engine-stage2.js`, `study/hoi2026/web_stage2/assets/css/quiz.css`, `study/hoi2026/web_stage2/assets/js/core.js`）：
+  - 增加「💾 本地做题档案」弹窗与作答明细清单表格，支持实时查看 25 道题考生作答、标准答案、得分与正误状态；
+  - 提供本地存档 JSON 复制、下载与清空功能，利用 LocalStorage 实现跨刷新与离线持久化；
+  - 完善交卷后全题目卡片高亮复盘模式与深度解析回显。
+
 <!-- codex: 2026-11-18 升级 2026 海淀信奥第二赛段计算思维特训营：引入 B 卷原创预测冲刺卷、双卷热切换系统与数据结构/复杂度教学重构 -->
 - [X] HOI 2026 特训营功能升级与全站推送（`study/hoi2026/web_stage2/`, `tests/test_index_hub.py`, `CODEx_TODO.md`, `.codex/state.json`）：
   - 增加「B 卷」2026 全真原创预测冲刺卷专属题库（`assets/js/quiz-data-stage2-b.js`），涵盖 25 道原创信奥模拟真题（84 分选择 + 16 分填空）；

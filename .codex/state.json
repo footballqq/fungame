@@ -1,21 +1,16 @@
 {
-  "current_task": "完成 HOI 2026 特训营功能升级（新增B卷预测题库、双卷切换、模块4/5进阶图文）并推送远程",
+  "current_task": "完成 HOI 2026 模考做题档案与复盘回显功能并执行 git c+p (commit and push)",
   "last_changes": [
-    "study/hoi2026/web_stage2/assets/js/quiz-data-stage2-b.js",
     "study/hoi2026/web_stage2/exam/exam.html",
     "study/hoi2026/web_stage2/assets/js/exam-engine-stage2.js",
-    "study/hoi2026/web_stage2/modules/04_data-structures-adv.html",
-    "study/hoi2026/web_stage2/modules/05_code-analysis-complexity.html",
-    "study/hoi2026/web_stage2/assets/css/interactive.css",
-    "study/hoi2026/web_stage2/assets/css/main.css",
     "study/hoi2026/web_stage2/assets/css/quiz.css",
-    "tests/test_index_hub.py",
+    "study/hoi2026/web_stage2/assets/js/core.js",
     "CODEx_TODO.md"
   ],
   "next_actions": [
-    "执行 git add 与 git commit",
-    "执行 git push 推送到远程仓库 origin/main",
-    "向用户汇报更新提交与推送完成情况"
+    "执行 git add",
+    "执行 git commit",
+    "执行 git push 推送到远程仓库 origin/main"
   ],
-  "notes": "全套 109 项 pytest 单测 100% 绿灯通过，B 卷题库与所有前端静态资源已准备就绪。"
+  "notes": "全套 109 项 pytest 单测 100% 绿灯通过，本地做题档案、作答表格与复盘状态已完备。"
 }

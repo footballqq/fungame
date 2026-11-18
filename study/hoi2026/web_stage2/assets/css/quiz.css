@@ -908,3 +908,204 @@
   line-height: 1.8;
   color: var(--ink-secondary);
 }
+
+/* --------------------------------------------------------------------------
+   5. LocalStorage 本地存档调取、复盘与回显模式专属样式
+   -------------------------------------------------------------------------- */
+.badge-submitted {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ECFDF5;
+  color: #047857;
+  border: 1.5px solid #A7F3D0;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.btn-outline-info {
+  background-color: #F8FAFC;
+  color: #0284C7;
+  border: 1.5px solid #BAE6FD;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-info:hover {
+  background-color: #E0F2FE;
+  border-color: #38BDF8;
+  color: #0369A1;
+}
+
+/* 答题卡复盘状态 */
+.palette-btn.is-correct {
+  background-color: #10B981 !important;
+  color: #FFFFFF !important;
+  border-color: #059669 !important;
+}
+
+.palette-btn.is-wrong {
+  background-color: #EF4444 !important;
+  color: #FFFFFF !important;
+  border-color: #DC2626 !important;
+}
+
+.palette-btn.is-unanswered {
+  background-color: #F3F4F6 !important;
+  color: #9CA3AF !important;
+  border-color: #E5E7EB !important;
+}
+
+/* 选项在复盘模式下的高亮 */
+.exam-option-item.is-correct-target {
+  background-color: #ECFDF5 !important;
+  border: 2px solid #10B981 !important;
+  box-shadow: 0 0 0 1px #10B981;
+}
+
+.exam-option-item.is-user-wrong {
+  background-color: #FEF2F2 !important;
+  border: 2px solid #EF4444 !important;
+}
+
+.fill-result-badge {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* 题目卡片内部复盘解析框 */
+.exam-review-box {
+  background-color: #FAF6F0;
+  border: 1.5px solid #DFD5C3;
+  border-left: 5px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-top: 24px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: var(--ink-primary);
+}
+
+.review-status-tag {
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 12px;
+}
+
+.review-status-tag.tag-correct {
+  background-color: #D1FAE5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+
+.review-status-tag.tag-wrong {
+  background-color: #FEE2E2;
+  color: #991B1B;
+  border: 1px solid #FECACA;
+}
+
+.review-body {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--ink-secondary);
+}
+
+/* 本地做题档案弹窗样式 */
+.archive-summary-card {
+  background-color: #FAF6F0;
+  border: 1.5px solid #E2D9CC;
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.archive-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E2D9CC;
+}
+
+.archive-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.archive-meta-item {
+  background-color: #FFFFFF;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #E2D9CC;
+}
+
+.archive-meta-label {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin-bottom: 4px;
+}
+
+.archive-meta-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--ink-primary);
+}
+
+.archive-actions-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.archive-detail-table-wrap {
+  max-height: 380px;
+  overflow-y: auto;
+  border: 1.5px solid var(--border-line);
+  border-radius: var(--radius-sm);
+  background-color: #FFFFFF;
+}
+
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+.archive-table th {
+  position: sticky;
+  top: 0;
+  background-color: #F5EFEB;
+  padding: 10px 14px;
+  font-weight: 700;
+  border-bottom: 1.5px solid #DFD5C3;
+  z-index: 2;
+}
+
+.archive-table td {
+  padding: 9px 14px;
+  border-bottom: 1px solid #F0ECE4;
+}
+
+.archive-table tr:hover {
+  background-color: #FAF6F0;
+}
+

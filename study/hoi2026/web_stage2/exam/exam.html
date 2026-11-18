@@ -46,14 +46,15 @@
     <div class="exam-sticky-bar">
       <div class="bar-left">
         <span class="exam-badge-icon">⏱️</span>
-        <span class="exam-title-text">考试倒计时：</span>
+        <span class="exam-title-text" id="timerLabel">考试倒计时：</span>
         <span class="exam-timer" id="examTimer">02:00:00</span>
       </div>
       <div class="bar-center" id="examProgressSummary">
         已作答 0 / 25 题
       </div>
-      <div class="bar-right">
+      <div class="bar-right" id="examBarActions">
         <button class="btn btn-secondary btn-sm" id="btnResetExam">清空重做</button>
+        <button class="btn btn-outline-info btn-sm" id="btnOpenArchive">💾 本地做题档案</button>
         <button class="btn btn-primary btn-sm" id="btnSubmitExam">交卷并生成诊断</button>
       </div>
     </div>
@@ -138,6 +139,53 @@
         <!-- 试卷全题深度解析与核对列表 -->
         <div id="examQuestionReviewArea">
           <!-- 动态生成 25 题答案对比与逐题解析 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本地做题档案弹窗 (Local Storage Archive Modal) -->
+  <div class="exam-modal-overlay" id="examArchiveModal">
+    <div class="exam-modal-dialog">
+      <div class="modal-header-banner">
+        <h2>💾 本地做题档案与作答明细 (Local Storage)</h2>
+        <button class="btn-close-modal" id="btnCloseArchive" title="关闭档案">×</button>
+      </div>
+
+      <div class="modal-body-content">
+        <div class="archive-summary-card">
+          <div class="archive-info-row">
+            <span><strong>存储机制：</strong>已即时加密保存在本地浏览器 LocalStorage，刷新或重启均不丢失</span>
+            <span id="archiveStorageKeyBadge" class="tab-badge">stage2_exam_progress_exam</span>
+          </div>
+          <div class="archive-meta-grid" id="archiveMetaGrid">
+            <!-- 动态填充试卷、状态、答题进度、总分等 -->
+          </div>
+        </div>
+
+        <div class="archive-actions-bar">
+          <button type="button" class="btn btn-secondary btn-sm" id="btnCopyArchiveJson">📋 复制存档 JSON</button>
+          <button type="button" class="btn btn-primary btn-sm" id="btnDownloadArchiveJson">⬇️ 下载本地存档文件</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="btnClearArchiveData" style="color:var(--color-accent);">🗑️ 清空该卷本地记录</button>
+        </div>
+
+        <div class="archive-detail-table-wrap">
+          <table class="archive-table" id="archiveTable">
+            <thead>
+              <tr>
+                <th style="width:60px;">题号</th>
+                <th style="width:70px;">类型</th>
+                <th style="width:130px;">能力维度</th>
+                <th>考生作答</th>
+                <th style="width:100px;">标准答案</th>
+                <th style="width:60px;">得分</th>
+                <th style="width:80px;">状态</th>
+              </tr>
+            </thead>
+            <tbody id="archiveTableBody">
+              <!-- 动态填充 25 题作答清单 -->
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
