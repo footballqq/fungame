@@ -898,21 +898,37 @@ a:hover {
   color: var(--ink-secondary);
 }
 
-/* 代码盒子 */
+/* 行内代码与代码盒子：温暖米纸学术风（米色底 + 黑色/深色字） */
+code {
+  font-family: var(--font-mono);
+  background-color: #F0E8DC;
+  color: #7A3E1D;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  border: 1px solid #E2D6C5;
+}
+
 .code-box {
-  background-color: #241E1A; /* 暖黑咖啡代码底色 */
-  color: #F8F4EE;
+  background-color: #FAF6F0; /* 柔和米色学术底色 */
+  color: #2C2520; /* 清晰深黑焦炭字 */
+  border: 1.5px solid #DFD5C3;
   padding: 18px 22px;
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
-  font-size: 0.96rem;
-  line-height: 1.7;
+  font-size: 0.98rem;
+  line-height: 1.75;
   overflow-x: auto;
-  margin: 14px 0;
+  margin: 16px 0;
+  box-shadow: 0 1px 3px rgba(44, 37, 32, 0.04);
 }
 
 .code-box code {
-  color: #EBDAC4;
+  background-color: transparent;
+  color: #2C2520;
+  padding: 0;
+  border: none;
+  font-size: inherit;
 }
 
 /* 表格包装 */

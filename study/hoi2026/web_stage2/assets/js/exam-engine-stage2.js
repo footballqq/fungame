@@ -5,13 +5,14 @@
 
 class Stage2ExamEngine {
   constructor(config = {}) {
+    this.paperKey = config.paperKey || 'exam';
     this.totalSeconds = config.totalMinutes ? config.totalMinutes * 60 : 120 * 60; // 120分钟
     this.remainingSeconds = this.totalSeconds;
     this.timerInterval = null;
     this.isPaused = false;
     this.isSubmitted = false;
 
-    this.questions = window.STAGE2_QUIZ_DATA ? window.STAGE2_QUIZ_DATA.exam : [];
+    this.questions = (window.STAGE2_QUIZ_DATA && window.STAGE2_QUIZ_DATA[this.paperKey]) ? window.STAGE2_QUIZ_DATA[this.paperKey] : [];
     this.currentIndex = 0;
     this.userAnswers = {}; // { questionId: answerIndex or fillText }
     this.markedQuestions = new Set(); // Set of questionIds
@@ -34,9 +35,20 @@ class Stage2ExamEngine {
     this.renderQuestion(this.currentIndex);
     this.startTimer();
     this.bindGlobalEvents();
+    this.updatePaperTabsUI();
+  }
+
+  updatePaperTabsUI() {
+    document.querySelectorAll('.paper-tab-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.paper === this.paperKey);
+    });
   }
 
   calculateDimensionTotals() {
+    for (const k in this.dimensions) {
+      this.dimensions[k].total = 0;
+      this.dimensions[k].score = 0;
+    }
     this.questions.forEach(q => {
       const dim = q.dimension || 'math';
       if (this.dimensions[dim]) {
@@ -46,7 +58,8 @@ class Stage2ExamEngine {
   }
 
   loadState() {
-    const saved = localStorage.getItem('stage2_exam_progress');
+    const storageKey = `stage2_exam_progress_${this.paperKey}`;
+    const saved = localStorage.getItem(storageKey);
     if (saved) {
       try {
         const data = JSON.parse(saved);
@@ -63,6 +76,7 @@ class Stage2ExamEngine {
 
   saveState() {
     if (this.isSubmitted) return;
+    const storageKey = `stage2_exam_progress_${this.paperKey}`;
     const data = {
       answers: this.userAnswers,
       remainingSeconds: this.remainingSeconds,
@@ -70,7 +84,7 @@ class Stage2ExamEngine {
       marked: Array.from(this.markedQuestions),
       isSubmitted: this.isSubmitted
     };
-    localStorage.setItem('stage2_exam_progress', JSON.stringify(data));
+    localStorage.setItem(storageKey, JSON.stringify(data));
   }
 
   startTimer() {
@@ -285,12 +299,49 @@ class Stage2ExamEngine {
     const btnReset = document.getElementById('btnResetExam');
     if (btnReset) {
       btnReset.addEventListener('click', () => {
-        if (confirm('确定要清空全部作答记录重新开始吗？')) {
-          localStorage.removeItem('stage2_exam_progress');
+        const paperName = this.paperKey === 'exam' ? '【A 卷】2025 全真真题' : '【B 卷】2026 原创预测';
+        if (confirm(`确定要清空当前 ${paperName} 的全部作答记录重新开始吗？`)) {
+          localStorage.removeItem(`stage2_exam_progress_${this.paperKey}`);
           location.reload();
         }
       });
     }
+
+    // 绑定 A / B 卷选项卡切换
+    document.querySelectorAll('.paper-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pKey = btn.dataset.paper;
+        if (pKey && pKey !== this.paperKey) {
+          const currentCount = Object.keys(this.userAnswers).length;
+          if (!this.isSubmitted && currentCount > 0) {
+            const curName = this.paperKey === 'exam' ? 'A 卷' : 'B 卷';
+            const targetName = pKey === 'exam' ? 'A 卷' : 'B 卷';
+            if (!confirm(`您在【${curName}】中已作答 ${currentCount} 题，切换到【${targetName}】将暂存当前作答状态。确定切换试卷吗？`)) {
+              return;
+            }
+          }
+          this.switchPaper(pKey);
+        }
+      });
+    });
+  }
+
+  switchPaper(paperKey) {
+    if (this.timerInterval) clearInterval(this.timerInterval);
+    this.saveState();
+
+    this.paperKey = paperKey;
+    this.questions = (window.STAGE2_QUIZ_DATA && window.STAGE2_QUIZ_DATA[this.paperKey]) ? window.STAGE2_QUIZ_DATA[this.paperKey] : [];
+    this.remainingSeconds = this.totalSeconds;
+    this.userAnswers = {};
+    this.markedQuestions = new Set();
+    this.isSubmitted = false;
+    this.currentIndex = 0;
+
+    const modal = document.getElementById('reportModal');
+    if (modal) modal.style.display = 'none';
+
+    this.init();
   }
 
   promptSubmit() {

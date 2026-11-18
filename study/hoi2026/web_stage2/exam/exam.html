@@ -30,6 +30,18 @@
   </header>
 
   <div class="container section-container">
+    <!-- 试卷模式切换：A卷真题 vs B卷预测 -->
+    <div class="exam-paper-tabs" id="paperTabsContainer">
+      <button type="button" class="paper-tab-btn active" id="tabPaperA" data-paper="exam">
+        <span class="tab-badge">A 卷</span>
+        <span class="tab-title">2025 海淀第二赛段全真真题卷 (基础巩固)</span>
+      </button>
+      <button type="button" class="paper-tab-btn" id="tabPaperB" data-paper="exam_b">
+        <span class="tab-badge badge-gold">B 卷</span>
+        <span class="tab-title">2026 全真原创预测冲刺卷 (实战验靶)</span>
+      </button>
+    </div>
+
     <!-- 顶部状态栏（倒计时、进度、交卷） -->
     <div class="exam-sticky-bar">
       <div class="bar-left">
@@ -134,6 +146,7 @@
   <!-- 脚本加载 -->
   <script src="../assets/js/core.js"></script>
   <script src="../assets/js/quiz-data-stage2.js"></script>
+  <script src="../assets/js/quiz-data-stage2-b.js"></script>
   <script src="../assets/js/exam-engine-stage2.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {

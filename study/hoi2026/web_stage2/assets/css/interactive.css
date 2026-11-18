@@ -326,117 +326,270 @@
    -------------------------------------------------------------------------- */
 .tracer2-grid {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 310px;
   gap: 20px;
   background-color: #FFFFFF;
   border: 1.5px solid var(--border-line);
   border-radius: var(--radius-md);
   padding: 24px;
   margin: 18px 0;
+  box-shadow: var(--shadow-sm);
 }
 
-@media (max-width: 820px) {
+@media (max-width: 860px) {
   .tracer2-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* 左侧代码视窗：柔和米色学术风 (#FAF6F0) + 深色字 */
 .tracer-code-wrap {
-  border: 1.5px solid #332B25;
+  border: 1.5px solid #DFD5C3;
   border-radius: var(--radius-sm);
-  background-color: #241E1A; /* 暖黑咖啡代码底色 */
+  background-color: #FAF6F0; /* 柔和温暖米纸底色 */
   overflow: hidden;
+  box-shadow: 0 1px 3px rgba(44, 37, 32, 0.04);
 }
 
 .tracer-code-header {
-  background-color: #1A1512;
-  color: #D6CBC0;
-  padding: 10px 16px;
-  font-size: 0.88rem;
+  background-color: #F1E9DC;
+  color: #5A4D41;
+  padding: 12px 18px;
+  font-size: 0.92rem;
   font-weight: 700;
-  border-bottom: 1px solid #332B25;
-}
-
-.tracer-code-line {
-  padding: 6px 16px;
-  font-family: var(--font-mono);
-  font-size: 0.96rem;
-  line-height: 1.6;
-  color: #EBDAC4;
-  white-space: pre;
-  transition: background-color 0.15s;
-}
-
-.tracer-code-line.active-line {
-  background-color: #4A3320;
-  color: #FFFFFF;
-  border-left: 4px solid #DF9B52;
-  font-weight: 700;
-}
-
-.tracer-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.tracer-panel {
-  border: 1.5px solid var(--border-line);
-  border-radius: var(--radius-sm);
-  background-color: var(--bg-canvas);
-  padding: 14px;
-}
-
-.panel-title {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--ink-primary);
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--border-soft);
-}
-
-.stack-frames-list {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 6px;
-  min-height: 90px;
-}
-
-.stack-frame-item {
-  background-color: #FFFFFF;
-  border: 1.5px solid var(--border-soft);
-  border-radius: var(--radius-sm);
-  padding: 8px 12px;
-  font-size: 0.9rem;
-  font-family: var(--font-mono);
-  font-weight: 700;
-  color: var(--ink-primary);
+  border-bottom: 1.5px solid #DFD5C3;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.stack-frame-item.top-frame {
-  border-color: var(--color-primary);
-  background-color: var(--color-primary-soft);
-  color: var(--color-primary);
+.tracer-header-tip {
+  font-size: 0.8rem;
+  color: #8C532B;
+  background: #EAE0D0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
-.var-table {
+.tracer-code {
+  list-style: none;
+  margin: 0;
+  padding: 14px 0;
+  font-family: var(--font-mono);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  background-color: #FAF6F0;
+}
+
+.code-line {
+  display: flex;
+  align-items: center;
+  padding: 4px 18px;
+  color: #2C2520;
+  border-left: 4px solid transparent;
+  transition: background-color 0.15s ease, border-left-color 0.15s ease;
+}
+
+.code-line:hover {
+  background-color: #F4ECE0;
+}
+
+.code-line.active {
+  background-color: #EFE3D0; /* 焦糖米黄激活行 */
+  border-left: 4px solid #8C532B; /* 暖棕色指引指示器 */
+  box-shadow: inset 0 0 0 1px #E2D2BC;
+}
+
+.line-num {
+  display: inline-block;
+  width: 32px;
+  flex-shrink: 0;
+  color: #9C8D7E;
+  font-size: 0.88rem;
+  text-align: right;
+  padding-right: 14px;
+  margin-right: 14px;
+  border-right: 1.5px solid #E5DAC9;
+  user-select: none;
+  font-weight: 600;
+}
+
+.code-line.active .line-num {
+  color: #8C532B;
+  font-weight: 800;
+  border-right-color: #8C532B;
+}
+
+.line-text {
+  color: #2C2520; /* 焦炭深黑清晰正文 */
+  white-space: pre;
+  font-weight: 500;
+}
+
+.code-line.active .line-text {
+  font-weight: 700;
+  color: #1A1410;
+}
+
+/* 语法高亮（米色底下的舒适阅读配色） */
+.token-keyword {
+  color: #8C4318; /* 陶土赭红关键字 (int, return, if) */
+  font-weight: 700;
+}
+
+.token-number {
+  color: #9E6518; /* 琥珀金黄常量数字 */
+  font-weight: 700;
+}
+
+.token-func {
+  color: #235A7A; /* 灰青石蓝函数名 (fact) */
+  font-weight: 700;
+}
+
+/* 右侧监控栏：变量表 + 调用栈 */
+.tracer-side-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tracer-table-wrap {
+  background: #FAF6F0;
+  border: 1.5px solid #DFD5C3;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.tracer-panel-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #2C2520;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #DFD5C3;
+}
+
+.tracer-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
   font-family: var(--font-mono);
+  font-size: 0.95rem;
 }
 
-.var-table th, .var-table td {
-  padding: 6px 8px;
-  border: 1px solid var(--border-soft);
+.tracer-table th,
+.tracer-table td {
+  padding: 6px 10px;
+  border: 1px solid #DFD5C3;
   text-align: center;
 }
 
-.var-table th {
-  background-color: var(--bg-subtle);
+.tracer-table th {
+  background-color: #F1E9DC;
+  color: #4A3C31;
   font-weight: 700;
+}
+
+.tracer-table td {
+  background-color: #FFFFFF;
+  color: #8C532B;
+  font-weight: 800;
+}
+
+/* 系统函数调用栈 (Call Stack) */
+.callstack-box {
+  background: #FAF6F0;
+  border: 1.5px solid #DFD5C3;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.callstack-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #2C2520;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #DFD5C3;
+}
+
+.callstack-tip {
+  font-size: 0.78rem;
+  color: #8C532B;
+  font-weight: 600;
+}
+
+.callstack-list {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  min-height: 110px;
+  justify-content: flex-start;
+  padding: 4px 0;
+}
+
+.callstack-empty {
+  color: #9C8D7E;
+  font-size: 0.88rem;
+  font-style: italic;
+  text-align: center;
+  padding: 24px 0;
+}
+
+.stack-frame {
+  background-color: #FFFFFF;
+  border: 1.5px solid #DFD5C3;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.92rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: #2C2520;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(44, 37, 32, 0.05);
+  animation: slideFrame 0.25s ease-out;
+}
+
+@keyframes slideFrame {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stack-frame.top-frame {
+  background-color: #F8EFE4;
+  border-color: #8C532B;
+  color: #8C532B;
+  box-shadow: 0 2px 6px rgba(140, 83, 43, 0.15);
+}
+
+.badge-top {
+  font-size: 0.75rem;
+  background-color: #8C532B;
+  color: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+}
+
+.tracer-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 8px;
 }

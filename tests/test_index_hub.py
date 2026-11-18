@@ -1,3 +1,4 @@
+# codex: 2026-11-18 增补 HOI 2026 第二赛段 B 卷专属题库实体文件与模考资源校验
 # codex: 2026-11-17 扩展测试验证 2026 海淀信奥第二赛段计算思维特训营 (HOI 2026) 接入与全站 42 卡片完备性
 # codex: 2026-09-29 根目录 index.html 现代化改版专项自动化测试：验证5大分类、无重复项、搜索结构、文件行数与相对链接有效性
 import os
@@ -218,6 +219,9 @@ def test_hoi2026_stage2_in_olympiad_category():
 
     exam_html = os.path.join(PROJECT_ROOT, "study", "hoi2026", "web_stage2", "exam", "exam.html")
     assert os.path.isfile(exam_html), f"模考入口文件必须实际存在: {exam_html}"
+
+    exam_b_js = os.path.join(PROJECT_ROOT, "study", "hoi2026", "web_stage2", "assets", "js", "quiz-data-stage2-b.js")
+    assert os.path.isfile(exam_b_js), f"B卷题库文件必须实际存在: {exam_b_js}"
 
     docs_html = os.path.join(PROJECT_ROOT, "study", "hoi2026", "web_stage2", "docs_reader.html")
     assert os.path.isfile(docs_html), f"教研文档文件必须实际存在: {docs_html}"

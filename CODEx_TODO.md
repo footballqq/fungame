@@ -1,3 +1,11 @@
+<!-- codex: 2026-11-18 升级 2026 海淀信奥第二赛段计算思维特训营：引入 B 卷原创预测冲刺卷、双卷热切换系统与数据结构/复杂度教学重构 -->
+- [X] HOI 2026 特训营功能升级与全站推送（`study/hoi2026/web_stage2/`, `tests/test_index_hub.py`, `CODEx_TODO.md`, `.codex/state.json`）：
+  - 增加「B 卷」2026 全真原创预测冲刺卷专属题库（`assets/js/quiz-data-stage2-b.js`），涵盖 25 道原创信奥模拟真题（84 分选择 + 16 分填空）；
+  - 在 `exam.html` 与 `exam-engine-stage2.js` 实现 A/B 卷双卷选项卡即时热切换，独立按卷键名隔离持久化作答进度；
+  - 深度扩充模块 4（数据结构进阶）：二维数组行优先内存排布（“分段打包法”）、栈 LIFO 原理（“薯片筒”、“死胡同倒车调度”比喻与合法性推演）与循环队列回转寿司传送带；
+  - 深度重构模块 5（代码分析与复杂度渐进模型）图文讲解与 `code-tracer2.js` 交互追踪；
+  - 完善单测覆盖 B 卷题库与全站 42 项卡片完整性，通过全套 pytest 验证并推送至远程仓库。
+
 <!-- codex: 2026-11-17 将 2026 海淀信奥第二赛段计算思维特训营接入根目录主页 index.html 并完成验证与推送 -->
 - [X] 主页索引接入与全站升级（`index.html`, `INDEX_GUIDE.md`, `tests/test_index_hub.py`, `CODEx_TODO.md`, `.codex/state.json`）：
   - 在根目录 `index.html` 的「奥数思维与组合极值谜题」专区（`#sec-olympiad`）新增「2026海淀信奥计算思维特训」项目卡片（`study/hoi2026/web_stage2/index.html`）；

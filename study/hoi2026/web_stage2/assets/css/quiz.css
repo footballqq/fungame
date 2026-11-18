@@ -76,8 +76,9 @@
 .quiz-question-text pre {
   margin: 14px 0;
   padding: 16px 20px;
-  background-color: #241E1A;
-  color: #F8F4EE;
+  background-color: #FAF6F0;
+  color: #2C2520;
+  border: 1.5px solid #DFD5C3;
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
   font-size: 0.96rem;
@@ -157,6 +158,69 @@
    -------------------------------------------------------------------------- */
 .bg-gray {
   background-color: var(--bg-canvas);
+}
+
+/* 试卷切换选项卡 (A卷真题 vs B卷预测) */
+.exam-paper-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.paper-tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background-color: var(--bg-canvas);
+  border: 2px solid var(--border-line);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.paper-tab-btn:hover {
+  background-color: #FFFFFF;
+  border-color: var(--color-primary-border);
+  color: var(--color-primary);
+}
+
+.paper-tab-btn.active {
+  background-color: #FFFFFF;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(140, 83, 43, 0.15);
+}
+
+.tab-badge {
+  background-color: var(--bg-subtle);
+  color: var(--ink-primary);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.paper-tab-btn.active .tab-badge {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.tab-badge.badge-gold {
+  background-color: var(--color-amber-soft);
+  color: var(--color-amber);
+}
+
+.paper-tab-btn.active .tab-badge.badge-gold {
+  background-color: var(--color-amber);
+  color: #FFFFFF;
 }
 
 /* 顶部悬浮控制栏 */
@@ -328,8 +392,9 @@
 .exam-q-body pre {
   margin: 16px 0;
   padding: 18px 22px;
-  background-color: #241E1A;
-  color: #F8F4EE;
+  background-color: #FAF6F0;
+  color: #2C2520;
+  border: 1.5px solid #DFD5C3;
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
   font-size: 0.98rem;

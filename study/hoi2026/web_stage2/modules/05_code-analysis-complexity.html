@@ -59,15 +59,187 @@
         </p>
       </div>
 
-      <!-- 5.2 手工追踪与位运算 -->
+      <!-- 5.2 计算机底层逻辑与位运算全景解密 -->
       <section class="doc-section" id="sec-trace">
-        <h2 class="section-title">5.2 手工代码追踪与位运算自反性</h2>
-        <p>面对复杂的循环和判断，不要试图在脑中凭空“脑补”，而应在草稿纸上建立严谨的<strong>变量追踪表格</strong>。</p>
+        <h2 class="section-title">5.2 计算机底层逻辑与位运算全景解密（0 与 1 的魔法世界）</h2>
+        <p class="lead-text">
+          在编写 C++ 代码时，我们习惯了 <code>+ - * /</code> 这类十进制算术。但对于初学者而言，计算机底层最快、最神奇的其实是<strong>位运算（Bitwise Operations）</strong>。掌握了它，你就看清了计算机芯片的真实运作方式！
+        </p>
 
+        <!-- 0 与 1 电灯开关 -->
+        <div class="card card-border-cyan" style="margin-bottom: 20px;">
+          <div class="card-tag">一切的起点 · 电子开关与二进制</div>
+          <h3>为什么计算机只认识 0 和 1？</h3>
+          <p>
+            计算机的 CPU 内部集成了数十亿个微小的“晶体管”。晶体管本质上就是一个个<strong>微型电灯开关</strong>：<br>
+            • <strong>通电开灯 = 1</strong>；<br>
+            • <strong>断电关灯 = 0</strong>。<br>
+            我们日常见到的数字，在计算机底层都被切成了一排排开关（二进制）。比如：<br>
+            • 十进制数字 <strong>5</strong> 的二进制是 <code>0101</code>（即 4 + 1）；<br>
+            • 十进制数字 <strong>6</strong> 的二进制是 <code>0110</code>（即 4 + 2）。
+          </p>
+        </div>
+
+        <!-- 四种核心位运算深度剖析 -->
+        <div class="grid-2-col" style="margin-bottom: 20px;">
+          <!-- 1. 按位与 -->
+          <div class="card">
+            <h4>1️⃣ 按位与（AND，符号 <code>&amp;</code>）——“严谨的双人门禁保安”</h4>
+            <div class="step-guide">
+              <div class="step-item">
+                <div class="step-badge">核心口诀</div>
+                <div class="step-desc"><strong>全 1 才得 1，只要有 0 结果全归 0！</strong></div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">生活比喻</div>
+                <div class="step-desc">银行金库大门有两把钥匙，必须主任出示钥匙（1）<strong>且</strong>副主任出示钥匙（1），大门才打开（1）。只要任何一个人没来（0），大门坚决不开（0）。</div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">竖式计算</div>
+                <div class="step-desc">
+                  <code>&nbsp; 5 的二进制: 0 1 0 1</code><br>
+                  <code>&amp; 6 的二进制: 0 1 1 0</code><br>
+                  <code>-------------------</code><br>
+                  <code>&nbsp; 运算结果: &nbsp; 0 1 0 0 （十进制 4）</code>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">竞赛妙招</div>
+                <div class="step-desc text-green">
+                  <strong><code>n &amp; 1</code> 判断奇偶数！</strong><br>
+                  偶数的二进制末位一定是 0，奇数末位一定是 1。<code>n &amp; 1</code> 把所有高位全部抹零，只留下末位。若为 1 即为奇数，这比 <code>n % 2</code> 执行速度更快！
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. 按位或 -->
+          <div class="card">
+            <h4>2️⃣ 按位或（OR，符号 <code>|</code>）——“宽容的家庭门锁”</h4>
+            <div class="step-guide">
+              <div class="step-item">
+                <div class="step-badge">核心口诀</div>
+                <div class="step-desc"><strong>只要有 1 就得 1，两个全是 0 才是 0！</strong></div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">生活比喻</div>
+                <div class="step-desc">智能家门锁：可以用指纹（1）开门，<strong>或者</strong>用密码（1）开门。只要有任意一种方式成立，门就能打开。只有两样都没带（两个都是 0），门才打不开。</div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">竖式计算</div>
+                <div class="step-desc">
+                  <code>&nbsp; 5 的二进制: 0 1 0 1</code><br>
+                  <code>| 6 的二进制: 0 1 1 0</code><br>
+                  <code>-------------------</code><br>
+                  <code>&nbsp; 运算结果: &nbsp; 0 1 1 1 （十进制 7）</code>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">应用场景</div>
+                <div class="step-desc">
+                  常用于“权限合并”与“标记开启”，只要某一属性被激活，整体就保持激活。
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 按位非与逻辑非 -->
+          <div class="card">
+            <h4>3️⃣ 按位非（<code>~</code>）与逻辑非（<code>!</code>）——“叛逆的反话大师”</h4>
+            <div class="step-guide">
+              <div class="step-item">
+                <div class="step-badge">核心口诀</div>
+                <div class="step-desc"><strong>黑白颠倒，0 变 1，1 变 0！</strong></div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">生活比喻</div>
+                <div class="step-desc">你说向东（1），它偏要向西（0）；你说真话（1），它把它当成假话（0）。</div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">致命辨析</div>
+                <div class="step-desc text-red">
+                  • <strong>逻辑非 <code>!</code></strong>：只看真假（bool）。在 C++ 中非 0 即真，所以 <code>!5 = 0 (false)</code>，<code>!0 = 1 (true)</code>。<br>
+                  • <strong>按位非 <code>~</code></strong>：把整数在底层的每一位比特（包括正负符号位）全部反转。
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. 按位异或 -->
+          <div class="card">
+            <h4>4️⃣ 按位异或（XOR，符号 <code>^</code>）——“神奇的找不同与双控开关”</h4>
+            <div class="step-guide">
+              <div class="step-item">
+                <div class="step-badge">名字的秘密</div>
+                <div class="step-desc">“异”就是<strong>相异、不同</strong>！异或专门用来检测两个比特是否<strong>不同</strong>！</div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">核心口诀</div>
+                <div class="step-desc"><strong>相异为 1，相同为 0！</strong><br><code>0 ^ 0 = 0</code>，<code>1 ^ 1 = 0</code>；<code>1 ^ 0 = 1</code>，<code>0 ^ 1 = 1</code>。</div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">双控开关模型</div>
+                <div class="step-desc">
+                  楼上一个开关、楼下一个开关控制同一盏灯：无论按哪个开关，灯的状态都会<strong>翻转一次</strong>！如果对同一个开关连按两次呢？<strong>状态瞬间复原！</strong>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-badge">三大神律</div>
+                <div class="step-desc text-green">
+                  1. <strong>归零律</strong>：<code>a ^ a = 0</code>（完全相同，全归零，按两次开关复原）；<br>
+                  2. <strong>恒等律</strong>：<code>a ^ 0 = a</code>（与 0 异或保持原貌）；<br>
+                  3. <strong>自反消去律</strong>：<code>a ^ b ^ b = a ^ (b ^ b) = a ^ 0 = a</code>！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 运算全景对照表 -->
+        <div class="table-wrap" style="margin-bottom: 24px;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>操作数 A</th>
+                <th>操作数 B</th>
+                <th>与 A &amp; B（全1才1）</th>
+                <th>或 A | B（有1即1）</th>
+                <th>异或 A ^ B（不同为1）</th>
+                <th>非 ~A（反转）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>0</td><td>0</td><td>0</td><td>0</td><td><strong>0</strong>（相同）</td><td>1</td></tr>
+              <tr><td>0</td><td>1</td><td>0</td><td>1</td><td><strong>1</strong>（不同）</td><td>1</td></tr>
+              <tr><td>1</td><td>0</td><td>0</td><td>1</td><td><strong>1</strong>（不同）</td><td>0</td></tr>
+              <tr><td>1</td><td>1</td><td><strong>1</strong></td><td>1</td><td><strong>0</strong>（相同）</td><td>0</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 逻辑与或 vs 位与或的短路陷阱 -->
+        <div class="info-card" style="margin-bottom: 24px;">
+          <h4>⚠️ 考场必考陷阱：逻辑运算符（&amp;&amp;, ||）与位运算符（&amp;, |）的“短路求值”</h4>
+          <p>
+            许多初学者把 <code>&amp;&amp;</code> 和 <code>&amp;</code> 混为一谈，这在考题中是极其容易丢分的陷阱：
+          </p>
+          <ul class="dialog-list">
+            <li>
+              <strong>位运算符 <code>&amp;</code>、<code>|</code></strong>：是严谨的“算术工人”，两边的表达式<strong>必须都会老老实实算出来</strong>，然后逐位做二进制计算。
+            </li>
+            <li>
+              <strong>逻辑运算符 <code>&amp;&amp;</code>、<code>||</code></strong>：是聪明的“偷懒决策者”，拥有<strong>短路特性（Short-circuit）</strong>：<br>
+              • <code>false &amp;&amp; (i++)</code>：既然左边已经是假了，整个与运算注定是假，<strong>右边的 <code>(i++)</code> 计算机连看都不看、根本不会执行！i 的值保持不变！</strong><br>
+              • <code>true || (i++)</code>：既然左边已经是真了，整个或运算注定是真，<strong>右边的 <code>(i++)</code> 同样被直接跳过忽略！</strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 经典真题破译与手工追踪 -->
         <div class="grid-2-col">
           <div class="card">
             <div class="card-tag">真题直击 · 2025 第17题</div>
-            <h3>位运算异或（XOR）自反性与无变量交换</h3>
+            <h3>位运算异或自反性：无第三方变量交换两数</h3>
             <p>分析以下神奇的 C++ 函数：</p>
             <pre><code>int calc(int x, int y) {
     x = x ^ y;
@@ -76,21 +248,19 @@
     return x;
 }</code></pre>
             <div class="deduction-box">
-              <strong>异或核心性质：</strong><br>
-              1. 归零律：<code>a ^ a = 0</code>；<br>
-              2. 恒等律：<code>a ^ 0 = a</code>；<br>
-              3. 交换律与结合律：顺序可任意调整。<br>
-              <strong>推导演变：</strong><br>
-              • 第 1 步：x 变为 <code>x₀ ^ y₀</code>；<br>
-              • 第 2 步：y = x ^ y = (x₀ ^ y₀) ^ y₀ = x₀ ^ (y₀ ^ y₀) = x₀ ^ 0 = <strong>x₀</strong>（y 成功获得了原始的 x！）；<br>
-              • 第 3 步：x = x ^ y = (x₀ ^ y₀) ^ x₀ = (x₀ ^ x₀) ^ y₀ = 0 ^ y₀ = <strong>y₀</strong>（x 成功获得了原始的 y！）；<br>
-              • 最终返回 x，即返回<strong>原始的 y</strong>！
+              <strong>运用自反律 <code>a ^ b ^ b = a</code> 逐步推导：</strong><br>
+              • <strong>第 1 步</strong>：<code>x = x₀ ^ y₀</code>（x 里混合了两个数的信息）；<br>
+              • <strong>第 2 步</strong>：<code>y = x ^ y = (x₀ ^ y₀) ^ y₀ = x₀ ^ (y₀ ^ y₀) = x₀ ^ 0 = <strong>x₀</strong></code>！<br>
+              &nbsp;&nbsp;（利用 <code>y₀ ^ y₀ = 0</code> 消去了 y，y 奇迹般拿到了 x 的原始值！）；<br>
+              • <strong>第 3 步</strong>：<code>x = x ^ y = (x₀ ^ y₀) ^ x₀ = (x₀ ^ x₀) ^ y₀ = 0 ^ y₀ = <strong>y₀</strong></code>！<br>
+              &nbsp;&nbsp;（利用 <code>x₀ ^ x₀ = 0</code> 消去了 x，x 奇迹般拿到了 y 的原始值！）；<br>
+              • <strong>最终返回 x</strong>：此时 x 已经变成了<strong>原始的 y</strong>！两数未借用任何额外变量，完成了无损互换！
             </div>
           </div>
 
           <div class="card">
             <h3>条件分支与变量累加跟踪表示范</h3>
-            <p>追踪以下循环片段的输出结果：</p>
+            <p>纸笔机考草稿纸技巧：面对多轮循环，列出<strong>状态表格</strong>逐轮追踪：</p>
             <pre><code>int s = 0, i = 1;
 while (i <= 5) {
     if (i % 2 == 1) s += i * 2;
@@ -109,8 +279,8 @@ while (i <= 5) {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>1</td><td>1</td><td>奇数</td><td>+ 1 × 2 = 2</td><td>2</td></tr>
-                  <tr><td>2</td><td>2</td><td>偶数</td><td>+ 2</td><td>4</td></tr>
+                  <tr><td>1</td><td>1</td><td>奇数 (1 &amp; 1 == 1)</td><td>+ 1 × 2 = 2</td><td>2</td></tr>
+                  <tr><td>2</td><td>2</td><td>偶数 (2 &amp; 1 == 0)</td><td>+ 2</td><td>4</td></tr>
                   <tr><td>3</td><td>3</td><td>奇数</td><td>+ 3 × 2 = 6</td><td>10</td></tr>
                   <tr><td>4</td><td>4</td><td>偶数</td><td>+ 4</td><td>14</td></tr>
                   <tr><td>5</td><td>5</td><td>奇数</td><td>+ 5 × 2 = 10</td><td><strong>24</strong></td></tr>
@@ -128,8 +298,8 @@ while (i <= 5) {
         1. <strong>只保留最高阶项</strong>（低阶项在大规模时微不足道）；<br>
         2. <strong>省略最高阶项的常数系数</strong>（如 5n² 简记为 O(n²)）。</p>
 
-        <div class="info-card">
-          <h4>📈 算法复杂度增长速度梯队排行（从优秀到灾难）</h4>
+        <div class="info-card" style="margin-bottom: 24px;">
+          <h4>📈 算法复杂度增长速度梯队排行（从瞬间秒杀到计算恶梦）</h4>
           <div class="complexity-ladder">
             <span class="c-badge c-1">O(1) 常数阶</span> &lt;
             <span class="c-badge c-log">O(log n) 对数阶</span> &lt;
@@ -138,6 +308,57 @@ while (i <= 5) {
             <span class="c-badge c-n2">O(n²) 平方阶</span> &lt;
             <span class="c-badge c-exp">O(2ⁿ) 指数阶</span> &lt;
             <span class="c-badge c-fac">O(n!) 阶乘阶</span>
+          </div>
+
+          <div class="table-wrap" style="margin-top: 14px;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>复杂度</th>
+                  <th>通俗生活比喻</th>
+                  <th>数据规模 n = 100 万时的计算次数</th>
+                  <th>算法实战场景</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>O(1)</strong></td>
+                  <td><strong>瞬间瞬移</strong>：翻开字典第 1 页，字典再厚也只需 1 步</td>
+                  <td>1 次</td>
+                  <td>数组下标直接访问 <code>a[i]</code>、数学公式计算</td>
+                </tr>
+                <tr>
+                  <td><strong>O(log n)</strong></td>
+                  <td><strong>折半猜数</strong>：1 到 100 猜数，每次猜中点排除一半</td>
+                  <td>约 20 次！</td>
+                  <td>二分查找 <code>bsearch</code>、欧几里得辗转相除法</td>
+                </tr>
+                <tr>
+                  <td><strong>O(n)</strong></td>
+                  <td><strong>排队点名</strong>：老师在操场从头到尾给每个人点名</td>
+                  <td>100 万次</td>
+                  <td>单层 for 循环、遍历一维数组找最大值</td>
+                </tr>
+                <tr>
+                  <td><strong>O(n log n)</strong></td>
+                  <td><strong>高效整理队伍</strong>：把队伍分成两半排好再拉链式合并</td>
+                  <td>约 2000 万次</td>
+                  <td>快速排序、归并排序、内层倍增的双重循环</td>
+                </tr>
+                <tr>
+                  <td><strong>O(n²)</strong></td>
+                  <td><strong>全班两两握手</strong>：每个人都必须和其他所有人握一次手</td>
+                  <td>1 万亿次（电脑死机卡顿！）</td>
+                  <td>冒泡排序、两层嵌套的暴力穷举循环</td>
+                </tr>
+                <tr>
+                  <td><strong>O(2ⁿ)</strong></td>
+                  <td><strong>细胞分裂恶梦</strong>：每增加一个元素，所有可能翻一倍</td>
+                  <td>宇宙天文数字（直接超时崩溃）</td>
+                  <td>无记忆化的递归（如斐波那契、汉诺塔移动）</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -166,7 +387,7 @@ while (i <= 5) {
               <div class="step-badge">综合结论</div>
               <div class="step-desc text-green">
                 外层循环每执行一次，内层循环独立执行 log n 次。总执行次数 = n · log₂ n。<br>
-                因此整体时间复杂度为 <strong>O(n log n)</strong>（对应选项 B）。
+                因此整体时间复杂度为 <strong>O(n log n)</strong>。
               </div>
             </div>
           </div>
@@ -191,7 +412,7 @@ while (i <= 5) {
             • 中间所有非叶子节点，仅仅做了一件事：把左子树和右子树返回的数字相加（<code>return C(...) + C(...)</code>）；<br>
             • 换句话说，最终函数返回的庞大组合数数值 C(n, m)，<strong>全都是由所有的递归基叶子节点“+ 1”累加而成的！</strong><br>
             • 这意味着：整棵递归树的叶子节点个数，<strong>恰好不多不少正好等于组合数的数值 C(n, m)！</strong><br>
-            • 二叉树的总节点数与叶子数同阶。因此该递归函数的时间复杂度严格为 <strong>O(C(n, m))</strong>（对应选项 C）！
+            • 在严格的二叉递归树中，总节点数与叶子数同阶（总函数调用次数恰为 2 × C(n, m) - 1）。因此该递归函数的时间复杂度严格为 <strong>O(C(n, m))</strong>！
           </div>
         </div>
       </section>
@@ -397,16 +618,16 @@ cout << s << endl;</code></pre>
           '}'
         ],
         traceSteps: [
-          { line: 0, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }], vars: { n: 3, result: '?' }, note: '调用 fact(3)，压入调用栈帧' },
-          { line: 1, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }], vars: { n: 3, result: '?' }, note: '判断 3 <= 1 为假，继续向下' },
-          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }], vars: { n: 2, result: '?' }, note: '递归调用 fact(2)，第二层栈帧压栈！' },
-          { line: 1, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }], vars: { n: 2, result: '?' }, note: '判断 2 <= 1 为假，继续向下' },
-          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }, { func: 'fact(1)', vars: { n: 1, result: '?' } }], vars: { n: 1, result: '?' }, note: '递归调用 fact(1)，第三层栈帧压栈！' },
-          { line: 1, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }, { func: 'fact(1)', vars: { n: 1, result: '1' } }], vars: { n: 1, result: '1' }, note: '触碰递归基！1 <= 1 为真，准备出栈返回 1' },
-          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, sub: 1, result: '?' } }], vars: { n: 2, sub: 1 }, note: 'fact(1) 出栈返回 1，fact(2) 接收到 sub = 1' },
-          { line: 3, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: 2 } }], vars: { n: 2, result: 2 }, note: 'fact(2) 计算 2 * 1 = 2，准备出栈返回 2' },
-          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, sub: 2, result: '?' } }], vars: { n: 3, sub: 2 }, note: 'fact(2) 出栈返回 2，fact(3) 接收到 sub = 2' },
-          { line: 3, stack: [{ func: 'fact(3)', vars: { n: 3, result: 6 } }], vars: { n: 3, result: 6 }, note: 'fact(3) 计算 3 * 2 = 6，所有递归完成出栈，最终输出 6！' }
+          { line: 1, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }], vars: { n: 3, result: '?' }, note: '调用 fact(3)，压入调用栈帧' },
+          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }], vars: { n: 3, result: '?' }, note: '判断 3 <= 1 为假，继续向下' },
+          { line: 3, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }], vars: { n: 2, result: '?' }, note: '递归调用 fact(2)，第二层栈帧压栈！' },
+          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }], vars: { n: 2, result: '?' }, note: '判断 2 <= 1 为假，继续向下' },
+          { line: 3, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }, { func: 'fact(1)', vars: { n: 1, result: '?' } }], vars: { n: 1, result: '?' }, note: '递归调用 fact(1)，第三层栈帧压栈！' },
+          { line: 2, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: '?' } }, { func: 'fact(1)', vars: { n: 1, result: '1' } }], vars: { n: 1, result: '1' }, note: '触碰递归基！1 <= 1 为真，准备出栈返回 1' },
+          { line: 3, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, sub: 1, result: '?' } }], vars: { n: 2, sub: 1 }, note: 'fact(1) 出栈返回 1，fact(2) 接收到 sub = 1' },
+          { line: 4, stack: [{ func: 'fact(3)', vars: { n: 3, result: '?' } }, { func: 'fact(2)', vars: { n: 2, result: 2 } }], vars: { n: 2, result: 2 }, note: 'fact(2) 计算 2 * 1 = 2，准备出栈返回 2' },
+          { line: 3, stack: [{ func: 'fact(3)', vars: { n: 3, sub: 2, result: '?' } }], vars: { n: 3, sub: 2 }, note: 'fact(2) 出栈返回 2，fact(3) 接收到 sub = 2' },
+          { line: 4, stack: [{ func: 'fact(3)', vars: { n: 3, result: 6 } }], vars: { n: 3, result: 6 }, note: 'fact(3) 计算 3 * 2 = 6，所有递归完成出栈，最终输出 6！' }
         ]
       });
     });

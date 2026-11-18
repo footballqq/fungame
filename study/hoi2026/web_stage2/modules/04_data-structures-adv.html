@@ -62,17 +62,85 @@
       <!-- 4.2 二维数组内存与语法 -->
       <section class="doc-section" id="sec-matrix">
         <h2 class="section-title">4.2 C++ 二维数组内存布局与语法声明</h2>
-        <p>在概念上，二维数组是一个由行和列构成的表格；但是在物理计算机的内存条中，所有内存单元都是一条<strong>连续的一维线性地址链</strong>。C++ 采用<strong>行优先存储（Row-Major Order）</strong>。</p>
+        <p class="lead-text">
+          在初学者眼中，二维数组像一张画在草稿纸上的棋盘或 Excel 表格（有横着的行、竖着的列）。但在真实的物理计算机硬件中，<strong>内存条（RAM）根本没有“二维平面”，它只是一长串按顺序排开的一维储物柜！</strong>
+        </p>
+
+        <div class="card card-border-cyan">
+          <div class="card-tag">底层原理 · 一维长串如何装下二维表格？</div>
+          <h3>“分段打包法”（行优先存储 Row-Major Order）</h3>
+          <p>计算机把一张二维表格塞进笔直的一维内存长街时，采用的方法是：<strong>把每一行打包成一段，一段接一段地排成一长串！</strong></p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>逻辑表格（二维视图）</th>
+                  <th>内存物理排布（真实的一维长串）</th>
+                  <th>分段归属与下标</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>第 0 行：<code>a[0][0], a[0][1], a[0][2], a[0][3]</code></td>
+                  <td>储物柜 <code>0, 1, 2, 3</code></td>
+                  <td><span class="badge-tag">第 0 段（长 4 个格子）</span></td>
+                </tr>
+                <tr>
+                  <td>第 1 行：<code>a[1][0], a[1][1], a[1][2], a[1][3]</code></td>
+                  <td>储物柜 <code>4, 5, 6, 7</code></td>
+                  <td><span class="badge-tag">第 1 段（长 4 个格子）</span></td>
+                </tr>
+                <tr>
+                  <td>第 2 行：<code>a[2][0], a[2][1], a[2][2], a[2][3]</code></td>
+                  <td>储物柜 <code>8, 9, 10, 11</code></td>
+                  <td><span class="badge-tag">第 2 段（长 4 个格子）</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
         <div class="info-card">
-          <h4>🔑 为什么声明二维数组时，行数可省但列数绝对不能省？</h4>
-          <p>编译器在将 <code>a[i][j]</code> 翻译成内存物理地址时，使用的是如下公式：</p>
-          <div class="formula-box">地址(a[i][j]) = 首地址 + (i × 列数 + j) × 单个元素字节数</div>
-          <p><strong>关键所在：</strong>要计算下一行（i + 1）在内存中跳跃多少个字节，编译器必须精确知道<strong>每一行到底包含多少列（即列数）</strong>！因此：</p>
+          <h4>🔑 核心痛点：每段怎么分？如果不说，计算机连门都找不到！</h4>
+          <p>
+            想象你要去一栋只有一条笔直长廊的酒店找房间 <code>a[i][j]</code>（比如找 <strong>第 2 行第 3 间房</strong> <code>a[2][3]</code>）：<br>
+            • 计算机的找房逻辑非常简单：<strong>“我先跳过前面的整整 2 个行段，再往后走 3 步！”</strong><br>
+            • <strong>最关键的灵魂问题来了：跳过一个完整行段，到底要迈多大的步子？跨过几个房间？</strong><br>
+            • 这<strong>完全取决于你事先有没有告诉它“每一段到底有多长”（即每一行包含多少列）！</strong>
+          </p>
+
+          <div class="step-guide">
+            <div class="step-item">
+              <div class="step-badge">情形一：知道每段长度（列数已知）</div>
+              <div class="step-desc">
+                若声明了列数是 <strong>4</strong>（例如 <code>int a[][4]</code>）：<br>
+                计算机心中有数：每段长度都是 4！要跳到第 2 行，步长就是 4。先大步跨过前 2 段（跳过 <code>2 × 4 = 8</code> 间房），再向后数 3 间房。<br>
+                目标房间物理号：<strong>序号 = 2 × 4 + 3 = 11</strong>！一枪命中！
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-badge">情形二：不知道每段长度（列数被省略）</div>
+              <div class="step-desc text-red">
+                若写成 <code>int a[3][]</code>（只告诉它有 3 行，不给列数）：<br>
+                计算机当场死机抓狂：<strong>“你只告诉我总共切 3 段，但没告诉我一段切多长！是切 2 个格子？切 5 个？还是切 100 个？如果不说每段怎么分，我连第 1 段在哪结束、第 2 段从哪个格子开始都不知道，我怎么可能找得到？！”</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 14px; background: #FAF6F0; border-left: 4px solid #8C532B;">
+            <strong>🍳 生活比喻：装鸡蛋的蛋托盒</strong><br>
+            • <strong>允许省略行数（鸡蛋厂装盒）</strong>：给你一整箱 12 颗鸡蛋，明确要求“<strong>每盒装 4 颗（列数=4）</strong>”。工人不用你交代，自己心算 <code>12 ÷ 4 = 3</code>，自动就知道装了 3 盒（行数自动推导），合法！<br>
+            • <strong>绝对不能省略列数</strong>：给你一整箱鸡蛋，要求“<strong>必须分成 3 盒（行数=3）</strong>”，但坚决不告诉你一盒装几颗。工人拿起第一颗鸡蛋就僵在原地：不知道第一盒装到第几颗该封箱，完全无法开工！
+          </div>
+
+          <div class="formula-box">物理序号 = 行号 i × 总列数 + 列号 j<br>物理字节地址 = 首地址 + (i × 总列数 + j) × sizeof(类型)</div>
+
+          <p><strong>语法规则一览：</strong></p>
           <ul class="dialog-list">
-            <li>✔ <code>int a[][2] = {{1, 2}, {3, 4}};</code> —— <strong>合法！</strong>编译器看到总共 4 个数，每行 2 列，自动推导出有 2 行。</li>
-            <li>❌ <code>int a[][] = {{1, 2}, {3, 4}};</code> —— <strong>非法！</strong>行列均省略，编译器无法计算物理寻址步长。</li>
-            <li>❌ <code>int a[2][] = {{1, 2}, {3, 4}};</code> —— <strong>非法！</strong>省略了列数，编译器直接报错。</li>
+            <li>✔ <code>int a[][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}};</code> —— <strong>合法！</strong>有初值时，编译器用总元素数除以列数自动推算行数。</li>
+            <li>✔ <code>int a[2][4];</code> —— <strong>合法！</strong>行列都写，结构清晰完整。</li>
+            <li>❌ <code>int a[2][] = {{1, 2}, {3, 4}};</code> —— <strong>非法报错！</strong>列数（每段切块步长）缺失，无法建立连续内存寻址映射。</li>
+            <li>❌ <code>int a[][] = {{1, 2}, {3, 4}};</code> —— <strong>非法报错！</strong>缺失分段步长，编译器无法计算。</li>
           </ul>
         </div>
 
@@ -99,8 +167,12 @@
       <!-- 4.3 字符串与最长回文子串 -->
       <section class="doc-section" id="sec-string">
         <h2 class="section-title">4.3 字符串高级技巧与最长回文子串</h2>
-        <p><strong>子串（Substring）：</strong>必须是原字符串中<strong>连续</strong>的一段字符。例如对于 "ABCD"，"BC" 是子串，而 "AC" 只能叫子序列。<br>
-        <strong>回文子串：</strong>正着读和反着读完全一致的子串（如 "ABA"、"ABBA"）。</p>
+        <div class="card" style="margin-bottom: 18px; background: #FAF6F0; border-left: 4px solid #235A7A;">
+          <strong>🥖 面包切片比喻：区分“子串”与“子序列”（考试高频陷阱！）</strong><br>
+          • <strong>子串（Substring）</strong>：必须是原字符串中<strong>紧密相连、不间断的一整截</strong>（就像切下一整块连续的面包片，不能切断）。例如 "ABCD" 中，"BC" 是子串，但 "AC" 绝对不是子串！<br>
+          • <strong>子序列（Subsequence）</strong>：保持前后相对顺序，但可以跳着选（就像在一整根长面包里<strong>挑出几颗分散的葡萄干</strong>）。"AC" 是 "ABCD" 的子序列。<br>
+          • <strong>回文串（Palindrome）</strong>：像照镜子一样正读反读完全一样的串（如 "ABA"、"ABBA"）。
+        </div>
 
         <div class="card">
           <div class="card-tag">真题直击 · 2025 第2题</div>
@@ -120,7 +192,7 @@
                 子串 <code>"ABCBCBA"</code>：<br>
                 • 正向读：A → B → C → B → C → B → A；<br>
                 • 反向读：A → B → C → B → C → B → A；<br>
-                其长度为 <strong>7</strong>！经全串扫描，不存在长度为 8 的回文子串。因此最长回文子串长度为 <strong>7</strong>（选 C）。
+                其长度为 <strong>7</strong>！经全串扫描，不存在长度为 8 的回文子串。因此最长回文子串长度为 <strong>7</strong>。
               </div>
             </div>
           </div>
@@ -130,28 +202,53 @@
       <!-- 4.4 栈 LIFO 与出栈合法性 -->
       <section class="doc-section" id="sec-stack">
         <h2 class="section-title">4.4 栈（Stack）的先进后出与出栈序列合法性</h2>
-        <p>栈是受限线性表，只允许在同一端进行插入和删除。核心原则：<strong>后进先出（LIFO, Last In First Out）</strong>。在信息学竞赛中，出栈合法性判断是百考不厌的题型。</p>
+        <p class="lead-text">
+          如果说数组是一条两头通透的大马路，那么<strong>栈（Stack）就是一条只有一个出口的死胡同车道，或者一筒品客薯片</strong>！
+        </p>
+
+        <div class="grid-2-col" style="margin-bottom: 20px;">
+          <div class="card">
+            <h4>🥔 薯片筒模型（LIFO 后进先出）</h4>
+            <p>
+              • <strong>压栈（Push）</strong>：往筒里放进一片新薯片；<br>
+              • <strong>出栈（Pop）</strong>：吃掉最上面露出来的一片薯片；<br>
+              • <strong>栈顶（Top）</strong>：最上面的一片，只有它能被看见和拿出；<br>
+              • <strong>核心规律</strong>：最后放进去的一片，最先被拿出来吃（<strong>Last In, First Out</strong>）；最底下第一片，必须等上面全吃完才能吃到！
+            </p>
+          </div>
+          <div class="card">
+            <h4>🚗 死胡同倒车调度模型</h4>
+            <p>
+              一长串汽车 <code>1, 2, 3...</code> 依序驶入只有一辆车宽度的死胡同：<br>
+              • 先开进来的车被堵在最里面；<br>
+              • 后开进来的车停在胡同口；<br>
+              • <strong>倒车规则</strong>：只要外面的车不倒出去，堵在里面的车<strong>绝对不可能穿墙飞跃出来</strong>！
+            </p>
+          </div>
+        </div>
 
         <div class="info-card">
           <h4>⚖️ 经典判定规则：任何时候出栈的元素，必须是当前已入栈元素的最顶端！</h4>
           <p><strong>真题考查（2025 第3题）：</strong>入栈顺序为 <code>1, 2, 3, 4, 5, 6, 7</code>，为什么 <code>1, 4, 2, 3, 7, 6, 5</code> 是非法的？</p>
           <div class="step-guide">
             <div class="step-item">
-              <div class="step-badge">第一步</div>
-              <div class="step-desc">元素 1 入栈，接着立即出栈。此时栈空。输出序列：<code>[1]</code>；</div>
+              <div class="step-badge">第一步：元素 1 进出</div>
+              <div class="step-desc">元素 1 驶入胡同，紧接着倒车驶出。此时胡同为空。输出序列：<code>[1]</code>；</div>
             </div>
             <div class="step-item">
-              <div class="step-badge">第二步</div>
-              <div class="step-desc">序列下一个要求出栈的是 4！为了让 4 出栈，必须将 2, 3, 4 依次压栈。此时栈内状态（底→顶）：<code>[2, 3, 4]</code>；</div>
+              <div class="step-badge">第二步：为了让 4 出去</div>
+              <div class="step-desc">序列下一个要求出栈的是 4！因为 4 还没进胡同，必须让 2, 3, 4 依次开进去。此时栈内状态（底→顶）：<code>[2, 3, 4]</code>；</div>
             </div>
             <div class="step-item">
-              <div class="step-badge">第三步</div>
-              <div class="step-desc">元素 4 出栈。此时栈顶露出来的元素是 <strong>3</strong>！栈底是 2。栈内状态：<code>[2, 3]</code>；</div>
+              <div class="step-badge">第三步：4 倒车出栈</div>
+              <div class="step-desc">元素 4 顺利出栈。此时胡同口最外面的车是 <strong>3</strong>！栈底车是 2。栈内状态（底→顶）：<code>[2, 3]</code>；</div>
             </div>
             <div class="step-item">
-              <div class="step-badge">矛盾爆发！</div>
+              <div class="step-badge">第四步：矛盾爆发！</div>
               <div class="step-desc text-red">
-                序列下一个出栈的居然写着 <strong>2</strong>！根据栈的规则，只要 3 还在栈顶，2 就被压在底下，<strong>绝对不可能跳过 3 先出 2</strong>！因此该序列彻底非法！
+                序列下一个出栈的居然写着 <strong>2</strong>！<br>
+                但是看一眼胡同口：<strong>3 号车正死死堵在门口</strong>！在 3 号车没有倒出去之前，2 号车被关在里面，<strong>绝对不可能隔空穿过 3 号车先出来</strong>！<br>
+                因此该序列是彻底违背物理法则的非法序列！
               </div>
             </div>
           </div>
@@ -161,6 +258,15 @@
       <!-- 4.5 循环队列与周期问题 -->
       <section class="doc-section" id="sec-queue">
         <h2 class="section-title">4.5 循环队列与周期模运算（2025 填空真题解码）</h2>
+        <div class="card card-border-cyan" style="margin-bottom: 20px;">
+          <div class="card-tag">队列本质 · FIFO 先进先出</div>
+          <h3>排队买奶茶与回转寿司传送带（循环队列）</h3>
+          <p>
+            • <strong>普通队列（Queue）</strong>：就像在奶茶店排队，先进先出（<strong>First In, First Out</strong>）。先排队的小朋友在队头（front）先买到奶茶离开，新来的在队尾（rear）排队。<br>
+            • <strong>为什么需要循环队列？</strong>如果用普通数组排队，前面的人买完走了，前面的座位就空出来了，但队伍一直往后排，很快就会撞到数组末尾（称为“假溢出”）。<br>
+            • <strong>回转寿司环形跑道（取模 % 技巧）</strong>：把数组首尾连成一个圆环！当队尾指针走到底部时，通过 <code>(rear + 1) % 容量</code>，自动拐弯绕回到第 0 号空座位继续坐人，实现空间 100% 循环利用！
+          </p>
+        </div>
 
         <div class="grid-2-col">
           <!-- 小球周期 -->

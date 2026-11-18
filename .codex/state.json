@@ -1,16 +1,21 @@
 {
-  "current_task": "完成 2026 海淀信奥第二赛段计算思维特训营接入主页 index.html 并推送远程",
+  "current_task": "完成 HOI 2026 特训营功能升级（新增B卷预测题库、双卷切换、模块4/5进阶图文）并推送远程",
   "last_changes": [
-    "index.html",
-    "INDEX_GUIDE.md",
+    "study/hoi2026/web_stage2/assets/js/quiz-data-stage2-b.js",
+    "study/hoi2026/web_stage2/exam/exam.html",
+    "study/hoi2026/web_stage2/assets/js/exam-engine-stage2.js",
+    "study/hoi2026/web_stage2/modules/04_data-structures-adv.html",
+    "study/hoi2026/web_stage2/modules/05_code-analysis-complexity.html",
+    "study/hoi2026/web_stage2/assets/css/interactive.css",
+    "study/hoi2026/web_stage2/assets/css/main.css",
+    "study/hoi2026/web_stage2/assets/css/quiz.css",
     "tests/test_index_hub.py",
-    "CODEx_TODO.md",
-    ".codex/state.json"
+    "CODEx_TODO.md"
   ],
   "next_actions": [
     "执行 git add 与 git commit",
     "执行 git push 推送到远程仓库 origin/main",
-    "向用户汇报更新结果与入口信息"
+    "向用户汇报更新提交与推送完成情况"
   ],
-  "notes": "已成功在 index.html 奥数专区接入 2026海淀信奥计算思维特训，全站互动项目数扩充至 42，全套 109 项 pytest 单测 100% 绿灯通过。"
+  "notes": "全套 109 项 pytest 单测 100% 绿灯通过，B 卷题库与所有前端静态资源已准备就绪。"
 }

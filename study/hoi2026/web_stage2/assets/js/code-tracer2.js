@@ -1,6 +1,7 @@
 /**
  * 海淀信息学第二赛段 · 带函数调用栈的 C++ 单步代码跟踪器
- * 适合演示递归函数调用压栈、出栈回溯过程与变量跟踪
+ * 视觉风格：温暖米纸学术风（柔和米色背景 + 深黑清晰文字 + 焦糖高亮）
+ * 适合演示递归函数调用压栈、出栈回溯过程与变量实时跟踪
  */
 
 class CodeTracerStage2 {
@@ -23,18 +24,22 @@ class CodeTracerStage2 {
     this.container.innerHTML = `
       <div class="tracer2-grid">
         <div class="tracer-code-wrap">
+          <div class="tracer-code-header">
+            <span>💻 C++ 递归函数源码跟踪</span>
+            <span class="tracer-header-tip">单步高亮追踪</span>
+          </div>
           <ul class="tracer-code" id="${this.container.id}-code-list">
             ${this.codeLines.map((line, idx) => `
               <li class="code-line" data-line="${idx + 1}">
                 <span class="line-num">${idx + 1}</span>
-                <span class="line-text">${this.escapeHtml(line)}</span>
+                <span class="line-text">${this.formatSyntax(line)}</span>
               </li>
             `).join('')}
           </ul>
         </div>
         <div class="tracer-side-wrap">
           <div class="tracer-table-wrap">
-            <div style="font-size:0.85rem; font-weight:700; margin-bottom:6px; color:var(--ink-secondary);">📊 变量实时跟踪表</div>
+            <div class="tracer-panel-title">📊 变量实时跟踪表</div>
             <table class="tracer-table">
               <thead>
                 <tr>
@@ -50,19 +55,19 @@ class CodeTracerStage2 {
           </div>
 
           <div class="callstack-box">
-            <div style="font-size:0.85rem; font-weight:700; margin-bottom:6px; color:#5B21B6; display:flex; justify-content:space-between;">
+            <div class="callstack-header">
               <span>🥞 系统函数调用栈 (Call Stack)</span>
-              <span style="font-size:0.75rem; color:var(--ink-muted);">栈顶在上(LIFO)</span>
+              <span class="callstack-tip">栈顶在上 (LIFO)</span>
             </div>
             <div class="callstack-list" id="${this.container.id}-callstack">
-              <div style="font-size:0.8rem; color:#94A3B8; text-align:center; padding:6px;">(当前栈为空)</div>
+              <div class="callstack-empty">(当前栈为空)</div>
             </div>
           </div>
 
-          <div class="sandbox-controls" style="margin-top: 12px;">
-            <button type="button" class="btn btn-primary" id="${this.container.id}-btn-step" style="padding: 6px 16px; font-size: 0.88rem;">下一步 ❯</button>
-            <button type="button" class="btn btn-secondary" id="${this.container.id}-btn-auto" style="padding: 6px 14px; font-size: 0.88rem;">▶ 自动播</button>
-            <button type="button" class="btn btn-secondary" id="${this.container.id}-btn-reset" style="padding: 6px 14px; font-size: 0.88rem;">重置</button>
+          <div class="tracer-controls">
+            <button type="button" class="btn btn-primary" id="${this.container.id}-btn-step">下一步 ❯</button>
+            <button type="button" class="btn btn-secondary" id="${this.container.id}-btn-auto">▶ 自动播</button>
+            <button type="button" class="btn btn-secondary" id="${this.container.id}-btn-reset">重置</button>
           </div>
         </div>
       </div>
@@ -109,12 +114,13 @@ class CodeTracerStage2 {
     this.currentStepIdx++;
     const frame = this.traceSteps[this.currentStepIdx];
 
-    // 高亮当前代码行
+    // 高亮当前代码行 (frame.line 为 1-based 行号)
     const allLines = this.codeListEl.querySelectorAll('.code-line');
     allLines.forEach(l => l.classList.remove('active'));
 
-    if (frame.line > 0) {
-      const activeLine = this.codeListEl.querySelector(`.code-line[data-line="${frame.line}"]`);
+    const targetLineNum = frame.line;
+    if (targetLineNum > 0) {
+      const activeLine = this.codeListEl.querySelector(`.code-line[data-line="${targetLineNum}"]`);
       if (activeLine) activeLine.classList.add('active');
     }
 
@@ -128,20 +134,22 @@ class CodeTracerStage2 {
     if (frame.stack) {
       this.stackListEl.innerHTML = '';
       if (frame.stack.length === 0) {
-        this.stackListEl.innerHTML = '<div style="font-size:0.8rem; color:#94A3B8; text-align:center; padding:6px;">(当前栈为空)</div>';
+        this.stackListEl.innerHTML = '<div class="callstack-empty">(当前栈为空)</div>';
       } else {
-        frame.stack.forEach((fName, idx) => {
+        frame.stack.forEach((fItem, idx) => {
           const isTop = (idx === frame.stack.length - 1);
+          const fName = typeof fItem === 'object' ? (fItem.func || fItem.name || JSON.stringify(fItem)) : fItem;
           const fDiv = document.createElement('div');
-          fDiv.className = 'stack-frame';
-          fDiv.innerHTML = `<span>${fName}</span>${isTop ? ' <span style="font-size:0.7rem; color:#7C3AED;">[栈顶活跃]</span>' : ''}`;
+          fDiv.className = `stack-frame ${isTop ? 'top-frame' : ''}`;
+          fDiv.innerHTML = `<span>${fName}</span>${isTop ? ' <span class="badge-top">[栈顶活跃]</span>' : ''}`;
           this.stackListEl.appendChild(fDiv);
         });
       }
     }
 
-    // 输出当前步骤讲解
-    this.logEl.innerHTML = `[第 ${this.currentStepIdx + 1}/${this.traceSteps.length} 步] ${frame.desc}`;
+    // 输出当前步骤讲解 (兼容 frame.note 与 frame.desc)
+    const descText = frame.note || frame.desc || '';
+    this.logEl.innerHTML = `[第 ${this.currentStepIdx + 1}/${this.traceSteps.length} 步] ${descText}`;
   }
 
   startAuto() {
@@ -175,12 +183,23 @@ class CodeTracerStage2 {
       if (cell) cell.textContent = '-';
     });
 
-    this.stackListEl.innerHTML = '<div style="font-size:0.8rem; color:#94A3B8; text-align:center; padding:6px;">(当前栈为空)</div>';
+    this.stackListEl.innerHTML = '<div class="callstack-empty">(当前栈为空)</div>';
     this.logEl.innerHTML = '准备就绪：点击【下一步】观察递归函数如何一层层入栈与回溯！';
   }
 
   escapeHtml(str) {
     return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  formatSyntax(line) {
+    let s = this.escapeHtml(line);
+    // 高亮关键字（深焦糖色）
+    s = s.replace(/\b(int|return|if|else|while|for|void|bool|true|false)\b/g, '<span class="token-keyword">$1</span>');
+    // 高亮数字（暖琥珀色）
+    s = s.replace(/\b(\d+)\b/g, '<span class="token-number">$1</span>');
+    // 高亮函数名
+    s = s.replace(/\b(fact|bsearch|calc|gcd)\b/g, '<span class="token-func">$1</span>');
+    return s;
   }
 }
 
