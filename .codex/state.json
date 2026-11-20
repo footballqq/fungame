@@ -1,16 +1,16 @@
 {
-  "current_task": "完成 HOI 2026 模考做题档案与复盘回显功能并执行 git c+p (commit and push)",
+  "current_task": "将 math/calculus/ 纳入 Git main 分支、更新 index.html 路径并推送远程",
   "last_changes": [
-    "study/hoi2026/web_stage2/exam/exam.html",
-    "study/hoi2026/web_stage2/assets/js/exam-engine-stage2.js",
-    "study/hoi2026/web_stage2/assets/css/quiz.css",
-    "study/hoi2026/web_stage2/assets/js/core.js",
+    "math/calculus/",
+    "index.html",
+    "tests/test_index_hub.py",
     "CODEx_TODO.md"
   ],
   "next_actions": [
-    "执行 git add",
-    "执行 git commit",
-    "执行 git push 推送到远程仓库 origin/main"
+    "更新 index.html 微积分卡片链接与关键词",
+    "更新 tests/test_index_hub.py 添加 calculus 专项测试",
+    "运行 pytest 测试门禁",
+    "git add, commit, push"
   ],
-  "notes": "全套 109 项 pytest 单测 100% 绿灯通过，本地做题档案、作答表格与复盘状态已完备。"
+  "notes": "math/calculus/ 包含 68 个微积分交互教学与测试文件，此前因拼写笔误仅有 math/calclus/ 被跟踪。现正规化索引至 math/calculus/index.html。"
 }

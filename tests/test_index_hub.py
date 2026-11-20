@@ -1,3 +1,4 @@
+# codex: 2026-11-20 验证微积分项目正规化接入 math/calculus/index.html 与实体文件完备性
 # codex: 2026-11-18 增补 HOI 2026 第二赛段 B 卷专属题库实体文件与模考资源校验
 # codex: 2026-11-17 扩展测试验证 2026 海淀信奥第二赛段计算思维特训营 (HOI 2026) 接入与全站 42 卡片完备性
 # codex: 2026-09-29 根目录 index.html 现代化改版专项自动化测试：验证5大分类、无重复项、搜索结构、文件行数与相对链接有效性
@@ -244,5 +245,29 @@ def test_hoi2026_stage2_in_olympiad_category():
         assert sec is not None
         actual_cnt = len(sec.find_all("div", class_="game-card"))
         assert actual_cnt == expected_cnt, f"专区 {cat} 卡片数 ({actual_cnt}) 与胶囊指示 ({expected_cnt}) 不一致"
+
+
+def test_calculus_integrated_in_concepts():
+    """验证微积分探秘之旅成功接入数学概念专区且指向 math/calculus/index.html"""
+    with open(INDEX_HTML, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # 验证游戏卡片存在且链接指向 math/calculus/index.html
+    calc_link = soup.find("a", href="math/calculus/index.html")
+    assert calc_link is not None, "必须包含微积分项目链接 math/calculus/index.html"
+    calc_card = calc_link.find_parent("div", class_="game-card")
+    assert calc_card is not None
+    assert calc_card.get("data-category") == "concepts", "微积分探秘之旅类别必须为 concepts"
+
+    # 验证所在父专区
+    parent_sec = calc_card.find_parent("section", class_="category-section")
+    assert parent_sec is not None
+    assert parent_sec.get("data-section-category") == "concepts", "必须坐落在数学概念与直觉可视化专区内"
+
+    # 验证实体文件存在
+    target_html = os.path.join(PROJECT_ROOT, "math", "calculus", "index.html")
+    assert os.path.isfile(target_html), f"微积分入口文件必须实际存在: {target_html}"
 
 

@@ -1,0 +1,95 @@
+/* layout.css */
+.global-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-primary-900);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-accent-300);
+}
+
+.nav-brand h1 {
+  margin-bottom: 0;
+  font-size: var(--text-lg);
+}
+
+.nav-brand .material-symbols-rounded {
+  font-size: 28px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.xp-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-star);
+}
+
+.btn-icon {
+  color: var(--text-regular);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--duration-fast) var(--ease-in-out);
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+  color: var(--color-accent-400);
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-6);
+  min-height: calc(100vh - 70px); /* fallback height */
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-spinner {
+  margin: auto;
+  font-size: var(--text-xl);
+  color: var(--color-accent-300);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* 响应式 */
+@media screen and (max-width: 1024px) {
+  .sidebar { transform: translateX(-100%); }
+  .main-content { margin-left: 0; }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --space-6: 16px;
+    --space-8: 20px;
+    --text-base: 16px;
+    --text-2xl: 24px;
+  }
+  
+  .app-container {
+    padding: var(--space-4);
+  }
+}

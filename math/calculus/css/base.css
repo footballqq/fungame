@@ -1,0 +1,89 @@
+/* base.css */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-primary-950);
+  color: var(--text-regular);
+  line-height: var(--leading-loose);
+  font-size: var(--text-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: var(--leading-tight);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-4);
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); margin-top: var(--space-6); }
+
+p {
+  margin-bottom: var(--space-4);
+}
+
+/* 最后一个元素不加底边距，避免撑破卡片 */
+p:last-child,
+h1:last-child, h2:last-child, h3:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-accent-300);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+a:hover {
+  color: var(--color-accent-400);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* KaTeX 公式字体覆盖及间距调整 */
+.katex {
+  font-size: var(--text-lg);
+  margin: 0 4px; /* 在公式两边增加少许空格，防止和中文字符挤在一起 */
+}
+
+/* 强制隐藏辅助文本，防止复制或渲染时出现叠影/明文 */
+.katex-mathml {
+  display: none !important;
+}
+
+/* 块级公式不需要左右 margin */
+.katex-display .katex {
+  margin: 0;
+}

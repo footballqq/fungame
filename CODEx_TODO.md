@@ -1,3 +1,11 @@
+<!-- codex: 2026-11-20 将 math/calculus (微积分探秘之旅) 完整纳入 Git 版本库、更新主页 index.html 入口路径并推送远程 -->
+- [X] 微积分项目正规化与主页推送（`math/calculus/`, `index.html`, `tests/test_index_hub.py`, `CODEx_TODO.md`, `.codex/state.json`）：
+  - 将 `math/calculus/`（68 个完整交互教学文件）全部纳入 Git 版本管理并提交至 `main` 分支；
+  - 在根目录 `index.html` 中将「微积分探秘之旅」入口链接正规化为标准英文路径 `math/calculus/index.html`，并在 `data-keywords` 中补全 `calculus` 与 `姐姐妹妹学微积分`；
+  - 在 `tests/test_index_hub.py` 中新增 `test_calculus_integrated_in_concepts` 自动化单测，确保路径合法且实体文件完备；
+  - 运行全套 pytest 自动化测试（110 项单测全部 100% 绿灯）；
+  - 执行 `git commit` 并推送到 GitHub 远程仓库 `origin/main`。
+
 <!-- codex: 2026-11-18 增加全真模考本地做题档案管理、作答明细回显与交卷复盘模式 -->
 - [X] HOI 2026 模考做题档案与复盘回显升级（`study/hoi2026/web_stage2/exam/exam.html`, `study/hoi2026/web_stage2/assets/js/exam-engine-stage2.js`, `study/hoi2026/web_stage2/assets/css/quiz.css`, `study/hoi2026/web_stage2/assets/js/core.js`）：
   - 增加「💾 本地做题档案」弹窗与作答明细清单表格，支持实时查看 25 道题考生作答、标准答案、得分与正误状态；

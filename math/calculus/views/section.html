@@ -1,0 +1,20 @@
+<div class="progress-bar-container">
+  <div class="progress-bar-fill" id="section-progress" style="width: 10%"></div>
+</div>
+
+<!-- 顶部导航与进度 -->
+<div class="card" style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-3) var(--space-4);">
+  <button id="btn-back-chapter" class="btn btn-icon"><span class="material-symbols-rounded">arrow_back</span></button>
+  <h2 id="section-title" style="margin: 0; font-size: var(--text-lg);">加载中...</h2>
+  <button id="btn-reset-section" class="btn btn-icon" title="重置本节测试进度" style="color: var(--color-wrong);">
+    <span class="material-symbols-rounded">restart_alt</span>
+  </button>
+</div>
+
+<div id="content-container">
+  <!-- 动态插入组件 -->
+</div>
+
+<div id="section-footer" class="hidden text-center" style="margin: 40px 0;">
+  <button class="btn" id="btn-finish-section" style="font-size: 20px; padding: 15px 40px;">✅ 完成本节</button>
+</div>
