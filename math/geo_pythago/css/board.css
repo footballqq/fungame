@@ -1,0 +1,384 @@
+/* ==========================================================================
+   几何画板、互动微课播放器、剪拼与弦图实验室、演练场与考场样式
+   ========================================================================== */
+
+/* 微课与演练场双栏工作区 */
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.svg-stage-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.svg-stage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.svg-canvas-wrap {
+  background:
+    radial-gradient(#cbd5e1 1px, transparent 1px) 0 0 / 18px 18px,
+    #fbfaf6;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 310px;
+  touch-action: none;
+  overflow: hidden;
+}
+
+.svg-canvas-wrap svg {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  display: block;
+}
+
+/* 辅助线动画 */
+.aux-line {
+  stroke-dasharray: 8 5;
+  animation: dashFadeIn 0.45s ease-out;
+}
+
+.aux-highlight {
+  animation: pulseSoft 1.6s ease-in-out infinite;
+}
+
+@keyframes dashFadeIn {
+  from { opacity: 0; stroke-dashoffset: 30; }
+  to { opacity: 1; stroke-dashoffset: 0; }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 0.72; }
+  50% { opacity: 0.96; }
+}
+
+/* 分步控制条 */
+.step-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.step-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: all 0.18s ease;
+}
+
+.step-dot.active {
+  width: 24px;
+  border-radius: 999px;
+  background: var(--brand-blue);
+}
+
+.step-narration {
+  margin-top: 14px;
+  background: var(--bg-accent-soft);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.step-narration h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: var(--brand-blue-dark);
+}
+
+.step-narration p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-primary);
+}
+
+/* 演练场题目列表与答题区 */
+.puzzle-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.puzzle-item {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.puzzle-item:hover {
+  border-color: var(--brand-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.puzzle-item.solved {
+  border-left: 4px solid var(--brand-green);
+}
+
+.puzzle-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+
+.answer-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.answer-input {
+  flex: 1;
+  min-width: 150px;
+  padding: 11px 14px;
+  font-size: 17px;
+  font-weight: 700;
+  border: 2px solid var(--border-strong);
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  outline: none;
+}
+
+.answer-input:focus {
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14);
+}
+
+.unit-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-secondary);
+}
+
+/* 三阶提示面板 */
+.hint-panel {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hint-btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hint-card {
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+.hint-l1 { background: #fef9c3; border: 1px solid #fde047; color: #713f12; }
+.hint-l2 { background: #dbeafe; border: 1px solid #93c5fd; color: #1e3a8a; }
+.hint-l3 { background: #dcfce7; border: 1px solid #86efac; color: #14532d; }
+
+/* 家长陪学话术气泡 */
+.parent-coach-box {
+  margin-top: 14px;
+  background: var(--bg-purple-soft);
+  border: 1px dashed var(--brand-purple);
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 13.5px;
+  color: #4c1d95;
+}
+
+.parent-coach-box strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* 高阶思维溯源卡片（为什么想到这条辅助线） */
+.thinking-box {
+  margin-top: 14px;
+  background: linear-gradient(135deg, #f0fdfa 0%, #eff6ff 100%);
+  border: 1px solid #99f6e4;
+  border-left: 4px solid var(--brand-teal);
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 13.8px;
+  color: #134e4a;
+  line-height: 1.6;
+}
+
+.thinking-box strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #0f766e;
+}
+
+/* 动手实验室样式 */
+.lab-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.slider-row label {
+  min-width: 110px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.slider-row input[type="range"] {
+  flex: 1;
+  accent-color: var(--brand-blue);
+}
+
+.formula-board {
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.formula-board .hl-gold { color: #fde047; font-weight: 700; }
+.formula-board .hl-teal { color: #5eead4; font-weight: 700; }
+.formula-board .hl-coral { color: #fda4af; font-weight: 700; }
+
+/* 一分为四交互正方形游戏 */
+.quad-grid-wrap {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  touch-action: none;
+}
+
+.quad-cell {
+  cursor: pointer;
+  transition: fill 0.15s ease;
+}
+
+.quad-cell:hover {
+  filter: brightness(0.94);
+}
+
+/* 模拟考场与雷达图 */
+.exam-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.timer-pill {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--brand-blue-dark);
+  background: var(--bg-accent-soft);
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.exam-q-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.q-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.q-dot.current {
+  border-color: var(--brand-blue);
+  background: var(--brand-blue);
+  color: #fff;
+}
+
+.q-dot.answered {
+  background: var(--bg-green-soft);
+  border-color: var(--brand-green);
+  color: var(--brand-green);
+}
+
+.q-dot.current.answered {
+  background: var(--brand-blue);
+  color: #fff;
+}
+
+.radar-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}

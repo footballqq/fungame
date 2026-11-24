@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>几何剪拼与弦图小大师 · 互动教学课件</title>
+  <link rel="stylesheet" href="css/style.css?v=20261124_2">
+  <link rel="stylesheet" href="css/board.css?v=20261124_2">
+  <link rel="stylesheet" href="css/modal.css?v=20261124_2">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- 顶部导航栏 -->
+    <header class="top-nav">
+      <div class="nav-brand" id="btnBrandHome" role="button" tabindex="0">
+        <div class="brand-logo" aria-hidden="true">📐</div>
+        <div class="brand-text">
+          <h1>几何剪拼与弦图小大师</h1>
+          <p>剪拼 · 勾股定理 · 弦图辅助线全攻略</p>
+        </div>
+      </div>
+
+      <nav class="nav-tabs" aria-label="主导航">
+        <button class="nav-tab active" data-page="home">🏠 路线图</button>
+        <button class="nav-tab" data-page="lessons">🎓 几何学院</button>
+        <button class="nav-tab" data-page="lab">✂️ 动手实验室</button>
+        <button class="nav-tab" data-page="practice">🧩 演练场</button>
+        <button class="nav-tab" data-page="exam">🏆 模拟考场</button>
+        <button class="nav-tab" data-page="review">📓 错题本 <span class="badge-count" id="navWrongCount">0</span></button>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="action-pill pill-gold" id="btnCheatSheet" title="打开速查卡与弦图辅助线口诀">📖 速查卡</button>
+        <button class="action-pill pill-toggle" id="btnParentMode" title="开启后每题显示家长 10 秒陪讲话术">👨‍👩‍👧 家长模式：<span id="parentModeLabel">关</span></button>
+        <button class="action-pill" id="btnTopReset" title="清空本地保存的全部学习进度与错题本">🗑️ 清空进度</button>
+        <button class="action-pill pill-icon" id="btnSoundToggle" title="音效开关">🔊</button>
+      </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="main-container" id="mainContent">
+      <!-- 动态渲染当前页面视图 -->
+    </main>
+  </div>
+
+  <!-- 速查卡模态弹窗 -->
+  <div class="modal-backdrop hidden" id="cheatModal" role="dialog" aria-modal="true" aria-labelledby="cheatModalTitle">
+    <div class="modal-card modal-wide">
+      <div class="modal-header">
+        <div>
+          <h2 id="cheatModalTitle">📖 几何剪拼 · 勾股 · 弦图一页纸速查卡</h2>
+          <p class="modal-subtitle">3 秒看图决策树 + 必背勾股数 + 弦图五大辅助线心法</p>
+        </div>
+        <div class="modal-header-actions">
+          <button class="btn btn-secondary btn-sm" id="btnPrintCheat">🖨️ 打印 A4 速查卡</button>
+          <button class="btn-close" id="btnCloseCheat" aria-label="关闭">✕</button>
+        </div>
+      </div>
+      <div class="modal-body" id="cheatModalBody"></div>
+    </div>
+  </div>
+
+  <!-- 通用确认模态弹窗（替代原生 confirm） -->
+  <div class="modal-backdrop hidden" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmModalTitle">
+    <div class="modal-card modal-sm">
+      <div class="modal-header">
+        <h2 id="confirmModalTitle">提示</h2>
+        <button class="btn-close" id="btnCloseConfirm" aria-label="关闭">✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="confirmModalMessage"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnConfirmCancel">取消</button>
+        <button class="btn btn-primary" id="btnConfirmOk">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast 提示条 -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- 脚本模块加载 -->
+  <script src="js/audio.js?v=20261124_2"></script>
+  <script src="js/geometry_svg.js?v=20261124_2"></script>
+  <script src="js/geo_verify.js?v=20261124_2"></script>
+  <script src="js/thinking_data.js?v=20261124_2"></script>
+  <script src="js/lessons_data.js?v=20261124_2"></script>
+  <script src="js/puzzles_data.js?v=20261124_2"></script>
+  <script src="js/exams_data.js?v=20261124_2"></script>
+  <script src="js/engine.js?v=20261124_2"></script>
+  <script src="js/cut_lab.js?v=20261124_2"></script>
+  <script src="js/ui.js?v=20261124_2"></script>
+</body>
+</html>
