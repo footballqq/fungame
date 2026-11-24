@@ -82,10 +82,8 @@ fungame/
   </div>
   <p>奥数经典真题：用 1~4 规格纸片无重漏拼接 10×10 最少几块？四元鸡兔同笼升维几何装箱证明。</p>
   <div class="card-actions">
-    <a href="boardgame/square/index.html" class="btn-action btn-primary">开始挑战</a>
-    <a href="boardgame/square/index.html#rules" class="btn-action btn-coral">玩法规则</a>
-    <a href="boardgame/square/index.html#math" class="btn-action btn-indigo">数学原理</a>
-    <a href="boardgame/square/README.md" class="btn-action btn-amber">说明文档</a>
+    <a href="math/papercut/index.html" class="btn-action btn-primary">✂️ 自由剪纸</a>
+    <a href="math/papercut/index.html?mode=tiling" class="btn-action btn-indigo">🧩 限尺拼图</a>
   </div>
 </div>
 ```

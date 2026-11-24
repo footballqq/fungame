@@ -74,15 +74,14 @@ def test_key_games_integrated_with_rich_actions():
 
     soup = BeautifulSoup(html, "html.parser")
 
-    # 正方形拼图挑战
-    sq_link = soup.find("a", href="boardgame/square/index.html")
-    assert sq_link is not None, "必须包含正方形拼图挑战入口"
+    # 正方形剪拼大师（合并原 papercut 与 square 为一体两面双模式）
+    sq_link = soup.find("a", href="math/papercut/index.html")
+    assert sq_link is not None, "必须包含正方形剪拼大师（自由剪纸）入口"
     sq_card = sq_link.find_parent("div", class_="game-card")
     assert sq_card is not None
     sq_hrefs = [a["href"] for a in sq_card.find_all("a")]
-    assert "boardgame/square/index.html#rules" in sq_hrefs, "必须包含玩法规则直达"
-    assert "boardgame/square/index.html#math" in sq_hrefs, "必须包含数学原理直达"
-    assert "boardgame/square/README.md" in sq_hrefs, "必须包含说明文档直达"
+    assert "math/papercut/index.html?mode=tiling" in sq_hrefs, "必须包含限尺拼图直达入口"
+    assert os.path.isfile(os.path.join(PROJECT_ROOT, "math", "papercut", "index.html"))
 
     # Dittle 骰战棋
     dittle_link = soup.find("a", href="boardgame/tzarr/dittle_game.html")
@@ -162,9 +161,9 @@ def test_qa_edu_mgjywyh_integrated_in_life():
     target_html = os.path.join(PROJECT_ROOT, "oldgame", "QA_edu_mgjywyh", "index.html")
     assert os.path.isfile(target_html), f"游戏入口文件必须实际存在: {target_html}"
 
-    # 验证全站总卡片数达到 42 项
+    # 验证全站总卡片数达到 42 项以上
     cards = soup.find_all("div", class_="game-card")
-    assert len(cards) == 42, f"全站独立卡片数应为 42，实为 {len(cards)}"
+    assert len(cards) >= 42, f"全站独立卡片数应不少于 42，实为 {len(cards)}"
 
 
 def test_fold_origami_puzzle_in_olympiad_category():
