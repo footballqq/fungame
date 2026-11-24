@@ -179,7 +179,8 @@ html, body {
 }
 
 .control-group select,
-.control-group input[type='number'] {
+.control-group input[type='number'],
+.control-group input[type='text'] {
   padding: 7px 10px;
   border-radius: 10px;
   border: 1px solid #cbd5e1;
@@ -187,6 +188,67 @@ html, body {
   font-weight: 700;
   font-size: 13px;
   color: var(--ink);
+}
+
+.name-text-input {
+  width: 130px;
+}
+
+.star-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: linear-gradient(90deg, #fefce8 0%, #fffbeb 100%);
+  border: 1.5px solid #fde047;
+  border-radius: 16px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #854d0e;
+}
+
+.leaderboard-card {
+  margin-top: 20px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 8px 6px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.leaderboard-table th {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 7px 10px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-top: 6px;
 }
 
 .range-num-input {

@@ -16,6 +16,13 @@
   }
 
   function initPkGame() {
+    const recordsSvc = root.SquaresRecords.createRecordsService();
+    const nameAInput = document.getElementById('pkNameAInput');
+    const nameBInput = document.getElementById('pkNameBInput');
+    const randomNamesBtn = document.getElementById('btnPkRandomNames');
+    const saveRecordCheck = document.getElementById('pkSaveRecordCheck');
+    const leaderboardArea = document.getElementById('pkLeaderboardArea');
+
     const modeSelect = document.getElementById('pkModeSelect');
     const rangeSelect = document.getElementById('pkRangeSelect');
     const minInput = document.getElementById('pkMinInput');
@@ -33,6 +40,88 @@
     const resultArea = document.getElementById('pkResultArea');
 
     if (!startBtn || !overlayEl) return;
+
+    const saved = recordsSvc.load();
+    if (nameAInput && saved.lastPkNames && saved.lastPkNames.A) nameAInput.value = saved.lastPkNames.A;
+    if (nameBInput && saved.lastPkNames && saved.lastPkNames.B) nameBInput.value = saved.lastPkNames.B;
+
+    if (randomNamesBtn) {
+      randomNamesBtn.addEventListener('click', function () {
+        const pair = root.SquaresRecords.pickRandomPair();
+        if (nameAInput) nameAInput.value = pair[0];
+        if (nameBInput) nameBInput.value = pair[1];
+      });
+    }
+
+    function renderLeaderboard() {
+      if (!leaderboardArea) return;
+      const board = recordsSvc.getPkLeaderboardSorted();
+      const history = recordsSvc.load().pkHistory || [];
+
+      if (board.length === 0) {
+        leaderboardArea.innerHTML =
+          '<div style="font-weight:800;font-size:14px;color:#334155;">🏆 历史战绩英雄榜</div>' +
+          '<p style="margin:6px 0 0;font-size:12px;color:#64748b;">暂无对战记录。开始一局 PK（如“牛顿 vs 莱布尼茨”），打完自动上榜！</p>';
+        return;
+      }
+
+      const medals = ['🥇', '🥈', '🥉'];
+      const rowsHtml = board
+        .map(function (row, idx) {
+          const rankIcon = medals[idx] || '#' + (idx + 1);
+          return (
+            '<tr>' +
+            '<td style="font-weight:800;">' + rankIcon + ' ' + row.name + '</td>' +
+            '<td style="color:#059669;font-weight:800;">' + row.wins + ' 胜</td>' +
+            '<td>' + row.draws + ' 平 / ' + row.losses + ' 负</td>' +
+            '<td>' + row.winRate + '%</td>' +
+            '<td style="font-family:var(--font-mono);font-weight:700;">' + row.totalCorrect + ' 题</td>' +
+            '</tr>'
+          );
+        })
+        .join('');
+
+      const recentHtml = history
+        .slice(0, 6)
+        .map(function (h) {
+          const winTag =
+            h.winner === 'A'
+              ? '🏆 ' + h.nameA + ' 胜'
+              : h.winner === 'B'
+              ? '🏆 ' + h.nameB + ' 胜'
+              : '🤝 平局';
+          return (
+            '<div class="history-item">' +
+            '<span><strong>' + h.nameA + '</strong> (' + h.correctA + ') vs <strong>' + h.nameB + '</strong> (' + h.correctB + ')</span>' +
+            '<span style="color:#4f46e5;font-weight:700;">' + winTag + ' · ' + h.rangeLabel + '</span>' +
+            '</div>'
+          );
+        })
+        .join('');
+
+      leaderboardArea.innerHTML =
+        '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">' +
+        '<span style="font-weight:900;font-size:15px;">🏆 PK 历史战绩英雄榜</span>' +
+        '<button type="button" id="btnClearPkRecords" class="icon-btn" style="font-size:11px;padding:4px 8px;">清空历史战绩</button>' +
+        '</div>' +
+        '<table class="leaderboard-table">' +
+        '<thead><tr><th>选手</th><th>胜场</th><th>平/负</th><th>胜率</th><th>累计答对</th></tr></thead>' +
+        '<tbody>' + rowsHtml + '</tbody></table>' +
+        '<div style="margin-top:12px;font-weight:800;font-size:12px;color:#475569;">📜 最近对战记录</div>' +
+        recentHtml;
+
+      const clearBtn = document.getElementById('btnClearPkRecords');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', function () {
+          if (window.confirm('确定清空本地保存的所有 PK 历史战绩吗？')) {
+            recordsSvc.clearPkRecords();
+            renderLeaderboard();
+          }
+        });
+      }
+    }
+
+    renderLeaderboard();
 
     rangeSelect.addEventListener('change', function () {
       if (rangeSelect.value !== 'custom') {
@@ -80,6 +169,14 @@
         inputType: parsed.inputType,
         ruleType: ruleType,
       });
+
+      const randomPair = root.SquaresRecords.pickRandomPair();
+      const rawA = nameAInput ? nameAInput.value.trim() : '';
+      const rawB = nameBInput ? nameBInput.value.trim() : '';
+      match.players.A.name = rawA || randomPair[0];
+      match.players.B.name =
+        rawB || (randomPair[1] !== match.players.A.name ? randomPair[1] : root.SquaresRecords.pickRandomMathematician(match.players.A.name));
+      match.rangeLabel = range.minN + '～' + range.maxN + (filterType === 'prime' ? '(质数)' : filterType === 'ending5' ? '(尾5)' : '');
 
       resultArea.style.display = 'none';
       overlayEl.classList.add('active');
@@ -184,7 +281,7 @@
         '<span class="pk-player-tag ' +
         playerKey.toLowerCase() +
         '">' +
-        (playerKey === 'A' ? '🔵 下方玩家' : '🟠 上方玩家') +
+        (playerKey === 'A' ? '🔵 ' + p.name : '🟠 ' + p.name) +
         '</span>' +
         '<span>对 ' +
         p.correct +
@@ -292,14 +389,37 @@
 
       const A = match.players.A;
       const B = match.players.B;
+      let winnerKey = 'draw';
       let verdict = '🤝 势均力敌，平局！';
-      if (A.correct > B.correct) verdict = '🏆 🔵 下方玩家获胜！';
-      else if (B.correct > A.correct) verdict = '🏆 🟠 上方玩家获胜！';
-      else if (A.correct > 0 && A.totalTimeMs !== B.totalTimeMs) {
-        verdict =
-          A.totalTimeMs < B.totalTimeMs
-            ? '⚡ 同分速度险胜：🔵 下方玩家获胜！'
-            : '⚡ 同分速度险胜：🟠 上方玩家获胜！';
+      if (A.correct > B.correct) {
+        winnerKey = 'A';
+        verdict = '🏆 🔵 ' + A.name + ' 获胜！';
+      } else if (B.correct > A.correct) {
+        winnerKey = 'B';
+        verdict = '🏆 🟠 ' + B.name + ' 获胜！';
+      } else if (A.correct > 0 && A.totalTimeMs !== B.totalTimeMs) {
+        if (A.totalTimeMs < B.totalTimeMs) {
+          winnerKey = 'A';
+          verdict = '⚡ 同分速度险胜：🔵 ' + A.name + ' 获胜！';
+        } else {
+          winnerKey = 'B';
+          verdict = '⚡ 同分速度险胜：🟠 ' + B.name + ' 获胜！';
+        }
+      }
+
+      if (!saveRecordCheck || saveRecordCheck.checked) {
+        recordsSvc.recordPkMatchResult({
+          nameA: A.name,
+          nameB: B.name,
+          correctA: A.correct,
+          wrongA: A.wrong,
+          correctB: B.correct,
+          wrongB: B.wrong,
+          winner: winnerKey,
+          rangeLabel: match.rangeLabel,
+          totalRounds: match.totalRounds,
+        });
+        renderLeaderboard();
       }
 
       const avgA = A.correct > 0 ? (A.totalTimeMs / A.correct / 1000).toFixed(2) + 's' : '-';
@@ -334,7 +454,7 @@
         '</h3>' +
         '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">' +
         '<div style="background:#eff6ff;border:2px solid #93c5fd;border-radius:16px;padding:12px;">' +
-        '<div style="font-weight:900;color:#2563eb;">🔵 下方玩家</div>' +
+        '<div style="font-weight:900;color:#2563eb;">🔵 ' + A.name + '</div>' +
         '<div style="font-size:22px;font-weight:900;margin:4px 0;">对 ' +
         A.correct +
         ' / 错 ' +
@@ -344,7 +464,7 @@
         avgA +
         '</div></div>' +
         '<div style="background:#fff7ed;border:2px solid #fdba74;border-radius:16px;padding:12px;">' +
-        '<div style="font-weight:900;color:#ea580c;">🟠 上方玩家</div>' +
+        '<div style="font-weight:900;color:#ea580c;">🟠 ' + B.name + '</div>' +
         '<div style="font-size:22px;font-weight:900;margin:4px 0;">对 ' +
         B.correct +
         ' / 错 ' +

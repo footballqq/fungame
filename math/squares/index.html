@@ -96,6 +96,18 @@
     <!-- 面板 2：单人触控闯关 -->
     <section id="panel-solo" class="view-panel no-print">
       <div class="card">
+        <div class="star-banner">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span>🧑‍🚀 玩家：</span>
+            <input type="text" id="soloNameInput" class="name-text-input" maxlength="10" placeholder="留空默认小达人" style="padding:5px 8px;border-radius:8px;border:1px solid #eab308;background:#fff;font-weight:700;font-size:13px;" />
+            <span id="soloStarRankBadge" style="background:#fef08a;padding:3px 10px;border-radius:999px;">🌱 平方见习生</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:16px;">⭐ 累计星星：<strong id="soloTotalStars" style="color:#d97706;font-size:20px;">0</strong></span>
+            <button type="button" id="btnClearSoloStars" class="icon-btn" style="font-size:11px;padding:4px 8px;">清空星星</button>
+          </div>
+        </div>
+
         <div class="control-bar">
           <div class="control-group">
             <label for="soloModeSelect">玩法：</label>
@@ -161,6 +173,16 @@
         </p>
 
         <div class="control-bar" style="flex-direction:column;align-items:stretch;gap:12px;">
+          <div class="control-group" style="justify-content:space-between;flex-wrap:wrap;">
+            <span>🏷️ 双方昵称（留空随机数学家）：</span>
+            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+              <input type="text" id="pkNameAInput" class="name-text-input" maxlength="10" placeholder="🔵 下方(如牛顿)" />
+              <span>VS</span>
+              <input type="text" id="pkNameBInput" class="name-text-input" maxlength="10" placeholder="🟠 上方(如莱布尼茨)" />
+              <button type="button" id="btnPkRandomNames" class="icon-btn" title="随机分配两位传奇数学家">🎲 随机大师</button>
+            </div>
+          </div>
+
           <div class="control-group" style="justify-content:space-between;">
             <label for="pkModeSelect">🎯 对战玩法：</label>
             <select id="pkModeSelect" style="min-width:230px;">
@@ -217,6 +239,11 @@
               <option value="race">抢答竞速制（谁先填对直接拿分结束本局）</option>
             </select>
           </div>
+
+          <label class="control-group" style="cursor:pointer;">
+            <input type="checkbox" id="pkSaveRecordCheck" checked />
+            💾 保存本次名字与战绩到本地历史排行榜（不勾选则纯娱乐不记榜）
+          </label>
         </div>
 
         <button type="button" id="btnPkStart" class="btn btn-primary" style="width:100%;padding:14px;font-size:17px;">
@@ -224,6 +251,9 @@
         </button>
 
         <div id="pkResultArea" style="display:none;"></div>
+
+        <!-- PK 历史战绩英雄榜 -->
+        <div id="pkLeaderboardArea" class="leaderboard-card"></div>
       </div>
     </section>
   </main>
@@ -239,6 +269,7 @@
   </div>
 
   <script src="js/engine.js"></script>
+  <script src="js/records.js"></script>
   <script src="js/sound.js"></script>
   <script src="js/chartView.js"></script>
   <script src="js/soloGame.js"></script>

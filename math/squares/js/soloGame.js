@@ -26,6 +26,12 @@
   }
 
   function initSoloGame() {
+    const recordsSvc = root.SquaresRecords.createRecordsService();
+    const nameInput = document.getElementById('soloNameInput');
+    const starsEl = document.getElementById('soloTotalStars');
+    const rankEl = document.getElementById('soloStarRankBadge');
+    const clearStarsBtn = document.getElementById('btnClearSoloStars');
+
     const modeSelect = document.getElementById('soloModeSelect');
     const rangeSelect = document.getElementById('soloRangeSelect');
     const minInput = document.getElementById('soloMinInput');
@@ -37,6 +43,32 @@
     const summaryEl = document.getElementById('soloSummaryArea');
 
     if (!startBtn || !stageEl) return;
+
+    function getCurrentPlayerName() {
+      return (nameInput && nameInput.value.trim()) || '数学小达人';
+    }
+
+    function refreshStarBanner() {
+      const profile = recordsSvc.getSoloProfile(getCurrentPlayerName());
+      if (starsEl) starsEl.textContent = String(profile.stars);
+      if (rankEl) rankEl.textContent = profile.rank;
+    }
+
+    const savedState = recordsSvc.load();
+    if (nameInput && savedState.lastSoloName) {
+      nameInput.value = savedState.lastSoloName;
+    }
+    refreshStarBanner();
+
+    if (nameInput) nameInput.addEventListener('input', refreshStarBanner);
+    if (clearStarsBtn) {
+      clearStarsBtn.addEventListener('click', function () {
+        if (window.confirm('确定清空本地保存的所有单人星星记录吗？')) {
+          recordsSvc.clearSoloStars();
+          refreshStarBanner();
+        }
+      });
+    }
 
     rangeSelect.addEventListener('change', function () {
       if (rangeSelect.value !== 'custom') {
@@ -294,7 +326,25 @@
       summaryEl.style.display = 'block';
       const elapsedSec = ((Date.now() - session.startTime) / 1000).toFixed(1);
       const acc = Math.round((session.correct / session.total) * 100);
+      const isPerfect = session.wrong === 0 && session.correct === session.total;
+      const starRes = recordsSvc.recordSoloStars(getCurrentPlayerName(), session.correct, isPerfect);
+      refreshStarBanner();
+
       if (acc >= 80) root.SquaresSound.win();
+
+      const starMsg =
+        '<div style="background:#fefce8;border:1.5px solid #fde047;border-radius:14px;padding:10px 14px;margin:10px 0;font-weight:800;color:#854d0e;">' +
+        '⭐ ' +
+        starRes.name +
+        ' 本轮获得 <strong>+' +
+        starRes.gained +
+        ' 颗星</strong>' +
+        (starRes.bonus > 0 ? '（含全对完美奖励 +' + starRes.bonus + '🌟）' : '') +
+        ' · 当前累计 <strong>' +
+        starRes.totalStars +
+        ' ⭐</strong>（' +
+        starRes.rank +
+        '）</div>';
 
       const wrongHtml =
         session.wrongItems.length === 0
@@ -320,6 +370,7 @@
         '） · 用时 ' +
         elapsedSec +
         ' 秒</div>' +
+        starMsg +
         wrongHtml +
         '<div style="margin-top:18px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">' +
         '<button type="button" class="btn btn-primary" id="btnSoloAgain">再来一局</button>' +
