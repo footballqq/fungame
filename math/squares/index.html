@@ -20,6 +20,7 @@
 
       <nav class="nav-tabs">
         <button type="button" class="tab-btn active" data-tab="chart">🖨️ 展示与 A4 打印</button>
+        <button type="button" class="tab-btn" data-tab="tricks">⚡ 速算技巧篇</button>
         <button type="button" class="tab-btn" data-tab="solo">🎮 单人触控闯关</button>
         <button type="button" class="tab-btn" data-tab="pk">⚔️ 双人正反大 PK</button>
       </nav>
@@ -90,6 +91,34 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 面板 1.5：⚡ 8 大完全平方数速算与开方技巧篇 -->
+    <section id="panel-tricks" class="view-panel no-print">
+      <div class="card">
+        <h2 style="margin:0 0 6px;font-size:22px;">⚡ 完全平方数 8 大速算与 3 秒开方秘籍</h2>
+        <p style="margin:0 0 16px;font-size:13px;color:#475569;line-height:1.6;">
+          融合奥数速算、平方差降维与印度吠陀数学（Vedic Math）精华！告别死记硬背，<strong>输入任意 1～100 的数字</strong>，立刻透视最快心算步骤与 3 秒开平方神技！
+        </p>
+
+        <!-- 任意数速算透视镜 -->
+        <div class="control-bar" style="justify-content:space-between;">
+          <div class="control-group">
+            <label for="trickDemoInput">🔮 速算透视镜（输入 1～100 任意底数）：</label>
+            <input type="number" id="trickDemoInput" class="range-num-input" min="1" max="100" value="47" style="width:78px;font-size:16px;" />
+            <button type="button" id="btnTrickRandom" class="icon-btn">🎲 随机试一个</button>
+          </div>
+          <div style="font-size:12px;color:#64748b;font-weight:700;">
+            试试输入：35、47、96、61、32、88
+          </div>
+        </div>
+
+        <div id="trickDemoResult"></div>
+
+        <!-- 8 大绝技卡片墙 -->
+        <h3 style="margin:22px 0 12px;font-size:17px;">📚 八大绝技图谱（每招都可一键专练）</h3>
+        <div id="trickCardsGrid" class="trick-cards-grid"></div>
       </div>
     </section>
 
@@ -270,6 +299,7 @@
 
   <script src="js/engine.js"></script>
   <script src="js/records.js"></script>
+  <script src="js/tricks.js"></script>
   <script src="js/sound.js"></script>
   <script src="js/chartView.js"></script>
   <script src="js/soloGame.js"></script>

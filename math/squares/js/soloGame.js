@@ -397,9 +397,18 @@
       startSession();
     });
 
+    root.SquaresSoloGame.applyPresetAndStart = function (preset) {
+      if (modeSelect && preset.mode) modeSelect.value = preset.mode;
+      if (rangeSelect) rangeSelect.value = 'custom';
+      if (minInput && preset.minN) minInput.value = String(preset.minN);
+      if (maxInput && preset.maxN) maxInput.value = String(preset.maxN);
+      if (filterSelect && preset.filterType) filterSelect.value = preset.filterType;
+      startSession();
+    };
+
     // 默认自动开一局，打开即玩
     startSession();
   }
 
-  root.SquaresSoloGame = { init: initSoloGame };
+  root.SquaresSoloGame = { init: initSoloGame, applyPresetAndStart: function () {} };
 })(typeof self !== 'undefined' ? self : this);

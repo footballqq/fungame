@@ -6,15 +6,19 @@
     const panels = document.querySelectorAll('.view-panel');
     const muteBtn = document.getElementById('btnToggleMute');
 
+    function switchTab(target) {
+      tabButtons.forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-tab') === target);
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle('active', p.id === 'panel-' + target);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     tabButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        const target = btn.getAttribute('data-tab');
-        tabButtons.forEach(function (b) {
-          b.classList.toggle('active', b === btn);
-        });
-        panels.forEach(function (p) {
-          p.classList.toggle('active', p.id === 'panel-' + target);
-        });
+        switchTab(btn.getAttribute('data-tab'));
       });
     });
 
@@ -28,5 +32,9 @@
     root.SquaresChartView.init();
     root.SquaresSoloGame.init();
     root.SquaresPkGame.init();
+    root.SquaresTricks.init(function (preset) {
+      switchTab('solo');
+      root.SquaresSoloGame.applyPresetAndStart(preset);
+    });
   });
 })(typeof self !== 'undefined' ? self : this);
