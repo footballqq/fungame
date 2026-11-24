@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>完全平方数速背与双人面对面大 PK</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="top-nav no-print">
+    <div class="top-nav-inner">
+      <div class="brand">
+        <div class="brand-icon">n²</div>
+        <div>
+          <div class="brand-title">完全平方数大 PK</div>
+          <div class="brand-sub">1～100 速背 A4 打印 · 零反悔触控 · 双人正反同屏对战</div>
+        </div>
+      </div>
+
+      <nav class="nav-tabs">
+        <button type="button" class="tab-btn active" data-tab="chart">🖨️ 展示与 A4 打印</button>
+        <button type="button" class="tab-btn" data-tab="solo">🎮 单人触控闯关</button>
+        <button type="button" class="tab-btn" data-tab="pk">⚔️ 双人正反大 PK</button>
+      </nav>
+
+      <div class="nav-tools">
+        <button type="button" id="btnToggleMute" class="icon-btn">🔊 音效开</button>
+        <a href="../../index.html" class="icon-btn">🏠 返回大厅</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+    <!-- 面板 1：1~100 展示与 A4 黑白打印 -->
+    <section id="panel-chart" class="view-panel active">
+      <div class="card">
+        <div class="control-bar no-print">
+          <div class="control-group">
+            <label for="chartPresetSelect">展示 / 打印范围：</label>
+            <select id="chartPresetSelect">
+              <option value="11-30">11²～30² 高频必背大字版（A4 一页超大字）</option>
+              <option value="11-50" selected>11²～50² 进阶速背版（A4 一页大字，推荐）</option>
+              <option value="11-100">11²～100² 大师完整版（略去 1～10）</option>
+              <option value="1-100">1²～100² 全部 100 组</option>
+            </select>
+          </div>
+          <label class="control-group" style="cursor:pointer;">
+            <input type="checkbox" id="chartShowTips" checked />
+            附带底部速算记忆口诀
+          </label>
+          <button type="button" id="btnPrintChart" class="btn btn-primary" style="margin-left:auto;">
+            🖨️ 一键打印 A4 黑白大字版
+          </button>
+        </div>
+
+        <div class="print-sheet">
+          <div class="print-sheet-header">
+            <h2 id="printSheetTitle">11² ～ 50² 完全平方数速背表</h2>
+            <p id="printSheetSub">A4 黑白精美排版</p>
+          </div>
+
+          <div id="squaresPrintGrid" class="squares-grid cols-4-print size-lg"></div>
+
+          <div id="printMemoryTips" class="memory-tips-box">
+            <h4>⚡ 4 条完全平方数速算秘籍（背表快 3 倍）</h4>
+            <ul>
+              <li><strong>尾数 5 秒杀法：</strong>a5² = a×(a+1) 后接 25。例：35² = (3×4)25 = 1225，85² = (8×9)25 = 7225！</li>
+              <li><strong>平方尾数配对规律：</strong>平方数个位只可能是 0, 1, 4, 5, 6, 9（绝不会出现 2, 3, 7, 8）；互补尾数平方个位相同（1与9→1，2与8→4，3与7→9，4与6→6）。</li>
+              <li><strong>50 附近速算法：</strong>(50 ± d)² = (25 ± d)×100 + d²。例：47² = (25-3)00 + 9 = 2209，53² = (25+3)00 + 9 = 2809！</li>
+              <li><strong>100 附近速算法：</strong>(100 - d)² = (100 - 2d)×100 + d²。例：97² = 9400 + 9 = 9409，96² = 9200 + 16 = 9216！</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 面板 2：单人触控闯关 -->
+    <section id="panel-solo" class="view-panel no-print">
+      <div class="card">
+        <div class="control-bar">
+          <div class="control-group">
+            <label for="soloModeSelect">玩法：</label>
+            <select id="soloModeSelect">
+              <option value="forward">正算填数（给 n 填 n²）</option>
+              <option value="reverse">反算求根（给 n² 填 n）</option>
+              <option value="mixed" selected>正反混合填数（最锻炼反应）</option>
+              <option value="choice-forward">高迷惑选择题 · 正算</option>
+              <option value="choice-reverse">高迷惑选择题 · 反算求根</option>
+              <option value="choice-mixed">高迷惑选择题 · 正反混合</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label for="soloRangeSelect">范围：</label>
+            <select id="soloRangeSelect">
+              <option value="11-25">11～25（入门高频）</option>
+              <option value="11-30" selected>11～30（必背核心）</option>
+              <option value="11-50">11～50（进阶高手）</option>
+              <option value="11-100">11～100（全范围大师）</option>
+              <option value="1-100">1～100（含 1～10）</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label for="soloCountSelect">题数：</label>
+            <select id="soloCountSelect">
+              <option value="10" selected>10 题</option>
+              <option value="20">20 题</option>
+              <option value="30">30 题</option>
+            </select>
+          </div>
+          <button type="button" id="btnSoloStart" class="btn btn-primary" style="margin-left:auto;">
+            🚀 重新开始
+          </button>
+        </div>
+
+        <div id="soloPlayArea" class="solo-stage"></div>
+        <div id="soloSummaryArea" class="solo-stage" style="display:none;"></div>
+      </div>
+    </section>
+
+    <!-- 面板 3：双人正反同屏大 PK -->
+    <section id="panel-pk" class="view-panel no-print">
+      <div class="card pk-setup-card">
+        <h2 style="margin:0 0 6px;font-size:22px;">⚔️ 双人面对面 · 正反同屏大 PK</h2>
+        <p style="margin:0 0 18px;font-size:13px;color:#475569;line-height:1.6;">
+          把手机或平板平放在桌子中间！<strong>上方玩家屏幕自动旋转 180°</strong>，两人面对面同时看题、同时触控作答。
+          <strong>填满位数立刻锁死判对错，绝不给反悔机会！</strong>
+        </p>
+
+        <div class="control-bar" style="flex-direction:column;align-items:stretch;gap:12px;">
+          <div class="control-group" style="justify-content:space-between;">
+            <label for="pkModeSelect">🎯 对战玩法：</label>
+            <select id="pkModeSelect" style="min-width:230px;">
+              <option value="forward">正算填数 PK（给 n 填 n²）</option>
+              <option value="reverse">反算求根 PK（给 n² 填 n）</option>
+              <option value="mixed" selected>正反混合填数 PK（最刺激！）</option>
+              <option value="choice-forward">高迷惑选择题 PK · 正算</option>
+              <option value="choice-reverse">高迷惑选择题 PK · 反算</option>
+              <option value="choice-mixed">高迷惑选择题 PK · 正反混合</option>
+            </select>
+          </div>
+
+          <div class="control-group" style="justify-content:space-between;">
+            <label for="pkRangeSelect">📐 数字范围：</label>
+            <select id="pkRangeSelect" style="min-width:230px;">
+              <option value="11-25">11～25（亲子热身）</option>
+              <option value="11-30" selected>11～30（必背巅峰）</option>
+              <option value="11-50">11～50（进阶对决）</option>
+              <option value="11-100">11～100（大师终极战）</option>
+            </select>
+          </div>
+
+          <div class="control-group" style="justify-content:space-between;">
+            <label for="pkRoundsSelect">🔢 比赛局数：</label>
+            <select id="pkRoundsSelect" style="min-width:230px;">
+              <option value="10" selected>10 局定胜负</option>
+              <option value="20">20 局持久战</option>
+              <option value="30">30 局马拉松</option>
+            </select>
+          </div>
+
+          <div class="control-group" style="justify-content:space-between;">
+            <label for="pkRuleSelect">⚖️ 判分赛制：</label>
+            <select id="pkRuleSelect" style="min-width:230px;">
+              <option value="both" selected>同题双计制（各自独立判对错，同分比速度）</option>
+              <option value="race">抢答竞速制（谁先填对直接拿分结束本局）</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="button" id="btnPkStart" class="btn btn-primary" style="width:100%;padding:14px;font-size:17px;">
+          ⚔️ 进入正反双屏竞技场，开始 PK！
+        </button>
+
+        <div id="pkResultArea" style="display:none;"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 全屏双人 180° 正反竞技场 -->
+  <div id="pkArenaOverlay" class="pk-arena-overlay">
+    <div id="pkHalfB" class="pk-half player-b"></div>
+    <div class="pk-divider">
+      <span id="pkDividerTitle">⚔️ 第 1 / 10 局</span>
+      <button type="button" id="btnPkExit" class="pk-exit-btn">退出 PK</button>
+    </div>
+    <div id="pkHalfA" class="pk-half player-a"></div>
+  </div>
+
+  <script src="js/engine.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/chartView.js"></script>
+  <script src="js/soloGame.js"></script>
+  <script src="js/pkGame.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
