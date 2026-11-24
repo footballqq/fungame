@@ -37,20 +37,38 @@
       <div class="card">
         <div class="control-bar no-print">
           <div class="control-group">
-            <label for="chartPresetSelect">展示 / 打印范围：</label>
+            <label for="chartPresetSelect">快捷范围：</label>
             <select id="chartPresetSelect">
-              <option value="11-30">11²～30² 高频必背大字版（A4 一页超大字）</option>
-              <option value="11-50" selected>11²～50² 进阶速背版（A4 一页大字，推荐）</option>
-              <option value="11-100">11²～100² 大师完整版（略去 1～10）</option>
-              <option value="1-100">1²～100² 全部 100 组</option>
+              <option value="11-30">11²～30² 高频必背（A4 超大字）</option>
+              <option value="11-50" selected>11²～50² 进阶上册（A4 一页大字）</option>
+              <option value="51-99">51²～99² 高阶下册（A4 一页大字）</option>
+              <option value="51-100">51²～100² 高阶含100（A4 一页）</option>
+              <option value="11-100">11²～100² 完整大师版</option>
+              <option value="1-100">1²～100² 全览 100 组</option>
+              <option value="custom">自定义范围</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <span>自定：</span>
+            <input type="number" id="chartMinInput" class="range-num-input" min="1" max="100" value="11" aria-label="展示起始数" />
+            <span>～</span>
+            <input type="number" id="chartMaxInput" class="range-num-input" min="1" max="100" value="50" aria-label="展示结束数" />
+          </div>
+          <div class="control-group">
+            <label for="chartFilterSelect">趣味筛选：</label>
+            <select id="chartFilterSelect">
+              <option value="all" selected>全部数字</option>
+              <option value="prime">✨ 只选质数（如 11,13,17…）</option>
+              <option value="ending5">⚡ 只选尾数 5（15,25…95）</option>
+              <option value="no-tens">🎯 排除整十数</option>
             </select>
           </div>
           <label class="control-group" style="cursor:pointer;">
             <input type="checkbox" id="chartShowTips" checked />
-            附带底部速算记忆口诀
+            附带速算口诀
           </label>
           <button type="button" id="btnPrintChart" class="btn btn-primary" style="margin-left:auto;">
-            🖨️ 一键打印 A4 黑白大字版
+            🖨️ 打印 A4 黑白版
           </button>
         </div>
 
@@ -93,11 +111,26 @@
           <div class="control-group">
             <label for="soloRangeSelect">范围：</label>
             <select id="soloRangeSelect">
-              <option value="11-25">11～25（入门高频）</option>
-              <option value="11-30" selected>11～30（必背核心）</option>
-              <option value="11-50">11～50（进阶高手）</option>
-              <option value="11-100">11～100（全范围大师）</option>
-              <option value="1-100">1～100（含 1～10）</option>
+              <option value="11-25">11～25（入门）</option>
+              <option value="11-30" selected>11～30（必背）</option>
+              <option value="11-50">11～50（进阶）</option>
+              <option value="51-99">51～99（高阶）</option>
+              <option value="51-100">51～100（含100）</option>
+              <option value="11-100">11～100（大师）</option>
+              <option value="1-100">1～100（全部）</option>
+              <option value="custom">自定义</option>
+            </select>
+            <input type="number" id="soloMinInput" class="range-num-input" min="1" max="100" value="11" aria-label="单人起始数" />
+            <span>～</span>
+            <input type="number" id="soloMaxInput" class="range-num-input" min="1" max="100" value="30" aria-label="单人结束数" />
+          </div>
+          <div class="control-group">
+            <label for="soloFilterSelect">筛选：</label>
+            <select id="soloFilterSelect">
+              <option value="all" selected>全部数字</option>
+              <option value="prime">✨ 只选质数</option>
+              <option value="ending5">⚡ 只选尾数 5</option>
+              <option value="no-tens">🎯 排除整十数</option>
             </select>
           </div>
           <div class="control-group">
@@ -140,13 +173,31 @@
             </select>
           </div>
 
-          <div class="control-group" style="justify-content:space-between;">
+          <div class="control-group" style="justify-content:space-between;flex-wrap:wrap;">
             <label for="pkRangeSelect">📐 数字范围：</label>
-            <select id="pkRangeSelect" style="min-width:230px;">
-              <option value="11-25">11～25（亲子热身）</option>
-              <option value="11-30" selected>11～30（必背巅峰）</option>
-              <option value="11-50">11～50（进阶对决）</option>
-              <option value="11-100">11～100（大师终极战）</option>
+            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+              <select id="pkRangeSelect">
+                <option value="11-25">11～25（亲子热身）</option>
+                <option value="11-30" selected>11～30（必背巅峰）</option>
+                <option value="11-50">11～50（进阶对决）</option>
+                <option value="51-99">51～99（高阶对决）</option>
+                <option value="51-100">51～100（含100）</option>
+                <option value="11-100">11～100（大师终极）</option>
+                <option value="custom">自定义</option>
+              </select>
+              <input type="number" id="pkMinInput" class="range-num-input" min="1" max="100" value="11" aria-label="PK起始数" />
+              <span>～</span>
+              <input type="number" id="pkMaxInput" class="range-num-input" min="1" max="100" value="30" aria-label="PK结束数" />
+            </div>
+          </div>
+
+          <div class="control-group" style="justify-content:space-between;">
+            <label for="pkFilterSelect">✨ 趣味数字筛选：</label>
+            <select id="pkFilterSelect" style="min-width:230px;">
+              <option value="all" selected>全部数字</option>
+              <option value="prime">✨ 只选质数（质数平方大战！）</option>
+              <option value="ending5">⚡ 只选尾数 5（15²～95² 速算战）</option>
+              <option value="no-tens">🎯 排除整十数（纯硬核题）</option>
             </select>
           </div>
 

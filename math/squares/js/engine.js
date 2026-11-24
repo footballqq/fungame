@@ -7,12 +7,42 @@
 })(typeof self !== 'undefined' ? self : this, function () {
   'use strict';
 
-  function getSquaresInRange(minN, maxN) {
+  function isPrime(n) {
+    if (n < 2) return false;
+    if (n === 2) return true;
+    if (n % 2 === 0) return false;
+    for (let i = 3; i * i <= n; i += 2) {
+      if (n % i === 0) return false;
+    }
+    return true;
+  }
+
+  function matchesFilter(n, filterType) {
+    if (!filterType || filterType === 'all') return true;
+    if (filterType === 'prime') return isPrime(n);
+    if (filterType === 'ending5') return n % 10 === 5;
+    if (filterType === 'no-tens') return n % 10 !== 0;
+    return true;
+  }
+
+  function normalizeRange(minN, maxN) {
+    let a = Math.max(1, Math.min(100, parseInt(minN, 10) || 1));
+    let b = Math.max(1, Math.min(100, parseInt(maxN, 10) || 100));
+    if (a > b) {
+      const tmp = a;
+      a = b;
+      b = tmp;
+    }
+    return { minN: a, maxN: b };
+  }
+
+  function getSquaresInRange(minN, maxN, filterType) {
+    const norm = normalizeRange(minN, maxN);
     const list = [];
-    const start = Math.max(1, Number(minN) || 1);
-    const end = Math.min(100, Number(maxN) || 100);
-    for (let n = start; n <= end; n++) {
-      list.push({ n: n, sq: n * n });
+    for (let n = norm.minN; n <= norm.maxN; n++) {
+      if (matchesFilter(n, filterType)) {
+        list.push({ n: n, sq: n * n });
+      }
     }
     return list;
   }
@@ -156,36 +186,47 @@
     return shuffle(Array.from(picked));
   }
 
-  function pickRandomN(minN, maxN, excludeSet, focusPool) {
+  function pickRandomN(minN, maxN, excludeSet, focusPool, filterType) {
+    const eligible = getSquaresInRange(minN, maxN, filterType).map(function (item) {
+      return item.n;
+    });
+    // 若用户自定义极小区间导致过滤后为空，安全回退到区间内全部数字
+    const pool =
+      eligible.length > 0
+        ? eligible
+        : getSquaresInRange(minN, maxN, 'all').map(function (item) {
+            return item.n;
+          });
+    const poolSet = new Set(pool);
+
     if (focusPool && focusPool.length > 0) {
-      const validFocus = focusPool.filter((n) => n >= minN && n <= maxN && (!excludeSet || !excludeSet.has(n)));
+      const validFocus = focusPool.filter(
+        (n) => poolSet.has(n) && (!excludeSet || !excludeSet.has(n))
+      );
       if (validFocus.length > 0 && Math.random() < 0.7) {
         return validFocus[Math.floor(Math.random() * validFocus.length)];
       }
     }
-    const candidates = [];
-    for (let n = minN; n <= maxN; n++) {
-      if (!excludeSet || !excludeSet.has(n)) {
-        candidates.push(n);
-      }
-    }
+    const candidates = pool.filter((n) => !excludeSet || !excludeSet.has(n));
     if (candidates.length === 0) {
-      return minN + Math.floor(Math.random() * (maxN - minN + 1));
+      return pool[Math.floor(Math.random() * pool.length)];
     }
     return candidates[Math.floor(Math.random() * candidates.length)];
   }
 
   /**
    * 生成单道题目
-   * @param {Object} opts - { minN, maxN, mode: 'forward'|'reverse'|'mixed', inputType: 'keypad'|'choice', excludeSet?, focusPool? }
+   * @param {Object} opts - { minN, maxN, filterType?, mode: 'forward'|'reverse'|'mixed', inputType: 'keypad'|'choice', excludeSet?, focusPool? }
    */
   function generateQuestion(opts) {
-    const minN = Math.max(1, Number(opts.minN) || 11);
-    const maxN = Math.min(100, Number(opts.maxN) || 30);
+    const norm = normalizeRange(opts.minN || 11, opts.maxN || 30);
+    const minN = norm.minN;
+    const maxN = norm.maxN;
+    const filterType = opts.filterType || 'all';
     const mode = opts.mode || 'forward';
     const inputType = opts.inputType || 'keypad';
 
-    const n = pickRandomN(minN, maxN, opts.excludeSet, opts.focusPool);
+    const n = pickRandomN(minN, maxN, opts.excludeSet, opts.focusPool, filterType);
     const sq = n * n;
     const direction =
       mode === 'mixed' ? (Math.random() < 0.5 ? 'forward' : 'reverse') : mode;
@@ -214,12 +255,14 @@
   function generateQuestionBatch(count, opts) {
     const questions = [];
     const recent = new Set();
-    const maxSpan = opts.maxN - opts.minN + 1;
+    const eligibleCount = getSquaresInRange(opts.minN, opts.maxN, opts.filterType).length;
+    const maxSpan = Math.max(1, eligibleCount);
     for (let i = 0; i < count; i++) {
       if (recent.size >= maxSpan) recent.clear();
       const q = generateQuestion({
         minN: opts.minN,
         maxN: opts.maxN,
+        filterType: opts.filterType,
         mode: opts.mode,
         inputType: opts.inputType,
         excludeSet: recent,
@@ -327,6 +370,8 @@
   }
 
   return {
+    isPrime: isPrime,
+    normalizeRange: normalizeRange,
     getSquaresInRange: getSquaresInRange,
     generateQuestion: generateQuestion,
     generateQuestionBatch: generateQuestionBatch,

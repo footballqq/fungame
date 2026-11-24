@@ -98,3 +98,34 @@ test('PK 赛制计分：支持 10/20 局，准确统计双方对错次数与胜�
   assert.equal(match.players.B.wrong, 1);
   assert.equal(Engine.isPkRoundFinished(match), true);
 });
+
+test('自定义范围 51~99 与趣味筛选（只选质数、尾数5、排除整十数）精确生效', () => {
+  const high = Engine.getSquaresInRange(51, 99);
+  assert.equal(high.length, 49);
+  assert.deepEqual(high[0], { n: 51, sq: 2601 });
+  assert.deepEqual(high[48], { n: 99, sq: 9801 });
+
+  // 只选质数：11~30 内应为 11, 13, 17, 19, 23, 29 共 6 个
+  const primes = Engine.getSquaresInRange(11, 30, 'prime').map((x) => x.n);
+  assert.deepEqual(primes, [11, 13, 17, 19, 23, 29]);
+
+  // 批量出题只出质数
+  const primeBatch = Engine.generateQuestionBatch(12, {
+    minN: 11,
+    maxN: 99,
+    filterType: 'prime',
+    mode: 'mixed',
+    inputType: 'keypad',
+  });
+  for (const q of primeBatch) {
+    assert.ok(Engine.isPrime(q.n), `应只出质数，却出现了 ${q.n}`);
+  }
+
+  // 只选尾数 5
+  const fives = Engine.getSquaresInRange(11, 99, 'ending5').map((x) => x.n);
+  assert.deepEqual(fives, [15, 25, 35, 45, 55, 65, 75, 85, 95]);
+
+  // 排除整十数
+  const noTens = Engine.getSquaresInRange(11, 50, 'no-tens');
+  assert.ok(noTens.every((x) => x.n % 10 !== 0));
+});

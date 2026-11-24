@@ -178,14 +178,21 @@ html, body {
   color: #334155;
 }
 
-.control-group select {
-  padding: 7px 11px;
+.control-group select,
+.control-group input[type='number'] {
+  padding: 7px 10px;
   border-radius: 10px;
   border: 1px solid #cbd5e1;
   background: #fff;
   font-weight: 700;
   font-size: 13px;
   color: var(--ink);
+}
+
+.range-num-input {
+  width: 64px;
+  text-align: center;
+  font-family: var(--font-mono);
 }
 
 .btn {

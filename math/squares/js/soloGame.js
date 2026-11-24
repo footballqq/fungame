@@ -28,12 +28,25 @@
   function initSoloGame() {
     const modeSelect = document.getElementById('soloModeSelect');
     const rangeSelect = document.getElementById('soloRangeSelect');
+    const minInput = document.getElementById('soloMinInput');
+    const maxInput = document.getElementById('soloMaxInput');
+    const filterSelect = document.getElementById('soloFilterSelect');
     const countSelect = document.getElementById('soloCountSelect');
     const startBtn = document.getElementById('btnSoloStart');
     const stageEl = document.getElementById('soloPlayArea');
     const summaryEl = document.getElementById('soloSummaryArea');
 
     if (!startBtn || !stageEl) return;
+
+    rangeSelect.addEventListener('change', function () {
+      if (rangeSelect.value !== 'custom') {
+        const r = parseRange(rangeSelect.value);
+        if (minInput) minInput.value = String(r.minN);
+        if (maxInput) maxInput.value = String(r.maxN);
+      }
+    });
+    if (minInput) minInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
+    if (maxInput) maxInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
 
     let session = null;
     let nextTimer = null;
@@ -54,7 +67,14 @@
 
     function startSession(customFocusPool) {
       clearTimer();
-      const range = parseRange(rangeSelect.value);
+      const range = root.SquaresEngine.normalizeRange(
+        minInput ? minInput.value : 11,
+        maxInput ? maxInput.value : 30
+      );
+      if (minInput) minInput.value = String(range.minN);
+      if (maxInput) maxInput.value = String(range.maxN);
+
+      const filterType = filterSelect ? filterSelect.value : 'all';
       const parsed = parseMode(modeSelect.value);
       const total = Number(countSelect.value) || 10;
       const focusPool = customFocusPool || loadWrongPool();
@@ -62,6 +82,7 @@
       const questions = root.SquaresEngine.generateQuestionBatch(total, {
         minN: range.minN,
         maxN: range.maxN,
+        filterType: filterType,
         mode: parsed.mode,
         inputType: parsed.inputType,
         focusPool: focusPool,

@@ -18,6 +18,9 @@
   function initPkGame() {
     const modeSelect = document.getElementById('pkModeSelect');
     const rangeSelect = document.getElementById('pkRangeSelect');
+    const minInput = document.getElementById('pkMinInput');
+    const maxInput = document.getElementById('pkMaxInput');
+    const filterSelect = document.getElementById('pkFilterSelect');
     const roundsSelect = document.getElementById('pkRoundsSelect');
     const ruleSelect = document.getElementById('pkRuleSelect');
     const startBtn = document.getElementById('btnPkStart');
@@ -30,6 +33,16 @@
     const resultArea = document.getElementById('pkResultArea');
 
     if (!startBtn || !overlayEl) return;
+
+    rangeSelect.addEventListener('change', function () {
+      if (rangeSelect.value !== 'custom') {
+        const r = parseRange(rangeSelect.value);
+        if (minInput) minInput.value = String(r.minN);
+        if (maxInput) maxInput.value = String(r.maxN);
+      }
+    });
+    if (minInput) minInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
+    if (maxInput) maxInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
 
     let match = null;
     let inputs = null;
@@ -46,7 +59,14 @@
 
     function startMatch() {
       clearRoundTimer();
-      const range = parseRange(rangeSelect.value);
+      const range = root.SquaresEngine.normalizeRange(
+        minInput ? minInput.value : 11,
+        maxInput ? maxInput.value : 30
+      );
+      if (minInput) minInput.value = String(range.minN);
+      if (maxInput) maxInput.value = String(range.maxN);
+
+      const filterType = filterSelect ? filterSelect.value : 'all';
       const parsed = parseMode(modeSelect.value);
       const totalRounds = Number(roundsSelect.value) || 10;
       const ruleType = ruleSelect.value || 'both';
@@ -55,6 +75,7 @@
         totalRounds: totalRounds,
         minN: range.minN,
         maxN: range.maxN,
+        filterType: filterType,
         mode: parsed.mode,
         inputType: parsed.inputType,
         ruleType: ruleType,
