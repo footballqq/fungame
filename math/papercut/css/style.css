@@ -92,6 +92,73 @@ body {
     transform: translateY(-1px);
 }
 
+/* 一体两面双模式切换栏 */
+.dual-face-bar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.face-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    border-radius: 14px;
+    border: 2px solid #e0d7d0;
+    background: #fbf9f6;
+    color: #5d4037;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.face-card:hover {
+    border-color: #bcaaa4;
+    background: #f5efe8;
+    transform: translateY(-1px);
+}
+
+.face-card.active {
+    border-color: #d81b60;
+    background: linear-gradient(135deg, #fff5f8 0%, #fce4ec 100%);
+    box-shadow: 0 4px 14px rgba(216, 27, 96, 0.16);
+}
+
+.face-icon {
+    font-size: 1.7rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.face-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.face-text strong {
+    font-size: 0.94rem;
+    color: #3e2723;
+}
+
+.face-text small {
+    font-size: 0.77rem;
+    color: #6d4c41;
+    line-height: 1.35;
+}
+
+.max-piece-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.max-piece-wrap.hidden {
+    display: none;
+}
+
 /* 边长选择器与画板缩放栏 */
 .size-selector-bar {
     display: flex;
@@ -674,6 +741,13 @@ body {
         overflow-x: auto;
         padding-bottom: 2px;
         -webkit-overflow-scrolling: touch;
+    }
+    .dual-face-bar {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .face-card {
+        padding: 9px 12px;
     }
     .btn-tool {
         padding: 7px 10px;

@@ -1,8 +1,9 @@
-// codex: 2026-11-24 升级交互界面控制器，支持 N=2..25 动态切换、触控拖拽HUD、缩放控制与动态防剧透题解
+// codex: 2026-11-24 升级交互界面控制器，实现「自由剪纸 × 限尺拼图」一体两面热切换、动态求解、触控HUD与防剧透题解
 
 class PaperCutUI {
     constructor() {
-        this.engine = new PaperCutEngine(11);
+        this.faceMode = 'papercut'; // 'papercut' (1..N-1) | 'tiling' (1..K)
+        this.engine = new PaperCutEngine(11, 10);
         this.audio = new PaperCutAudio();
         this.skinManager = new SkinManager();
         this.praiseManager = new PraiseManager();
@@ -11,10 +12,9 @@ class PaperCutUI {
         this.selectedSize = 4;
         this.hoverCell = null;
         this.ghostHint = null;
-        this.boardZoom = 100; // 百分比 80..160
-        this.unlockedProofSizes = new Set();
+        this.boardZoom = 100;
+        this.unlockedProofKeys = new Set();
 
-        // 拖拽画框状态
         this.isDragging = false;
         this.dragStart = null;
         this.dragCurrent = null;
@@ -25,17 +25,40 @@ class PaperCutUI {
 
     init() {
         this.skinManager.applySkin(this.skinManager.currentSkin);
+
+        // 支持 URL 参数 ?mode=tiling 直达 B 面限尺拼图
+        try {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('mode') === 'tiling') {
+                this.faceMode = 'tiling';
+                this.engine.configure(10, 4);
+                this.selectedSize = 4;
+            }
+        } catch (e) {
+            // 忽略 URL 解析异常
+        }
+
         this._syncUnlockedFromRecords();
         this._buildBoardGrid();
+        this._buildMaxPieceSelect();
+        this._buildQuickPills();
         this._buildSizePalette();
         this._bindEvents();
-        this._updateBoardSizeTexts();
+        this._updateModeAndTexts();
         this._updateProofModalContent();
         this.render();
     }
 
+    _getRecordKey() {
+        return `${this.faceMode}_${this.engine.boardSize}_${this.engine.maxPieceSize}`;
+    }
+
+    _getUnitLabel() {
+        return this.faceMode === 'tiling' ? '块' : '片';
+    }
+
     _getOptimalSteps() {
-        return getOptimalStepsForSize(this.engine.boardSize);
+        return getOptimalSteps(this.engine.boardSize, this.engine.maxPieceSize);
     }
 
     _getOptimalCount() {
@@ -43,73 +66,173 @@ class PaperCutUI {
     }
 
     _syncUnlockedFromRecords() {
-        const n = this.engine.boardSize;
-        if (this.praiseManager.hasFoundOptimal(n, this._getOptimalCount())) {
-            this.unlockedProofSizes.add(n);
+        const key = this._getRecordKey();
+        if (this.praiseManager.hasFoundOptimal(key, this._getOptimalCount())) {
+            this.unlockedProofKeys.add(key);
         }
     }
 
     _isProofUnlocked() {
-        return this.unlockedProofSizes.has(this.engine.boardSize);
+        return this.unlockedProofKeys.has(this._getRecordKey());
     }
 
     /**
-     * 切换棋盘边长 N (2..25)
+     * 一体两面切换：'papercut' (自由剪纸，默认 11×11) | 'tiling' (限尺拼图，默认 10×10 限 1~4)
      */
-    changeBoardSize(newSize) {
-        const n = Math.max(2, Math.min(25, parseInt(newSize, 10) || 11));
-        if (n === this.engine.boardSize) return;
+    switchFaceMode(face) {
+        if (face !== 'papercut' && face !== 'tiling') return;
+        if (face === this.faceMode) return;
+        this.faceMode = face;
 
-        this.engine.setBoardSize(n);
+        if (face === 'papercut') {
+            this.configurePuzzle(11, 10, true);
+        } else {
+            this.configurePuzzle(10, 4, true);
+        }
+    }
+
+    /**
+     * 统一配置棋盘边长 N 与最大尺寸上限 K
+     */
+    configurePuzzle(boardSize, maxPieceSize = null, announce = true) {
+        const n = Math.max(2, Math.min(25, parseInt(boardSize, 10) || 11));
+        const maxK =
+            this.faceMode === 'papercut'
+                ? n - 1
+                : Math.max(2, Math.min(n - 1, parseInt(maxPieceSize, 10) || Math.min(4, n - 1)));
+
+        this.engine.configure(n, maxK);
         this.hoverCell = null;
         this.ghostHint = null;
         this.isDragging = false;
         this.dragStart = null;
         this.dragCurrent = null;
         this.dragMoved = false;
-
-        // 默认选中一个不剧透的中小尺寸
-        this.selectedSize = Math.max(1, Math.min(4, Math.floor(n / 2)));
+        this.selectedSize = Math.max(1, Math.min(maxK, Math.min(4, Math.floor(n / 2) || 1)));
 
         this._syncUnlockedFromRecords();
         this._buildBoardGrid();
+        this._buildMaxPieceSelect();
+        this._buildQuickPills();
         this._buildSizePalette();
-        this._updateBoardSizeTexts();
+        this._updateModeAndTexts();
         this._updateProofModalContent();
         this.guideController.onBoardSizeChanged();
         this.render();
 
-        this.audio.playChime();
-        this.praiseManager.setMascotText(
-            `已切换到 <strong>${n}×${n} 厘米</strong> 纸片（共 ${n * n} 格）！试试剪成边长 1～${n - 1} 厘米的小正方形，挑战最少片数吧！✂️`
-        );
+        if (announce) {
+            this.audio.playChime();
+            const unit = this._getUnitLabel();
+            if (this.faceMode === 'papercut') {
+                this.praiseManager.setMascotText(
+                    `✂️ 已切换到 <strong>自由剪纸 · ${n}×${n}</strong>（共 ${n * n} 格）！可剪出 1～${maxK} 厘米任意正方形，挑战最少${unit}数吧！`
+                );
+            } else {
+                this.praiseManager.setMascotText(
+                    `🧩 已切换到 <strong>限尺拼图 · ${n}×${n}（限 1～${maxK}）</strong>！用不超过 ${maxK}×${maxK} 的纸片严丝合缝铺满 ${n * n} 格，比比看最少用几${unit}！`
+                );
+            }
+        }
     }
 
-    /**
-     * 动态同步页面中的边长相关文案（游戏目的、下拉框、快捷胶囊等，绝不剧透答案）
-     */
-    _updateBoardSizeTexts() {
+    _buildMaxPieceSelect() {
+        const wrap = document.getElementById('maxPieceSelectWrap');
+        const sel = document.getElementById('maxPieceSelect');
+        if (!wrap || !sel) return;
+
+        wrap.classList.toggle('hidden', this.faceMode !== 'tiling');
+        if (this.faceMode !== 'tiling') return;
+
         const n = this.engine.boardSize;
-        const maxS = n - 1;
+        const maxAllowed = Math.min(n - 1, 10);
+        sel.innerHTML = '';
+        for (let k = 2; k <= maxAllowed; k++) {
+            const opt = document.createElement('option');
+            opt.value = String(k);
+            opt.textContent = k === 4 ? `1～${k}（经典）` : `1～${k}`;
+            if (k === this.engine.maxPieceSize) opt.selected = true;
+            sel.appendChild(opt);
+        }
+    }
+
+    _buildQuickPills() {
+        const box = document.getElementById('sizeQuickPills');
+        if (!box) return;
+        box.innerHTML = '';
+
+        const presets =
+            this.faceMode === 'papercut'
+                ? [
+                      { n: 7, k: 6, label: '7×7' },
+                      { n: 11, k: 10, label: '11×11 原题' },
+                      { n: 13, k: 12, label: '13×13' },
+                      { n: 17, k: 16, label: '17×17' },
+                      { n: 19, k: 18, label: '19×19' },
+                      { n: 23, k: 22, label: '23×23' }
+                  ]
+                : [
+                      { n: 5, k: 4, label: '5×5 (1~4)' },
+                      { n: 7, k: 4, label: '7×7 (1~4)' },
+                      { n: 10, k: 4, label: '10×10 原题' },
+                      { n: 11, k: 4, label: '11×11 (1~4)' },
+                      { n: 12, k: 4, label: '12×12 (1~4)' },
+                      { n: 10, k: 6, label: '10×10 (1~6)' }
+                  ];
+
+        presets.forEach(p => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'size-quick-pill';
+            btn.classList.toggle(
+                'active',
+                this.engine.boardSize === p.n && this.engine.maxPieceSize === p.k
+            );
+            btn.textContent = p.label;
+            btn.addEventListener('click', () => this.configurePuzzle(p.n, p.k, true));
+            box.appendChild(btn);
+        });
+    }
+
+    _updateModeAndTexts() {
+        const n = this.engine.boardSize;
+        const maxK = this.engine.maxPieceSize;
+        const isTiling = this.faceMode === 'tiling';
+        const unit = this._getUnitLabel();
+
+        const btnA = document.getElementById('btnFacePapercut');
+        const btnB = document.getElementById('btnFaceTiling');
+        if (btnA) btnA.classList.toggle('active', !isTiling);
+        if (btnB) btnB.classList.toggle('active', isTiling);
 
         const select = document.getElementById('boardSizeSelect');
         if (select) select.value = String(n);
 
-        document.querySelectorAll('.size-quick-pill').forEach(btn => {
-            btn.classList.toggle('active', parseInt(btn.dataset.n, 10) === n);
-        });
-
         const heading = document.getElementById('mainTitleHeading');
-        if (heading) heading.textContent = `✂️ ${n}×${n} 剪正方形大挑战`;
+        if (heading) {
+            heading.textContent = isTiling
+                ? `🧩 正方形剪拼大师 · ${n}×${n} 限尺拼图（1～${maxK}）`
+                : `✂️ 正方形剪拼大师 · ${n}×${n} 自由剪纸`;
+        }
 
-        const missionN = document.getElementById('missionBoardSize');
-        const missionRange = document.getElementById('missionMaxPiece');
-        if (missionN) missionN.textContent = `${n}×${n} 厘米`;
-        if (missionRange) missionRange.textContent = `1～${maxS} 厘米`;
+        const missionTag = document.getElementById('missionTag');
+        const missionGoal = document.getElementById('missionGoalText');
+        if (missionTag) missionTag.textContent = isTiling ? '🎯 拼图目标' : '🎯 剪纸目标';
+        if (missionGoal) {
+            missionGoal.innerHTML = isTiling
+                ? `使用边长 <strong>1～${maxK} 厘米</strong> 的正方形纸片，不重不漏铺满这张 <strong>${n}×${n} 厘米</strong> 的大正方形（允许重复使用同尺寸）。<strong>比比看，你最少需要几块？</strong>`
+                : `把这张 <strong>${n}×${n} 厘米</strong> 的正方形纸片，严丝合缝剪成若干个<strong>边长 1～${maxK} 厘米的整数正方形</strong>（允许重复尺寸，不能重叠、不能留空隙）。<strong>比比看，你最少能剪成几片？</strong>`;
+        }
+
+        const countLabel = document.getElementById('statCountLabel');
+        const countUnit = document.getElementById('statCountUnit');
+        const quizUnit = document.getElementById('quizUnitLabel');
+        if (countLabel) countLabel.textContent = isTiling ? '当前已用块数' : '当前已剪片数';
+        if (countUnit) countUnit.textContent = unit;
+        if (quizUnit) quizUnit.textContent = unit;
 
         const paletteTitle = document.getElementById('paletteTitleText');
         if (paletteTitle) {
-            paletteTitle.textContent = `📏 选择要剪的正方形尺寸（1×1 ～ ${maxS}×${maxS}，也可直接在画板上按住拖拉画框）：`;
+            paletteTitle.textContent = `📏 选择正方形尺寸（1×1 ～ ${maxK}×${maxK}，也可直接在画板上按住拖拉画框）：`;
         }
 
         const quizInput = document.getElementById('quizAnswerInput');
@@ -124,9 +247,6 @@ class PaperCutUI {
         }
     }
 
-    /**
-     * 动态重建 N×N 基础网格与顶部/左侧 1..N 厘米刻度尺
-     */
     _buildBoardGrid() {
         const n = this.engine.boardSize;
         const container = document.getElementById('paperBoardContainer');
@@ -147,7 +267,7 @@ class PaperCutUI {
 
         const board = document.getElementById('paperBoard');
         if (!board) return;
-        board.setAttribute('aria-label', `${n}乘${n}正方形剪纸画板`);
+        board.setAttribute('aria-label', `${n}乘${n}正方形剪拼画板`);
         board.innerHTML = '';
 
         const cellsLayer = document.createElement('div');
@@ -179,9 +299,6 @@ class PaperCutUI {
         board.appendChild(overlayLayer);
     }
 
-    /**
-     * 动态构建 1×1 ~ (N-1)×(N-1) 尺寸选择托盘
-     */
     _buildSizePalette() {
         const palette = document.getElementById('sizePalette');
         if (!palette) return;
@@ -232,9 +349,7 @@ class PaperCutUI {
     _setZoom(pct) {
         this.boardZoom = Math.max(80, Math.min(160, pct));
         const container = document.getElementById('paperBoardContainer');
-        if (container) {
-            container.style.setProperty('--board-zoom', `${this.boardZoom}%`);
-        }
+        if (container) container.style.setProperty('--board-zoom', `${this.boardZoom}%`);
         const label = document.getElementById('zoomValueLabel');
         if (label) label.textContent = `${this.boardZoom}%`;
     }
@@ -273,16 +388,28 @@ class PaperCutUI {
             this._renderOverlay();
         });
 
-        // 边长选择器（下拉 + 快捷胶囊）
+        // 一体两面切换按钮
+        this._onClick('btnFacePapercut', () => this.switchFaceMode('papercut'));
+        this._onClick('btnFaceTiling', () => this.switchFaceMode('tiling'));
+
+        // 边长与最大纸片上限选择器
         const select = document.getElementById('boardSizeSelect');
         if (select) {
-            select.addEventListener('change', e => this.changeBoardSize(e.target.value));
+            select.addEventListener('change', e => {
+                const n = parseInt(e.target.value, 10);
+                const k = this.faceMode === 'tiling' ? Math.min(this.engine.maxPieceSize, n - 1) : n - 1;
+                this.configurePuzzle(n, Math.max(2, k), true);
+            });
         }
-        document.querySelectorAll('.size-quick-pill').forEach(btn => {
-            btn.addEventListener('click', () => this.changeBoardSize(btn.dataset.n));
-        });
+        const maxSel = document.getElementById('maxPieceSelect');
+        if (maxSel) {
+            maxSel.addEventListener('change', e => {
+                const k = parseInt(e.target.value, 10);
+                this.configurePuzzle(this.engine.boardSize, k, true);
+            });
+        }
 
-        // 画板缩放按钮
+        // 缩放控制
         this._onClick('btnZoomOut', () => this._setZoom(this.boardZoom - 15));
         this._onClick('btnZoomReset', () => this._setZoom(100));
         this._onClick('btnZoomIn', () => this._setZoom(this.boardZoom + 15));
@@ -306,7 +433,7 @@ class PaperCutUI {
                 this.audio.playUndo();
                 this.clearGhostHint();
                 this.render();
-                this.praiseManager.setMascotText('已撤销上一步，继续大胆尝试不同的剪法吧！✂️');
+                this.praiseManager.setMascotText('已撤销上一步，继续大胆尝试不同的方案吧！✨');
             } else {
                 this.praiseManager.showToast('目前还没有可撤销的步骤哦！');
             }
@@ -318,8 +445,7 @@ class PaperCutUI {
             this.audio.playRemove();
             this.clearGhostHint();
             this.render();
-            const n = this.engine.boardSize;
-            this.praiseManager.setMascotText(`纸片已恢复完整 ${n}×${n}！这次准备从多大尺寸开始剪呢？✨`);
+            this.praiseManager.setMascotText(`画板已清空！重新挑战 ${this.engine.boardSize}×${this.engine.boardSize} 吧！✨`);
         });
 
         this._onClick('btnHint', () => this._handleSmartHint());
@@ -328,16 +454,16 @@ class PaperCutUI {
         // 清空纪录弹窗
         this._onClick('btnClearRecords', () => this._openModal('clearConfirmModal'));
         this._onClick('btnConfirmClear', () => {
-            const n = this.engine.boardSize;
-            this.praiseManager.clearRecordsForSize(n);
-            this.unlockedProofSizes.delete(n);
+            const key = this._getRecordKey();
+            this.praiseManager.clearRecordsForKey(key);
+            this.unlockedProofKeys.delete(key);
             this._updateProofModalContent();
             this._closeModal('clearConfirmModal');
             this.render();
-            this.praiseManager.showToast(`已清空 ${n}×${n} 的所有挑战纪录，重新出发！`);
+            this.praiseManager.showToast('已清空本规格的挑战纪录，重新出发！');
         });
 
-        // 教学控制台事件
+        // 教学控制台
         this._onClick('btnGuideTabThinking', () => this.guideController.switchMode('thinking'));
         this._onClick('btnGuideTabDemo', () => this.guideController.switchMode('stepdemo'));
         this._onClick('btnGuideExit', () => this.guideController.close());
@@ -351,15 +477,13 @@ class PaperCutUI {
 
         const speedSel = document.getElementById('demoSpeedSelect');
         if (speedSel) {
-            speedSel.addEventListener('change', e =>
-                this.guideController.setSpeed(e.target.value)
-            );
+            speedSel.addEventListener('change', e => this.guideController.setSpeed(e.target.value));
         }
 
-        // 题解弹窗：猜答案 & 防剧透展开
+        // 题解弹窗
         this._onClick('btnSubmitQuiz', () => this._handleProofQuiz());
         this._onClick('btnRevealProof', () => {
-            this.unlockedProofSizes.add(this.engine.boardSize);
+            this.unlockedProofKeys.add(this._getRecordKey());
             this._updateProofModalContent();
             this.audio.playChime();
         });
@@ -474,10 +598,7 @@ class PaperCutUI {
             return;
         }
 
-        // 触控与鼠标统一支持拖拽画框；若原地轻点则放置当前选中的尺寸
-        if (e.pointerType === 'touch') {
-            e.preventDefault();
-        }
+        if (e.pointerType === 'touch') e.preventDefault();
         this.isDragging = true;
         this.dragStart = cell;
         this.dragCurrent = cell;
@@ -567,8 +688,9 @@ class PaperCutUI {
         if (stats.isComplete) {
             this.onBoardCompleted();
         } else {
+            const actionWord = this.faceMode === 'tiling' ? '放入' : '剪下';
             this.praiseManager.setMascotText(
-                `咔嚓！剪下一块 ${size}×${size} 正方形！目前已覆盖 ${stats.coveredArea}/${stats.totalCells} 格（还剩 ${stats.remainingArea} 格）。`
+                `咔嚓！${actionWord}一块 ${size}×${size} 正方形！目前已覆盖 ${stats.coveredArea}/${stats.totalCells} 格（还剩 ${stats.remainingArea} 格）。`
             );
         }
     }
@@ -576,43 +698,43 @@ class PaperCutUI {
     onBoardCompleted() {
         const stats = this.engine.getStats();
         const n = stats.boardSize;
+        const maxK = stats.maxPieceSize;
         const count = stats.pieceCount;
+        const unit = this._getUnitLabel();
+        const key = this._getRecordKey();
         const optCount = this._getOptimalCount();
-        const result = this.praiseManager.recordCompletion(
-            n,
-            count,
-            this.engine.pieces,
-            optCount
-        );
+        const result = this.praiseManager.recordCompletion(key, count, this.engine.pieces, optCount);
         this.render();
 
+        const modeDesc = this.faceMode === 'tiling' ? `${n}×${n}（限 1～${maxK}）` : `${n}×${n}`;
+
         if (result.isOptimal) {
-            this.unlockedProofSizes.add(n);
+            this.unlockedProofKeys.add(key);
             this._updateProofModalContent();
             this.audio.playLegendaryWin();
             this.praiseManager.launchConfetti(80);
             this.praiseManager.setMascotText(
-                `🏆 不可思议！你在 ${n}×${n} 棋盘上剪出了 <strong>${count} 片</strong>，这就是数学严格证明的<strong>最少极限</strong>！太棒啦！`
+                `🏆 不可思议！你在 ${modeDesc} 达成了 <strong>${count} ${unit}</strong>，这就是数学严格证明的<strong>最少极限</strong>！太棒啦！`
             );
             const badge = document.getElementById('winModalBadge');
             const desc = document.getElementById('winModalDesc');
-            if (badge) badge.textContent = `剪纸大宗师 · ${n}×${n} 达成 ${count} 片理论极限！`;
+            if (badge) badge.textContent = `剪拼大宗师 · ${modeDesc} 达成 ${count} ${unit}极限！`;
             if (desc) {
-                desc.innerHTML = `你成功把 ${n}×${n} 厘米的大正方形严丝合缝剪成了 <strong>${count} 片</strong>！<br>经过数学严格证明，${n}×${n} 不可能比 ${optCount} 片更少了！试试切换更大的质数边长继续挑战吧！`;
+                desc.innerHTML = `你成功用 <strong>${count} ${unit}</strong>严丝合缝完成了 ${modeDesc}！<br>经过数学严格证明，不可能比 ${optCount} ${unit}更少了！快试试切换另一面或更大尺寸继续挑战吧！`;
             }
             this._openModal('winModal');
         } else {
             this.audio.playComplete();
             this.praiseManager.launchConfetti(32);
-            const best = this.praiseManager.getBestCount(n);
+            const best = this.praiseManager.getBestCount(key);
             const recordMsg = result.isNewBest
-                ? `🎉 刷新 ${n}×${n} 个人纪录！你成功剪成了 <strong>${count} 片</strong>，没有一点浪费！`
-                : `👏 完整剪完啦！这次用了 <strong>${count} 片</strong>（你在 ${n}×${n} 的最佳纪录是 ${best} 片）。`;
+                ? `🎉 刷新个人纪录！你用 <strong>${count} ${unit}</strong>完成了 ${modeDesc}，没有一点浪费！`
+                : `👏 完整拼完啦！这次用了 <strong>${count} ${unit}</strong>（本规格最佳纪录是 ${best} ${unit}）。`;
             this.praiseManager.setMascotText(
-                `${recordMsg} 悄悄问一句：还能想办法剪得<strong>更少</strong>吗？试试挑战打破纪录，或者点「🎓 一步步教学」获取灵感！`
+                `${recordMsg} 还能想办法用得<strong>更少</strong>吗？试试挑战打破纪录，或者点「🎓 一步步教学」获取灵感！`
             );
             this.praiseManager.showToast(
-                `成功剪成 ${count} 片！还能再少几片吗？继续挑战吧！`,
+                `成功完成（${count} ${unit}）！还能更少吗？继续挑战吧！`,
                 3400
             );
         }
@@ -627,16 +749,16 @@ class PaperCutUI {
             this.audio.playChime();
             const msg =
                 this.engine.pieces.length === 0
-                    ? `💡 起步建议：试试在闪烁的虚线框处先剪一块 ${nextStep.size}×${nextStep.size}！这样留下的剩余空间最匀称哦！`
-                    : `💡 思路很棒！沿着这个方向，建议在闪烁虚线框处剪一块 ${nextStep.size}×${nextStep.size} 正方形！`;
+                    ? `💡 起步建议：试试在闪烁的虚线框处先放一块 ${nextStep.size}×${nextStep.size}！`
+                    : `💡 思路很棒！沿着这个方向，建议在闪烁虚线框处放一块 ${nextStep.size}×${nextStep.size} 正方形！`;
             this.praiseManager.setMascotText(msg);
             this.praiseManager.showToast(`已在棋盘上用金色虚线标出推荐的 ${nextStep.size}×${nextStep.size} 位置！`);
         } else {
             this.audio.playInvalid();
             this.praiseManager.setMascotText(
-                '💡 当前已剪的布局可能会多用几片哦！可以点几下「↩️ 撤销一步」调整大块的位置，或者打开「🎓 一步步教学」看看专属破局思路！'
+                '💡 当前布局可能会多用几块哦！可以点几下「↩️ 撤销一步」调整位置，或者打开「🎓 一步步教学」看看专属破局思路！'
             );
-            this.praiseManager.showToast('当前布局容易留下窄缝，试试撤销或打开「一步步教学」吧！', 3000);
+            this.praiseManager.showToast('当前布局偏离了最少方案，试试撤销或打开「一步步教学」吧！', 3000);
         }
     }
 
@@ -646,6 +768,7 @@ class PaperCutUI {
         if (!input || !fb) return;
 
         const n = this.engine.boardSize;
+        const unit = this._getUnitLabel();
         const optCount = this._getOptimalCount();
         const val = parseInt(input.value, 10);
 
@@ -657,30 +780,33 @@ class PaperCutUI {
 
         if (val === optCount) {
             fb.className = 'quiz-feedback success';
-            fb.innerHTML = `🎉 <strong>回答正确！${n}×${n} 最少恰好是 ${optCount} 片！</strong>已为你解锁下方的完整构造校验与数学证明！`;
-            this.unlockedProofSizes.add(n);
+            fb.innerHTML = `🎉 <strong>回答正确！最少恰好是 ${optCount} ${unit}！</strong>已为你解锁下方的完整构造校验与数学证明！`;
+            this.unlockedProofKeys.add(this._getRecordKey());
             this._updateProofModalContent();
             this.audio.playComplete();
         } else if (val < optCount) {
             fb.className = 'quiz-feedback error';
-            fb.textContent = `猜 ${val} 片太小啦！在 ${n}×${n} 棋盘上做不到少于 ${optCount} 片哦，再猜大一点试试？`;
+            fb.textContent = `猜 ${val} ${unit}太小啦！在当前规则下做不到少于 ${optCount} ${unit}哦，再猜大一点试试？`;
             this.audio.playInvalid();
         } else {
             fb.className = 'quiz-feedback error';
-            fb.textContent = `${val} 片确实可以剪出来，但其实还能剪得更少哦！再往小猜一猜，或者先回到棋盘试试看？`;
+            fb.textContent = `${val} ${unit}确实可以做到，但其实还能更少哦！再往小猜一猜？`;
             this.audio.playInvalid();
         }
     }
 
     _updateProofModalContent() {
         const n = this.engine.boardSize;
+        const maxK = this.engine.maxPieceSize;
+        const unit = this._getUnitLabel();
         const unlocked = this._isProofUnlocked();
+        const modeDesc = this.faceMode === 'tiling' ? `${n}×${n}（限 1～${maxK}）` : `${n}×${n}`;
 
         const titleEl = document.getElementById('proofModalTitle');
-        if (titleEl) titleEl.textContent = `🧠 ${n}×${n} 奥数题解与数学证明`;
+        if (titleEl) titleEl.textContent = `🧠 ${modeDesc} 奥数题解与数学证明`;
 
         const quizPrompt = document.getElementById('proofQuizPrompt');
-        if (quizPrompt) quizPrompt.textContent = `🎯 互动小测验：你猜 ${n}×${n} 最少能剪成几片？`;
+        if (quizPrompt) quizPrompt.textContent = `🎯 互动小测验：你猜 ${modeDesc} 最少需要几${unit}？`;
 
         const shield = document.getElementById('proofSpoilerShield');
         const content = document.getElementById('proofRevealContent');
@@ -688,7 +814,7 @@ class PaperCutUI {
         if (content) {
             content.classList.toggle('hidden', !unlocked);
             if (unlocked) {
-                content.innerHTML = buildProofHtmlForSize(n);
+                content.innerHTML = buildProofHtml(n, maxK);
             }
         }
     }
@@ -702,6 +828,7 @@ class PaperCutUI {
 
     _renderStats() {
         const stats = this.engine.getStats();
+        const unit = this._getUnitLabel();
         const elCount = document.getElementById('currentPieceCount');
         const elArea = document.getElementById('coveredAreaText');
         const elBest = document.getElementById('bestRecordText');
@@ -712,8 +839,8 @@ class PaperCutUI {
         if (elBar) elBar.style.width = `${stats.progressPercent}%`;
 
         if (elBest) {
-            const best = this.praiseManager.getBestCount(stats.boardSize);
-            elBest.textContent = best === null ? '待探索' : `${best} 片`;
+            const best = this.praiseManager.getBestCount(this._getRecordKey());
+            elBest.textContent = best === null ? '待探索' : `${best} ${unit}`;
         }
     }
 
@@ -734,7 +861,6 @@ class PaperCutUI {
             tile.style.setProperty('--tile-size', p.size);
             tile.title = `${p.size}×${p.size} 正方形（点击可移除）`;
 
-            // 极小格子（高阶大棋盘中的 1x1）仅显示单数字保持清晰
             const labelText = p.size === 1 ? '1' : `${p.size}×${p.size}`;
             tile.innerHTML = `
                 <span class="tile-label">${labelText}</span>
@@ -748,14 +874,15 @@ class PaperCutUI {
         const track = document.getElementById('recordBadgeTrack');
         if (!track) return;
         track.innerHTML = '';
-        const n = this.engine.boardSize;
+        const unit = this._getUnitLabel();
+        const key = this._getRecordKey();
         const optCount = this._getOptimalCount();
-        const records = this.praiseManager.getRecordsForSize(n);
+        const records = this.praiseManager.getRecordsForKey(key);
 
         if (records.length === 0) {
             const empty = document.createElement('span');
             empty.className = 'record-badge mystery';
-            empty.textContent = `✨ 铺满整张 ${n}×${n} 纸片后，你的每一次完整剪法都会收藏在这里！`;
+            empty.textContent = `✨ 铺满整张 ${this.engine.boardSize}×${this.engine.boardSize} 纸片后，你的每一次完整方案都会收藏在这里！`;
             track.appendChild(empty);
             return;
         }
@@ -765,15 +892,17 @@ class PaperCutUI {
             badge.type = 'button';
             const isOpt = rec.count <= optCount;
             badge.className = `record-badge ${isOpt ? 'optimal' : 'unlocked'}`;
-            badge.title = '点击在棋盘上重现这套剪法';
-            badge.textContent = isOpt ? `🏆 ${rec.count} 片（最优极限！）` : `✂️ ${rec.count} 片`;
+            badge.title = '点击在棋盘上重现这套方案';
+            badge.textContent = isOpt
+                ? `🏆 ${rec.count} ${unit}（最优极限！）`
+                : `${this.faceMode === 'tiling' ? '🧩' : '✂️'} ${rec.count} ${unit}`;
             badge.addEventListener('click', () => {
                 this.engine.loadLayout(rec.pieces);
                 this.audio.playChime();
                 this.clearGhostHint();
                 this.render();
                 this.praiseManager.setMascotText(
-                    `已为你重现 ${n}×${n} 的 <strong>${rec.count} 片</strong> 完整剪法！点击任意方块可移除继续优化哦！`
+                    `已为你重现这套 <strong>${rec.count} ${unit}</strong> 的完整方案！点击任意方块可移除继续优化哦！`
                 );
             });
             track.appendChild(badge);

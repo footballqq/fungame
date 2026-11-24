@@ -1,26 +1,35 @@
-// codex: 2026-11-24 升级核心几何与状态管理引擎，支持动态切换任意边长 N (2..25) 与对称提示匹配
+// codex: 2026-11-24 升级核心几何引擎，原生支持「自由剪纸 (1..N-1)」与「限尺拼图 (1..K)」一体两面双模式
 
 /**
- * PaperCutEngine：管理 N×N 正方形纸片的剪切状态、合法性校验、面积统计与撤销栈。
- * 坐标系约定：row ∈ [0, N-1]（自上而下），col ∈ [0, N-1]（自左而右），size ∈ [1, N-1]。
+ * PaperCutEngine：管理 N×N 正方形纸片的剪切/拼接状态、最大尺寸上限 K、合法性校验与撤销栈。
+ * - 自由剪纸模式（papercut）：maxPieceSize = boardSize - 1
+ * - 限尺拼图模式（tiling）：  maxPieceSize = K (1 <= K <= boardSize - 1)
  */
 class PaperCutEngine {
-    constructor(boardSize = 11) {
-        this.setBoardSize(boardSize);
+    constructor(boardSize = 11, maxPieceSize = null) {
+        this.configure(boardSize, maxPieceSize);
     }
 
     /**
-     * 动态切换棋盘边长 N（重置当前画板与撤销历史）
+     * 配置棋盘边长 N 与最大允许方块边长 K
      */
-    setBoardSize(boardSize) {
+    configure(boardSize, maxPieceSize = null) {
         const n = Math.max(2, Math.min(25, parseInt(boardSize, 10) || 11));
+        const maxK =
+            maxPieceSize === null || maxPieceSize === undefined
+                ? n - 1
+                : Math.max(1, Math.min(n - 1, parseInt(maxPieceSize, 10) || (n - 1)));
         this.boardSize = n;
         this.totalCells = n * n;
-        this.maxPieceSize = n - 1;
+        this.maxPieceSize = maxK;
         this.pieces = [];
         this.nextId = 1;
         this.history = [];
         this.grid = this._createEmptyGrid();
+    }
+
+    setBoardSize(boardSize, maxPieceSize = null) {
+        this.configure(boardSize, maxPieceSize);
     }
 
     _createEmptyGrid() {
@@ -47,14 +56,11 @@ class PaperCutEngine {
         }
     }
 
-    /**
-     * 检查在 (row, col) 放置边长为 size 的正方形是否合法。
-     */
     canPlace(row, col, size) {
         if (!Number.isInteger(size) || size < 1 || size > this.maxPieceSize) {
             return {
                 valid: false,
-                reason: `边长必须在 1 到 ${this.maxPieceSize} 厘米之间哦！`
+                reason: `当前模式允许的边长范围是 1 ～ ${this.maxPieceSize} 厘米哦！`
             };
         }
         if (
@@ -73,7 +79,7 @@ class PaperCutEngine {
                 if (this.grid[row + dr][col + dc] !== 0) {
                     return {
                         valid: false,
-                        reason: '这里已经有剪好的正方形了，纸片不能重叠哦！'
+                        reason: '这里已经有正方形了，纸片不能重叠哦！'
                     };
                 }
             }
@@ -165,6 +171,7 @@ class PaperCutEngine {
         const progressPercent = Math.round((coveredArea / this.totalCells) * 100);
         return {
             boardSize: this.boardSize,
+            maxPieceSize: this.maxPieceSize,
             pieceCount: this.pieces.length,
             coveredArea,
             remainingArea,

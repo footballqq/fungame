@@ -18,11 +18,11 @@ class GuideController {
     }
 
     _getLessons() {
-        return getGuidedLessonsForSize(this.engine.boardSize);
+        return getGuidedLessons(this.engine.boardSize, this.engine.maxPieceSize);
     }
 
     _getOptimalSteps() {
-        return getOptimalStepsForSize(this.engine.boardSize);
+        return getOptimalSteps(this.engine.boardSize, this.engine.maxPieceSize);
     }
 
     /**

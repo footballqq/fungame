@@ -37,26 +37,26 @@ class PraiseManager {
         }
     }
 
-    getRecordsForSize(boardSize) {
-        const key = String(boardSize);
+    getRecordsForKey(recordKey) {
+        const key = String(recordKey);
         return Array.isArray(this.recordsBySize[key]) ? this.recordsBySize[key] : [];
     }
 
-    getBestCount(boardSize) {
-        const list = this.getRecordsForSize(boardSize);
+    getBestCount(recordKey) {
+        const list = this.getRecordsForKey(recordKey);
         if (list.length === 0) return null;
         return Math.min(...list.map(r => r.count));
     }
 
-    hasFoundOptimal(boardSize, optimalCount) {
-        const best = this.getBestCount(boardSize);
+    hasFoundOptimal(recordKey, optimalCount) {
+        const best = this.getBestCount(recordKey);
         return best !== null && best <= optimalCount;
     }
 
-    recordCompletion(boardSize, pieceCount, piecesSnapshot, optimalCount) {
-        const key = String(boardSize);
-        const list = this.getRecordsForSize(boardSize).slice();
-        const prevBest = this.getBestCount(boardSize);
+    recordCompletion(recordKey, pieceCount, piecesSnapshot, optimalCount) {
+        const key = String(recordKey);
+        const list = this.getRecordsForKey(recordKey).slice();
+        const prevBest = this.getBestCount(recordKey);
         const isNewBest = prevBest === null || pieceCount < prevBest;
         const isOptimal = pieceCount <= optimalCount;
 
@@ -83,8 +83,8 @@ class PraiseManager {
         return { isNewBest, isOptimal, prevBest };
     }
 
-    clearRecordsForSize(boardSize) {
-        delete this.recordsBySize[String(boardSize)];
+    clearRecordsForKey(recordKey) {
+        delete this.recordsBySize[String(recordKey)];
         this._saveAll();
     }
 

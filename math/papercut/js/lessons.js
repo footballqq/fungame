@@ -519,6 +519,236 @@ function buildProofHtmlForSize(boardSize) {
     `;
 }
 
+/**
+ * 统一入口：根据 (boardSize, maxPieceSize) 获取严格最优分步讲解序列。
+ * - 当 maxPieceSize >= boardSize - 1 时（自由剪纸模式），使用 OEIS A005670 精确最优表；
+ * - 当 maxPieceSize < boardSize - 1 时（限尺拼图模式），调用 bounded_solver 获取精确最优解。
+ */
+function getOptimalSteps(boardSize, maxPieceSize = null) {
+    const n = Math.max(2, Math.min(25, parseInt(boardSize, 10) || 11));
+    const maxS =
+        maxPieceSize === null || maxPieceSize === undefined
+            ? n - 1
+            : Math.max(1, Math.min(n - 1, parseInt(maxPieceSize, 10) || (n - 1)));
+
+    if (maxS >= n - 1) {
+        return getOptimalStepsForSize(n);
+    }
+
+    const solverFn =
+        typeof solveBoundedMinTiling === 'function'
+            ? solveBoundedMinTiling
+            : typeof require === 'function'
+            ? require('./bounded_solver.js').solveBoundedMinTiling
+            : null;
+    const raw = solverFn ? solverFn(n, maxS) : [];
+
+    // 10x10 限 1~4 经典原题专属精讲文案
+    if (n === 10 && maxS === 4 && raw.length === 11) {
+        const descs = [
+            '先在左上角放第 1 块 4×4（占 16 格），这是我们手里最大的纸片！',
+            '在它右侧紧贴着放第 2 块 4×4，顶边已经推进到第 8 格（右边留出宽 2 的规整条带）。',
+            '在左下侧放第 3 块 4×4！注意：千万别盲目放第 4 块 4×4，否则会挤出大量 1×1 碎块！',
+            '现在右下角刚好形成一块 6×6 的完美大方阵！放入第 1 块 3×3！',
+            '在右侧放入第 2 块 3×3，6×6 区域的上半部分严丝合缝。',
+            '放入第 3 块 3×3，继续拼合右下角 6×6 方阵。',
+            '放入第 4 块 3×3！四块 3×3 完美拼成 6×6，没有留下一丁点 1×1 缝隙！',
+            '右上角剩下宽 2、高 4 的条带，放入第 1 块 2×2！',
+            '紧接着放入第 2 块 2×2，右上角完美封口！',
+            '左下角同样剩下宽 4、高 2 的条带，放入第 3 块 2×2！',
+            '放上最后 1 块 2×2！整张 10×10 纸片一块 1×1 都没用，仅用 11 块达成理论极限！'
+        ];
+        return raw.map((item, idx) => ({
+            ...item,
+            title: `第 ${idx + 1} 步：放入 ${item.size}×${item.size}`,
+            desc: descs[idx] || `放入 ${item.size}×${item.size}。`
+        }));
+    }
+
+    const total = raw.length;
+    return raw.map((item, idx) => ({
+        ...item,
+        title: `第 ${idx + 1} 步：放入 ${item.size}×${item.size}`,
+        desc:
+            idx === total - 1
+                ? `放入最后 1 块 ${item.size}×${item.size}！在最大允许 ${maxS}×${maxS} 的限制下，整张 ${n}×${n} 仅用 ${total} 块严丝合缝铺满！`
+                : `在第 ${item.row + 1} 行、第 ${item.col + 1} 列放入 1 块 ${item.size}×${item.size}（占 ${item.size * item.size} 格），第 ${idx + 1}/${total} 步。`
+    }));
+}
+
+/**
+ * 统一入口：根据 (boardSize, maxPieceSize) 获取启发式思维课堂
+ */
+function getGuidedLessons(boardSize, maxPieceSize = null) {
+    const n = Math.max(2, Math.min(25, parseInt(boardSize, 10) || 11));
+    const maxS =
+        maxPieceSize === null || maxPieceSize === undefined
+            ? n - 1
+            : Math.max(1, Math.min(n - 1, parseInt(maxPieceSize, 10) || (n - 1)));
+
+    if (maxS >= n - 1) {
+        return getGuidedLessonsForSize(n);
+    }
+
+    const opt = getOptimalSteps(n, maxS);
+
+    // 10x10 限 1~4 经典奥数原题专属 4 节思维课
+    if (n === 10 && maxS === 4) {
+        return [
+            {
+                id: 'sq10_trap4',
+                badge: '第 1 课',
+                shortTitle: '四个4×4陷阱',
+                title: '直觉陷阱：放 4 个 4×4 为什么反而吃亏？',
+                summary: '4 个 4×4 占了 64 格，但右边和下边都只剩宽 2 的长条！',
+                explain:
+                    '<strong>【观察棋盘】</strong> 如果贪心摆满 <strong>4 个 4×4</strong>（组成 8×8），那么右侧和底边都会被挤成<strong>宽只有 2 厘米的细长 L 形</strong>，连一块 3×3 都放不进去！至少需要 9 块 2×2，总计 <strong>4 + 9 = 13 块</strong>！<br><strong>【启发】</strong> 少放 1 块 4×4，给 3×3 留出施展拳脚的 6×6 空间！',
+                layout: [
+                    { row: 0, col: 0, size: 4 }, { row: 0, col: 4, size: 4 },
+                    { row: 4, col: 0, size: 4 }, { row: 4, col: 4, size: 4 },
+                    { row: 0, col: 8, size: 2 }, { row: 2, col: 8, size: 2 },
+                    { row: 4, col: 8, size: 2 }, { row: 6, col: 8, size: 2 },
+                    { row: 8, col: 8, size: 2 }, { row: 8, col: 0, size: 2 },
+                    { row: 8, col: 2, size: 2 }, { row: 8, col: 4, size: 2 },
+                    { row: 8, col: 6, size: 2 }
+                ]
+            },
+            {
+                id: 'sq10_three4',
+                badge: '第 2 课',
+                shortTitle: '三块4×4布局',
+                title: '破局关键：只放 3 块 4×4，腾出 6×6 宝地！',
+                summary: '拿掉右下角那块 4×4，看看右下角露出了什么规整图形！',
+                explain:
+                    '<strong>【观察棋盘】</strong> 只在左上、右上偏左、左下偏上放 <strong>3 块 4×4</strong>！神奇的事情发生了：右下角刚好空出一块完整的 <strong>6×6 正方形</strong>，正好能放 4 块 3×3！',
+                layout: opt.slice(0, 3)
+            },
+            {
+                id: 'sq10_four3',
+                badge: '第 3 课',
+                shortTitle: '四块3×3填腹',
+                title: '中块发力：4 块 3×3 严密填满 6×6！',
+                summary: '6×6 正好等于 2×2 个 3×3，零碎块！',
+                explain:
+                    '<strong>【观察棋盘】</strong> 4 块 3×3 完美占满右下角 36 格，现在整张纸只剩下右上和左下两小条宽 2、长 4 的规整空位！',
+                layout: opt.slice(0, 7)
+            },
+            {
+                id: 'sq10_finish',
+                badge: '第 4 课',
+                shortTitle: '亲手收官',
+                title: '动手时刻：用 2×2 严丝合缝收官！',
+                summary: '剩下最后 16 格，亲手放上 2×2 见证最少块数！',
+                explain:
+                    '<strong>【动手时刻】</strong> 前 7 块已经就位，剩下的两处 2×4 空地交给你亲手用 <strong>2×2</strong> 填满！一块 1×1 都不需要，看看最后总块数是多少吧！',
+                layout: opt.slice(0, 7),
+                interactivePractice: true,
+                practiceSuggestedSize: 2
+            }
+        ];
+    }
+
+    const cut1 = Math.max(1, Math.floor(opt.length / 3));
+    const cut2 = Math.max(cut1, Math.min(opt.length - 2, Math.floor((opt.length * 2) / 3)));
+    const remArea = n * n - opt.slice(0, cut2).reduce((a, b) => a + b.size * b.size, 0);
+
+    return [
+        {
+            id: `bd_step1_${n}_${maxS}`,
+            badge: '第 1 课',
+            shortTitle: '大块锚定',
+            title: `起步策略：优先在角落锚定 ${maxS}×${maxS} 大块`,
+            summary: `在最大尺寸受限于 ${maxS}×${maxS} 时，先尽量用大块吸收面积！`,
+            explain: `<strong>【观察棋盘】</strong> 题目限定最大纸片为 <strong>${maxS}×${maxS}</strong>（每块占 ${maxS * maxS} 格）。仅凭面积计算，铺满 ${n * n} 格至少就需要 <strong>⌈${n * n} / ${maxS * maxS}⌉ = ${Math.ceil((n * n) / (maxS * maxS))} 块</strong>！先在角落稳稳排开前 ${cut1} 块！`,
+            layout: opt.slice(0, cut1)
+        },
+        {
+            id: `bd_step2_${n}_${maxS}`,
+            badge: '第 2 课',
+            shortTitle: '中块衔接',
+            title: '空间装箱：用中等尺寸避免 1×1 碎缝',
+            summary: '尽量让剩余边界保持 2 或 3 的倍数，减少 1×1 碎块。',
+            explain: `<strong>【观察棋盘】</strong> 排到第 ${cut2} 块时，已经覆盖了绝大部分区域，只剩最后 <strong>${remArea} 格</strong> 的规整空位！`,
+            layout: opt.slice(0, cut2)
+        },
+        {
+            id: `bd_finish_${n}_${maxS}`,
+            badge: '第 3 课',
+            shortTitle: '亲手收官',
+            title: `动手时刻：亲手拼完最后 ${remArea} 格！`,
+            summary: '试试把剩余空位严丝合缝补齐，看看总块数是多少！',
+            explain: `<strong>【动手时刻】</strong> 前 ${cut2} 块已经为你放好，剩下的 <strong>${remArea} 格</strong> 交给你亲手在棋盘上补齐！`,
+            layout: opt.slice(0, cut2),
+            interactivePractice: true,
+            practiceSuggestedSize: opt[cut2] ? opt[cut2].size : 1
+        }
+    ];
+}
+
+/**
+ * 统一入口：为任意 (boardSize, maxPieceSize) 生成防剧透题解 HTML（零 raw LaTeX）
+ */
+function buildProofHtml(boardSize, maxPieceSize = null) {
+    const n = Math.max(2, Math.min(25, parseInt(boardSize, 10) || 11));
+    const maxS =
+        maxPieceSize === null || maxPieceSize === undefined
+            ? n - 1
+            : Math.max(1, Math.min(n - 1, parseInt(maxPieceSize, 10) || (n - 1)));
+
+    if (maxS >= n - 1) {
+        return buildProofHtmlForSize(n);
+    }
+
+    const opt = getOptimalSteps(n, maxS);
+    const minCount = opt.length;
+    const areaLB = Math.ceil((n * n) / (maxS * maxS));
+
+    const dist = {};
+    opt.forEach(item => {
+        dist[item.size] = (dist[item.size] || 0) + 1;
+    });
+    const sizesDesc = Object.keys(dist).map(Number).sort((a, b) => b - a);
+    const listItems = sizesDesc
+        .map(s => `<li><strong>边长 ${s} 厘米</strong>：${dist[s]} 块（共占 ${dist[s] * s * s} 平方厘米）</li>`)
+        .join('');
+    const formulaTerms = sizesDesc.map(s => `${dist[s]} × ${s}<sup>2</sup>`).join(' + ');
+
+    const extraProof =
+        n === 10 && maxS === 4
+            ? `<div class="proof-step-card">
+                <h4>三、奥数原题深度解析（多元鸡兔同笼升维 + 几何装箱）</h4>
+                <p>
+                    1. <strong>面积下界</strong>：10×10 面积为 100，单片最大面积 4<sup>2</sup> = 16，故仅按面积就至少需要 ⌈100 / 16⌉ = 7 块。<br>
+                    2. <strong>4×4 数量上限</strong>：10×10 中任意一行/列最多穿过 ⌊10 / 4⌋ = 2 块 4×4，因此全盘最多放 <strong>4 块 4×4</strong>。<br>
+                    3. <strong>为什么 4 块 4×4 反而更差？</strong> 若放满 4 块 4×4，则剩余边界宽均不超过 2，无法放入任何 3×3，剩余 36 格全用 ≤2×2 至少需 36 / 4 = 9 块，总计 ≥ 4 + 9 = <strong>13 块</strong>！<br>
+                    4. <strong>最优平衡点（3 块 4×4）</strong>：放 3 块 4×4（占 48）时，右下角腾出 6×6 正好放 4 块 3×3（占 36），剩余 16 格放 4 块 2×2，总计 <strong>3 + 4 + 4 = 11 块</strong>，且经严格分类讨论证明不可能 ≤ 10 块！
+                </p>
+            </div>`
+            : `<div class="proof-step-card">
+                <h4>三、限尺装箱下界与极值分析</h4>
+                <p>
+                    当最大允许纸片被限制为 <strong>${maxS}×${maxS}</strong>（单片最大面积 ${maxS * maxS}）时：<br>
+                    • <strong>纯面积理论下界</strong>：⌈${n * n} / ${maxS * maxS}⌉ = <strong>${areaLB} 块</strong>。<br>
+                    • <strong>几何边界约束</strong>：因为正方形不能切割变形，边角余量往往迫使我们搭配中小尺寸纸片，经回溯搜索与组合极值验证，${n}×${n}（限 1～${maxS}）的严格最少块数为 <strong>${minCount} 块</strong>！
+                </p>
+            </div>`;
+
+    return `
+        <h3>一、${n} × ${n}（限 1～${maxS} 纸片）结论答案揭晓</h3>
+        <p class="proof-lead">
+            使用边长 <strong>1～${maxS} 厘米</strong> 的正方形纸片不重不漏铺满 <strong>${n}×${n}</strong>，最少需要 <strong style="color: #d81b60; font-size: 1.35rem;">${minCount}</strong> 块！
+        </p>
+        <div class="proof-step-card">
+            <h4>二、${minCount} 块最优方案与面积校验</h4>
+            <ul>${listItems}</ul>
+            <div class="math-formula-box">
+                <span class="math-formula">${formulaTerms} = ${n * n} = ${n}<sup>2</sup></span>
+            </div>
+        </div>
+        ${extraProof}
+    `;
+}
+
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         OPTIMAL_11_STEPS,
@@ -528,6 +758,9 @@ if (typeof module !== 'undefined' && module.exports) {
         getOptimalStepsForSize,
         getGuidedLessonsForSize,
         buildProofHtmlForSize,
+        getOptimalSteps,
+        getGuidedLessons,
+        buildProofHtml,
         createMaxMinusOneTrapLayout,
         createFour5TrapLayout
     };
@@ -539,4 +772,7 @@ if (typeof module !== 'undefined' && module.exports) {
     window.getOptimalStepsForSize = getOptimalStepsForSize;
     window.getGuidedLessonsForSize = getGuidedLessonsForSize;
     window.buildProofHtmlForSize = buildProofHtmlForSize;
+    window.getOptimalSteps = getOptimalSteps;
+    window.getGuidedLessons = getGuidedLessons;
+    window.buildProofHtml = buildProofHtml;
 }

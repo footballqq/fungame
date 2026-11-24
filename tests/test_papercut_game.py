@@ -32,6 +32,7 @@ def test_required_files_exist_and_nonempty():
         PAPERCUT_DIR / "css" / "modal.css",
         PAPERCUT_DIR / "css" / "animations.css",
         PAPERCUT_DIR / "js" / "papercut_math.js",
+        PAPERCUT_DIR / "js" / "bounded_solver.js",
         PAPERCUT_DIR / "js" / "lessons.js",
         PAPERCUT_DIR / "js" / "audio.js",
         PAPERCUT_DIR / "js" / "skins.js",
@@ -85,7 +86,10 @@ def test_html_anti_spoiler_selector_and_mobile_adaptation():
     style_css = (PAPERCUT_DIR / "css" / "style.css").read_text(encoding="utf-8")
     board_css = (PAPERCUT_DIR / "css" / "board.css").read_text(encoding="utf-8")
 
-    # 边长选择器、缩放控制与触控 HUD
+    # 一体两面双模式切换、边长选择器、缩放控制与触控 HUD
+    assert 'id="btnFacePapercut"' in html
+    assert 'id="btnFaceTiling"' in html
+    assert 'id="maxPieceSelect"' in html
     assert 'id="boardSizeSelect"' in html
     assert 'id="dragHudPill"' in html
     assert 'id="btnZoomIn"' in html
@@ -178,6 +182,48 @@ def test_js_engine_and_all_sizes_via_node():
     const hint17 = eng17.findCompatibleOptimalNextStep(opt17);
     if (!hint17 || hint17.size !== 8) {{
         throw new Error('17x17 symmetry hint failed: ' + JSON.stringify(hint17));
+    }}
+
+    // 验证 B 面（限尺拼图）经典原题与动态求解
+    const {{ solveBoundedMinTiling }} = require({json.dumps(str(PAPERCUT_DIR / 'js' / 'bounded_solver.js'))});
+    const {{ getOptimalSteps, getGuidedLessons, buildProofHtml }} = require({json.dumps(str(PAPERCUT_DIR / 'js' / 'lessons.js'))});
+
+    const boundedCases = [
+        [10, 4, 11],
+        [11, 4, 15],
+        [9, 4, 9],
+        [12, 4, 9],
+        [10, 6, 4],
+        [6, 3, 4],
+    ];
+    for (const [bn, bk, expCnt] of boundedCases) {{
+        const sol = solveBoundedMinTiling(bn, bk);
+        if (sol.length !== expCnt) {{
+            throw new Error(`Bounded (${{bn}}, ${{bk}}) expected ${{expCnt}} got ${{sol.length}}`);
+        }}
+        const be = new PaperCutEngine(bn, bk);
+        for (const p of sol) {{
+            const r = be.placePiece(p.row, p.col, p.size);
+            if (!r.ok) throw new Error(`Bounded (${{bn}}, ${{bk}}) invalid: ${{r.reason}}`);
+        }}
+        if (!be.getStats().isComplete) {{
+            throw new Error(`Bounded (${{bn}}, ${{bk}}) incomplete`);
+        }}
+    }}
+
+    // 验证 B 面 10x10 (1~4) 专属思维课与无 raw LaTeX 题解
+    const bLessons = getGuidedLessons(10, 4);
+    if (bLessons.length !== 4) throw new Error('Expected 4 lessons for 10x10 K=4');
+    for (const les of bLessons) {{
+        const e3 = new PaperCutEngine(10, 4);
+        for (const p of les.layout) {{
+            const r = e3.placePiece(p.row, p.col, p.size, false);
+            if (!r.ok) throw new Error(`10x10 K=4 lesson ${{les.id}} invalid: ${{r.reason}}`);
+        }}
+    }}
+    const bProof = buildProofHtml(10, 4);
+    if (!bProof.includes('11') || bProof.includes('$$')) {{
+        throw new Error('10x10 K=4 proof invalid');
     }}
 
     console.log('NODE_ALL_25_OK');
