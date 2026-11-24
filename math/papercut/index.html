@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!-- codex: 2026-11-24 升级剪正方形挑战主页面，支持 N=2..25 自由选边长、全边长严格最优解与教学、手机平板深度触控适配 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>剪正方形大挑战 · 帕金斯太太的被子（2×2 ～ 25×25 全边长）</title>
+    <link rel="stylesheet" href="css/animations.css?v=20261124b">
+    <link rel="stylesheet" href="css/modal.css?v=20261124b">
+    <link rel="stylesheet" href="css/board.css?v=20261124b">
+    <link rel="stylesheet" href="css/style.css?v=20261124b">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 顶栏导航与工具 -->
+        <header class="header-bar">
+            <div class="header-title">
+                <h1 id="mainTitleHeading">✂️ 11×11 剪正方形大挑战</h1>
+                <p>奥数经典几何剖分 · 2×2～25×25 自由选尺寸，全边长严格最优解教学！</p>
+            </div>
+            <div class="header-tools">
+                <button id="btnRules" class="btn-tool" title="查看原题题目与剪切规则">📜 原题规则</button>
+                <button id="btnProof" class="btn-tool" title="先猜答案，再查看严格数学证明">🧠 奥数题解证明</button>
+                <button id="btnSkins" class="btn-tool" title="切换方格纸与手工切割垫皮肤">🎨 纸艺皮肤</button>
+                <button id="btnToggleAudio" class="btn-tool" title="开启或静音剪纸音效">🔊 音效: 开</button>
+            </div>
+        </header>
+
+        <!-- 棋盘边长选择器（2×2 ~ 25×25，含常用质数快捷按钮与画板缩放） -->
+        <section class="size-selector-bar">
+            <div class="size-selector-left">
+                <label for="boardSizeSelect" class="size-select-label">📐 选择纸片大小：</label>
+                <select id="boardSizeSelect" class="size-select-dropdown" aria-label="选择正方形纸片边长">
+                    <option value="2">2 × 2（入门热身）</option>
+                    <option value="3">3 × 3（质数入门）</option>
+                    <option value="4">4 × 4（偶数对称）</option>
+                    <option value="5">5 × 5（质数挑战）</option>
+                    <option value="6">6 × 6（偶数对称）</option>
+                    <option value="7">7 × 7（质数挑战）</option>
+                    <option value="8">8 × 8（偶数对称）</option>
+                    <option value="9">9 × 9（3的倍数）</option>
+                    <option value="10">10 × 10（偶数对称）</option>
+                    <option value="11" selected>11 × 11（⭐ 经典奥数原题）</option>
+                    <option value="12">12 × 12（偶数对称）</option>
+                    <option value="13">13 × 13（进阶质数）</option>
+                    <option value="14">14 × 14（偶数对称）</option>
+                    <option value="15">15 × 15（3的倍数）</option>
+                    <option value="16">16 × 16（偶数对称）</option>
+                    <option value="17">17 × 17（高阶质数）</option>
+                    <option value="18">18 × 18（偶数对称）</option>
+                    <option value="19">19 × 19（大师质数）</option>
+                    <option value="20">20 × 20（偶数大盘）</option>
+                    <option value="21">21 × 21（3的倍数）</option>
+                    <option value="22">22 × 22（偶数大盘）</option>
+                    <option value="23">23 × 23（宗师质数）</option>
+                    <option value="24">24 × 24（偶数大盘）</option>
+                    <option value="25">25 × 25（5的倍数）</option>
+                </select>
+                <div class="size-quick-pills" aria-label="快捷切换推荐规格">
+                    <button type="button" class="size-quick-pill" data-n="7">7×7</button>
+                    <button type="button" class="size-quick-pill active" data-n="11">11×11 原题</button>
+                    <button type="button" class="size-quick-pill" data-n="13">13×13</button>
+                    <button type="button" class="size-quick-pill" data-n="17">17×17</button>
+                    <button type="button" class="size-quick-pill" data-n="19">19×19</button>
+                    <button type="button" class="size-quick-pill" data-n="23">23×23</button>
+                </div>
+            </div>
+            <div class="zoom-controls" aria-label="画板缩放控制">
+                <button id="btnZoomOut" type="button" class="btn-zoom" title="缩小画板">🔍−</button>
+                <span id="zoomValueLabel" class="zoom-label">100%</span>
+                <button id="btnZoomIn" type="button" class="btn-zoom" title="放大画板">🔍+</button>
+                <button id="btnZoomReset" type="button" class="btn-zoom" title="重置缩放">↺</button>
+            </div>
+        </section>
+
+        <!-- 游戏目的与玩法说明横幅（清晰告知目的，绝不剧透答案） -->
+        <section class="mission-banner">
+            <div class="mission-goal">
+                <span class="mission-tag">🎯 游戏目的</span>
+                <span>
+                    把这张 <strong id="missionBoardSize">11×11 厘米</strong> 的正方形纸片，严丝合缝剪成若干个<strong>边长 <span id="missionMaxPiece">1～10 厘米</span> 的整数正方形</strong>（允许重复尺寸，不能重叠、不能留空隙）。<strong>比比看，你最少能剪成几片？</strong>
+                </span>
+            </div>
+            <div class="mission-howto">
+                <span>① 下方选尺寸点画板，或<strong>直接在画板上按住拖拉画框</strong>剪出正方形</span>
+                <span>② 点一下已剪好的正方形即可<strong>移除重剪</strong></span>
+                <span>③ 卡壳了就点「🎓 一步步教学」，任意尺寸都有专属最优解指导！</span>
+            </div>
+        </section>
+
+        <!-- 实时统计栏 -->
+        <section class="stats-bar">
+            <div class="stat-item highlight-card">
+                <span class="stat-label">当前已剪片数</span>
+                <span id="currentPieceCount" class="stat-value highlight">0</span>
+                <span class="stat-unit">片</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">已覆盖面积</span>
+                <span id="coveredAreaText" class="stat-value">0 / 121</span>
+                <div class="coverage-bar-track" aria-hidden="true">
+                    <div id="coverageBarFill" class="coverage-bar-fill"></div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">当前选中尺寸</span>
+                <span id="currentSelectedSize" class="stat-value">4 × 4</span>
+                <span class="stat-unit">厘米</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">本规格最少纪录</span>
+                <span id="bestRecordText" class="stat-value highlight-alt">待探索</span>
+                <span class="stat-unit">越少越厉害</span>
+            </div>
+        </section>
+
+        <!-- 我的探索纪录履带 -->
+        <section class="achievement-section">
+            <div class="achievement-header">
+                <div class="achievement-title-area">
+                    <span>🏅 我的完整剪法纪录（点击任意徽章可在棋盘重现）：</span>
+                </div>
+                <div class="achievement-controls">
+                    <button id="btnClearRecords" class="btn-clear-collection" title="清空当前规格的挑战纪录">🗑️ 清空本规格纪录</button>
+                </div>
+            </div>
+            <div id="recordBadgeTrack" class="record-badge-track"></div>
+        </section>
+
+        <!-- 一步步教学指导面板（非遮挡，动态适配当前边长 N） -->
+        <section id="guidePanel" class="guide-panel hidden">
+            <div class="guide-top-row">
+                <span id="guideTitle" class="guide-title">🎓 一步步教学指导</span>
+                <span id="guideStatus" class="guide-status">准备就绪</span>
+            </div>
+
+            <div class="guide-tabs-row">
+                <div class="mode-toggle-group">
+                    <button id="btnGuideTabThinking" class="btn-mode-toggle active" title="不剧透答案，带你一步步悟出剪法规律">💡 启发式思维课（5课）</button>
+                    <button id="btnGuideTabDemo" class="btn-mode-toggle" title="一步步示范或亲手互动跟练最优方案">🎬 最优剪法分步拆解</button>
+                </div>
+                <button id="btnGuideExit" class="btn-demo-ctrl btn-exit-guide">✕ 关闭教学</button>
+            </div>
+
+            <!-- 模式 A：动态启发思维课 -->
+            <div id="guideThinkingControls" class="guide-sub-controls">
+                <div id="lessonPillsContainer" class="lesson-pills"></div>
+                <div class="demo-controls-row">
+                    <button id="btnLessonPrev" class="btn-demo-ctrl">⏮ 上一课</button>
+                    <button id="btnLessonNext" class="btn-demo-ctrl">⏭ 下一课</button>
+                </div>
+            </div>
+
+            <!-- 模式 B：当前边长最优解分步示范与互动跟练 -->
+            <div id="guideDemoControls" class="guide-sub-controls hidden">
+                <div class="demo-controls-row">
+                    <button id="btnDemoPlay" class="btn-demo-ctrl">▶ 播放</button>
+                    <button id="btnDemoPrev" class="btn-demo-ctrl">⏮ 上一步</button>
+                    <button id="btnDemoNext" class="btn-demo-ctrl">⏭ 下一步</button>
+                    <button id="btnGuidePractice" class="btn-demo-ctrl btn-practice-toggle">🖐️ 切换互动跟练</button>
+                    <label class="speed-label">
+                        速度:
+                        <select id="demoSpeedSelect">
+                            <option value="0.75">慢速 (0.75x)</option>
+                            <option value="1" selected>正常 (1.0x)</option>
+                            <option value="1.5">快速 (1.5x)</option>
+                            <option value="2">超快 (2.0x)</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <div id="guideExplain" class="demo-explain-card">
+                选择上方课程，结合棋盘一步步探索剪正方形的奥秘吧！
+            </div>
+        </section>
+
+        <!-- N×N 剪纸主工作台（含触控拖拽悬浮提示） -->
+        <main class="board-stage">
+            <div id="dragHudPill" class="drag-hud-pill hidden" aria-live="polite"></div>
+            <div id="paperBoardContainer" class="paper-board-container skin-classic">
+                <div id="boardRulerTop" class="board-ruler-top" aria-hidden="true"></div>
+                <div class="board-body-row">
+                    <div id="boardRulerLeft" class="board-ruler-left" aria-hidden="true"></div>
+                    <div id="paperBoard" class="paper-board" aria-label="正方形剪纸画板"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 1×1 ~ (N-1)×(N-1) 动态尺寸选择托盘 -->
+        <section class="palette-section">
+            <div class="palette-header">
+                <span id="paletteTitleText">📏 选择要剪的正方形尺寸（1×1 ～ 10×10，也可直接在画板上拖拉画框）：</span>
+            </div>
+            <div id="sizePalette" class="size-palette"></div>
+        </section>
+
+        <!-- 玩家交互控制栏 -->
+        <div class="action-controls">
+            <button id="btnUndo" class="btn-action btn-undo" title="快捷键: Z">↩️ 撤销一步</button>
+            <button id="btnReset" class="btn-action btn-reset" title="快捷键: R">🔄 清空重剪</button>
+            <button id="btnHint" class="btn-action btn-hint" title="快捷键: H">💡 探索提示</button>
+            <button id="btnToggleGuide" class="btn-action btn-demo">🎓 一步步教学</button>
+        </div>
+
+        <!-- 吉祥物伴学栏 -->
+        <footer id="mascotBar" class="mascot-section" title="点击听剪纸小巧手给你的小贴士">
+            <div class="mascot-avatar">🐼</div>
+            <div id="mascotText" class="mascot-speech">
+                你好呀！我是剪纸小熊猫！可以在上方自由切换 2×2 到 25×25 的任意大小，点击或按住拖拉画框就能剪出正方形，试试看最少能剪成几片吧！✂️
+            </div>
+        </footer>
+    </div>
+
+    <!-- 浮动轻提示 Toast -->
+    <div id="praiseToast" class="praise-toast"></div>
+
+    <!-- 庆祝彩屑容器 -->
+    <div id="confettiContainer"></div>
+
+    <!-- 原题规则介绍弹窗 -->
+    <div id="ruleModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>📜 原题呈现与剪纸规则</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="rule-svg-box">
+                    <svg viewBox="0 0 360 150" width="100%" style="max-width: 360px;" role="img" aria-label="剪正方形规则示意图">
+                        <rect x="20" y="20" width="96" height="96" fill="#fff8e1" stroke="#5d4037" stroke-width="2.5" rx="4"/>
+                        <line x1="20" y1="52" x2="116" y2="52" stroke="#d7ccc8" stroke-dasharray="3 3"/>
+                        <line x1="20" y1="84" x2="116" y2="84" stroke="#d7ccc8" stroke-dasharray="3 3"/>
+                        <line x1="52" y1="20" x2="52" y2="116" stroke="#d7ccc8" stroke-dasharray="3 3"/>
+                        <line x1="84" y1="20" x2="84" y2="116" stroke="#d7ccc8" stroke-dasharray="3 3"/>
+                        <text x="68" y="73" text-anchor="middle" font-size="14" font-weight="800" fill="#4e342e">N × N</text>
+                        <text x="68" y="136" text-anchor="middle" font-size="12" fill="#6d4c41">整张大正方形纸片</text>
+
+                        <text x="176" y="64" text-anchor="middle" font-size="22">✂️</text>
+                        <line x1="138" y1="78" x2="210" y2="78" stroke="#d81b60" stroke-width="2.5" stroke-dasharray="5 3"/>
+                        <polygon points="210,73 220,78 210,83" fill="#d81b60"/>
+
+                        <rect x="238" y="20" width="54" height="54" fill="#ffcc80" stroke="#5d4037" stroke-width="2"/>
+                        <rect x="292" y="20" width="42" height="42" fill="#a5d6a7" stroke="#5d4037" stroke-width="2"/>
+                        <rect x="238" y="74" width="42" height="42" fill="#90caf9" stroke="#5d4037" stroke-width="2"/>
+                        <rect x="280" y="74" width="54" height="42" fill="none" stroke="#8d6e63" stroke-width="1.5" stroke-dasharray="3 2"/>
+                        <text x="265" y="51" text-anchor="middle" font-size="12" font-weight="700" fill="#4e342e">大</text>
+                        <text x="313" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#1b5e20">中</text>
+                        <text x="307" y="99" text-anchor="middle" font-size="11" fill="#8d6e63">严丝合缝</text>
+                        <text x="286" y="136" text-anchor="middle" font-size="12" fill="#6d4c41">剪成若干小正方形</text>
+                    </svg>
+                </div>
+                <div class="rule-text-content">
+                    <h3>【经典奥数原题】</h3>
+                    <p>
+                        把一张边长为 <strong>11 厘米</strong> 的正方形纸片，剪成若干边长<strong>小于 11</strong> 的整数厘米的正方形纸片（不必全相同，允许重复剪成同一种尺寸，纸片没有浪费）。
+                    </p>
+                    <p class="highlight-question">
+                        <strong>核心挑战：最少能剪成 _____ 片？</strong><br>
+                        <span style="font-size:0.86rem; color:#6d4c41;">（进阶玩法：顶部可自由切换 2×2 ～ 25×25 任意边长，每种规格都内置严格数学最优解！）</span>
+                    </p>
+                    <hr>
+                    <h3>【四大核心规则】</h3>
+                    <ul>
+                        <li><strong>必须是正方形</strong>：剪出的每一片都必须是边长为 <strong>1 ～ (N−1) 厘米</strong> 的整数正方形（不能整张不剪）。</li>
+                        <li><strong>允许重复尺寸</strong>：可以剪出多片同样大小的正方形。</li>
+                        <li><strong>纸片不能浪费</strong>：整张 N×N 纸片必须 100% 全部剪完，不能留空隙，也不能重叠。</li>
+                        <li><strong>追求最少片数</strong>：只要严丝合缝铺满就算完成，但我们的终极目标是让<strong>总片数越少越好</strong>！</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 奥数题解与数学证明弹窗（带互动猜答案与防剧透护盾，随当前边长 N 动态生成） -->
+    <div id="proofModal" class="modal-overlay hidden">
+        <div class="modal-card math-proof-modal">
+            <div class="modal-header">
+                <h2 id="proofModalTitle">🧠 11×11 奥数题解与数学证明</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body proof-body">
+                <div class="proof-quiz-section">
+                    <h3 id="proofQuizPrompt">🎯 互动小测验：你猜 11×11 最少能剪成几片？</h3>
+                    <div class="quiz-row">
+                        <span>我认为最少能剪成：</span>
+                        <input type="number" id="quizAnswerInput" min="1" max="121" placeholder="输入数字">
+                        <span>片</span>
+                        <button id="btnSubmitQuiz" class="btn-action btn-hint" style="padding: 6px 14px;">验证我的猜想</button>
+                    </div>
+                    <div id="quizFeedback" class="quiz-feedback"></div>
+                </div>
+
+                <div id="proofSpoilerShield" class="spoiler-shield">
+                    <div class="spoiler-icon">🔒</div>
+                    <h3>答案与严格证明已暂时隐藏（防剧透保护）</h3>
+                    <p>
+                        建议先自己动手在棋盘上剪一剪，或在上方输入框猜一猜答案！<br>
+                        如果你已经思考完毕，或想直接学习当前边长的组合几何证明，可点击下方按钮揭晓：
+                    </p>
+                    <button id="btnRevealProof" class="btn-action btn-demo" style="margin-top: 10px;">🔓 我已思考完毕，揭晓答案与严格证明</button>
+                </div>
+
+                <div id="proofRevealContent" class="proof-content hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 纸艺皮肤选择弹窗 -->
+    <div id="skinModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>🎨 选择纸艺与画板皮肤</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="skin-grid">
+                <div class="skin-card active" data-skin="classic">
+                    <h3>经典方格纸 📜</h3>
+                    <p style="font-size:0.82rem; color:#666;">温润米白数学方格纸质感，色彩柔和护眼</p>
+                    <div class="skin-preview-row">
+                        <span style="background:#fdfbf7; border:1px solid #ccc; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#ffcc80; border:1px solid #ccc; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#a5d6a7; border:1px solid #ccc; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                    </div>
+                </div>
+                <div class="skin-card" data-skin="origami">
+                    <h3>和风彩纸 🌸</h3>
+                    <p style="font-size:0.82rem; color:#666;">柔和粉樱与淡竹马卡龙手工折纸色调</p>
+                    <div class="skin-preview-row">
+                        <span style="background:#fff0f5; border:1px solid #f48fb1; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#f8bbd0; border:1px solid #f06292; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#c8e6c9; border:1px solid #81c784; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                    </div>
+                </div>
+                <div class="skin-card" data-skin="craft">
+                    <h3>手工切割垫 🟢</h3>
+                    <p style="font-size:0.82rem; color:#666;">专业墨绿手工切割垫质感，厘米刻度利落清晰</p>
+                    <div class="skin-preview-row">
+                        <span style="background:#1b5e20; border:1px solid #81c784; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#2e7d32; border:1px solid #a5d6a7; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#ffca28; border:1px solid #fff; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                    </div>
+                </div>
+                <div class="skin-card" data-skin="blueprint">
+                    <h3>极客蓝图 🌌</h3>
+                    <p style="font-size:0.82rem; color:#666;">深空工程蓝图与荧光青色网格线</p>
+                    <div class="skin-preview-row">
+                        <span style="background:#0d253f; border:1px solid #48c7f2; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#102a43; border:1px solid #48c7f2; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                        <span style="background:#48c7f2; border:1px solid #fff; width:28px; height:28px; display:inline-block; border-radius:4px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 最优解达成庆祝弹窗 -->
+    <div id="winModal" class="modal-overlay hidden">
+        <div class="modal-card" style="text-align:center;">
+            <div class="win-content">
+                <div class="win-trophy">🏆</div>
+                <div class="win-stars">⭐⭐⭐⭐⭐</div>
+                <div id="winModalBadge" class="win-badge">剪纸大宗师 · 达成理论极限！</div>
+                <p id="winModalDesc" class="win-desc">恭喜你剪出了理论最少片数！</p>
+                <div style="margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                    <button class="btn-action btn-reset modal-close" style="padding: 10px 22px;">继续探索其他尺寸 ✂️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 清空纪录确认弹窗 -->
+    <div id="clearConfirmModal" class="modal-overlay hidden">
+        <div class="modal-card" style="max-width: 440px; text-align: center;">
+            <div class="modal-header">
+                <h2>🗑️ 清空纪录确认</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" style="padding: 24px 20px;">
+                <p style="font-size: 1.02rem; line-height: 1.6; color: #4e342e;">
+                    确定要<strong>清空当前规格的所有剪法纪录</strong>吗？<br>
+                    <span style="font-size: 0.88rem; color: #8d6e63;">（清空后本规格的题解防剧透锁也会重置，方便重新从零挑战！）</span>
+                </p>
+                <div style="margin-top: 20px; display: flex; justify-content: center; gap: 14px;">
+                    <button id="btnConfirmClear" class="btn-action btn-reset" style="background:#d32f2f; color:#fff;">确认清空</button>
+                    <button class="btn-action btn-undo modal-close">取消返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 脚本引用 -->
+    <script src="js/papercut_math.js?v=20261124b"></script>
+    <script src="js/lessons.js?v=20261124b"></script>
+    <script src="js/audio.js?v=20261124b"></script>
+    <script src="js/skins.js?v=20261124b"></script>
+    <script src="js/praise.js?v=20261124b"></script>
+    <script src="js/guide.js?v=20261124b"></script>
+    <script src="js/ui.js?v=20261124b"></script>
+</body>
+</html>

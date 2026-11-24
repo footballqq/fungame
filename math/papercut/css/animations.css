@@ -1,0 +1,89 @@
+/* codex: 2026-11-24 剪纸弹入动效、碰撞轻抖、提示虚线呼吸与彩屑礼花动画样式表 */
+
+.praise-toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(40px);
+    background: rgba(38, 30, 26, 0.94);
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 0.93rem;
+    line-height: 1.4;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32);
+    z-index: 2000;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    max-width: 90vw;
+}
+
+.praise-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+#confettiContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 3000;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 14px;
+    top: -20px;
+    opacity: 0.92;
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        top: -20px;
+        transform: rotate(0deg) translateX(0);
+    }
+    100% {
+        top: 105vh;
+        transform: rotate(720deg) translateX(55px);
+    }
+}
+
+@keyframes snipPopIn {
+    0% {
+        transform: scale(0.84);
+        opacity: 0.55;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes ghostPulse {
+    0%, 100% {
+        opacity: 0.72;
+        transform: scale(0.985);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.015);
+    }
+}
+
+@keyframes boardShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.board-shake {
+    animation: boardShake 0.22s ease-in-out;
+}
