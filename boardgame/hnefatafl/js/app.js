@@ -198,7 +198,9 @@
 
   function renderBoard() {
     const N = state.size;
-    ui.boardGrid.style.gridTemplateColumns = `repeat(${N}, 1fr)`;
+    ui.boardGrid.className = `hnef-grid size-${N}`;
+    ui.boardGrid.style.gridTemplateColumns = `repeat(${N}, minmax(0, 1fr))`;
+    ui.boardGrid.style.gridTemplateRows = `repeat(${N}, minmax(0, 1fr))`;
     ui.boardGrid.innerHTML = '';
 
     const canClick = !state.winner && !awaitingAIStart && !isAI(state.currentPlayer);
