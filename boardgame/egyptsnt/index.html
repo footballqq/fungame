@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>古埃及双面棋盒 · 塞尼特棋 &amp; 阿塞布棋</title>
+  <link rel="stylesheet" href="css/base.css?v=20261125" />
+  <link rel="stylesheet" href="css/boards.css?v=20261125k" />
+  <link rel="stylesheet" href="css/modals.css?v=20261125i" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- 顶部栏 -->
+    <header class="top-bar">
+      <div class="brand-group">
+        <a href="../../index.html" class="back-home">← 返回游戏集</a>
+        <div class="title-block">
+          <h1>🏺 古埃及双面棋盒</h1>
+          <p class="subtitle">第 19 王朝书吏卡（Kha）珍藏复原 · 正面 30 格塞尼特棋 / 反面 20 格阿塞布棋</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="btnTutorial" class="btn btn-gold" type="button">🎓 新手教学</button>
+        <button id="btnRules" class="btn" type="button">📜 规则与概率</button>
+        <button id="btnArtifact" class="btn" type="button">🏛️ 文物与神话</button>
+        <button id="btnBgm" class="btn" type="button" aria-label="切换古埃及背景音乐">🎵 埃及音乐：关</button>
+        <button id="btnSound" class="btn" type="button" aria-label="切换音效">🔊 音效开</button>
+        <button id="btnRestart" class="btn btn-faience" type="button">🔄 重新开局</button>
+      </div>
+    </header>
+
+    <!-- 双面棋盒翻转切换 + 模式设置 -->
+    <section class="switcher-bar" aria-label="棋盘切换与模式">
+      <div class="box-tabs" role="tablist">
+        <button id="tabSenet" class="box-tab active" role="tab" aria-selected="true" type="button">
+          𓋹 塞尼特棋 (Senet · 30格)
+        </button>
+        <button id="tabAseb" class="box-tab" role="tab" aria-selected="false" type="button">
+          ✦ 阿塞布棋 (Aseb · 20格)
+        </button>
+      </div>
+
+      <div class="mode-controls">
+        <select id="selectMode" class="mode-select" aria-label="对弈模式">
+          <option value="pve-master">👑 法老大祭司 AI（期望搜索）</option>
+          <option value="pve-normal" selected>🤖 标准 AI（战术评估）</option>
+          <option value="pve-easy">🌱 入门 AI（轻松陪练）</option>
+          <option value="pvp">👥 双人同屏对弈</option>
+        </select>
+        <select id="selectSide" class="mode-select" aria-label="先后手选择">
+          <option value="1" selected>⚡ 玩家先手（圆锥）</option>
+          <option value="2">🛡️ AI 先手（我执轮盘）</option>
+        </select>
+        <select id="selectWinTarget" class="mode-select" aria-label="赛制时长">
+          <option value="5" selected>🏆 经典局（先出 5 子胜）</option>
+          <option value="3">⚡ 快速局（先出 3 子胜）</option>
+        </select>
+        <select id="selectSpeed" class="mode-select" aria-label="动画与AI速度">
+          <option value="slow">🐢 速度：慢速 (1×)</option>
+          <option value="normal" selected>⚡ 速度：标准 (2×)</option>
+          <option value="fast">🚀 速度：极速 (3×)</option>
+        </select>
+        <button id="btnFlipBox" class="btn btn-gold" type="button">🔁 翻转棋盒</button>
+      </div>
+    </section>
+
+    <!-- 双方状态栏 -->
+    <section class="scoreboard" aria-label="对局比分">
+      <div id="cardP1" class="player-card active">
+        <div class="player-info">
+          <span class="piece-icon piece-cone piece-sm" aria-hidden="true"></span>
+          <div>
+            <div class="player-name" id="nameP1">玩家 · 圆锥方</div>
+            <div class="player-role" id="roleP1">乌木圆锥棋子（先手）</div>
+          </div>
+        </div>
+        <div class="player-progress">
+          <div class="progress-num" id="scoreP1">0 / 5</div>
+          <div class="progress-label">已安全出盘</div>
+        </div>
+      </div>
+
+      <div class="turn-badge">
+        <div class="turn-num" id="turnNum">第 1 回合</div>
+        <div class="turn-who" id="turnWho">轮到圆锥方</div>
+      </div>
+
+      <div id="cardP2" class="player-card">
+        <div class="player-info">
+          <span class="piece-icon piece-disc piece-sm" aria-hidden="true"></span>
+          <div>
+            <div class="player-name" id="nameP2">法老 AI · 轮盘方</div>
+            <div class="player-role" id="roleP2">釉砂轮盘棋子（后手）</div>
+          </div>
+        </div>
+        <div class="player-progress">
+          <div class="progress-num" id="scoreP2">0 / 5</div>
+          <div class="progress-label">已安全出盘</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 互动教学引导条（进入教学模式时显示） -->
+    <section id="tutorialBanner" class="tutorial-banner" aria-live="polite">
+      <div class="tutorial-top">
+        <div class="tutorial-badge-row">
+          <span id="tutorialStepTag" class="tutorial-step-tag">🎓 互动教学 · 1 / 5</span>
+          <strong id="tutorialTitle" class="tutorial-title">第 1 步</strong>
+        </div>
+        <button id="btnExitTutorial" class="btn" type="button">✕ 退出教学</button>
+      </div>
+      <p id="tutorialDesc" class="tutorial-desc"></p>
+      <div id="tutorialActions" class="tutorial-actions" style="display:none;">
+        <span id="tutorialFeedback" class="tutorial-feedback"></span>
+        <button id="btnTutorialNext" class="btn btn-gold" type="button">下一步 →</button>
+      </div>
+    </section>
+
+    <!-- 双面木盒棋盘主舞台 -->
+    <main id="woodenBoxStage" class="wooden-box-stage">
+      <div class="box-engraving">
+        <span id="stageTitle">正面 · 塞尼特棋（3×10 蛇形冥界赛道）</span>
+        <span class="hieroglyph-strip" aria-hidden="true">𓋹 𓂀 𓄤 𓈗 𓆣 𓇳</span>
+      </div>
+      <div id="boardContainer"></div>
+    </main>
+
+    <!-- 掷具台与实时解说 -->
+    <section class="control-dock">
+      <div class="throw-tray">
+        <div id="diceVisual" class="dice-visual" aria-label="掷具结果"></div>
+        <div class="roll-readout">
+          <div id="rollSteps" class="roll-steps">准备投掷</div>
+          <div id="rollHint" class="roll-hint">点击右侧按钮投掷 4 根双面木棍</div>
+        </div>
+        <button id="btnRoll" class="btn btn-gold btn-roll-main" type="button">🎲 投掷掷棍</button>
+      </div>
+
+      <div class="event-panel">
+        <div class="event-header-row">
+          <div class="event-label">📜 实时战报与提示</div>
+          <button id="btnHistory" class="btn btn-mini" type="button">📝 对局记录 (0)</button>
+        </div>
+        <div id="eventText" class="event-text">欢迎打开第 19 王朝书吏卡的双面棋盒！点击“投掷掷棍”开启你的第一局。</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 规则与数学概率弹窗 -->
+  <div id="modalRules" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="rulesTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="rulesTitle">📜 古埃及双面棋盒 · 玩法规则与概率揭秘</h2>
+        <button class="modal-close" data-close="modalRules" type="button" aria-label="关闭">×</button>
+      </div>
+      <div class="rule-tabs">
+        <button class="rule-tab-btn active" data-rule-tab="senet" type="button">𓋹 塞尼特规则</button>
+        <button class="rule-tab-btn" data-rule-tab="faq-senet" type="button">❓ 塞尼特 FAQ</button>
+        <button class="rule-tab-btn" data-rule-tab="aseb" type="button">✦ 阿塞布规则</button>
+        <button class="rule-tab-btn" data-rule-tab="faq-aseb" type="button">❓ 阿塞布 FAQ</button>
+        <button class="rule-tab-btn" data-rule-tab="math" type="button">📊 二项分布数学</button>
+        <button class="rule-tab-btn" data-rule-tab="ai" type="button">🤖 AI 棋力评测</button>
+      </div>
+
+      <div id="rulePanelSenet" class="rule-section active">
+        <h3>🎯 获胜目标</h3>
+        <p>双方各执 5 枚棋子（圆锥 vs 轮盘），沿 3×10 的“反 S 形（Z 字形）”蛇形赛道前进，率先将本方全部 5 枚棋子移出棋盘者获胜。</p>
+        <h3>🪵 4 根双面掷棍规则</h3>
+        <ul>
+          <li><strong>1 面朝上</strong>：走 1 步，且<strong>获得额外投掷一次</strong>。</li>
+          <li><strong>2 面朝上</strong>：走 2 步。</li>
+          <li><strong>3 面朝上</strong>：走 3 步。</li>
+          <li><strong>4 面朝上</strong>：走 4 步，且<strong>获得额外投掷一次</strong>。</li>
+          <li><strong>0 面朝上</strong>：走 5 步，且<strong>获得额外投掷一次</strong>。</li>
+        </ul>
+        <h3>⚔️ 换位、防守与“叹息之墙”</h3>
+        <ul>
+          <li><strong>单子换位</strong>：落在对手单独 1 枚棋子（非安全格）上，双方<strong>互换位置</strong>！</li>
+          <li><strong>双子防守</strong>：对手 2 枚或以上棋子紧挨着时互相保护，你不能换位吃掉它们。</li>
+          <li><strong>三子封锁</strong>：对手 3 枚或以上棋子连续紧挨，形成“叹息之墙”，既不能吃，也不能跨越！</li>
+          <li><strong>被迫倒退</strong>：如果掷出点数后所有棋子都无法合法前进，必须选择一枚棋子向后退相同步数。</li>
+        </ul>
+        <h3>🏛️ 冥界特殊格子</h3>
+        <ul>
+          <li><strong>第 15 格 · 重生之屋 (☥)</strong>：安全格；棋子落水后的复活点。</li>
+          <li><strong>第 26 格 · 美丽之屋 (𓄤)</strong>：安全格；所有棋子<strong>必须在此准确停下</strong>才能冲刺终点（在 26 格掷 5 点可直接出盘）。</li>
+          <li><strong>第 27 格 · 水之屋 (〰)</strong>：陷阱！踩中立刻落水送回第 15 格（若被占则顺延至 15 格前最近空格）。</li>
+          <li><strong>第 28 / 29 / 30 格</strong>：安全格；分别需掷出 <strong>3 点</strong>、<strong>2 点</strong>、<strong>任意点数</strong> 移出棋盘。</li>
+        </ul>
+      </div>
+
+      <div id="rulePanelAseb" class="rule-section">
+        <h3>🎯 获胜目标</h3>
+        <p>阿塞布棋（又称“二十格戏”）由苏美尔“乌尔皇家局戏”传入古埃及。双方各 5 枚棋子从场外排队出发，率先将全部 5 枚棋子冲出赛道者获胜。</p>
+        <h3>🗺️ 棋盘路线（4 格私人区 + 12 格公共区）</h3>
+        <ul>
+          <li><strong>私人起步区（第 1–4 格）</strong>：上排 4 格属圆锥方，下排 4 格属轮盘方（从右往左前进），对手无法进入，绝对安全。</li>
+          <li><strong>公共交战区（第 5–16 格）</strong>：走完私人区后拐入中间 12 格长赛道，一路向右冲刺，到达第 17 步（超出最后一格 1 步）安全出盘。</li>
+        </ul>
+        <h3>🔺 4 枚金字塔骰与击杀机制</h3>
+        <ul>
+          <li>每枚四面体金字塔骰有 <strong>2 个涂金亮角、2 个暗角</strong>（等价于 50% 概率两面骰）。每次投掷 4 枚，亮角朝上的数量即为步数（0–4 步）；掷出 0 点则本回合空过。</li>
+          <li><strong>等待区进场（第 0 步）</strong>：所有棋子开局都在场外等待区（视为第 0 步），掷出 1 点进入<strong>私1</strong>，掷 2 进<strong>私2</strong>，掷 3 进<strong>私3</strong>，掷 4 直接一步踩中<strong>私4 (✦ 再掷一次)</strong>！</li>
+          <li><strong>撞击击杀</strong>：在公共交战区落在对手棋子所在格，直接将其<strong>击杀踢回场外</strong>重新排队！</li>
+          <li><strong>5 枚神圣标记格（✦）</strong>：分别位于步数 4、8、12、16。踩中立刻<strong>额外再掷一次</strong>；停在公共区 ✦ 格上时<strong>无敌免疫击杀</strong>！</li>
+        </ul>
+      </div>
+
+      <div id="rulePanelFaqSenet" class="rule-section">
+        <div class="faq-item">
+          <h4>Q1：塞尼特棋里，一格能放两枚棋子吗？终点安全格被占了怎么办？</h4>
+          <p><strong>一格严格只能放一枚棋子</strong>，绝对不能叠子。第 26、28、29、30 格都是安全格，一旦有人站着，别人既进不去也换不走。此时按以下顺序判定：</p>
+          <ul>
+            <li><strong>优先向前走</strong>：只要你盘面上还有任何一枚棋子能合法前进，就必须往前走；</li>
+            <li><strong>全被堵死才倒退</strong>：只有当你所有棋子都无法合法前进时，才触发<strong>“被迫倒退”</strong>，必须选一枚棋子向后退相同步数（倒退同样遵守换位/保护/封锁规则：若退到对手未受保护的孤子上，双方会互换位置，等于无奈送对手向前走；退进第 27 格一样会落水）；</li>
+            <li><strong>连倒退都走不了</strong>：本步自动跳过（若掷出 1/4/5 仍保留再掷机会），绝不会死锁。</li>
+          </ul>
+        </div>
+
+        <div class="faq-item">
+          <h4>Q2：不能主动避开水之屋吗？什么时候会进第 27 格「水之屋」？如果第 15 格被占怎么办？</h4>
+          <p>有其他合法走法时你当然可以躲开（第 25 格之前也不能直接跨过 26 格掉进水之屋），但在两种经典残局下会被迫落水：</p>
+          <ul>
+            <li><strong>第 26 格掷出 1 点且无其他子可动</strong>（比如只剩这 1 枚棋子，或其余棋子全被堵死），26→27 成为唯一合法走法；</li>
+            <li><strong>终点三格被迫倒退</strong>：若棋子停在 28、29 或 30 格且全盘无前进走法，被迫倒退 1 / 2 / 3 步时就会一头栽回第 27 格水之屋！</li>
+          </ul>
+          <p style="margin-top:6px;">落水后优先送回第 15 格「重生之屋」；如果第 15 格已被占（无论己方还是对手），则<strong>从 14 → 13 → … → 1 顺延退回最近的空格</strong>（若 1–14 全满则顺延至 16–25 最近空格）。</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Q3：塞尼特棋掷出 1、4、5，一个人真的可以连续掷很多次吗？</h4>
+          <p><strong>是的，没有连击次数上限！</strong> 掷出 1（25%）、4（6.25%）或 5（6.25%）都会送额外投掷一次，单次触发连击的总概率高达 <strong>37.5%</strong>。只要一直掷出 1/4/5 就能连续行动，平均每回合单人会投掷约 1.6 次。</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Q4：为什么塞尼特棋开局“先手排在后面，后手反而排在前面”？</h4>
+          <p>开局先手（圆锥方）占 1、3、5、7、9 格，后手（轮盘方）占 2、4、6、8、10 格。这是古埃及人精妙的<strong>先后手平衡补偿</strong>：后手天然拥有 5 格整体身位红利和第 10 格领跑位，而先手掌握先动权（且有 37.5% 概率首回合直接连击，例如开局掷 1 就能把第 9 格与第 10 格换位），两者正好互相制衡。</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Q5：可以选后手、玩快速局或回看电脑刚才干了啥吗？</h4>
+          <p>顶部控制栏支持切换 <strong>🛡️ AI 先手（我执轮盘）</strong> 以及 <strong>⚡ 快速局（先出 3 子胜）</strong>；每步移动均有抛物线动画与上一步起止留痕，也可随时点击右下角 <strong>📝 对局记录</strong> 回看完整流水账。</p>
+        </div>
+      </div>
+
+      <div id="rulePanelFaqAseb" class="rule-section">
+        <div class="faq-item">
+          <h4>Q1：4 枚金字塔骰是两面骰吗？为什么有时候会掷出 0 点？</h4>
+          <p><strong>是的！</strong> 出土的古埃及与乌尔四面体金字塔骰共有 4 个顶点，其中 <strong>2 个涂金亮角（+1）、2 个暗角（0）</strong>，掷出后看朝上的尖角是否涂金，所以每枚亮暗概率正好 50%。4 枚全为暗角时就是 <strong>0 点</strong>（概率 1/16 = 6.25%），本回合直接空过换对方。</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Q2：上方的“等待区”怎么走？第一步从哪开始？</h4>
+          <p>等待区就是<strong>起跑线外（第 0 步）</strong>：掷出 1 点进<strong>私1</strong>，掷 2 进<strong>私2</strong>，掷 3 进<strong>私3</strong>，掷 4 直接一步跨到<strong>私4（✦ 神圣格，立刻获得再掷一次！）</strong>。走完 私4 后拐入中间公共赛道 公1→公12。</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Q3：阿塞布棋有没有塞尼特那样的“双子保护”或“三子封锁墙”？</h4>
+          <p><strong>完全没有！</strong> 无论对手连排几枚棋子，你都可以直接从头顶跨过去，也可以直接落点撞飞它。阿塞布棋仅有的两处安全庇护是：<strong>① 各自 4 格私人区（私1–私4）</strong>；<strong>② 公共区 3 个星芒无敌格（公4、公8、公12，带 ✦）</strong>。</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Q4：终点到底怎么走出去？必须在 公12 停下吗？</h4>
+          <p><strong>必须不多不少、恰好落到第 17 步（超出 公12 正好 1 格）才能出盘，不能多走！</strong> 但你不需要非得先停在 公12，从 公9–公11 都可以直接一步精准冲出：</p>
+          <table class="prob-table" style="margin-top:8px;">
+            <thead>
+              <tr><th>当前位置</th><th>恰好掷几点直接出盘？</th><th>掷大了会怎样？</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>公12</strong>（16步 · ✦ 无敌）</td><td>必须掷 <strong>1 点</strong>（25%）</td><td>掷 2 / 3 / 4 超步不能动</td></tr>
+              <tr><td><strong>公11</strong>（15步）</td><td>掷 <strong>2 点</strong> 直接冲出（37.5%）</td><td>掷 1 进公12；掷 3 / 4 超步</td></tr>
+              <tr><td><strong>公10</strong>（14步）</td><td>掷 <strong>3 点</strong> 直接冲出（25%）</td><td>掷 1–2 前进；掷 4 超步</td></tr>
+              <tr><td><strong>公9</strong>（13步）</td><td>掷 <strong>4 点</strong> 直接冲出（6.25%）</td><td>掷 1–3 正常前进</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:6px;"><strong>进阶技巧</strong>：站在 <strong>公11</strong> 出盘概率高达 37.5%（最容易一发冲出），但可能被追杀；站在 <strong>公12</strong> 出盘概率 25%，却拥有 ✦ 无敌金身——残局进退取舍就在一念之间！</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Q5：阿塞布的“击杀”和塞尼特的“换位”有什么不同？</h4>
+          <p>塞尼特落到对手孤子上只是双方<strong>互换位置</strong>；而阿塞布在公共区落到对手非 ✦ 棋子上时，会直接把它<strong>💥 撞飞踢回场外等待区（第 0 步）</strong>，对方必须从零重新排队起步，对抗节奏更刺激！</p>
+        </div>
+      </div>
+
+      <div id="rulePanelMath" class="rule-section">
+        <h3>📊 为什么不用普通 6 面骰？</h3>
+        <p>古埃及人用 4 根双面木棍或 4 枚二面金字塔骰，本质上都在做 4 次独立的等概率抛掷，结果服从经典的<strong>二项分布 B(4, 0.5)</strong>，总共有 2<sup>4</sup> = 16 种等可能组合：</p>
+        <table class="prob-table">
+          <thead>
+            <tr>
+              <th>亮面/平面数</th>
+              <th>组合数</th>
+              <th>出现概率</th>
+              <th>塞尼特步数</th>
+              <th>阿塞布步数</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>0</td><td>1 / 16</td><td>6.25%</td><td>5 步 + 再掷</td><td>0 步（空过）</td></tr>
+            <tr><td>1</td><td>4 / 16</td><td>25.00%</td><td>1 步 + 再掷</td><td>1 步</td></tr>
+            <tr><td>2</td><td>6 / 16</td><td>37.50%</td><td>2 步</td><td>2 步</td></tr>
+            <tr><td>3</td><td>4 / 16</td><td>25.00%</td><td>3 步</td><td>3 步</td></tr>
+            <tr><td>4</td><td>1 / 16</td><td>6.25%</td><td>4 步 + 再掷</td><td>4 步</td></tr>
+          </tbody>
+        </table>
+        <p><strong>策略启示</strong>：在两款游戏里，“2 步”都是最容易掷出的点数（高达 37.5%），其次是 1 步与 3 步（各 25%）。因此阿塞布棋中，停在对手前方 2 格最危险，而塞尼特棋中，保持棋子紧邻防换位尤为关键！</p>
+      </div>
+
+      <div id="rulePanelAi" class="rule-section">
+        <h3>👑 大祭司 AI 是怎么思考的？</h3>
+        <p>大祭司 AI 采用<strong>期望极小极大搜索（Expectiminimax）</strong>：对每一步合法走法，把下一回合 5 种可能掷出的点数按精确二项分布概率 B(4, 0.5) 全部展开，预判对手最可能掷出 2 点（37.5%）时的最优反击，选出<strong>数学期望得分最高</strong>的一步，单步思考仅需约 <strong>0.01 毫秒</strong>！</p>
+        <h3>📊 2400 局先后手对称自动博弈评测表（每组 200 局）</h3>
+        <table class="prob-table">
+          <thead>
+            <tr>
+              <th>游戏</th>
+              <th>对阵双方 (A vs B)</th>
+              <th>A 胜率</th>
+              <th>平均回合</th>
+              <th>单步耗时</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>塞尼特 (30格)</td><td>👑 大祭司 vs 随机</td><td><strong>70.5%</strong></td><td>107.5</td><td>0.014 ms</td></tr>
+            <tr><td>塞尼特 (30格)</td><td>👑 大祭司 vs 🌱 入门</td><td><strong>61.0%</strong></td><td>103.3</td><td>0.013 ms</td></tr>
+            <tr><td>塞尼特 (30格)</td><td>👑 大祭司 vs 🤖 标准</td><td><strong>52.0%</strong></td><td>100.9</td><td>0.012 ms</td></tr>
+            <tr><td>阿塞布 (20格)</td><td>👑 大祭司 vs 随机</td><td><strong>98.0%</strong></td><td>87.2</td><td>0.010 ms</td></tr>
+            <tr><td>阿塞布 (20格)</td><td>👑 大祭司 vs 🌱 入门</td><td><strong>90.0%</strong></td><td>103.6</td><td>0.010 ms</td></tr>
+            <tr><td>阿塞布 (20格)</td><td>🤖 标准 vs 随机</td><td><strong>99.5%</strong></td><td>93.2</td><td>0.001 ms</td></tr>
+          </tbody>
+        </table>
+        <p><strong>结论</strong>：阿塞布棋绝不是纯靠运气的骰子棋——懂策略的 AI 对随机走法胜率高达 <strong>98%–99.5%</strong>！完整报告与复现脚本见项目内 <code>AI_BENCHMARK.md</code> 与 <code>bench_ai.js</code>。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 文物实拍与古埃及神话背景弹窗 -->
+  <div id="modalArtifact" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="artifactTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="artifactTitle">🏛️ 文物实拍与古埃及神话故事</h2>
+        <button class="modal-close" data-close="modalArtifact" type="button" aria-label="关闭">×</button>
+      </div>
+      <div class="rule-tabs">
+        <button class="artifact-tab-btn rule-tab-btn active" data-artifact-tab="myth" type="button">🏺 冥界神话与诸神密码</button>
+        <button class="artifact-tab-btn rule-tab-btn" data-artifact-tab="photos" type="button">📸 书吏卡棋盒实拍</button>
+      </div>
+
+      <div id="artifactPanelMyth" class="rule-section active">
+        <h3>🌅 为什么叫“塞尼特（Senet）”？从日常桌游到灵魂试炼</h3>
+        <figure class="myth-illustration">
+          <img src="assets/images/senet_nefertari.jpg" alt="古埃及王后奈菲尔塔利在神庙中对弈塞尼特棋" />
+          <figcaption>文化复原插画：古埃及王后奈菲尔塔利在尼罗河畔神庙中对弈 30 格塞尼特棋，桌旁摆放着圆锥与釉砂轮盘棋子及 4 根双面木掷棍。</figcaption>
+        </figure>
+        <p>塞尼特（古埃及语 <em>znt</em>）原意是<strong>“通过 / 穿越（Passing）”</strong>，诞生于约 5000 年前，比国际象棋还要早三千多年！它最初是法老与平民都爱玩的休闲棋（图坦卡蒙墓中就陪葬了 4 套，王后奈菲尔塔利墓壁画上还画着她独自与“看不见的命运”下棋）。</p>
+        <p>到了书吏卡生活的<strong>第 19 王朝（约公元前 1295–1186 年，拉美西斯时代）</strong>，塞尼特被载入《死者之书》第 17 章，化身为<strong>亡灵穿越冥界“杜阿特（Duat）”的 30 道试炼</strong>——赢得这盘棋，灵魂就能通过审判，随太阳神拉（Ra）重见光明！</p>
+
+        <h3>✨ 塞尼特六大特殊屋背后的古埃及神明</h3>
+        <figure class="myth-illustration">
+          <img src="assets/images/duat_water_house.jpg" alt="古埃及冥界杜阿特与太阳神夜行舟、水之屋试炼插画" />
+          <figcaption>神话意象插画：太阳神拉的金色夜行舟驶过星光冥河（水之屋），夜空中闪耀着生命之符（重生之屋）、玛阿特真理之羽（二真之屋）与荷鲁斯之眼（第 30 格）。</figcaption>
+        </figure>
+        <div class="myth-grid">
+          <div class="myth-card">
+            <h4>第 15 格 · 重生之屋 (☥ 安卡)</h4>
+            <p>符号 <strong>☥</strong> 是古埃及最著名的<strong>生命之符（Ankh）</strong>，象征冥界之王<strong>奥西里斯（Osiris）</strong>掌管的复活圣殿。棋子落水后回到这里重获生机，再次启程。</p>
+          </div>
+          <div class="myth-card">
+            <h4>第 26 格 · 美丽之屋 (𓄤 奈菲尔)</h4>
+            <p>象形文字 <em>Nefer</em> 意为“美好与完美”，古埃及也称净化灵魂的圣所为“美丽之屋”。灵魂必须在此停下接受净化（因此规则要求<strong>必须准确停靠</strong>），才有资格踏入终极试炼。</p>
+          </div>
+          <div class="myth-card">
+            <h4>第 27 格 · 水之屋 (〰 混沌冥河)</h4>
+            <p>象征宇宙诞生前的<strong>混沌之水（努恩 / Nun）</strong>，也是混沌巨蛇<strong>阿波菲斯（Apophis）</strong>每夜伏击太阳神夜行舟的险滩。失足踩中这里，灵魂就会被汹涌冥河冲回第 15 格重生之屋！</p>
+          </div>
+          <div class="myth-card">
+            <h4>第 28 格 · 三真之屋 (III 三重审判)</h4>
+            <p>古埃及人视“3”为神圣完满之数，象征由<strong>拉、奥西里斯、普塔</strong>等神明组成的三重审判团（也代表言、行、心三真）。灵魂需恰好掷出 <strong>3 点</strong> 通过考验。</p>
+          </div>
+          <div class="myth-card">
+            <h4>第 29 格 · 二真之屋 (II 双真理大厅)</h4>
+            <p>对应太阳神合体<strong>拉-阿图姆（Re-Atoum）</strong>与正义女神<strong>玛阿特（Ma'at）</strong>的“双真理大厅”——灵魂在此称量心脏是否如真理之羽般纯洁，需恰好掷出 <strong>2 点</strong> 过关。</p>
+          </div>
+          <div class="myth-card">
+            <h4>第 30 格 · 荷鲁斯之屋 (𓂀 荷鲁斯之眼)</h4>
+            <p>符号 <strong>𓂀</strong> 是天空与王权之神<strong>荷鲁斯（Horus）</strong>的护身神眼。抵达这里意味着灵魂已通过全部冥界试炼，在太阳神光芒指引下即将跃出冥界、获得永生（掷出任意点数即可出盘！）。</p>
+          </div>
+        </div>
+
+        <h3>🐪 反面 20 格阿塞布棋：3200 年前的“跨国联名”</h3>
+        <figure class="myth-illustration">
+          <img src="assets/images/aseb_trade_route.jpg" alt="两河流域与古埃及文明交流的阿塞布棋商路插画" />
+          <figcaption>文明交流插画：沿着西亚商路从苏美尔传入古埃及的二十格戏（阿塞布棋），星芒玫瑰格与金字塔骰见证了尼罗河与两河流域的文化交融。</figcaption>
+        </figure>
+        <p>翻过棋盒，反面的<strong>阿塞布棋（Aseb / 二十格戏）</strong>其实是一场古老的文明交流见证！它并非埃及本土发明，而是在约公元前 1600 年沿着西亚商路，从两河流域苏美尔的<strong>“乌尔皇家局戏（Royal Game of Ur）”</strong>传入埃及的。</p>
+        <p>盘面上每隔 4 格出现的 <strong>5 枚星芒/玫瑰标记（✦）</strong>，原本是美索不达米亚女神<strong>伊南娜 / 伊什塔尔（Ishtar）的八芒星徽章</strong>，代表幸运与神明庇护——停在上面不仅能免疫击杀，还会受神明赐福再掷一次！书吏卡把埃及本土的塞尼特与两河传入的阿塞布刻在同一只木盒两面，就像今天把象棋和跳棋合二为一，充满古人的生活巧思。</p>
+
+        <h3>🔍 考古破案：失传千年的玩法是如何复原的？</h3>
+        <p>塞尼特棋在古埃及流行了整整 3000 年，但在罗马统治时期（公元 1–3 世纪）彻底失传，沉睡在沙土里一千多年。现代考古学家是怎么把这两款古棋“救活”的？</p>
+        <div class="myth-grid">
+          <div class="myth-card">
+            <h4>📜 阿塞布棋：挖到了真正的“古代说明书”</h4>
+            <p>1980 年代，大英博物馆楔形文字专家<strong>欧文·芬克尔（Irving Finkel）</strong>破译了一块公元前 177 年的巴比伦泥板，上面清清楚楚写着 20 格棋的掷骰、进场与玫瑰格规则，成为复原阿塞布棋的铁证！</p>
+          </div>
+          <div class="myth-card">
+            <h4>🧩 塞尼特棋：四重线索拼图破案</h4>
+            <p>古埃及从未出土完整的塞尼特规则书，考古学家 <strong>Timothy Kendall</strong> 等结合四类线索复原：上百件实物棋盘与掷棍、古墓壁画里棋手头顶的“对话泡泡”、《死者之书》逐格冥界解说，以及埃及民间流传至今的 4 棍掷木游戏 <em>Tab</em>！</p>
+          </div>
+          <div class="myth-card">
+            <h4>🏮 彩蛋对比：中国汉代失传名棋“六博”</h4>
+            <p>中国马王堆、海昏侯墓也出土了精美的汉代“六博”棋盘与 6 根竹箸，但因盘面拓扑更复杂且尚未出土完整《博经》全文，至今仍是未解之谜——古埃及人把棋局写进《死者之书》、巴比伦人刻进泥板，无意中为 3000 年后的我们留下了“通关密码”！</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="artifactPanelPhotos" class="rule-section">
+        <p style="margin-top:0; line-height:1.65; font-size:14px; color:var(--text-muted);">
+          本游戏复原自古埃及<strong>第 19 王朝（约公元前 1295–1186 年）</strong>书吏卡（Kha）的双面木质釉砂棋盒（开罗埃及国家博物馆藏）。棋盒侧面带有可抽拉的小抽屉，内藏乌木圆锥形与釉砂轮盘形两种棋子及骨骰：一面刻着 30 格的<strong>塞尼特棋（Senet）</strong>，翻过来另一面则是 20 格的<strong>阿塞布棋（Aseb）</strong>。
+        </p>
+        <div class="artifact-gallery">
+          <figure class="artifact-figure">
+            <img src="4b5af1b8-5ae4-45c6-bc7f-84cddee28f0d.jpg" alt="书吏卡的双面棋盒及棋子实拍" />
+            <figcaption>文物实拍：乌木棋盒侧面刻满描金象形文字，抽屉可拉出收纳，盘面摆放着乌木圆锥形棋子与釉砂轮盘形棋子。</figcaption>
+          </figure>
+          <figure class="artifact-figure">
+            <img src="1314eefb-1fcd-4000-8947-95a962dba187.jpg" alt="博物馆展牌说明" />
+            <figcaption>展馆说明牌：介绍 30 格塞尼特棋的冥界象征意义，以及源自苏美尔的 20 格阿塞布棋。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 对局记录弹窗（平时隐藏，点击查看） -->
+  <div id="modalHistory" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
+    <div class="modal-card" style="max-width:560px;">
+      <div class="modal-header">
+        <h2 id="historyTitle">📝 对局步骤记录</h2>
+        <button class="modal-close" data-close="modalHistory" type="button" aria-label="关闭">×</button>
+      </div>
+      <div id="historyList" class="history-list">
+        <p class="history-empty">暂无走子记录，投掷后将自动记录双方每一步操作。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 胜利结算弹窗 -->
+  <div id="modalWin" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+    <div class="modal-card" style="max-width:460px;">
+      <div class="modal-header">
+        <h2 id="winTitle">🏆 对局结束</h2>
+        <button class="modal-close" data-close="modalWin" type="button" aria-label="关闭">×</button>
+      </div>
+      <div class="win-body">
+        <div class="win-trophy">👑</div>
+        <h3 id="winHeadline" class="win-title">圆锥方获胜！</h3>
+        <p id="winDetail" class="win-desc">历时 24 回合，全部 5 枚棋子成功穿越赛道！</p>
+        <div class="win-actions">
+          <button id="btnWinReplay" class="btn btn-gold" type="button">🔄 再来一局</button>
+          <button id="btnWinFlip" class="btn btn-faience" type="button">🔁 翻转棋盒玩另一面</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastBanner" class="toast-banner" role="status" aria-live="polite"></div>
+
+  <script src="js/senet-engine.js?v=20261125j"></script>
+  <script src="js/aseb-engine.js?v=20261125j"></script>
+  <script src="js/tutorial.js?v=20261125b"></script>
+  <script src="js/ai.js?v=20261125b"></script>
+  <script src="js/audio.js?v=20261125c"></script>
+  <script src="js/app.js?v=20261125m"></script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+/* ===== 棋子样式（还原书吏卡棋盒中的圆锥形与釉砂轮盘形棋子） ===== */
+.piece-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 玩家1：乌木描金圆锥形棋子 */
+.piece-cone {
+  width: 34px;
+  height: 40px;
+  filter: drop-shadow(0 0 1.2px rgba(255, 226, 154, 0.9)) drop-shadow(0 4px 4px rgba(0, 0, 0, 0.52));
+}
+
+.piece-cone::before {
+  content: "";
+  width: 26px;
+  height: 34px;
+  background: linear-gradient(125deg, #6e5b4e 0%, #332923 48%, #18120f 100%);
+  clip-path: polygon(50% 0%, 66% 14%, 64% 32%, 92% 90%, 84% 100%, 16% 100%, 8% 90%, 36% 32%, 34% 14%);
+  border-bottom: 2px solid #f5cb6e;
+}
+
+.piece-cone::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffe699, #b98229);
+}
+
+/* 玩家2：埃及蓝绿釉砂双层轮盘形棋子 */
+.piece-disc {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #8cf2fc 0%, #24b0c2 48%, #0e5a66 100%);
+  border: 3px solid #d9f9fc;
+  box-shadow:
+    0 5px 0 #0a444d,
+    0 7px 8px rgba(0, 0, 0, 0.52),
+    inset 0 0 0 4px rgba(10, 68, 77, 0.45);
+}
+
+.piece-disc::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff7d6, #d69d3b);
+}
+
+.piece-sm.piece-cone {
+  width: 24px;
+  height: 28px;
+}
+
+.piece-sm.piece-cone::before {
+  width: 18px;
+  height: 24px;
+}
+
+.piece-sm.piece-cone::after {
+  width: 5px;
+  height: 5px;
+  top: 3px;
+}
+
+.piece-sm.piece-disc {
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+  box-shadow: 0 3px 0 #0a444d, 0 4px 5px rgba(0, 0, 0, 0.45);
+}
+
+.piece-sm.piece-disc::after {
+  width: 7px;
+  height: 7px;
+}
+
+/* ===== 塞尼特棋 (Senet) 3x10 棋盘 ===== */
+.senet-board-wrap {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.senet-grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(60px, 1fr));
+  gap: 6px;
+  min-width: 660px;
+  padding: 10px;
+  background: #23140b;
+  border: 2px solid #9c7432;
+  border-radius: 14px;
+  box-shadow: inset 0 4px 16px rgba(0, 0, 0, 0.7);
+}
+
+.board-cell {
+  position: relative;
+  aspect-ratio: 1 / 1.04;
+  border-radius: 10px;
+  background: linear-gradient(155deg, #f5e7cb 0%, #e4cca0 100%);
+  border: 2px solid #b58d52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  touch-action: manipulation;
+  transition: transform 0.14s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.board-cell.alt-tone {
+  background: linear-gradient(155deg, #edd8b3 0%, #d8ba87 100%);
+}
+
+.cell-num {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  color: rgba(74, 46, 22, 0.65);
+  pointer-events: none;
+}
+
+.cell-flow {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  color: rgba(138, 90, 32, 0.55);
+  pointer-events: none;
+}
+
+.cell-glyph {
+  position: absolute;
+  font-size: 26px;
+  color: rgba(112, 71, 28, 0.32);
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.cell-tag {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #6b4218;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+/* 塞尼特特殊屋风格 */
+.board-cell.special-rebirth {
+  background: linear-gradient(155deg, #dff5e8, #b5e3cb);
+  border-color: #2f9e68;
+}
+
+.board-cell.special-beauty {
+  background: linear-gradient(155deg, #fff4cc, #f2d277);
+  border-color: #c98f18;
+}
+
+.board-cell.special-water {
+  background: linear-gradient(155deg, #cde8ff, #8bc4f7);
+  border-color: #2674c4;
+}
+
+.board-cell.special-water .cell-glyph,
+.board-cell.special-water .cell-tag {
+  color: #134a85;
+}
+
+.board-cell.special-exit {
+  background: linear-gradient(155deg, #fce8d4, #ebbf8d);
+  border-color: #bd6a26;
+}
+
+/* 棋子保护盾牌角标 */
+.shield-badge {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-size: 11px;
+  background: rgba(34, 21, 13, 0.72);
+  color: #ffd97d;
+  border-radius: 6px;
+  padding: 1px 3px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* 可移动棋子高亮 */
+.board-cell.movable {
+  cursor: pointer;
+  border-color: #ffcf4d;
+  box-shadow: 0 0 0 3px rgba(255, 207, 77, 0.65), 0 0 18px rgba(255, 207, 77, 0.45);
+  z-index: 2;
+}
+
+.board-cell.movable .piece-icon {
+  animation: piecePulse 1.15s ease-in-out infinite;
+}
+
+.board-cell.selected {
+  border-color: #28d3e3;
+  box-shadow: 0 0 0 4px rgba(40, 211, 227, 0.7);
+  transform: translateY(-2px);
+}
+
+/* 目标落点预览高亮 */
+.board-cell.target-move {
+  cursor: pointer;
+  border-color: #22c55e;
+  box-shadow: inset 0 0 0 3px rgba(34, 197, 94, 0.75), 0 0 14px rgba(34, 197, 94, 0.55);
+}
+
+.board-cell.target-attack {
+  cursor: pointer;
+  border-color: #ef4444;
+  box-shadow: inset 0 0 0 3px rgba(239, 68, 68, 0.8), 0 0 16px rgba(239, 68, 68, 0.6);
+}
+
+.board-cell.target-trap {
+  cursor: pointer;
+  border-color: #2563eb;
+  box-shadow: inset 0 0 0 3px rgba(37, 99, 235, 0.85), 0 0 16px rgba(37, 99, 235, 0.6);
+}
+
+/* 上一步移动轨迹留痕（看清电脑或玩家刚走完哪一步） */
+.board-cell.last-from {
+  outline: 2px dashed #ffd97d;
+  outline-offset: -4px;
+}
+
+.board-cell.last-to {
+  box-shadow: inset 0 0 0 3px rgba(40, 211, 227, 0.85), 0 0 14px rgba(40, 211, 227, 0.45);
+}
+
+/* ===== 棋子飞行、撞飞与落水特效动画 ===== */
+.fx-flying-piece {
+  position: fixed;
+  z-index: 300;
+  pointer-events: none;
+  margin: 0;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.65));
+}
+
+.fx-impact-pop {
+  position: fixed;
+  z-index: 320;
+  pointer-events: none;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) scale(0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
+  animation: fxPopFloat 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.fx-pop-hit {
+  background: linear-gradient(135deg, #ff5e3a, #c81d25);
+  color: #fff8e7;
+  border: 2px solid #ffd97d;
+}
+
+.fx-pop-swap {
+  background: linear-gradient(135deg, #f59e0b, #b45309);
+  color: #fff;
+  border: 2px solid #fde68a;
+}
+
+.fx-pop-water {
+  background: linear-gradient(135deg, #38bdf8, #1d4ed8);
+  color: #fff;
+  border: 2px solid #bae6fd;
+}
+
+.fx-pop-exit {
+  background: linear-gradient(135deg, #ffd97d, #d99726);
+  color: #241409;
+  border: 2px solid #fff7d6;
+}
+
+.board-shake {
+  animation: boardShake 0.34s ease-in-out;
+}
+
+@keyframes fxPopFloat {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%) scale(0.55);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -75%) scale(1.14);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(-50%, -115%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -155%) scale(0.92);
+  }
+}
+
+@keyframes boardShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translate(-5px, 2px); }
+  45% { transform: translate(5px, -2px); }
+  70% { transform: translate(-3px, 1px); }
+}
+
+/* 终点出盘区按钮（塞尼特/阿塞布通用） */
+.bearoff-bar {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(15, 9, 5, 0.48);
+  border: 1px dashed rgba(230, 184, 92, 0.35);
+}
+
+.bearoff-zone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.bearoff-zone.ready-exit {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffd97d, #d99726);
+  color: #241409;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(255, 217, 125, 0.55);
+  animation: piecePulse 1s ease-in-out infinite;
+}
+
+/* ===== 阿塞布棋 (Aseb) 20格 T形棋盘 ===== */
+.aseb-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aseb-reserve-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5e6c8 0%, #e5cca0 100%);
+  border: 2px solid #c99b4e;
+  box-shadow: inset 0 1px 0 rgba(255, 252, 240, 0.75);
+}
+
+.reserve-dock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: rgba(255, 250, 238, 0.65);
+  border: 2px solid rgba(168, 120, 52, 0.35);
+  transition: all 0.18s ease;
+}
+
+.reserve-dock.movable {
+  cursor: pointer;
+  background: linear-gradient(135deg, #fff4cc, #f7d97e);
+  border-color: #d98218;
+  box-shadow: 0 0 0 3px rgba(255, 207, 77, 0.45), 0 4px 12px rgba(180, 108, 12, 0.3);
+}
+
+.reserve-dock.selected {
+  border-color: #0e8fa0;
+  background: linear-gradient(135deg, #e5fbfe, #c3f2f7);
+}
+
+.reserve-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #3a2313;
+}
+
+.reserve-tip {
+  font-size: 11px;
+  font-weight: 600;
+  color: #7c5126;
+}
+
+.reserve-pieces {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.aseb-board-wrap {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.aseb-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(54px, 1fr));
+  gap: 6px;
+  min-width: 720px;
+  padding: 10px;
+  background: #23140b;
+  border: 2px solid #9c7432;
+  border-radius: 14px;
+  box-shadow: inset 0 4px 16px rgba(0, 0, 0, 0.7);
+}
+
+.aseb-void {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(230, 184, 92, 0.28);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.aseb-cell-p1 {
+  background: linear-gradient(155deg, #efe2cf, #d8c3a2);
+  border-color: #9e7c52;
+}
+
+.aseb-cell-p2 {
+  background: linear-gradient(155deg, #dcf1f3, #b5dfe4);
+  border-color: #2c8f9e;
+}
+
+.aseb-cell-shared {
+  background: linear-gradient(155deg, #f6e7c6, #e2c288);
+  border-color: #b88635;
+}
+
+.aseb-cell-rosette {
+  background: linear-gradient(155deg, #fff2bf, #efc152);
+  border-color: #d98218;
+  box-shadow: inset 0 0 0 2px rgba(255, 248, 220, 0.75);
+}
+
+.aseb-cell-rosette .cell-glyph {
+  color: rgba(173, 74, 12, 0.45);
+  font-size: 28px;
+}
+
+/* ===== 掷具视觉（4 根木掷棍 / 4 枚金字塔骰） ===== */
+.stick-item {
+  width: 18px;
+  height: 58px;
+  border-radius: 9px;
+  border: 2px solid rgba(255, 232, 178, 0.65);
+  transition: transform 0.35s ease;
+  position: relative;
+}
+
+.stick-item.flat {
+  background: linear-gradient(180deg, #fff5dc 0%, #edd19a 100%);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.stick-item.flat::after {
+  content: "";
+  position: absolute;
+  inset: 6px 4px;
+  border: 1px solid rgba(168, 118, 46, 0.45);
+  border-radius: 4px;
+}
+
+.stick-item.curved {
+  background: linear-gradient(180deg, #4b2d1b 0%, #241309 100%);
+  border-color: #8c6239;
+  box-shadow: inset 2px 0 5px rgba(255, 255, 255, 0.12), 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.pyramid-die {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 4%, 96% 90%, 4% 90%);
+  background: linear-gradient(145deg, #5d3b24, #28160c);
+  border: 1px solid #d4a654;
+  font-size: 13px;
+  font-weight: 800;
+  color: #cbb99b;
+  transition: transform 0.35s ease;
+}
+
+.pyramid-die.lit {
+  background: linear-gradient(145deg, #ffe58f, #c78b24);
+  color: #241308;
+  filter: drop-shadow(0 0 8px rgba(255, 217, 125, 0.55));
+}
+
+.rolling .stick-item,
+.rolling .pyramid-die {
+  animation: diceShake 0.32s ease-in-out;
+}
+
+@keyframes piecePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.09); }
+}
+
+@keyframes diceShake {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-16deg) scale(1.08); }
+  60% { transform: rotate(14deg) scale(0.96); }
+  100% { transform: rotate(0deg) scale(1); }
+}
