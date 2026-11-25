@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>维京王者之棋 (Hnefatafl) · 非对称突围与合围古棋</title>
+  <link rel="stylesheet" href="css/style.css?v=20261125" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="brand-group">
+        <a href="../../index.html" class="back-home">← 返回游戏集</a>
+        <div class="title-block">
+          <h1>🛡️ 维京王者之棋 (Hnefatafl)</h1>
+          <p>公元 4 世纪北欧维京纯策略古棋 · 零骰子 · 护送国王突围 vs 两倍军力合围</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="btnTutorial" class="btn btn-gold" type="button">🎓 新手教学</button>
+        <button id="btnRules" class="btn" type="button">📜 规则 / FAQ / AI评测</button>
+        <button id="btnHistoryStory" class="btn" type="button">🏛️ 维京历史</button>
+        <button id="btnBgm" class="btn" type="button">🎵 北欧竖琴：关</button>
+        <button id="btnSound" class="btn" type="button">🔊 音效开</button>
+        <button id="btnRestart" class="btn btn-ice" type="button">🔄 重新开局</button>
+      </div>
+    </header>
+
+    <section class="control-bar">
+      <div class="mode-controls">
+        <select id="selectSize" class="mode-select" aria-label="棋盘尺寸">
+          <option value="7" selected>⚡ 7×7 维京快棋 (Brandubh · 1+4 vs 8)</option>
+          <option value="9">🏰 9×9 经典标准局 (Tablut · 1+8 vs 16)</option>
+        </select>
+        <select id="selectMode" class="mode-select" aria-label="对弈模式">
+          <option value="pve-master">👑 维京大酋长 AI (Alpha-Beta)</option>
+          <option value="pve-normal" selected>🤖 标准战术 AI</option>
+          <option value="pve-easy">🌱 入门陪练 AI</option>
+          <option value="pvp">👥 双人同屏对弈</option>
+        </select>
+        <select id="selectSide" class="mode-select" aria-label="扮演阵营">
+          <option value="2" selected>⚔️ 我执黑方进攻（传统先手）</option>
+          <option value="1">👑 我执白方护王（后手突围）</option>
+        </select>
+        <select id="selectSpeed" class="mode-select" aria-label="动画速度">
+          <option value="slow">🐢 慢速 (1×)</option>
+          <option value="normal" selected>⚡ 标准 (2×)</option>
+          <option value="fast">🚀 极速 (3×)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="scoreboard">
+      <div id="cardBlack" class="player-card active">
+        <div class="player-info">
+          <span class="piece piece-attacker piece-mini"></span>
+          <div>
+            <div class="player-name" id="nameBlack">玩家 · 黑方进攻</div>
+            <div class="player-role">目标：夹击擒获白方国王（先手）</div>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:17px;font-weight:800;color:var(--gold-bright);" id="capWhite">已擒 0 卫兵</div>
+        </div>
+      </div>
+
+      <div class="turn-badge">
+        <div class="turn-num" id="turnNum">第 1 回合</div>
+        <div class="turn-who" id="turnWho">轮到黑方</div>
+      </div>
+
+      <div id="cardWhite" class="player-card">
+        <div class="player-info">
+          <span class="piece piece-king piece-mini"></span>
+          <div>
+            <div class="player-name" id="nameWhite">标准 AI · 白方护王</div>
+            <div class="player-role">目标：护送国王抵达任意角落 🏰</div>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:17px;font-weight:800;color:var(--gold-bright);" id="capBlack">已斩 0 黑兵</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tutorialBanner" class="tutorial-banner" aria-live="polite">
+      <div class="tutorial-top">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <span id="tutorialTag" class="tutorial-tag">🎓 维京棋教学 · 1 / 4</span>
+          <strong id="tutorialTitle">第 1 步</strong>
+        </div>
+        <button id="btnExitTutorial" class="btn" type="button">✕ 退出教学</button>
+      </div>
+      <p id="tutorialDesc" class="tutorial-desc"></p>
+      <div id="tutorialActions" class="tutorial-actions" style="display:none;">
+        <span id="tutorialFeedback" class="tutorial-feedback"></span>
+        <button id="btnTutorialNext" class="btn btn-gold" type="button">下一步 →</button>
+      </div>
+    </section>
+
+    <main class="board-stage">
+      <div id="boardGrid" class="hnef-grid" aria-label="维京王者之棋棋盘"></div>
+      <div id="aiStartWrap" style="display:none;">
+        <button id="btnStartAI" class="btn btn-gold" type="button">▶️ 开始对局（请黑方 AI 先手出击）</button>
+      </div>
+    </main>
+
+    <section class="bottom-bar">
+      <div id="eventText" class="event-text">维京围城开始！按传统由黑方（进攻者）先手，点击任意黑子即可查看直线落点。</div>
+      <button id="btnLog" class="btn btn-mini" type="button">📝 对局记录 (0)</button>
+    </section>
+  </div>
+
+  <!-- 规则 / FAQ / AI 评测弹窗 -->
+  <div id="modalRules" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>📜 维京王者之棋 · 规则、FAQ 与 AI 评测</h2>
+        <button class="modal-close" data-close="modalRules" type="button">×</button>
+      </div>
+      <div class="rule-tabs">
+        <button class="rule-tab-btn active" data-tab="rules" type="button">🛡️ 核心规则</button>
+        <button class="rule-tab-btn" data-tab="faq" type="button">❓ 常见疑问 (FAQ)</button>
+        <button class="rule-tab-btn" data-tab="ai" type="button">🤖 AI 棋力评测</button>
+      </div>
+
+      <div id="panelRules" class="rule-section active">
+        <h3>🎯 非对称胜负目标</h3>
+        <ul>
+          <li><strong>白方（守卫与国王 👑）</strong>：人数只有对方一半，但只要护送国王冲进棋盘<strong>四个角落任意一格（🏰）</strong>立刻大获全胜！</li>
+          <li><strong>黑方（维京进攻方 ⚔）</strong>：兵力是对方两倍且执先手，目标是在国王逃脱前将其<strong>合围擒获</strong>！</li>
+        </ul>
+        <h3>♞ 走法与禁区</h3>
+        <ul>
+          <li>所有棋子（含国王）都像象棋里的“车”一样，沿<strong>横竖直线移动任意格数</strong>，不能越子。</li>
+          <li>普通兵不能停在四角堡垒（🏰）和中央王座（❖），但可以穿过空王座；只有国王能停在王座与四角。</li>
+        </ul>
+        <h3>⚔️ 夹击吃子与擒王</h3>
+        <ul>
+          <li><strong>夹击吃兵</strong>：主动走子把敌方普通兵夹在两枚己方棋子之间（或己方棋子与角落堡垒/空王座之间），该敌兵立刻被吃！</li>
+          <li><strong>安全自入</strong>：主动把自己的棋子走进敌方两子中间，<strong>不会被反杀</strong>！</li>
+          <li><strong>擒获国王</strong>：国王站在中央王座或王座四邻格时，需 <strong>4 面合围</strong>（王座算一面）；离开王座区后，<strong>2 面夹击</strong>即可擒获！</li>
+        </ul>
+      </div>
+
+      <div id="panelFaq" class="rule-section">
+        <div class="faq-item">
+          <h4>Q1：我主动把兵插进敌方两枚棋子中间，会被吃掉吗？</h4>
+          <p><strong>不会！</strong> 维京棋采用“主动夹击制”，只有对手在他的回合移动棋子形成夹击才会吃子；你主动钻进对方两子中间是绝对安全的，甚至经常用来卡位破阵！</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q2：角落堡垒和空王座真的能帮我吃子吗？</h4>
+          <p><strong>是的！</strong> 四个角落堡垒（🏰）以及国王离开后的空王座（❖）对双方都充当“敌对墙”，只要把敌兵逼在角落旁或空王座旁，只需 1 枚己方棋子就能夹死它！</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q3：7×7 和 9×9 有什么区别？新手推荐哪个？</h4>
+          <p><strong>7×7 (Brandubh)</strong> 是古代爱尔兰与维京快棋（1王+4卫 vs 8黑兵），3–5 分钟一局，极度爽快，强烈推荐新手先玩！<strong>9×9 (Tablut)</strong> 是拉普兰经典大盘（1王+8卫 vs 16黑兵），纵深更深、攻防更宏大。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q4：如果我选白方护王，为什么一开始黑方 AI 没立刻走？</h4>
+          <p>为了避免你刚打开页面或刚切换盘面时电脑抢跑，黑方 AI 先手时会先原地待命，等你点击棋盘下方的 <strong>▶️ 开始对局</strong> 后再正式出击。</p>
+        </div>
+      </div>
+
+      <div id="panelAi" class="rule-section">
+        <h3>🤖 Alpha-Beta 极小极大搜索</h3>
+        <p>维京棋是完全信息零骰子纯策略博弈。<strong>👑 维京大酋长 AI</strong> 采用带启发式走法排序的 <strong>Alpha-Beta 剪枝搜索</strong>（7×7 搜索 3 层、9×9 搜索 2 层），综合评估子力差、国王距角落曼哈顿距离、双线叫杀通道与角落前哨封锁。</p>
+        <table class="prob-table">
+          <thead><tr><th>对阵 (7×7 对称 24 局)</th><th>A 胜率</th><th>平均回合</th><th>单步耗时</th></tr></thead>
+          <tbody>
+            <tr><td>👑 大酋长 vs 随机</td><td><strong>100.0%</strong> (24/24)</td><td>12.8</td><td>1.82 ms</td></tr>
+            <tr><td>👑 大酋长 vs 🌱 入门</td><td><strong>95.8%</strong> (23/24)</td><td>11.2</td><td>1.40 ms</td></tr>
+            <tr><td>👑 大酋长 vs 🤖 标准</td><td><strong>58.3%</strong> (14/24)</td><td>21.5</td><td>1.58 ms</td></tr>
+          </tbody>
+        </table>
+        <p>完整评测报告与复现脚本见项目内 <code>AI_BENCHMARK.md</code> 与 <code>bench_ai.js</code>。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 维京历史科普弹窗 -->
+  <div id="modalStory" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>🏛️ 维京王者之棋 · 历史与北欧文化</h2>
+        <button class="modal-close" data-close="modalStory" type="button">×</button>
+      </div>
+      <figure class="story-figure">
+        <img src="assets/images/hnefatafl_viking.jpg" alt="维京长屋中对弈王者之棋插画" />
+        <figcaption>历史插画：北欧维京长屋火光映照下，两位维京人对弈雕刻橡木王者之棋，象牙国王端坐中央王座。</figcaption>
+      </figure>
+      <div class="rule-section active">
+        <h3>⛵ 在国际象棋传到北欧之前的“维京国棋”</h3>
+        <p><strong>Hnefatafl（赫涅法塔弗，古诺尔斯语意为“国王的棋桌”）</strong>诞生于公元 4 世纪左右的北欧。在公元 11–12 世纪国际象棋传入北欧之前，它曾是维京海盗、国王与吟游诗人最钟爱的策略棋——维京船葬中经常陪葬精美的骨雕国王棋子，它随维京长船一路传播到冰岛、格陵兰、苏格兰与爱尔兰！</p>
+        <h3>🌿 现代规则居然是一位植物学家救回来的！</h3>
+        <p>中世纪后 Hnefatafl 逐渐被国际象棋取代而失传。幸运的是，1732 年著名的瑞典“分类学之父”<strong>卡尔·林奈（Carl Linnaeus）</strong>在拉普兰（北欧极地）考察植物时，偶遇当地萨米人仍在玩 9×9 的变体 <strong>Tablut</strong>，并把全套规则记进了自己的旅行日记——这份珍贵笔记让失传数百年的维京王者之棋得以在现代重获新生！</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 对局记录弹窗 -->
+  <div id="modalLog" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width:540px;">
+      <div class="modal-header">
+        <h2>📝 对局步骤记录</h2>
+        <button class="modal-close" data-close="modalLog" type="button">×</button>
+      </div>
+      <div id="logList" class="history-list">
+        <p style="text-align:center;color:var(--text-muted);">暂无走子记录。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 胜利弹窗 -->
+  <div id="modalWin" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width:440px;text-align:center;">
+      <div class="modal-header">
+        <h2>🏆 对局结束</h2>
+        <button class="modal-close" data-close="modalWin" type="button">×</button>
+      </div>
+      <div style="font-size:48px;margin-bottom:6px;">👑</div>
+      <h3 id="winHeadline" style="color:var(--gold-bright);margin:0 0 8px;">白方获胜！</h3>
+      <p id="winDetail" style="color:var(--text-muted);font-size:14px;margin:0 0 18px;"></p>
+      <button id="btnWinReplay" class="btn btn-gold" type="button">🔄 再战一局</button>
+    </div>
+  </div>
+
+  <div id="toastBanner" class="toast-banner" role="status"></div>
+
+  <script src="js/engine.js?v=20261125"></script>
+  <script src="js/ai.js?v=20261125"></script>
+  <script src="js/tutorial.js?v=20261125"></script>
+  <script src="js/audio.js?v=20261125"></script>
+  <script src="js/app.js?v=20261125"></script>
+</body>
+</html>

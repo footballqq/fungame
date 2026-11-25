@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>非洲播棋 (Mancala · 卡拉哈) · 3000 年纯策略宝石播种古棋</title>
+  <link rel="stylesheet" href="css/style.css?v=20261125" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="brand-group">
+        <a href="../../index.html" class="back-home">← 返回游戏集</a>
+        <div class="title-block">
+          <h1>💎 非洲播棋 (Mancala · Kalah)</h1>
+          <p>流传 3000 年的非洲与阿拉伯算路古棋 · 零骰子 · 逆时针播种、宝库连击与对坑截胡</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="btnTutorial" class="btn btn-gold" type="button">🎓 新手教学</button>
+        <button id="btnRules" class="btn" type="button">📜 规则 / FAQ / AI评测</button>
+        <button id="btnHistoryStory" class="btn" type="button">🏛️ 历史文化</button>
+        <button id="btnBgm" class="btn" type="button">🎵 非洲木琴：关</button>
+        <button id="btnSound" class="btn" type="button">🔊 音效开</button>
+        <button id="btnRestart" class="btn btn-teal" type="button">🔄 重新开局</button>
+      </div>
+    </header>
+
+    <section class="control-bar">
+      <div class="mode-controls">
+        <select id="selectSeeds" class="mode-select" aria-label="每坑宝石数">
+          <option value="4" selected>🏆 经典局（每坑 4 颗 · 共 48 颗）</option>
+          <option value="3">⚡ 快速局（每坑 3 颗 · 共 36 颗）</option>
+        </select>
+        <select id="selectMode" class="mode-select" aria-label="对弈模式">
+          <option value="pve-master">👑 酋长大师 AI (Depth 7 Alpha-Beta)</option>
+          <option value="pve-normal" selected>🤖 标准战术 AI (Depth 4)</option>
+          <option value="pve-easy">🌱 入门陪练 AI</option>
+          <option value="pvp">👥 双人同屏对弈</option>
+        </select>
+        <select id="selectSide" class="mode-select" aria-label="先后手">
+          <option value="1" selected>⚡ 玩家先手（南岸下方）</option>
+          <option value="2">🛡️ AI 先手（我执北岸上方）</option>
+        </select>
+        <select id="selectSpeed" class="mode-select" aria-label="播种速度">
+          <option value="slow">🐢 慢速 (1×)</option>
+          <option value="normal" selected>⚡ 标准 (2×)</option>
+          <option value="fast">🚀 极速 (3×)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="scoreboard">
+      <div id="cardP1" class="player-card active">
+        <div>
+          <div class="player-name" id="nameP1">玩家 · 南岸方（下方）</div>
+          <div class="player-role">大宝库位于棋盘最右侧 →</div>
+        </div>
+        <div class="score-big" id="scoreP1">0</div>
+      </div>
+
+      <div class="turn-badge">
+        <div class="turn-num" id="turnNum">第 1 回合</div>
+        <div class="turn-who" id="turnWho">轮到南岸方</div>
+      </div>
+
+      <div id="cardP2" class="player-card">
+        <div>
+          <div class="player-name" id="nameP2">标准 AI · 北岸方（上方）</div>
+          <div class="player-role">← 大宝库位于棋盘最左侧</div>
+        </div>
+        <div class="score-big" id="scoreP2">0</div>
+      </div>
+    </section>
+
+    <section id="tutorialBanner" class="tutorial-banner" aria-live="polite">
+      <div class="tutorial-top">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <span id="tutorialTag" class="tutorial-tag">🎓 非洲播棋教学 · 1 / 4</span>
+          <strong id="tutorialTitle">第 1 步</strong>
+        </div>
+        <button id="btnExitTutorial" class="btn" type="button">✕ 退出教学</button>
+      </div>
+      <p id="tutorialDesc" class="tutorial-desc"></p>
+      <div id="tutorialActions" class="tutorial-actions" style="display:none;">
+        <span id="tutorialFeedback" class="tutorial-feedback"></span>
+        <button id="btnTutorialNext" class="btn btn-gold" type="button">下一步 →</button>
+      </div>
+    </section>
+
+    <main class="board-stage">
+      <div class="mancala-board-wrap">
+        <div id="mancalaBoard" class="mancala-board" aria-label="非洲播棋棋盘"></div>
+      </div>
+      <div id="aiStartWrap" style="display:none;">
+        <button id="btnStartAI" class="btn btn-gold" type="button">▶️ 开始对局（请 AI 先手播种）</button>
+      </div>
+    </main>
+
+    <section class="bottom-bar">
+      <div id="eventText" class="event-text">播棋开局！悬停任意己方浅坑即可预览落点，点击即可逆时针播种！</div>
+      <button id="btnLog" class="btn btn-mini" type="button">📝 对局记录 (0)</button>
+    </section>
+  </div>
+
+  <!-- 规则 / FAQ / AI 评测弹窗 -->
+  <div id="modalRules" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>📜 非洲播棋 · 规则、FAQ 与 AI 评测</h2>
+        <button class="modal-close" data-close="modalRules" type="button">×</button>
+      </div>
+      <div class="rule-tabs">
+        <button class="rule-tab-btn active" data-tab="rules" type="button">💎 核心规则</button>
+        <button class="rule-tab-btn" data-tab="faq" type="button">❓ 常见疑问 (FAQ)</button>
+        <button class="rule-tab-btn" data-tab="ai" type="button">🤖 AI 棋力评测</button>
+      </div>
+
+      <div id="panelRules" class="rule-section active">
+        <h3>🎯 获胜目标</h3>
+        <p>尽可能多地把彩色宝石收进<strong>己方大宝库</strong>（南岸在最右侧，北岸在最左侧）。对局结束时，大宝库宝石总数多者获胜！</p>
+        <h3>🌱 逆时针播种</h3>
+        <ul>
+          <li>轮到你时，选己方 6 个小坑中任意一个有宝石的坑，抓起里面的全部宝石。</li>
+          <li>沿<strong>逆时针方向</strong>依次向下一个坑投放 1 颗宝石；经过<strong>己方大宝库</strong>时投入 1 颗，经过<strong>对手大宝库</strong>时自动跳过不放。</li>
+        </ul>
+        <h3>✨ 两大爽快连招</h3>
+        <ul>
+          <li><strong>免费连击（额外回合）</strong>：如果手中<strong>最后一颗宝石</strong>正好落入己方大宝库，立刻获得<strong>再来一次</strong>！高手开局经常能连播 2–3 手。</li>
+          <li><strong>对坑截胡（大丰收）</strong>：如果手中<strong>最后一颗宝石</strong>正好落入<strong>己方原本为空的小坑</strong>，且正对面对手小坑里有宝石，你可以把己方这 1 颗 + 对面坑里所有宝石<strong>一次性打包扫进己方大宝库</strong>！</li>
+        </ul>
+        <h3>🏁 终局结算</h3>
+        <p>当任意一方的 6 个小坑全部清空时，游戏立即结束！另一方将自己这一排剩余的所有宝石全部收入己方大宝库，比拼最终宝石总数。</p>
+      </div>
+
+      <div id="panelFaq" class="rule-section">
+        <div class="faq-item">
+          <h4>Q1：为什么有时候我先清空了自己这边，反而输了？</h4>
+          <p><strong>这是播棋最经典的战略陷阱！</strong> 因为一方清空后，<strong>对手那边剩下的所有宝石都会归对手所有</strong>！所以不是“谁先播完谁赢”，而是要在己方大宝库已经领先（比如超过 24 颗）时再主动清坑锁胜，否则不要急着把己方全清光把宝石送给对手！</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q2：如果最后一颗落进己方空坑，但对面坑也是空的，会截胡吗？</h4>
+          <p>不会！只有当正对面对手小坑里<strong>至少有 1 颗宝石</strong>时才会触发“对坑截胡”；如果对面也是空的，那颗宝石就老老实实留在己方坑里，轮到对方。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q3：一个坑里宝石很多（超过 13 颗），绕一圈回到自己原坑能截胡吗？</h4>
+          <p><strong>可以！</strong> 因为你抓起原坑全部宝石后，原坑就变空了；绕满一圈（跳过对手大宝库，共 13 步）最后一颗正好落回这个空坑时，如果对面坑有宝石，照样触发华丽的“环游截胡”！</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q4：悬停浅坑时高亮的金色、绿色、红色框分别代表什么？</h4>
+          <p><strong>金色框（大宝库）</strong>表示最后一颗正好进宝库触发“额外连击”；<strong>红色框</strong>表示正好落入己方空坑触发“对坑截胡”；<strong>绿色框</strong>表示普通落点。</p>
+        </div>
+      </div>
+
+      <div id="panelAi" class="rule-section">
+        <h3>👑 7 层深搜 Alpha-Beta 酋长大师 AI</h3>
+        <p>播棋每回合最多 6 个分支，但因连续额外回合与跨岸截胡变化极深。<strong>👑 酋长大师 AI</strong> 采用 <strong>Depth 7 Alpha-Beta 剪枝搜索</strong>，单步仅需约 <strong>0.26 毫秒</strong> 即可看穿 7 步之后的连击与截胡！</p>
+        <table class="prob-table" style="width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;">
+          <thead><tr><th style="border:1px solid rgba(242,183,73,0.28);padding:6px;">对阵 (4颗经典对称 40 局)</th><th style="border:1px solid rgba(242,183,73,0.28);padding:6px;">A 战绩</th><th style="border:1px solid rgba(242,183,73,0.28);padding:6px;">平均回合</th><th style="border:1px solid rgba(242,183,73,0.28);padding:6px;">单步耗时</th></tr></thead>
+          <tbody style="text-align:center;">
+            <tr><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;">👑 酋长大师 vs 随机</td><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;"><strong>100.0%</strong> (40胜)</td><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;">18.6</td><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;">0.27 ms</td></tr>
+            <tr><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;">👑 酋长大师 vs 🌱 入门</td><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;"><strong>100.0%</strong> (40胜)</td><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;">20.8</td><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;">0.24 ms</td></tr>
+            <tr><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;">👑 酋长大师 vs 🤖 标准</td><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;"><strong>31胜 9平 0负</strong></td><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;">21.9</td><td style="border:1px solid rgba(242,183,73,0.28);padding:6px;">0.26 ms</td></tr>
+          </tbody>
+        </table>
+        <p>完整评测报告与复现脚本见项目内 <code>AI_BENCHMARK.md</code> 与 <code>bench_ai.js</code>。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 历史文化弹窗 -->
+  <div id="modalStory" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>🏛️ 非洲播棋 · 三千年的“播种与收获”智慧</h2>
+        <button class="modal-close" data-close="modalStory" type="button">×</button>
+      </div>
+      <figure class="story-figure">
+        <img src="assets/images/mancala_africa.jpg" alt="非洲庭院合欢树下对弈播棋插画" />
+        <figcaption>文化插画：夕阳下的非洲合欢树庭院里，两位玩家围坐在雕刻桃花心木播棋旁，用彩色河石与贝壳推演播种算路。</figcaption>
+      </figure>
+      <div class="rule-section active">
+        <h3>🌍 人类流传最广的古老“算路棋”家族</h3>
+        <p><strong>Mancala（播棋，源自阿拉伯语 <em>naqala</em>，意为“移动”）</strong>是一大类遍布非洲、中东、南亚乃至东南亚的古老棋类总称（包括西非的 Oware、东非的 Bao、以及全球最普及的现代竞赛规则 <strong>Kalah 卡拉哈</strong>）。考古学家在约旦、埃塞俄比亚与古埃及神庙石阶上，发现了距今 <strong>2000–3500 年前</strong> 凿在岩石上的两排小坑！</p>
+        <h3>🌾 为什么不用棋子吃子，而是“抓起一把挨个播种”？</h3>
+        <p>播棋的设计灵感来自古老的<strong>农耕播种与收成</strong>：你必须先把种子撒向田野（甚至撒进邻居的地里），通过精密的算术与模运算规划，在合适的时机把丰收的宝石装进自己的大粮仓。在非洲许多村庄，人们不需要买棋盘——在树荫下的泥地上随手挖出 12 个小坑、捡一把石子或豆子就能立刻开战！</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 对局记录弹窗 -->
+  <div id="modalLog" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width:540px;">
+      <div class="modal-header">
+        <h2>📝 对局步骤记录</h2>
+        <button class="modal-close" data-close="modalLog" type="button">×</button>
+      </div>
+      <div id="logList" class="history-list">
+        <p style="text-align:center;color:var(--text-muted);">暂无播种记录。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 胜利弹窗 -->
+  <div id="modalWin" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width:440px;text-align:center;">
+      <div class="modal-header">
+        <h2>🏆 终局结算</h2>
+        <button class="modal-close" data-close="modalWin" type="button">×</button>
+      </div>
+      <div style="font-size:48px;margin-bottom:6px;">💎</div>
+      <h3 id="winHeadline" style="color:var(--amber-bright);margin:0 0 8px;">南岸方获胜！</h3>
+      <p id="winDetail" style="color:var(--text-muted);font-size:14px;margin:0 0 18px;"></p>
+      <button id="btnWinReplay" class="btn btn-gold" type="button">🔄 再播一局</button>
+    </div>
+  </div>
+
+  <div id="toastBanner" class="toast-banner" role="status"></div>
+
+  <script src="js/engine.js?v=20261125"></script>
+  <script src="js/ai.js?v=20261125"></script>
+  <script src="js/tutorial.js?v=20261125"></script>
+  <script src="js/audio.js?v=20261125"></script>
+  <script src="js/app.js?v=20261125"></script>
+</body>
+</html>

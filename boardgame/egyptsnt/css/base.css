@@ -445,7 +445,11 @@ body {
 
 @media (max-width: 560px) {
   .app-shell {
-    padding: 10px 10px 22px;
+    padding: 10px 10px max(22px, env(safe-area-inset-bottom));
+  }
+  .btn, .mode-select {
+    min-height: 38px;
+    font-size: 12.5px;
   }
   .wooden-box-stage {
     padding: 12px 10px 16px;
