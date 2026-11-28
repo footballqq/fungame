@@ -10,6 +10,34 @@
   const ARCHIVE_KEY = 'squares_tournament_archive_v1';
   const ACTIVE_KEY = 'squares_active_tournament_v1';
 
+  // 15 组成对主题战队名（严格同主题配对：神兽对神兽、学科对学科、星际对星际、地域对地域，绝不串台！）
+  const TEAM_NAME_PAIRS = [
+    ['🐉 神龙战队', '🦄 独角兽战队'],
+    ['🐼 熊猫战队', '🐯 猛虎战队'],
+    ['🦁 雄狮战队', '🦅 苍鹰战队'],
+    ['🦖 霸王龙队', '🦈 大白鲨队'],
+    ['🦊 智狐战队', '🐺 雪狼战队'],
+    ['⚔️ 青龙战队', '🛡️ 白虎战队'],
+    ['🌊 深海蛟龙', '🌋 烈火凤凰'],
+    ['📐 数学之王队', '⚛️ 物理大师队'],
+    ['➕ 代数天团', '🔺 几何先锋'],
+    ['🚀 星际舰队', '🛸 银河骑士'],
+    ['☀️ 烈日战队', '🌙 皓月战队'],
+    ['⚡ 闪电突击队', '🔥 烈焰先锋队'],
+    ['🌏 亚洲战队', '🌍 欧洲战队'],
+    ['🏯 东方学派', '🏛️ 西方学派'],
+    ['🍎 红苹果战队', '🍉 大西瓜战队'],
+  ];
+
+  function pickTeamNamePair(excludeTeamA) {
+    const candidates = TEAM_NAME_PAIRS.filter(function (pair) {
+      return pair[0] !== excludeTeamA;
+    });
+    const pool = candidates.length > 0 ? candidates : TEAM_NAME_PAIRS;
+    const picked = pool[Math.floor(Math.random() * pool.length)];
+    return Math.random() < 0.5 ? [picked[0], picked[1]] : [picked[1], picked[0]];
+  }
+
   function shuffle(arr) {
     const copy = arr.slice();
     for (let i = copy.length - 1; i > 0; i--) {
@@ -252,6 +280,11 @@
       status: 'ready',
     };
 
+    const teamPair =
+      config && Array.isArray(config.teamNames) && config.teamNames.length === 2
+        ? config.teamNames
+        : pickTeamNamePair();
+
     return {
       id: 'tour-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
       format: 'team-gauntlet',
@@ -260,8 +293,8 @@
       players: shuffled,
       rounds: [{ title: '组队擂台战', matches: [firstMatch] }],
       gauntlet: {
-        teamAName: '🔵 蓝队',
-        teamBName: '🟠 红队',
+        teamAName: teamPair[0],
+        teamBName: teamPair[1],
         teamA: teamA,
         teamB: teamB,
         idxA: 0,
@@ -398,7 +431,7 @@
         const topWins = topPlayer ? g.winsByPlayer[topPlayer] || 0 : 0;
         tournament.mvp = topPlayer ? topPlayer + '（' + topWins + ' 胜）' : null;
         tournament.rankings = sortedPlayers.map(function (name, i) {
-          const teamTag = g.teamA.indexOf(name) >= 0 ? '蓝队' : '红队';
+          const teamTag = g.teamA.indexOf(name) >= 0 ? g.teamAName : g.teamBName;
           return {
             rank: i + 1,
             name: name,
@@ -597,6 +630,8 @@
   }
 
   return {
+    TEAM_NAME_PAIRS: TEAM_NAME_PAIRS,
+    pickTeamNamePair: pickTeamNamePair,
     createEliminationTournament: createEliminationTournament,
     createRoundRobinTournament: createRoundRobinTournament,
     createTeamGauntletTournament: createTeamGauntletTournament,

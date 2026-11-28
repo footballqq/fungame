@@ -375,7 +375,7 @@
 
       function renderTeamCard(teamList, curIdx, streak, isTeamA) {
         const remain = Math.max(0, teamList.length - curIdx);
-        const title = isTeamA ? '🔵 蓝队阵型' : '🟠 红队阵型';
+        const title = isTeamA ? g.teamAName : g.teamBName;
         const rows = teamList
           .map(function (name, idx) {
             const wins = g.winsByPlayer[name] || 0;
@@ -438,7 +438,12 @@
 
       return (
         '<div style="margin-top:14px;">' +
-          '<div style="font-weight:900;font-size:15px;margin-bottom:4px;">🏯 红蓝组队擂台阵型（赢家守擂，输家换人登台，全灭对方获胜！）</div>' +
+          '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:4px;">' +
+            '<span style="font-weight:900;font-size:15px;">🏯 ' + g.teamAName + ' VS ' + g.teamBName + '（赢家守擂，输家换人登台！）</span>' +
+            (currentTour.status !== 'finished'
+              ? '<button type="button" id="btnRerollTeamNames" class="icon-btn" style="font-size:12px;padding:4px 10px;">🎲 换一对战队名</button>'
+              : '') +
+          '</div>' +
           '<div class="gauntlet-grid">' +
             renderTeamCard(g.teamA, g.idxA, g.streakA, true) +
             renderTeamCard(g.teamB, g.idxB, g.streakB, false) +
@@ -473,8 +478,14 @@
         let tagB = '（上方180°）';
         if (currentTour.format === 'team-gauntlet' && currentTour.gauntlet) {
           const g = currentTour.gauntlet;
-          tagA = g.streakA > 0 ? '（蓝队 · 🔥守擂' + g.streakA + '连胜）' : '（蓝队 · ' + (g.idxA + 1) + '号登台）';
-          tagB = g.streakB > 0 ? '（红队 · 🔥守擂' + g.streakB + '连胜）' : '（红队 · ' + (g.idxB + 1) + '号登台）';
+          tagA =
+            g.streakA > 0
+              ? '（' + g.teamAName + ' · 🔥守擂' + g.streakA + '连胜）'
+              : '（' + g.teamAName + ' · ' + (g.idxA + 1) + '号登台）';
+          tagB =
+            g.streakB > 0
+              ? '（' + g.teamBName + ' · 🔥守擂' + g.streakB + '连胜）'
+              : '（' + g.teamBName + ' · ' + (g.idxB + 1) + '号登台）';
         }
         topCardHtml =
           '<div class="call-stage-card">' +
@@ -524,6 +535,17 @@
       if (callBtn && nextMatch) {
         callBtn.addEventListener('click', function () {
           playTournamentMatch(nextMatch);
+        });
+      }
+
+      const rerollTeamBtn = document.getElementById('btnRerollTeamNames');
+      if (rerollTeamBtn && currentTour.gauntlet) {
+        rerollTeamBtn.addEventListener('click', function () {
+          const pair = root.SquaresTournamentEngine.pickTeamNamePair(currentTour.gauntlet.teamAName);
+          currentTour.gauntlet.teamAName = pair[0];
+          currentTour.gauntlet.teamBName = pair[1];
+          store.saveActiveTournament(currentTour, lastMatchNotice);
+          renderStage();
         });
       }
 

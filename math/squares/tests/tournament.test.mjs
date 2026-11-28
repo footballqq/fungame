@@ -159,7 +159,14 @@ test('7 人组队擂台赛（4 vs 3）：赢家守擂、输家换下一位，支
   }
 
   assert.equal(restored.status, 'finished');
-  assert.ok(restored.champion.includes('蓝队'));
-  assert.equal(restored.runnerUp, '🟠 红队');
+  assert.ok(restored.champion.includes(restored.gauntlet.teamAName));
+  assert.equal(restored.runnerUp, restored.gauntlet.teamBName);
   assert.ok(restored.mvp);
+  // 验证生成的队名必定来自成对主题库且互不相同
+  const matchedPair = Tour.TEAM_NAME_PAIRS.some(
+    (p) =>
+      (p[0] === restored.gauntlet.teamAName && p[1] === restored.gauntlet.teamBName) ||
+      (p[1] === restored.gauntlet.teamAName && p[0] === restored.gauntlet.teamBName)
+  );
+  assert.ok(matchedPair);
 });
