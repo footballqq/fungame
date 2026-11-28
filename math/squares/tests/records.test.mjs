@@ -13,7 +13,9 @@ function createMemStorage() {
   };
 }
 
-test('pickRandomPair 总是随机返回两位不同的著名数学家名字', () => {
+test('名家随机库不少于 50 位且严格无重复，pickRandomPair 总是返回两位不同名字', () => {
+  assert.ok(Records.MATHEMATICIANS.length >= 50);
+  assert.equal(new Set(Records.MATHEMATICIANS).size, Records.MATHEMATICIANS.length);
   for (let i = 0; i < 30; i++) {
     const [a, b] = Records.pickRandomPair();
     assert.ok(Records.MATHEMATICIANS.includes(a));

@@ -88,9 +88,9 @@
         });
       }
 
-      // 严格去重，彻底避免新增人数时出现重名数学家（如两个“费马”）
+      // 严格去重，彻底避免新增人数时出现重名数学家（从 60 位古今中外名家库随机抽取）
       const used = new Set();
-      const shuffledPool = pickUniqueMathematicians(Math.max(count, 14));
+      const shuffledPool = pickUniqueMathematicians(root.SquaresRecords.MATHEMATICIANS.length);
       let poolCursor = 0;
 
       function nextUnusedName(fallbackIdx) {
