@@ -381,7 +381,9 @@
           '<div class="pk-keypad">' +
           DIGITS.map(function (d) {
             return (
-              '<button type="button" class="key-btn" data-p="' +
+              '<button type="button" class="key-btn' +
+              (d === '0' ? ' key-zero' : '') +
+              '" data-p="' +
               playerKey +
               '" data-digit="' +
               d +
@@ -408,6 +410,7 @@
         p.wrong +
         '</span>' +
         '</div>' +
+        '<div class="pk-play-core">' +
         '<div class="pk-q-row">' +
         '<div class="pk-q-text">' +
         (q.promptHtml || q.promptMain) +
@@ -419,7 +422,8 @@
         '">' +
         statusText +
         '</div>' +
-        controlsHtml;
+        controlsHtml +
+        '</div>';
 
       if (isChoice) {
         container.querySelectorAll('.choice-btn').forEach(function (btn) {

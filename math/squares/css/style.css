@@ -639,10 +639,21 @@ html, body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 10px 14px;
+  justify-content: flex-start;
+  padding: 8px 14px clamp(30px, 6vh, 62px);
   background: #ffffff;
   overflow: hidden;
+}
+
+.pk-play-core {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(6px, 1.3vh, 12px);
+  width: 100%;
+  min-height: 0;
 }
 
 .pk-half.player-b {
@@ -993,35 +1004,66 @@ html, body {
 }
 
 .pk-exit-btn {
-  background: #334155;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
+  transition: transform 0.12s, background 0.15s;
+}
+
+.pk-exit-btn:active {
+  transform: scale(0.93);
 }
 
 .pk-divider-actions {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .pk-fs-btn {
-  background: #4f46e5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 26px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
   color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 5px 10px;
-  font-size: 12px;
-  font-weight: 800;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  padding: 0;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.4);
+  transition: transform 0.12s, background 0.15s;
+}
+
+.pk-fs-btn:active {
+  transform: scale(0.92);
 }
 
 .pk-fs-btn.is-active {
-  background: #0f766e;
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  box-shadow: 0 2px 6px rgba(20, 184, 166, 0.4);
+}
+
+.game-icon {
+  width: 15px;
+  height: 15px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .icon-btn.is-active {
@@ -1069,10 +1111,6 @@ body {
   touch-action: manipulation;
   user-select: none;
   -webkit-user-select: none;
-}
-
-.pk-half.player-b {
-  padding-bottom: 14px;
 }
 
 .pk-player-head {
@@ -1178,17 +1216,21 @@ body {
 
 .pk-keypad {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 7px;
-  max-width: 480px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(6px, 1vh, 9px);
+  max-width: 310px;
   width: 100%;
   margin: 0 auto;
 }
 
 .pk-keypad .key-btn {
-  height: 46px;
-  font-size: 21px;
-  border-radius: 12px;
+  height: clamp(36px, 5.2vh, 50px);
+  font-size: clamp(19px, 2.8vh, 24px);
+  border-radius: 13px;
+}
+
+.pk-keypad .key-btn.key-zero {
+  grid-column: 1 / -1;
 }
 
 .pk-choices {
