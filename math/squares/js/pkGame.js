@@ -145,6 +145,9 @@
       else if (ratio <= 0.5) timerFillEl.classList.add('warn');
 
       timerTextEl.textContent = '⏱️ ' + (remaining / 1000).toFixed(1) + 's';
+      const isPanic = remaining <= 5000 && remaining > 0;
+      timerTextEl.classList.toggle('is-panic', isPanic);
+      timerTextEl.style.color = ratio <= 0.2 ? '#fb7185' : ratio <= 0.5 ? '#fbbf24' : '#10b981';
 
       if (remaining <= 0 && !root.SquaresEngine.isPkRoundFinished(match)) {
         window.clearInterval(countdownInterval);
@@ -309,14 +312,48 @@
       countdownInterval = window.setInterval(updateCountdownBar, 100);
     }
 
+    function getPlayerStreak(playerKey) {
+      if (!match) return 0;
+      let streak = 0;
+      const curSub = match.roundSubmissions && match.roundSubmissions[playerKey];
+      if (curSub) {
+        if (!curSub.correct) return 0;
+        streak += 1;
+      }
+      for (let i = match.history.length - 1; i >= 0; i--) {
+        const sub = match.history[i][playerKey];
+        if (sub && sub.correct) streak += 1;
+        else break;
+      }
+      return streak;
+    }
+
+    function triggerHalfFlash(playerKey, isOk) {
+      const el = playerKey === 'A' ? halfAEl : halfBEl;
+      if (!el) return;
+      el.classList.remove('flash-ok', 'flash-err');
+      void el.offsetWidth;
+      el.classList.add(isOk ? 'flash-ok' : 'flash-err');
+    }
+
     function renderPlayerHalf(container, playerKey) {
       const q = match.questions[match.roundIndex];
       const p = match.players[playerKey];
+      const oppKey = playerKey === 'A' ? 'B' : 'A';
+      const opp = match.players[oppKey];
       const st = inputs[playerKey];
       const sub = match.roundSubmissions[playerKey];
       const roundOver = root.SquaresEngine.isPkRoundFinished(match);
       const disabled = st.locked || roundOver;
       const isChoice = q.inputType === 'choice';
+
+      const diff = p.correct - opp.correct;
+      const myStateCls = diff > 0 ? 'is-leading' : diff < 0 ? 'is-trailing' : 'is-tied';
+      const oppStateCls = diff < 0 ? 'is-leading' : diff > 0 ? 'is-trailing' : 'is-tied';
+      const myStreak = getPlayerStreak(playerKey);
+
+      container.classList.toggle('is-leading-half', diff > 0);
+      container.classList.toggle('is-trailing-half', diff < 0);
 
       let slotsHtml = '';
       if (!isChoice) {
@@ -399,18 +436,58 @@
           '</div>';
       }
 
+      const leadTag =
+        diff > 0
+          ? '<span class="pk-diff-tag up">领先 +' + diff + '</span>'
+          : diff < 0
+            ? '<span class="pk-diff-tag down">落后 ' + Math.abs(diff) + ' · 快追!</span>'
+            : '<span class="pk-diff-tag tie">势均力敌</span>';
+      const streakTag =
+        myStreak >= 2
+          ? '<span class="pk-streak-badge">🔥 ' + myStreak + '连击</span>'
+          : '';
+      const myCrown = diff > 0 ? '👑 ' : '';
+      const oppCrown = diff < 0 ? '👑 ' : '';
+      const myDone = p.correct + p.wrong;
+      const oppDone = opp.correct + opp.wrong;
+
       container.innerHTML =
         '<div class="pk-player-head">' +
+        '<div class="pk-self-col">' +
         '<span class="pk-player-tag ' +
         playerKey.toLowerCase() +
+        ' ' +
+        myStateCls +
         '">' +
-        (playerKey === 'A' ? '🔵 ' + p.name : '🟠 ' + p.name) +
+        myCrown +
+        (playerKey === 'A' ? '🔵 ' : '🟠 ') +
+        p.name +
         '</span>' +
-        '<span>对 ' +
+        streakTag +
+        '</div>' +
+        '<div class="pk-score-center">' +
+        '<span class="pk-score-nums"><strong class="me">' +
         p.correct +
-        ' · 错 ' +
-        p.wrong +
+        '</strong><span class="colon">:</span><strong class="opp">' +
+        opp.correct +
+        '</strong></span>' +
+        leadTag +
+        '</div>' +
+        '<div class="pk-opp-col">' +
+        '<span class="pk-opp-name ' +
+        oppStateCls +
+        '">' +
+        oppCrown +
+        opp.name +
         '</span>' +
+        '<span class="pk-opp-meta">已做' +
+        oppDone +
+        '·对' +
+        opp.correct +
+        ' ｜ 我做' +
+        myDone +
+        '</span>' +
+        '</div>' +
         '</div>' +
         '<div class="pk-play-core">' +
         '<div class="pk-q-row">' +
@@ -446,14 +523,31 @@
 
     function renderArena() {
       const prefix = matchHeaderPrefix ? matchHeaderPrefix + ' · ' : '⚔️ ';
+      const leftRounds = match.totalRounds - match.roundIndex;
+      const scoreA = match.players.A.correct;
+      const scoreB = match.players.B.correct;
+      const isFinalShot = leftRounds === 1 && scoreA === scoreB;
+      const isClimax = leftRounds <= 2 || isFinalShot;
+      overlayEl.classList.toggle('is-climax', isClimax);
+
+      const climaxTag = isFinalShot
+        ? ' 🔥终极决胜题!'
+        : leftRounds <= 2
+          ? ' 🔥赛点!'
+          : '';
+
       dividerTitleEl.textContent =
         prefix +
         '第 ' +
         (match.roundIndex + 1) +
-        ' / ' +
+        '/' +
         match.totalRounds +
-        ' 局 · ' +
-        (match.ruleType === 'race' ? '⚡比谁快' : '⚖️双计制');
+        ' 局 · 🔵' +
+        scoreA +
+        ':' +
+        scoreB +
+        '🟠' +
+        climaxTag;
       renderPlayerHalf(halfBEl, 'B');
       renderPlayerHalf(halfAEl, 'A');
     }
@@ -508,6 +602,7 @@
       if (sub) {
         if (sub.correct) root.SquaresSound.correct();
         else root.SquaresSound.wrong();
+        triggerHalfFlash(playerKey, sub.correct);
       }
 
       renderArena();
