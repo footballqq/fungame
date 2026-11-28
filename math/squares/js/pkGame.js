@@ -30,12 +30,15 @@
     const filterSelect = document.getElementById('pkFilterSelect');
     const roundsSelect = document.getElementById('pkRoundsSelect');
     const ruleSelect = document.getElementById('pkRuleSelect');
+    const timeLimitSelect = document.getElementById('pkTimeLimitSelect');
     const startBtn = document.getElementById('btnPkStart');
 
     const overlayEl = document.getElementById('pkArenaOverlay');
     const halfBEl = document.getElementById('pkHalfB');
     const halfAEl = document.getElementById('pkHalfA');
     const dividerTitleEl = document.getElementById('pkDividerTitle');
+    const timerTextEl = document.getElementById('pkTimerText');
+    const timerFillEl = document.getElementById('pkTimerFill');
     const exitBtn = document.getElementById('btnPkExit');
     const resultArea = document.getElementById('pkResultArea');
 
@@ -51,6 +54,61 @@
         if (nameAInput) nameAInput.value = pair[0];
         if (nameBInput) nameBInput.value = pair[1];
       });
+    }
+
+    rangeSelect.addEventListener('change', function () {
+      if (rangeSelect.value !== 'custom') {
+        const r = parseRange(rangeSelect.value);
+        if (minInput) minInput.value = String(r.minN);
+        if (maxInput) maxInput.value = String(r.maxN);
+      }
+    });
+    if (minInput) minInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
+    if (maxInput) maxInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
+
+    let match = null;
+    let inputs = null;
+    let chosenOpts = null;
+    let roundStartTime = 0;
+    let roundTimer = null;
+    let countdownInterval = null;
+    let externalFinishCallback = null;
+    let shouldSaveToLeaderboard = true;
+    let matchHeaderPrefix = '';
+
+    function clearTimers() {
+      if (roundTimer) {
+        window.clearTimeout(roundTimer);
+        roundTimer = null;
+      }
+      if (countdownInterval) {
+        window.clearInterval(countdownInterval);
+        countdownInterval = null;
+      }
+    }
+
+    function updateCountdownBar() {
+      if (!match || !timerFillEl || !timerTextEl) return;
+      const limitMs = (match.timeLimitSec || 30) * 1000;
+      const elapsed = Date.now() - roundStartTime;
+      const remaining = Math.max(0, limitMs - elapsed);
+      const ratio = remaining / limitMs;
+
+      timerFillEl.style.width = (ratio * 100).toFixed(1) + '%';
+      timerFillEl.classList.remove('warn', 'danger');
+      if (ratio <= 0.2) timerFillEl.classList.add('danger');
+      else if (ratio <= 0.5) timerFillEl.classList.add('warn');
+
+      timerTextEl.textContent = '⏱️ ' + (remaining / 1000).toFixed(1) + 's';
+
+      if (remaining <= 0 && !root.SquaresEngine.isPkRoundFinished(match)) {
+        window.clearInterval(countdownInterval);
+        countdownInterval = null;
+        root.SquaresEngine.timeoutPkRound(match);
+        root.SquaresSound.wrong();
+        renderArena();
+        scheduleNextRound();
+      }
     }
 
     function renderLeaderboard() {
@@ -123,31 +181,42 @@
 
     renderLeaderboard();
 
-    rangeSelect.addEventListener('change', function () {
-      if (rangeSelect.value !== 'custom') {
-        const r = parseRange(rangeSelect.value);
-        if (minInput) minInput.value = String(r.minN);
-        if (maxInput) maxInput.value = String(r.maxN);
-      }
-    });
-    if (minInput) minInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
-    if (maxInput) maxInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
+    function launchMatch(opts, onComplete) {
+      clearTimers();
+      externalFinishCallback = onComplete || null;
+      shouldSaveToLeaderboard = opts.saveToLeaderboard !== false;
+      matchHeaderPrefix = opts.headerPrefix || '';
 
-    let match = null;
-    let inputs = null;
-    let chosenOpts = null;
-    let roundStartTime = 0;
-    let roundTimer = null;
+      match = root.SquaresEngine.createPkMatch({
+        totalRounds: opts.totalRounds || 10,
+        minN: opts.minN || 11,
+        maxN: opts.maxN || 30,
+        filterType: opts.filterType || 'all',
+        mode: opts.mode || 'mixed',
+        inputType: opts.inputType || 'keypad',
+        ruleType: opts.ruleType || 'race',
+        timeLimitSec: opts.timeLimitSec || 30,
+      });
 
-    function clearRoundTimer() {
-      if (roundTimer) {
-        window.clearTimeout(roundTimer);
-        roundTimer = null;
+      const randomPair = root.SquaresRecords.pickRandomPair();
+      match.players.A.name = (opts.nameA || '').trim() || randomPair[0];
+      match.players.B.name =
+        (opts.nameB || '').trim() ||
+        (randomPair[1] !== match.players.A.name
+          ? randomPair[1]
+          : root.SquaresRecords.pickRandomMathematician(match.players.A.name));
+      match.rangeLabel =
+        opts.rangeLabel ||
+        match.questions[0].n + '';
+
+      if (!externalFinishCallback && resultArea) {
+        resultArea.style.display = 'none';
       }
+      overlayEl.classList.add('active');
+      setupRound();
     }
 
-    function startMatch() {
-      clearRoundTimer();
+    function startMatchFromUi() {
       const range = root.SquaresEngine.normalizeRange(
         minInput ? minInput.value : 11,
         maxInput ? maxInput.value : 30
@@ -158,9 +227,14 @@
       const filterType = filterSelect ? filterSelect.value : 'all';
       const parsed = parseMode(modeSelect.value);
       const totalRounds = Number(roundsSelect.value) || 10;
-      const ruleType = ruleSelect.value || 'both';
+      const ruleType = ruleSelect.value || 'race';
+      const timeLimitSec = Number(timeLimitSelect ? timeLimitSelect.value : 30) || 30;
+      const rangeLabel =
+        range.minN + '～' + range.maxN + (filterType === 'prime' ? '(质数)' : filterType === 'ending5' ? '(尾5)' : '');
 
-      match = root.SquaresEngine.createPkMatch({
+      launchMatch({
+        nameA: nameAInput ? nameAInput.value : '',
+        nameB: nameBInput ? nameBInput.value : '',
         totalRounds: totalRounds,
         minN: range.minN,
         maxN: range.maxN,
@@ -168,22 +242,14 @@
         mode: parsed.mode,
         inputType: parsed.inputType,
         ruleType: ruleType,
+        timeLimitSec: timeLimitSec,
+        rangeLabel: rangeLabel,
+        saveToLeaderboard: !saveRecordCheck || saveRecordCheck.checked,
       });
-
-      const randomPair = root.SquaresRecords.pickRandomPair();
-      const rawA = nameAInput ? nameAInput.value.trim() : '';
-      const rawB = nameBInput ? nameBInput.value.trim() : '';
-      match.players.A.name = rawA || randomPair[0];
-      match.players.B.name =
-        rawB || (randomPair[1] !== match.players.A.name ? randomPair[1] : root.SquaresRecords.pickRandomMathematician(match.players.A.name));
-      match.rangeLabel = range.minN + '～' + range.maxN + (filterType === 'prime' ? '(质数)' : filterType === 'ending5' ? '(尾5)' : '');
-
-      resultArea.style.display = 'none';
-      overlayEl.classList.add('active');
-      setupRound();
     }
 
     function setupRound() {
+      clearTimers();
       const q = match.questions[match.roundIndex];
       inputs = {
         A: root.SquaresEngine.createInputState(q.expectedDigits),
@@ -192,6 +258,8 @@
       chosenOpts = { A: null, B: null };
       roundStartTime = Date.now();
       renderArena();
+      updateCountdownBar();
+      countdownInterval = window.setInterval(updateCountdownBar, 100);
     }
 
     function renderPlayerHalf(container, playerKey) {
@@ -215,11 +283,17 @@
         slotsHtml = '<div class="pk-slots">' + arr.join('') + '</div>';
       }
 
-      let statusText = '填满即锁死，不能反悔！';
+      let statusText =
+        match.ruleType === 'race'
+          ? '⚡ 抢答比快！填满即锁死，不能反悔！'
+          : '填满即锁死，不能反悔！';
       let statusCls = 'pk-status-line';
       if (sub) {
-        if (sub.correct) {
-          statusText = '✅ 正确！(' + (sub.timeMs / 1000).toFixed(1) + 's)';
+        if (sub.timedOut) {
+          statusText = '⏰ 倒计时结束超时！正确答案：' + q.answer;
+          statusCls += ' err';
+        } else if (sub.correct) {
+          statusText = '✅ 抢答正确！(' + (sub.timeMs / 1000).toFixed(1) + 's)';
           statusCls += ' ok';
         } else {
           statusText = '❌ 填错锁定！正确答案：' + q.answer;
@@ -320,13 +394,15 @@
     }
 
     function renderArena() {
+      const prefix = matchHeaderPrefix ? matchHeaderPrefix + ' · ' : '⚔️ ';
       dividerTitleEl.textContent =
-        '⚔️ 第 ' +
+        prefix +
+        '第 ' +
         (match.roundIndex + 1) +
         ' / ' +
         match.totalRounds +
         ' 局 · ' +
-        (match.ruleType === 'race' ? '抢答竞速制' : '同题双计制');
+        (match.ruleType === 'race' ? '⚡比谁快' : '⚖️双计制');
       renderPlayerHalf(halfBEl, 'B');
       renderPlayerHalf(halfAEl, 'A');
     }
@@ -360,6 +436,21 @@
       finalizePlayer(playerKey, opt);
     }
 
+    function scheduleNextRound() {
+      if (countdownInterval) {
+        window.clearInterval(countdownInterval);
+        countdownInterval = null;
+      }
+      roundTimer = window.setTimeout(function () {
+        const done = root.SquaresEngine.advancePkRound(match);
+        if (done) {
+          finishMatch();
+        } else {
+          setupRound();
+        }
+      }, 950);
+    }
+
     function finalizePlayer(playerKey, value) {
       const elapsed = Date.now() - roundStartTime;
       const sub = root.SquaresEngine.submitPkPlayerAnswer(match, playerKey, value, elapsed);
@@ -371,19 +462,12 @@
       renderArena();
 
       if (root.SquaresEngine.isPkRoundFinished(match)) {
-        roundTimer = window.setTimeout(function () {
-          const done = root.SquaresEngine.advancePkRound(match);
-          if (done) {
-            finishMatch();
-          } else {
-            setupRound();
-          }
-        }, 950);
+        scheduleNextRound();
       }
     }
 
     function finishMatch() {
-      clearRoundTimer();
+      clearTimers();
       overlayEl.classList.remove('active');
       root.SquaresSound.win();
 
@@ -407,7 +491,7 @@
         }
       }
 
-      if (!saveRecordCheck || saveRecordCheck.checked) {
+      if (shouldSaveToLeaderboard) {
         recordsSvc.recordPkMatchResult({
           nameA: A.name,
           nameB: B.name,
@@ -420,6 +504,21 @@
           totalRounds: match.totalRounds,
         });
         renderLeaderboard();
+      }
+
+      // 若由争霸联赛调用，直接交回联赛推进晋级图
+      if (externalFinishCallback) {
+        const cb = externalFinishCallback;
+        externalFinishCallback = null;
+        cb({
+          scoreA: A.correct,
+          scoreB: B.correct,
+          winnerKey: winnerKey,
+          A: A,
+          B: B,
+          verdict: verdict,
+        });
+        return;
       }
 
       const avgA = A.correct > 0 ? (A.totalTimeMs / A.correct / 1000).toFixed(2) + 's' : '-';
@@ -479,15 +578,18 @@
         '<button type="button" class="btn btn-primary" id="btnPkRematch">⚔️ 再来一局 PK</button>' +
         '</div></div>';
 
-      document.getElementById('btnPkRematch').addEventListener('click', startMatch);
+      document.getElementById('btnPkRematch').addEventListener('click', startMatchFromUi);
     }
 
-    startBtn.addEventListener('click', startMatch);
+    startBtn.addEventListener('click', startMatchFromUi);
     exitBtn.addEventListener('click', function () {
-      clearRoundTimer();
+      clearTimers();
+      externalFinishCallback = null;
       overlayEl.classList.remove('active');
     });
+
+    root.SquaresPkGame.launchMatch = launchMatch;
   }
 
-  root.SquaresPkGame = { init: initPkGame };
+  root.SquaresPkGame = { init: initPkGame, launchMatch: function () {} };
 })(typeof self !== 'undefined' ? self : this);

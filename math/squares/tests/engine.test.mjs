@@ -78,25 +78,27 @@ test('零反悔自动判题：填满目标位数瞬间锁定并判对错，锁�
   assert.deepEqual(after, state);
 });
 
-test('PK 赛制计分：支持 10/20 局，准确统计双方对错次数与胜负', () => {
+test('PK 赛制计分：默认抢答竞速制、超时强制结账与双方对错统计', () => {
   const match = Engine.createPkMatch({ totalRounds: 10, minN: 11, maxN: 30, mode: 'mixed', inputType: 'keypad' });
+  assert.equal(match.ruleType, 'race');
+  assert.equal(match.timeLimitSec, 30);
   assert.equal(match.totalRounds, 10);
   assert.equal(match.questions.length, 10);
-  assert.equal(match.players.A.correct, 0);
-  assert.equal(match.players.B.wrong, 0);
 
+  // 抢答竞速制：A 抢先答对直接结束本局
   const q0 = match.questions[0];
   Engine.submitPkPlayerAnswer(match, 'A', q0.answer, 1200);
-  Engine.submitPkPlayerAnswer(match, 'B', '99999', 1500);
-
-  // 重复提交无效（零反悔）
-  Engine.submitPkPlayerAnswer(match, 'B', q0.answer, 1600);
-
   assert.equal(match.players.A.correct, 1);
-  assert.equal(match.players.A.wrong, 0);
-  assert.equal(match.players.B.correct, 0);
-  assert.equal(match.players.B.wrong, 1);
   assert.equal(Engine.isPkRoundFinished(match), true);
+
+  // 推进到第2局：A 填错，B 未作答直到 30s 超时 -> 强制结账
+  Engine.advancePkRound(match);
+  Engine.submitPkPlayerAnswer(match, 'A', '99999', 1500);
+  assert.equal(Engine.isPkRoundFinished(match), false);
+  Engine.timeoutPkRound(match);
+  assert.equal(Engine.isPkRoundFinished(match), true);
+  assert.equal(match.players.A.wrong, 1);
+  assert.equal(match.players.B.wrong, 1);
 });
 
 test('自定义范围 51~99 与趣味筛选（只选质数、尾数5、排除整十数）精确生效', () => {

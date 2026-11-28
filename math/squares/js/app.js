@@ -32,6 +32,7 @@
     root.SquaresChartView.init();
     root.SquaresSoloGame.init();
     root.SquaresPkGame.init();
+    root.SquaresTournamentView.init();
     root.SquaresTricks.init(function (preset) {
       switchTab('solo');
       root.SquaresSoloGame.applyPresetAndStart(preset);

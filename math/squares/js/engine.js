@@ -310,11 +310,13 @@
     const questions = generateQuestionBatch(totalRounds, opts);
     return {
       totalRounds: totalRounds,
-      ruleType: opts.ruleType || 'both', // 'both': 同题双计制 | 'race': 抢答竞速制
+      ruleType: opts.ruleType || 'race', // 默认 'race': 抢答竞速制（比谁快） | 'both': 同题双计制
+      timeLimitSec: Number(opts.timeLimitSec) || 30,
       roundIndex: 0,
       questions: questions,
-      roundSubmissions: {}, // { A?: { value, correct, timeMs }, B?: { ... } }
+      roundSubmissions: {}, // { A?: { value, correct, timeMs, timedOut? }, B?: { ... } }
       roundWinner: null,
+      roundTimedOut: false,
       history: [],
       players: {
         A: { name: '下方玩家', correct: 0, wrong: 0, score: 0, totalTimeMs: 0 },
@@ -323,9 +325,25 @@
     };
   }
 
+  function timeoutPkRound(match) {
+    if (match.roundIndex >= match.totalRounds) return;
+    match.roundTimedOut = true;
+    ['A', 'B'].forEach(function (key) {
+      if (!match.roundSubmissions[key]) {
+        match.roundSubmissions[key] = {
+          value: '',
+          correct: false,
+          timeMs: (match.timeLimitSec || 30) * 1000,
+          timedOut: true,
+        };
+        match.players[key].wrong += 1;
+      }
+    });
+  }
+
   function submitPkPlayerAnswer(match, playerKey, value, timeMs) {
     if (match.roundIndex >= match.totalRounds) return null;
-    if (match.roundSubmissions[playerKey]) return null; // 零反悔：已锁定不可再提交
+    if (match.roundSubmissions[playerKey] || match.roundTimedOut) return null;
 
     const q = match.questions[match.roundIndex];
     const correct = String(value) === q.answer;
@@ -348,6 +366,7 @@
   }
 
   function isPkRoundFinished(match) {
+    if (match.roundTimedOut) return true;
     if (match.ruleType === 'race' && match.roundWinner) {
       return true;
     }
@@ -366,6 +385,7 @@
     match.roundIndex += 1;
     match.roundSubmissions = {};
     match.roundWinner = null;
+    match.roundTimedOut = false;
     return match.roundIndex >= match.totalRounds;
   }
 
@@ -379,6 +399,7 @@
     appendDigitNoUndo: appendDigitNoUndo,
     createPkMatch: createPkMatch,
     submitPkPlayerAnswer: submitPkPlayerAnswer,
+    timeoutPkRound: timeoutPkRound,
     isPkRoundFinished: isPkRoundFinished,
     advancePkRound: advancePkRound,
   };

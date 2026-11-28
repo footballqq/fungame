@@ -23,6 +23,7 @@
         <button type="button" class="tab-btn" data-tab="tricks">⚡ 速算技巧篇</button>
         <button type="button" class="tab-btn" data-tab="solo">🎮 单人触控闯关</button>
         <button type="button" class="tab-btn" data-tab="pk">⚔️ 双人正反大 PK</button>
+        <button type="button" class="tab-btn" data-tab="tournament">🏆 争霸联赛</button>
       </nav>
 
       <div class="nav-tools">
@@ -264,8 +265,18 @@
           <div class="control-group" style="justify-content:space-between;">
             <label for="pkRuleSelect">⚖️ 判分赛制：</label>
             <select id="pkRuleSelect" style="min-width:230px;">
-              <option value="both" selected>同题双计制（各自独立判对错，同分比速度）</option>
-              <option value="race">抢答竞速制（谁先填对直接拿分结束本局）</option>
+              <option value="race" selected>⚡ 抢答竞速制（默认 · 比谁先填对拿分！）</option>
+              <option value="both">⚖️ 同题双计制（各自独立判对错，同分比速度）</option>
+            </select>
+          </div>
+
+          <div class="control-group" style="justify-content:space-between;">
+            <label for="pkTimeLimitSelect">⏱️ 每题倒计时（绿→黄→红）：</label>
+            <select id="pkTimeLimitSelect" style="min-width:230px;">
+              <option value="15">15 秒（极速心跳）</option>
+              <option value="20">20 秒（紧张刺激）</option>
+              <option value="30" selected>30 秒（推荐标准）</option>
+              <option value="45">45 秒（宽松思考）</option>
             </select>
           </div>
 
@@ -285,14 +296,110 @@
         <div id="pkLeaderboardArea" class="leaderboard-card"></div>
       </div>
     </section>
+
+    <!-- 面板 4：🏆 多人争霸联赛（淘汰赛晋级图 + 循环赛 + 赛事档案） -->
+    <section id="panel-tournament" class="view-panel no-print">
+      <div class="card">
+        <div id="tourSetupBox">
+          <h2 style="margin:0 0 6px;font-size:22px;">🏆 小朋友完全平方数争霸赛（淘汰赛 / 循环赛）</h2>
+          <p style="margin:0 0 16px;font-size:13px;color:#475569;line-height:1.6;">
+            支持 <strong>3～16 位小朋友</strong> 线下轮流上台两两 PK！自动随机抽签、非 2 的幂次（如 5 人、6 人）自动安排轮空晋级，屏幕上自动叫号、实时生成<strong>晋级对阵图</strong>，完赛自动颁发冠亚军并永久存档！
+          </p>
+
+          <div class="control-bar" style="flex-direction:column;align-items:stretch;gap:12px;">
+            <div class="control-group" style="justify-content:space-between;flex-wrap:wrap;">
+              <span>👥 参赛人数（3～16人）：</span>
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+                <button type="button" class="icon-btn" data-quick-count="4">4 人赛</button>
+                <button type="button" class="icon-btn" data-quick-count="5">5 人(带轮空)</button>
+                <button type="button" class="icon-btn" data-quick-count="6">6 人(带轮空)</button>
+                <button type="button" class="icon-btn" data-quick-count="8">8 人赛</button>
+                <input type="number" id="tourPlayerCount" class="range-num-input" min="3" max="16" value="8" />
+                <button type="button" id="btnTourRandomNames" class="icon-btn">🎲 换一批数学家</button>
+              </div>
+            </div>
+
+            <div>
+              <div style="font-size:12px;font-weight:700;color:#475569;">📝 参赛选手名单（可直接修改为小朋友的真实姓名）：</div>
+              <div id="tourRosterGrid" class="player-roster-grid"></div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;padding-top:8px;border-top:1px dashed #cbd5e1;">
+              <div class="control-group">
+                <label for="tourFormatSelect">赛制：</label>
+                <select id="tourFormatSelect">
+                  <option value="elimination" selected>🏆 单败淘汰赛（默认 · 带晋级图）</option>
+                  <option value="round-robin">🔄 单循环积分赛（两两交手）</option>
+                </select>
+              </div>
+              <div class="control-group">
+                <label for="tourRoundsSelect">每场题数：</label>
+                <select id="tourRoundsSelect">
+                  <option value="5">5 局快战</option>
+                  <option value="10" selected>10 局标准</option>
+                  <option value="20">20 局大战</option>
+                </select>
+              </div>
+              <div class="control-group">
+                <label for="tourModeSelect">玩法：</label>
+                <select id="tourModeSelect">
+                  <option value="forward">正算填数</option>
+                  <option value="reverse">反算求根</option>
+                  <option value="mixed" selected>正反混合</option>
+                  <option value="choice-mixed">高迷惑选择题</option>
+                </select>
+              </div>
+              <div class="control-group">
+                <label for="tourTimeLimitSelect">每题限时：</label>
+                <select id="tourTimeLimitSelect">
+                  <option value="15">15 秒</option>
+                  <option value="20">20 秒</option>
+                  <option value="30" selected>30 秒</option>
+                </select>
+              </div>
+              <div class="control-group">
+                <span>范围：</span>
+                <input type="number" id="tourMinInput" class="range-num-input" min="1" max="100" value="11" />
+                <span>～</span>
+                <input type="number" id="tourMaxInput" class="range-num-input" min="1" max="100" value="30" />
+              </div>
+              <div class="control-group">
+                <label for="tourFilterSelect">筛选：</label>
+                <select id="tourFilterSelect">
+                  <option value="all" selected>全部数字</option>
+                  <option value="prime">✨ 只选质数</option>
+                  <option value="ending5">⚡ 只选尾数 5</option>
+                  <option value="no-tens">🎯 排除整十数</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" id="btnTourCreate" class="btn btn-primary" style="width:100%;padding:14px;font-size:17px;">
+            🎲 随机抽签生成对阵图，开启争霸赛！
+          </button>
+        </div>
+
+        <div id="tourStageBox" style="display:none;"></div>
+
+        <!-- 历届争霸赛档案 -->
+        <div id="tourArchiveBox" class="leaderboard-card"></div>
+      </div>
+    </section>
   </main>
 
-  <!-- 全屏双人 180° 正反竞技场 -->
+  <!-- 全屏双人 180° 正反竞技场（带 30 秒绿→黄→红渐变倒计时条） -->
   <div id="pkArenaOverlay" class="pk-arena-overlay">
     <div id="pkHalfB" class="pk-half player-b"></div>
     <div class="pk-divider">
-      <span id="pkDividerTitle">⚔️ 第 1 / 10 局</span>
-      <button type="button" id="btnPkExit" class="pk-exit-btn">退出 PK</button>
+      <div class="pk-divider-top">
+        <span id="pkDividerTitle">⚔️ 第 1 / 10 局</span>
+        <span id="pkTimerText" style="font-family:var(--font-mono);color:#10b981;">⏱️ 30.0s</span>
+        <button type="button" id="btnPkExit" class="pk-exit-btn">退出 PK</button>
+      </div>
+      <div class="pk-timer-track">
+        <div id="pkTimerFill" class="pk-timer-fill"></div>
+      </div>
     </div>
     <div id="pkHalfA" class="pk-half player-a"></div>
   </div>
@@ -300,10 +407,12 @@
   <script src="js/engine.js"></script>
   <script src="js/records.js"></script>
   <script src="js/tricks.js"></script>
+  <script src="js/tournamentEngine.js"></script>
   <script src="js/sound.js"></script>
   <script src="js/chartView.js"></script>
   <script src="js/soloGame.js"></script>
   <script src="js/pkGame.js"></script>
+  <script src="js/tournamentView.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
