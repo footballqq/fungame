@@ -26,8 +26,10 @@
   function initTournamentView() {
     const countInput = document.getElementById('tourPlayerCount');
     const formatSelect = document.getElementById('tourFormatSelect');
+    const ruleSelect = document.getElementById('tourRuleSelect');
     const roundsSelect = document.getElementById('tourRoundsSelect');
     const modeSelect = document.getElementById('tourModeSelect');
+    const rangeSelect = document.getElementById('tourRangeSelect');
     const minInput = document.getElementById('tourMinInput');
     const maxInput = document.getElementById('tourMaxInput');
     const filterSelect = document.getElementById('tourFilterSelect');
@@ -42,6 +44,22 @@
 
     if (!rosterGrid || !createBtn) return;
 
+    if (rangeSelect) {
+      rangeSelect.addEventListener('change', function () {
+        if (rangeSelect.value !== 'custom') {
+          const parts = rangeSelect.value.split('-').map(Number);
+          if (minInput) minInput.value = String(parts[0] || 11);
+          if (maxInput) maxInput.value = String(parts[1] || 30);
+        }
+      });
+    }
+    if (minInput && rangeSelect) {
+      minInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
+    }
+    if (maxInput && rangeSelect) {
+      maxInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });
+    }
+
     const store = root.SquaresTournamentEngine.createTournamentStore();
     let currentTour = null;
     let lastMatchNotice = '';
@@ -50,20 +68,42 @@
       const count = Math.max(3, Math.min(16, parseInt(countInput.value, 10) || 8));
       countInput.value = String(count);
 
+      // 根据人数自动设置对称阵型列数（4人->2x2，5-6人->3x2，7+人->4列矩阵）
+      const formationClass = count <= 4 ? 'formation-2' : count <= 6 ? 'formation-3' : 'formation-4';
+      rosterGrid.className = 'player-roster-grid ' + formationClass;
+
       const oldValues = [];
       if (preserveExisting) {
         rosterGrid.querySelectorAll('input').forEach(function (inp) {
-          oldValues.push(inp.value);
+          oldValues.push(inp.value.trim());
         });
       }
 
-      const defaults = pickUniqueMathematicians(count);
+      // 严格去重，彻底避免新增人数时出现重名数学家（如两个“费马”）
+      const used = new Set();
+      const shuffledPool = pickUniqueMathematicians(Math.max(count, 14));
+      let poolCursor = 0;
+
+      function nextUnusedName(fallbackIdx) {
+        while (poolCursor < shuffledPool.length) {
+          const cand = shuffledPool[poolCursor++];
+          if (!used.has(cand)) return cand;
+        }
+        return '选手' + (fallbackIdx + 1);
+      }
+
       const html = [];
       for (let i = 0; i < count; i++) {
-        const val = preserveExisting && oldValues[i] ? oldValues[i] : defaults[i];
+        let val = '';
+        if (preserveExisting && oldValues[i] && !used.has(oldValues[i])) {
+          val = oldValues[i];
+        } else {
+          val = nextUnusedName(i);
+        }
+        used.add(val);
         html.push(
           '<div class="roster-item">' +
-            '<span class="roster-idx">#' + (i + 1) + '</span>' +
+            '<span class="roster-idx">' + (i + 1) + '</span>' +
             '<input type="text" maxlength="10" value="' + val + '" placeholder="选手' + (i + 1) + '" />' +
           '</div>'
         );
@@ -91,7 +131,7 @@
         filterType: filterType,
         mode: parsed.mode,
         inputType: parsed.inputType,
-        ruleType: 'race', // 联赛默认抢答比谁快！
+        ruleType: ruleSelect ? ruleSelect.value : 'race',
         timeLimitSec: Number(timeLimitSelect.value) || 30,
         rangeLabel:
           norm.minN + '～' + norm.maxN + (filterType === 'prime' ? '(质数)' : filterType === 'ending5' ? '(尾5)' : ''),

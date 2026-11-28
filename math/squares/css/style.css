@@ -704,38 +704,160 @@ html, body {
 }
 
 /* ==================== 争霸联赛与晋级对阵图 ==================== */
+.tour-panel-box {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.tour-roster-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tour-quick-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
 .player-roster-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   gap: 8px;
-  margin-top: 8px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.player-roster-grid.formation-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.player-roster-grid.formation-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.player-roster-grid.formation-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 720px) {
+  .player-roster-grid,
+  .player-roster-grid.formation-3,
+  .player-roster-grid.formation-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .roster-item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: #fff;
-  border: 1px solid #cbd5e1;
-  border-radius: 10px;
-  padding: 6px 8px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 8px 10px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.roster-item:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
 }
 
 .roster-idx {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
   font-size: 11px;
-  font-weight: 800;
-  color: var(--muted);
-  min-width: 18px;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .roster-item input {
   width: 100%;
+  min-width: 0;
   border: none;
   outline: none;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 800;
   color: var(--ink);
   background: transparent;
+}
+
+.tour-config-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #cbd5e1;
+}
+
+@media (max-width: 900px) {
+  .tour-config-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .tour-config-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tour-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.tour-field label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.tour-field select,
+.tour-field input[type='number'] {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.tour-range-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tour-range-row select {
+  flex: 1.4;
+  min-width: 0;
+}
+
+.tour-range-row .range-num-input {
+  width: 56px;
+  flex-shrink: 0;
+  padding: 8px 4px;
 }
 
 .call-stage-card {

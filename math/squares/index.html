@@ -45,6 +45,7 @@
               <option value="11-50" selected>11²～50² 进阶上册（A4 一页大字）</option>
               <option value="51-99">51²～99² 高阶下册（A4 一页大字）</option>
               <option value="51-100">51²～100² 高阶含100（A4 一页）</option>
+              <option value="11-99">11²～99² 两位数全集</option>
               <option value="11-100">11²～100² 完整大师版</option>
               <option value="1-100">1²～100² 全览 100 组</option>
               <option value="custom">自定义范围</option>
@@ -158,6 +159,7 @@
               <option value="11-50">11～50（进阶）</option>
               <option value="51-99">51～99（高阶）</option>
               <option value="51-100">51～100（含100）</option>
+              <option value="11-99">11～99（两位全集）</option>
               <option value="11-100">11～100（大师）</option>
               <option value="1-100">1～100（全部）</option>
               <option value="custom">自定义</option>
@@ -234,7 +236,9 @@
                 <option value="11-50">11～50（进阶对决）</option>
                 <option value="51-99">51～99（高阶对决）</option>
                 <option value="51-100">51～100（含100）</option>
+                <option value="11-99">11～99（两位全集）</option>
                 <option value="11-100">11～100（大师终极）</option>
+                <option value="1-100">1～100（全部）</option>
                 <option value="custom">自定义</option>
               </select>
               <input type="number" id="pkMinInput" class="range-num-input" min="1" max="100" value="11" aria-label="PK起始数" />
@@ -306,71 +310,99 @@
             支持 <strong>3～16 位小朋友</strong> 线下轮流上台两两 PK！自动随机抽签、非 2 的幂次（如 5 人、6 人）自动安排轮空晋级，屏幕上自动叫号、实时生成<strong>晋级对阵图</strong>，完赛自动颁发冠亚军并永久存档！
           </p>
 
-          <div class="control-bar" style="flex-direction:column;align-items:stretch;gap:12px;">
-            <div class="control-group" style="justify-content:space-between;flex-wrap:wrap;">
-              <span>👥 参赛人数（3～16人）：</span>
-              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
-                <button type="button" class="icon-btn" data-quick-count="4">4 人赛</button>
-                <button type="button" class="icon-btn" data-quick-count="5">5 人(带轮空)</button>
-                <button type="button" class="icon-btn" data-quick-count="6">6 人(带轮空)</button>
-                <button type="button" class="icon-btn" data-quick-count="8">8 人赛</button>
-                <input type="number" id="tourPlayerCount" class="range-num-input" min="3" max="16" value="8" />
+          <div class="tour-panel-box">
+            <div class="tour-roster-head">
+              <div style="font-size:13px;font-weight:800;color:#334155;">
+                👥 参赛阵型（3～16人，可直接改小朋友姓名）：
+              </div>
+              <div class="tour-quick-bar">
+                <button type="button" class="icon-btn" data-quick-count="4">4人</button>
+                <button type="button" class="icon-btn" data-quick-count="5">5人(轮空)</button>
+                <button type="button" class="icon-btn" data-quick-count="6">6人(轮空)</button>
+                <button type="button" class="icon-btn" data-quick-count="8">8人</button>
+                <input type="number" id="tourPlayerCount" class="range-num-input" min="3" max="16" value="8" aria-label="参赛人数" />
                 <button type="button" id="btnTourRandomNames" class="icon-btn">🎲 换一批数学家</button>
               </div>
             </div>
 
-            <div>
-              <div style="font-size:12px;font-weight:700;color:#475569;">📝 参赛选手名单（可直接修改为小朋友的真实姓名）：</div>
-              <div id="tourRosterGrid" class="player-roster-grid"></div>
-            </div>
+            <div id="tourRosterGrid" class="player-roster-grid formation-4"></div>
 
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;padding-top:8px;border-top:1px dashed #cbd5e1;">
-              <div class="control-group">
-                <label for="tourFormatSelect">赛制：</label>
+            <div class="tour-config-grid">
+              <div class="tour-field">
+                <label for="tourFormatSelect">🏆 赛制模式</label>
                 <select id="tourFormatSelect">
-                  <option value="elimination" selected>🏆 单败淘汰赛（默认 · 带晋级图）</option>
-                  <option value="round-robin">🔄 单循环积分赛（两两交手）</option>
+                  <option value="elimination" selected>单败淘汰赛（带晋级图）</option>
+                  <option value="round-robin">单循环积分赛（两两交手）</option>
                 </select>
               </div>
-              <div class="control-group">
-                <label for="tourRoundsSelect">每场题数：</label>
+
+              <div class="tour-field">
+                <label for="tourRuleSelect">⚖️ 判分方式</label>
+                <select id="tourRuleSelect">
+                  <option value="race" selected>⚡ 抢答比快（默认）</option>
+                  <option value="both">⚖️ 同题双计（同分比速）</option>
+                </select>
+              </div>
+
+              <div class="tour-field">
+                <label for="tourRoundsSelect">🔢 每场题数</label>
                 <select id="tourRoundsSelect">
                   <option value="5">5 局快战</option>
                   <option value="10" selected>10 局标准</option>
                   <option value="20">20 局大战</option>
                 </select>
               </div>
-              <div class="control-group">
-                <label for="tourModeSelect">玩法：</label>
+
+              <div class="tour-field">
+                <label for="tourModeSelect">🎯 对战玩法</label>
                 <select id="tourModeSelect">
-                  <option value="forward">正算填数</option>
-                  <option value="reverse">反算求根</option>
-                  <option value="mixed" selected>正反混合</option>
-                  <option value="choice-mixed">高迷惑选择题</option>
+                  <option value="forward">正算填数（给n填n²）</option>
+                  <option value="reverse">反算求根（给n²填n）</option>
+                  <option value="mixed" selected>正反混合填数</option>
+                  <option value="choice-forward">高迷惑选择题 · 正算</option>
+                  <option value="choice-reverse">高迷惑选择题 · 反算</option>
+                  <option value="choice-mixed">高迷惑选择题 · 混合</option>
                 </select>
               </div>
-              <div class="control-group">
-                <label for="tourTimeLimitSelect">每题限时：</label>
+
+              <div class="tour-field">
+                <label for="tourTimeLimitSelect">⏱️ 每题倒计时</label>
                 <select id="tourTimeLimitSelect">
-                  <option value="15">15 秒</option>
-                  <option value="20">20 秒</option>
-                  <option value="30" selected>30 秒</option>
+                  <option value="15">15 秒（极速心跳）</option>
+                  <option value="20">20 秒（紧张刺激）</option>
+                  <option value="30" selected>30 秒（推荐标准）</option>
+                  <option value="45">45 秒（宽松思考）</option>
                 </select>
               </div>
-              <div class="control-group">
-                <span>范围：</span>
-                <input type="number" id="tourMinInput" class="range-num-input" min="1" max="100" value="11" />
-                <span>～</span>
-                <input type="number" id="tourMaxInput" class="range-num-input" min="1" max="100" value="30" />
-              </div>
-              <div class="control-group">
-                <label for="tourFilterSelect">筛选：</label>
+
+              <div class="tour-field">
+                <label for="tourFilterSelect">✨ 趣味数字筛选</label>
                 <select id="tourFilterSelect">
                   <option value="all" selected>全部数字</option>
                   <option value="prime">✨ 只选质数</option>
                   <option value="ending5">⚡ 只选尾数 5</option>
                   <option value="no-tens">🎯 排除整十数</option>
                 </select>
+              </div>
+
+              <div class="tour-field" style="grid-column: 1 / -1;">
+                <label for="tourRangeSelect">📐 数字范围（快捷预设或自由输入）</label>
+                <div class="tour-range-row">
+                  <select id="tourRangeSelect">
+                    <option value="11-25">11～25（亲子热身）</option>
+                    <option value="11-30" selected>11～30（必背巅峰）</option>
+                    <option value="11-50">11～50（进阶对决）</option>
+                    <option value="51-99">51～99（高阶对决）</option>
+                    <option value="51-100">51～100（含100）</option>
+                    <option value="11-99">11～99（两位全集）</option>
+                    <option value="11-100">11～100（大师终极）</option>
+                    <option value="1-100">1～100（全部）</option>
+                    <option value="custom">自定义范围</option>
+                  </select>
+                  <input type="number" id="tourMinInput" class="range-num-input" min="1" max="100" value="11" aria-label="联赛起始数" />
+                  <span style="font-weight:800;color:#64748b;">～</span>
+                  <input type="number" id="tourMaxInput" class="range-num-input" min="1" max="100" value="30" aria-label="联赛结束数" />
+                </div>
               </div>
             </div>
           </div>
