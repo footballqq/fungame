@@ -73,7 +73,9 @@
 
     if (randomNamesBtn) {
       randomNamesBtn.addEventListener('click', function () {
-        const pair = root.SquaresRecords.pickRandomPair();
+        const pair = root.SquaresRecords.pickRandomPairWithAvatars
+          ? root.SquaresRecords.pickRandomPairWithAvatars()
+          : root.SquaresRecords.pickRandomPair();
         if (nameAInput) nameAInput.value = pair[0];
         if (nameBInput) nameBInput.value = pair[1];
       });

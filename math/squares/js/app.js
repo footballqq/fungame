@@ -109,18 +109,27 @@
             '）'
           : '（下一场：' + tourSummary.nextMatchTitle + '）';
 
+        const fmtText =
+          tourSummary.format === 'elimination'
+            ? '淘汰赛'
+            : tourSummary.format === 'team-gauntlet'
+              ? '组队擂台赛'
+              : '循环赛';
+        const progressText =
+          tourSummary.format === 'team-gauntlet'
+            ? '已战 ' + tourSummary.doneCount + ' 场'
+            : '已完赛 ' + tourSummary.doneCount + '/' + tourSummary.totalCount + ' 场';
+
         resumeBanner.style.display = 'flex';
         resumeBanner.innerHTML =
           '<div class="resume-banner-info">' +
             '💾 发现未完成的争霸赛存档：<strong>' +
             tourSummary.playerCount +
             '人' +
-            (tourSummary.format === 'elimination' ? '淘汰赛' : '循环赛') +
-            '</strong> · 已完赛 ' +
-            tourSummary.doneCount +
-            '/' +
-            tourSummary.totalCount +
-            ' 场 ' +
+            fmtText +
+            '</strong> · ' +
+            progressText +
+            ' ' +
             pkHint +
           '</div>' +
           '<div class="resume-banner-actions">' +

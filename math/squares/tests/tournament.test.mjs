@@ -117,3 +117,49 @@ test('中途自动存盘与断线读档：未完赛可精确恢复晋级进度�
   store.saveActiveTournament(restored.tournament, '');
   assert.equal(store.loadActiveTournament(), null);
 });
+
+test('7 人组队擂台赛（4 vs 3）：赢家守擂、输家换下一位，支持中途存盘读档直到一方全灭决出胜队', () => {
+  const players = ['🍎 祖冲之', '🐼 牛顿', '🦖 高斯', '🚀 欧拉', '🦊 费马', '🐧 爱因斯坦', '🍓 居里夫人'];
+  const tour = Tour.createTeamGauntletTournament(players, {
+    totalRounds: 10,
+    minN: 11,
+    maxN: 30,
+    noShuffle: true,
+  });
+
+  assert.equal(tour.format, 'team-gauntlet');
+  assert.equal(tour.gauntlet.teamA.length, 4);
+  assert.equal(tour.gauntlet.teamB.length, 3);
+
+  // 第 1 场：蓝队1号(祖冲之) 胜 红队1号(费马)，祖冲之守擂 1 连胜，红队换2号(爱因斯坦)上场
+  const m1 = Tour.getNextReadyMatch(tour);
+  assert.equal(m1.playerA, '🍎 祖冲之');
+  assert.equal(m1.playerB, '🦊 费马');
+  Tour.recordTournamentMatchResult(tour, m1.id, 8, 4, 'A');
+  assert.equal(tour.gauntlet.streakA, 1);
+  assert.equal(tour.gauntlet.idxB, 1);
+
+  // 模拟中途刷新断点续传
+  const store = Tour.createTournamentStore(createMemStorage());
+  store.saveActiveTournament(tour, '祖冲之守擂成功');
+  const restored = store.loadActiveTournament().tournament;
+
+  // 第 2 场：蓝队1号(祖冲之) 继续守擂 vs 红队2号(爱因斯坦)，假设爱因斯坦反杀
+  const m2 = Tour.getNextReadyMatch(restored);
+  assert.equal(m2.playerA, '🍎 祖冲之');
+  assert.equal(m2.playerB, '🐧 爱因斯坦');
+  Tour.recordTournamentMatchResult(restored, m2.id, 5, 9, 'B');
+  assert.equal(restored.gauntlet.idxA, 1);
+  assert.equal(restored.gauntlet.streakB, 1);
+
+  // 后续全部由蓝队获胜，直到红队 3 人全灭
+  let next;
+  while ((next = Tour.getNextReadyMatch(restored))) {
+    Tour.recordTournamentMatchResult(restored, next.id, 10, 2, 'A');
+  }
+
+  assert.equal(restored.status, 'finished');
+  assert.ok(restored.champion.includes('蓝队'));
+  assert.equal(restored.runnerUp, '🟠 红队');
+  assert.ok(restored.mvp);
+});

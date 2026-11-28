@@ -213,6 +213,71 @@
     };
   }
 
+  /**
+   * 创建组队擂台赛（中日擂台赛 / 车轮战模式）：
+   * 随机平均分成蓝队与红队（奇数人如 7 人则 4 vs 3）；赢家守擂不动、输家淘汰由同队下一位登台，直到一方全灭！
+   */
+  function createTeamGauntletTournament(playerNames, config) {
+    const cleaned = playerNames
+      .map(function (s) {
+        return String(s || '').trim();
+      })
+      .filter(Boolean);
+    if (cleaned.length < 2) {
+      throw new Error('至少需要 2 名选手才能开启组队擂台赛');
+    }
+
+    const shuffled = config && config.noShuffle ? cleaned.slice() : shuffle(cleaned);
+    const splitAt = Math.ceil(shuffled.length / 2);
+    const teamA = shuffled.slice(0, splitAt);
+    const teamB = shuffled.slice(splitAt);
+
+    const winsByPlayer = {};
+    shuffled.forEach(function (name) {
+      winsByPlayer[name] = 0;
+    });
+
+    const firstMatch = {
+      id: 'g-m0',
+      roundIndex: 0,
+      matchIndex: 0,
+      roundTitle: '擂台第 1 场',
+      playerA: teamA[0],
+      playerB: teamB[0],
+      scoreA: 0,
+      scoreB: 0,
+      winner: null,
+      loser: null,
+      isBye: false,
+      status: 'ready',
+    };
+
+    return {
+      id: 'tour-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
+      format: 'team-gauntlet',
+      createdAt: new Date().toISOString(),
+      config: config || {},
+      players: shuffled,
+      rounds: [{ title: '组队擂台战', matches: [firstMatch] }],
+      gauntlet: {
+        teamAName: '🔵 蓝队',
+        teamBName: '🟠 红队',
+        teamA: teamA,
+        teamB: teamB,
+        idxA: 0,
+        idxB: 0,
+        streakA: 0,
+        streakB: 0,
+        winsByPlayer: winsByPlayer,
+      },
+      status: 'ongoing',
+      champion: null,
+      runnerUp: null,
+      mvp: null,
+      rankings: [],
+    };
+  }
+
   function findMatchById(tournament, matchId) {
     for (const round of tournament.rounds) {
       for (const m of round.matches) {
@@ -299,6 +364,63 @@
       } else {
         advanceWinnerToNextRound(tournament, match.roundIndex, match.matchIndex, winnerName);
         resolveByesAndReadyStates(tournament);
+      }
+    } else if (tournament.format === 'team-gauntlet' && tournament.gauntlet) {
+      const g = tournament.gauntlet;
+      const winnerName = match.winner || (scoreA >= scoreB ? match.playerA : match.playerB);
+      match.winner = winnerName;
+      match.loser = winnerName === match.playerA ? match.playerB : match.playerA;
+      g.winsByPlayer[winnerName] = (g.winsByPlayer[winnerName] || 0) + 1;
+
+      if (winnerName === match.playerA) {
+        g.streakA += 1;
+        g.streakB = 0;
+        g.idxB += 1;
+      } else {
+        g.streakB += 1;
+        g.streakA = 0;
+        g.idxA += 1;
+      }
+
+      if (g.idxA >= g.teamA.length || g.idxB >= g.teamB.length) {
+        tournament.status = 'finished';
+        const blueWon = g.idxB >= g.teamB.length;
+        const remainCount = blueWon ? g.teamA.length - g.idxA : g.teamB.length - g.idxB;
+        tournament.champion = (blueWon ? g.teamAName : g.teamBName) + '（剩 ' + remainCount + ' 人）';
+        tournament.runnerUp = blueWon ? g.teamBName : g.teamAName;
+
+        const sortedPlayers = tournament.players
+          .slice()
+          .sort(function (a, b) {
+            return (g.winsByPlayer[b] || 0) - (g.winsByPlayer[a] || 0);
+          });
+        const topPlayer = sortedPlayers[0];
+        const topWins = topPlayer ? g.winsByPlayer[topPlayer] || 0 : 0;
+        tournament.mvp = topPlayer ? topPlayer + '（' + topWins + ' 胜）' : null;
+        tournament.rankings = sortedPlayers.map(function (name, i) {
+          const teamTag = g.teamA.indexOf(name) >= 0 ? '蓝队' : '红队';
+          return {
+            rank: i + 1,
+            name: name,
+            detail: teamTag + ' · ' + (g.winsByPlayer[name] || 0) + '胜',
+          };
+        });
+      } else {
+        const nextIndex = tournament.rounds[0].matches.length;
+        tournament.rounds[0].matches.push({
+          id: 'g-m' + nextIndex,
+          roundIndex: 0,
+          matchIndex: nextIndex,
+          roundTitle: '擂台第 ' + (nextIndex + 1) + ' 场',
+          playerA: g.teamA[g.idxA],
+          playerB: g.teamB[g.idxB],
+          scoreA: 0,
+          scoreB: 0,
+          winner: null,
+          loser: null,
+          isBye: false,
+          status: 'ready',
+        });
       }
     } else {
       // 循环赛：检查是否全部场次打完
@@ -477,6 +599,7 @@
   return {
     createEliminationTournament: createEliminationTournament,
     createRoundRobinTournament: createRoundRobinTournament,
+    createTeamGauntletTournament: createTeamGauntletTournament,
     getNextReadyMatch: getNextReadyMatch,
     recordTournamentMatchResult: recordTournamentMatchResult,
     computeRoundRobinStandings: computeRoundRobinStandings,

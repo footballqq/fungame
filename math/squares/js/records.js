@@ -76,6 +76,31 @@
     '门捷列夫',
   ];
 
+  // 60 个高辨识度趣味专属头像（水果、萌宠、宇宙、美食等，记不住名字也能一眼认出自己！）
+  const AVATARS = [
+    '🍎', '🍐', '🍊', '🍋', '🍉', '🍇', '🍓', '🫐', '🍒', '🍑',
+    '🥭', '🍍', '🥥', '🥝', '🥑', '🌽', '🥕', '🍄', '🍩', '🍦',
+    '🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼', '🐨', '🐯',
+    '🦁', '🐮', '🐷', '🐸', '🐵', '🐔', '🐧', '🦉', '🦆', '🦄',
+    '🐝', '🦋', '🐢', '🐙', '🐳', '🐬', '🦖', '🦩', '🦜', '🦔',
+    '🚀', '🛸', '🌟', '⚡', '🔥', '🌈', '🎈', '⚽', '🏀', '🎯',
+  ];
+
+  function pickUniqueAvatars(count) {
+    const pool = AVATARS.slice();
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = pool[i];
+      pool[i] = pool[j];
+      pool[j] = tmp;
+    }
+    const res = [];
+    for (let i = 0; i < count; i++) {
+      res.push(pool[i % pool.length]);
+    }
+    return res;
+  }
+
   function pickRandomMathematician(excludeName) {
     const pool = MATHEMATICIANS.filter(function (name) {
       return name !== excludeName;
@@ -87,6 +112,12 @@
     const first = pickRandomMathematician();
     const second = pickRandomMathematician(first);
     return [first, second];
+  }
+
+  function pickRandomPairWithAvatars() {
+    const pair = pickRandomPair();
+    const avatars = pickUniqueAvatars(2);
+    return [avatars[0] + ' ' + pair[0], avatars[1] + ' ' + pair[1]];
   }
 
   function getStarRank(stars) {
@@ -277,8 +308,11 @@
 
   return {
     MATHEMATICIANS: MATHEMATICIANS,
+    AVATARS: AVATARS,
+    pickUniqueAvatars: pickUniqueAvatars,
     pickRandomMathematician: pickRandomMathematician,
     pickRandomPair: pickRandomPair,
+    pickRandomPairWithAvatars: pickRandomPairWithAvatars,
     getStarRank: getStarRank,
     createRecordsService: createRecordsService,
   };

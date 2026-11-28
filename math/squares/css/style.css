@@ -784,8 +784,8 @@ html, body {
 }
 
 .roster-idx {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 999px;
   background: #eef2ff;
   color: #4338ca;
@@ -795,6 +795,127 @@ html, body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.roster-avatar-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  transition: transform 0.12s, border-color 0.15s, background 0.15s;
+}
+
+.roster-avatar-btn:hover {
+  border-color: var(--primary);
+  background: #eef2ff;
+}
+
+.roster-avatar-btn:active {
+  transform: scale(0.9);
+}
+
+/* 组队擂台赛（中日擂台赛 / 红蓝车轮战）双队阵型卡片 */
+.gauntlet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+@media (max-width: 680px) {
+  .gauntlet-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gauntlet-team-card {
+  border-radius: 18px;
+  padding: 14px;
+  border: 2px solid #cbd5e1;
+  background: #fff;
+}
+
+.gauntlet-team-card.team-a {
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.gauntlet-team-card.team-b {
+  border-color: #fdba74;
+  background: #fff7ed;
+}
+
+.gauntlet-team-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.gauntlet-member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.gauntlet-member {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 11px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.gauntlet-member.is-fighting {
+  border-color: #f59e0b;
+  background: #fffbeb;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.22);
+}
+
+.gauntlet-member.is-eliminated {
+  opacity: 0.55;
+  text-decoration: line-through;
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.gauntlet-badge {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.gauntlet-badge.fight {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.gauntlet-badge.wait {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.gauntlet-badge.out {
+  background: #e2e8f0;
+  color: #64748b;
 }
 
 .roster-item input {

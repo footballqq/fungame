@@ -82,16 +82,23 @@
       rosterGrid.className = 'player-roster-grid ' + formationClass;
 
       const oldValues = [];
+      const oldAvatars = [];
       if (preserveExisting) {
-        rosterGrid.querySelectorAll('input').forEach(function (inp) {
-          oldValues.push(inp.value.trim());
+        rosterGrid.querySelectorAll('.roster-item').forEach(function (item) {
+          const inp = item.querySelector('input');
+          const avBtn = item.querySelector('.roster-avatar-btn');
+          oldValues.push(inp ? inp.value.trim() : '');
+          oldAvatars.push(avBtn ? avBtn.getAttribute('data-avatar') || '' : '');
         });
       }
 
-      // 严格去重，彻底避免新增人数时出现重名数学家（从 60 位古今中外名家库随机抽取）
+      // 严格去重，彻底避免新增人数时出现重名数学家或重复头像（从 60 位名家库与 60 个头像库随机抽取）
       const used = new Set();
+      const usedAvatars = new Set();
       const shuffledPool = pickUniqueMathematicians(root.SquaresRecords.MATHEMATICIANS.length);
+      const shuffledAvatars = root.SquaresRecords.pickUniqueAvatars(root.SquaresRecords.AVATARS.length);
       let poolCursor = 0;
+      let avatarCursor = 0;
 
       function nextUnusedName(fallbackIdx) {
         while (poolCursor < shuffledPool.length) {
@@ -99,6 +106,14 @@
           if (!used.has(cand)) return cand;
         }
         return '选手' + (fallbackIdx + 1);
+      }
+
+      function nextUnusedAvatar() {
+        while (avatarCursor < shuffledAvatars.length) {
+          const cand = shuffledAvatars[avatarCursor++];
+          if (!usedAvatars.has(cand)) return cand;
+        }
+        return '⭐';
       }
 
       const html = [];
@@ -110,21 +125,53 @@
           val = nextUnusedName(i);
         }
         used.add(val);
+
+        let av = '';
+        if (preserveExisting && oldAvatars[i] && !usedAvatars.has(oldAvatars[i])) {
+          av = oldAvatars[i];
+        } else {
+          av = nextUnusedAvatar();
+        }
+        usedAvatars.add(av);
+
         html.push(
           '<div class="roster-item">' +
             '<span class="roster-idx">' + (i + 1) + '</span>' +
+            '<button type="button" class="roster-avatar-btn" data-avatar="' + av + '" title="点一下换一个趣味头像">' + av + '</button>' +
             '<input type="text" maxlength="10" value="' + val + '" placeholder="选手' + (i + 1) + '" />' +
           '</div>'
         );
       }
       rosterGrid.innerHTML = html.join('');
+
+      // 点击头像按钮可随时换一个当前场上未使用的趣味头像
+      rosterGrid.querySelectorAll('.roster-avatar-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const currentSet = new Set();
+          rosterGrid.querySelectorAll('.roster-avatar-btn').forEach(function (b) {
+            currentSet.add(b.getAttribute('data-avatar'));
+          });
+          const candidates = root.SquaresRecords.AVATARS.filter(function (a) {
+            return !currentSet.has(a);
+          });
+          const nextAv =
+            candidates.length > 0
+              ? candidates[Math.floor(Math.random() * candidates.length)]
+              : root.SquaresRecords.AVATARS[Math.floor(Math.random() * root.SquaresRecords.AVATARS.length)];
+          btn.setAttribute('data-avatar', nextAv);
+          btn.textContent = nextAv;
+        });
+      });
     }
 
     function startTournament() {
       const names = [];
-      rosterGrid.querySelectorAll('input').forEach(function (inp, idx) {
-        const v = inp.value.trim() || '选手' + (idx + 1);
-        names.push(v);
+      rosterGrid.querySelectorAll('.roster-item').forEach(function (item, idx) {
+        const inp = item.querySelector('input');
+        const avBtn = item.querySelector('.roster-avatar-btn');
+        const av = avBtn ? avBtn.getAttribute('data-avatar') || '' : '';
+        const v = (inp ? inp.value.trim() : '') || '选手' + (idx + 1);
+        names.push(av ? av + ' ' + v : v);
       });
 
       const norm = root.SquaresEngine.normalizeRange(minInput.value, maxInput.value);
@@ -150,7 +197,9 @@
       currentTour =
         fmt === 'round-robin'
           ? root.SquaresTournamentEngine.createRoundRobinTournament(names, config)
-          : root.SquaresTournamentEngine.createEliminationTournament(names, config);
+          : fmt === 'team-gauntlet'
+            ? root.SquaresTournamentEngine.createTeamGauntletTournament(names, config)
+            : root.SquaresTournamentEngine.createEliminationTournament(names, config);
 
       lastMatchNotice = '';
       store.saveActiveTournament(currentTour, lastMatchNotice);
@@ -164,8 +213,11 @@
 
     function handleTournamentMatchComplete(match, res) {
       if (!currentTour || !match) return;
-      // 淘汰赛若极端 0:0 或完全同毫秒平局，默认 A 晋级或提示；有得分差/时间差已由 winnerKey 裁决
-      const side = res.winnerKey === 'draw' && currentTour.format === 'elimination' ? 'A' : res.winnerKey;
+      // 淘汰赛与组队擂台赛若极端 0:0 或完全同毫秒平局，默认 A 胜出；有得分差/时间差已由 winnerKey 裁决
+      const side =
+        res.winnerKey === 'draw' && (currentTour.format === 'elimination' || currentTour.format === 'team-gauntlet')
+          ? 'A'
+          : res.winnerKey;
       root.SquaresTournamentEngine.recordTournamentMatchResult(
         currentTour,
         match.id,
@@ -317,29 +369,120 @@
       );
     }
 
+    function renderGauntletHtml() {
+      const g = currentTour.gauntlet;
+      if (!g) return '';
+
+      function renderTeamCard(teamList, curIdx, streak, isTeamA) {
+        const remain = Math.max(0, teamList.length - curIdx);
+        const title = isTeamA ? '🔵 蓝队阵型' : '🟠 红队阵型';
+        const rows = teamList
+          .map(function (name, idx) {
+            const wins = g.winsByPlayer[name] || 0;
+            let cls = 'gauntlet-member';
+            let badgeHtml = '';
+            if (idx < curIdx) {
+              cls += ' is-eliminated';
+              badgeHtml = '<span class="gauntlet-badge out">已下场' + (wins > 0 ? ' · ' + wins + '胜' : '') + '</span>';
+            } else if (idx === curIdx && currentTour.status !== 'finished') {
+              cls += ' is-fighting';
+              badgeHtml =
+                '<span class="gauntlet-badge fight">' +
+                (streak > 0 ? '🔥 守擂 ' + streak + ' 连胜' : '⚔️ 正在台上') +
+                '</span>';
+            } else {
+              badgeHtml =
+                '<span class="gauntlet-badge wait">' +
+                (idx === teamList.length - 1 ? '👑 压轴主将' : '第 ' + (idx + 1) + ' 顺位待命') +
+                '</span>';
+            }
+            return (
+              '<div class="' + cls + '">' +
+                '<span>' + (idx + 1) + '. ' + name + '</span>' +
+                badgeHtml +
+              '</div>'
+            );
+          })
+          .join('');
+
+        return (
+          '<div class="gauntlet-team-card ' + (isTeamA ? 'team-a' : 'team-b') + '">' +
+            '<div class="gauntlet-team-head">' +
+              '<span>' + title + '</span>' +
+              '<span style="font-size:13px;color:#475569;">剩余 <strong>' + remain + '</strong> / ' + teamList.length + ' 人</span>' +
+            '</div>' +
+            '<div class="gauntlet-member-list">' + rows + '</div>' +
+          '</div>'
+        );
+      }
+
+      const historyMatches = currentTour.rounds[0].matches.filter(function (m) {
+        return m.status === 'done';
+      });
+      const historyHtml =
+        historyMatches.length === 0
+          ? ''
+          : '<div style="margin-top:14px;">' +
+              '<div style="font-weight:900;font-size:14px;margin-bottom:6px;">📜 擂台战报</div>' +
+              historyMatches
+                .map(function (m) {
+                  return (
+                    '<div class="history-item">' +
+                      '<span><strong>' + m.roundTitle + '</strong>：' + m.playerA + ' vs ' + m.playerB + '</span>' +
+                      '<span style="color:#059669;font-weight:800;">' + m.scoreA + ' : ' + m.scoreB + '（🏆 ' + m.winner + ' 守擂）</span>' +
+                    '</div>'
+                  );
+                })
+                .join('') +
+            '</div>';
+
+      return (
+        '<div style="margin-top:14px;">' +
+          '<div style="font-weight:900;font-size:15px;margin-bottom:4px;">🏯 红蓝组队擂台阵型（赢家守擂，输家换人登台，全灭对方获胜！）</div>' +
+          '<div class="gauntlet-grid">' +
+            renderTeamCard(g.teamA, g.idxA, g.streakA, true) +
+            renderTeamCard(g.teamB, g.idxB, g.streakB, false) +
+          '</div>' +
+          historyHtml +
+        '</div>'
+      );
+    }
+
     function renderStage() {
       if (!currentTour) return;
       const nextMatch = root.SquaresTournamentEngine.getNextReadyMatch(currentTour);
 
       let topCardHtml = '';
       if (currentTour.status === 'finished') {
+        const extraMvp =
+          currentTour.format === 'team-gauntlet' && currentTour.mvp
+            ? '<div style="font-size:15px;font-weight:800;color:#b45309;margin-top:6px;">🔥 本场擂台 MVP：' + currentTour.mvp + '</div>'
+            : '';
         topCardHtml =
           '<div class="champion-banner">' +
             '<div style="font-size:13px;font-weight:800;color:#b45309;">🎉 本届争霸赛圆满收官！赛事记录已自动存档</div>' +
             '<h2 style="margin:8px 0;font-size:28px;color:#0f172a;">👑 总冠军：' + currentTour.champion + '</h2>' +
             '<div style="font-size:18px;font-weight:800;color:#475569;">🥈 亚军：' + currentTour.runnerUp + '</div>' +
+            extraMvp +
             '<div style="margin-top:14px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">' +
               '<button type="button" id="btnTourNewGame" class="btn btn-primary">🏆 举办下一届比赛</button>' +
             '</div>' +
           '</div>';
       } else if (nextMatch) {
+        let tagA = '（下方）';
+        let tagB = '（上方180°）';
+        if (currentTour.format === 'team-gauntlet' && currentTour.gauntlet) {
+          const g = currentTour.gauntlet;
+          tagA = g.streakA > 0 ? '（蓝队 · 🔥守擂' + g.streakA + '连胜）' : '（蓝队 · ' + (g.idxA + 1) + '号登台）';
+          tagB = g.streakB > 0 ? '（红队 · 🔥守擂' + g.streakB + '连胜）' : '（红队 · ' + (g.idxB + 1) + '号登台）';
+        }
         topCardHtml =
           '<div class="call-stage-card">' +
             '<div style="font-size:13px;font-weight:800;color:#4338ca;">📢 叫号上台 · ' + nextMatch.roundTitle + '</div>' +
             '<div class="call-vs-row">' +
-              '<span class="call-player-pill a">🔵 ' + nextMatch.playerA + '（下方）</span>' +
+              '<span class="call-player-pill a">🔵 ' + nextMatch.playerA + tagA + '</span>' +
               '<span style="font-size:20px;font-weight:900;color:#64748b;">VS</span>' +
-              '<span class="call-player-pill b">🟠 ' + nextMatch.playerB + '（上方180°）</span>' +
+              '<span class="call-player-pill b">🟠 ' + nextMatch.playerB + tagB + '</span>' +
             '</div>' +
             '<div style="font-size:12px;color:#475569;margin-bottom:12px;">请两位小朋友坐好位置，确认准备就绪后再点击开始！</div>' +
             '<button type="button" id="btnTourCallStart" class="btn btn-primary" style="padding:12px 26px;font-size:16px;">✅ 双方已到位，开始本场 PK！</button>' +
@@ -353,12 +496,23 @@
         : '';
 
       const bodyHtml =
-        currentTour.format === 'elimination' ? renderBracketHtml() : renderRoundRobinHtml();
+        currentTour.format === 'elimination'
+          ? renderBracketHtml()
+          : currentTour.format === 'team-gauntlet'
+            ? renderGauntletHtml()
+            : renderRoundRobinHtml();
+
+      const fmtLabel =
+        currentTour.format === 'elimination'
+          ? '单败淘汰争霸赛'
+          : currentTour.format === 'team-gauntlet'
+            ? '组队擂台车轮战'
+            : '单循环积分赛';
 
       stageBox.innerHTML =
         '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:14px;">' +
           '<div style="font-weight:900;font-size:16px;">🏆 ' +
-          (currentTour.format === 'elimination' ? '单败淘汰争霸赛' : '单循环积分赛') +
+          fmtLabel +
           '（' + currentTour.players.length + '人 · ' + currentTour.config.rangeLabel + ' · ' + currentTour.config.totalRounds + '局/场 · 限时' + currentTour.config.timeLimitSec + '秒）</div>' +
           '<button type="button" id="btnTourAbort" class="icon-btn">↩️ 重新报名抽签</button>' +
         '</div>' +
@@ -446,7 +600,7 @@
           return (
             '<details class="history-item" style="display:block;padding:10px 12px;">' +
               '<summary style="cursor:pointer;font-weight:800;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;">' +
-                '<span>🏅 第 ' + item.edition + ' 届（' + (item.format === 'elimination' ? '淘汰赛' : '循环赛') + ' · ' + item.playerCount + '人 · ' + item.rangeLabel + '）</span>' +
+                '<span>🏅 第 ' + item.edition + ' 届（' + (item.format === 'elimination' ? '淘汰赛' : item.format === 'team-gauntlet' ? '组队擂台赛' : '循环赛') + ' · ' + item.playerCount + '人 · ' + item.rangeLabel + '）</span>' +
                 '<span style="color:#d97706;">👑 冠军：' + item.champion + ' ｜ 🥈 亚军：' + item.runnerUp + '</span>' +
               '</summary>' +
               '<div style="margin-top:8px;padding-top:8px;border-top:1px dashed #e2e8f0;">' +
