@@ -365,7 +365,7 @@
         '</div>' +
         '<div class="pk-q-row">' +
         '<div class="pk-q-text">' +
-        q.promptMain +
+        (q.promptHtml || q.promptMain) +
         '</div>' +
         slotsHtml +
         '</div>' +

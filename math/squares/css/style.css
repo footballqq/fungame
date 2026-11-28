@@ -1034,6 +1034,30 @@ html, body {
   color: var(--ink);
 }
 
+/* 标准数学长根号（无缝顶线完全包住被开方数，任意字号/位数自适应） */
+.math-sqrt {
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: middle;
+  line-height: 1.08;
+}
+
+.math-sqrt-hook {
+  width: 0.58em;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.math-sqrt-body {
+  display: inline-flex;
+  align-items: center;
+  border-top: 0.095em solid currentColor;
+  padding: 0.08em 0.14em 0 0.06em;
+  margin-left: -0.02em;
+}
+
 .pk-slots {
   display: flex;
   gap: 6px;

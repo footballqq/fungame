@@ -311,7 +311,13 @@
         '</ol></div>' +
         '<div class="trick-demo-pane sqrt-pane">' +
         '<div class="trick-pane-tag">🔍 反算开方：3 秒闪电求根</div>' +
-        '<div class="trick-pane-eq">√' + sqrtInfo.sq + ' = <span>' + sqrtInfo.n + '</span></div>' +
+        '<div class="trick-pane-eq">' +
+        (root.SquaresEngine && root.SquaresEngine.formatSqrtHtml
+          ? root.SquaresEngine.formatSqrtHtml(sqrtInfo.sq)
+          : '√' + sqrtInfo.sq) +
+        ' = <span>' +
+        sqrtInfo.n +
+        '</span></div>' +
         '<ol class="trick-step-list">' +
         sqrtInfo.steps.map(function (s) { return '<li>' + s + '</li>'; }).join('') +
         '</ol></div></div>';

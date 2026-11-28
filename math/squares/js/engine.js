@@ -218,6 +218,21 @@
    * 生成单道题目
    * @param {Object} opts - { minN, maxN, filterType?, mode: 'forward'|'reverse'|'mixed', inputType: 'keypad'|'choice', excludeSet?, focusPool? }
    */
+  function formatSqrtHtml(radicand) {
+    return (
+      '<span class="math-sqrt" aria-label="根号 ' +
+      radicand +
+      '">' +
+      '<svg class="math-sqrt-hook" viewBox="0 0 24 44" preserveAspectRatio="none" aria-hidden="true">' +
+      '<path d="M 1 25 L 6 25 L 12 41 L 22 1.9 L 24 1.9" fill="none" stroke="currentColor" stroke-width="3.8" stroke-linejoin="round" stroke-linecap="butt" />' +
+      '</svg>' +
+      '<span class="math-sqrt-body">' +
+      radicand +
+      '</span>' +
+      '</span>'
+    );
+  }
+
   function generateQuestion(opts) {
     const norm = normalizeRange(opts.minN || 11, opts.maxN || 30);
     const minN = norm.minN;
@@ -245,6 +260,7 @@
       direction: direction,
       inputType: inputType,
       promptMain: direction === 'forward' ? `${n}²` : `√${sq}`,
+      promptHtml: direction === 'forward' ? `${n}²` : formatSqrtHtml(sq),
       promptSub: direction === 'forward' ? `求 ${n} 的完全平方数` : `求 ${sq} 的平方根`,
       answer: answer,
       expectedDigits: answer.length,
@@ -393,6 +409,7 @@
     isPrime: isPrime,
     normalizeRange: normalizeRange,
     getSquaresInRange: getSquaresInRange,
+    formatSqrtHtml: formatSqrtHtml,
     generateQuestion: generateQuestion,
     generateQuestionBatch: generateQuestionBatch,
     createInputState: createInputState,

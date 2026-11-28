@@ -241,7 +241,7 @@
         q.promptSub +
         '</div>' +
         '<div class="question-main">' +
-        q.promptMain +
+        (q.promptHtml || q.promptMain) +
         '</div>' +
         slotsHtml +
         feedbackHtml +
