@@ -30,6 +30,7 @@
     const roundsSelect = document.getElementById('tourRoundsSelect');
     const modeSelect = document.getElementById('tourModeSelect');
     const rangeSelect = document.getElementById('tourRangeSelect');
+    const customRangeWrap = document.getElementById('tourCustomRangeWrap');
     const minInput = document.getElementById('tourMinInput');
     const maxInput = document.getElementById('tourMaxInput');
     const filterSelect = document.getElementById('tourFilterSelect');
@@ -44,6 +45,12 @@
 
     if (!rosterGrid || !createBtn) return;
 
+    function syncTourRangeVisibility() {
+      if (!rangeSelect || !customRangeWrap) return;
+      const isCustom = rangeSelect.value === 'custom';
+      customRangeWrap.style.display = isCustom ? 'inline-flex' : 'none';
+    }
+
     if (rangeSelect) {
       rangeSelect.addEventListener('change', function () {
         if (rangeSelect.value !== 'custom') {
@@ -51,7 +58,9 @@
           if (minInput) minInput.value = String(parts[0] || 11);
           if (maxInput) maxInput.value = String(parts[1] || 30);
         }
+        syncTourRangeVisibility();
       });
+      syncTourRangeVisibility();
     }
     if (minInput && rangeSelect) {
       minInput.addEventListener('change', function () { rangeSelect.value = 'custom'; });

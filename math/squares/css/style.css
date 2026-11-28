@@ -846,18 +846,27 @@ html, body {
 .tour-range-row {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .tour-range-row select {
-  flex: 1.4;
+  flex: 1 1 220px;
   min-width: 0;
 }
 
-.tour-range-row .range-num-input {
-  width: 56px;
+.tour-custom-range {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   flex-shrink: 0;
-  padding: 8px 4px;
+}
+
+.tour-field .tour-custom-range input[type='number'] {
+  width: 70px;
+  flex: 0 0 70px;
+  padding: 8px 6px;
+  text-align: center;
 }
 
 .call-stage-card {

@@ -386,7 +386,7 @@
               </div>
 
               <div class="tour-field" style="grid-column: 1 / -1;">
-                <label for="tourRangeSelect">📐 数字范围（快捷预设或自由输入）</label>
+                <label for="tourRangeSelect">📐 数字范围</label>
                 <div class="tour-range-row">
                   <select id="tourRangeSelect">
                     <option value="11-25">11～25（亲子热身）</option>
@@ -397,11 +397,13 @@
                     <option value="11-99">11～99（两位全集）</option>
                     <option value="11-100">11～100（大师终极）</option>
                     <option value="1-100">1～100（全部）</option>
-                    <option value="custom">自定义范围</option>
+                    <option value="custom">✏️ 自定义范围…</option>
                   </select>
-                  <input type="number" id="tourMinInput" class="range-num-input" min="1" max="100" value="11" aria-label="联赛起始数" />
-                  <span style="font-weight:800;color:#64748b;">～</span>
-                  <input type="number" id="tourMaxInput" class="range-num-input" min="1" max="100" value="30" aria-label="联赛结束数" />
+                  <span id="tourCustomRangeWrap" class="tour-custom-range" style="display:none;">
+                    <input type="number" id="tourMinInput" class="range-num-input" min="1" max="100" value="11" aria-label="联赛起始数" />
+                    <span style="font-weight:800;color:#64748b;">～</span>
+                    <input type="number" id="tourMaxInput" class="range-num-input" min="1" max="100" value="30" aria-label="联赛结束数" />
+                  </span>
                 </div>
               </div>
             </div>
