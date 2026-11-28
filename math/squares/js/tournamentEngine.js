@@ -8,6 +8,7 @@
   'use strict';
 
   const ARCHIVE_KEY = 'squares_tournament_archive_v1';
+  const ACTIVE_KEY = 'squares_active_tournament_v1';
 
   function shuffle(arr) {
     const copy = arr.slice();
@@ -353,6 +354,11 @@
           window.localStorage.setItem(k, v);
         }
       },
+      removeItem: function (k) {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.removeItem(k);
+        }
+      },
     };
 
     function loadArchive() {
@@ -416,10 +422,55 @@
       } catch {}
     }
 
+    function saveActiveTournament(tournament, lastMatchNotice) {
+      if (!tournament || tournament.status === 'finished') {
+        clearActiveTournament();
+        return;
+      }
+      try {
+        adapter.setItem(
+          ACTIVE_KEY,
+          JSON.stringify({
+            version: 1,
+            savedAt: new Date().toISOString(),
+            tournament: tournament,
+            lastMatchNotice: lastMatchNotice || '',
+          })
+        );
+      } catch {}
+    }
+
+    function loadActiveTournament() {
+      try {
+        const raw = adapter.getItem(ACTIVE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!parsed || !parsed.tournament || parsed.tournament.status === 'finished') {
+          return null;
+        }
+        return parsed;
+      } catch {
+        return null;
+      }
+    }
+
+    function clearActiveTournament() {
+      try {
+        if (typeof adapter.removeItem === 'function') {
+          adapter.removeItem(ACTIVE_KEY);
+        } else {
+          adapter.setItem(ACTIVE_KEY, '');
+        }
+      } catch {}
+    }
+
     return {
       loadArchive: loadArchive,
       saveFinishedTournament: saveFinishedTournament,
       clearArchive: clearArchive,
+      saveActiveTournament: saveActiveTournament,
+      loadActiveTournament: loadActiveTournament,
+      clearActiveTournament: clearActiveTournament,
     };
   }
 

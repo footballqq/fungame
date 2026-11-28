@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>完全平方数速背与双人面对面大 PK</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -27,6 +29,7 @@
       </nav>
 
       <div class="nav-tools">
+        <button type="button" id="btnToggleFullscreen" class="icon-btn" title="全屏隐藏浏览器地址栏，防止小朋友误触刷新/后退">⛶ 全屏</button>
         <button type="button" id="btnToggleMute" class="icon-btn">🔊 音效开</button>
         <a href="../../index.html" class="icon-btn">🏠 返回大厅</a>
       </div>
@@ -34,6 +37,8 @@
   </header>
 
   <main class="main-wrap">
+    <!-- 全局断线/误刷读档恢复横幅 -->
+    <div id="globalResumeBanner" class="resume-banner no-print" style="display:none;"></div>
     <!-- 面板 1：1~100 展示与 A4 黑白打印 -->
     <section id="panel-chart" class="view-panel active">
       <div class="card">
@@ -429,7 +434,10 @@
       <div class="pk-divider-top">
         <span id="pkDividerTitle">⚔️ 第 1 / 10 局</span>
         <span id="pkTimerText" style="font-family:var(--font-mono);color:#10b981;">⏱️ 30.0s</span>
-        <button type="button" id="btnPkExit" class="pk-exit-btn">退出 PK</button>
+        <div class="pk-divider-actions">
+          <button type="button" id="btnPkFullscreen" class="pk-fs-btn">⛶ 全屏</button>
+          <button type="button" id="btnPkExit" class="pk-exit-btn">退出 PK</button>
+        </div>
       </div>
       <div class="pk-timer-track">
         <div id="pkTimerFill" class="pk-timer-fill"></div>

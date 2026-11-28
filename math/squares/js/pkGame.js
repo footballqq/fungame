@@ -2,6 +2,29 @@
   'use strict';
 
   const DIGITS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+  const ACTIVE_PK_KEY = 'squares_active_pk_v1';
+
+  function loadSavedPkRaw() {
+    try {
+      if (typeof window === 'undefined' || !window.localStorage) return null;
+      const raw = window.localStorage.getItem(ACTIVE_PK_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || !parsed.match || !Array.isArray(parsed.match.questions)) return null;
+      if (parsed.match.roundIndex >= parsed.match.totalRounds) return null;
+      return parsed;
+    } catch {
+      return null;
+    }
+  }
+
+  function clearSavedPkRaw() {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.removeItem(ACTIVE_PK_KEY);
+      }
+    } catch {}
+  }
 
   function parseRange(val) {
     const parts = val.split('-').map(Number);
@@ -75,6 +98,26 @@
     let externalFinishCallback = null;
     let shouldSaveToLeaderboard = true;
     let matchHeaderPrefix = '';
+    let currentTournamentMatchId = null;
+
+    function persistActiveMatch() {
+      if (!match || match.roundIndex >= match.totalRounds) return;
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.setItem(
+            ACTIVE_PK_KEY,
+            JSON.stringify({
+              version: 1,
+              savedAt: new Date().toISOString(),
+              match: match,
+              shouldSaveToLeaderboard: shouldSaveToLeaderboard,
+              matchHeaderPrefix: matchHeaderPrefix,
+              tournamentMatchId: currentTournamentMatchId,
+            })
+          );
+        }
+      } catch {}
+    }
 
     function clearTimers() {
       if (roundTimer) {
@@ -186,6 +229,7 @@
       externalFinishCallback = onComplete || null;
       shouldSaveToLeaderboard = opts.saveToLeaderboard !== false;
       matchHeaderPrefix = opts.headerPrefix || '';
+      currentTournamentMatchId = opts.tournamentMatchId || null;
 
       match = root.SquaresEngine.createPkMatch({
         totalRounds: opts.totalRounds || 10,
@@ -250,6 +294,7 @@
 
     function setupRound() {
       clearTimers();
+      persistActiveMatch();
       const q = match.questions[match.roundIndex];
       inputs = {
         A: root.SquaresEngine.createInputState(q.expectedDigits),
@@ -468,7 +513,12 @@
 
     function finishMatch() {
       clearTimers();
+      clearSavedPkRaw();
+      currentTournamentMatchId = null;
       overlayEl.classList.remove('active');
+      if (root.SquaresApp && root.SquaresApp.refreshResumeBanner) {
+        root.SquaresApp.refreshResumeBanner();
+      }
       root.SquaresSound.win();
 
       const A = match.players.A;
@@ -581,15 +631,69 @@
       document.getElementById('btnPkRematch').addEventListener('click', startMatchFromUi);
     }
 
+    function resumeSavedMatch(onComplete) {
+      const savedPk = loadSavedPkRaw();
+      if (!savedPk) return false;
+      clearTimers();
+      match = savedPk.match;
+      // 恢复到被中断那一道题的起始状态，已完成的局数与得分 100% 保留
+      match.roundSubmissions = {};
+      match.roundWinner = null;
+      match.roundTimedOut = false;
+      shouldSaveToLeaderboard = savedPk.shouldSaveToLeaderboard !== false;
+      matchHeaderPrefix = savedPk.matchHeaderPrefix || '';
+      currentTournamentMatchId = savedPk.tournamentMatchId || null;
+      externalFinishCallback = onComplete || null;
+      if (!externalFinishCallback && resultArea) {
+        resultArea.style.display = 'none';
+      }
+      overlayEl.classList.add('active');
+      setupRound();
+      return true;
+    }
+
     startBtn.addEventListener('click', startMatchFromUi);
     exitBtn.addEventListener('click', function () {
+      if (match && match.roundIndex < match.totalRounds) {
+        if (!window.confirm('比赛正在进行中，确定退出当前对局吗？\n（提示：如果是误刷或想待会儿接着打，点“取消”即可留在本场）')) {
+          return;
+        }
+      }
       clearTimers();
+      clearSavedPkRaw();
+      currentTournamentMatchId = null;
       externalFinishCallback = null;
+      match = null;
       overlayEl.classList.remove('active');
+      if (root.SquaresApp && root.SquaresApp.refreshResumeBanner) {
+        root.SquaresApp.refreshResumeBanner();
+      }
+    });
+
+    window.addEventListener('beforeunload', function (e) {
+      if (overlayEl.classList.contains('active') && match && match.roundIndex < match.totalRounds) {
+        persistActiveMatch();
+        e.preventDefault();
+        e.returnValue = '';
+      }
     });
 
     root.SquaresPkGame.launchMatch = launchMatch;
+    root.SquaresPkGame.getSavedMatch = loadSavedPkRaw;
+    root.SquaresPkGame.resumeSavedMatch = resumeSavedMatch;
+    root.SquaresPkGame.clearSavedMatch = function () {
+      clearSavedPkRaw();
+      if (root.SquaresApp && root.SquaresApp.refreshResumeBanner) {
+        root.SquaresApp.refreshResumeBanner();
+      }
+    };
   }
 
-  root.SquaresPkGame = { init: initPkGame, launchMatch: function () {} };
+  root.SquaresPkGame = {
+    init: initPkGame,
+    launchMatch: function () {},
+    getSavedMatch: loadSavedPkRaw,
+    resumeSavedMatch: function () { return false; },
+    clearSavedMatch: clearSavedPkRaw,
+  };
 })(typeof self !== 'undefined' ? self : this);

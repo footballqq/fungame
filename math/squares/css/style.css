@@ -997,10 +997,82 @@ html, body {
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 4px 10px;
+  padding: 5px 10px;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.pk-divider-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pk-fs-btn {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.pk-fs-btn.is-active {
+  background: #0f766e;
+}
+
+.icon-btn.is-active {
+  background: #eef2ff;
+  border-color: #6366f1;
+  color: #4338ca;
+}
+
+/* 断线/误刷自动存盘读档横幅 */
+.resume-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.14);
+}
+
+.resume-banner-info {
+  font-size: 13px;
+  font-weight: 800;
+  color: #92400e;
+  line-height: 1.5;
+}
+
+.resume-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}
+
+.pk-arena-overlay {
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pk-half.player-b {
+  padding-bottom: 14px;
 }
 
 .pk-player-head {

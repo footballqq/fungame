@@ -153,8 +153,51 @@
           : root.SquaresTournamentEngine.createEliminationTournament(names, config);
 
       lastMatchNotice = '';
+      store.saveActiveTournament(currentTour, lastMatchNotice);
+      if (root.SquaresApp && root.SquaresApp.refreshResumeBanner) {
+        root.SquaresApp.refreshResumeBanner();
+      }
       setupBox.style.display = 'none';
       stageBox.style.display = 'block';
+      renderStage();
+    }
+
+    function handleTournamentMatchComplete(match, res) {
+      if (!currentTour || !match) return;
+      // 淘汰赛若极端 0:0 或完全同毫秒平局，默认 A 晋级或提示；有得分差/时间差已由 winnerKey 裁决
+      const side = res.winnerKey === 'draw' && currentTour.format === 'elimination' ? 'A' : res.winnerKey;
+      root.SquaresTournamentEngine.recordTournamentMatchResult(
+        currentTour,
+        match.id,
+        res.scoreA,
+        res.scoreB,
+        side
+      );
+
+      lastMatchNotice =
+        '上一场（' +
+        match.roundTitle +
+        '）：' +
+        match.playerA +
+        ' ' +
+        res.scoreA +
+        ' : ' +
+        res.scoreB +
+        ' ' +
+        match.playerB +
+        ' → ' +
+        (match.winner ? '🏆 ' + match.winner + ' 晋级！' : '🤝 握手言和！');
+
+      if (currentTour.status === 'finished') {
+        store.saveFinishedTournament(currentTour);
+        store.clearActiveTournament();
+        renderArchive();
+      } else {
+        store.saveActiveTournament(currentTour, lastMatchNotice);
+      }
+      if (root.SquaresApp && root.SquaresApp.refreshResumeBanner) {
+        root.SquaresApp.refreshResumeBanner();
+      }
       renderStage();
     }
 
@@ -176,38 +219,11 @@
           timeLimitSec: cfg.timeLimitSec,
           rangeLabel: cfg.rangeLabel,
           headerPrefix: match.roundTitle,
+          tournamentMatchId: match.id,
           saveToLeaderboard: true,
         },
         function (res) {
-          // 淘汰赛若极端 0:0 或完全同毫秒平局，默认 A 晋级或提示；有得分差/时间差已由 winnerKey 裁决
-          const side = res.winnerKey === 'draw' && currentTour.format === 'elimination' ? 'A' : res.winnerKey;
-          root.SquaresTournamentEngine.recordTournamentMatchResult(
-            currentTour,
-            match.id,
-            res.scoreA,
-            res.scoreB,
-            side
-          );
-
-          lastMatchNotice =
-            '上一场（' +
-            match.roundTitle +
-            '）：' +
-            match.playerA +
-            ' ' +
-            res.scoreA +
-            ' : ' +
-            res.scoreB +
-            ' ' +
-            match.playerB +
-            ' → ' +
-            (match.winner ? '🏆 ' + match.winner + ' 晋级！' : '🤝 握手言和！');
-
-          if (currentTour.status === 'finished') {
-            store.saveFinishedTournament(currentTour);
-            renderArchive();
-          }
-          renderStage();
+          handleTournamentMatchComplete(match, res);
         }
       );
     }
@@ -361,6 +377,10 @@
       if (newBtn) {
         newBtn.addEventListener('click', function () {
           currentTour = null;
+          store.clearActiveTournament();
+          if (root.SquaresApp && root.SquaresApp.refreshResumeBanner) {
+            root.SquaresApp.refreshResumeBanner();
+          }
           stageBox.style.display = 'none';
           setupBox.style.display = 'block';
         });
@@ -371,6 +391,13 @@
         abortBtn.addEventListener('click', function () {
           if (currentTour.status === 'finished' || window.confirm('确定放弃当前赛事并返回重新报名抽签吗？')) {
             currentTour = null;
+            store.clearActiveTournament();
+            if (root.SquaresPkGame && root.SquaresPkGame.clearSavedMatch) {
+              root.SquaresPkGame.clearSavedMatch();
+            }
+            if (root.SquaresApp && root.SquaresApp.refreshResumeBanner) {
+              root.SquaresApp.refreshResumeBanner();
+            }
             stageBox.style.display = 'none';
             setupBox.style.display = 'block';
           }
@@ -465,9 +492,90 @@
     });
     createBtn.addEventListener('click', startTournament);
 
+    function findMatchInTour(tour, matchId) {
+      if (!tour || !matchId) return null;
+      for (const r of tour.rounds) {
+        const found = r.matches.find(function (m) { return m.id === matchId; });
+        if (found) return found;
+      }
+      return null;
+    }
+
+    function getActiveSummary() {
+      const saved = store.loadActiveTournament();
+      if (!saved || !saved.tournament) return null;
+      const t = saved.tournament;
+      let doneCount = 0;
+      let totalCount = 0;
+      for (const r of t.rounds) {
+        for (const m of r.matches) {
+          if (!m.isBye) {
+            totalCount += 1;
+            if (m.status === 'done') doneCount += 1;
+          }
+        }
+      }
+      const nextMatch = root.SquaresTournamentEngine.getNextReadyMatch(t);
+      return {
+        savedAt: saved.savedAt,
+        format: t.format,
+        playerCount: t.players.length,
+        doneCount: doneCount,
+        totalCount: totalCount,
+        nextMatchTitle: nextMatch ? nextMatch.roundTitle + '（' + nextMatch.playerA + ' vs ' + nextMatch.playerB + '）' : '待定',
+        isCurrentlyOpen: Boolean(currentTour && currentTour.id === t.id && stageBox.style.display !== 'none'),
+      };
+    }
+
+    function resumeActiveTournament(autoResumePkMatch) {
+      const saved = store.loadActiveTournament();
+      if (!saved || !saved.tournament) return false;
+      currentTour = saved.tournament;
+      lastMatchNotice = saved.lastMatchNotice || '💾 已从本地自动存档恢复本次争霸赛进度！';
+      setupBox.style.display = 'none';
+      stageBox.style.display = 'block';
+      renderStage();
+
+      if (autoResumePkMatch && root.SquaresPkGame && root.SquaresPkGame.getSavedMatch) {
+        const savedPk = root.SquaresPkGame.getSavedMatch();
+        if (savedPk && savedPk.tournamentMatchId) {
+          const targetMatch = findMatchInTour(currentTour, savedPk.tournamentMatchId);
+          if (targetMatch && targetMatch.status === 'ready') {
+            root.SquaresPkGame.resumeSavedMatch(function (res) {
+              handleTournamentMatchComplete(targetMatch, res);
+            });
+          }
+        }
+      }
+
+      if (root.SquaresApp && root.SquaresApp.refreshResumeBanner) {
+        root.SquaresApp.refreshResumeBanner();
+      }
+      return true;
+    }
+
+    function clearActiveTournament() {
+      currentTour = null;
+      store.clearActiveTournament();
+      stageBox.style.display = 'none';
+      setupBox.style.display = 'block';
+      if (root.SquaresApp && root.SquaresApp.refreshResumeBanner) {
+        root.SquaresApp.refreshResumeBanner();
+      }
+    }
+
     renderRosterInputs(false);
     renderArchive();
+
+    root.SquaresTournamentView.getActiveSummary = getActiveSummary;
+    root.SquaresTournamentView.resumeActiveTournament = resumeActiveTournament;
+    root.SquaresTournamentView.clearActiveTournament = clearActiveTournament;
   }
 
-  root.SquaresTournamentView = { init: initTournamentView };
+  root.SquaresTournamentView = {
+    init: initTournamentView,
+    getActiveSummary: function () { return null; },
+    resumeActiveTournament: function () { return false; },
+    clearActiveTournament: function () {},
+  };
 })(typeof self !== 'undefined' ? self : this);

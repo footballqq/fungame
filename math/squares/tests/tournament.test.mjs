@@ -86,3 +86,34 @@ test('4 人单循环赛：共 6 场，按积分正确排定冠亚军并存档为
   assert.equal(store.loadArchive().items.length, 2);
   assert.equal(store.loadArchive().items[0].champion, '高斯');
 });
+
+test('中途自动存盘与断线读档：未完赛可精确恢复晋级进度，完赛或清空后自动失效', () => {
+  const store = Tour.createTournamentStore(createMemStorage());
+  const tour = Tour.createEliminationTournament(['牛顿', '高斯', '欧拉', '费马'], {
+    totalRounds: 10,
+    minN: 11,
+    maxN: 30,
+    shuffle: false,
+  });
+
+  // 打完第一场半决赛后存盘
+  const m1 = Tour.getNextReadyMatch(tour);
+  Tour.recordTournamentMatchResult(tour, m1.id, 8, 2, 'A');
+  store.saveActiveTournament(tour, '半决赛第一场结束');
+
+  const restored = store.loadActiveTournament();
+  assert.ok(restored);
+  assert.equal(restored.lastMatchNotice, '半决赛第一场结束');
+  assert.equal(restored.tournament.rounds[0].matches[0].status, 'done');
+  assert.equal(restored.tournament.rounds[0].matches[0].winner, m1.playerA);
+  assert.equal(Tour.getNextReadyMatch(restored.tournament).id, tour.rounds[0].matches[1].id);
+
+  // 打完剩余场次完赛后，自动清除进行中存档
+  let next;
+  while ((next = Tour.getNextReadyMatch(restored.tournament))) {
+    Tour.recordTournamentMatchResult(restored.tournament, next.id, 6, 4, 'A');
+  }
+  assert.equal(restored.tournament.status, 'finished');
+  store.saveActiveTournament(restored.tournament, '');
+  assert.equal(store.loadActiveTournament(), null);
+});
